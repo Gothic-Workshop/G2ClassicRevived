@@ -275,6 +275,50 @@ FUNC VOID DIA_MiltenNW_KAP3_Entry_Permit ()
 	Info_ClearChoices (DIA_MiltenNW_KAP3_Entry);
 };
 
+
+//*********************************************************************
+//	ADDON Statuette
+//*********************************************************************
+instance DIA_MiltenNW_Statuette (C_INFO)
+{
+	npc			 = 	NOV_600_Pedro;
+	nr			 = 	2;
+	condition	 = 	DIA_MiltenNW_Statuette_Condition;
+	information	 = 	DIA_MiltenNW_Statuette_Info;
+	permanent	 = 	FALSE;
+	description	 = 	"I've got this statuette...";
+};
+func int DIA_MiltenNW_Statuette_Condition ()
+{	
+	if (Npc_HasItems (other,ItMi_LostInnosStatue_Daron))
+	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
+	&& (Npc_KnowsInfo (other,DIA_MiltenNW_Monastery))
+	&& (hero.guild != GIL_KDF)
+	&& (MiltenNW_GivesMonasteryKey != TRUE)
+	{
+		return TRUE;
+	};
+};
+func void DIA_MiltenNW_Statuette_Info ()
+{
+	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_15_00"); //I've got this statuette here. I think they're missing it in the monastery.
+	if (hero.guild != GIL_PAL)
+	{
+		AI_Output (self ,other,"DIA_MiltenNW_KAP3_Entry_03_02"); //I can't let you into the monastery. I'll get in trouble with the High Council.
+	};
+	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you?
+	AI_Output (self, other, "DIA_MiltenNW_KAP3_NovizenChase_03_04"); //Ich werde sehen, was ich tun kann.
+
+		if B_GiveInvItems (other, self, ItMi_LostInnosStatue_Daron,1)
+		{
+			Npc_RemoveInvItems (self, ItMi_LostInnosStatue_Daron,1);
+		};
+		
+	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
+	MiltenORPedro_LostInnosStatue_Daron = TRUE;
+	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
+};
+
 //***************************************************************
 //	Hast du hier jemanden herauskommen gesehen?
 //***************************************************************

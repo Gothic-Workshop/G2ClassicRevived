@@ -502,6 +502,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_GAROND, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_DRAGONS, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_CAVES, 1);
+
+	CreateInvItems(self, ITMI_REVIVED_MAGICORE, 1);
 	
 //---------------------------------------------------------------------
 

@@ -259,7 +259,31 @@ INSTANCE ITMI_REVIVED_MAGIC_WATER (C_Item)
 //			MISSION
 //****************************************************************************
 
+INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
+{
+	name 				=	"Lump of Ore";
 
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Nugget;
+
+	visual 				=	"ItMi_Nugget_NoMagic.3ds";
+	material 			=	MAT_STONE;
+
+	//wear				= 	WEAR_EFFECT;
+	//effect				=	"SPELLFX_MANAPOTION";
+
+	description			= 	name;
+
+	TEXT[0]				=	"The ore is faded and does not shine.";
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_MISC2_STANDARD;
+	
+};
 
 //****************************************************************************
 //			DEBUG

@@ -24,7 +24,6 @@ instance BDT_1014_Bandit_L (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ItKe_Bandit, 1);
-	CreateInvItems (self, ItWr_SaturasFirstMessage_Addon_Sealed, 1);//ADDON
 		
 	// ------ visuals ------									
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Mud, BodyTex_N, ITAR_Leather_L);	

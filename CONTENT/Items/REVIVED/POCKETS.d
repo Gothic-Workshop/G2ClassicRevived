@@ -387,7 +387,7 @@ instance REVIVED_POCKET_GOTHIC2(C_Item)
 	on_state[0] = use_REVIVED_POCKET_GOTHIC2;
 	description = "REVIVED_POCKET_GOTHIC2";
 	text[4] = "All 'Gothic 2' Items";
-	text[5] = "Inspired by previous game's items, as well as replaced and modified for the mod.";
+	text[5] = "Inspired by pre-existing items, as well as replaced and modified for the mod.";
 };
 
 func void use_REVIVED_POCKET_GOTHIC2()
@@ -420,6 +420,8 @@ func void use_REVIVED_POCKET_GOTHIC2()
 	CreateInvItems(hero, ITWR_REVIVED_MAP_VALLEY_GAROND, 1);
 	CreateInvItems(hero, ITWR_REVIVED_MAP_VALLEY_DRAGONS, 1);
 	CreateInvItems(hero, ITWR_REVIVED_MAP_VALLEY_CAVES, 1);
+
+	CreateInvItems(hero, ITMI_REVIVED_MAGICORE, 1);
 };
 
 //****************************************************************************

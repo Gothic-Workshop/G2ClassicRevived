@@ -434,6 +434,14 @@ func void DIA_Vatras_WoKdF_Info ()
 {
 	AI_Output (other, self, "DIA_Vatras_WoKdF_15_00"); //Where can I find a priest of Innos?
 	AI_Output (self, other, "DIA_Vatras_WoKdF_05_01"); //The best thing would be to look around the marketplace. You will find an emissary of the monastery there.
+
+	AI_Output	(self, other, "DIA_Addon_Vatras_GuildHelp_05_08"); //But I have heard that he is not only in town to raise some funds.
+	AI_Output	(self, other, "DIA_Addon_Vatras_GuildHelp_05_09"); //He told me about a statuette that was stolen from him.
+	MIS_Addon_Vatras_Go2Daron = LOG_RUNNING;
+	
+	Log_CreateTopic (TOPIC_Revived_DaronStatuette, LOG_MISSION);
+	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_RUNNING);
+	B_LogEntry (TOPIC_Revived_DaronStatuette,"Daron, the Fire Magician in the marketplace, has lost some sort of statuette.");
 };
 
 // ************************************************************

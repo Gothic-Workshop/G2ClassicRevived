@@ -179,6 +179,8 @@ INSTANCE DIA_Daron_Spenden(C_INFO)
 	permanent	= FALSE;
 	description	= "So how much does a donation usually run to here?";
 };                       
+
+var int Daron_Segen_NoMoney;
 FUNC INT DIA_Daron_Spenden_Condition()
 {	if (hero.guild != GIL_KDF)
 	{
@@ -196,8 +198,11 @@ FUNC VOID DIA_Daron_Spenden_Info()
 		AI_Output (self, other,"DIA_Daron_Spenden_10_03");//Hm, you're a poor soul, aren't you? Keep the little you have.
 		
 		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
+		&& (Daron_Segen != TRUE)
+		&& (Daron_Segen_NoMoney != TRUE)
 		{
-			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician hasn't blessed me. I guess that means I have to get some gold and donate it to him to get him to bless me after all.");
+			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician hasn't blessed me. I guess that means I have to get some gold and donate it to him to get the blessing after all. Or I can try looking for another Fire Mage...");
+			Daron_Segen_NoMoney = TRUE;
 		};
 	}
 	else //Gold >= 10
@@ -222,13 +227,15 @@ FUNC VOID DIA_Daron_Spenden_Info()
 		};
 		
 		AI_Output (self, other,"DIA_Daron_Spenden_10_08");//I bless you in the name of Innos. For he is light and righteousness.
-		Daron_Segen = TRUE;
-		B_GivePlayerXP (XP_InnosSegen);
 		
 		if (MIS_Thorben_GetBlessings == LOG_RUNNING)
+		&& (Daron_Segen != TRUE)
 		{
 			B_LogEntry (TOPIC_Thorben,"Daron the Fire Magician has given me his blessing.");
 		};
+
+		Daron_Segen = TRUE;
+		B_GivePlayerXP (XP_InnosSegen);
 	};
 };
 
@@ -497,7 +504,6 @@ func void DIA_Addon_Daron_ReturnedStatue_Info ()
 	AI_Output	(self, other, "DIA_Addon_Daron_ReturnedStatue_10_02"); //Take this as a small token of my gratitude, son.
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);
-	TOPIC_End_RangerHelpKDF = TRUE;		
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
 };
 
