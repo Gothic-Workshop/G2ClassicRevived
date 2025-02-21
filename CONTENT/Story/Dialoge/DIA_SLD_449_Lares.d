@@ -973,6 +973,7 @@ INSTANCE DIA_Lares_AnyNews(C_INFO)
 FUNC INT DIA_Lares_AnyNews_Condition()
 {
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		return TRUE;
 	};	

@@ -243,6 +243,7 @@ FUNC VOID DIA_Alwin_Endlos_Info()
 		AI_Output (self ,other,"DIA_Alwin_Endlos_12_02"); //The sheep eat and get fatter and fatter. Just like my wife. HAHAHA (laughs loudly)
 	}
 	else if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet != LOG_SUCCESS)
 		{

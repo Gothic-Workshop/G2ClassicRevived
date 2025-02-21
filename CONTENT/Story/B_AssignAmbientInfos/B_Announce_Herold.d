@@ -19,7 +19,7 @@ func void B_Announce_Herold ()
 
 	AI_Output (self ,self,"DIA_Herold_Announce_04_00"); //Hear ye, inhabitants of Khorinis! By the explicit order of the honorable Lord Hagen, the following decree is hereby enacted.
 	
-	if (Kapitel <= 2)
+	if (Kapitel <= 3)
 	{
 		randy = Hlp_Random (5);
 		if (randy == 0)
@@ -51,6 +51,7 @@ func void B_Announce_Herold ()
 		};
 	}
 	else if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		IF (MIS_RescueBennet != LOG_SUCCESS)
 		{
@@ -68,7 +69,7 @@ func void B_Announce_Herold ()
 			AI_Output (self ,self,"DIA_Herold_Announce_04_17"); //The rumors are spread by the enemy in order to promote fear and terror among the brave people of Myrtana.
 			AI_Output (self ,self,"DIA_Herold_Announce_04_18"); //In order to refute the ridiculous assertions, a troop of brave paladins under the command of one familiar with the place has set out for the Valley of Mines.
 	}
-	else	//Kapitel 5
+	else if (Kapitel == 5)
 	{
 		randy = Hlp_Random (2);
 		if (randy == 0)

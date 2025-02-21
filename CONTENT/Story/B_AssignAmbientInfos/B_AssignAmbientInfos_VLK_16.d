@@ -126,13 +126,14 @@ FUNC VOID DIA_VLK_16_STANDARD_Info()
 		SC_HearedAboutMissingPeople = TRUE;
 	};
 	
-	if (Kapitel == 2)
+	if (Kapitel <= 3)
 	{
 		AI_Output (self,other,"DIA_VLK_16_STANDARD_16_01"); //Have you heard? The orcs have been seen outside the city. Let's hope the paladins have enough men.
 		AI_Output (self,other,"DIA_VLK_16_STANDARD_16_02"); //I wonder whether that's the reason the farmers no longer come to the market.
 	};
 	
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet == LOG_SUCCESS)
 		{

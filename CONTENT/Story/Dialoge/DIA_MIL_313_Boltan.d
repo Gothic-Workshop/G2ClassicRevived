@@ -70,6 +70,7 @@ func void DIA_Boltan_ToConvicts_Info ()
 	
 	if (Kapitel == 3) 
 	&& (MIS_RescueBennet != LOG_SUCCESS)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (other.guild == GIL_SLD)
 		{

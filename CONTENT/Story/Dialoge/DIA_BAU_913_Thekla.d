@@ -407,7 +407,7 @@ func void DIA_Thekla_PERM_Info()
 	}
 	else if (MIS_Thekla_Paket == LOG_SUCCESS)
 	{
-		if (Kapitel <= 2)
+		if (Kapitel <= 3)
 		{
 			if (Thekla_MehrEintopfKap1 == FALSE)
 			{
@@ -424,6 +424,7 @@ func void DIA_Thekla_PERM_Info()
 		
 		if (Kapitel == 3)
 		|| (Kapitel == 4)
+		&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 		{
 			if (Thekla_MehrEintopfKap3 == FALSE)
 			&& (MIS_RescueBennet == LOG_SUCCESS)

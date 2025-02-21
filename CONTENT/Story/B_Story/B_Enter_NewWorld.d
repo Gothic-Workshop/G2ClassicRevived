@@ -139,8 +139,10 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		
 		if (!Npc_IsDead (Hodges))
 		{
-			B_StartOtherRoutine (Hodges,"BENNETWEG");
+			B_StartOtherRoutine (Hodges,"Kap3PreInnosEye");
 		};
+			B_StartOtherRoutine (Bennet,"Kap3PreInnosEye");
+			B_StartOtherRoutine	(Lothar,"Kap3PreInnosEye");
 		
 		if (Npc_IsDead (DiegoNW))
 		{ 
@@ -192,12 +194,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		};
 
 		B_StartOtherRoutine (Lester,"WAITFORPLAYER"); 
-		B_StartOtherRoutine (Bennet,"PRISON");
 		B_StartOtherRoutine (Sergio,"WAIT");
 		B_StartOtherRoutine (Peck,"STORAGE");
-		
-		// --Tote NSCs--
-		B_RemoveNpc		(PAL_203_Lothar); 
 	
 		// ------ Respawn ------
 		Wld_InsertNpc 	(Giant_Bug, 			"NW_FARM4_WOOD_MONSTER_N_1_MONSTER");

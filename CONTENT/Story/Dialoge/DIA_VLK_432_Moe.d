@@ -288,6 +288,7 @@ FUNC VOID DIA_Moe_Harbor_Rumors ()
 		
 	}
 	else if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (Mis_RescueBennet == LOG_SUCCESS)
 		{

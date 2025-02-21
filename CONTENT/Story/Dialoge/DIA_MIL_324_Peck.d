@@ -327,6 +327,7 @@ func void DIA_Peck_PERM_Info ()
 		AI_Output			(self, other, "DIA_Peck_PERM_12_01"); //Yeah, and with you?
 	}
 	else if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet != LOG_SUCCESS)
 		{

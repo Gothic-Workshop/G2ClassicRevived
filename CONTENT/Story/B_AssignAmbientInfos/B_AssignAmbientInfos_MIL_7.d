@@ -155,12 +155,13 @@ FUNC VOID DIA_MIL_7_STANDARD_Info()
 		};
 	};
 
-	if (Kapitel == 2)
+	if (Kapitel <= 3)
 	{
 		AI_Output (self,other,"DIA_MIL_7_STANDARD_07_02"); //It's time the paladins ended the farmers' rebellion. He who breaks the law must be punished. Especially now, when we're at war.
 	};
 
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet == LOG_SUCCESS)
 		{

@@ -506,12 +506,13 @@ instance REVIVED_POCKET_NEUE(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_NEUE;
 	description = "REVIVED_POCKET_NEUE";
-	text[4] = "All new additions from myself";
+	text[4] = "All new additions from myself or my friends";
 	text[5] = "Mostly just fun items.";
 };
 
 func void use_REVIVED_POCKET_NEUE()
 {
+	CreateInvItems(hero, ITAR_REVIVED_GRD_I_03, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GORDONRAMSAY, 1);
 
 	CreateInvItems(hero, ITKE_REVIVED_GORDONRAMSAY, 1);

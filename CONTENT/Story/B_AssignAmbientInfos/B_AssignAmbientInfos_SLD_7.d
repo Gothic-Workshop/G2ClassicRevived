@@ -130,7 +130,7 @@ FUNC VOID DIA_SLD_7_STANDARD_Info()
 {	
 	AI_Output (other, self, "DIA_SLD_7_STANDARD_15_00"); //What's new?
 		
-	if (Kapitel <= 2)
+	if (Kapitel <= 3)
 	{
 		if (EnterOW_Kapitel2 == FALSE)
 		{
@@ -158,6 +158,7 @@ FUNC VOID DIA_SLD_7_STANDARD_Info()
 	};
 
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet == LOG_SUCCESS)
 		{

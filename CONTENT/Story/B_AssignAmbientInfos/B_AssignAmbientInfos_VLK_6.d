@@ -122,12 +122,13 @@ FUNC VOID DIA_VLK_6_STANDARD_Info()
 		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_01"); //Ever since they took the Barrier away, this town has been overrun with bandits. But the paladins don't do a thing. Why the hell are they even here then?
 	};
 	
-	if (Kapitel == 2)
+	if (Kapitel <= 3)
 	{
 		AI_Output (self,other,"DIA_VLK_6_STANDARD_06_02"); //Lately, the bandit problem hasn't been so bad. It looks like someone has finally started to do something about it.
 	};
 	
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if MIS_RescueBennet == LOG_SUCCESS
 		{

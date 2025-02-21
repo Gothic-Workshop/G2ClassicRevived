@@ -325,6 +325,7 @@ FUNC VOID DIA_Gritta_Perm3U4U5_Info()
 	AI_Output (other,self ,"DIA_Gritta_Perm3U4U5_15_00"); //How's it going?
 	
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet != LOG_SUCCESS)
 		{

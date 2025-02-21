@@ -152,7 +152,10 @@ instance DIA_Hodges_TRADE	(C_INFO)
 
 func int DIA_Hodges_TRADE_Condition ()
 {
-	return TRUE;
+	if(Npc_GetDistToWP(self, "NW_BIGFARM_SMITH_SHARP") <= 5000)
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Hodges_TRADE_Info ()
@@ -244,6 +247,7 @@ instance DIA_Hodges_DontWork		(C_INFO)
 func int DIA_Hodges_DontWork_Condition ()
 {
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	&& (MIS_RescueBennet != LOG_SUCCESS)
 	{
 		return TRUE;

@@ -550,6 +550,19 @@ INSTANCE ITPL_REVIVED_HELLMUSHROOM (C_Item)
 		func void Usemush ()
 		{
 			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Hollenpilz);
+		
+			if (Npc_IsPlayer (self))
+			{
+				HellMushroom_Bonus = HellMushroom_Bonus + 1;
+				
+				if (HellMushroom_Bonus == 50)  
+				{
+					B_RaiseAttribute	(self, ATR_HITPOINTS_MAX, 5);
+					Npc_ChangeAttribute	(self, ATR_HITPOINTS, 5);
+					Snd_Play	("LevelUp");
+					HellMushroom_Bonus = 0;
+				};
+			};
 		};
 
 /*****************************************************************************************/

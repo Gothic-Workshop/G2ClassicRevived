@@ -148,13 +148,19 @@ FUNC VOID Rtn_Start_809 ()
 	TA_Sleep		(22,00,08,00,"NW_BIGFARM_STABLE_SLEEP_04"); 
 };
 
+FUNC VOID Rtn_Kap3PreInnosEye_809 ()
+{	
+	TA_Stand_ArmsCrossed	(08,00,23,00,"NW_CITY_MERCHANT_PATH_28_C");  
+	TA_Stand_ArmsCrossed	(23,00,08,00,"NW_CITY_MERCHANT_PATH_28_C");
+};
+
 FUNC VOID Rtn_PRISON_809 ()
 {	
 	TA_Stand_ArmsCrossed	(08,00,23,00,"NW_CITY_HABOUR_KASERN_BORKA");  
 	TA_Stand_ArmsCrossed	(23,00,08,00,"NW_CITY_HABOUR_KASERN_BORKA");
 	
 };
-
+ 
 FUNC VOID Rtn_WaitForShip_809 ()
 {	
 	TA_Stand_ArmsCrossed		(08,00,19,00,"NW_WAITFOR_SHIP_05");

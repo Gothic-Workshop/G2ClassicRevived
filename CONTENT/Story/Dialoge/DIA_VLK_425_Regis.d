@@ -246,7 +246,7 @@ func void DIA_Regis_PERM_Info ()
 		{
 			AI_Output (self, other, "DIA_Regis_PERM_13_07"); //Oh well, all's quiet. I suppose that when the orcs come, we can't fail to notice ...
 		}
-		else 
+		else if (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 		{
 			if (MIS_RescueBennet == LOG_SUCCESS)
 			{

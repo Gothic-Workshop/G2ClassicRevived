@@ -1703,6 +1703,41 @@ instance ITAR_REVIVED_GRD_I(C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
 };
 
+instance ITAR_REVIVED_GRD_I_03(C_Item)
+{
+	name 					=	"Royal Guard Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE] 	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	30;
+	protection [PROT_MAGIC] = 	20;
+
+	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+
+	wear 					=	WEAR_TORSO;
+    //ownerGuild 				= 	GIL_GRD;
+
+	visual 					=	"HUM_GRDI_ARMOR_delaCroix_V0.3ds";
+	visual_change 			=	"HUM_GRDI_ARMOR_delaCroix.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
 /******************************************************************************************/
 
 instance ITAR_REVIVED_CRAWLER(C_Item)

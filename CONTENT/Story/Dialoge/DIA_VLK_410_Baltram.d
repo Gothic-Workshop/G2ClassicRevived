@@ -153,6 +153,7 @@ func void DIA_Baltram_WAREZ_Info ()
 	
 	if (Kapitel == 3)
 	&& (MIS_RescueBennet != LOG_SUCCESS)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_01"); //They never should have let it get so far. Now one of the mercenaries has actually murdered a paladin.
 		AI_Output (self ,other,"DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!

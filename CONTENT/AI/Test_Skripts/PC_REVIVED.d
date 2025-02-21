@@ -534,6 +534,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	
 //---------------------------------------------------------------------
 
+	CreateInvItems(self, ITAR_REVIVED_GRD_I_03, 1);
 	CreateInvItems(self, ITAR_REVIVED_GORDONRAMSAY, 1);
 	
 	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);

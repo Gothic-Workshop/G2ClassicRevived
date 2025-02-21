@@ -269,6 +269,7 @@ FUNC VOID DIA_Pablo_Perm_Info()
 	AI_Output (other, self, "DIA_Pablo_Perm_15_00"); //How's the situation?
 	
 	if (Kapitel == 3)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		if (MIS_RescueBennet != LOG_SUCCESS)
 		{

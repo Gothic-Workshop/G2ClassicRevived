@@ -102,6 +102,7 @@ var int FirstJoint_03;
 
 var int OldApple_Bonus;
 var int OldWine_Bonus;
+var int HellMushroom_Bonus;
 
 
 var int LesterKeyStolen;

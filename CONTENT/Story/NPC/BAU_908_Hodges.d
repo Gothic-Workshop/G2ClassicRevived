@@ -49,8 +49,14 @@ FUNC VOID Rtn_Start_908 ()
     TA_Sleep				(19,00,07,00,"NW_BIGFARM_STABLE_SLEEP_02");
 };
 
+FUNC VOID Rtn_Kap3PreInnosEye_908 ()
+{
+	TA_Stand_Eating			(08,00,23,00,"NW_CITY_MERCHANT_PATH_28_C");  
+	TA_Stand_Eating			(23,00,08,00,"NW_CITY_MERCHANT_PATH_28_C");
+};
+
 FUNC VOID Rtn_BennetWeg_908 ()
 {	
-	TA_Stand_Drinking	    (07,00,19,00,"NW_BIGFARM_PATH_HODGES");
+	TA_Stand_Eating		    (07,00,19,00,"NW_BIGFARM_PATH_HODGES");
     TA_Stand_Drinking		(19,00,07,00,"NW_BIGFARM_PATH_HODGES");
 };

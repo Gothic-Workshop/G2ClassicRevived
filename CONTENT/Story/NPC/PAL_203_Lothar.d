@@ -45,6 +45,12 @@ FUNC VOID Rtn_Start_203 ()
     TA_Stand_Guarding	(23,00,08,00,"NW_CITY_LOTHAR");	
 };
 
+FUNC VOID Rtn_Kap3PreInnosEye_203 ()
+{
+	TA_Stand_Guarding	(08,00,23,00,"NW_CITY_MARKT_LOTHAR");
+    TA_Stand_Guarding	(23,00,08,00,"NW_CITY_MARKT_LOTHAR");	
+};
+
 FUNC VOID Rtn_Tot_203 ()
 {
 	TA_Sleep	(08,00,23,00,"TOT");

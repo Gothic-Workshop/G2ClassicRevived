@@ -642,6 +642,7 @@ func int DIA_Bennet_WhyPrison_Condition ()
 {
 	IF (Kapitel == 3)
 	&& (MIS_RescueBennet != LOG_SUCCESS)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		return TRUE;
 	};	

@@ -586,22 +586,26 @@ FUNC VOID DIA_Marduk_Kap3_PERM_Info()
 		//Joly:AI_Output (other,self ,"DIA_Marduk_Kap3_PERM_15_03"); //What do you mean?
 	};
 	
-	AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_04"); //(concerned) The enemy has apparently already entered the city.
-	AI_Output (other,self ,"DIA_Marduk_Kap3_PERM_15_05"); //What do you mean?
-	AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_06"); //One of the paladins, Lothar, was murdered in the street.
-	AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_07"); //(angry) In broad daylight! It has gone too far, but I fear that is only the beginning.
+	if (MIS_SCKnowsInnosEyeIsBroken == TRUE)
+	{
+		AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_04"); //(concerned) The enemy has apparently already entered the city.
+		AI_Output (other,self ,"DIA_Marduk_Kap3_PERM_15_05"); //What do you mean?
+		AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_06"); //One of the paladins, Lothar, was murdered in the street.
+		AI_Output (self ,other,"DIA_Marduk_Kap3_PERM_05_07"); //(angry) In broad daylight! It has gone too far, but I fear that is only the beginning.
 	
+		if (MIS_RescueBennet == LOG_SUCCESS)
+		{
+			Info_AddChoice (DIA_Marduk_Kap3_PERM,"Bennet is innocent.",DIA_Marduk_Kap3_PERM_BennetisNotGuilty);
+		}	
+		else
+		{
+			Info_AddChoice (DIA_Marduk_Kap3_PERM,"Has the murderer been caught?",DIA_Marduk_Kap3_PERM_Murderer);
+		};
+	};
+
 	Info_ClearChoices (DIA_Marduk_Kap3_PERM);
 	Info_AddChoice (DIA_Marduk_Kap3_PERM,DIALOG_BACK,DIA_Marduk_Kap3_PERM_BAck);
 	Info_AddChoice (DIA_Marduk_Kap3_PERM,"What's going to happen now?",DIA_Marduk_Kap3_PERM_AndNow);
-	if (MIS_RescueBennet == LOG_SUCCESS)
-	{
-		Info_AddChoice (DIA_Marduk_Kap3_PERM,"Bennet is innocent.",DIA_Marduk_Kap3_PERM_BennetisNotGuilty);
-	}	
-	else
-	{
-		Info_AddChoice (DIA_Marduk_Kap3_PERM,"Has the murderer been caught?",DIA_Marduk_Kap3_PERM_Murderer);
-	};
 	
 	if (MIS_NovizenChase == LOG_RUNNING)
 	{

@@ -138,6 +138,7 @@ FUNC VOID DIA_Matteo_TRADE_Info()
 	if (Kapitel == 3)
 	&& (MIS_RescueBennet != LOG_SUCCESS)
 	&& (Matteo_TradeNewsPermanent == FALSE)
+	&& (MIS_SCKnowsInnosEyeIsBroken == TRUE)
 	{
 		AI_Output (self,other,"DIA_Matteo_TRADE_09_01"); //Since the mercenaries did in the paladin Lothar, the paladins' inspections have gotten a lot tougher.
 		AI_Output (self,other,"DIA_Matteo_TRADE_09_02"); //I hope that will ease up once they've hanged the murderer.
