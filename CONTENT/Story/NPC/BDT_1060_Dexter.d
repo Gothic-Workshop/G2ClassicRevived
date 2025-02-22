@@ -26,7 +26,7 @@ instance BDT_1060_Dexter (Npc_Default)
 	CreateInvItems 	(self, ItWr_RavensKidnapperMission_Addon, 1 );
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Dexter, BodyTex_N, ITAR_DIEGO);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Dexter, BodyTex_N, ITAR_REVIVED_STT_M);	
 	Mdl_SetModelFatness	(self, -1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

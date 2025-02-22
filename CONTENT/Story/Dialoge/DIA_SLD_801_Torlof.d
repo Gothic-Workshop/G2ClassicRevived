@@ -429,16 +429,7 @@ func void DIA_Torlof_RUF_Info ()
 		AI_Output (self, other, "DIA_Torlof_RUF_01_24"); //You convinced most of them by passing the test.
 		
 		
-		//ADDON>
-		if (Cord_RangerHelp_TorlofsProbe == TRUE)
-		{
-			AI_Output (self, other, "DIA_Addon_Torlof_RUF_01_00"); //(grins) Even if Cord had a little hand in it ...
-			Points_Sld = Points_Sld + 4; 
-		}
-		//ADDON<
-		
-		
-		else if (MIS_Torlof_HolPachtVonSekob == LOG_SUCCESS)
+		if (MIS_Torlof_HolPachtVonSekob == LOG_SUCCESS)
 		{
 			AI_Output (self, other, "DIA_Torlof_RUF_01_25"); //Although a lot of them say that getting a farmer to pay his rent was too easy for a test.
 			Points_Sld = Points_Sld + 3;

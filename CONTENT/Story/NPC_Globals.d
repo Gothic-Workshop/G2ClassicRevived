@@ -392,7 +392,7 @@ func void  B_InitNpcGlobals ()
 	Schiffswache_212= Hlp_GetNpc(PAL_212_Schiffswache);
 	Schiffswache_213= Hlp_GetNpc(PAL_213_Schiffswache);
 	Torwache_305	= Hlp_GetNpc(Mil_305_Torwache);
- 	Lagerwache 		= Hlp_GetNpc(Mil_328_Miliz);
+ 	Lagerwache 		= Hlp_GetNpc(BDT_328_Miliz);
  	Halvor 			= Hlp_GetNpc (VLK_469_Halvor);
  	Attila 			= Hlp_GetNpc (VLK_494_Attila);
  	Brahim 			= Hlp_GetNpc (VLK_437_Brahim);

@@ -27,42 +27,6 @@ FUNC VOID DIA_Gaan_EXIT_Info()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Info MeetingIsRunning
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Gaan_MeetingIsRunning		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	1;
-	condition	 = 	DIA_Addon_Gaan_MeetingIsRunning_Condition;
-	information	 = 	DIA_Addon_Gaan_MeetingIsRunning_Info;
-	important	 = 	TRUE;
-	permanent	 = 	TRUE;
-};
-
-func int DIA_Addon_Gaan_MeetingIsRunning_Condition ()
-{
-	if (Npc_IsInState (self,ZS_Talk))
-	&& (RangerMeetingRunning == LOG_RUNNING)
-		{
-			return TRUE;
-		};	
-};
-var int DIA_Addon_Gaan_MeetingIsRunning_One_time;
-func void DIA_Addon_Gaan_MeetingIsRunning_Info ()
-{
-	if (DIA_Addon_Gaan_MeetingIsRunning_One_time == FALSE)
-	{
-		AI_Output	(self, other, "DIA_Addon_Gaan_MeetingIsRunning_03_00"); //A fresh face in our midst. Welcome to the 'Ring of Water'.
-		DIA_Addon_Gaan_MeetingIsRunning_One_time = TRUE;
-	}
-	else
-	{
-		AI_Output	(self, other, "DIA_Addon_Gaan_MeetingIsRunning_03_01"); //Vatras wants to see you. You had better go to him now.
-	};
-	AI_StopProcessInfos (self);
-};
-
-///////////////////////////////////////////////////////////////////////
 //	Info Hallo
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Gaan_HALLO		(C_INFO)
@@ -85,130 +49,11 @@ func void DIA_Gaan_HALLO_Info ()
 	AI_Output			(other, self, "DIA_Gaan_HALLO_15_00"); //You've got a lot of space up here.
 	AI_Output			(self, other, "DIA_Gaan_HALLO_03_01"); //It's nice enough. But if you go through the pass back there, you won't think so much longer.
 	AI_Output			(self, other, "DIA_Gaan_HALLO_03_02"); //If this little tract of land has impressed you, then wait till you see the Valley of Mines back there.
-
-};
-
-
-
-///////////////////////////////////////////////////////////////////////
-//	Info Wasmachstdu
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_WASMACHSTDU		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	4;
-	condition	 = 	DIA_Gaan_WASMACHSTDU_Condition;
-	information	 = 	DIA_Gaan_WASMACHSTDU_Info;
-
-	description	 = 	"Who are you?";
-};
-
-func int DIA_Gaan_WASMACHSTDU_Condition ()
-{
-	if (Npc_KnowsInfo(other, DIA_Gaan_HALLO))
-	&& (self.aivar[AIV_TalkedToPlayer] == FALSE)
-	&& (RangerMeetingRunning != LOG_SUCCESS)
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Gaan_WASMACHSTDU_Info ()
-{
 	AI_Output			(other, self, "DIA_Gaan_WASMACHSTDU_15_00"); //Who are you?
 	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_01"); //My name is Gaan. I'm a hunter and work for Bengar, the farmer here on the high pastures.
 	AI_Output			(self, other, "DIA_Gaan_WASMACHSTDU_03_02"); //I spend most of my time here outside, basking in the sun.
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info Ranger
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Gaan_Ranger		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_Gaan_Ranger_Condition;
-	information	 = 	DIA_Addon_Gaan_Ranger_Info;
-
-	description	 = 	"Why are you looking so solemn?";
-};
-
-func int DIA_Addon_Gaan_Ranger_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Gaan_HALLO))
-	&& (SCIsWearingRangerRing == TRUE)
-	&& (RangerMeetingRunning == 0)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Gaan_Ranger_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Gaan_Ranger_15_00"); //Why are you looking so solemn?
-	AI_Output	(self, other, "DIA_Addon_Gaan_Ranger_03_01"); //You're wearing our aquamarine ring.
-	AI_Output	(other, self, "DIA_Addon_Gaan_Ranger_15_02"); //You belong to the 'Ring of Water'?
-	AI_Output	(self, other, "DIA_Addon_Gaan_Ranger_03_03"); //I certainly do. Good to see a new face in our ranks.
-	B_GivePlayerXP (XP_Ambient);
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info AufgabeBeimRing
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Gaan_AufgabeBeimRing		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_Gaan_AufgabeBeimRing_Condition;
-	information	 = 	DIA_Addon_Gaan_AufgabeBeimRing_Info;
-
-	description	 = 	"What's your task within the 'Ring of Water'?";
-};
-
-func int DIA_Addon_Gaan_AufgabeBeimRing_Condition ()
-{
-	if ((Npc_KnowsInfo (other, DIA_Addon_Gaan_Ranger))
-	|| (RangerMeetingRunning != 0))
-	&& (Kapitel < 3)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Gaan_AufgabeBeimRing_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Gaan_AufgabeBeimRing_15_00"); //What's your task within the 'Ring of Water'?
 	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_01"); //I keep an eye on the entrance to the pass, to see who goes in and out.
 	AI_Output	(self, other, "DIA_Addon_Gaan_AufgabeBeimRing_03_02"); //Since the paladins have closed the gate to the pass, however, there hasn't been much coming and going.
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Gaan_MissingPeople		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_Gaan_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Gaan_MissingPeople_Info;
-
-	description	 = 	"Have you heard of those missing people?";
-};
-
-func int DIA_Addon_Gaan_MissingPeople_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Addon_Gaan_AufgabeBeimRing))
-	&& (SC_HearedAboutMissingPeople == TRUE)
-			{
-				return TRUE;
-			};
-};
-
-func void DIA_Addon_Gaan_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Gaan_MissingPeople_15_00"); //Have you heard of those missing people?
-	AI_Output	(self, other, "DIA_Addon_Gaan_MissingPeople_03_01"); //Of course I have. That's why we're supposed to keep our eyes open.
-	AI_Output	(self, other, "DIA_Addon_Gaan_MissingPeople_03_02"); //But I haven't seen much that would give you a clue, to tell you the truth.
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -226,7 +71,10 @@ instance DIA_Gaan_WALD		(C_INFO)
 
 func int DIA_Gaan_WALD_Condition ()
 {
-	return TRUE;
+	if (Npc_KnowsInfo(other, DIA_Gaan_HALLO))
+		{
+				return TRUE;
+		};
 };
 
 func void DIA_Gaan_WALD_Info ()
@@ -270,145 +118,6 @@ func void DIA_Gaan_SAGITTA_Info ()
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_04"); //But if you're sick, you won't find better help than Sagitta and her kitchen full of healing herbs.
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_05"); //You'll find her in the strip of woods behind Sekob's farm.
 
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info monster
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_MONSTER		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	8;
-	condition	 = 	DIA_Gaan_MONSTER_Condition;
-	information	 = 	DIA_Gaan_MONSTER_Info;
-
-	description	 = 	"What does this dangerous beast look like?";
-};
-
-func int DIA_Gaan_MONSTER_Condition ()
-{
-	if 	(
-		(MIS_Gaan_Snapper == LOG_RUNNING)	
-		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
-		)
-			{
-					return TRUE;
-			};
-};
-
-func void DIA_Gaan_MONSTER_Info ()
-{
-	AI_Output			(other, self, "DIA_Gaan_MONSTER_15_00"); //What does this dangerous beast look like?
-	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_01"); //I don't know exactly. Up to now, I've mostly heard grunting and scratching. But I've seen what it can do.
-	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_02"); //Even wolves aren't safe from it. The beast even bit the head off of one.
-
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info monster
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_WASZAHLSTDU		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	9;
-	condition	 = 	DIA_Gaan_WASZAHLSTDU_Condition;
-	information	 = 	DIA_Gaan_WASZAHLSTDU_Info;
-
-	description	 = 	"How much would you pay me if I killed that beast for you?";
-};
-
-func int DIA_Gaan_WASZAHLSTDU_Condition ()
-{
-	if 	(
-		(Npc_KnowsInfo(other, DIA_Gaan_MONSTER))
-		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
-		)
-			{
-					return TRUE;
-			};
-}; 
-
-func void DIA_Gaan_WASZAHLSTDU_Info ()
-{
-	AI_Output			(other, self, "DIA_Gaan_WASZAHLSTDU_15_00"); //How much would you pay me if I killed that beast for you?
-	AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_01"); //I'd give the person who killed it everything I could spare.
-	//AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_02"); //30 Goldmünzen? 
-	//Auskommentiert, weil "?" ist auch so gesprochen worden - kommt nicht gut
-	B_Say_Gold   (self,other,30);
-	MIS_Gaan_Deal = LOG_RUNNING;
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info wohermonster
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_WOHERMONSTER		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	10;
-	condition	 = 	DIA_Gaan_WOHERMONSTER_Condition;
-	information	 = 	DIA_Gaan_WOHERMONSTER_Info;
-
-	description	 = 	"Where does this scummy beast come from?";
-};
-
-func int DIA_Gaan_WOHERMONSTER_Condition ()
-{
-	if 	(
-		(Npc_KnowsInfo(other, DIA_Gaan_MONSTER))
-		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
-		)
-			{
-					return TRUE;
-			};
-};
-
-func void DIA_Gaan_WOHERMONSTER_Info ()
-{
-	AI_Output			(other, self, "DIA_Gaan_WOHERMONSTER_15_00"); //Where does this scummy beast come from?
-	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_01"); //Somewhere from outside the woods. Maybe from the Valley of Mines. But I don't know for sure.
-	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_02"); //I've never been to the Valley of Mines.
- 
-};
-
-
-///////////////////////////////////////////////////////////////////////
-//	Info MonsterTot
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_MONSTERTOT		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 11;
-	condition	 = 	DIA_Gaan_MONSTERTOT_Condition;
-	information	 = 	DIA_Gaan_MONSTERTOT_Info;
-	important	 = 	TRUE;
-};
-
-func int DIA_Gaan_MONSTERTOT_Condition ()
-{
-	if 	((Npc_IsDead(Gaans_Snapper))== TRUE) 
-	&& 	(RangerMeetingRunning != LOG_RUNNING)
-			{
-					return TRUE;
-			};
-};
-
-func void DIA_Gaan_MONSTERTOT_Info ()
-{
-	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_00"); //That horrible animal is dead, I assume.
-	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_01"); //Then I can finally hunt freely again.
-	
-
-	if (MIS_Gaan_Deal == LOG_RUNNING)
-		{
-			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
-
-			CreateInvItems (self, ItMi_Gold, 30);									
-			B_GiveInvItems (self, other, ItMi_Gold, 30);					
-		};
-	
-	MIS_Gaan_Snapper = LOG_SUCCESS;
-	B_GivePlayerXP (XP_Gaan_WaldSnapper);
-	AI_StopProcessInfos (self);
 };
 
 
@@ -693,6 +402,144 @@ func void DIA_Gaan_JAGD_Info ()
 		{
 			AI_Output			(self, other, "DIA_Gaan_JAGD_03_06"); //I can't complain.
 		};
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info monster
+///////////////////////////////////////////////////////////////////////
+instance DIA_Gaan_MONSTER		(C_INFO)
+{
+	npc		 = 	BAU_961_Gaan;
+	nr		 = 	8;
+	condition	 = 	DIA_Gaan_MONSTER_Condition;
+	information	 = 	DIA_Gaan_MONSTER_Info;
+
+	description	 = 	"What does this dangerous beast look like?";
+};
+
+func int DIA_Gaan_MONSTER_Condition ()
+{
+	if 	(
+		(MIS_Gaan_Snapper == LOG_RUNNING)	
+		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
+		)
+			{
+					return TRUE;
+			};
+};
+
+func void DIA_Gaan_MONSTER_Info ()
+{
+	AI_Output			(other, self, "DIA_Gaan_MONSTER_15_00"); //What does this dangerous beast look like?
+	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_01"); //I don't know exactly. Up to now, I've mostly heard grunting and scratching. But I've seen what it can do.
+	AI_Output			(self, other, "DIA_Gaan_MONSTER_03_02"); //Even wolves aren't safe from it. The beast even bit the head off of one.
+
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info monster
+///////////////////////////////////////////////////////////////////////
+instance DIA_Gaan_WASZAHLSTDU		(C_INFO)
+{
+	npc		 = 	BAU_961_Gaan;
+	nr		 = 	9;
+	condition	 = 	DIA_Gaan_WASZAHLSTDU_Condition;
+	information	 = 	DIA_Gaan_WASZAHLSTDU_Info;
+
+	description	 = 	"How much would you pay me if I killed that beast for you?";
+};
+
+func int DIA_Gaan_WASZAHLSTDU_Condition ()
+{
+	if 	(
+		(Npc_KnowsInfo(other, DIA_Gaan_MONSTER))
+		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
+		)
+			{
+					return TRUE;
+			};
+}; 
+
+func void DIA_Gaan_WASZAHLSTDU_Info ()
+{
+	AI_Output			(other, self, "DIA_Gaan_WASZAHLSTDU_15_00"); //How much would you pay me if I killed that beast for you?
+	AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_01"); //I'd give the person who killed it everything I could spare.
+	//AI_Output			(self, other, "DIA_Gaan_WASZAHLSTDU_03_02"); //30 Goldmünzen? 
+	//Auskommentiert, weil "?" ist auch so gesprochen worden - kommt nicht gut
+	B_Say_Gold   (self,other,100);
+	MIS_Gaan_Deal = LOG_RUNNING;
+};
+
+///////////////////////////////////////////////////////////////////////
+//	Info wohermonster
+///////////////////////////////////////////////////////////////////////
+instance DIA_Gaan_WOHERMONSTER		(C_INFO)
+{
+	npc		 = 	BAU_961_Gaan;
+	nr		 = 	10;
+	condition	 = 	DIA_Gaan_WOHERMONSTER_Condition;
+	information	 = 	DIA_Gaan_WOHERMONSTER_Info;
+
+	description	 = 	"Where does this scummy beast come from?";
+};
+
+func int DIA_Gaan_WOHERMONSTER_Condition ()
+{
+	if 	(
+		(Npc_KnowsInfo(other, DIA_Gaan_MONSTER))
+		&&((Npc_IsDead(Gaans_Snapper))== FALSE)
+		)
+			{
+					return TRUE;
+			};
+};
+
+func void DIA_Gaan_WOHERMONSTER_Info ()
+{
+	AI_Output			(other, self, "DIA_Gaan_WOHERMONSTER_15_00"); //Where does this scummy beast come from?
+	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_01"); //Somewhere from outside the woods. Maybe from the Valley of Mines. But I don't know for sure.
+	AI_Output			(self, other, "DIA_Gaan_WOHERMONSTER_03_02"); //I've never been to the Valley of Mines.
+ 
+};
+
+
+///////////////////////////////////////////////////////////////////////
+//	Info MonsterTot
+///////////////////////////////////////////////////////////////////////
+instance DIA_Gaan_MONSTERTOT		(C_INFO)
+{
+	npc		 = 	BAU_961_Gaan;
+	nr		 = 11;
+	condition	 = 	DIA_Gaan_MONSTERTOT_Condition;
+	information	 = 	DIA_Gaan_MONSTERTOT_Info;
+	important	 = 	TRUE;
+};
+
+func int DIA_Gaan_MONSTERTOT_Condition ()
+{
+	if 	((Npc_IsDead(Gaans_Snapper))== TRUE)
+			{
+					return TRUE;
+			};
+};
+
+func void DIA_Gaan_MONSTERTOT_Info ()
+{
+	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_00"); //That horrible animal is dead, I assume.
+	AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_01"); //Then I can finally hunt freely again.
+	
+
+	if (MIS_Gaan_Deal == LOG_RUNNING)
+		{
+			AI_Output			(self, other, "DIA_Gaan_MONSTERTOT_03_02");	//Here's the money I promised you.
+
+			CreateInvItems (self, ItMi_Gold, 100);									
+			B_GiveInvItems (self, other, ItMi_Gold, 100);					
+		};
+	
+	MIS_Gaan_Snapper = LOG_SUCCESS;
+	B_GivePlayerXP (XP_Gaan_WaldSnapper);
+	AI_StopProcessInfos (self);
 };
 
 

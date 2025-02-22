@@ -1,5 +1,5 @@
 
-instance Mil_328_Miliz (Npc_Default)
+instance Bdt_328_Miliz (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= Name_Wache;	

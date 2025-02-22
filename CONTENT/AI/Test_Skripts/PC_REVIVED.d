@@ -519,6 +519,10 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER, 1);
 	//CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_02, 1);
 	CreateInvItems(self, ITAR_REVIVED_ARCHER, 1);
+	
+	CreateInvItems(self, ITAR_REVIVED_SLD_L_BDT, 1);
+	CreateInvItems(self, ITAR_REVIVED_STT_L_BDT, 1);
+	CreateInvItems(self, ITAR_REVIVED_STT_L_BDT_02, 1);
 
 	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H, 1);
 	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H_CHARGED, 1);
@@ -535,6 +539,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 //---------------------------------------------------------------------
 
 	CreateInvItems(self, ITAR_REVIVED_GRD_I_03, 1);
+	CreateInvItems(self, ITAR_REVIVED_STT_M_BDT, 1);
+	CreateInvItems(self, ITAR_REVIVED_STT_H_BDT, 1);
 	CreateInvItems(self, ITAR_REVIVED_GORDONRAMSAY, 1);
 	
 	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);

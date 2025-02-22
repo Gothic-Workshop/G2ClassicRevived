@@ -530,43 +530,7 @@ FUNC VOID DIA_Lee_OtherSld_Info()
 	
 	B_LogEntry (TOPIC_BecomeSLD,"To be accepted as a mercenary, I have to let Torlof put me to the test and earn the respect of the other mercenaries.");
 };
-			
-///////////////////////////////////////////////////////////////////////
-//	Info Ranger
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Lee_Ranger		(C_INFO)
-{
-	npc		 = 	SLD_800_Lee;
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_Lee_Ranger_Condition;
-	information	 = 	DIA_Addon_Lee_Ranger_Info;
 
-	description	 = 	"What do you know about the 'Ring of Water'?";
-};
-
-func int DIA_Addon_Lee_Ranger_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Lee_OtherSld))
-	&& (SC_KnowsRanger == TRUE)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Lee_Ranger_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Lee_Ranger_15_00"); //What do you know about the 'Ring of Water'?
-	AI_Output	(self, other, "DIA_Addon_Lee_Ranger_04_01"); //(laughs) I might have known. You just have to mingle in everything, don't you?
-	AI_Output	(other, self, "DIA_Addon_Lee_Ranger_15_02"); //Come on, tell me.
-	AI_Output	(self, other, "DIA_Addon_Lee_Ranger_04_03"); //I'm only marginally involved in this. I know that this secret guild exists here and that the Water Mages are behind it.
-	AI_Output	(self, other, "DIA_Addon_Lee_Ranger_04_04"); //Since the fall of the Barrier, I am no longer bound to the agreement that I came to with the Water Mages back then.
-	AI_Output	(self, other, "DIA_Addon_Lee_Ranger_04_05"); //Of course, I still help when I can. But most of the time, I have my own problems and barely any time for other things.
-	AI_Output	(self, other, "DIA_Addon_Lee_Ranger_04_06"); //If you want to know more about it, you should probably talk to Cord. He's one of them, as far as I know.
-		
-	RangerHelp_gildeSLD = TRUE;	
-	SC_KnowsCordAsRangerFromLee = TRUE;
-};			
-			
 // ************************************************************
 // 			  				JoinNOW
 // ************************************************************

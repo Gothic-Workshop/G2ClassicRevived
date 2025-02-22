@@ -123,10 +123,7 @@ instance DIA_Lares_HALLO		(C_INFO)
 };
 func int DIA_Lares_HALLO_Condition ()
 {	
-	if 	(RangerMeetingRunning == 0)//ADDON
-		{
-			return TRUE;
-		};
+	return TRUE;
 };
 func void DIA_Lares_HALLO_Info ()
 {
@@ -338,74 +335,6 @@ func void DIA_Addon_Lares_RangerHelp_Moe()
 // ************************************************************
 // 			  			Paladine und GILDE
 // ************************************************************
-// ------------------------------------------------------------
-// Paladine
-// ------------------------------------------------------------
-instance DIA_Lares_Paladine	(C_INFO)
-{
-	npc			 = 	SLD_449_Lares;
-	nr			 = 	4;
-	condition	 = 	DIA_Lares_Paladine_Condition;
-	information	 = 	DIA_Lares_Paladine_Info;
-	permanent    =  FALSE;
-	description	 = 	"I must talk to the paladins, by any means!";
-};
-func int DIA_Lares_Paladine_Condition ()
-{	
-	if (other.guild == GIL_NONE)
-	&& (RangerHelp_gildeMIL == FALSE)
-	&& (RangerHelp_gildeSLD == FALSE)
-	&& (RangerHelp_gildeKDF == FALSE)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Lares_Paladine_Info ()
-{
-	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by all means!
-	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //What do you want from THEM?
-	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I need to have it.
-	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //And you think they'll give it to you? You'll never get into the upper end of town.
-	
-	AI_Output (other, self, "DIA_Lares_Paladine_15_04"); //I'll find a way somehow.
-	AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Sure, if you want to ingratiate yourself with the citizens or play errand boy for the militia ...
-	
-	AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Hab' ich eine Alternative?
-	AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //Wenn ich du wäre, würde ich zu Onars Hof gehen und mit Lee reden.
-	AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //Ich bin mir sicher, wir finden einem Weg, dich ins obere Viertel zu bringen.
-};	
-
-// ------------------------------------------------------------
-// 			  			Warum Paladine hier?
-// ------------------------------------------------------------
-instance DIA_Lares_WhyPalHere		(C_INFO)
-{
-	npc			 = 	SLD_449_Lares;
-	nr			 = 	4;
-	condition	 = 	DIA_Lares_WhyPalHere_Condition;
-	information	 = 	DIA_Lares_WhyPalHere_Info;
-	permanent    =  FALSE;
-	description	 = 	"Do you know why the paladins are here?";
-};
-func int DIA_Lares_WhyPalHere_Condition ()
-{	
-	if (other.guild == GIL_NONE)
-	{
-		if (Npc_KnowsInfo (other, DIA_Lares_Paladine))
-		|| (RangerHelp_gildeMIL == TRUE)
-		|| (RangerHelp_gildeSLD == TRUE)
-		|| (RangerHelp_gildeKDF == TRUE)
-		{
-			return TRUE;
-		};
-	};
-};
-func void DIA_Lares_WhyPalHere_Info ()
-{
-	AI_Output (other, self, "DIA_Lares_WhyPalHere_15_00"); //Do you know why the paladins are here?
-	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_01"); //Nobody knows for sure ... Lots of people think it's because of the orcs, but I think there's another reason.
-	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_02"); //It probably has something to do with the old penal colony.
-};	
 
 // ------------------------------------------------------------
 // 			  					About Sld
@@ -439,7 +368,6 @@ func void DIA_Lares_AboutSld_Info ()
 	Info_AddChoice (DIA_Lares_AboutSld, DIALOG_BACK, DIA_Lares_AboutSld_BACK);
 	Info_AddChoice (DIA_Lares_AboutSld, "Why aren't YOU with Lee and his mercenaries?", DIA_Lares_AboutSld_WhyNotYou);
 	Info_AddChoice (DIA_Lares_AboutSld, "Tell me more about the mercenaries...", DIA_Lares_AboutSld_Sld);
-	Info_AddChoice (DIA_Lares_AboutSld, "How do I find the landowner's farm?", DIA_Lares_AboutSld_WayToOnar); 
 };
 func void DIA_Lares_AboutSld_BACK()
 {
@@ -457,9 +385,10 @@ func void DIA_Lares_AboutSld_WhyNotYou()
 	AI_Output (other, self, "DIA_Lares_WhyInCity_15_00"); //Why aren't YOU with Lee and his mercenaries?
 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_01"); //But I am! Just not on the farm.
 	AI_Output (self, other, "DIA_Lares_WhyInCity_09_02"); //You could say I'm our outpost in the city. We don't want the ship to sail without us.
-	//AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Warum bist DU in die Stadt gekommen?
+	AI_Output (self, other, "DIA_Lares_WhyInCity_09_03"); //Warum bist DU in die Stadt gekommen?
 	Lares_WorkForLee = TRUE;
 	
+	Info_AddChoice (DIA_Lares_AboutSld, "I must talk to the paladins, by any means!", DIA_Lares_AboutSld_Paladine);
 	Info_AddChoice (DIA_Lares_AboutSld, "What ship were you talking about?", DIA_Lares_AboutSld_Schiff);
 };
 func void DIA_Lares_AboutSld_Schiff()
@@ -469,18 +398,37 @@ func void DIA_Lares_AboutSld_Schiff()
 	AI_Output (self, other, "DIA_Lares_Schiff_09_02"); //But that could take a while...
 	AI_Output (other,self , "DIA_Lares_Schiff_15_03"); //Why?
 	AI_Output (self, other, "DIA_Lares_Schiff_09_04"); //You'd better ask Lee about that, if you meet him ... He's got plans.
+
+	Info_AddChoice (DIA_Lares_AboutSld, "How do I find the landowner's farm?", DIA_Lares_AboutSld_WayToOnar); 
 };
 func void DIA_Lares_AboutSld_WayToOnar()
 {
 	AI_Output (other,self, "DIA_Lares_WegZumHof_15_00"); //How do I find the landowner's farm?
 	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_00"); //It's quite simple. You leave the seaport by the east gate, and then follow the path towards the east.
 	AI_Output (self, other, "DIA_Addon_Lares_WegZumHof_09_01"); //I can take you there if you want.
-	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //Ich kann dich hinbringen, wenn du willst. Hab sowieso schon zu lange hier rumgehangen.
-	//AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //Hier im Hafen gibt es zwar für gewöhnlich keine Miliz, aber ich muss ja nicht riskieren, dass einer von ihnen Verdacht schöpft ...
+	AI_Output (self, other, "DIA_Lares_WegZumHof_09_01"); //Ich kann dich hinbringen, wenn du willst. Hab sowieso schon zu lange hier rumgehangen.
+	AI_Output (self, other, "DIA_Lares_WegZumHof_09_02"); //Hier im Hafen gibt es zwar für gewöhnlich keine Miliz, aber ich muss ja nicht riskieren, dass einer von ihnen Verdacht schöpft ...
 	Lares_WayToOnar = TRUE;
 };	
 
+func void DIA_Lares_AboutSld_Paladine ()
+{
+	AI_Output (other, self, "DIA_Lares_Paladine_15_00"); //I must talk to the paladins, by all means!
+	AI_Output (self, other, "DIA_Lares_Paladine_09_01"); //What do you want from THEM?
+	AI_Output (other, self, "DIA_Lares_Paladine_15_02"); //They've got a powerful amulet, the Eye of Innos. I need to have it.
+	AI_Output (self, other, "DIA_Lares_Paladine_09_03"); //And you think they'll give it to you? You'll never get into the upper end of town.
+	
+	AI_Output (other, self, "DIA_Lares_Paladine_15_04"); //I'll find a way somehow.
+	AI_Output (self, other, "DIA_Lares_Paladine_09_05"); //Sure, if you want to ingratiate yourself with the citizens or play errand boy for the militia ...
+	
+	AI_Output (other, self, "DIA_Lares_Alternative_15_00"); //Hab' ich eine Alternative?
+	AI_Output (self, other, "DIA_Lares_Alternative_09_01"); //Wenn ich du wäre, würde ich zu Onars Hof gehen und mit Lee reden.
+	AI_Output (self, other, "DIA_Lares_Alternative_09_02"); //Ich bin mir sicher, wir finden einem Weg, dich ins obere Viertel zu bringen.
 
+	AI_Output (other, self, "DIA_Lares_WhyPalHere_15_00"); //Do you know why the paladins are here?
+	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_01"); //Nobody knows for sure ... Lots of people think it's because of the orcs, but I think there's another reason.
+	AI_Output (self, other, "DIA_Lares_WhyPalHere_09_02"); //It probably has something to do with the old penal colony.
+};
 
 // ************************************************************
 // 			  			GuildOfThieves
@@ -565,29 +513,6 @@ func void DIA_Lares_GotKey_Info ()
 	AI_Output (self, other, "DIA_Lares_GotKey_09_01"); //So?
 	AI_Output (other,self, "DIA_Lares_GotKey_15_02"); //I think it will lead me to the hideout of the thieves' guild ...
 	AI_Output (self, other, "DIA_Lares_GotKey_09_03"); //Well, it could be the key to the sewers.
-};
-// ------------------------------------------------------------
-// Kanalisation
-// ------------------------------------------------------------
-instance DIA_Lares_Kanalisation (C_INFO)
-{
-	npc			 = 	SLD_449_Lares;
-	nr			 = 	17;
-	condition	 = 	DIA_Lares_Kanalisation_Condition;
-	information	 = 	DIA_Lares_Kanalisation_Info;
-	permanent    =  FALSE;
-	description	 = 	"Where can I find the sewers?";
-};
-func int DIA_Lares_Kanalisation_Condition ()
-{	
-	if (Npc_KnowsInfo (other, DIA_Lares_GotKey))
-	&& (DG_gefunden == FALSE) 
-	{
-		return TRUE;
-	};
-};
-func void DIA_Lares_Kanalisation_Info ()
-{
 	AI_Output (other,self, "DIA_Lares_Kanalisation_15_00"); //Where can I find the sewers?
 	AI_Output (self, other, "DIA_Lares_Kanalisation_09_01"); //What do I know... they usually empty into the ocean.
 };
@@ -607,8 +532,7 @@ instance DIA_Lares_OtherGuild (C_INFO)
 func int DIA_Lares_OtherGuild_Condition ()
 {	
 	if (Npc_IsInState (self, ZS_Talk))
-	&& (other.guild != GIL_NONE)
-	&& (SC_IsRanger == FALSE)//ADDON
+	&& (other.guild != GIL_NONE)//ADDON
 	{
 		return TRUE;
 	};
@@ -648,46 +572,10 @@ func void DIA_Lares_OtherGuild_Info ()
 	if (other.guild == GIL_SLD) 
 	|| (other.guild == GIL_DJG)
 	{
-		//AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //Ich hab gehört, du bist aufgenommen worden.
-		AI_Output (self, other, "DIA_Addon_Lares_OtherGuild_09_00"); //I heard that you have been accepted to join Lee.
+		AI_Output (self, other, "DIA_Lares_OtherGuild_09_09"); //Ich hab gehört, du bist aufgenommen worden.
+		//AI_Output (self, other, "DIA_Addon_Lares_OtherGuild_09_00"); //I heard that you have been accepted to join Lee.
 		AI_Output (self, other, "DIA_Lares_OtherGuild_09_10"); //Congratulations.
 	};
-};
-
-
-
-// ************************************************************
-// ***														***
-// 							Die Latscherei
-// ***														***
-// ************************************************************
-instance DIA_Addon_Lares_Forest (C_INFO)
-{
-	npc			 = 	SLD_449_Lares;
-	nr			 = 	9;
-	condition	 = 	DIA_Addon_Lares_Forest_Condition;
-	information	 = 	DIA_Addon_Lares_Forest_Info;
-
-	description	 = 	"Can you help me get through the thick woods in the east?";
-};
-func int DIA_Addon_Lares_Forest_Condition ()
-{	
-	if (MIS_Addon_Nefarius_BringMissingOrnaments == LOG_RUNNING)
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Addon_Lares_Forest_info ()
-{
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_00"); //Can you help me get through the thick woods in the east?
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_01"); //Okay. But what do you want to go there for?
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_02"); //Nefarius ordered me to find more ornaments.
-	AI_Output (other, self, "DIA_Addon_Lares_RangerHelp_Forest_15_03"); //One of the places where I'm supposed to look is in the middle of the woods.
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_04"); //I see. And that's still too dangerous for you alone, right?
-	AI_Output (self, other, "DIA_Addon_Lares_RangerHelp_Forest_09_05"); //No problem. Let me know when you want to leave.
-
-	RangerHelp_OrnamentForest = TRUE;
 };
 
 

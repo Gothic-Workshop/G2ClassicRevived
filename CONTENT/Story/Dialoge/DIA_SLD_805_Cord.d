@@ -39,7 +39,6 @@ FUNC INT DIA_Cord_Hallo_Condition()
 	if (Npc_IsInState(self, ZS_Talk))
 	&& (self.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (other.guild == GIL_NONE)
-	&& (RangerMeetingRunning != LOG_SUCCESS)
 	{
 		return TRUE;
 	};
@@ -49,14 +48,11 @@ FUNC VOID DIA_Cord_Hallo_Info()
 {
 	AI_Output (self ,other, "DIA_Cord_Hallo_14_00"); //If you have a problem with wolves or field raiders, go talk to one of the younger mercenaries.
 	AI_Output (self ,other, "DIA_Cord_Hallo_14_01"); //You can come to me when the paladins show up here.
-	
-	if (SC_IsRanger == FALSE)
-	{	
+
 		AI_Output (other, self, "DIA_Cord_Hallo_15_02"); //What?
 		AI_Output (self ,other, "DIA_Cord_Hallo_14_03"); //Whenever one of you peasants comes to me, it's always about slaughtering innocent beasts.
 		AI_Output (other, self, "DIA_Cord_Hallo_15_04"); //I'm not a peasant.
 		AI_Output (self ,other, "DIA_Cord_Hallo_14_05"); //Oh? And what is it you want, then?
-	};
 };
 
 // ************************************************************

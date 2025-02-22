@@ -478,6 +478,10 @@ func void use_REVIVED_POCKET_WOG()
 	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_ARCHER, 1);
 
+	CreateInvItems(hero, ITAR_REVIVED_SLD_L_BDT, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT_02, 1);
+
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_1H, 1);
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_1H_CHARGED, 1);
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_2H, 1);
@@ -513,6 +517,8 @@ instance REVIVED_POCKET_NEUE(C_Item)
 func void use_REVIVED_POCKET_NEUE()
 {
 	CreateInvItems(hero, ITAR_REVIVED_GRD_I_03, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_M_BDT, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_H_BDT, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GORDONRAMSAY, 1);
 
 	CreateInvItems(hero, ITKE_REVIVED_GORDONRAMSAY, 1);

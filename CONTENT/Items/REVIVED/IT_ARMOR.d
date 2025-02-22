@@ -1280,6 +1280,169 @@ instance ITAR_REVIVED_GRD_I_02(C_Item)
 };
 
 //****************************************************************************
+//			GOTHIC 1 MODIFIED
+//****************************************************************************
+
+instance ITAR_REVIVED_SLD_L_BDT(C_Item)
+{
+	name 					=	"Light Mercenary's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	30;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_SLD_ARMOR_L;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"sldl.3ds";
+	visual_change 			=	"nG1_sld_l.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+	
+	on_equip				=	Equip_SLD_ARMOR;
+	on_unequip				=	UnEquip_SLD_ARMOR;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+/******************************************************************************************/
+
+instance ITAR_REVIVED_STT_L_BDT(C_Item)
+{
+	name 					=	"Old Shadow's Dress";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	5;
+	protection [PROT_FIRE] 	= 	15;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_STT_ARMOR_M;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"sttm.3ds";
+	visual_change 			=	"Schattenbuddler.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+instance ITAR_REVIVED_STT_L_BDT_02(C_Item)
+{
+	name 					=	"Old Shadow's Dress";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	5;
+	protection [PROT_FIRE] 	= 	15;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_STT_ARMOR_M;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"sttm.3ds";
+	visual_change 			=	"Hum_SttL_Armor_real.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+instance ITAR_REVIVED_STT_M_BDT(C_Item)
+{
+	name 					=	"Old Shadow's Dress";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	30;
+	protection [PROT_BLUNT] = 	30;
+	protection [PROT_POINT] = 	5;
+	protection [PROT_FIRE] 	= 	15;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_STT_ARMOR_M;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"sttm.3ds";
+	visual_change 			=	"Hum_STTM_ARMOR_delaCroix.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+instance ITAR_REVIVED_STT_H_BDT(C_Item)
+{
+	name 					=	"Old Shadow's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	5;
+	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_STT_ARMOR_H;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"stth.3ds";
+	visual_change 			=	"Hum_STTS_ARMOR_delaCroix.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+//****************************************************************************
 //			GOTHIC 2 MODIFIED
 //****************************************************************************
 INSTANCE ITAR_JUDGE_02 (C_Item)

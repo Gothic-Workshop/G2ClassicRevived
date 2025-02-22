@@ -2325,7 +2325,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (Giant_Rat			, "NW_CITY_KANAL_06");	// 
 	Wld_InsertNpc (Giant_Rat			, "NW_CITY_KANAL_07");	// 
 	//----------------------------------------------------------------
-	Wld_InsertNpc	(Mil_328_Miliz, "NW_CITY_ENTRANCE_01");// Lagerhaus Wache
+	Wld_InsertNpc	(BDT_328_Miliz, "NW_CITY_ENTRANCE_01");// Lagerhaus Wache
 	//----------------------------------------------------------------
 
 	Wld_InsertNpc 	(VLK_474_Buerger	, "NW_CITY_ENTRANCE_01"); //

@@ -96,10 +96,7 @@ instance DIA_Addon_Balthasar_Rangerbandits		(C_INFO)
 func int DIA_Addon_Balthasar_Rangerbandits_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Balthasar_HALLO))
-	&& (
-		(MIS_Vatras_FindTheBanditTrader == LOG_RUNNING)		
-		||(SC_KnowsLuciaCaughtByBandits == TRUE)
-		)
+	&& (MIS_Vatras_FindTheBanditTrader == LOG_RUNNING)	
 		{
 			return TRUE;
 		};
@@ -115,11 +112,6 @@ func void DIA_Addon_Balthasar_Rangerbandits_Info ()
 		AI_Output	(self, other, "DIA_Addon_Balthasar_Rangerbandits_05_02"); //They were carrying loads of weapons. They looked like they were all set to win the war against the orcs.
 	};
 	
-	if (SC_KnowsLuciaCaughtByBandits == TRUE)
-	{
-		AI_Output	(self, other, "DIA_Addon_Balthasar_Rangerbandits_05_03"); //If my eyes didn't deceive me, they were also dragging a young woman along to the forest.
-		AI_Output	(self, other, "DIA_Addon_Balthasar_Rangerbandits_05_04"); //I really hope they left her alone.
-	};
 	B_GivePlayerXP (XP_Ambient);
 	AI_Output	(self, other, "DIA_Addon_Balthasar_Rangerbandits_05_05"); //I'm just glad they stayed away from our farm.
 };

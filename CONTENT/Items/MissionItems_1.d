@@ -1078,7 +1078,7 @@ func void UseBanditLetter ()
 		
 			Log_CreateTopic (Topic_Bandits,LOG_MISSION);
 			Log_SetTopicStatus (Topic_Bandits,LOG_RUNNING);
-			B_LogEntry (Topic_Bandits,"The bandits' leader is Dexter. He's hiding out in a mine near the landowner's.");
+			B_LogEntry (Topic_Bandits,"The bandits' leader who gives out wanted posters with my face is definitely Dexter, a Shadow from the Old Camp. He's hiding out in a mine near the landowner's. I wonder what's behind it all.");
 			MIS_Steckbriefe = LOG_RUNNING;
 		};
 		

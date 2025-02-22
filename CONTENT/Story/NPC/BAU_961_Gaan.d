@@ -19,7 +19,7 @@ instance BAU_961_Gaan (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Bau_Mace);
+	EquipItem			(self, ITMW_REVIVED_LURKERBITE);
 	EquipItem			(self, ItRw_Sld_Bow);
 	
 	// ------ Inventory ------
@@ -27,15 +27,15 @@ instance BAU_961_Gaan (Npc_Default)
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_Bau_L);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_REVIVED_ARCHER);		
 	Mdl_SetModelFatness	(self, 1);
-	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
+	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
 	// ------ NSC-relevante Talente vergeben ------
 	B_GiveNpcTalents (self);
 	
 	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 25); //Grenzen für Talent-Level liegen bei 30 und 60
+	B_SetFightSkills (self, 30); //Grenzen für Talent-Level liegen bei 30 und 60
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_961;

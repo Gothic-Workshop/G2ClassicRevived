@@ -187,7 +187,7 @@ func void DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT()
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT_01_01"); //Suit yourself. So, are we going now, or not?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
@@ -298,7 +298,7 @@ func void DIA_1013_BANDIT_DEXTER_Info ()
 	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_03"); //(takes a deep breath) Oh man! All right. His name is Dexter. Near the big farm there's a steep rock.
 	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_04"); //There's a watch tower up there, and a few mines. He has his hideout somewhere nearby.
 	
-	B_LogEntry (Topic_Bandits,"The bandits' leader is Dexter. He's hiding out in a mine near the landowner's.");
+	B_LogEntry (Topic_Bandits,"The bandits' leader is Dexter, a Shadow from the Old Camp. He's hiding out in a mine near the landowner's.");
 	
 	if (B_GiveInvItems(other, self, itmi_gold, 10))
 	{

@@ -43,12 +43,11 @@ FUNC VOID DIA_1061_Wache_Hallo_Info()
 	
 	Info_ClearChoices (DIA_1061_Wache_Hallo);
 	Info_AddChoice (DIA_1061_Wache_Hallo,"Lee",DIA_1061_Wache_Hallo_Lee);
-	if (Bdt13_Dexter_verraten == TRUE) 
-	|| (Ranger_SCKnowsDexter == TRUE)//ADDON
+	if (Bdt13_Dexter_verraten == TRUE)
 	{
+		Info_AddChoice (DIA_1061_Wache_Hallo,"Diego",DIA_1061_Wache_Hallo_Diego);
 		Info_AddChoice (DIA_1061_Wache_Hallo,"Dexter",DIA_1061_Wache_Hallo_Dexter);
 	};
-	Info_AddChoice (DIA_1061_Wache_Hallo,"Diego",DIA_1061_Wache_Hallo_Diego);
 	Info_AddChoice (DIA_1061_Wache_Hallo,"No idea.",DIA_1061_Wache_Hallo_Ahnung);
 };
 FUNC VOID DIA_1061_Wache_Hallo_Lee()
