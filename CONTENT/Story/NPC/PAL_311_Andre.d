@@ -1,9 +1,9 @@
 
-instance Mil_311_Andre (Npc_Default)
+instance PAL_311_Andre (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Andre";	
-	guild 		= GIL_MIL;
+	name 		= "Lord Andre";	
+	guild 		= GIL_PAL;
 	id 			= 311;
 	voice 		= 8;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL																	
@@ -23,7 +23,7 @@ instance Mil_311_Andre (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ItMw_1h_Pal_Sword);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -54,4 +54,10 @@ FUNC VOID Rtn_Start_311 ()
     TA_Smalltalk			(00,10,05,00,"NW_CITY_ANDRE_SMALLTALK"); 
     TA_Read_Bookstand		(05,00,08,00,"NW_CITY_ANDRE");
     
+};
+
+FUNC VOID Rtn_ShipFree_311 ()
+{	
+	TA_Stand_ArmsCrossed	(08,00,20,00,"NW_CITY_HAGEN");
+    TA_Stand_ArmsCrossed	(20,00,08,00,"NW_CITY_HAGEN");
 };

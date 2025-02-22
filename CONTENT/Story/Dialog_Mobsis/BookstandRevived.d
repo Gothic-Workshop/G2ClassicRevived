@@ -526,3 +526,106 @@ FUNC VOID Use_BookstandRevived_SPECIAL1_S1()		//Alchemiebücher
 
 	};
 };
+
+
+
+//##########################################################################
+//##
+//##	Bookstand Specific
+//##
+//##########################################################################
+
+var int RevivedBookstandRead_Specific1;
+FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()		//Alchemiebücher
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero);
+	
+	if  (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(her))
+	{	
+
+		var int nDocID;
+		
+
+		nDocID = 	Doc_Create		()			  ;							
+					Doc_SetPages	( nDocID,  2 );                         
+					Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga", 	0 		); 
+					Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga",	0		);
+					
+					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
+					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
+
+					Doc_PrintLine	( nDocID,  0, "Prisoners"					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Rengaru_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Rengaru: Stole from merchant Jora"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Halvor_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Halvor: Supports bandits outside the city"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(Nagur_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  0, "Nagur: Murdered Baltram's errand-boy"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+				if(MIS_Andre_REDLIGHT == LOG_SUCCESS)
+				{
+					Doc_PrintLines	( nDocID,  0, "Borka: Swampweed dealer"					);
+				};
+					Doc_PrintLine	( nDocID,  0, ""					);
+					Doc_PrintLine	( nDocID,  0, ""					);
+					
+					
+					Doc_PrintLines	( nDocID,  0, "");
+			
+					
+					
+					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
+					Doc_PrintLine	( nDocID,  1, ""					);
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(Fernando_ImKnast == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  1, "Fernando: Sells weapons to bandits"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				/* if(Rengaru_InKnast == TRUE)
+				&& (!Npc_IsDead(Cassia))
+				&& (!Npc_IsDead(Jesper))
+				&& (!Npc_IsDead(Ramirez))
+				{
+					Doc_PrintLines	( nDocID,  1, "Cassia: Leader of Thieves' Guild"					);
+					Doc_PrintLines	( nDocID,  1, "Jesper: Member of Thieves' Guild"); 
+					Doc_PrintLines	( nDocID,  1, "Ramirez: Member of Thieves' Guild"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					); */
+				if(Sarah_Ausgeliefert == TRUE)
+				{
+					Doc_PrintLines	( nDocID,  1, "Sarah: Sells weapons to Mercenaries"					);
+				}
+				else if(Canthar_Ausgeliefert)
+				{
+					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to "					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(MIS_RescueBennet == LOG_RUNNING)
+				{
+					Doc_PrintLines	( nDocID,  1, "Bennet: Murdered Lord Lothar"					);
+				};
+					Doc_PrintLine	( nDocID,  1, ""					);
+				if(MIS_Richter_KillMorgahard == LOG_RUNNING)
+				{
+					Doc_PrintLines	( nDocID,  1, "Morgahard: Stole from governor Larius");
+				};
+					Doc_Show		( nDocID );
+					
+					if (RevivedBookstandRead_Specific1 == FALSE)
+					{
+						B_GivePlayerXP (XP_BookstandSpecific);
+						RevivedBookstandRead_Specific1 = TRUE;
+					};	  
+	
+	};
+};

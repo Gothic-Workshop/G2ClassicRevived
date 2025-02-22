@@ -16,6 +16,8 @@ const int	Value_Honey		=	30;		const int	HP_Honey		=	12;
 
 const int	Value_Water		=	10;		const int	HP_Water		=	8;
 const int	Value_Beer		=	20;		const int	HP_Beer			=	3;	const int	Mana_Beer		=	1;
+const int	HP_CoragonBeer	=	3;		const int	Mana_CoragonBeer=	3;
+
 const int	Value_Booze		=	15;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
 const int	Value_Wine		=	20;		const int	HP_Wine			=	2;	const int	Mana_Wine		=	1;
 const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
@@ -320,8 +322,8 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	on_state[0]			=	Use_CoragonsBeerBeer;
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Beer;
-	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_Beer;
+	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_CoragonBeer;
+	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_CoragonBeer;
 	
 	TEXT[4]				= 	"Coragon's Special Beer";		
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Beer;
@@ -330,13 +332,13 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 
 	FUNC VOID Use_CoragonsBeerBeer()
 	{
-		B_RaiseAttribute	(self,	ATR_MANA_MAX,	Mana_Beer);
-		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Beer);	 
+		Npc_ChangeAttribute	(self,	ATR_MANA_MAX,	Mana_CoragonBeer);
+		Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_CoragonBeer);	 
 		
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_Beer);
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Beer);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_CoragonBeer);
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_CoragonBeer);
 		var string concatText;
-		concatText = ConcatStrings(PRINT_Learnhitpoints_MAX, IntToString(HP_Beer));
+		concatText = ConcatStrings(NAME_RaiseHPMP, IntToString(HP_CoragonBeer));
 		PrintScreen	(concatText, 55, -1, FONT_Screen, 2);
 	};
 

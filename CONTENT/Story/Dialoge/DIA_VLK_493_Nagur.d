@@ -98,13 +98,18 @@ FUNC VOID DIA_Nagur_Hallo_Info()
 	func void B_Nagur_Abfertigen()
 	{
 		var C_ITEM heroArmor; heroArmor = Npc_GetEquippedArmor(other);
-		if (Hlp_IsItem (heroArmor, ItAr_MIL_L) == FALSE)
-		&& (Hlp_IsItem (heroArmor, ItAr_MIL_M) == FALSE)
+		if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M_02) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_I) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_I_02) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_I_03) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ItAr_PAL_M) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ItAr_PAL_H) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ItAr_NOV_L) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ItAr_KDF_L) == FALSE)
 		&& (Hlp_IsItem (heroArmor, ItAr_KDF_H) == FALSE)
+		&& (Hlp_IsItem (heroArmor, ITAR_REVIVED_KDF_H) == FALSE)
 		{
 			AI_Output (self ,other,"DIA_Nagur_Add_08_02"); //And don't think I don't recognize you just because you're wearing different togs!
 		};

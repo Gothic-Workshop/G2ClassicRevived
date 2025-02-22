@@ -3,7 +3,7 @@
 // ************************************************************
 INSTANCE DIA_Andre_EXIT   (C_INFO)
 {
-	npc         = Mil_311_Andre;
+	npc         = PAL_311_Andre;
 	nr          = 999;
 	condition   = DIA_Andre_EXIT_Condition;
 	information = DIA_Andre_EXIT_Info;
@@ -27,7 +27,7 @@ FUNC VOID DIA_Andre_EXIT_Info()
 // ************************************************************
 INSTANCE DIA_Andre_FIRSTEXIT   (C_INFO)
 {
-	npc         = Mil_311_Andre;
+	npc         = PAL_311_Andre;
 	nr          = 999;
 	condition   = DIA_Andre_FIRSTEXIT_Condition;
 	information = DIA_Andre_FIRSTEXIT_Info;
@@ -105,7 +105,7 @@ func void B_Andre_CantharFalle()
 
 INSTANCE DIA_Andre_CantharFalle (C_INFO)
 {
-	npc         = Mil_311_Andre;
+	npc         = PAL_311_Andre;
 	nr          = 3;
 	condition   = DIA_Andre_CantharFalle_Condition;
 	information = DIA_Andre_CantharFalle_Info;
@@ -155,7 +155,7 @@ var int Andre_LastPetzCrime;
 
 INSTANCE DIA_Andre_PMSchulden (C_INFO)
 {
-	npc         = Mil_311_Andre;
+	npc         = PAL_311_Andre;
 	nr          = 1;
 	condition   = DIA_Andre_PMSchulden_Condition;
 	information = DIA_Andre_PMSchulden_Info;
@@ -303,7 +303,7 @@ func void DIA_Andre_PMSchulden_HowMuchAgain()
 
 instance DIA_Andre_PETZMASTER   (C_INFO)
 {
-	npc         = Mil_311_Andre;
+	npc         = PAL_311_Andre;
 	nr          = 1;
 	condition   = DIA_Andre_PETZMASTER_Condition;
 	information = DIA_Andre_PETZMASTER_Info;
@@ -445,7 +445,7 @@ func void DIA_Andre_PETZMASTER_PayLater()
 // *********************************************************
 instance DIA_Andre_Hallo		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_Hallo_Condition;
 	information	 = 	DIA_Andre_Hallo_Info;
@@ -472,7 +472,7 @@ func void DIA_Andre_Hallo_Info ()
 // *********************************************************
 instance DIA_Andre_Message		(C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 1;
 	condition	= DIA_Andre_Message_Condition;
 	information	= DIA_Andre_Message_Info;
@@ -540,7 +540,7 @@ func void DIA_Andre_Message_Personal()
 // *********************************************************
 instance DIA_Andre_Paladine		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	3;
 	condition	 = 	DIA_Andre_Paladine_Condition;
 	information	 = 	DIA_Andre_Paladine_Info;
@@ -567,7 +567,7 @@ func void DIA_Andre_Paladine_Info ()
 // *********************************************************
 instance DIA_Andre_PaladineAgain		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	3;
 	condition	 = 	DIA_Andre_PaladineAgain_Condition;
 	information	 = 	DIA_Andre_PaladineAgain_Info;
@@ -605,7 +605,7 @@ func void DIA_Andre_PaladineAgain_Info ()
 // *********************************************************
 instance DIA_Andre_AskToJoin		(C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 2;
 	condition	= DIA_Andre_AskToJoin_Condition;
 	information	= DIA_Andre_AskToJoin_Info;
@@ -648,7 +648,7 @@ func void DIA_Andre_AskToJoin_Info ()
 // *********************************************************
 instance DIA_Andre_AboutMiliz (C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	5;
 	condition	 = 	DIA_Andre_AboutMiliz_Condition;
 	information	 = 	DIA_Andre_AboutMiliz_Info;
@@ -672,46 +672,13 @@ func void DIA_Andre_ABOUTMILIZ_Info ()
 	AI_Output (self, other, "DIA_Andre_AboutMiliz_08_02"); //It is a dirty and even a bloody job. Once you are one of us, a great deal of work will be waiting for you.
 	AI_Output (self, other, "DIA_Andre_AboutMiliz_08_03"); //But it is worth it. Besides the pay, you might someday have the chance of becoming a holy warrior of Innos.
 };
-			
-///////////////////////////////////////////////////////////////////////
-//	Info MartinEmpfehlung
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Andre_MartinEmpfehlung		(C_INFO)
-{
-	npc		 = 	Mil_311_Andre;
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_Andre_MartinEmpfehlung_Condition;
-	information	 = 	DIA_Addon_Andre_MartinEmpfehlung_Info;
-
-	description	 = 	"Look, I've got this letter of recommendation from your provisions master.";
-};
-
-func int DIA_Addon_Andre_MartinEmpfehlung_Condition ()
-{
-	if (Npc_HasItems (other,ItWr_Martin_MilizEmpfehlung_Addon))
-	&& (Npc_KnowsInfo(other,DIA_Andre_AskToJoin))
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Addon_Andre_MartinEmpfehlung_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Andre_MartinEmpfehlung_15_00"); //Look, I've got this letter of recommendation from your provisions master.
-	AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_01"); //(disbelieving) What? Show me.
-	B_GiveInvItems (other, self, ItWr_Martin_MilizEmpfehlung_Addon,1);
-	B_UseFakeScroll();
-	AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_02"); //(impressed) Well, I'll be ...! This must have cost you quite an effort. It's no easy feat to get something like this out of Martin.
-	AI_Output	(self, other, "DIA_Addon_Andre_MartinEmpfehlung_08_03"); //All right. I'm convinced. If Martin vouches for you, I shall let you join. Let me know when you're ready.
-	Andre_Knows_MartinEmpfehlung = TRUE;
-};
 
 // *********************************************************
 //						Alternative			//e2
 // *********************************************************
 instance DIA_Andre_Alternative (C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 2;
 	condition	= DIA_Andre_Alternative_Condition;
 	information	= DIA_Andre_Alternative_Info;
@@ -741,7 +708,7 @@ func void DIA_Andre_Alternative_Info ()
 // *********************************************************
 instance DIA_Andre_GuildOfThieves (C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 2;
 	condition	= DIA_Andre_GuildOfThieves_Condition;
 	information	= DIA_Andre_GuildOfThieves_Info;
@@ -751,6 +718,7 @@ instance DIA_Andre_GuildOfThieves (C_INFO)
 func int DIA_Andre_GuildOfThieves_Condition ()
 {
 	if (Npc_KnowsInfo(other,DIA_Andre_Alternative))
+	|| ((hero.guild == GIL_MIL) && (Kapitel > 1))
 	{
 		return TRUE;
 	};
@@ -765,11 +733,15 @@ func void DIA_Andre_GuildOfThieves_Info ()
 	{
 		AI_Output (self, other, "DIA_Andre_GuildOfThieves_08_04"); //Then I shall see to it that you are accepted into the militia - regardless of whether or not you are a citizen.
 		AI_Output (self, other, "DIA_Andre_GuildOfThieves_08_05"); //But you must say nothing about our agreement!
+	
+		B_LogEntry (TOPIC_BecomeMIL,"There is another way to be accepted into the city guard, and that is to find and eliminate the thieves' guild in Khorinis.");
 	};
 	
+	Log_CreateTopic (TOPIC_Revived_ThievesGuild,LOG_MISSION);
+	Log_SetTopicStatus (TOPIC_Revived_ThievesGuild,LOG_RUNNING);
+	B_LogEntry (TOPIC_Revived_ThievesGuild, "I'm supposed to find and take care of the thieves' guild in Khorinis.");
+
 	MIS_Andre_GuildOfThieves = LOG_RUNNING;
-	B_LogEntry (TOPIC_BecomeMIL,"There is another way to be accepted into the city guard, and that is to find and eliminate the thieves' guild in Khorinis.");
-	
 };
 
 // *********************************************************
@@ -777,7 +749,7 @@ func void DIA_Andre_GuildOfThieves_Info ()
 // *********************************************************
 instance DIA_Andre_WhereThieves (C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 2;
 	condition	= DIA_Andre_WhereThieves_Condition;
 	information	= DIA_Andre_WhereThieves_Info;
@@ -801,7 +773,7 @@ func void DIA_Andre_WhereThieves_Info ()
 	AI_Output (self, other, "DIA_Andre_WhereThieves_08_04"); //But you are an outsider, they will not distrust you so quickly.
 	AI_Output (self, other, "DIA_Andre_WhereThieves_08_05"); //You could ask around the harbor first. But be careful. If the people there realize that you are working for the paladins, you will learn NOTHING!
 	
-	B_LogEntry (TOPIC_BecomeMIL,"If I'm going to find the thieves' guild, I'd better start listening around in the harbor district.");
+	B_LogEntry (TOPIC_Revived_ThievesGuild,"If I'm going to find the thieves' guild, I'd better start listening around in the harbor district.");
 };
 
 // *********************************************************
@@ -809,7 +781,7 @@ func void DIA_Andre_WhereThieves_Info ()
 // *********************************************************
 instance DIA_Andre_WhatToDo (C_INFO)
 {
-	npc			= Mil_311_Andre;
+	npc			= PAL_311_Andre;
 	nr			= 3;
 	condition	= DIA_Andre_WhatToDo_Condition;
 	information	= DIA_Andre_WhatToDo_Info;
@@ -833,7 +805,7 @@ func void DIA_Andre_WhatToDo_Info ()
 	AI_Output (self, other, "DIA_Andre_WhatToDo_08_04"); //Furthermore, there is a bounty for every rotten apple you put behind bars.
 	AI_Output (self, other, "DIA_Andre_WhatToDo_08_05"); //However, if you locate the leaders' hideout - well - then you probably won't be able to avoid a fight.
 	
-	B_LogEntry (TOPIC_BecomeMIL,"If I catch a henchman of the thieves' guild, I should take him straight to Lord Andre. To eliminate the thieves' guild, I must find their hideout.");
+	B_LogEntry (TOPIC_Revived_ThievesGuild,"If I catch a henchman of the thieves' guild, I should take him straight to Lord Andre. To eliminate the thieves' guild, I must find their hideout.");
 };
 
 // *********************************************************
@@ -842,7 +814,7 @@ func void DIA_Andre_WhatToDo_Info ()
 	
 instance DIA_Andre_Auslieferung		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	200;
 	condition	 = 	DIA_Andre_Auslieferung_Condition;
 	information	 = 	DIA_Andre_Auslieferung_Info;
@@ -1013,7 +985,7 @@ func void DIA_Andre_Auslieferung_Sarah()
 	
 instance DIA_Andre_DGRunning (C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	4;
 	condition	 = 	DIA_Andre_DGRunning_Condition;
 	information	 = 	DIA_Andre_DGRunning_Info;
@@ -1128,7 +1100,7 @@ func void DIA_Andre_DGRunning_Success()
 // *********************************************************
 instance DIA_Andre_JOIN	(C_INFO) 
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	100;
 	condition	 = 	DIA_Andre_JOIN_Condition;
 	information	 = 	DIA_Andre_JOIN_Info;
@@ -1149,13 +1121,7 @@ func void DIA_Andre_JOIN_Info ()
 {
 	AI_Output (other, self, "DIA_Andre_JOIN_15_00"); //I'm ready to join the militia!
 	
-	//ADDON
-	if (Andre_Knows_MartinEmpfehlung == TRUE)
-	{
-		AI_Output (self, other, "DIA_Addon_Andre_JOIN_08_00"); //Martin, the provisions master, vouches for you and has even recommended you. That alone is enough for me.
-	}
-	//ADDON
-	else if (MIS_Andre_GuildOfThieves == LOG_SUCCESS)
+	if (MIS_Andre_GuildOfThieves == LOG_SUCCESS)
 	&& (Player_IsApprentice == APP_NONE)
 	{
 		AI_Output (self, other, "DIA_Andre_JOIN_08_01"); //I shall keep my part of the agreement and accept you into the militia, even though you are not a citizen of the town.
@@ -1221,7 +1187,7 @@ func void DIA_Andre_JOIN_Yes()
 	Npc_ExchangeRoutine (Lothar, "START");
 	
 	AI_Output (self, other, "DIA_Andre_JOIN_Yes_08_02"); //Here is your armor.
-	B_GiveInvItems (self,other, ITAR_MIL_L,1);
+	B_GiveInvItems (self,other, ITAR_REVIVED_GRD_L,1);
 	AI_Output (self, other, "DIA_Andre_JOIN_Yes_08_03"); //Wear it with pride and dignity.
 	
 	SLD_Aufnahme = LOG_OBSOLETE;
@@ -1246,7 +1212,7 @@ func void DIA_Andre_JOIN_No()
 
 instance DIA_Andre_LORDHAGEN		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_LORDHAGEN_Condition;
 	information	 = 	DIA_Andre_LORDHAGEN_Info;
@@ -1273,7 +1239,7 @@ func void DIA_Andre_LORDHAGEN_Info ()
 // *********************************************************
 instance DIA_Andre_Waffe		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_Waffe_Condition;
 	information	 = 	DIA_Andre_Waffe_Info;
@@ -1310,7 +1276,7 @@ func void DIA_Andre_Waffe_Info ()
 
 instance DIA_Andre_FOUND_PECK		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_FOUND_PECK_Condition;
 	information	 = 	DIA_Andre_FOUND_PECK_Info;
@@ -1378,7 +1344,7 @@ FUNC VOID B_AndreSold ()
 
 instance DIA_Andre_FIRSTMISSION		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_FIRSTMISSION_Condition;
 	information	 = 	DIA_Andre_FIRSTMISSION_Info;
@@ -1418,7 +1384,7 @@ func void DIA_Andre_FIRSTMISSION_Info ()
 
 instance DIA_Andre_FOUND_STUFF		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_FOUND_STUFF_Condition;
 	information	 = 	DIA_Andre_FOUND_STUFF_Info;
@@ -1486,7 +1452,7 @@ FUNC VOID DIA_Andre_FOUND_STUFF_Becken()
 
 instance DIA_Andre_FIND_DEALER		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_FIND_DEALER_Condition;
 	information	 = 	DIA_Andre_FIND_DEALER_Info;
@@ -1527,7 +1493,7 @@ func void DIA_Andre_FIND_DEALER_Info ()
 
 instance DIA_Andre_REDLIGHT_SUCCESS		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 = 	2;
 	condition	 = 	DIA_Andre_REDLIGHT_SUCCESS_Condition;
 	information	 = 	DIA_Andre_REDLIGHT_SUCCESS_Info;
@@ -1591,7 +1557,7 @@ func void DIA_Andre_REDLIGHT_SUCCESS_Info ()
 
 instance DIA_Andre_HILFBAUERLOBART		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr			 =  3;
 	condition	 = 	DIA_Andre_HILFBAUERLOBART_Condition;
 	information	 = 	DIA_Andre_HILFBAUERLOBART_Info;
@@ -1643,7 +1609,7 @@ func void DIA_Andre_HILFBAUERLOBART_Info ()
 
 instance DIA_Andre_LOBART_SUCCESS		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	condition	 = 	DIA_Andre_LOBART_SUCCESS_Condition;
 	information	 = 	DIA_Andre_LOBART_SUCCESS_Info;
 	description	 = 	"I've helped Lobart.";
@@ -1662,113 +1628,6 @@ func void DIA_Andre_LOBART_SUCCESS_Info ()
 	B_GivePlayerXP (XP_LobartBugs);
 	B_AndreSold ();
 };
-
-///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Andre_MissingPeople		(C_INFO)
-{
-	npc		 	= Mil_311_Andre;
-	nr		 	= 5;
-	condition	= DIA_Addon_Andre_MissingPeople_Condition;
-	information	= DIA_Addon_Andre_MissingPeople_Info;
-
-	description	= "What about the missing people?";
-};
-func int DIA_Addon_Andre_MissingPeople_Condition ()
-{
-	if (MIS_Addon_Vatras_WhereAreMissingPeople == LOG_RUNNING)
-	&& (other.guild == GIL_MIL)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Addon_Andre_MissingPeople_Info ()
-{
-	AI_Output (other, self, "DIA_Addon_Andre_MissingPeople_15_00"); //What about the missing people?
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople_08_01"); //What about them?
-	AI_Output (other, self, "DIA_Addon_Andre_MissingPeople_15_02"); //Shouldn't we try to find them?
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople_08_03"); //Lord Hagen gave me orders to protect the town and the surrounding farms.
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople_08_04"); //That means that we're taking care of the people who are still HERE.
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople_08_05"); //The militia patrols the streets at night. That's all I can do.
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople_08_06"); //And YOU will take care of the tasks I give you, understood?
-	
-	MIS_Addon_Andre_MissingPeople = LOG_RUNNING;
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople2
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Andre_MissingPeople2	(C_INFO)
-{
-	npc		 	= Mil_311_Andre;
-	nr		 	= 5;
-	condition	= DIA_Addon_Andre_MissingPeople2_Condition;
-	information	= DIA_Addon_Andre_MissingPeople2_Info;
-
-	description	= "About the missing people...";
-};
-func int DIA_Addon_Andre_MissingPeople2_Condition ()
-{
-	if (MIS_Addon_Vatras_WhereAreMissingPeople == LOG_RUNNING)
-	&& (other.guild != GIL_MIL)
-	&& (SCKnowsMissingPeopleAreInAddonWorld == FALSE)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Addon_Andre_MissingPeople2_Info ()
-{
-	AI_Output (other, self, "DIA_Addon_Andre_MissingPeople2_15_00"); //About those missing people ...
-	AI_Output (self, other, "DIA_Addon_Andre_MissingPeople2_08_01"); //Just leave me alone with THAT. I've got other problems.
-	MIS_Addon_Andre_MissingPeople = LOG_RUNNING;
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info ReturnedMissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Andre_ReturnedMissingPeople		(C_INFO)
-{
-	npc		 = 	Mil_311_Andre;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Andre_ReturnedMissingPeople_Condition;
-	information	 = 	DIA_Addon_Andre_ReturnedMissingPeople_Info;
-
-	description	 = 	"I've been able to rescue some of the missing people.";
-};
-
-func int DIA_Addon_Andre_ReturnedMissingPeople_Condition ()
-{
-	if (MissingPeopleReturnedHome == TRUE)
-	&& (MIS_Addon_Andre_MissingPeople == LOG_RUNNING)
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Addon_Andre_ReturnedMissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Andre_ReturnedMissingPeople_15_00"); //I've been able to rescue some of the missing people.
-	if (other.guild == GIL_MIL)
-	{
-		AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_01"); //And here I was, wondering where the hell you've been all this time!
-		AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_02"); //You're a member of the militia! You were not given orders for such an action!
-		AI_Output (other, self, "DIA_Addon_Andre_ReturnedMissingPeople_15_03"); //But ...
-	};	
-	AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_04"); //How many people did you find?
-	AI_Output (other, self, "DIA_Addon_Andre_ReturnedMissingPeople_15_05"); //All those who were still alive ...
-	AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_06"); //All?! I ... Er ...
-	if (other.guild == GIL_MIL)
-	{
-		AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_07"); //I am so proud of you! And I'm glad that I let you join us.
-		B_AndreSold ();
-	};
-	AI_Output (self, other, "DIA_Addon_Andre_ReturnedMissingPeople_08_08"); //That was a grand deed.
-
-	MIS_Addon_Andre_MissingPeople = LOG_SUCCESS;
-	B_GivePlayerXP (XP_Addon_Andre_MissingPeople);
-};
-
 
 
 //##########################################
@@ -1789,7 +1648,7 @@ func void B_Andre_GotoLordHagen()
 
 instance DIA_Andre_BerichtDrachen		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr 			= 1;
 	condition	 = 	DIA_Andre_BerichtDrachen_Condition;
 	information	 = 	DIA_Andre_BerichtDrachen_Info;
@@ -1823,7 +1682,7 @@ func void DIA_Andre_BerichtDrachen_Info ()
 
 instance DIA_Andre_BennetInPrison		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	condition	 = 	DIA_Andre_BennetInPrison_Condition;
 	information	 = 	DIA_Andre_BennetInPrison_Info;
 	permanent	 =	TRUE;
@@ -1850,7 +1709,7 @@ func void DIA_Andre_BennetInPrison_Info ()
 
 instance DIA_Andre_Cornelius_Liar		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	condition	 = 	DIA_Andre_Cornelius_Liar_Condition;
 	information	 = 	DIA_Andre_Cornelius_Liar_Info;
 	permanent	 =	TRUE;
@@ -1911,7 +1770,7 @@ FUNC VOID DIA_Andre_Cornelius_Liar_Yes()
 
 instance DIA_Andre_Paladin		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	condition	 = 	DIA_Andre_Paladin_Condition;
 	information	 = 	DIA_Andre_Paladin_Info;
 	permanent	 =	FALSE;
@@ -1936,7 +1795,7 @@ func void DIA_Andre_Paladin_Info ()
 
 instance DIA_Andre_PERM		(C_INFO)
 {
-	npc			 = Mil_311_Andre;
+	npc			 = PAL_311_Andre;
 	nr 			 = 100;
 	condition	 = DIA_Andre_PERM_Condition;
 	information	 = DIA_Andre_PERM_Info;
@@ -1977,7 +1836,7 @@ func void DIA_Andre_PERM_Info ()
 
 instance DIA_Andre_BerichtDrachenTot		(C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr 			= 1;
 	condition	 = 	DIA_Andre_BerichtDrachenTot_Condition;
 	information	 = 	DIA_Andre_BerichtDrachenTot_Info;
@@ -2004,7 +1863,7 @@ func void DIA_Andre_BerichtDrachenTot_Info ()
 
 instance DIA_Andre_BerichtTorAuf (C_INFO)
 {
-	npc			 = 	Mil_311_Andre;
+	npc			 = 	PAL_311_Andre;
 	nr 			= 1;
 	condition	 = 	DIA_Andre_BerichtTorAuf_Condition;
 	information	 = 	DIA_Andre_BerichtTorAuf_Info;

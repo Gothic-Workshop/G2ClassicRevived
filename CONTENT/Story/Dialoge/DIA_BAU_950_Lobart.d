@@ -759,7 +759,7 @@ func void DIA_Lobart_ANDREHELPLOBART_Info ()
 	AI_Output			(self, other, "DIA_Lobart_ANDREHELPLOBART_05_01"); //Yeah, sure. Those damned field raiders are making me sick.
 	AI_Output			(self, other, "DIA_Lobart_ANDREHELPLOBART_05_02"); //Do them all in. I don't care how!
 
-	Log_AddEntry (TOPIC_BecomeMIL,"Lobart's fields are plagued by field raiders. He wants me to drive them all away."); 
+	Log_AddEntry (TOPIC_Feldraeuber,"Lobart's fields are plagued by field raiders. He wants me to drive them all away."); 
 	MIS_LobartKillBugs = LOG_RUNNING;
 	
 	AI_StopProcessInfos (self);
@@ -812,7 +812,7 @@ func void DIA_Lobart_BUGDEAD_Info ()
 
 			MIS_LobartKillBugs 	= LOG_SUCCESS;
 			MIS_AndreHelpLobart = LOG_SUCCESS;
-			Log_AddEntry (TOPIC_BecomeMIL,"Lobart's rid of the field raiders. I've removed them all."); 
+			Log_AddEntry (TOPIC_Feldraeuber,"Lobart's rid of the field raiders. I've removed them all."); 
 			DIA_Lobart_BUGDEAD_noPerm = TRUE;
 		}
 		else  

@@ -1542,6 +1542,7 @@ FUNC VOID DIA_Lord_Hagen_AllDragonsDead_Info()
 	MIS_SCVisitShip = LOG_RUNNING;
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"ShipFree");	
+	Npc_ExchangeRoutine (Andre,"ShipFree");
 };
 
 // ************************************************************

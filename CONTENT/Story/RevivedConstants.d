@@ -35,6 +35,8 @@ var int			MiltenORPedro_LostInnosStatue_Daron;
 var int 		TOPIC_Revived_DaronStatuette_END;
 const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
 
+const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
+
 
 const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower can sell me food and frying pans.";
 
@@ -46,6 +48,8 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 
 // Items
 const string NAME_RaiseStrDex		=	"Strength and Dexterity +";
+
+const string NAME_RaiseHPMP			=	"Hitpoints and Mana +";
 
 const string NAME_Addon_BeArArcher		= "Together with Archer's Suit +";
 
@@ -124,6 +128,8 @@ const int	XP_BookstandMagic			= 25;
 const int	XP_BookstandHunting			= 25;
 const int	XP_BookstandHistory			= 25;
 const int	XP_BookstandSpecial			= 50;
+
+const int	XP_BookstandSpecific		= 50;
 
 const int	XP_BookstandPersonal		= 50;
 const int	XP_BookstandFireContest		= 50;

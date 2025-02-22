@@ -612,7 +612,8 @@ func void DIA_Kardif_DOPE_Info ()
 	
 	AI_Output (other, self, "DIA_Kardif_DOPE_15_01"); //Where can I buy weed here?
 	
-	if (Hlp_IsItem (heroArmor, ItAR_MIl_L) == TRUE) 
+	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M_02) == TRUE)
 	{
 		AI_Output (self, other, "DIA_Kardif_DOPE_14_00"); //Certainly not here - I've nothing to do with stuff like that.
 	}

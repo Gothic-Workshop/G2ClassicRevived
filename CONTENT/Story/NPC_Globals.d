@@ -408,7 +408,7 @@ func void  B_InitNpcGlobals ()
 	Rengaru			= Hlp_GetNpc (VLK_492_Rengaru);
 	Sarah			= Hlp_GetNpc (VLK_470_Sarah);
 	Canthar			= Hlp_GetNpc (VLK_468_Canthar);
-	Andre			= Hlp_GetNpc (MIL_311_Andre);
+	Andre			= Hlp_GetNpc (PAL_311_Andre);
 	Lothar			= Hlp_GetNpc (PAL_203_Lothar);
 	Girion			= Hlp_GetNpc (Pal_207_Girion);
 	Girion_DI		= Hlp_GetNpc (Pal_207_Girion_DI);

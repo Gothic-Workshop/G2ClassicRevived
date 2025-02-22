@@ -2295,7 +2295,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	
 	//---------------------------------
 	//---Kaserne-----------------------
-	Wld_InsertNpc (Mil_311_Andre		, "NW_CITY_ENTRANCE_01");	//Paladin, Milizkommandant
+	Wld_InsertNpc (PAL_311_Andre		, "NW_CITY_ENTRANCE_01");	//Paladin, Milizkommandant
 	
 	Wld_InsertNpc (Mil_324_Peck			, "NW_CITY_ENTRANCE_01");	//Waffenausgabe, PreStart im Puff
 	//***Gehilfe
