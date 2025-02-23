@@ -2155,6 +2155,9 @@ INSTANCE ITMW_REVIVED_URIZIEL_1H_CHARGED (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"urizielerzklinge.3DS";
+	effect				= "SPELLFX_FIRESWORD";
+
+
 	description			= 	name;
 	TEXT[0]				=	"This is the sword Uriziel.";
 	TEXT[1]				= 	"Uriziel is magically charged.";
@@ -2212,6 +2215,9 @@ instance ITMW_REVIVED_URIZIEL_2H_CHARGED (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMw_2H_Sword_Sleeper_02.3DS";
+	effect				= "SPELLFX_FIRESWORD";
+
+
 	description			= 	name;
 	TEXT[0]				=	"This is the sword Uriziel.";
 	TEXT[1]				= 	"Uriziel is magically charged.";
@@ -2316,6 +2322,8 @@ INSTANCE ITMW_REVIVED_CLEFTEROFWORLDS (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMi_SleeperKey_01.3DS";
+	effect				= 	"SPELLFX_FIRESWORDBLACK";
+
 	description			= 	name;
 	TEXT[0]				=	"This was the sword of the undead ";
 	TEXT[1]				=	"Orc priest Varrag-Hashor.";
@@ -2341,6 +2349,8 @@ INSTANCE ITMW_REVIVED_LIGHTBRINGER (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMi_SleeperKey_01.3DS";
+	effect				= 	"SPELLFX_FIRESWORDBLACK";
+	
 	description			= 	name;
 	TEXT[0]				=	"This was the sword of the undead ";
 	TEXT[1]				=	"Orc priest Varrag-Kasorg.";
@@ -2366,6 +2376,8 @@ INSTANCE ITMW_REVIVED_BLADEOFTIME (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMi_SleeperKey_01.3DS";
+	effect				= 	"SPELLFX_FIRESWORDBLACK";
+	
 	description			= 	name;
 	TEXT[0]				=	"This was the sword of the undead ";
 	TEXT[1]				=	"Orc priest Varrag-Unhilqt.";
@@ -2391,6 +2403,8 @@ INSTANCE ITMW_REVIVED_DEMONSTRIKE (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMi_SleeperKey_01.3DS";
+	effect				= 	"SPELLFX_FIRESWORDBLACK";
+	
 	description			= 	name;
 	TEXT[0]				=	"This was the sword of the undead ";
 	TEXT[1]				=	"Orc priest Varrag-Ruuushk.";
@@ -2416,6 +2430,8 @@ INSTANCE ITMW_REVIVED_BANISHINGBLADE (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
 	visual 				=	"ItMi_SleeperKey_01.3DS";
+	effect				= 	"SPELLFX_FIRESWORDBLACK";
+	
 	description			= 	name;
 	TEXT[0]				=	"This was the sword of the undead ";
 	TEXT[1]				=	"high Orc priest Grash-Varrag-Arushat.";

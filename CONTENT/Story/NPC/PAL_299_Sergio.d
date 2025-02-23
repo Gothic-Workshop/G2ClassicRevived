@@ -24,7 +24,7 @@ instance PAL_299_Sergio (Npc_Default)
 	CreateInvItems (self, ItPo_Health_02,4);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Erpresser, BodyTex_N, ITAR_PAL_M);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Erpresser, BodyTex_N, ITAR_REVIVED_PAL_M);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

@@ -338,22 +338,16 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 			&& (Npc_IsDead  (Canthar) == FALSE)
 			&& (Canthar_KilledSarah == TRUE)
 			{
-				B_RemoveNpc (Sarah);
-				B_StartOtherRoutine (Canthar,"MARKTSTAND");
-				AI_Teleport (Canthar,"NW_CITY_SARAH");
-				
-				Canthar_Sperre = TRUE; 
-				Canthar_WiederRaus = TRUE;
-			}
-			else if (MIS_Canthars_KomproBrief != LOG_SUCCESS)
-			&& (MIS_Canthars_KomproBrief != FALSE)
-			&& (Canthar_Pay == FALSE)
-			&& (Npc_IsDead  (Canthar) == FALSE)
-			&& (Canthar_KilledSarah != TRUE)
-			{
-				B_StartOtherRoutine (Sarah,"TAVERNE");
-				AI_Teleport (Sarah,"NW_TAVERNE_IN_08");
-				Sarah_KickedOut = TRUE;
+				if (Canthar_KilledSarah == TRUE)
+				{
+					B_RemoveNpc (Sarah);
+				}
+				else
+				{
+					B_StartOtherRoutine (Sarah,"TAVERNE");
+					AI_Teleport (Sarah,"NW_TAVERNE_IN_08");
+					Sarah_KickedOut = TRUE;
+				};
 
 				B_StartOtherRoutine (Canthar,"MARKTSTAND");
 				AI_Teleport (Canthar,"NW_CITY_SARAH");

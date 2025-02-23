@@ -23,7 +23,7 @@ instance PAL_252_Parcival (Npc_Default)
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_P_Tough_Drago, BodyTex_P, ITAR_PAL_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_P_Tough_Drago, BodyTex_P, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	

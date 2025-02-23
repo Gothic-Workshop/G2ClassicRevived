@@ -607,7 +607,7 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()		//Alchemiebücher
 				}
 				else if(Canthar_Ausgeliefert)
 				{
-					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to "					);
+					Doc_PrintLines	( nDocID,  1, "Canthar: Wanted to frame up Sarah"					);
 				};
 					Doc_PrintLine	( nDocID,  1, ""					);
 				if(MIS_RescueBennet == LOG_RUNNING)

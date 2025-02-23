@@ -7,7 +7,7 @@ INSTANCE ITBE_REVIVED_ARCHER (C_Item)
 
 	value 			=	Value_ItBE_Addon_Leather_01;
 
-	visual 			=	"ItMI_Belt_06.3ds";
+	visual 			=	"CA_BELT_SFBL.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;

@@ -154,7 +154,7 @@ FUNC VOID UnEquip_ItBE_Addon_Leather_01()
 
 	value 			=	Value_ItBE_Addon_SLD_01;
 
-	visual 			=	"ItMi_Belt_05.3ds";
+	visual 			=	"CA_BELT_SLDS.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -223,7 +223,7 @@ FUNC VOID UnEquip_ItBE_Addon_SLD_01()
 
 	value 			=	Value_ItBE_Addon_NOV_01;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"CA_BELT_GURM.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -291,7 +291,7 @@ FUNC VOID UnEquip_ItBE_Addon_NOV_01()
 
 	value 			=	Value_ItBE_Addon_MIL_01;
 
-	visual 			=	"ItMi_Belt_03.3ds";
+	visual 			=	"CA_BELT_GRDL.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -360,7 +360,7 @@ FUNC VOID UnEquip_ItBE_Addon_MIL_01()
 
 	value 			=	Value_ItBE_Addon_KDF_01;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"CA_BELT_KDFL.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -430,7 +430,7 @@ FUNC VOID UnEquip_ItBE_Addon_KDF_01()
 
 	value 			=	Value_ItBE_Addon_MC;
 
-	visual 			=	"ItMi_Belt_08.3ds";
+	visual 			=	"CA_BELT_VLKM.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -544,7 +544,7 @@ INSTANCE  ItBe_Addon_STR_10 (C_Item)  	//Jora(Kap4)/Sengrath(4)
 
 	value 			=	Value_ItBE_Addon_STR_10;
 
-	visual 			=	"ItMi_Belt_05.3ds";
+	visual 			=	"ItMi_Belt_04.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -584,7 +584,7 @@ INSTANCE  ItBe_Addon_DEX_5 (C_Item)  //Bosper(Kap2)/Orlan(2)
 
 	value 			=	Value_ItBE_Addon_DEX_5;
 
-	visual 			=	"ItMi_Belt_08.3ds";
+	visual 			=	"CA_BELT_STTS.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -706,7 +706,7 @@ INSTANCE  ItBe_Addon_Prot_Point (C_Item)  //Hakon(Kap3)/Khaled(3)
 
 	value 			=	Value_ItBE_Addon_Prot_Point;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"ItMi_Belt_07.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -745,7 +745,7 @@ INSTANCE  ItBe_Addon_Prot_MAGIC (C_Item)  //Gorax(Kap3)/Zuris(3)
 
 	value 			=	Value_ItBE_Addon_Prot_MAGIC;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"CA_BELT_GURS.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -784,7 +784,7 @@ INSTANCE  ItBe_Addon_Prot_FIRE (C_Item)  //Constantino(Kap3)/Sengrath(4)
 
 	value 			=	Value_ItBE_Addon_Prot_FIRE;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"CA_BELT_KDFS.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -823,7 +823,7 @@ INSTANCE  ItBe_Addon_Prot_EdgPoi (C_Item)  //Khaled(Kap4)/Orlan(3)	Missionbelohn
 
 	value 			=	Value_ItBE_Addon_Prot_EdgPoi;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"ItMi_Belt_03.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -868,7 +868,7 @@ INSTANCE  ItBe_Addon_Prot_TOTAL (C_Item)  //Hakon(Kap4)
 
 	value 			=	Value_ItBE_Addon_Prot_TOTAL;
 
-	visual 			=	"ItMi_Belt_02.3ds";
+	visual 			=	"ItMi_Belt_01.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;

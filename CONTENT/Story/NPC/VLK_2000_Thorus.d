@@ -24,7 +24,7 @@ instance Vlk_2000_Thorus (Npc_Default)
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_SWORD_THORUS);
 	//EquipItem			(self, ItRw_Crossbow_01);
-	EquipItem	(self, ITHE_SPECTACLES_03); 
+	EquipItem	(self, ITHE_REVIVED_SPECTACLES_03); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -806,7 +806,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	};		 
 	
 	AI_UnequipArmor (other);
-	AI_EquipArmor 	(other,ITAR_PAL_M);
+	AI_EquipArmor 	(other,ITAR_REVIVED_PAL_M);
 
 	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_08"); //Henceforth, by virtue of your rank, you shall have access to the monastery.
 

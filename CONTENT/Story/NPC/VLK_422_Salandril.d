@@ -19,7 +19,7 @@ instance VLK_422_Salandril (Npc_Default)
 	
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ItMw_1h_VLK_Dagger); 
-	EquipItem	(self, ITHE_SPECTACLES_02); 
+	EquipItem	(self, ITHE_REVIVED_SPECTACLES_02); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

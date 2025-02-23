@@ -17,7 +17,7 @@ instance VLK_406_Herold (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ItMw_1h_Vlk_Dagger);
-	EquipItem	(self, ITHE_SPECTACLES_04); 
+	EquipItem	(self, ITHE_REVIVED_SPECTACLES_04); 
 	
 	
 	// ------ Inventory ------

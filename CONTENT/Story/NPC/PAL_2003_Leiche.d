@@ -25,7 +25,7 @@ instance PAL_2003_Leiche  (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv (self);	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart01, BodyTex_N, ITAR_PAL_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart01, BodyTex_N, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

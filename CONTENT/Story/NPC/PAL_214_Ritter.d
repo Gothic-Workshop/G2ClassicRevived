@@ -23,7 +23,7 @@ instance Pal_214_Ritter (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_L_Tough01, BodyTex_L, ITAR_PAL_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_L_Tough01, BodyTex_L, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

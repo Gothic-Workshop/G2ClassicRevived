@@ -27,7 +27,7 @@ instance Mil_305_Torwache (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Normal01, BodyTex_N, ITAR_PAL_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Normal01, BodyTex_N, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

@@ -30,7 +30,7 @@ instance PAL_250_Garond (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Raven, BodyTex_N, ITAR_PAL_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Raven, BodyTex_N, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 	

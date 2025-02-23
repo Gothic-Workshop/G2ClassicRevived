@@ -23,7 +23,7 @@ instance VLK_484_Lehmar (Npc_Default)
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem (self,ITHE_SPECTACLES_03);
+	EquipItem (self,ITHE_REVIVED_SPECTACLES_03);
 	CreateInvItems (self, ItWr_Schuldenbuch, 1);
 
 	// ------ visuals ------																			

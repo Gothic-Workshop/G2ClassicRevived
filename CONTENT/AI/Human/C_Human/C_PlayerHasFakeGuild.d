@@ -58,7 +58,8 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_VLK_H) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_BAU_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_BAU_M) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_Leather_L) == TRUE))			
+		||	 (Hlp_IsItem(itm, ITAR_Leather_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_ARCHER) == TRUE))			
 		{		
 				return FALSE;
 		}
@@ -68,15 +69,21 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_M) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_M_02) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_I) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_I_02) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_GRD_I_03) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L_02) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L_03) == TRUE))
 		{
 			return FALSE;
 		}
 		else if (oth.guild == GIL_PAL)
 		&&	((Hlp_IsItem(itm, ITAR_PAL_M) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_PAL_H) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_PAL_H) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L_02) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L_03) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_M) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H_02) == TRUE))
 		{
 			return FALSE;
 		}
@@ -100,7 +107,10 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_DJG_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_DJG_M) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_DJG_H) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_DJG_Crawler) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_DJG_Crawler) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_Crawler) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_DEMONHUNTER_02) == TRUE))
 		{
 			return FALSE;
 		}
@@ -111,7 +121,9 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		}
 		else if (oth.guild == GIL_KDF)
 		&&	((Hlp_IsItem(itm, ITAR_KDF_L) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_KDF_H) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_KDF_H) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_KDF_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_KDF_H) == TRUE))
 		{
 			return FALSE;
 		}

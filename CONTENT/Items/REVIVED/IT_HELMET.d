@@ -2,7 +2,7 @@
 //			SPECTACLES
 //****************************************************************************
 
-INSTANCE ITHE_SPECTACLES_01(C_Item)
+INSTANCE ITHE_REVIVED_SPECTACLES_01(C_Item)
 {
 	name					=	"Spectacles";
 	
@@ -29,7 +29,7 @@ INSTANCE ITHE_SPECTACLES_01(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_SPECTACLES_02(C_Item)
+INSTANCE ITHE_REVIVED_SPECTACLES_02(C_Item)
 {
 	name					=	"Spectacles";
 	
@@ -56,7 +56,7 @@ INSTANCE ITHE_SPECTACLES_02(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_SPECTACLES_03(C_Item)
+INSTANCE ITHE_REVIVED_SPECTACLES_03(C_Item)
 {
 	name					=	"Spectacles";
 	
@@ -83,7 +83,7 @@ INSTANCE ITHE_SPECTACLES_03(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_SPECTACLES_04(C_Item)
+INSTANCE ITHE_REVIVED_SPECTACLES_04(C_Item)
 {
 	name					=	"Spectacles";
 	
@@ -114,7 +114,7 @@ INSTANCE ITHE_SPECTACLES_04(C_Item)
 //			GOTHIC II HELMETS
 //****************************************************************************
 
-INSTANCE ITHE_JUDGE(C_Item)
+INSTANCE ITHE_REVIVED_JUDGE(C_Item)
 {
 	name					=	"Judge's Hat";
 	
@@ -141,7 +141,7 @@ INSTANCE ITHE_JUDGE(C_Item)
 	COUNT[5]				= 	value;
 };
 // ******************************************************
-INSTANCE ITHE_PAL_M(C_Item)
+INSTANCE ITHE_REVIVED_PAL_M(C_Item)
 {
 	name					=	"Knight's Helmet";
 	
@@ -168,7 +168,7 @@ INSTANCE ITHE_PAL_M(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_PAL_H(C_Item)
+INSTANCE ITHE_REVIVED_PAL_H(C_Item)
 {
 	name					=	"Paladin's Helmet";
 	
@@ -195,7 +195,34 @@ INSTANCE ITHE_PAL_H(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_PAL_OLD(C_Item)
+INSTANCE ITHE_REVIVED_PAL_S(C_Item)
+{
+	name					=	"Paladin's Helmet";
+	
+	mainflag				=	ITEM_KAT_NF; //not ITEM_KAT_ARMOR!
+	flags					=	ITEM_KAT_ARMOR;
+	
+	protection [PROT_EDGE]	=	0;
+	protection [PROT_BLUNT] = 	0;
+	protection [PROT_POINT] = 	0;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value					=	5;
+
+	wear					=	WEAR_Head;
+
+	visual					=	"ITHL_PAL.3ds";
+	visual_skin				=	0;
+	material				=	MAT_METAL;
+
+	description				=	name;
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+
+INSTANCE ITHE_REVIVED_PAL_OLD(C_Item)
 {
 	name					=	"Old Paladin's Helmet";
 	
@@ -222,7 +249,7 @@ INSTANCE ITHE_PAL_OLD(C_Item)
 	COUNT[5]				= 	value;
 };
 // ******************************************************
-INSTANCE ITHE_DJG_M(C_Item)
+INSTANCE ITHE_REVIVED_DJG_M(C_Item)
 {
 	name					=	"Dragonhunter's Helmet";
 	
@@ -249,7 +276,7 @@ INSTANCE ITHE_DJG_M(C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITHE_DJG_H(C_Item)
+INSTANCE ITHE_REVIVED_DJG_H(C_Item)
 {
 	name					=	"Dragonhunter's Helmet";
 	
@@ -276,7 +303,7 @@ INSTANCE ITHE_DJG_H(C_Item)
 	COUNT[5]				= 	value;
 };
 // ******************************************************
-INSTANCE ITHE_PIR_M(C_Item)
+INSTANCE ITHE_REVIVED_PIR_M(C_Item)
 {
 	name					=	"Captain's hat";
 	
@@ -302,7 +329,7 @@ INSTANCE ITHE_PIR_M(C_Item)
 	TEXT[5]					=	NAME_Value;			
 	COUNT[5]				= 	value;
 };
-INSTANCE ITHE_PIR_H(C_Item)
+INSTANCE ITHE_REVIVED_PIR_H(C_Item)
 {
 	name					=	"Captain's hat";
 	

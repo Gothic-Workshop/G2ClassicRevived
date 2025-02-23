@@ -53,7 +53,6 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITAR_REVIVED_ORE_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_ORE_H, 1);
 	CreateInvItems(hero, ITAR_REVIVED_LAW, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_I, 1);
 
 	CreateInvItems(hero, ITMW_REVIVED_SICKLE, 1);	
 	CreateInvItems(hero, ITMW_REVIVED_RUSTYSWORD, 1);
@@ -400,14 +399,14 @@ func void use_REVIVED_POCKET_GOTHIC2()
 	CreateInvItems(hero, ITAR_DJG_H_02, 1);
 	CreateInvItems(hero, ITAR_PIR_H_Addon_02, 1);
 
-	CreateInvItems(hero, ITHE_JUDGE, 1);
-	CreateInvItems(hero, ITHE_PAL_M, 1);
-	CreateInvItems(hero, ITHE_PAL_H, 1);
-	CreateInvItems(hero, ITHE_PAL_OLD, 1);
-	CreateInvItems(hero, ITHE_DJG_M, 1);
-	CreateInvItems(hero, ITHE_DJG_H, 1);
-	CreateInvItems(hero, ITHE_PIR_M, 1);
-	CreateInvItems(hero, ITHE_PIR_H, 1);
+	CreateInvItems(hero, ITHE_REVIVED_JUDGE, 1);
+	CreateInvItems(hero, ITHE_REVIVED_PAL_M, 1);
+	CreateInvItems(hero, ITHE_REVIVED_PAL_H, 1);
+	CreateInvItems(hero, ITHE_REVIVED_PAL_OLD, 1);
+	CreateInvItems(hero, ITHE_REVIVED_DJG_M, 1);
+	CreateInvItems(hero, ITHE_REVIVED_DJG_H, 1);
+	CreateInvItems(hero, ITHE_REVIVED_PIR_M, 1);
+	CreateInvItems(hero, ITHE_REVIVED_PIR_H, 1);
 
 	CreateInvItems(hero, ITSC_REVIVED_TELEPORT_CITY, 3);
 	CreateInvItems(hero, ITSC_REVIVED_TELEPORT_MONASTERY, 3);
@@ -473,7 +472,7 @@ func void use_REVIVED_POCKET_WOG()
 	CreateInvItems(hero, ITAR_REVIVED_DMT_L, 1);
 	CreateInvItems(hero, ITAR_REVIVED_BEGGAR, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GRD_M_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_I_02, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_L_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_ARCHER, 1);
@@ -482,6 +481,8 @@ func void use_REVIVED_POCKET_WOG()
 	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT, 1);
 	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT_02, 1);
 
+	CreateInvItems(hero, ITBE_REVIVED_ARCHER, 1);
+
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_1H, 1);
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_1H_CHARGED, 1);
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_2H, 1);
@@ -489,10 +490,10 @@ func void use_REVIVED_POCKET_WOG()
 	CreateInvItems(hero, ITMW_REVIVED_DEMONSLAYER_1H, 1);
 	CreateInvItems(hero, ITMW_REVIVED_DEMONSLAYER_2H, 1);
 
-	CreateInvItems(hero, ITHE_SPECTACLES_01, 1);
-	CreateInvItems(hero, ITHE_SPECTACLES_02, 1);
-	CreateInvItems(hero, ITHE_SPECTACLES_03, 1);
-	CreateInvItems(hero, ITHE_SPECTACLES_04, 1);
+	CreateInvItems(hero, ITHE_REVIVED_SPECTACLES_01, 1);
+	CreateInvItems(hero, ITHE_REVIVED_SPECTACLES_02, 1);
+	CreateInvItems(hero, ITHE_REVIVED_SPECTACLES_03, 1);
+	CreateInvItems(hero, ITHE_REVIVED_SPECTACLES_04, 1);
 };
 
 //****************************************************************************
@@ -516,10 +517,16 @@ instance REVIVED_POCKET_NEUE(C_Item)
 
 func void use_REVIVED_POCKET_NEUE()
 {
-	CreateInvItems(hero, ITAR_REVIVED_GRD_I_03, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_L_03, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_H_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_STT_M_BDT, 1);
 	CreateInvItems(hero, ITAR_REVIVED_STT_H_BDT, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GORDONRAMSAY, 1);
+
+	CreateInvItems(hero, ITHE_REVIVED_PAL_S, 1);
 
 	CreateInvItems(hero, ITKE_REVIVED_GORDONRAMSAY, 1);
 
