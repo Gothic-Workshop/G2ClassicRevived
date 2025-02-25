@@ -108,32 +108,6 @@ INSTANCE ITPL_REVIVED_SERAPHIS (C_Item)
 		
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_VELAYIS (C_Item)
-{	
-	name 				=	"Velayis";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Velayis;
-
-	visual 				=	"ItFo_Plants_Seraphis_01.3ds";
-	material 			=	MAT_WOOD;
-	on_state[0]			= UseVelayis;	
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Velayis;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Velayis;
-};
-
-		func void UseVelayis ()
-		{			
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Velayis);
-		};
-		
-/******************************************************************************************/
-
 INSTANCE ITPL_REVIVED_MOUNTAINMOSS (C_Item)
 {	
 	name 				=	"Mountain Moss";
@@ -292,7 +266,7 @@ INSTANCE ITPL_REVIVED_OAKLEAF (C_Item)
 
 INSTANCE ITPL_REVIVED_HEALING_01 (C_Item)
 {	
-	name 				=	"Healing Herbs";
+	name 				=	"Healing Leaves";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -344,7 +318,7 @@ INSTANCE ITPL_REVIVED_HEALING_02 (C_Item)
 
 INSTANCE ITPL_REVIVED_HEALING_03 (C_Item)
 {	
-	name 				=	"Healing Herbs";
+	name 				=	"Healing Root";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -369,6 +343,32 @@ INSTANCE ITPL_REVIVED_HEALING_03 (C_Item)
 //****************************************************************************
 //			MANA PLANTS
 //****************************************************************************
+
+INSTANCE ITPL_REVIVED_VELAYIS (C_Item)
+{	
+	name 				=	"Velayis";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
+
+	value 				=	Value_Velayis;
+
+	visual 				=	"ItFo_Plants_Seraphis_01.3ds";
+	material 			=	MAT_WOOD;
+	on_state[0]			= UseVelayis;	
+	scemeName			=	"FOOD";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Velayis;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Velayis;
+};
+
+		func void UseVelayis ()
+		{			
+			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Velayis);
+		};
+		
+/******************************************************************************************/
 
 instance ITPL_REVIVED_BLOODWOOD (C_ITEM)
 {	
@@ -424,7 +424,7 @@ instance ITPL_REVIVED_TOWERWOOD (C_ITEM)
 
 INSTANCE ITPL_REVIVED_RAVENHERB (C_Item)
 {	
-	name 				=	"Raven Herbs";
+	name 				=	"Raven Herb";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
@@ -524,6 +524,8 @@ INSTANCE ITPL_REVIVED_DRAGONROOT (C_Item)
 			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Drachenwurzel);
 		}; 
 
+
+
 //****************************************************************************
 //			MUSHROOMS 
 //****************************************************************************
@@ -565,8 +567,6 @@ INSTANCE ITPL_REVIVED_HELLMUSHROOM (C_Item)
 			};
 		};
 
-/*****************************************************************************************/
-
 INSTANCE ITPL_REVIVED_SLAVEBREAD (C_Item)
 {	
 	name 				=	"Slave's Bread";
@@ -590,6 +590,8 @@ INSTANCE ITPL_REVIVED_SLAVEBREAD (C_Item)
 		{
 			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Sklavenbrot);
 		};
+
+
 
 //****************************************************************************
 //			OTHER

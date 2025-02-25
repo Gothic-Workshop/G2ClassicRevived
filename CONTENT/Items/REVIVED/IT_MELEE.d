@@ -55,6 +55,28 @@ instance ITMW_REVIVED_RUSTYSWORD (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
+instance ITMW_REVIVED_OLDSWORD (C_Item)
+{	
+	name 				=	"Old Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	12;
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		=	10;
+	damageTotal			= 	12;
+	damagetype 			=	DAM_EDGE;	
+	visual 				=	"ItMw_1H_Sword_Old_01.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= NAME_OneHanded;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
 instance ITMW_REVIVED_SHORTSWORD (C_Item)
 {	
 	name 				=	"Short Sword";
@@ -2287,7 +2309,7 @@ INSTANCE ITMW_REVIVED_ULUMULU (C_Item)
 	value 			=	1000;
 	
 	damageTotal		= 	35;
-	damagetype		=	DAM_EDGE;
+	damagetype		=	DAM_BLUNT;
 	range    		=  	140;		
 	cond_atr[2]   	= 	ATR_STRENGTH;
 	cond_value[2]  	= 	30;
@@ -2317,7 +2339,7 @@ INSTANCE ITMW_REVIVED_CLEFTEROFWORLDS (C_Item)
 	value 				=	900;
 
 	damageTotal			= 	90;
-	damagetype			=	DAM_EDGE;
+	damagetype			=	DAM_MAGIC;
 	range    			=  	140;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
@@ -2344,7 +2366,7 @@ INSTANCE ITMW_REVIVED_LIGHTBRINGER (C_Item)
 	value 				=	900;
 
 	damageTotal			= 	90;
-	damagetype			=	DAM_EDGE;
+	damagetype			=	DAM_MAGIC;
 	range    			=  	140;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
@@ -2371,7 +2393,7 @@ INSTANCE ITMW_REVIVED_BLADEOFTIME (C_Item)
 	value 				=	900;
 
 	damageTotal			= 	90;
-	damagetype			=	DAM_EDGE;
+	damagetype			=	DAM_MAGIC;
 	range    			=  	140;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
@@ -2398,7 +2420,7 @@ INSTANCE ITMW_REVIVED_DEMONSTRIKE (C_Item)
 	value 				=	900;
 
 	damageTotal			= 	90;
-	damagetype			=	DAM_EDGE;
+	damagetype			=	DAM_MAGIC;
 	range    			=  	140;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
@@ -2425,7 +2447,7 @@ INSTANCE ITMW_REVIVED_BANISHINGBLADE (C_Item)
 	value 				=	900;
 
 	damageTotal			= 	90;
-	damagetype			=	DAM_EDGE;
+	damagetype			=	DAM_MAGIC;
 	range    			=  	140;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;

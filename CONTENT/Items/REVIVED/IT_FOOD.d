@@ -289,13 +289,13 @@ INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)
 	scemeName			=	"RICE";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_CrawlerSuppe;
+	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_CrawlerSuppe;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_CrawlerSuppe;                                                    
 };
 
 	FUNC VOID UseCrawlersoup()
 	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_CrawlerSuppe);
+		Npc_ChangeAttribute	(self,	ATR_MANA,	HP_CrawlerSuppe);
 	};
 
 //****************************************************************************
@@ -382,7 +382,7 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 			{
 				self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS_MAX];		 
 				self.attribute[ATR_MANA] = self.attribute[ATR_MANA_MAX];
-				Print (PRINT_FullyHealed);
+				//Print (PRINT_FullyHealed);
 				
 				B_RaiseAttribute (self,	ATR_MANA_MAX, HP_Wein);
 				B_Say_Overlay (hero, hero , "$COUGH");
@@ -405,9 +405,8 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 					{
 						B_Say_Overlay (self, self, "$AARGH_3");	
 					};
-
-				Print (PRINT_Bloodfly);
-				
+					
+				Npc_ChangeAttribute	(self, ATR_HITPOINTS, -HP_Wein);
 				Npc_ChangeAttribute	(self, ATR_HITPOINTS_MAX, -HP_Wein);
 				
 				OldWine_Bonus = OldWine_Bonus + 1;

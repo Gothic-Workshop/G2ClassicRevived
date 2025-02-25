@@ -271,6 +271,7 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITPO_REVIVED_BOOST_DEX_03, 10);
 	CreateInvItems(hero, ITPO_REVIVED_BOOST_MASTER_01, 10);
 	CreateInvItems(hero, ITPO_REVIVED_BOOST_MASTER_02, 10);
+	CreateInvItems(hero, ITPO_REVIVED_BOOST_MASTER_03, 10);
 	CreateInvItems(hero, ITPO_REVIVED_SPEED_01, 10);
 	CreateInvItems(hero, ITPO_REVIVED_SPEED_02, 10);
 	CreateInvItems(hero, ITPO_REVIVED_SPEED_03, 10);
@@ -334,7 +335,6 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITWR_REVIVED_VARANT_02, 1);
 	CreateInvItems(hero, ITWR_REVIVED_MYRTANAPOETRY, 1);
 	CreateInvItems(hero, ITWR_REVIVED_HUNTANDPREY, 1);
-	CreateInvItems(hero, ITWR_REVIVED_JOURNAL, 1);
 	CreateInvItems(hero, ITWR_REVIVED_BLOODFLIES, 1);
 	CreateInvItems(hero, ITWR_REVIVED_ARTOFFIGHTING, 1);
 	CreateInvItems(hero, ITWR_REVIVED_RECIPES_01, 1);

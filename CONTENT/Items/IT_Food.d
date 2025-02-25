@@ -337,9 +337,10 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 		
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS_MAX,	HP_CoragonBeer);
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_CoragonBeer);
-		var string concatText;
-		concatText = ConcatStrings(NAME_RaiseHPMP, IntToString(HP_CoragonBeer));
-		PrintScreen	(concatText, 55, -1, FONT_Screen, 2);
+
+		var string msg;
+		msg = ConcatStrings(NAME_RaiseHPMP, IntToString(HP_CoragonBeer));
+		PrintScreen	(msg, -1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
 	};
 
 

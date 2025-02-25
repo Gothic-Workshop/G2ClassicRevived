@@ -54,8 +54,8 @@ FUNC VOID Rtn_FollowToOCBridge_4120 ()
 
 FUNC VOID Rtn_FleeOutOfOW_4120 ()
 {	
-	TA_Sit_Campfire		(08,00,23,00,"OW_PATH_1_17");	//am oretrail!
-    TA_Sit_Campfire		(23,00,08,00,"OW_PATH_1_17");
+	TA_Sit_Campfire		(08,00,23,00,"OW_BILGOT_PASS");	//am oretrail!
+    TA_Sit_Campfire		(23,00,08,00,"OW_BILGOT_PASS");
 };
 
 FUNC VOID Rtn_Tot_4120 ()

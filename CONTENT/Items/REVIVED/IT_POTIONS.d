@@ -547,7 +547,38 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_02 (C_Item)
 		PrintScreen	(msg, -1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
 	};
 
+INSTANCE ITPO_REVIVED_BOOST_MASTER_03 (C_Item)
+{
+	name 			=	"Potion of Godhood";
 
+	mainflag 		=	ITEM_KAT_POTIONS;
+	flags 			=	ITEM_MULTI;
+
+	value 			=	Value_PermMaster_03;	
+
+	visual 			=	"ItFo_Potion_Master_02.3ds";
+	material 		=	MAT_GLAS;
+	on_state[0]		=	UseMaster3Potion;
+	scemeName		=	"POTIONFAST";
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION"; 
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermMaster_03;
+	TEXT[2]				= NAME_Bonus_Str;				COUNT[2]	= Boost_PermMaster_03;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_PermMaster_03;
+};
+
+	FUNC VOID UseMaster3Potion()
+	{
+		Npc_ChangeAttribute	(self,	ATR_STRENGTH,	Boost_PermMaster_03);
+		Npc_ChangeAttribute	(self,	ATR_DEXTERITY,	Boost_PermMaster_03);
+
+		var string msg;
+		msg = ConcatStrings(NAME_RaiseStrDex , IntToString(Boost_PermMaster_03));
+		PrintScreen	(msg, -1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
+	};
 
 //****************************************************************************
 //			TEMPORARY

@@ -244,7 +244,7 @@ instance DIA_Bilgot_BEIBRUECKEANGEKOMMEN		(C_INFO)
 };
 func int DIA_Bilgot_BEIBRUECKEANGEKOMMEN_Condition ()
 {
-	if (Npc_GetDistToWP(self,"START")<8000) 				
+	if (Npc_GetDistToWP(self,"OW_PATH_1_17")<1000) 				
 	{
 		return TRUE;
 	};
@@ -280,7 +280,7 @@ instance DIA_Bilgot_LetztePause		(C_INFO)
 
 func int DIA_Bilgot_LetztePause_Condition ()
 {
-	if (Npc_GetDistToWP(self,"START")<1000) 				
+	if (Npc_GetDistToWP(self,"OW_BILGOT_PASS")<1000) 				
 	{
 		return TRUE;
 	};

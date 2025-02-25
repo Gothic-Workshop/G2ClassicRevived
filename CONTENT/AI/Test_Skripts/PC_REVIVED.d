@@ -393,6 +393,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_03, 10);
 	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_01, 10);
 	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_02, 10);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_03, 10);
 	CreateInvItems(self, ITPO_REVIVED_SPEED_01, 10);
 	CreateInvItems(self, ITPO_REVIVED_SPEED_02, 10);
 	CreateInvItems(self, ITPO_REVIVED_SPEED_03, 10);

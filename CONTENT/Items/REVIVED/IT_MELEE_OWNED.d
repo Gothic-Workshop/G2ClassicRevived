@@ -2,6 +2,33 @@
 //			ONE-HANDED EDGE
 //****************************************************************************
 
+INSTANCE ITMW_REVIVED_SWORD_JACKAL (C_Item)
+{	
+	name 				=	"Jackal's Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	27;
+	cond_atr[2]   		= ATR_STRENGTH;
+	cond_value[2]  		= 20;
+	damageTotal			= 	3;
+	damagetype 			=	DAM_EDGE;		
+	
+	//owner				= 	GRD_201_Jackal;
+	visual 				=	"ItMw_1H_Sword_Short_05.3DS";
+
+	description			= name;
+	TEXT[2]				= NAME_Damage;
+	COUNT[2]			= damageTotal;
+	TEXT[3] 			= NAME_Str_needed;
+	COUNT[3]			= cond_value[2];
+	TEXT[4] 			= NAME_OneHanded;
+	TEXT[5]				= NAME_Value;
+	COUNT[5]			= value;
+};
+
 INSTANCE ITMW_REVIVED_SWORD_SCAR (C_Item)
 {
 	name 				=	"Scar's Sword";
