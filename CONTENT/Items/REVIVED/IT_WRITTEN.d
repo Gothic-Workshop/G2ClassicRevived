@@ -1860,8 +1860,8 @@ INSTANCE ITWR_REVIVED_MAP_FOCUS (C_Item)
 	TEXT[1]					= "reveal the locations of all five";
 	TEXT[2]					= "focus stones which were used to create";
 	TEXT[3]					= "the Magic Barrier. The map is old";
-	TEXT[4]					= "and the stones might have been moved to";
-	TEXT[5]					= "other places since.";
+	TEXT[4]					= "and doesn't show how the Valley";
+	TEXT[5]					= "looks today.";
 };
 
 FUNC VOID UseFocimap()

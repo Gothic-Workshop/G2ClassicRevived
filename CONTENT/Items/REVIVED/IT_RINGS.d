@@ -11,7 +11,7 @@ INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
 
 	value 					=	200;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -23,10 +23,6 @@ INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
 	COUNT[2]		= 5;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 FUNC VOID Equip_Schutzring_Geschosse1()
@@ -48,7 +44,7 @@ INSTANCE ITRI_REVIVED_PROT_ARROW_02(C_Item)
 
 	value 					=	400;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -83,7 +79,7 @@ INSTANCE ITRI_REVIVED_PROT_MELEE_01(C_Item)
 
 	value 					=	200;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -118,7 +114,7 @@ INSTANCE ITRI_REVIVED_PROT_MELEE_02(C_Item)
 
 	value 					=	400;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -155,7 +151,7 @@ INSTANCE ITRI_REVIVED_PROT_WEAPON_01(C_ITEM)
 
 	value 					=	600;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -194,7 +190,7 @@ INSTANCE ITRI_REVIVED_PROT_WEAPON_02(C_ITEM)
 
 	value 					=	800;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -235,7 +231,7 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_01(C_ITEM)
 
 	value 					=	400;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -270,7 +266,7 @@ instance ITRI_REVIVED_PROT_FIRE_01(C_Item)
 
 	value 					=	200;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -303,7 +299,7 @@ INSTANCE ITRI_REVIVED_PROT_FIRE_02(C_Item)
 
 	value 					=	400;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -338,7 +334,7 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_01(C_ITEM)
 
 	value 					=	600;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -375,7 +371,7 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
 
 	value 					=	800;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -414,7 +410,7 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
 
 	value 					=	800;
 
-	visual 					=	"ItMi_Ring_03.3ds";
+	visual 					=	"ITRI_RING_03.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -461,7 +457,7 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
 
 	value 					=	1000;
 
-	visual 					=	"ItMi_Ring_03.3ds";
+	visual 					=	"ITRI_RING_03.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -512,7 +508,7 @@ INSTANCE ITRI_REVIVED_HP_01(C_Item)
 
 	value 					=	180;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -555,7 +551,7 @@ INSTANCE ITRI_REVIVED_HP_02(C_Item)
 
 	value 					=	360;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -599,7 +595,7 @@ INSTANCE ITRI_REVIVED_MP_01(C_Item)
 
 	value 					=	200;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -636,7 +632,7 @@ INSTANCE ITRI_REVIVED_HP_MP_01(C_Item)
 
 	value 					=	500;
 
-	visual 					=	"ItMi_Ring_03.3ds";
+	visual 					=	"ITRI_RING_03.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -687,7 +683,7 @@ INSTANCE ITRI_REVIVED_DEX_01(C_Item)
 
 	value 					=	160;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -720,7 +716,7 @@ INSTANCE ITRI_REVIVED_DEX_02(C_Item)
 
 	value 					=	240;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -755,7 +751,7 @@ INSTANCE ITRI_REVIVED_STR_01(C_Item)
 
 	value 					=	160;
 
-	visual 					=	"ItMi_Ring_01.3ds";
+	visual 					=	"ITRI_RING_01.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -788,7 +784,7 @@ INSTANCE ITRI_REVIVED_STR_02(C_Item)
 
 	value 					=	240;
 
-	visual 					=	"ItMi_Ring_02.3ds";
+	visual 					=	"ITRI_RING_02.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -801,10 +797,6 @@ INSTANCE ITRI_REVIVED_STR_02(C_Item)
 	COUNT[2]		= 10;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 FUNC VOID Equip_Staerkering2()
@@ -828,7 +820,7 @@ INSTANCE ITRI_REVIVED_STR_DEX_01(C_Item)
 
 	value 					=	300;
 
-	visual 					=	"ItMi_Ring_03.3ds";
+	visual 					=	"ITRI_RING_03.3ds";
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -842,10 +834,6 @@ INSTANCE ITRI_REVIVED_STR_DEX_01(C_Item)
 	COUNT[3]		= 4;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 FUNC VOID Equip_Machtring()

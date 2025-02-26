@@ -121,6 +121,26 @@ func int B_GetAnyPlayerMap()
 	{
 		return ItWr_Map_OldWorld_Oremines_MIS;
 	}
+	else if	(Npc_HasItems(hero, ITWR_REVIVED_MAP_VALLEY) >= 1)
+	{
+		return ITWR_REVIVED_MAP_VALLEY;
+	}
+	else if	(Npc_HasItems(hero, ITWR_REVIVED_MAP_VALLEY_GAROND) >= 1)
+	{
+		return ITWR_REVIVED_MAP_VALLEY_GAROND;
+	}
+	else if	(Npc_HasItems(hero, ITWR_REVIVED_MAP_VALLEY_DRAGONS) >= 1)
+	{
+		return ITWR_REVIVED_MAP_VALLEY_DRAGONS;
+	}
+	else if	(Npc_HasItems(hero, ITWR_REVIVED_MAP_VALLEY_CAVES) >= 1)
+	{
+		return ITWR_REVIVED_MAP_VALLEY_CAVES;
+	}
+	else if	(Npc_HasItems(hero, ITWR_REVIVED_MAP_FOCUS) >= 1)
+	{
+		return ITWR_REVIVED_MAP_FOCUS;
+	}
 	else if	(Npc_HasItems(hero, ItWr_Map_AddonWorld) >= 1)
 	{
 		return ItWr_Map_AddonWorld;
@@ -169,8 +189,14 @@ func int PLAYER_HOTKEY_SCREEN_MAP()
 	};
 	if (CurrentLevel != OLDWORLD_ZEN)
 	{
-		if ((OldInstance == ItWr_Map_OldWorld)					||
-			(OldInstance == ItWr_Map_OldWorld_Oremines_MIS)		)
+		if ((OldInstance == ITWR_REVIVED_MAP_VALLEY)			||
+			(OldInstance == ITWR_REVIVED_MAP_VALLEY_GAROND)		||
+			(OldInstance == ITWR_REVIVED_MAP_VALLEY_DRAGONS)	||
+			(OldInstance == ITWR_REVIVED_MAP_VALLEY_CAVES)		||
+			(OldInstance == ITWR_REVIVED_MAP_FOCUS)				)//||
+			//(OldInstance == ItWr_Map_OldWorld)					||
+			//(OldInstance == ItWr_Map_OldWorld_Oremines_MIS)		)
+			
 		{
 			NewInstance = 0;
 		};

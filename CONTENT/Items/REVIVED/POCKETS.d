@@ -212,6 +212,7 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITAM_REVIVED_MP_01, 1);
 	CreateInvItems(hero, ITAM_REVIVED_HP_MP_01, 1);
 	CreateInvItems(hero, ITAM_REVIVED_PSI, 1);
+	CreateInvItems(hero, ITAM_REVIVED_KDW, 1);
 	
 	CreateInvItems(hero, ITRI_REVIVED_PROT_ARROW_01, 1);
 	CreateInvItems(hero, ITRI_REVIVED_PROT_ARROW_02, 1);

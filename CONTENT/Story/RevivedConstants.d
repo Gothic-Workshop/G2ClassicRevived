@@ -68,6 +68,12 @@ const string _STR_MESSAGE_OCLEVER_MOVES		= "The statuette moves the lever."			;
 const string _STR_MESSAGE_WHEEL_STUCKS		= "The winch is jammed."					;
 
 
+// MobName
+CONST STRING MOBNAME_CHESTOLD				= "Old Chest";
+CONST STRING MOBNAME_LEVER					= "Lever";
+CONST STRING MOBNAME_PILLAR					= "Pillar";
+
+
 // Bookstands
 const string Print_LearnFromBookstand				= "You seem to have learned something new.";
 const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";
@@ -98,6 +104,23 @@ var int SCUsed_OW_TELEPORTSTATION_CLIFF;
 var int SCUsed_OW_TELEPORTSTATION_STONEFORTRESS;
 
 var int SCUsed_AllOWTeleporststones;
+
+
+const int OreMob_All_Amount_MAX = 5;
+var int OreMob_01_Amount;
+var int OreMob_02_Amount;
+var int OreMob_03_Amount;
+var int OreMob_04_Amount;
+var int OreMob_05_Amount;
+var int OreMob_06_Amount;
+var int OreMob_07_Amount;
+var int OreMob_08_Amount;
+var int OreMob_09_Amount;
+var int OreMob_10_Amount;
+var int OreMob_11_Amount;
+var int OreMob_12_Amount;
+var int OreMob_13_Amount;
+var int OreMob_14_Amount;
 
 
 var int FirstJoint_01;
@@ -261,6 +284,49 @@ const int POTION_Perm_MASTER_03  				= 32;
 
 
 
+// ****************
+// Alchemy (Schnaps)
+// ****************
+
+const int POTION_Booze_LouHammer  						= 33;
+const int POTION_Booze_LouHammerDouble  				= 34;
+const int POTION_Booze_FastHerring  					= 35;
+const int POTION_Booze_TurnipBooze  					= 36;
+const int POTION_Booze_VinoBooze  						= 37;
+const int POTION_Booze_WhiteRum  						= 38;
+const int POTION_Booze_MageWine  						= 39;
+const int POTION_Booze_RiceSchnaps  					= 40;
+
+
+
+// ****************
+// Alchemy (Weed)
+// ****************
+
+const int POTION_Weed_Regular							= 41;
+const int POTION_Weed_Apple								= 42;
+const int POTION_Weed_Honey								= 43;
+const int POTION_Weed_Mushroom							= 44;
+const int POTION_Weed_GreenNovice						= 45;
+const int POTION_Weed_NorthernDark						= 46;
+const int POTION_Weed_Dreamcall							= 47;
+const int POTION_Weed_DreamcallStrong					= 48;
+
+
+
+// ****************
+// Alchemy (Special)
+// ****************
+
+const int POTION_Special_Experience		  				= 49;
+const int POTION_Special_DragonDrink	  				= 51;
+
+
+const int MAX_POTION					= 52;
+var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
+
+
+
 // ***************
 // Swordmaking
 // ***************
@@ -273,3 +339,7 @@ const int WEAPON_1H_REVIVED_03			= 17;
 const int WEAPON_2H_REVIVED_03			= 18;
 const int WEAPON_1H_REVIVED_04			= 19;
 const int WEAPON_2H_REVIVED_04			= 20;
+
+
+const int MAX_WEAPONS 					= 21;
+var int PLAYER_TALENT_SMITH[MAX_WEAPONS];

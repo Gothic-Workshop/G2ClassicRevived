@@ -552,8 +552,9 @@ const int	MOBSI_SleepAbit					= 2;
 const int	MOBSI_MakeRune					= 3;
 const int	MOBSI_PotionAlchemy				= 4;
 const int	MOBSI_PRAYSHRINE				= 5;	
-const int	MOBSI_GOLDHACKEN				= 6;
+const int	MOBSI_GOLDHACKEN				= 6;	
 const int	MOBSI_PRAYIDOL					= 7;
+const int	MOBSI_OREHACKEN					= 8;
 
 var int 	PLAYER_MOBSI_PRODUCTION;
 

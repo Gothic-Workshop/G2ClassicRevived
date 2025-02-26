@@ -1041,9 +1041,8 @@ const int CHARGE_Innoseye				= 12;
 const int POTION_Mana_04				= 13;
 const int POTION_Health_04				= 14;
 
-const int MAX_POTION					= 33;
-
-var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
+//const int MAX_POTION					= 15;
+//var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 
 
 // ***************
@@ -1066,9 +1065,8 @@ const int WEAPON_1H_Harad_02			= 10;
 const int WEAPON_1H_Harad_03			= 11;
 const int WEAPON_1H_Harad_04			= 12;
 
-const int MAX_WEAPONS 					= 21;
-
-var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
+//const int MAX_WEAPONS 					= 13;
+//var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
 
 
 // ********************

@@ -40,6 +40,6 @@ instance STRF_1117_Straefling (Npc_Default)
 
 FUNC VOID Rtn_Start_1117 ()
 {	
-	TA_Pick_Ore	 		(08,00,23,00,"OW_OM_ENTRANCE03_005");
+	TA_Pick_Ore	 		(08,00,23,00,"OW_OM_PICKSLOT_01");
     TA_Sit_Campfire	 	(23,00,08,00,"OW_OM_ENTRANCE03_CAMPFIRE");
 };

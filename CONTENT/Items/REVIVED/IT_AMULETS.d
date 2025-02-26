@@ -11,7 +11,7 @@ instance ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 
 	value 			=	600;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -19,13 +19,14 @@ instance ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 	on_unequip		=	UnEquip_Schutzamulett_Geschosse;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Point;
 	COUNT[2]		= 15;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Geschosse()
@@ -49,7 +50,7 @@ instance ITAM_REVIVED_PROT_MELEE_01(C_Item)
 
 	value 			=	600;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -57,13 +58,14 @@ instance ITAM_REVIVED_PROT_MELEE_01(C_Item)
 	on_unequip		=	UnEquip_Schutzamulett_Waffen;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Waffen()
@@ -89,7 +91,7 @@ instance ITAM_REVIVED_PROT_MELEE_02(C_Item)
 
 	value 			=	50;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -97,14 +99,15 @@ instance ITAM_REVIVED_PROT_MELEE_02(C_Item)
 	on_unequip		=	UnEquip_Schutzamulett_Nek;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[1]			= "It says NEK on the back.";
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Nek()
@@ -130,7 +133,7 @@ instance ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 
 	value 			=	1000;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -138,13 +141,16 @@ instance ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 	on_unequip		=	UnEquip_Schutzamulett_Waffen_Geschosse;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Edge;
 	COUNT[2]		= 15;
 	TEXT[3] 		= NAME_Prot_Point;
 	COUNT[3]		= 15;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Waffen_Geschosse()
@@ -172,7 +178,7 @@ instance ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 
 	value 			=	600;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -180,13 +186,14 @@ instance ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 	on_unequip		=	UnEquip_Schutzamulett_Magie;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Magic;
 	COUNT[2]		= 8;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Magie()
@@ -210,7 +217,7 @@ instance ITAM_REVIVED_PROT_FIRE_01(C_Item)
 
 	value 			=	600;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -218,13 +225,14 @@ instance ITAM_REVIVED_PROT_FIRE_01(C_Item)
 	on_unequip		=	UnEquip_Schutzamulett_Feuer;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Feuer()
@@ -262,7 +270,7 @@ instance ITAM_REVIVED_PROT_FIRE_02(C_Item)
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
@@ -289,7 +297,7 @@ instance ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 
 	value 			=    1000;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -297,13 +305,16 @@ instance ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 	on_unequip		=	UnEquip_Schutzamulett_Magie_Feuer;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[2]			= NAME_Prot_Fire;
 	COUNT[2]		= 10;
 	TEXT[3] 		= NAME_Prot_Magic;
 	COUNT[3]		= 8;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Magie_Feuer()
@@ -331,7 +342,7 @@ instance ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 
 	value 			=	1600;
 
-	visual 			=	"ItMi_Amulet_03.3ds";
+	visual 			=	"ITAM_AMULET_01.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -339,7 +350,6 @@ instance ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 	on_unequip		=	UnEquip_Schutzamulett_Total;
 
 	description		= name;
-	//TEXT[0]			= "";
 	TEXT[1]			= NAME_Prot_Fire;
 	COUNT[1]		= 10;
 	TEXT[2]			= NAME_Prot_Magic;
@@ -350,6 +360,10 @@ instance ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 	COUNT[4]		= 15;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Schutzamulett_Total()
@@ -384,7 +398,7 @@ instance ITAM_REVIVED_HP_01(C_Item)
 
 	value 			=	720;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_02.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -392,17 +406,14 @@ instance ITAM_REVIVED_HP_01(C_Item)
 	on_unequip		=	UnEquip_Lebensamulett;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= 30;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Lebensamulett()
@@ -437,7 +448,7 @@ instance ITAM_REVIVED_MP_01(C_Item)
 
 	value 			=	400;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_02.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -445,17 +456,14 @@ instance ITAM_REVIVED_MP_01(C_Item)
 	on_unequip		=	UnEquip_Amulett_der_Magie;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Amulett_der_Magie()
@@ -481,7 +489,7 @@ instance ITAM_REVIVED_HP_MP_01(C_Item)
 
 	value 			=	1000;
 
-	visual 			=	"ItMi_Amulet_03.3ds";
+	visual 			=	"ITAM_AMULET_04.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -489,17 +497,16 @@ instance ITAM_REVIVED_HP_MP_01(C_Item)
 	on_unequip		=	UnEquip_Amulett_der_Erleuchtung;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_HP;
 	COUNT[2]		= 25;
 	TEXT[3] 		= NAME_Bonus_Mana;
 	COUNT[3]		= 25;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Amulett_der_Erleuchtung()
@@ -540,7 +547,7 @@ instance ITAM_REVIVED_DEX_01(C_Item)
 
 	value 			=	320;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_03.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -548,17 +555,14 @@ instance ITAM_REVIVED_DEX_01(C_Item)
 	on_unequip		=	UnEquip_Gewandtheitsamulett;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Gewandtheitsamulett()
@@ -582,7 +586,7 @@ instance ITAM_REVIVED_DEX_02(C_Item)
 
 	value 			=	480;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_03.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -590,17 +594,14 @@ instance ITAM_REVIVED_DEX_02(C_Item)
 	on_unequip		=	UnEquip_Gewandtheitsamulett2;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 20;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Gewandtheitsamulett2()
@@ -624,7 +625,7 @@ instance ITAM_REVIVED_STR_01(C_Item)
 
 	value 			=	320;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_03.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -632,17 +633,14 @@ instance ITAM_REVIVED_STR_01(C_Item)
 	on_unequip		=	UnEquip_Staerkeamulett;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= 10;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 	FUNC VOID Equip_Staerkeamulett()
@@ -665,7 +663,7 @@ instance ITAM_REVIVED_STR_02(C_Item)
 
 	value 			=	480;
 
-	visual 			=	"ItMi_Amulet_02.3ds";
+	visual 			=	"ITAM_AMULET_03.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -673,15 +671,8 @@ instance ITAM_REVIVED_STR_02(C_Item)
 	on_unequip		=	UnEquip_Staerkeamulett2;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Str;
 	COUNT[2]		= 20;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	
@@ -712,7 +703,7 @@ instance ITAM_REVIVED_STR_DEX_01(C_Item)
 
 	value 			=	600;
 
-	visual 			=	"ItMi_Amulet_03.3ds";
+	visual 			=	"ITAM_AMULET_04.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -720,19 +711,14 @@ instance ITAM_REVIVED_STR_DEX_01(C_Item)
 	on_unequip		=	UnEquip_Amulett_der_Macht;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[1]			= "";
-	////COUNT[1]		= ;
 	TEXT[2]			= NAME_Bonus_Dex;
 	COUNT[2]		= 7;
 	TEXT[3] 		= NAME_Bonus_Str;
 	COUNT[3]		= 7;
-	//TEXT[4]			= "";
-	////COUNT[4]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
@@ -769,14 +755,12 @@ instance ITAM_REVIVED_PSI(C_Item)
 	material 		=	MAT_METAL;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[2]			= "";
-	////COUNT[2]		= ;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 /******************************************************************************************/
@@ -790,20 +774,18 @@ instance ITAM_REVIVED_KDW(C_Item)
 
 	value 			=	5;
 
-	visual 			=	"ItMi_Amulet_01.3ds";
+	visual 			=	"ITAM_AMULET_KDW.3ds";
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
 
 	description		= name;
-	//TEXT[0]			= "";
-	//TEXT[2]			= "";
-	////COUNT[2]		= ;
-	//TEXT[3] 		= "";
-	////COUNT[3]		= ;
 	TEXT[5]			= NAME_Value;
 	COUNT[5]		= value;
-
+	
+	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
 /******************************************************************************************/
@@ -822,7 +804,7 @@ instance ITAM_REVIVED_DEMON(C_Item)
 
 	value 			=	300;
 
-	visual 			=	"ItMi_Amulet_UluMulu_01.3ds";
+	visual 			=	"ITAM_AMULET_DEMON.3ds";
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -833,8 +815,6 @@ instance ITAM_REVIVED_DEMON(C_Item)
 	TEXT[2]			= "Black shrouds the Night";
 	TEXT[3]			= "Black corrupts the Heart";
 	TEXT[4] 		= "Black bestows Power";
-	/* TEXT[5]			= NAME_Value;
-	COUNT[5]		= value; */
 	
 	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
 	INV_ROTZ				= INVCAM_Z_RING_STANDARD;

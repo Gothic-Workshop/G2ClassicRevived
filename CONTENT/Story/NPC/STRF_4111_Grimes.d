@@ -38,7 +38,7 @@ instance STRF_4111_Grimes (Npc_Default)
 
 FUNC VOID Rtn_Start_4111 ()
 {	
-	TA_Pick_Ore	 			(08,00,22,00,"OW_OM_ENTRANCE03_006");
+	TA_Pick_Ore	 			(08,00,22,00,"OW_OM_PICKSLOT_02");
     TA_Stand_Drinking		(22,00,23,00,"OW_OM_ENTRANCE03_001");
     TA_Sit_Campfire	 		(23,00,08,00,"OW_OM_ENTRANCE03_CAMPFIRE");
 };
