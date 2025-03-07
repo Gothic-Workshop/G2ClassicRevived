@@ -25,7 +25,7 @@ instance PAL_2005_Leiche  (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv (self);	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart01, BodyTex_N, ITAR_REVIVED_PAL_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart01, BodyTex_N, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
@@ -41,6 +41,6 @@ instance PAL_2005_Leiche  (Npc_Default)
 
 FUNC VOID Rtn_Start_2005 ()
 {	
-	TA_Stand_Guarding		(08,00,23,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
-    TA_Stand_Guarding		(23,00,08,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
+	TA_Stand_Guarding		(08,00,23,00,"OW_SILVESTROMINE_032");
+    TA_Stand_Guarding		(23,00,08,00,"OW_SILVESTROMINE_032");
 };

@@ -560,11 +560,6 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(Warg,"SPAWN_OW_SHADOWBEAST_NEAR_SHADOW4");
 	
 		Wld_InsertItem (ItMi_KerolothsGeldbeutel_MIS, "FP_OC_KEROLOTHS_GELDBEUTEL");
-
-		Log_CreateTopic (TOPIC_Dragonhunter, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_Dragonhunter, LOG_RUNNING);
-		B_LogEntry (TOPIC_Dragonhunter,"The great dragon hunt has begun and will have lured many would-be adventurers to the Valley of Mines. I can only hope they won't stand in my way."); 
-		
 		
 		IntroduceChapter (KapWechsel_4,KapWechsel_4_Text,"chapter4.tga","chapter_01.wav", 6000);
 		

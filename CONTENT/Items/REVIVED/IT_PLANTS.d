@@ -39,8 +39,8 @@ INSTANCE ITPL_REVIVED_BLUEBERRY (C_Item)
 
 	value 				=	Value_Waldbeeren;
 
-	visual 				=	"ItFo_Plants_Berrys_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_BERRYS_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
@@ -65,8 +65,8 @@ INSTANCE ITPL_REVIVED_FLAMEBERRY (C_Item)
 
 	value 				=	Value_Flammendorn;
 
-	visual 				=	"ItFo_Plants_Flameberry_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_FLAMEBERRY_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state [0]		=   Useflame;
 	scemeName			=	"FOOD";
 
@@ -91,8 +91,8 @@ INSTANCE ITPL_REVIVED_SERAPHIS (C_Item)
 
 	value 				=	Value_Seraphis;
 
-	visual 				=	"ItFo_Plants_Seraphis_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_SERAPHIS_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= Useseraphis;	
 	scemeName			=	"FOOD";
 
@@ -117,8 +117,8 @@ INSTANCE ITPL_REVIVED_MOUNTAINMOSS (C_Item)
 
 	value 				=	Value_Bergmoos;
 
-	visual 				=	"ItFo_Plants_mountainmoos_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_MOUNTAINMOSS_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state [0]		=   Usemoos;
 	scemeName			=	"FOOD";
 
@@ -143,8 +143,8 @@ INSTANCE ITPL_REVIVED_GRAVEMOSS (C_Item)
 
 	value 				=	Value_Grabmoos;
 
-	visual 				=	"ItFo_Plants_mountainmoos_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_MOUNTAINMOSS_02.3ds";
+	material 			=	MAT_LEATHER;
 	on_state [0]		=   Usemoos2;
 	scemeName			=	"FOOD";
 
@@ -169,8 +169,8 @@ INSTANCE ITPL_REVIVED_NIGHTSHADE (C_Item)
 
 	value 				=	Value_Nachtschatten;
 
-	visual 				=	"ItFo_Plants_Nightshadow_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_NIGHTSHADOW_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]         = Usenight;
 	scemeName			=	"FOOD";
 
@@ -186,32 +186,6 @@ INSTANCE ITPL_REVIVED_NIGHTSHADE (C_Item)
 		
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_LINUM (C_Item)
-{	
-	name 				=	"Lunanaceae";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Mondschatten;
-
-	visual 				=	"ItFo_Plants_Nightshadow_01.3ds";
-	material 			=	MAT_WOOD;
-	on_state[0]         = Usemoon;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Mondschatten;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Mondschatten;
-};
-
-		func void Usemoon ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Mondschatten);
-		};
-		
-/******************************************************************************************/
-
 INSTANCE ITPL_REVIVED_ORCLEAF (C_Item)
 {	
 	name 				=	"Orc Leaf";
@@ -221,8 +195,8 @@ INSTANCE ITPL_REVIVED_ORCLEAF (C_Item)
 
 	value 				=	Value_Orkblatt;
 
-	visual 				=	"ItFo_Plants_OrcHerb_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_ORCHERB_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= 	Useorc;
 	scemeName			=	"FOOD";
 
@@ -247,8 +221,8 @@ INSTANCE ITPL_REVIVED_OAKLEAF (C_Item)
 
 	value 				=	Value_Eichenblatt;
 
-	visual 				=	"ItFo_Plants_OrcHerb_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_ORCHERB_02.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= Useorc2;
 	scemeName			=	"FOOD";
 
@@ -273,8 +247,8 @@ INSTANCE ITPL_REVIVED_HEALING_01 (C_Item)
 
 	value 				=	Value_Heilkrauter1;
 
-	visual 				=	"ItFo_Plants_Herb_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_HERB_HEALTH_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			=	UsePlants1;
 	scemeName			=	"FOOD";
 
@@ -299,8 +273,8 @@ INSTANCE ITPL_REVIVED_HEALING_02 (C_Item)
 
 	value 				=	Value_Heilkrauter2;
 
-	visual 				=	"ItFo_Plants_Herb_02.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_HERB_HEALTH_02.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			=	UsePlants2;
 	scemeName			=	"FOOD";
 
@@ -325,8 +299,8 @@ INSTANCE ITPL_REVIVED_HEALING_03 (C_Item)
 
 	value 				=	Value_Heilkrauter3;
 
-	visual 				=	"ItFo_Plants_Herb_03.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_HERB_HEALTH_03.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			=	UsePlants3;
 	scemeName			=	"FOOD";
 
@@ -353,8 +327,8 @@ INSTANCE ITPL_REVIVED_VELAYIS (C_Item)
 
 	value 				=	Value_Velayis;
 
-	visual 				=	"ItFo_Plants_Seraphis_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_VELAYIS_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= UseVelayis;	
 	scemeName			=	"FOOD";
 
@@ -379,8 +353,8 @@ instance ITPL_REVIVED_BLOODWOOD (C_ITEM)
 
 	value 					=	Value_Blutbuche;
 
-	visual 					=	"ItFo_Plants_Bloodwood_01.3ds";
-	material 				=	MAT_WOOD;
+	visual 					=	"ITPL_BLOODWOOD_01.3ds";
+	material 				=	MAT_LEATHER;
 	on_state[0]				=  Useblood;
 	scemeName				=	"FOOD";
 
@@ -405,8 +379,8 @@ instance ITPL_REVIVED_TOWERWOOD (C_ITEM)
 
 	value 					=	Value_Turmeiche;
 
-	visual 					=	"ItFo_Plants_Bloodwood_01.3ds";
-	material 				=	MAT_WOOD;
+	visual 					=	"ITPL_BLOODWOOD_02.3ds";
+	material 				=	MAT_LEATHER;
 	on_state[0]				=  Useblood2;
 	scemeName				=	"FOOD";
 
@@ -431,8 +405,8 @@ INSTANCE ITPL_REVIVED_RAVENHERB (C_Item)
 
 	value 				=	Value_Rabenkraut;
 
-	visual 				=	"ItFo_Plants_RavenHerb_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_RAVENHERB_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= Useraven;
 	scemeName			=	"FOOD";
 
@@ -457,8 +431,8 @@ INSTANCE ITPL_REVIVED_DARKHERB (C_Item)
 
 	value 				=	Value_Dunkelkraut;
 
-	visual 				=	"ItFo_Plants_RavenHerb_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_RAVENHERB_02.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			=   Useraven2;
 	scemeName			=	"FOOD";
 
@@ -484,7 +458,7 @@ INSTANCE ITPL_REVIVED_STONEROOT (C_Item)
 	value 				=	Value_Steimwurzel;
 
 	visual 				=	"ItFo_Plants_Stoneroot_01.3ds";
-	material 			=	MAT_WOOD;
+	material 			=	MAT_LEATHER;
 	on_state[0]			=   Useroot;
 	scemeName			=	"FOOD";
 
@@ -510,7 +484,7 @@ INSTANCE ITPL_REVIVED_DRAGONROOT (C_Item)
 	value 				=	Value_Drachenwurzel;
 
 	visual 				=	"ItFo_Plants_Stoneroot_01.3ds";
-	material 			=	MAT_WOOD;
+	material 			=	MAT_LEATHER;
 	on_state[0]			=   Useroot2;
 	scemeName			=	"FOOD";
 
@@ -523,6 +497,32 @@ INSTANCE ITPL_REVIVED_DRAGONROOT (C_Item)
 		{
 			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Drachenwurzel);
 		}; 
+		
+/******************************************************************************************/
+
+INSTANCE ITPL_REVIVED_LINUM (C_Item)
+{	
+	name 				=	"Lunanaceae";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
+
+	value 				=	Value_Mondschatten;
+
+	visual 				=	"ITPL_NIGHTSHADOW_02.3ds";
+	material 			=	MAT_LEATHER;
+	on_state[0]         = Usemoon;
+	scemeName			=	"FOOD";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Mondschatten;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Mondschatten;
+};
+
+		func void Usemoon ()
+		{
+			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Mondschatten);
+		};
 
 
 
@@ -539,8 +539,8 @@ INSTANCE ITPL_REVIVED_HELLMUSHROOM (C_Item)
 
 	value 				=	Value_Hollenpilz;
 
-	visual 				=	"ItFo_Plants_mushroom_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_REVIVED_MUSHROOM_02.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= Usemush;
 	scemeName			=	"FOOD";
 
@@ -576,8 +576,8 @@ INSTANCE ITPL_REVIVED_SLAVEBREAD (C_Item)
 
 	value 				=	Value_Sklavenbrot;
 
-	visual 				=	"ItFo_Plants_mushroom_01.3ds";
-	material 			=	MAT_WOOD;
+	visual 				=	"ITPL_REVIVED_MUSHROOM_01.3ds";
+	material 			=	MAT_LEATHER;
 	on_state[0]			= 	Usemush2;
 	scemeName			=	"FOOD";
 
@@ -606,8 +606,8 @@ INSTANCE ITPL_REVIVED_TROLLBERRY (C_Item)
 
 	value 					=	Value_Trollkirsche;
 
-	visual 					=	"ItFo_Plants_Trollberrys_01.3ds";
-	material 				=	MAT_WOOD;
+	visual 					=	"ITPL_TROLLBERRYS_01.3ds";
+	material 				=	MAT_LEATHER;
 	on_state [0]			=   UseTrollberrys;
 	scemeName				=	"FOOD";
 

@@ -237,21 +237,6 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITRI_REVIVED_MP_01, 1);
 	CreateInvItems(hero, ITRI_REVIVED_HP_MP_01, 1);
 
-	CreateInvItems(hero, ITFO_REVIVED_MEATBUG, 20);
-	CreateInvItems(hero, ITFO_REVIVED_APPLE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES, 20);
-	CreateInvItems(hero, ITFO_REVIVED_BREAD, 20);
-	CreateInvItems(hero, ITFO_REVIVED_HAM, 20);
-	CreateInvItems(hero, ITFO_REVIVED_CHEESE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_RICE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_PLANTSOUP, 20);
-	CreateInvItems(hero, ITFO_REVIVED_BUGSOUP, 20);
-	CreateInvItems(hero, ITFO_REVIVED_CRAWLERSOUP, 20);
-	CreateInvItems(hero, ITFO_REVIVED_WATER, 20);
-	CreateInvItems(hero, ITFO_REVIVED_BEER, 20);
-	CreateInvItems(hero, ITFO_REVIVED_WINE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_BOOZE, 20);
-
 	CreateInvItems(hero, ITPO_REVIVED_HEALTH_01, 10);
 	CreateInvItems(hero, ITPO_REVIVED_HEALTH_02, 10);
 	CreateInvItems(hero, ITPO_REVIVED_HEALTH_03, 10);
@@ -278,6 +263,23 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITPO_REVIVED_SPEED_03, 10);
 	CreateInvItems(hero, ITPO_REVIVED_SPECIAL_MANA_01, 10);
 	CreateInvItems(hero, ITPO_REVIVED_SPECIAL_MANA_02, 10);
+
+	CreateInvItems(hero, ITFO_REVIVED_MEATBUG, 20);
+	CreateInvItems(hero, ITFO_REVIVED_APPLE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_01, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_02, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_03, 20);
+	CreateInvItems(hero, ITFO_REVIVED_BREAD, 20);
+	CreateInvItems(hero, ITFO_REVIVED_HAM, 20);
+	CreateInvItems(hero, ITFO_REVIVED_CHEESE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_RICE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_PLANTSOUP, 20);
+	CreateInvItems(hero, ITFO_REVIVED_BUGSOUP, 20);
+	CreateInvItems(hero, ITFO_REVIVED_CRAWLERSOUP, 20);
+	CreateInvItems(hero, ITFO_REVIVED_WATER, 20);
+	CreateInvItems(hero, ITFO_REVIVED_BEER, 20);
+	CreateInvItems(hero, ITFO_REVIVED_WINE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_BOOZE, 20);
 
 	CreateInvItems(hero, ITPL_REVIVED_BLUEBERRY, 20);
 	CreateInvItems(hero, ITPL_REVIVED_FLAMEBERRY, 20);
@@ -355,10 +357,10 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_05, 1);
 	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_06, 1);
 	
-	CreateInvItems(hero, ITMI_REVIVED_JOINT_01, 5);
-	CreateInvItems(hero, ITMI_REVIVED_JOINT_02, 5);
-	CreateInvItems(hero, ITMI_REVIVED_JOINT_03, 5);
-	CreateInvItems(hero, ITMI_REVIVED_JOINT_04, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_GREENNOVICE, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_NORTHDARK, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_DREAMCALL, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_DREAMCALL_02, 5);
 	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_SULFUR, 1);
 	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_MERCURY, 1);
 	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_SALT, 1);
@@ -422,6 +424,12 @@ func void use_REVIVED_POCKET_GOTHIC2()
 	CreateInvItems(hero, ITWR_REVIVED_MAP_VALLEY_CAVES, 1);
 
 	CreateInvItems(hero, ITMI_REVIVED_MAGICORE, 1);
+
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_REGULAR, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_APPLE, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_APPLEDOUBLE, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_HONEY, 5);
+	CreateInvItems(hero, ITMI_REVIVED_JOINT_MUSHROOM, 5);
 };
 
 //****************************************************************************

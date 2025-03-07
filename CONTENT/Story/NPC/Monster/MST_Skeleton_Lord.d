@@ -76,7 +76,7 @@ func void B_SetVisuals_Skeleton_Templar()
 	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
 	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
 	//							Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, BodyTex_Sick, ITAR_REVIVED_TPL_H);
+	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, BodyTex_Sick, ITAR_REVIVED_TPL_SKE);
 };
 
 

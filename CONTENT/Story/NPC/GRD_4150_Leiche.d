@@ -45,6 +45,6 @@ instance GRD_4150_Leiche (Npc_Default)
 
 FUNC VOID Rtn_Start_4150 ()
 {	
-	TA_Stand_Guarding		(08,00,22,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
-    TA_Stand_Guarding		(22,00,08,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
+	TA_Stand_Guarding		(08,00,22,00,"OW_SILVESTROMINE_001");
+    TA_Stand_Guarding		(22,00,08,00,"OW_SILVESTROMINE_001");
 };

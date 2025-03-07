@@ -93,7 +93,7 @@ INSTANCE ITFO_REVIVED_APPLE (C_Item)
 
 /******************************************************************************************/
 
-INSTANCE ITFO_REVIVED_GRAPES (C_Item)
+INSTANCE ITFO_REVIVED_GRAPES_01 (C_Item)
 {	
 	name 				=	"Grapes";
 
@@ -102,8 +102,8 @@ INSTANCE ITFO_REVIVED_GRAPES (C_Item)
 
 	value 				=	Value_Weintrauben;
 
-	visual 				=	"ItFo_wineberrys_01.3ds";
-	on_state[0]         = 	Usewineberrys;  
+	visual 				=	"ITPL_WINEBERRYS_01.3ds";
+	on_state[0]         = 	Usewineberrys1;  
 	scemeName			=	"FOOD";
 
 	description			= name;
@@ -111,7 +111,53 @@ INSTANCE ITFO_REVIVED_GRAPES (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Weintrauben;
 };
 
-	func void Usewineberrys () 
+	func void Usewineberrys1 () 
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Weintrauben);
+	};
+
+INSTANCE ITFO_REVIVED_GRAPES_02 (C_Item)
+{	
+	name 				=	"Grapes";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
+
+	value 				=	Value_Weintrauben;
+
+	visual 				=	"ITPL_WINEBERRYS_02.3ds";
+	on_state[0]         = 	Usewineberrys2;  
+	scemeName			=	"FOOD";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Weintrauben;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Weintrauben;
+};
+
+	func void Usewineberrys2 () 
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Weintrauben);
+	};
+
+INSTANCE ITFO_REVIVED_GRAPES_03 (C_Item)
+{	
+	name 				=	"Grapes";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
+
+	value 				=	Value_Weintrauben;
+
+	visual 				=	"ITPL_WINEBERRYS_03.3ds";
+	on_state[0]         = 	Usewineberrys3;  
+	scemeName			=	"FOOD";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Weintrauben;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Weintrauben;
+};
+
+	func void Usewineberrys3 () 
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Weintrauben);
 	};

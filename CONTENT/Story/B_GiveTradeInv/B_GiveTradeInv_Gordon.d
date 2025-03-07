@@ -14,7 +14,9 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
 		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
-		CreateInvItems(slf, ITFO_REVIVED_GRAPES, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_02, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_03, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
 		CreateInvItems(slf, ITFO_REVIVED_HAM, 20);
 		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
@@ -37,7 +39,9 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
 		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
-		CreateInvItems(slf, ITFO_REVIVED_GRAPES, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_02, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_03, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
 		CreateInvItems(slf, ITFO_REVIVED_HAM, 20);
 		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
@@ -60,7 +64,9 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
 		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
-		CreateInvItems(slf, ITFO_REVIVED_GRAPES, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_02, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_03, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
 		CreateInvItems(slf, ITFO_REVIVED_HAM, 20);
 		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
@@ -83,7 +89,9 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
 		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
-		CreateInvItems(slf, ITFO_REVIVED_GRAPES, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_02, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_03, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
 		CreateInvItems(slf, ITFO_REVIVED_HAM, 20);
 		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
@@ -106,7 +114,9 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
 		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
-		CreateInvItems(slf, ITFO_REVIVED_GRAPES, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_02, 20);
+		CreateInvItems(slf, ITFO_REVIVED_GRAPES_03, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
 		CreateInvItems(slf, ITFO_REVIVED_HAM, 20);
 		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);

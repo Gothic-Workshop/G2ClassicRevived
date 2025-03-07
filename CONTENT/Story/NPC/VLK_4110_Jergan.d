@@ -27,7 +27,7 @@ instance VLK_4110_Jergan (Npc_Default)
 		
 	// ------ visuals ------					
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Whistler, BodyTex_N, ITAR_BDT_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Whistler, BodyTex_N, ITAR_REVIVED_ORG_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	

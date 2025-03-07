@@ -394,6 +394,8 @@ FUNC INT DIA_Hanna_ThisLetter_Condition()
 FUNC VOID DIA_Hanna_ThisLetter_Info()
 {	
 	AI_Output (other,self ,"DIA_Hanna_ThisLetter_15_00"); //Did you mean this document?
+	B_GiveInvItems (other,self,ItWr_ShatteredGolem_Mis,1);
+	B_UseFakeScroll();
 	AI_Output (self ,other,"DIA_Hanna_ThisLetter_17_01"); //Yes, that's exactly it. Thank you.
 	AI_Output (other,self ,"DIA_Hanna_ThisLetter_15_02"); //What's my reward?
 	AI_Output (self ,other,"DIA_Hanna_ThisLetter_17_03"); //Not so fast. Here's your money.
@@ -483,6 +485,8 @@ FUNC VOID DIA_Hanna_AusKeller_Info()
 		AI_Output (self, other, "DIA_Hanna_Add_17_22"); //(conspiratorially) You don't have to tell me. I know everything.
 		AI_Output (self, other, "DIA_Hanna_Add_17_23"); //Just don't even think of stealing anything here, got it?
 		AI_Output (self, other, "DIA_Hanna_Add_17_24"); //We can't afford drawing attention to the hotel.
+		AI_Output (other, self, "DIA_Hanna_Add_15_25"); //Did you know about the thieves' hideout?
+		AI_Output (self, other, "DIA_Hanna_Add_17_26"); //(smirks) I don't know what you're talking about ...
 	};	
 	
 	AI_StopProcessInfos (self);
@@ -559,8 +563,6 @@ func void Hanna_Blubb()
 	AI_Output (self, other, "DIA_Hanna_Add_17_40"); //I should go down there when I get the chance and check up on things.
 	AI_Output (self, other, "DIA_Hanna_Add_17_38"); //Yes. But you'd better not talk about it ...
 	//-------------------
-	AI_Output (other, self, "DIA_Hanna_Add_15_25"); //Did you know about the thieves' hideout?
-	AI_Output (self, other, "DIA_Hanna_Add_17_26"); //(smirks) I don't know what you're talking about ...
 	//-------------------
 	AI_Output (self, other, "DIA_Hanna_Add_17_32"); //The militia was here ... Somebody betrayed the hideout!
 	AI_Output (self, other, "DIA_Hanna_Add_17_33"); //They couldn't pin anything on me, but Cassia and her people are dead!

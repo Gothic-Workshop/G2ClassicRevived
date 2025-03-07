@@ -541,6 +541,8 @@ FUNC VOID DIA_Pyrokar_Wunsch_Nothing ()
 	AI_Output (other,self ,"DIA_Pyrokar_Wunsch_Nothing_15_00"); //None.
 	AI_Output (self ,other,"DIA_Pyrokar_Wunsch_Nothing_11_01"); //(astonished) So be it. The new magician foregoes his act.
 	
+	B_GivePlayerXP (-XP_Ambient);
+	
 	B_StartOtherRoutine (Dyrian,"NOFAVOUR");
 	
 	if (MIS_HelpDyrian == LOG_RUNNING)
@@ -1449,6 +1451,7 @@ func void DIA_Pyrokar_KAP3_READY_Info ()
 
 	MIS_ReadyforChapter4 = TRUE; //Joly: Mit dieser Varible in den Levelchange zur OW -> Kapitel 4
 	B_NPC_IsAliveCheck (NEWWORLD_ZEN);
+		
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"Start");
 };
@@ -1938,7 +1941,7 @@ func void DIA_Pyrokar_IRDORATHBOOKOPEN_glueck ()
 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_03"); //... that gives me something to ponder about.
 	AI_Output			(self, other, "DIA_Pyrokar_IRDORATHBOOKOPEN_glueck_11_04"); //Anyway. Since you were obviously the only one who was able to open the book, then may it be granted unto you to carry it. At least until we have weathered this crisis.
 
-	B_GivePlayerXP (XP_Ambient);
+	B_GivePlayerXP (XP_Ambient / 2);
 	Info_ClearChoices	(DIA_Pyrokar_IRDORATHBOOKOPEN);
 
 };

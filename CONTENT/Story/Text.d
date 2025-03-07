@@ -962,7 +962,7 @@ const string DIALOG_ADDON_ATTENTAT_CONTRA 			= "I'm looking for those guys so I 
 const string DIALOG_ADDON_MINE_DESCRIPTION			= "You're needed in the mine. (Give red stone)";
 const string DIALOG_ADDON_GOLD_DESCRIPTION			= "What do I need to know about mining gold?";
 const string PRINT_ADDON_KNOWSBF					= "Knowledge of stinger poison learned";	
-const string PRINT_ADDON_HACKCHANCE					= "Knowledge of gold digging improved! (+";		
+//const string PRINT_ADDON_HACKCHANCE					= "Knowledge of gold digging improved! (+";		
 const string PRINT_ADDON_STUNTBONUS					= "Stunt Bonus";
 const string PRINT_ADDON_EXPLOITBONUS				= "Exploit Malus";	
 	

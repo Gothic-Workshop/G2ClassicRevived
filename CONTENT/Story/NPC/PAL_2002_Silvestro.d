@@ -29,7 +29,7 @@ instance PAL_2002_Silvestro  (Npc_Default)
 	CreateInvItems (self,ItPo_Health_02,2);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N, ITAR_REVIVED_PAL_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
@@ -45,6 +45,6 @@ instance PAL_2002_Silvestro  (Npc_Default)
 
 FUNC VOID Rtn_Start_2002 ()
 {	
-	TA_Stand_Guarding		(08,00,23,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
-    TA_Stand_Guarding		(23,00,08,00,"SPAWN_OW_SCAVENGER_01_DEMONT5");
+	TA_Stand_Guarding		(08,00,23,00,"OW_SILVESTROMINE_040");
+    TA_Stand_Guarding		(23,00,08,00,"OW_SILVESTROMINE_040");
 };

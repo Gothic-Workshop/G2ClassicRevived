@@ -42,7 +42,7 @@ instance GRD_4120_Bilgot (Npc_Default)
 
 FUNC VOID Rtn_Start_4120 ()
 {	
-	TA_Stand_Guarding	 (08,00,23,00,"LOCATION_23_CAVE_1_OUT_GUARD");
+	TA_Stand_Guarding	 (08,00,23,00,"LOCATION_23_CAVE_STORAGE");
     TA_Sit_Campfire	 	 (23,00,08,00,"LOCATION_23_CAVE_1_OUT_CAMPFIRE_B");
 };
 
@@ -56,6 +56,12 @@ FUNC VOID Rtn_FleeOutOfOW_4120 ()
 {	
 	TA_Sit_Campfire		(08,00,23,00,"OW_BILGOT_PASS");	//am oretrail!
     TA_Sit_Campfire		(23,00,08,00,"OW_BILGOT_PASS");
+};
+
+FUNC VOID Rtn_FleeOutOfOWPass_4120 ()
+{	
+	TA_Sit_Campfire		(08,00,23,00,"OW_BILGOT_PASS_2");	//am 2 oretrail!
+    TA_Sit_Campfire		(23,00,08,00,"OW_BILGOT_PASS_2");
 };
 
 FUNC VOID Rtn_Tot_4120 ()

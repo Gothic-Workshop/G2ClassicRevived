@@ -149,7 +149,7 @@ INSTANCE Stoneguardian_Dead3	(Mst_Addon_Stoneguardian)
 INSTANCE Stoneguardian_MerdarionsSchluessel	(Mst_Addon_Stoneguardian)
 {
 	B_SetVisuals_Stoneguardian ();
-	CreateInvItems (self, ITKE_PORTALTEMPELWALKTHROUGH_ADDON, 1);									
+	//CreateInvItems (self, ITKE_PORTALTEMPELWALKTHROUGH_ADDON, 1);									
 };
 
 //**************************************************************

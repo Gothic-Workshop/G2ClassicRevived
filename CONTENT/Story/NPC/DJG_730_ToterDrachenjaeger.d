@@ -41,8 +41,8 @@ instance DJG_730_ToterDrachenjaeger (Npc_Default)
 
 FUNC VOID Rtn_Start_730 ()
 {
-	TA_Sit_Bench						(08,00,23,00,"OW_PATH_1_5_3");	//Joly: Start OW
-    TA_Sit_Bench						(23,00,08,00,"OW_PATH_1_5_3");		
+	TA_Stand_ArmsCrossed						(08,00,23,00,"OW_PATH_ORETRAIL_2_010");	//Joly: Start OW
+    TA_Stand_ArmsCrossed						(23,00,08,00,"OW_PATH_ORETRAIL_2_010");		
 };
 
 

@@ -43,6 +43,6 @@ instance STRF_1157_Leiche (Npc_Default)
 
 FUNC VOID Rtn_Start_1157 ()
 {	
-	TA_Stand_Guarding		(08,00,23,00,"OW_MINE3_LEICHE_08");
-    TA_Stand_Guarding		(23,00,08,00,"OW_MINE3_LEICHE_08");
+	TA_Stand_Guarding		(08,00,23,00,"OW_SILVESTROMINE_015");
+    TA_Stand_Guarding		(23,00,08,00,"OW_SILVESTROMINE_015");
 };

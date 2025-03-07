@@ -2,7 +2,7 @@
 //			SWAMPWEED
 //****************************************************************************
 
-INSTANCE ITMI_REVIVED_JOINT_01 (C_Item)
+INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 {
 	name 				=	"Green Novice";
 
@@ -15,11 +15,11 @@ INSTANCE ITMI_REVIVED_JOINT_01 (C_Item)
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
-	on_state[0]			= Use_ITMI_REVIVED_JOINT_01;
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_GREENNOVICE;
 	description			= name;
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };
-func void Use_ITMI_REVIVED_JOINT_01()
+func void Use_ITMI_REVIVED_JOINT_GREENNOVICE()
 {
 	if (Npc_IsPlayer (self))
 	{
@@ -33,7 +33,7 @@ func void Use_ITMI_REVIVED_JOINT_01()
 };
 
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_JOINT_02 (C_Item)
+INSTANCE ITMI_REVIVED_JOINT_NORTHDARK (C_Item)
 {
 	name 				=	"Northern Dark";
 
@@ -46,11 +46,11 @@ INSTANCE ITMI_REVIVED_JOINT_02 (C_Item)
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
-	on_state[0]			= Use_ITMI_REVIVED_JOINT_02;
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_NORTHDARK;
 	description			= name;
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };
-func void Use_ITMI_REVIVED_JOINT_02()
+func void Use_ITMI_REVIVED_JOINT_NORTHDARK()
 {
 	if (Npc_IsPlayer (self))
 	{
@@ -64,7 +64,7 @@ func void Use_ITMI_REVIVED_JOINT_02()
 };
 
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_JOINT_03 (C_Item)
+INSTANCE ITMI_REVIVED_JOINT_DREAMCALL (C_Item)
 {
 	name 				=	"Dreamcall";
 
@@ -77,11 +77,11 @@ INSTANCE ITMI_REVIVED_JOINT_03 (C_Item)
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
-	on_state[0]			= Use_ITMI_REVIVED_JOINT_03;
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_DREAMCALL;
 	description			= name;
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };
-func void Use_ITMI_REVIVED_JOINT_03()
+func void Use_ITMI_REVIVED_JOINT_DREAMCALL()
 {
 	if (Npc_IsPlayer (self))
 	{
@@ -97,8 +97,7 @@ func void Use_ITMI_REVIVED_JOINT_03()
 };
 
 /******************************************************************************************/
-
-INSTANCE ITMI_REVIVED_JOINT_04 (C_Item)
+INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 {
 	name 				=	"Prepared Dreamcall";
 
@@ -111,7 +110,7 @@ INSTANCE ITMI_REVIVED_JOINT_04 (C_Item)
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
-	on_state[0]			=	UseSpecialJoint;
+	on_state[0]			=	Use_ITMI_REVIVED_JOINT_DREAMCALL_02;
 
 	TEXT[0]		    	= "Swampweed with a stronger";
 	TEXT[1]             = "effect than normal weed.";
@@ -119,9 +118,180 @@ INSTANCE ITMI_REVIVED_JOINT_04 (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[4]	= Value_Joint3*10;
 };
 
-func void UseSpecialJoint()
+func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
 {
-	AI_StartState	(self,ZS_MagicSleep,1,"");
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_04 == FALSE)
+		{
+			B_GivePlayerXP (25);
+			Npc_ChangeAttribute(self, ATR_MANA_MAX, 5);
+			PrintScreen	("Mana +5", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
+			FirstJoint_04 = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		AI_StartState	(self,ZS_MagicSleep,1,"");
+	};
+};
+
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
+{
+	name 				=	"Regular Joint";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Joint;
+
+	visual 				=	"ItMi_Joint_US.3ds";
+	material 			=	MAT_LEATHER;
+
+	scemeName			=	"JOINT";
+	on_state[0]			= 	Use_ITMI_REVIVED_JOINT_REGULAR;
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			= 	value;
+	
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	
+};
+func void Use_ITMI_REVIVED_JOINT_REGULAR()
+{
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_REGULAR == FALSE)
+		{
+			B_GivePlayerXP (25);
+			FirstJoint_REGULAR = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+	};
+};
+
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
+{
+	name 				=	"Apple Joint";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Joint3;
+
+	visual 				=	"ItMi_Joint_01.3ds";
+	material 			=	MAT_WOOD;
+
+	scemeName			=	"JOINT";
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLE;
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+};
+func void Use_ITMI_REVIVED_JOINT_APPLE()
+{
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_APPLE == FALSE)
+		{
+			B_GivePlayerXP (25);
+			FirstJoint_APPLE = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+	};
+};
+
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
+{
+	name 				=	"Stronger apple Joint";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Joint3;
+
+	visual 				=	"ItMi_Joint_01.3ds";
+	material 			=	MAT_WOOD;
+
+	scemeName			=	"JOINT";
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLEDOUBLE;
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+};
+func void Use_ITMI_REVIVED_JOINT_APPLEDOUBLE()
+{
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_APPLEDOUBLE == FALSE)
+		{
+			B_GivePlayerXP (50);
+			FirstJoint_APPLEDOUBLE = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+	};
+};
+
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
+{
+	name 				=	"Honey Joint";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Joint3;
+
+	visual 				=	"ItMi_Joint_01.3ds";
+	material 			=	MAT_WOOD;
+
+	scemeName			=	"JOINT";
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_HONEY;
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+};
+func void Use_ITMI_REVIVED_JOINT_HONEY()
+{
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_HONEY == FALSE)
+		{
+			B_GivePlayerXP (25);
+			FirstJoint_HONEY = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+	};
+};
+
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
+{
+	name 				=	"Mushroom Joint";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	Value_Joint3;
+
+	visual 				=	"ItMi_Joint_01.3ds";
+	material 			=	MAT_WOOD;
+
+	scemeName			=	"JOINT";
+	on_state[0]			= Use_ITMI_REVIVED_JOINT_MUSHROOM;
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+};
+func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
+{
+	if (Npc_IsPlayer (self))
+	{
+		if (FirstJoint_MUSHROOM == FALSE)
+		{
+			B_GivePlayerXP (25);
+			FirstJoint_MUSHROOM = TRUE;
+		};
+		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+	};
 };
 
 //****************************************************************************

@@ -40,9 +40,6 @@ instance DJG_740_ToterDrachenjaeger (Npc_Default)
 
 FUNC VOID Rtn_Start_740 ()
 {
-	TA_Sit_Bench 					(08,00,23,00,"OW_PATH_123");	//Joly: ganz alter Dämonenturm
-    TA_Sit_Bench					(23,00,08,00,"OW_PATH_123");		
+	TA_Stand_ArmsCrossed						(08,00,23,00,"WP_INTRO_SHORE");	//Joly: Start OW
+    TA_Stand_ArmsCrossed						(23,00,08,00,"WP_INTRO_SHORE");		
 };
-
-
-

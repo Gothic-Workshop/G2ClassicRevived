@@ -162,20 +162,132 @@ func void STARTUP_OLDCAMP ()
 
 
 	// Old Camp (Outer Ring)
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_000");	
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_001");
+	Wld_InsertNpc	(OrcWarrior_Roam,"OC1");	
+	Wld_InsertNpc	(OrcWarrior_Roam,"OC1");	
 
-	/* Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_002");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_MAINGATE_SQUARE");	
+	Wld_InsertNpc	(Warg,"OCR_MAINGATE_SQUARE");
+	Wld_InsertNpc	(Warg,"OCR_MAINGATE_SQUARE");
+
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_GATE");	
+	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_GATE");	
+	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_GATE");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_9_ROAM");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_9_ROAM");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_9_ROAM");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_9_ROAM");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_9_ROAM");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_9_ROAM");	
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_12");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_13");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_HUT_15_TO_OUTSIDE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_20");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_20");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_HUT_15_OUTSIDE");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_HUT_15_OUTSIDE");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_ARENA_HANGAROUND");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_ARENA_HANGAROUND");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_27");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_27");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_25");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_25");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_OUTSIDE_ARENA_HANGAROUND");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_OUTSIDE_ARENA_HANGAROUND");
+	Wld_InsertNpc   (OrcShaman_Sit,"OCR_OUTSIDE_ARENA_BARONS_HUT");	
+
+	Wld_InsertNpc   (OrcShaman_Sit,"OCR_CAMPFIRE_I_2");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_ARENABATTLE_OUTSIDE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_ARENABATTLE_OUTSIDE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_ARENABATTLE_OUTSIDE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_ARENABATTLE_OUTSIDE");	
+
+	Wld_InsertNpc	(OrcWarrior_Roam,"OCR_OUTSIDE_HUT_30");	
+	Wld_InsertNpc	(OrcWarrior_Roam,"OCR_OUTSIDE_HUT_30");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_30");
+	Wld_InsertNpc	(Warg,"OCR_HUT_35");
+	Wld_InsertNpc	(Warg,"OCR_HUT_34");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_38");
+
+	Wld_InsertNpc   (OrcElite_Roam,"OC_ORCTARAN_WAY_02");	
+	Wld_InsertNpc   (OrcElite_Roam,"OC_ORCTARAN_WAY_02");	
+
+	Wld_InsertNpc   (OrcElite_Sit,"OCR_FALLENTOWER_02");	
+	Wld_InsertNpc	(Warg,"OCR_FALLENTOWER_02");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_79");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_79");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_79");
+
+	Wld_InsertNpc	(OrcShaman_Sit,"OC2");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_NORTHGATE_ADVANCE");	
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_NORTHGATE_ADVANCE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_NORTHGATE_ADVANCE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_NORTHGATE_ADVANCE");	
+	Wld_InsertNpc	(Warg,"OCR_NORTHGATE_ADVANCE");
+	Wld_InsertNpc	(Warg,"OCR_NORTHGATE_ADVANCE");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_NORTHGATE_WALL");	
+	Wld_InsertNpc	(Warg,"OCR_NORTHGATE_WALL");
+
+	Wld_InsertNpc	(Warg,"OCR_NORTHGATE_RAMP_BELOW");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_Z4");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_43B");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_43B");
+
+	Wld_InsertNpc	(OrcShaman_Sit,"OCR_OUTSIDE_HUT_53");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_53");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_53");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_51");	
+	Wld_InsertNpc	(Warg,"OCR_TO_HUT_51");
+
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_OUTSIDE_HUT_47");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_47");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_47");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_MARKETPLACE_SCAVENGER");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_MARKETPLACE_SCAVENGER");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_46");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_46");	
+	Wld_InsertNpc	(Warg,"OCR_WASH_8");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_CAMPFIRE_F_1");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_CAMPFIRE_F_1");	
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_65");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_65");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_65");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_65");
+
+	Wld_InsertNpc   (OrcElite_Roam,"OCR_SMALLTALK_A_CAMPFIRE_D");	
+	Wld_InsertNpc   (OrcElite_Roam,"OC_MOAT_21");	
+	Wld_InsertNpc	(Warg,"OCR_SMALLTALK_A_CAMPFIRE_D");	
+	Wld_InsertNpc	(Warg,"OC_MOAT_22");	
+	Wld_InsertNpc	(Warg,"OC_MOAT_22");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_CAMPFIRE_D_2");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_CAMPFIRE_D_2");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_70");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_70");
+
+	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_4");	
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_4");
+	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_4");
+
+/* 	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_002");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_002"); */
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_002");	
+	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_002");
 
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_003");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_003");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_004");	
 
-/* 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_005");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_005");	
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_005");	 */
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_005");	
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_005");	
 
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_006");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_006");	
@@ -184,116 +296,22 @@ func void STARTUP_OLDCAMP ()
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_008");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_008");	
 
-/* 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_009");	
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_009");	
 	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_009");	
 	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_009");	
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_009");	 */
-
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_010");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_010");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_010");
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_009");	
 
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_011");	
 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_011");	
 
-/* 	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_012");	
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_012");	
 	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_012");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_012"); */
+	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_012");
 
-	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_013");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_013");	
-	Wld_InsertNpc   (OrcElite_Sit,"OC_ORC_CAMPFIRE_013");
-
-
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_MAINGATE_LEFT_GUARD");	
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_MAINGATE_RIGHT_GUARD");	
-
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_MAINGATE_GUARDROOM");	
-	Wld_InsertNpc	(Warg,"OCR_MAINGATE_GUARDROOM");
-
-	Wld_InsertNpc	(OrcWarrior_Roam,"OC1");	
-	Wld_InsertNpc	(OrcWarrior_Rest,"OC1");	
+	Wld_InsertNpc   (OrcShaman_Sit,"OC_ORC_CAMPFIRE_013");	 
+*/
 
 
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_NORTHGATE_LEFT_GUARD");	
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_NORTHGATE_RIGHT_GUARD");	
-
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_NORTHGATE_RAMP_ATOP");	
-	Wld_InsertNpc	(Warg,"OCR_NORTHGATE_RAMP_ATOP");	
-
-	Wld_InsertNpc	(OrcWarrior_Roam,"OC2");	
-	Wld_InsertNpc	(OrcShaman_Sit,"OC2");	
-
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_PALISADES_01");
-	Wld_InsertNpc	(Warg,"OCR_TO_PALISADES_01");	
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_BEHIND_HUT_17");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_22");	
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_24");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_25");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_27_MOVEMENT");	
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_ARENA_BARONS_HUT");
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_ARENA");	
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_33");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_33");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_30");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_30");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_38");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_38");
-
-	Wld_InsertNpc   (OrcElite_Sit,"OCR_FALLENTOWER_02");	
-	Wld_InsertNpc	(Warg,"OCR_FALLENTOWER_02");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_79");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_79");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_42");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_42");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_53");	
-	Wld_InsertNpc	(Warg,"OCR_TO_HUT_53");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_59");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_59");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_50");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_50");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_43B");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_43B");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_46");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_46");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_65_MOVEMENT");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_65_MOVEMENT");
-
-/* 	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_63");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_63"); */
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_CAMPFIRE_D_1");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_CAMPFIRE_D_1");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_68_BENCH");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_68_BENCH");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_73");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_73");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_OUTSIDE_HUT_75");	
-	Wld_InsertNpc	(Warg,"OCR_OUTSIDE_HUT_75");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_LAKE_1");	
-	Wld_InsertNpc	(Warg,"OCR_LAKE_1");
-
-	Wld_InsertNpc   (OrcWarrior_Roam,"OCR_TO_HUT_6");	
-	Wld_InsertNpc	(Warg,"OCR_TO_HUT_6");
-	
 
 	Wld_InsertNpc	(YRat,"FP_MEATBUG_SPAWN_1");
 	Wld_InsertNpc	(YRat,"FP_MEATBUG_SPAWN_2");
@@ -1560,26 +1578,47 @@ func void STARTUP_SURFACE ()
 
 
 	// Orc Territory (Silvestro Mine)	
-	Wld_InsertNpc		(PAL_2005_Leiche,"OW_MINE3_LEICHE_05");	
-	Wld_InsertNpc		(PAL_2002_Silvestro,"OW_MINE3_LEICHE_01");	
-	Wld_InsertNpc		(PAL_2003_Leiche,"OW_MINE3_LEICHE_04");	
-	
-	Wld_InsertNpc		(STRF_1152_Leiche,"OW_MINE3_LEICHE_02");	
-	Wld_InsertNpc		(STRF_1154_Leiche,"OW_MINE3_LEICHE_07");	
-	Wld_InsertNpc		(STRF_1155_Leiche,"OW_MINE3_LEICHE_06");	
-	Wld_InsertNpc		(STRF_1156_Leiche,"OW_MINE3_LEICHE_09");	
-	Wld_InsertNpc		(STRF_1157_Leiche,"OW_MINE3_LEICHE_08");	
-	
-	Wld_InsertNpc		(GRD_4150_Leiche,"OW_MINE3_LEICHE_03");	
-	
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_SNAPPER02_SPAWN01");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_SNAPPER02_SPAWN01");
-	
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_SNAPPER02_SPAWN02");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_SNAPPER02_SPAWN02");
 	
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
+	
+	Wld_InsertNpc		(GRD_4150_Leiche,"OW_SILVESTROMINE");	
+
+	Wld_InsertNpc		(PAL_2002_Silvestro,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(PAL_2003_Leiche,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(PAL_2005_Leiche,"OW_SILVESTROMINE");	
+	
+	Wld_InsertNpc		(STRF_1152_Leiche,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(STRF_1154_Leiche,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(STRF_1155_Leiche,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(STRF_1156_Leiche,"OW_SILVESTROMINE");	
+	Wld_InsertNpc		(STRF_1157_Leiche,"OW_SILVESTROMINE");	
+	
+	Wld_InsertNpc		(MinecrawlerQueen,"OW_SILVESTROMINE_042");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_041");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_040");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_036");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_035");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_034");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_033");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_031");
+	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_031");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_028");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_025");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_025");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_022");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_013");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_012");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_012");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_010");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_007");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_004");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_004");
+	Wld_InsertNpc		(Minecrawler,"OW_SILVESTROMINE_001");
 
 
 	// Sunken Tower
@@ -3378,6 +3417,23 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 		Wld_AssignRoomToGuild ("grpturm02",			GIL_PUBLIC); //vorderer Turm
 		Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
 		Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenhütte
+	
+	
+		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_01", 1);
+		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_01", 1);
+		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_01", 0);
+		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_02", 1);
+		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_02", 1);
+		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_02", 0);
+		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_03", 1);
+		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_03", 1);
+		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_03", 0);
+		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_04", 1);
+		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_04", 1);
+		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_04", 0);
+		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_05", 1);
+		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_05", 1);
+		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_05", 0);
 	};
 
 FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()

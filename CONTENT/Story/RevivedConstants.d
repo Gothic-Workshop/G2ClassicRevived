@@ -74,9 +74,18 @@ CONST STRING MOBNAME_LEVER					= "Lever";
 CONST STRING MOBNAME_PILLAR					= "Pillar";
 
 
+// Alchemy
+const string PRINT_BoozeSuccess						= "Booze mixed!";
+const string PRINT_TabakSuccessREVIVED				= "Reefer rolled!";
+
+
 // Bookstands
 const string Print_LearnFromBookstand				= "You seem to have learned something new.";
 const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";
+
+
+// Skills
+const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";		
 
 
 
@@ -85,6 +94,24 @@ const string Print_TalentFromBookstand				= "You seem to have picked up a new sk
 // ***************
 
 const int	_TIME_MESSAGE_RAISEATTRIBUTE	=	4;
+
+
+
+
+// ***************
+// AI Constants
+// ***************
+
+const int Face_N_GordonRamsay		= 	163;
+const int Face_N_ArkhanQualshy		= 	164;
+const int Face_N_BartiredQualshy	= 	165;
+const int Face_N_SinisterCruz		= 	166;
+const int Face_N_UdarEverett		= 	167;
+const int Face_N_DelaCroix			= 	168;
+
+
+const int ID_MINECRAWLERQUEEN		=	65;
+const int FAI_MINECRAWLERQUEEN		=	47;
 
 
 
@@ -121,11 +148,29 @@ var int OreMob_11_Amount;
 var int OreMob_12_Amount;
 var int OreMob_13_Amount;
 var int OreMob_14_Amount;
+var int OreMob_15_Amount;
+var int OreMob_16_Amount;
+var int OreMob_17_Amount;
+var int OreMob_18_Amount;
+var int OreMob_19_Amount;
+var int OreMob_20_Amount;
+var int OreMob_21_Amount;
+var int OreMob_22_Amount;
+var int OreMob_23_Amount;
+var int OreMob_24_Amount;
+var int OreMob_25_Amount;
+var int OreMob_26_Amount;
 
 
 var int FirstJoint_01;
 var int FirstJoint_02;
 var int FirstJoint_03;
+var int FirstJoint_04;
+var int FirstJoint_REGULAR; 
+var int FirstJoint_APPLE; 
+var int FirstJoint_APPLEDOUBLE;
+var int FirstJoint_HONEY;
+var int FirstJoint_MUSHROOM;
 
 var int OldApple_Bonus;
 var int OldWine_Bonus;
@@ -135,6 +180,10 @@ var int HellMushroom_Bonus;
 var int LesterKeyStolen;
 var int DIA_Peck_BUYARMOR_perm;
 var int DIA_Revived_Gordon_Trade_OneTime;
+
+var int BilgotSecondPass;
+var int TalbinSecondPass;
+var int DJGSecondPass;
 
 
 
@@ -305,12 +354,13 @@ const int POTION_Booze_RiceSchnaps  					= 40;
 
 const int POTION_Weed_Regular							= 41;
 const int POTION_Weed_Apple								= 42;
-const int POTION_Weed_Honey								= 43;
-const int POTION_Weed_Mushroom							= 44;
-const int POTION_Weed_GreenNovice						= 45;
-const int POTION_Weed_NorthernDark						= 46;
-const int POTION_Weed_Dreamcall							= 47;
-const int POTION_Weed_DreamcallStrong					= 48;
+const int POTION_Weed_AppleDouble						= 43;
+const int POTION_Weed_Honey								= 44;
+const int POTION_Weed_Mushroom							= 45;
+const int POTION_Weed_GreenNovice						= 46;
+const int POTION_Weed_NorthernDark						= 47;
+const int POTION_Weed_Dreamcall							= 48;
+const int POTION_Weed_DreamcallStrong					= 49;
 
 
 
@@ -318,13 +368,23 @@ const int POTION_Weed_DreamcallStrong					= 48;
 // Alchemy (Special)
 // ****************
 
-const int POTION_Special_Experience		  				= 49;
+const int POTION_Special_Experience		  				= 50;
 const int POTION_Special_DragonDrink	  				= 51;
 
 
-const int MAX_POTION					= 52;
+const int MAX_POTION						= 52;
 var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 
+
+// ****************
+// Alchemy (Tobacco)
+// ****************
+
+const int TOBACCO_Apple						= 1;
+const int TOBACCO_AppleDouble				= 2;
+const int TOBACCO_Honey						= 3;
+const int TOBACCO_Swampweed					= 4;
+const int TOBACCO_Mushroom					= 5;
 
 
 // ***************

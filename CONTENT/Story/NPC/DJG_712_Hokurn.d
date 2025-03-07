@@ -43,6 +43,12 @@ FUNC VOID Rtn_PreStart_712 ()
     TA_Smalltalk				(23,00,08,00,"OW_PATH_DJG_005");		
 };
 
+FUNC VOID Rtn_StartPass_712()
+{
+	TA_Smalltalk						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
+    TA_Smalltalk						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
+};
+
 FUNC VOID Rtn_Start_712 ()
 {
 	TA_Smalltalk 						(08,00,23,00,"PATH_AROUND_HILL04");

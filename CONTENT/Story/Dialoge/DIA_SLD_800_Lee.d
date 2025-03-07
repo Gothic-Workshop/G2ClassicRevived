@@ -1033,8 +1033,8 @@ FUNC VOID DIA_Lee_BuyArmorM_Info()
 	if (B_GiveInvItems (other, self, itmi_gold, 1000))
 	{
 		AI_Output (self ,other,"DIA_Lee_BuyArmorM_04_01"); //Here you go. Some good armor.
-		//B_GiveInvItems (self, other, itar_sld_M, 1);
-		CreateInvItems (other, ITAR_REVIVED_SLD_M, 1);
+		CreateInvItems (self, ITAR_REVIVED_SLD_M, 1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_SLD_M, 1);
 		AI_EquipArmor (other, ITAR_REVIVED_SLD_M);
 			
 		Lee_SldMGiven = TRUE;
@@ -1163,10 +1163,8 @@ FUNC VOID DIA_Lee_BuyArmorH_Info()
 	if (B_GiveInvItems (other, self, itmi_gold, 2500))
 	{
 		AI_Output (self ,other,"DIA_Lee_BuyArmorH_04_01"); //Here. Very good armor. It's the same that I wear.
-		//CreateInvItems (self,itar_sld_H,1);
-		//B_GiveInvItems (self, other, itar_sld_H, 1);
-		
-		CreateInvItems (other, ITAR_REVIVED_SLD_H, 1);
+		CreateInvItems (self,ITAR_REVIVED_SLD_H,1);
+		B_GiveInvItems (self, other, ITAR_REVIVED_SLD_H, 1);
 		AI_EquipArmor (other, ITAR_REVIVED_SLD_H);
 		
 		Lee_SldHGiven = TRUE;

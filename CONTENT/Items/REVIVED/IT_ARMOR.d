@@ -791,7 +791,7 @@ instance ITAR_REVIVED_TPL_L(C_Item)
 	visual 					=	"tpll.3ds";
 	visual_change 			=	"Hum_TPLL_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -822,7 +822,7 @@ instance ITAR_REVIVED_TPL_M(C_Item)
 	visual 					=	"tplm.3ds";
 	visual_change 			=	"Hum_TPLM_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -853,7 +853,7 @@ instance ITAR_REVIVED_TPL_H(C_Item)
 	visual 					=	"tplh.3ds";
 	visual_change 			=	"Hum_TPLS_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -1551,7 +1551,7 @@ INSTANCE ITAR_PAL_SKEL_02 (C_Item)
 	visual 					=	"ItAr_Pal_H.3ds";
 	visual_change 			=	"PaladinOld_OhneHelm.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 
@@ -1589,9 +1589,9 @@ INSTANCE ITAR_DJG_M_02 (C_Item)
 	wear 					=	WEAR_TORSO;
 
 	visual 					=	"ItAr_Djg_M.3ds";
-	visual_change 			=	"DrachenjaegerS_OhneHelm.asc";
+	visual_change 			=	"DrachenjaegerM_OhneHelm.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	
@@ -1629,9 +1629,9 @@ INSTANCE ITAR_DJG_H_02 (C_Item)
 	wear 					=	WEAR_TORSO;
 
 	visual 					=	"ItAr_Djg_H.3ds";
-	visual_change 			=	"DrachenjaegerM_OhneHelm.asc";
+	visual_change 			=	"DrachenjaegerS_OhneHelm.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 
@@ -1717,7 +1717,7 @@ instance ITAR_REVIVED_PAL_L(C_Item)
 	visual 					=	"grdi.3ds";
 	visual_change 			=	"Hum_GRDI_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 	
 	on_equip				=	Equip_GRD_ARMOR;
 	on_unequip				=	UnEquip_GRD_ARMOR;
@@ -1752,7 +1752,7 @@ instance ITAR_REVIVED_PAL_L_02(C_Item)
 	visual 					=	"grdi.3ds";
 	visual_change 			=	"AlphaGRDIfixed.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 	
 	on_equip				=	Equip_GRD_ARMOR;
 	on_unequip				=	UnEquip_GRD_ARMOR;
@@ -1787,7 +1787,7 @@ instance ITAR_REVIVED_PAL_L_03(C_Item)
 	visual 					=	"HUM_PALL_ARMOR.3ds";
 	visual_change 			=	"HUM_PALL_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 	
 	on_equip				=	Equip_GRD_ARMOR;
 	on_unequip				=	UnEquip_GRD_ARMOR;
@@ -1946,7 +1946,7 @@ instance ITAR_REVIVED_DEMONHUNTER(C_Item)
 	visual 					=	"ITAR_DHT2S.3ds";
 	visual_change 			=	"HUM_DHT2S_ARMOR.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -1978,7 +1978,7 @@ instance ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 	visual 					=	"ITAR_DHT2S2.3ds";
 	visual_change 			=	"HUM_DHT2S_ARMOR2.asc";
 	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
+	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -1992,6 +1992,42 @@ instance ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 //****************************************************************************
 //			SPECIAL
 //****************************************************************************
+
+
+
+instance ITAR_REVIVED_TPL_SKE(C_Item)
+{
+	name 					=	"Heavy Templar's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	10;
+	protection [PROT_FIRE] 	= 	35;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_TPL_ARMOR_H;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"tplh.3ds";
+	visual_change 			=	"Armor_SkeWarrior.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+/******************************************************************************************/
+
 
 instance ITAR_REVIVED_LAW(C_Item)
 {

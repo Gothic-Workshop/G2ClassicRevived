@@ -64,7 +64,7 @@ PROTOTYPE C_MUSICTHEME_THREAT		(C_MUSICTHEME)
 
 PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 {
-	file				= "nw_daystd.sgt";
+	file				= "nw_dayfgt.sgt";
 	transType			= TRANSITION_TYPE_FILL;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -12;
@@ -284,9 +284,9 @@ INSTANCE DEF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
 INSTANCE DEF_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
 INSTANCE DEF_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 												
-INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
+INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "adw_day_std.sgt";		};
 INSTANCE DEF_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
-INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
+INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXX  DEFAULT_OLDWORLD [OWD_]  XXXXXXXXXXXX
@@ -423,8 +423,6 @@ INSTANCE XAR_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "xt_daystd.sgt";		};
 //--------------------------------- OLD WORLD -----------------------------------------------------
 //--------------------------------- OLD WORLD -----------------------------------------------------
 
-/*
-
 // ################################################################################################
 // ###############                                                          #######################
 // ###############           C A M P S                                      #######################
@@ -543,183 +541,7 @@ INSTANCE PSI_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "psi_day_fgt.sgt";
 INSTANCE PSI_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "psi_ngt_std.sgt";					};
 INSTANCE PSI_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "psi_ngt_std.sgt";					};
 INSTANCE PSI_Ngt_Fgt	(C_MUSICTHEME_DEF)	{	file			= "psi_day_fgt.sgt";					};
-												
 
-// ################################################################################################
-// ###############                                                          #######################
-// ###############           O U T S I D E W O R L D   + S P E C I A L      #######################
-// ###############                                                          #######################
-// ################################################################################################
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O U T S I D E W O R L D  [OW_]   XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
-// Obsolete! DEF_ will be used instead.
-
-INSTANCE OW_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE OW_Day_Thr		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE OW_Day_Fgt		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-                                                                
-INSTANCE OW_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE OW_Ngt_Thr		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE OW_Ngt_Fgt		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  S T A R T P O I N T  [STA_]      XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE STA_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-                                                            
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
-// XXXXXXXX  B E A C H   [BEA_]               XXXX             
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX          
-                                                            
-INSTANCE BEA_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE BEA_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  B A N D I T S     [BAN_]         XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE BAN_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-//INSTANCE BAN_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  C A M P (klein)   [CAM_]         XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE CAM_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_day_std.sgt";					};
-//INSTANCE CAM_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  C A S T E L L   [CAS_]           XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE CAS_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_day_thr.sgt";						};
-INSTANCE CAS_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  D E M O N - T O W E R   [DT_]    XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE DT_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_day_thr.sgt";						};
-INSTANCE DT_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  F R E E M I N E C A M P   [FC_]  XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE FC_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-INSTANCE FC_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  F O C U S - P L A C E   [FOC_]   XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE FOC_day_Std	(C_MUSICTHEME_DEF)	{	file			= "FOC_day_std.sgt";					};
-INSTANCE FOC_day_Thr	(C_MUSICTHEME_DEF)	{	file			= "FOC_day_std.sgt";					};
-INSTANCE FOC_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "FOC_day_std.sgt";					};
-INSTANCE FOC_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "FOC_day_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O R C G R A V E Y A R D [OGR_]   XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// Eingang in der Oberwelt
-
-INSTANCE OGR_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";					};
-INSTANCE OGR_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O R C L O C A T I O N 1 [OL1_]   XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// Burgruine an Felswand, mit Fokus
-
-INSTANCE OL1_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-INSTANCE OL1_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O L D M I N E - E N T R [OME_]   XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// Burgruine an Felswand, mit Fokus
-
-INSTANCE OME_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_day_thr.sgt";					};
-INSTANCE OME_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O R C C I T Y  [ORC_]    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE ORC_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "orc_day_std.sgt";						
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-											
-INSTANCE ORC_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "orc_day_std.sgt";						
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE ORC_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE ORC_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "orc_day_std.sgt";					};
-INSTANCE ORC_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "orc_day_std.sgt";					};
-INSTANCE ORC_Ngt_Fgt	(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O R E B A R O N S  [OR_]   XXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE OR_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-INSTANCE OR_Day_Thr		(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-INSTANCE OR_Day_Fgt		(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						};
-
-INSTANCE OR_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-INSTANCE OR_Ngt_Thr		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-INSTANCE OR_Ngt_Fgt		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  P I R A T E - D U N G E   [FC_]  XXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE PDN_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE PDN_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  P I R A T E   B A Y   [PIR_]   XXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE PIR_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ban_day_std.sgt";					};
-//INSTANCE PIR_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  S T O N E H E N G E   [STO_]   XXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE STO_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";					};
-INSTANCE STO_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  T R O L L A R E A N A   [TA_]  XXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE TA_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE TA_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  T O W E R D U N G E O N [TD_]  XXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE TD_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE TD_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";						};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  T E M P E L R U I N E  [TRU_]  XXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE TRU_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ow_day_std.sgt";						};
-INSTANCE TRU_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
 
 // ################################################################################################
 // ###############                                                          #######################
@@ -788,4 +610,19 @@ INSTANCE OGY_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_fgt.sgt";					};
 
 INSTANCE OGY_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
 
-*/
+												
+
+// ################################################################################################
+// ###############                                                          #######################
+// ###############                       S P E C I A L                      #######################
+// ###############                                                          #######################
+// ################################################################################################
+
+// "BEHIND THE SKULL"
+
+INSTANCE TH_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
+INSTANCE TH_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
+INSTANCE TH_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "TH_day_fgt.sgt";					};
+
+INSTANCE TH_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
+

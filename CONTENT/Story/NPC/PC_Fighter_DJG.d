@@ -45,8 +45,14 @@ INSTANCE PC_Fighter_DJG (Npc_Default)
 
 FUNC VOID Rtn_PreStart_704 ()
 {	
-	TA_Stand_ArmsCrossed				(08,00,23,00,"OW_DJG_STARTCAMP_01");
-    TA_Stand_ArmsCrossed				(23,00,08,00,"OW_DJG_STARTCAMP_01");
+	TA_Stand_ArmsCrossed				(08,00,23,00,"OW_PATH_DJG_002");
+    TA_Stand_ArmsCrossed				(23,00,08,00,"OW_PATH_DJG_002");
+};
+
+FUNC VOID Rtn_StartPass_704()
+{
+	TA_Stand_ArmsCrossed						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_02");
+    TA_Stand_ArmsCrossed						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_02");
 };
 
 FUNC VOID Rtn_Start_704 ()
