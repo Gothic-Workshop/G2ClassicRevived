@@ -3382,6 +3382,23 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  
 	//****************************************************************************************
 
+	// Second Pass
+ 		Wld_InsertNpc 	(Molerat, 			"NW_FARM3_VALLEY_000");
+ 		Wld_InsertNpc 	(Molerat, 			"NW_FARM3_VALLEY_000");
+
+ 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_WALL");
+ 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_WALL");
+ 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
+ 		Wld_InsertNpc 	(Snapper, 			"NW_FARM3_VALLEY_002_HILL");
+
+ 		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
+ 		Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_VALLEY_005_TREE");
+
+ 		Wld_InsertNpc 	(Gobbo_Green, 		"NW_FARM3_VALLEY_011");
+ 		Wld_InsertNpc 	(Gobbo_Green, 		"NW_FARM3_VALLEY_011");
+
+ 		Wld_InsertNpc 	(Wolf, 				"NW_FARM3_VALLEY_015_MOVEMENT");
+ 		Wld_InsertNpc 	(Wolf, 				"NW_FARM3_VALLEY_015_MOVEMENT");
 };
 
 	FUNC VOID INIT_SUB_NewWorld_Part_GreatPeasant_01()

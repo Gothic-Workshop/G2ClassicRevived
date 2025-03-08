@@ -11,10 +11,10 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] =		300;
 	attribute[ATR_DEXTERITY] =		300;
-	attribute[ATR_MANA_MAX] =		800;
-	attribute[ATR_MANA] =			800;
-	attribute[ATR_HITPOINTS_MAX] =	800;
-	attribute[ATR_HITPOINTS] =		800;
+	attribute[ATR_MANA_MAX] =		1000;
+	attribute[ATR_MANA] =			1000;
+	attribute[ATR_HITPOINTS_MAX] =	1000;
+	attribute[ATR_HITPOINTS] =		1000;
 	
 	exp				= (500*((level+1)/2)*(level+1));
 	exp_next		= (500*((level+2)/2)*(level+1));
