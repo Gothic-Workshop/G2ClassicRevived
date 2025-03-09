@@ -42,7 +42,7 @@ INSTANCE jingleLearnTalent(C_MUSICJINGLE_DEF) {	name	    = "E-Positive 1";	trans
 PROTOTYPE C_MUSICTHEME_STANDARD		(C_MUSICTHEME)
 {
 	file				= "nw_dayfgt.sgt";
-	transType			= TRANSITION_TYPE_BREAK;
+	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -8;
 	ReverbTime			= 9000;
@@ -54,7 +54,7 @@ PROTOTYPE C_MUSICTHEME_STANDARD		(C_MUSICTHEME)
 PROTOTYPE C_MUSICTHEME_THREAT		(C_MUSICTHEME)
 {
 	file				= "nw_daythr.sgt";
-	transType			= TRANSITION_TYPE_FILL;
+	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -8;
 	ReverbTime			= 9000;
@@ -65,7 +65,7 @@ PROTOTYPE C_MUSICTHEME_THREAT		(C_MUSICTHEME)
 PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 {
 	file				= "nw_dayfgt.sgt";
-	transType			= TRANSITION_TYPE_FILL;
+	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -12;
 	ReverbTime			= 9000;
@@ -83,7 +83,7 @@ PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 {
 	file				= "gamestart.sgt";
-	transType			= TRANSITION_TYPE_NONE;
+	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
 	ReverbTime			= 8500;
@@ -92,7 +92,7 @@ INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 {
 	file				= "gamestart.sgt";
-	transType			= TRANSITION_TYPE_NONE;
+	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
 	ReverbTime			= 8500;
@@ -284,9 +284,9 @@ INSTANCE DEF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
 INSTANCE DEF_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
 INSTANCE DEF_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 												
-INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "adw_day_std.sgt";		};
+INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
 INSTANCE DEF_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
-INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
+INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXX  DEFAULT_OLDWORLD [OWD_]  XXXXXXXXXXXX
