@@ -13,8 +13,8 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 
 		CreateInvItems   (slf, ItSc_Sleep,	  	1); 
 		CreateInvItems   (slf, ItMi_Sulfur,   	2);
-		CreateInvItems   (slf, ItPo_Mana_01,  	2);
-		CreateInvItems   (slf, ItPo_Health_01,	3);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,  	2);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,	3);
 		CreateInvItems   (slf, ItMi_Pitch,	1);
 
 		CreateInvItems   (slf, ItSc_Light,	5);
@@ -38,9 +38,9 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Quartz, 	3);
 		CreateInvItems   (slf, ItMi_Pitch,	1);
 
-		CreateInvItems   (slf, ItPo_Health_01,  7);
-		CreateInvItems   (slf, ItPo_Health_02,  2);
-		CreateInvItems   (slf, ItPo_Mana_01,	7);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,  7);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  2);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	7);
 		CreateInvItems   (slf, ItSc_InstantFireball, 5);
 		CreateInvItems   (slf, ItSc_SumWolf, 5);
 		CreateInvItems   (slf, ItSc_Windfist,4);
@@ -64,9 +64,9 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Coal, 	3);
 		CreateInvItems   (slf, ItMi_Pitch,	1);
 
-		CreateInvItems   (slf, ItPo_Health_02,  9);
-		CreateInvItems   (slf, ItPo_Health_03,  6);
-		CreateInvItems   (slf, ItPo_Mana_01,	25);//Joly:hab ich schon verdoppelt nach version 1.26e
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  9);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  6);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	25);//Joly:hab ich schon verdoppelt nach version 1.26e
 
 		CreateInvItems   (slf, ItSc_MediumHeal,	5);
 		
@@ -95,10 +95,10 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Aquamarine, 	2);
 
 
-		CreateInvItems   (slf, ItPo_Health_02,  15);
-		CreateInvItems   (slf, ItPo_Health_03,  10);
-		CreateInvItems   (slf, ItPo_Mana_01,	25);
-		CreateInvItems   (slf, ItPo_Mana_02,	25);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  15);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  10);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	25);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	25);
 
 		
 		CreateInvItems   (slf, ItSc_SumGol, 4);
@@ -131,10 +131,10 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_DarkPearl, 	1);
 		CreateInvItems   (slf, ItMi_HolyWater, 	1);
 
-		CreateInvItems   (slf, ItPo_Health_02,  20);
-		CreateInvItems   (slf, ItPo_Health_03,  15);
-		CreateInvItems   (slf, ItPo_Mana_01,	50);
-		CreateInvItems   (slf, ItPo_Mana_02,	50);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  20);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  15);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	50);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	50);
 
 		
 		CreateInvItems   (slf, ItSc_IceWave, 4);

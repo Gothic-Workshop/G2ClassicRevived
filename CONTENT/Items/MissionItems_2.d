@@ -659,7 +659,7 @@ func void UseGilbertLetter ()
 
 INSTANCE ItRi_Tengron(C_Item)
 {
-	name 					=	NAME_Ring;
+	name 					=	NAME_ADDON_TengronsRing;
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -676,7 +676,7 @@ INSTANCE ItRi_Tengron(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= NAME_ADDON_TengronsRing;
+	description				= name;
 	
 	TEXT[2]					= NAME_Bonus_HP;
 	COUNT[2]				= Ri_Hp;

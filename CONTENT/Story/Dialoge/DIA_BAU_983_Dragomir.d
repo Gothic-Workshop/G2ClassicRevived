@@ -67,38 +67,9 @@ FUNC VOID DIA_Dragomir_OutHere_Info()
 	AI_Output (other,self ,"DIA_Dragomir_OutHere_15_00"); //What are you doing out here?
 	AI_Output (self ,other,"DIA_Dragomir_OutHere_12_01"); //Well, the tavern is too expensive for me, that's why I settled here.
 	AI_Output (self ,other,"DIA_Dragomir_OutHere_12_02"); //The previous inhabitants don't seem to need it any more.
-};		 		
-
-// ***********************************************************
-// 							OutHere
-// ***********************************************************
-INSTANCE DIA_Dragomir_Settlers   (C_INFO)
-{
-	npc         = BAU_983_Dragomir;
-	nr          = 2;
-	condition   = DIA_Dragomir_Settlers_Condition;
-	information = DIA_Dragomir_Settlers_Info;
-	permanent   = FALSE;
-	description = "Who used to live in this camp?";
-};
-FUNC INT DIA_Dragomir_Settlers_Condition()
-{
-	if (Npc_KnowsInfo (other,DIA_Dragomir_OutHere))
-	{ 
-		return TRUE;
-	};		
-};
-FUNC VOID DIA_Dragomir_Settlers_Info()
-{
 	AI_Output (other,self ,"DIA_Dragomir_Settlers_15_00"); //Who used to live in this camp?
 	AI_Output (self ,other,"DIA_Dragomir_Settlers_12_01"); //No idea, probably some hunters. I suppose it got too dangerous for them out here.
-
-	if(theHunterRiddle_mis == LOG_RUNNING)
-	{
-		B_LogEntry			(theHunterRiddle_log, "The hunters had a camp near the tavern 'Dead Harpy', maybe I could find some clues here?");
-	};
 };
-
 
 // ***********************************************************
 // 							Dangerous
@@ -134,6 +105,7 @@ FUNC VOID DIA_Dragomir_Dangerous_Info()
 	Log_SetTopicStatus(TOPIC_DragomirsArmbrust, LOG_RUNNING);
 	B_LogEntry (TOPIC_DragomirsArmbrust,"Dragomir lost his crossbow at a strange stone circle in the high northern mountains."); 
 
+	Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_ITEM_DRAGOMIRARMBRUST"); 
 	MIS_DragomirsArmbrust = LOG_RUNNING;
 };
 
@@ -205,6 +177,13 @@ FUNC VOID DIA_Dragomir_Learn_Info()
 	if (other.attribute[ATR_DEXTERITY] < 30)
 	{
 		AI_Output (self ,other,"DIA_Dragomir_Learn_12_01"); //Before I teach you anything, you'll have to improve your dexterity.
+	}
+	else if (MIS_DragomirsArmbrust == LOG_SUCCESS)
+	{
+		AI_Output (self ,other,"DIA_Dragomir_Learn_Here_12_01"); //Good, as far as I'm concerned we can begin immediately.
+		
+		Dragomir_TeachPlayer = TRUE;
+		Info_ClearChoices (DIA_Dragomir_Learn);
 	}
 	else
 	{

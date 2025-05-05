@@ -505,34 +505,6 @@ func void DIA_Talbin_KAP4_WASNEUES_Info ()
 {
 	AI_Output			(other, self, "DIA_Talbin_KAP4_WASNEUES_15_00"); //Have you seen anyone come by here?
 	AI_Output			(self, other, "DIA_Talbin_KAP4_WASNEUES_07_01"); //Yes. There's been some mighty funny fellows running around here lately! They strut about in spiffed-up armor and act all important.
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info WaswolltenDJG
-///////////////////////////////////////////////////////////////////////
-instance DIA_Talbin_KAP4_WASWOLLTENDJG		(C_INFO)
-{
-	npc		 = 	VLK_4130_Talbin;
-	nr          = 14;
-	condition	 = 	DIA_Talbin_KAP4_WASWOLLTENDJG_Condition;
-	information	 = 	DIA_Talbin_KAP4_WASWOLLTENDJG_Info;
-
-	description	 = 	"What did those 'funny fellows' want here?";
-};
-
-func int DIA_Talbin_KAP4_WASWOLLTENDJG_Condition ()
-{
-if 	(Npc_KnowsInfo(other, DIA_Talbin_KAP4_WASNEUES))
-	&& (Kapitel >= 4)
-	&& (Talbin_FollowsThroughPass == 0)
-	&& (Talbin_Runs == FALSE)
-	{
-			return TRUE;
-	};
-};
-
-func void DIA_Talbin_KAP4_WASWOLLTENDJG_Info ()
-{
 	AI_Output			(other, self, "DIA_Talbin_KAP4_WASWOLLTENDJG_15_00"); //What did those 'funny fellows' want here?
 	AI_Output			(self, other, "DIA_Talbin_KAP4_WASWOLLTENDJG_07_01"); //They asked me about provisions and equipment. Man, I've barely got enough for myself!
 	AI_Output			(self, other, "DIA_Talbin_KAP4_WASWOLLTENDJG_07_02"); //They were going on about killing dragons and such. Lord knows where those boys came from, but they didn't look particularly trustworthy!
@@ -542,8 +514,6 @@ func void DIA_Talbin_KAP4_WASWOLLTENDJG_Info ()
 		B_LogEntry (TOPIC_Dragonhunter,"Some Dragon Hunters stopped by Talbin the Hunter's place."); 
 	};
 };
-
-
 
 ///////////////////////////////////////////////////////////////////////
 //	Info woEngrom
@@ -680,7 +650,7 @@ func void DIA_Talbin_WOHIN_Info ()
 {
 	AI_Output			(other, self, "DIA_Talbin_WOHIN_15_00"); //Where will you go?
 
-		if (Npc_GetDistToWP(self,"START")<1000) 
+		if (Npc_GetDistToWP(self,"OW_PATH_1_17")<1000) 
 		{
 			AI_Output			(self, other, "DIA_Talbin_WOHIN_07_01"); //Take me across the pass. Please!!
 		
@@ -694,8 +664,6 @@ func void DIA_Talbin_WOHIN_Info ()
 		AI_Output			(self, other, "DIA_Talbin_WOHIN_07_02"); //I must get out of here, across the pass. Out of my way!
 		AI_StopProcessInfos (self);
 		};
-
-
 };
 func void DIA_Talbin_WOHIN_ok ()
 {
@@ -705,14 +673,12 @@ func void DIA_Talbin_WOHIN_ok ()
 	Npc_ExchangeRoutine	(self,"IntoPass");
 	Talbin_FollowsThroughPass = LOG_RUNNING;
 	self.flags = NPC_FLAG_IMMORTAL;	//Joly: eh nur so lange, bis der SC durch den Levelchange geht!
-
 };
 
 func void DIA_Talbin_WOHIN_durch ()
 {
 	AI_Output			(other, self, "DIA_Talbin_WOHIN_durch_15_00"); //Just go ahead and cross.
 	AI_Output			(self, other, "DIA_Talbin_WOHIN_durch_07_01"); //It's so dark in there. No way am I going in there by myself.
-
 };
 
 func void DIA_Talbin_WOHIN_ ()

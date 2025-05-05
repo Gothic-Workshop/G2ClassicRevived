@@ -768,9 +768,9 @@ const string NAME_ADDON_BETEN						= "Pray";
 
 const string NAME_ADDON_PRAYIDOL_GIVENOTHING			= "I will pray and offer nothing.";
 const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT1			= "I will pray and offer 1 life energy.";
-const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT2			= "I will pray and offer 2 life energy.";
-const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT3			= "I will pray and offer 3 life energy.";
-const string NAME_ADDON_PRAYIDOL_GIVEMANA				= "I will pray and offer 1 mana.";
+const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT2			= "I will pray and offer 5 life energy.";
+const string NAME_ADDON_PRAYIDOL_GIVEHITPOINT3			= "I will pray and offer 10 life energy.";
+const string NAME_ADDON_PRAYIDOL_GIVEMANA				= "I will pray and offer 10 mana.";
 							
 
 // *************************************************************
@@ -933,7 +933,7 @@ const string PRINT_NOTHINGTOGET03			= "Nothing to plunder ...";
 
 const string PRINT_BlessSTR					= "Innos grants you: Strength + ";
 const string PRINT_BlessDEX					= "Innos grants you: Dexterity + ";
-const string PRINT_BlessMANA_MAX			= "Innos grants you: Mana + ";
+//const string PRINT_BlessMANA_MAX			= "Innos grants you: Mana + ";
 const string PRINT_BlessHitpoints_MAX		= "Innos grants you: Hitpoints + ";
 const string PRINT_BlessMANA				= "You are filled with mental clarity.";
 const string PRINT_BlessHitpoints			= "Innos hears you and heals you.";

@@ -19,10 +19,10 @@ FUNC VOID B_GiveTradeInv_Milten_DI (var C_NPC slf)
 
 		CreateInvItems (slf, ItPl_Strength_Herb_01, 1); 
 
-		CreateInvItems   (slf, ItPo_Health_02,  25);
-		CreateInvItems   (slf, ItPo_Health_03,  20);
-		CreateInvItems   (slf, ItPo_Mana_01,	40);
-		CreateInvItems   (slf, ItPo_Mana_02,	20);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  25);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  20);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	40);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	20);
 
 		CreateInvItems   (slf, ItMi_RuneBlank,	1);
 

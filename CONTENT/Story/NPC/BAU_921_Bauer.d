@@ -39,7 +39,7 @@ instance BAU_921_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_921 ()
 {	
-	TA_Smalltalk		(07,55,19,55,"NW_BIGFARM_STABLE_OUT_01"); 
+	TA_Pick_FP			(07,55,19,55,"NW_FARM4_FIELD_05"); 
 	TA_Smalltalk		(19,55,21,55,"NW_BIGFARM_PATH_04_1");	//Joly: Partnerwechsel
-    TA_Smalltalk		(21,55,07,55,"NW_BIGFARM_STABLE_01");
+    TA_Smalltalk		(21,55,07,55,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_02");
 };

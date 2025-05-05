@@ -40,7 +40,6 @@ instance BAU_906_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_906 ()
 {	
-	//raus
+	TA_Pick_FP				(08,00,20,00,"NW_FARM4_FIELD_05");
+	TA_Smoke_Joint			(20,00,08,00,"NW_BIGFARM_STABLE_OUT_01");
 };
-
-

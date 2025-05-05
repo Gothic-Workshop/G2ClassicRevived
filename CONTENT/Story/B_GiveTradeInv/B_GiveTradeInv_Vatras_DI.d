@@ -13,7 +13,7 @@ FUNC VOID B_GiveTradeInv_Vatras_DI (var C_NPC slf)
 		CreateInvItems 		(self, ItSc_TrfScavenger,1);	
 		CreateInvItems 		(self, ItSc_IceWave,2);
 
-		CreateInvItems   (slf, ItPo_Health_03,  30);
-		CreateInvItems   (slf, ItPo_Mana_02,	30);
-		CreateInvItems   (slf, ItPo_Mana_03,	20);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  30);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	30);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_03,	20);
 };

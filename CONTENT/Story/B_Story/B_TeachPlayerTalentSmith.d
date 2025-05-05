@@ -57,7 +57,8 @@ func int B_TeachPlayerTalentSmith (var C_NPC slf, var C_NPC oth, var int waffe)
 	B_LogEntry (TOPIC_TalentSmith,"I can now forge a fine longsword."); };
 	if (waffe == WEAPON_1H_Harad_03)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Harad_03] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentSmith,"I can now forge even a ruby blade."); };
-	if (waffe == WEAPON_1H_Harad_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] 	= TRUE;	B_LogEntry (TOPIC_TalentSmith,"Harad hat mir beigebracht, 'El Bastardo' zu schmieden - eine der besten Einhandwaffen, die es gibt!"); };
+	if (waffe == WEAPON_1H_Harad_04)		{	PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] 	= TRUE;	
+	B_LogEntry (TOPIC_TalentSmith,"Harad hat mir beigebracht, 'El Bastardo' zu schmieden - eine der besten Einhandwaffen, die es gibt!"); };
 	
 	PrintScreen			(PRINT_LearnSmith, -1, -1, FONT_Screen, 2);
 	

@@ -26,21 +26,21 @@ func int ZS_HealSelf_Loop ()
 	// LOOP FUNC
 	
 	// ------ Großen Heiltrank nehmen ------
-	if (Npc_HasItems(self,ItPo_Health_03) >0)			
+	if (Npc_HasItems(self,ITPO_REVIVED_HEALTH_03) >0)			
 	{
-		AI_UseItem (self, ItPo_Health_03);
+		AI_UseItem (self, ITPO_REVIVED_HEALTH_03);
 		return LOOP_CONTINUE;
 	}
 	// ------ Mittleren Heiltrank nehmen ------
-	else if (Npc_HasItems(self,ItPo_Health_02) >0)
+	else if (Npc_HasItems(self,ITPO_REVIVED_HEALTH_02) >0)
 	{
-		AI_UseItem (self, ItPo_Health_02);
+		AI_UseItem (self, ITPO_REVIVED_HEALTH_02);
 		return LOOP_CONTINUE;
 	}
 	// ------ Kleinen Heiltrnak nehmen ------
-	else if (Npc_HasItems (self,ItPo_Health_01) >0)
+	else if (Npc_HasItems (self,ITPO_REVIVED_HEALTH_01) >0)
 	{
-		AI_UseItem		(self,	ItPo_Health_01);
+		AI_UseItem		(self,	ITPO_REVIVED_HEALTH_01);
 		return LOOP_CONTINUE;
 	}
 	// ------ zwar verletzt, aber kein Trank am Start ------

@@ -42,6 +42,3 @@ FUNC VOID Rtn_Start_915 ()
 	TA_Pick_FP 			(06,00,22,00,"NW_BIGFARM_FIELD_01");
     TA_Sleep			(22,00,06,00,"NW_BIGFARM_STABLE_SLEEP_03");
 };
-
-
-

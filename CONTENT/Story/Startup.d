@@ -1345,7 +1345,7 @@ func void STARTUP_SURFACE ()
 
 	// Stonehenge area
 	Wld_InsertNpc		(Lurker,"OW_LAKE_NC_LURKER_SPAWN01");
-	Wld_InsertNpc		(Lurker,"OW_LAKE_NC_LURKER_SPAWN01");
+	Wld_InsertNpc		(Lurker,"OW_LAKE_NC_LURKER_SPAWN02");
 
 	Wld_InsertNpc		(Lurker,"OW_LAKE_NC_BLOODFLY_SPAWN01");
 	Wld_InsertNpc		(Lurker,"OW_LAKE_NC_BLOODFLY_SPAWN01");
@@ -1438,10 +1438,13 @@ func void STARTUP_SURFACE ()
 
 	Wld_InsertNpc		(DragonSnapper,"LOCATION_16_IN");
 
-	Wld_InsertNpc   (OrcShaman_Hosh_Pak	,"FP_CAMPFIRE_HOSHPAK_01");
-	Wld_InsertNpc   (OrcShaman_Sit	,"FP_CAMPFIRE_HOSHPAK_02");	
-	Wld_InsertNpc   (OrcWarrior_Rest,"FP_ROAM_HOSHPAK_05");	
-	Wld_InsertNpc   (OrcWarrior_Rest,"FP_ROAM_HOSHPAK_03");
+	Wld_InsertNpc   (OrcShaman_Hosh_Pak	,"OW_HOSHPAK_CAMPFIRE");
+	Wld_InsertNpc   (OrcShaman_Sit	,"OW_HOSHPAK_CAMPFIRE");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_10");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_03");	
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_08");
+	Wld_InsertNpc   (OrcWarrior_Roam,"OW_HOSHPAK_06");
+	Wld_InsertNpc   (OrcElite_Sit,"OW_HOSHPAK_TENT");	
 
 
 	// Orc Territory (Near Diego)
@@ -1502,6 +1505,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPER_CAVE_DM");
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPER_CAVE_DM");
 
+	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
+	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
 
@@ -2029,6 +2034,14 @@ func void STARTUP_SURFACE ()
 		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_06", 1);
 		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_06", 1);
 		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_06", 0);
+
+		// Demon Tower
+		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_11", 1);
+		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_11", 1);
+		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_11", 0);
+		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_12", 1);
+		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_12", 1);
+		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_12", 0);
 	
 	// ------ TRIGGERS ------
 		// Castle
@@ -2039,6 +2052,9 @@ func void STARTUP_SURFACE ()
 
 		// Templeruin
 		Wld_SendTrigger("EVT_OW_FOKUS_GATE_MOVER_01");
+
+		// Exchange Place
+		Wld_SendTrigger("EVT_OW_STARTLOCKOUT_MOVER");
 
 		B_ENTER_OLDWORLD();
 	};
@@ -2088,7 +2104,7 @@ FUNC VOID STARTUP_OLDWORLD ()
 	STARTUP_DEMONTOWER();
 	STARTUP_SURFACE();
 
-	Wld_SetTime	(00,00);//Joly:nachtstart wegen video
+	//Wld_SetTime	(00,00);//Joly:nachtstart wegen video
 };
 
 
@@ -2301,11 +2317,11 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertItem			(ItMi_Moleratlubric_MIS,"FP_ITEM_SHIP_07");	//zur Sicherheit für Vinos Brennerei!
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_01"); 
 	Wld_InsertItem			(ItRi_Prot_Point_02,"FP_ITEM_SHIP_02");
-	Wld_InsertItem			(ItPo_Mana_03,"FP_ITEM_SHIP_03");
+	Wld_InsertItem			(ITPO_REVIVED_BOOST_DEX_01,"FP_ITEM_SHIP_03");
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_04");
-	Wld_InsertItem			(ItPo_Speed,"FP_ITEM_SHIP_05");
-	Wld_InsertItem			(ItPo_Perm_STR,"FP_ITEM_SHIP_06");
-	Wld_InsertItem			(ItPo_Health_03,"FP_ITEM_SHIP_08");
+	Wld_InsertItem			(ITPO_REVIVED_SPEED_03,"FP_ITEM_SHIP_05");
+	Wld_InsertItem			(ITPO_REVIVED_BOOST_STR_02,"FP_ITEM_SHIP_06");
+	Wld_InsertItem			(ITPO_REVIVED_HEALTH_03,"FP_ITEM_SHIP_08");
 	Wld_InsertItem			(ItMiSwordraw,"FP_ITEM_SHIP_09");
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_10");
 	Wld_InsertItem			(ItSe_GoldPocket50,"FP_ITEM_SHIP_11");
@@ -2313,7 +2329,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertItem			(ItSc_SumWolf,"FP_ITEM_SHIP_12");
 	Wld_InsertItem			(ItSc_Sleep,"FP_ITEM_SHIP_12");
 	Wld_InsertItem			(ItMi_nugget,"FP_ITEM_SHIP_13");
-	Wld_InsertItem			(ItPo_Mana_02,"FP_ITEM_SHIP_14");
+	Wld_InsertItem			(ITPO_REVIVED_MANA_02,"FP_ITEM_SHIP_14");
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_15");
 
 	//---PaladinCamp am Hafen---------
@@ -2722,7 +2738,12 @@ func void INIT_NewWorld_Part_Farm_01()
 // ------ Xardas -------
 func void STARTUP_NewWorld_Part_Xardas_01()
 {
-	Wld_InsertItem (ItBE_Addon_STR_5, "FP_SPAWN_X_GUERTEL");
+	Wld_InsertItem (ItBE_Addon_STR_5, "FP_ITEM_XARDAS_03");
+
+	Wld_InsertItem (ITMI_REVIVED_FIGURINE, "FP_ITEM_XARDAS_02");
+	Wld_InsertItem (ITFO_REVIVED_BREAD, "FP_ITEM_XARDAS_04");
+	Wld_InsertItem (ITPO_REVIVED_BOOST_DEX_01, "FP_ITEM_XARDAS_05");
+	Wld_InsertItem (ITFO_REVIVED_PLANTSOUP, "FP_ITEM_XARDAS_06");
 
 	////////////////////////////////////////////////////////////////////////////
 	//----------------------- Spielstart Gothic2------------------------------//
@@ -2775,6 +2796,9 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 
 	Wld_InsertNpc		(YGiant_Bug, 		"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02"); 
 	Wld_InsertNpc		(YGiant_Bug, 		"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02");
+
+	Wld_InsertNpc		(YGiant_Bug, 		"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02_IN_002"); 
+	Wld_InsertNpc		(YGiant_Bug, 		"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02_IN_002");
 
 	//---im Tal---
 	Wld_InsertNpc		(YWolf, 			"NW_XARDAS_VALLEY_03"); 
@@ -2871,7 +2895,8 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	{
 		Wld_AssignRoomToGuild ("kloster01",GIL_PUBLIC); //Kirche
 		Wld_AssignRoomToGuild ("kloster02",GIL_PUBLIC); //Bücherei
-		Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
+		//Wld_AssignRoomToGuild ("kloster03",GIL_PUBLIC); //Kapelle 
+		Wld_AssignRoomToGuild ("kloster06",GIL_PUBLIC); //Kapelle
 		
 		Wld_AssignRoomToGuild ("kloster11",GIL_PUBLIC); //Der Keller
 		Wld_AssignRoomToGuild ("kloster13",GIL_PUBLIC); //Weinkelterei
@@ -2881,10 +2906,24 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 		Wld_AssignRoomToGuild ("kloster10",GIL_NOV); //Schlafraum Novizen
 		Wld_AssignRoomToGuild ("kloster12",GIL_NOV); //Schlafraum Novizen
 		
-		Wld_AssignRoomToGuild ("kloster06",GIL_KDF); //Schlafraum Magier
+		//Wld_AssignRoomToGuild ("kloster06",GIL_KDF); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster07",GIL_KDF); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster08",GIL_KDF); //Schlafraum Magier
 		Wld_AssignRoomToGuild ("kloster09",GIL_KDF); //Schlafraum Magier
+
+
+		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_01", 1);
+		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_01", 1);
+		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_01", 0);
+		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_02", 1);
+		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_02", 1);
+		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_02", 0);
+		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_03", 1);
+		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_03", 1);
+		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_03", 0);
+		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_04", 1);
+		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_04", 1);
+		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_04", 0);
 	};
 
 FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
@@ -2921,8 +2960,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	
 	
 	//BIGMILL Felder
-	Wld_InsertNpc (Lurker, "NW_BIGMILL_FIELD_MONSTER_03");
-	Wld_InsertNpc (Lurker, "NW_BIGMILL_FIELD_MONSTER_03");
+	Wld_InsertNpc (Lurker, "NW_BIGMILL_FIELD_LURKER");
+	Wld_InsertNpc (Lurker, "NW_BIGMILL_FIELD_LURKER");
 	
 	Wld_InsertNpc (Giant_Bug, "NW_BIGMILL_FIELD_MONSTER_01");
 	Wld_InsertNpc (Giant_Bug, "NW_BIGMILL_FIELD_MONSTER_01");
@@ -2945,10 +2984,10 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_903_Bodo, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_904_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_905_Bauer, 	"BIGFARM");
-	//Wld_InsertNpc 	(BAU_906_Bauer, 	"BIGFARM");
+	Wld_InsertNpc 	(BAU_906_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_907_Wasili, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_908_Hodges, 	"BIGFARM");
-	//Wld_InsertNpc 	(BAU_909_Bauer, 	"BIGFARM");
+	Wld_InsertNpc 	(BAU_909_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_910_Maria, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_911_Elena, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_912_Pepe, 		"BIGFARM");
@@ -3107,7 +3146,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 //Jägerlager
 
 	Wld_InsertNpc 	(BAU_983_Dragomir,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5"); 
-	Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_NW_ITEM_TROLL_06"); 
+	//Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_NW_ITEM_TROLL_06"); 
 	Wld_InsertNpc 	(BAU_984_Niclas,	"NW_TAVERNE_TROLLAREA_MONSTER_02_01"); 
 	
 
@@ -3435,7 +3474,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 		Wld_AssignRoomToGuild ("grpturm01",			GIL_PUBLIC); //hinterer Turm
 		Wld_AssignRoomToGuild ("grpwaldhuette02",	GIL_PUBLIC); //Banditenhütte
 	
-	
+
+	// Second Pass	
 		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_01", 1);
 		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_01", 1);
 		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_01", 0);
@@ -3451,6 +3491,41 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_05", 1);
 		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_05", 1);
 		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_05", 0);
+	
+	// Landowner
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_01", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_01", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_01", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_02", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_02", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_02", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_03", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_03", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_03", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_04", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_04", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_04", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_05", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_05", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_05", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_06", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_06", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_06", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_07", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_07", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_07", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_08", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_08", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_08", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_09", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_09", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_09", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_10", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_10", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_10", 0);
+		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_11", 1);
+		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_11", 1);
+		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_11", 0);
 	};
 
 FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
@@ -3618,8 +3693,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Bloodfly, "NW_CITY_TO_LIGHTHOUSE_03");
 	
 	// ------- Küste ------
-	Wld_InsertNpc 	(Waran, "FP_ROAM_SHIPWRECK_04"); 
-	Wld_InsertNpc 	(Waran, "FP_ROAM_SHIPWRECK_01"); 
+	Wld_InsertNpc 	(Waran, "NW_CITY_BEACH_013"); 
+	Wld_InsertNpc 	(Waran, "NW_CITY_BEACH_013"); 
 	
 	//ADDON Wld_InsertNpc	(Waran,"FP_ROAM_FISHERCOAST_01");	
 	//ADDON Wld_InsertNpc	(Waran,"FP_ROAM_FISHERCOAST_02");
@@ -3680,9 +3755,25 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 
 	// ----------- Lighthouse ------------
 	
-	Wld_InsertNpc 	(BDT_1021_LeuchtturmBandit, "LIGHTHOUSE"); 
-	Wld_InsertNpc 	(BDT_1022_LeuchtturmBandit, "NW_LIGHTHOUSE_IN_01");
-	Wld_InsertNpc 	(BDT_1023_LeuchtturmBandit, "NW_CITY_TO_LIGHTHOUSE_16");
+	Wld_InsertNpc 	(BDT_1021_LeuchtturmBandit, "NW_LIGHTHOUSE_OUT_01"); 
+	Wld_InsertNpc 	(BDT_1022_LeuchtturmBandit, "NW_LIGHTHOUSE_TO_BEACH_BANDITS");
+	Wld_InsertNpc 	(BDT_1023_LeuchtturmBandit, "NW_LIGHTHOUSE_TO_BEACH_BANDITS");
+	Wld_InsertNpc 	(BDT_1019_LeuchtturmBandit, "NW_LIGHTHOUSE_TO_BEACH_BANDITS_B");
+	Wld_InsertNpc 	(BDT_1018_LeuchtturmBandit, "NW_LIGHTHOUSE_TO_BEACH_BANDITS_B");
+
+	Wld_InsertNpc 	(Scavenger, "NW_LIGHTHOUSE_TO_BEACH_005");
+	Wld_InsertNpc 	(Scavenger, "NW_LIGHTHOUSE_TO_BEACH_005");
+	Wld_InsertNpc 	(Scavenger_Demon, "NW_LIGHTHOUSE_TO_BEACH_005");
+	Wld_InsertNpc 	(Scavenger_Demon, "NW_LIGHTHOUSE_TO_BEACH_005");
+
+	Wld_InsertNpc 	(Giant_Rat, "NW_LIGHTHOUSE_TO_BEACH_011");
+	Wld_InsertNpc 	(Giant_Rat, "NW_LIGHTHOUSE_TO_BEACH_012");
+
+	Wld_InsertNpc 	(Waran, "NW_LIGHTHOUSE_TO_BEACH_019");
+	Wld_InsertNpc 	(Waran, "NW_LIGHTHOUSE_TO_BEACH_019");
+
+	Wld_InsertNpc 	(Gobbo_Green, "NW_LIGHTHOUSE_CLIFF_001");
+	Wld_InsertNpc 	(Gobbo_Black, "NW_LIGHTHOUSE_CLIFF_001");
 	
 	// ----------- SMForestCave ------------
 	Wld_InsertNpc 	(Giant_Rat, "NW_CITY_SMFOREST_05");
@@ -3786,8 +3877,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Keiler, "NW_FOREST_PATH_79");
 	Wld_InsertNpc 	(Keiler, "NW_FOREST_PATH_79");
 
-	Wld_InsertNpc 	(Keiler, "NW_FOREST_PATH_80_1");
-	Wld_InsertNpc 	(Keiler, "NW_FOREST_PATH_80_1");
+	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1");
+	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1");
 
 	Wld_InsertNpc 	(Waran, "NW_FOREST_PATH_82");
 	Wld_InsertNpc 	(Waran, "NW_FOREST_PATH_82");
@@ -3807,11 +3898,15 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
  	Wld_InsertNpc 	(Bloodfly, "NW_FOREST_PATH_35_01_MONSTER");
  	Wld_InsertNpc 	(Bloodfly, "NW_FOREST_PATH_35_01_MONSTER");
 
- 	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_80_1_MOVEMENT8_M");
- 	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_80_1_MOVEMENT8_M");
+ 	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT8_M");
+ 	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT8_M");
 
- 	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_80_1_MOVEMENTF");
- 	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_80_1_MOVEMENTF");
+ 	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1_MOVEMENTF");
+ 	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1_MOVEMENTF");
+
+ 	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_66_M2");
+ 	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_66_M2");
+ 	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_66_M2");
 
  	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_31_NAVIGATION3");
  	Wld_InsertNpc 	(Giant_Bug, "NW_FOREST_PATH_31_NAVIGATION3");
@@ -3821,8 +3916,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 
   	Wld_InsertNpc 	(Giant_Rat, "NW_FOREST_PATH_31_NAVIGATION11");
 
-  	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT6");
-  	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT6");
+  	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1_MOVEMENT6");
+  	Wld_InsertNpc 	(Blattcrawler, "NW_FOREST_PATH_80_1_MOVEMENT6");
 
   	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT15");
   	Wld_InsertNpc 	(Snapper, "NW_FOREST_PATH_80_1_MOVEMENT15");
@@ -3975,8 +4070,8 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	
 	Wld_InsertNpc 	(Giant_Bug, 	"FP_ROAM_NW_TROLLAREA_RUINS_01");
 	
-	Wld_InsertNpc 	(Snapper, 	"FP_ROAM_NW_TROLLAREA_RUINS_05");
-	Wld_InsertNpc 	(Snapper, 	"FP_ROAM_NW_TROLLAREA_RUINS_09");
+	Wld_InsertNpc 	(DragonSnapper, 	"FP_ROAM_NW_TROLLAREA_RUINS_05");
+	Wld_InsertNpc 	(DragonSnapper, 	"FP_ROAM_NW_TROLLAREA_RUINS_09");
 	
 	Wld_InsertNpc 	(Giant_Rat, 	"FP_ROAM_NW_TROLLAREA_RUINS_14");
 	Wld_InsertNpc 	(Giant_Rat, 	"FP_ROAM_NW_TROLLAREA_RUINS_15");
@@ -3986,9 +4081,9 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc 	(Bloodfly, 	"FP_ROAM_NW_TROLLAREA_RUINS_22");
 	Wld_InsertNpc 	(Bloodfly, 	"FP_ROAM_NW_TROLLAREA_RUINS_24");
 	
-	Wld_InsertNpc 	(Waran, 	"FP_ROAM_NW_TROLLAREA_RUINS_28");
-	Wld_InsertNpc 	(Waran, 	"FP_ROAM_NW_TROLLAREA_RUINS_29");
-	Wld_InsertNpc 	(Waran, 	"FP_ROAM_NW_TROLLAREA_RUINS_30");
+	Wld_InsertNpc 	(Blattcrawler, 	"FP_ROAM_NW_TROLLAREA_RUINS_28");
+	Wld_InsertNpc 	(Blattcrawler, 	"FP_ROAM_NW_TROLLAREA_RUINS_29");
+	Wld_InsertNpc 	(Blattcrawler, 	"FP_ROAM_NW_TROLLAREA_RUINS_30");
 	
 	Wld_InsertNpc 	(Shadowbeast, 	"FP_ROAM_NW_TROLLAREA_RUINS_10");
 
@@ -4086,11 +4181,14 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc 	(Waran, 		"NW_TROLLAREA_RUINS_32");
 	Wld_InsertNpc 	(Waran, 		"NW_TROLLAREA_RUINS_32");
 
-	Wld_InsertNpc 	(Lurker, 		"NW_TROLLAREA_PATH_71_MONSTER");
+	Wld_InsertNpc 	(Blattcrawler, 		"NW_TROLLAREA_PATH_71_MONSTER");
+	Wld_InsertNpc 	(Blattcrawler, 		"NW_TROLLAREA_PATH_71_MONSTER");
 
-	Wld_InsertNpc 	(Scavenger, 		"NW_TROLLAREA_PATH_71_MONSTER2");
-	Wld_InsertNpc 	(Scavenger, 		"NW_TROLLAREA_PATH_71_MONSTER2");
-	Wld_InsertNpc 	(Scavenger, 		"NW_TROLLAREA_PATH_71_MONSTER2");
+	Wld_InsertNpc 	(Blattcrawler, 		"NW_TROLLAREA_PATH_71_MONSTER2");
+	Wld_InsertNpc 	(Blattcrawler, 		"NW_TROLLAREA_PATH_71_MONSTER2");
+
+	Wld_InsertNpc 	(Lurker, 		"NW_TROLLAREA_PATH_72");
+	Wld_InsertNpc 	(Lurker, 		"NW_TROLLAREA_PATH_72");
 
 	Wld_InsertNpc 	(Scavenger, 		"NW_TROLLAREA_PATH_15_MONSTER");
 	Wld_InsertNpc 	(Scavenger, 		"NW_TROLLAREA_PATH_15_MONSTER");
@@ -4120,7 +4218,7 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	Wld_InsertNpc 	(Molerat, 		"NW_TROLLAREA_RITUALFOREST_06_MONSTER");
 	Wld_InsertNpc 	(Molerat, 		"NW_TROLLAREA_RITUALFOREST_06_MONSTER");
 
-	Wld_InsertNpc 	(Lurker, 		"NW_TROLLAREA_PATH_08");
+	Wld_InsertNpc 	(Wisp, 		"NW_TROLLAREA_PATH_08");
 
 	Wld_InsertNpc 	(Giant_Rat, 	"NW_TROLLAREA_BRIGDE_05");
 	Wld_InsertNpc 	(Giant_Rat, 	"NW_TROLLAREA_BRIGDE_05");
@@ -4182,7 +4280,8 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
-	PlayVideo ("INTRO.BIK");
+	PlayVideo("DRAGONATTACK.BIK");
+	PlayVideo("INTRO.BIK");
 	//PlayVideo ("Addon_Title.BIK");
 	
 	//-----Addon Talent Goldhacken---------
@@ -4234,4 +4333,67 @@ FUNC VOID INIT_NewWorld()
 		B_Kapitelwechsel (5, NEWWORLD_ZEN);
 		B_Chapter5_OneTime = TRUE;
 	};
+};
+
+
+
+
+func void STARTUP_AbandonedMine()
+{
+	PlayerPassedAbandonedMine = TRUE;
+
+		Wld_InsertNpc(Minecrawler,"AM_022");
+		Wld_InsertNpc(Minecrawler,"AM_023");
+		Wld_InsertNpc(Minecrawler,"AM_024");
+
+		Wld_InsertNpc(Minecrawler,"AM_048");
+		Wld_InsertNpc(Minecrawler,"AM_050");
+		Wld_InsertNpc(Minecrawler,"AM_051");
+
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_00_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_01_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_02_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_03_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_03_04");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_04_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_05_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_05_04");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_06_01");
+	Wld_InsertNpc(Meatbug,"FP_ROAM_MEATBUG_AM_06_03");
+
+	Wld_InsertItem(ItMi_Nugget,"FP_AM_ITEM_04");
+	Wld_InsertItem(ItAt_CrawlerPlate,"FP_AM_ITEM_05");
+	Wld_InsertItem(ItAt_CrawlerMandibles,"FP_AM_ITEM_06");
+};
+
+func void INIT_SUB_AbandonedMine()
+{
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_01",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_02",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_03",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_04",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_05",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_06",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_07",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_08",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_09",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_10",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_11",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_12",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_13",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_14",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_15",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_16",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_17",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_18",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_19",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_20",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_21",1);
+	Wld_SetObjectRoutine(0,0,"AM_FIREPLACE_HIGH_22",1);
+};
+
+func void INIT_AbandonedMine()
+{
+	INIT_SUB_AbandonedMine();
+	B_Enter_AbandonedMine();
 };

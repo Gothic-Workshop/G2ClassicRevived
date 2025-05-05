@@ -15,8 +15,8 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 
 		CreateInvItems   (slf, ItSc_Sleep,	  	1); //Joly: Für Mission benötigt!!!!
 		CreateInvItems   (slf, ItMi_Sulfur,   	2);
-		CreateInvItems   (slf, ItPo_Mana_01,  	2);
-		CreateInvItems   (slf, ItPo_Health_01,	3);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,  	2);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,	3);
 
 		CreateInvItems   (slf, ItSc_Light,	5);
 		CreateInvItems   (slf, ItSc_Firebolt, 5);
@@ -53,9 +53,9 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Pitch, 	    1);
 		
 		CreateInvItems   (slf, ItSc_Icebolt, 5);
-		CreateInvItems   (slf, ItPo_Health_01,  7);
-		CreateInvItems   (slf, ItPo_Health_02,  2);
-		CreateInvItems   (slf, ItPo_Mana_01,	14);//Joly:hab ich schon verdoppelt nach version 1.26e
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,  7);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  2);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	14);//Joly:hab ich schon verdoppelt nach version 1.26e
 
 		CreateInvItems   (slf, ItSc_InstantFireball, 5);
 	
@@ -89,9 +89,9 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems 	 (slf, ItAt_WaranFiretongue, 	1);	
 		CreateInvItems   (slf, ItMi_Pitch, 	    1);
 
-		CreateInvItems   (slf, ItPo_Health_02,  9);
-		CreateInvItems   (slf, ItPo_Health_03,  6);
-		CreateInvItems   (slf, ItPo_Mana_01,	30);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  9);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  6);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	30);
 
 		CreateInvItems   (slf, ItSc_MediumHeal,	5);
 		CreateInvItems   (slf, ItSc_Firestorm, 4);
@@ -133,10 +133,10 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Pitch, 	    1);
 
 
-		CreateInvItems   (slf, ItPo_Health_02,  15);
-		CreateInvItems   (slf, ItPo_Health_03,  10);
-		CreateInvItems   (slf, ItPo_Mana_01,	30);
-		CreateInvItems   (slf, ItPo_Mana_02,	30);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  15);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  10);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	30);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	30);
 
 		CreateInvItems   (slf, ItSc_LightningFlash,	5);
 		CreateInvItems   (slf, ItSc_SumGol, 4);
@@ -164,10 +164,10 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_DarkPearl, 	1);
 		CreateInvItems   (slf, ItMi_HolyWater, 	3);
 
-		CreateInvItems   (slf, ItPo_Health_02,  20);
-		CreateInvItems   (slf, ItPo_Health_03,  15);
-		CreateInvItems   (slf, ItPo_Mana_01,	50);
-		CreateInvItems   (slf, ItPo_Mana_02,	40);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  20);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  15);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	50);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	40);
 
 		CreateInvItems   (slf, ItSc_Pyrokinesis,	5);
 		CreateInvItems   (slf, ItSc_IceWave, 4);

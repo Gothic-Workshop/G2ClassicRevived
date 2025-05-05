@@ -44,10 +44,10 @@ instance VLK_418_Gritta (Npc_Default)
 
 FUNC VOID Rtn_Start_418 ()
 {	
-	TA_Stand_Sweeping		(08,00,12,00,"NW_CITY_MERCHANT_HUT_01_IN");
-	TA_Cook_Stove			(12,00,14,00,"NW_CITY_BED_BOSPER_B");
-	TA_Stand_Sweeping		(14,00,18,00,"NW_CITY_MERCHANT_HUT_01_IN");
-	TA_Cook_Stove			(18,00,20,00,"NW_CITY_BED_BOSPER_B");
-	TA_Read_Bookstand 		(20,00,23,00,"NW_CITY_MERCHANT_HUT_01_IN");
-    TA_Sleep				(23,00,08,00,"NW_CITY_BED_BOSPER_B");
+	TA_Stand_Sweeping		(08,00,12,00,"NW_CITY_MERCHANT_SHOP01_IN_02");
+	TA_Cook_Stove			(12,00,14,00,"NW_CITY_MERCHANT_SHOP01_IN_03_B");
+	TA_Stand_Sweeping		(14,00,18,00,"NW_CITY_MERCHANT_SHOP01_IN_02");
+	TA_Cook_Stove			(18,00,20,00,"NW_CITY_MERCHANT_SHOP01_IN_03_B");
+	TA_Read_Bookstand 		(20,00,23,00,"NW_CITY_MERCHANT_SHOP01_IN_02");
+    TA_Sleep				(23,00,08,00,"NW_CITY_BED_GRITTA");
 };

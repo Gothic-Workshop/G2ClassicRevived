@@ -1,3 +1,6 @@
+const int	REV_Value_Joint				= 60;
+
+
 //****************************************************************************
 //			SWAMPWEED
 //****************************************************************************
@@ -9,15 +12,15 @@ INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	REV_Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_GREENNOVICE;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_GREENNOVICE()
 {
@@ -25,7 +28,9 @@ func void Use_ITMI_REVIVED_JOINT_GREENNOVICE()
 	{
 		if (FirstJoint_01 == FALSE)
 		{
-			B_GivePlayerXP (5);
+			B_GivePlayerXP (15);
+			Npc_ChangeAttribute(self, ATR_MANA_MAX, 2);
+			PrintScreen	("Mana +2", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 			FirstJoint_01 = TRUE;
 		};
 		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
@@ -40,15 +45,15 @@ INSTANCE ITMI_REVIVED_JOINT_NORTHDARK (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	REV_Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_NORTHDARK;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_NORTHDARK()
 {
@@ -57,6 +62,8 @@ func void Use_ITMI_REVIVED_JOINT_NORTHDARK()
 		if (FirstJoint_02 == FALSE)
 		{
 			B_GivePlayerXP (15);
+			Npc_ChangeAttribute(self, ATR_MANA_MAX, 2);
+			PrintScreen	("Mana +2", -1,-1,"FONT_OLD_20_WHITE.TGA",3);
 			FirstJoint_02 = TRUE;
 		};
 		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
@@ -71,15 +78,15 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	REV_Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_DREAMCALL;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_DREAMCALL()
 {
@@ -104,9 +111,9 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3*10;
+	value 				=	REV_Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -115,7 +122,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 	TEXT[0]		    	= "Swampweed with a stronger";
 	TEXT[1]             = "effect than normal weed.";
 	//TEXT[3]             = "For the Guru Baal-Tyon!";
-	TEXT[5]				= NAME_Value;					COUNT[4]	= Value_Joint3*10;
+	TEXT[5]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
 };
 
 func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
@@ -137,7 +144,7 @@ func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
 {
-	name 				=	"Regular Joint";
+	name 				=	"Joint";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -152,10 +159,7 @@ INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
 	description			= 	name;
 	
 	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;
-	
-	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
-	
+	COUNT[5]			= 	value;	
 };
 func void Use_ITMI_REVIVED_JOINT_REGULAR()
 {
@@ -178,9 +182,9 @@ INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_REGULAR.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -197,7 +201,7 @@ func void Use_ITMI_REVIVED_JOINT_APPLE()
 			B_GivePlayerXP (25);
 			FirstJoint_APPLE = TRUE;
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect ("SLOW_TIME_SHORT", self, self, 0, 0, 0, FALSE);
 	};
 };
 
@@ -209,9 +213,9 @@ INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_REGULAR.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -228,7 +232,7 @@ func void Use_ITMI_REVIVED_JOINT_APPLEDOUBLE()
 			B_GivePlayerXP (50);
 			FirstJoint_APPLEDOUBLE = TRUE;
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect ("SLOW_TIME_SHORT", self, self, 0, 0, 0, FALSE);
 	};
 };
 
@@ -240,9 +244,9 @@ INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_REGULAR.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -256,10 +260,10 @@ func void Use_ITMI_REVIVED_JOINT_HONEY()
 	{
 		if (FirstJoint_HONEY == FALSE)
 		{
-			B_GivePlayerXP (25);
+			B_GivePlayerXP (30);
 			FirstJoint_HONEY = TRUE;
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect ("SLOW_TIME_SHORT", self, self, 0, 0, 0, FALSE);
 	};
 };
 
@@ -271,9 +275,9 @@ INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Joint3;
+	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint_01.3ds";
+	visual 				=	"ITMI_JOINT_REGULAR.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -290,7 +294,7 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 			B_GivePlayerXP (25);
 			FirstJoint_MUSHROOM = TRUE;
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect ("SLOW_TIME_SHORT", self, self, 0, 0, 0, FALSE);
 	};
 };
 
@@ -298,125 +302,127 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 //			COMPONENTS
 //****************************************************************************
 
-const int	Value_Schwefel			=	20;
-const int	Value_Quecksilber		=	25;
-const int	Value_Salz				=	10;
-const int	Value_Öl				=	15;
-const int	Value_Moleratfett		=	5;
-const int	Value_Alcohol			=	18;
+const int	REV_Value_Salt					=	50;
+const int	REV_Value_Sugar					=	60;
+const int	REV_Value_SyrianOil				=	50;
+const int	REV_Value_StoneOil				=	50;
+const int	REV_Value_PureAlcohol			=	80;
+const int	REV_Value_Vinegar				=	80;
+const int	REV_Value_MagicWater			=	200;
 
-INSTANCE ITMI_REVIVED_ALCHEMY_SULFUR (C_Item)
-{
-	name 				=	"Sulfur";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	Value_Schwefel;
-
-	visual 				=	"ItMi_Alchemy_Sulphur_01.3DS";
-	material 			=	MAT_GLAS;
-
-	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
-};
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_ALCHEMY_MERCURY (C_Item)
-{
-	name 				=	"Mercury";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	Value_Quecksilber;
-
-	visual 				=	"ItMi_Alchemy_Quicksilver_01.3DS";
-	material 			=	MAT_GLAS;
-
-	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
-};
-/******************************************************************************************/
-INSTANCE ITMI_REVIVED_ALCHEMY_SALT (C_Item)
+INSTANCE ITMI_REVIVED_SALT (C_Item)
 {
 	name 				=	"Salt";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Salz;
+	value 				=	REV_Value_Salt;
 
-	visual 				=	"ItMi_Alchemy_Salt_01.3DS";
+	visual 				=	"REV_ITMI_SALT.3DS";
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Salt;
 };
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_ALCHEMY_SYRIANOIL (C_Item)
+INSTANCE ITMI_REVIVED_SUGAR (C_Item)
+{
+	name 				=	"Sugar";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Sugar;
+
+	visual 				=	"REV_ITMI_SUGAR.3DS";
+	material 			=	MAT_GLAS;
+
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Sugar;
+};
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
 {
 	name 				=	"Syrianic Oil";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Öl;
+	value 				=	REV_Value_SyrianOil;
 
-	visual 				=	"ItMi_Alchemy_Syrianoil_01.3DS";
+	visual 				=	"REV_ITMI_SYRIANOIL.3DS";
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_SyrianOil;
 };
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_ALCHEMY_MOLERATGREASE (C_Item)
+INSTANCE ITMI_REVIVED_STONEOIL (C_Item)
 {
-	name 				=	"Molerat Grease";
+	name 				=	"Stone Oil";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Moleratfett;
+	value 				=	REV_Value_StoneOil;
 
-	visual 				=	"ItMi_Alchemy_Moleratlubric_01.3DS";
+	visual 				=	"REV_ITMI_STONEOIL.3DS";
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_StoneOil;
 };
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_ALCHEMY_ALCOHOL (C_Item)
+INSTANCE ITMI_REVIVED_PUREALCOHOL (C_Item)
 {
 	name 				=	"Pure Alcohol";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Alcohol;
+	value 				=	REV_Value_PureAlcohol;
 
-	visual 				=	"ItMi_Alchemy_Alcohol_01.3DS";
+	visual 				=	"REV_ITMI_ALCOHOL.3DS";
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_PureAlcohol;
 };
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_MAGIC_WATER (C_Item)
+INSTANCE ITMI_REVIVED_VINEGAR (C_Item)
 {
-	name 					=	"Magic Water";
+	name 				=	"Vinegar";
 
-	mainflag 				=	ITEM_KAT_FOOD;
-	flags 					=	ITEM_MISSION;
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
 
-	value 					=	10;
+	value 				=	REV_Value_Vinegar;
 
-	visual 					=	"ITMI_FLASKHEALTH.3ds";
-	material 				=	MAT_GLAS;
-	scemeName				=	"POTION";
+	visual 				=	"REV_ITMI_ALCOHOL.3DS";
+	material 			=	MAT_GLAS;
 
-	description				= name;
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Vinegar;
+};
+/******************************************************************************************/
+INSTANCE ITMI_REVIVED_MAGICWATER (C_Item)
+{
+	name 				=	"Magic Water";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_MagicWater;
+
+	visual 				=	"REV_ITMI_MAGICWATER.3ds";
+	material 			=	MAT_GLAS;
+
+	description			= name;
+
+	description			= name;
+	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_MagicWater;
 };
 
 //****************************************************************************
@@ -490,7 +496,7 @@ INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 
 	value 				=	Value_Nugget;
 
-	visual 				=	"ItMi_Nugget_NoMagic.3ds";
+	visual 				=	"REV_ItMi_Nugget_NoMagic.3ds";
 	material 			=	MAT_STONE;
 
 	//wear				= 	WEAR_EFFECT;

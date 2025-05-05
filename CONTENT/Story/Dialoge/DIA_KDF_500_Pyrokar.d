@@ -1392,8 +1392,8 @@ func void DIA_Pyrokar_AUGEGEHEILT_Info ()
 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_04"); //As of today, you are a member of the Council and will represent our order in the world. You are now one of the high Fire Magicians.
 			AI_Output			(self, other, "DIA_Pyrokar_AUGEGEHEILT_11_05"); //Wear the high robe with dignity and bring the order honor and wealth, my brother.
 		
-			CreateInvItem	(hero, ITAR_KDF_H);
-			AI_EquipArmor	(hero, ITAR_KDF_H);	
+			CreateInvItem	(hero, ITAR_REVIVED_KDF_M);
+			AI_EquipArmor	(hero, ITAR_REVIVED_KDF_M);	
 			
 			heroGIL_KDF2 = TRUE;
 		};	

@@ -70,3 +70,19 @@ INSTANCE ITAT_REVIVED_CRAWLEREGG(C_Item)
 	TEXT[3]					=	"a normal minecrawler's mandibles.";
 	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
 };
+
+INSTANCE ITAT_REVIVED_SCAVENGEREGG(C_Item)
+{	
+	name 					=	"Scavenger's Egg";
+	
+	mainflag 				=	ITEM_KAT_NONE;
+	flags 					=	ITEM_MISSION|ITEM_MULTI;	
+
+	value 					=	40;
+
+	visual 					=	"ItAt_Crawlerqueen.3ds"; 
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	TEXT[5]					=	NAME_Value;					COUNT[5]	= value;
+};

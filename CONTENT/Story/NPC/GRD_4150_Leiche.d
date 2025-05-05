@@ -20,8 +20,8 @@ instance GRD_4150_Leiche (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
-	
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ITMW_REVIVED_GUARDHAND); 
 	
 	// ------ Inventory ------
 	
@@ -29,7 +29,7 @@ instance GRD_4150_Leiche (Npc_Default)
 		
 	// ------ visuals ------																			
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal01, BodyTex_B, ITAR_REVIVED_PAL_L_03);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal01, BodyTex_B, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

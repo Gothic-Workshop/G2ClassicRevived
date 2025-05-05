@@ -4,7 +4,7 @@
 
 INSTANCE ITSC_REVIVED_TELEPORT_CITY (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportSeaport;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -31,7 +31,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_CITY (C_Item)
 
 INSTANCE ITSC_REVIVED_TELEPORT_MONASTERY (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportMonastery;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -59,7 +59,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_MONASTERY (C_Item)
 
 INSTANCE ITSC_REVIVED_TELEPORT_BIGFARM (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportFarm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -86,7 +86,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_BIGFARM (C_Item)
 
 INSTANCE ITSC_REVIVED_TELEPORT_XARDAS (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportXardas;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -113,7 +113,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_XARDAS (C_Item)
 
 INSTANCE ITSC_REVIVED_TELEPORT_TAVERNE (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportTaverne;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -139,7 +139,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_TAVERNE (C_Item)
 
 INSTANCE ITSC_REVIVED_TELEPORT_ORC (C_Item) 
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TeleportOrc;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -169,7 +169,7 @@ INSTANCE ITSC_REVIVED_TELEPORT_ORC (C_Item)
 
 INSTANCE ITSC_REVIVED_TRANSFORM_MEATBUG (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfMeatbug;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;

@@ -22,7 +22,7 @@ instance Mil_309_Stadtwache (Npc_Default)
 	B_CreateAmbientInv 	(self);
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Weak_Herek, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Weak_Herek, BodyTex_N, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

@@ -84,11 +84,11 @@ func void DIA_Milten_DI_TRADE_Info ()
 	B_GiveTradeInv (self);
 	//Joly: Mc ManaHealth
 	//////////////////////////////////////////////////////////////////////////////////////
-	Npc_RemoveInvItems	(self, ItPo_Health_02, Npc_HasItems (self,ItPo_Health_02) );
-	CreateInvItems 	(self, ItPo_Health_02,15  );
+	Npc_RemoveInvItems	(self, ITPO_REVIVED_HEALTH_02, Npc_HasItems (self,ITPO_REVIVED_HEALTH_02) );
+	CreateInvItems 	(self, ITPO_REVIVED_HEALTH_02,15  );
 	
-	Npc_RemoveInvItems	(self, ItPo_Mana_02, Npc_HasItems (self,ItPo_Mana_02) );
-	CreateInvItems 	(self, ItPo_Mana_02, 15 );
+	Npc_RemoveInvItems	(self, ITPO_REVIVED_MANA_02, Npc_HasItems (self,ITPO_REVIVED_MANA_02) );
+	CreateInvItems 	(self, ITPO_REVIVED_MANA_02, 15 );
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	

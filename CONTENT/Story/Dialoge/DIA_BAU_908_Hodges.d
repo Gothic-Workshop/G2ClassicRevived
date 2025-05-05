@@ -92,15 +92,11 @@ func void DIA_Hodges_TellAboutFarm_Info ()
 	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_03"); //We farmers have had to bunk in the barn ever since.
 	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_04"); //(hastily) But it's all right with me, it's good that we have people who guard the farm.
 	
-	if (Npc_GetDistToWP (self, "NW_BIGFARM_SMITH_SHARP") < 500)
+	if (Npc_GetDistToWP (self, "NW_BIGFARM_PATH_04_1B") < 500)
 	{
 		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_05"); //The building here is the kitchen.
-	}
-	else
-	{
-		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_06"); //The kitchen is in the building with the smithy in front.
+		AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_07"); //Maybe you'll be lucky and Thekla will have something for you to eat.
 	};
-	AI_Output (self ,other,"DIA_Hodges_TellAboutFarm_03_07"); //Maybe you'll be lucky and Thekla will have something for you to eat.
 };
 
 // ************************************************************

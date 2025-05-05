@@ -21,7 +21,7 @@ instance PAL_299_Sergio (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self, ITKE_INNOS_MIS,1);//damit er das Tor öffnen kann
-	CreateInvItems (self, ItPo_Health_02,4);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02,4);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Erpresser, BodyTex_N, ITAR_REVIVED_PAL_M);		
@@ -40,8 +40,8 @@ instance PAL_299_Sergio (Npc_Default)
 
 FUNC VOID Rtn_Start_299 ()
 {
-	TA_Pray_Innos  	(08,00,23,00,"NW_MONASTERY_CHAPELL_02");
-    TA_Sleep	 	(23,00,08,00,"NW_MONASTERY_MAGE03_BED");	
+	TA_Pray_Innos  		(08,00,23,00,"NW_MONASTERY_CHAPELL_02");
+	TA_Pray_Innos		(23,00,08,00,"NW_MONASTERY_CHAPELL_02");	
 };
 FUNC VOID Rtn_WaitForPlayer_299 ()
 {

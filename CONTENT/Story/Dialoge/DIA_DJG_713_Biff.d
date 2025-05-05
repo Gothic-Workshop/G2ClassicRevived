@@ -677,17 +677,17 @@ func void DIA_Biff_HEILUNG_Info ()
 };
 func void DIA_Biff_HEILUNG_heiltrank ()
 {
-	if (B_GiveInvItems (other, self, ItPo_Health_03,1))
+	if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_03,1))
 	{
-	B_UseItem (self, ItPo_Health_03);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_03);
 	}
-	else if (B_GiveInvItems (other, self, ItPo_Health_02,1))
+	else if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_02,1))
 	{
-	B_UseItem (self, ItPo_Health_02);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_02);
 	}
-	else if (B_GiveInvItems (other, self, ItPo_Health_01,1))
+	else if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_01,1))
 	{
-	B_UseItem (self, ItPo_Health_01);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_01);
 	}
 	else
 	{
@@ -698,17 +698,17 @@ func void DIA_Biff_HEILUNG_heiltrank ()
 };
 func void DIA_Biff_HEILUNG_heiltrankLow ()
 {
-	if (B_GiveInvItems (other, self, ItPo_Health_01,1))
+	if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_01,1))
 	{
-	B_UseItem (self, ItPo_Health_01);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_01);
 	}
-	else if (B_GiveInvItems (other, self, ItPo_Health_02,1))
+	else if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_02,1))
 	{
-	B_UseItem (self, ItPo_Health_02);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_02);
 	}
-	else if (B_GiveInvItems (other, self, ItPo_Health_03,1))
+	else if (B_GiveInvItems (other, self, ITPO_REVIVED_HEALTH_03,1))
 	{
-	B_UseItem (self, ItPo_Health_03);
+	B_UseItem (self, ITPO_REVIVED_HEALTH_03);
 	}
 	else
 	{

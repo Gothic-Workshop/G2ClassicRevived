@@ -117,7 +117,7 @@ INSTANCE ItMi_BaltramPaket(C_Item)
 //****************************************************************************
 INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
 {
-	name 				=	"Package for Skip";
+	name 				=	"Package from Baltram";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -127,12 +127,23 @@ INSTANCE ItMi_Packet_Baltram4Skip_Addon (C_Item)
 	visual 				=	"ItMi_Packet.3ds";
 	
 	material 			=	 MAT_LEATHER;
+	scemename			=	"MAPSEALED";	
+	on_state[0]			=   Use_BaltramPackage;
 	
 	description			= 	name;
 	TEXT[2]				= 	"This heavy package";
-	TEXT[3]				=	"good things.";
-	TEXT[4]				=	"is meant for the pirate Skip";
-	
+	TEXT[3]				=	"of good things";
+	TEXT[4]				=	"was found with the pirates.";
+};
+
+FUNC VOID Use_BaltramPackage ()
+{
+		CreateInvItems (hero, ITFO_REVIVED_HAM, 4);
+		CreateInvItems (hero, ITFO_REVIVED_APPLE, 4);
+		CreateInvItems (hero, ITFO_REVIVED_PEAR, 6);
+		CreateInvItems (hero, ITFO_REVIVED_RICE, 4);
+		CreateInvItems (hero, ITFO_REVIVED_GRAPES_RED, 2);
+		Print (PRINT_GotFood);
 };
 /******************************************************************************************/
 INSTANCE ItMi_BromorsGeld_Addon (C_Item)

@@ -49,8 +49,9 @@ FUNC VOID Rtn_Start_4250 ()
 
 FUNC VOID Rtn_Kloster_4250 ()
 {
-	TA_Stand_ArmsCrossed 			(08,00,20,00,"NW_MONASTERY_PLACE_06");
-    TA_Sleep			 			(20,00,08,00,"NW_MONASTERY_NOVICE04_06");		
+	TA_Sit_Bench					(08,00,20,00,"NW_MONASTERY_CHURCH_BENCH_003");
+	TA_Stand_ArmsCrossed 			(20,00,22,00,"NW_MONASTERY_PLACE_06");
+    TA_Sleep			 			(22,00,08,00,"NW_MONASTERY_NOVICE04_06");		
 };
 FUNC VOID Rtn_RausAusKloster_4250 ()
 {

@@ -282,8 +282,9 @@ STORY\B_AssignAmbientInfos\B_AssignDementorTalk_*.d
 STORY\B_AssignAmbientInfos\B_AssignORC_AntiPaladinTalk.d
 STORY\B_AssignAmbientInfos\B_NpcObsessedByDMT.d
 
-STORY\B_Story\B_ENTER_OLDWORLD.d
 STORY\B_Story\B_ENTER_NEWWORLD.d
+STORY\B_Story\B_ENTER_OLDWORLD.d
+STORY\B_Story\B_ENTER_ABANDONEDMINE.d
 STORY\B_Story\B_KapitelWechsel.d
 STORY\B_Content\B_CaptainConditions.d
 STORY\B_Content\B_CaptainCallsAllOnBoard.d

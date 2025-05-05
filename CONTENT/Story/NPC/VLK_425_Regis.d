@@ -39,7 +39,7 @@ instance VLK_425_Regis (Npc_Default)
 };
 FUNC VOID Rtn_Start_425 ()
 {	
-	TA_Sit_Bench	(05,30,20,30,"NW_CITY_REGIS");
-	TA_Smalltalk	(20,30,00,30,"NW_CITY_MERCHANT_PATH_14_A");
+	TA_Sit_Bench	(05,30,19,55,"NW_CITY_REGIS");
+	TA_Smalltalk	(19,55,00,30,"NW_CITY_MERCHANT_PATH_14_A");
 	TA_Sit_Chair	(00,30,05,30,"NW_CITY_TAVERN_IN_04");
 };

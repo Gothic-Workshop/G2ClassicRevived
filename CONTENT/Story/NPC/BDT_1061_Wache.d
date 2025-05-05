@@ -25,7 +25,7 @@ instance BDT_1061_Wache (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart17, BodyTex_N, ITAR_REVIVED_STT_M_BDT);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart17, BodyTex_N, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, -1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

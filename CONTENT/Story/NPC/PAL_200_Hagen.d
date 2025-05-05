@@ -30,7 +30,7 @@ instance Pal_200_Hagen (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_PAL_H_02);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_PAL_S);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

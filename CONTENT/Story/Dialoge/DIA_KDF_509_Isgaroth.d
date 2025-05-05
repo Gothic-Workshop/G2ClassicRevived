@@ -267,8 +267,8 @@ FUNC VOID DIA_Isgaroth_Vatras_Info()
 		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_03"); //Good, you can tell Vatras that I have received the message.
 		AI_Output (self ,other,"DIA_Isgaroth_Vatras_01_04"); //Take these potions as a reward for your service, they will surely be of use to you.
 		
-		CreateInvItems (self, ItPo_Health_02,2);
-		B_GiveInvItems (self,other,ItPo_Health_02,2);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_02,2);
+		B_GiveInvItems (self,other,ITPO_REVIVED_HEALTH_02,2);
 		
 		B_GivePlayerXP ((XP_Ambient)*2);
 		

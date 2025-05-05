@@ -27,7 +27,7 @@ instance DJG_713_Biff_DI (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ItMw_2h_Sld_Axe); //Joly: Axt!!!!! Biff keine andere Waffe geben!!!!!!!!! DOCH DEFAULT MÄSSIG- die instanz gibts nicht mehr 
-	CreateInvItems (self, ItPo_Health_02, 6);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

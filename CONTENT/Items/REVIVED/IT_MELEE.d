@@ -2144,7 +2144,7 @@ instance ITMW_REVIVED_URIZIEL_1H (C_Item)
 	range    			=  	180;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
-	visual 				=	"urizielerzklinge.3DS";
+	visual 				=	"ITMI_SLEEPERSWORD_01.3DS";
 
 	description			= 	name;
 	TEXT[0]				=	"The magic gem has been removed from the";
@@ -2176,7 +2176,7 @@ INSTANCE ITMW_REVIVED_URIZIEL_1H_CHARGED (C_Item)
 	range    			=  	180;		
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	30;
-	visual 				=	"urizielerzklinge.3DS";
+	visual 				=	"REV_Uriziel.3DS";
 	effect				= "SPELLFX_FIRESWORD";
 
 
@@ -2265,7 +2265,7 @@ INSTANCE ITMW_REVIVED_DEMONSLAYER_1H (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Blessed_1H_3;
-	visual 				=	"Konzeptklingeonehanded.3DS";
+	visual 				=	"REV_Crimson_Sword_1h.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
@@ -2290,7 +2290,7 @@ INSTANCE ITMW_REVIVED_DEMONSLAYER_2H (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	Condition_Blessed_2H_3;
-	visual 				=	"Konzeptklingetwohanded.3DS";
+	visual 				=	"REV_Crimson_Sword_2h.3DS";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;

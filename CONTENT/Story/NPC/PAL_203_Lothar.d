@@ -21,7 +21,7 @@ instance Pal_203_Lothar (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_P_NormalBart_Nefarius, BodyTex_P, ITAR_REVIVED_PAL_H_02);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_P_NormalBart_Nefarius, BodyTex_P, ITAR_REVIVED_PAL_S);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

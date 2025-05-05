@@ -125,7 +125,7 @@ FUNC VOID DIA_Neoras_Rezept_Info()
 		
 		MIS_NeorasRezept = LOG_SUCCESS;
 		B_GivePlayerXP (XP_NeorasRezept);
-		B_GiveInvItems (self, other, ItPo_Mana_02,1);
+		B_GiveInvItems (self, other, ITPO_REVIVED_MANA_02,1);
 	}
 	else
 	{
@@ -539,7 +539,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Speed ()
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Speed_01_03"); //Good, thanks. I shall give you a potion now, then you won't have to wait so long.
 	
-		B_GiveInvItems (self,other,ItPo_Speed,1);
+		B_GiveInvItems (self,other,ITPO_REVIVED_SPEED_02,1);
 	}
 	else
 	{
@@ -570,7 +570,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Mana ()
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Mana_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	
-		B_GiveInvItems (self,other,ItPo_Mana_02,1);
+		B_GiveInvItems (self,other,ITPO_REVIVED_MANA_02,1);
 	}
 	else
 	{
@@ -601,7 +601,7 @@ FUNC VOID DIA_Neoras_BrewForMe_Health ()
 		
 		AI_Output (self ,other,"DIA_Neoras_BrewForMe_Health_01_03"); //Good. I shall give you a potion now, then you won't have to wait so long.
 	
-		B_GiveInvItems (self,other,ItPo_Health_02,1);
+		B_GiveInvItems (self,other,ITPO_REVIVED_HEALTH_02,1);
 	}
 	else
 	{
@@ -783,8 +783,8 @@ func void DIA_Neoras_FOUNDDRAGONEGG_heil ()
 	AI_Output			(other, self, "DIA_Neoras_FOUNDDRAGONEGG_heil_15_00"); //What about a few healing potions?
 	AI_Output			(self, other, "DIA_Neoras_FOUNDDRAGONEGG_heil_01_01"); //A good choice. Here, take them. May they be of use to you.
 
-	CreateInvItems 		(self, ItPo_Health_03, 3);									
-	B_GiveInvItems 		(self, other, ItPo_Health_03, 3);					
+	CreateInvItems 		(self, ITPO_REVIVED_HEALTH_03, 3);									
+	B_GiveInvItems 		(self, other, ITPO_REVIVED_HEALTH_03, 3);					
 	Info_ClearChoices	(DIA_Neoras_FOUNDDRAGONEGG);
 
 };

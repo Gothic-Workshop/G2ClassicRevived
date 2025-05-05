@@ -20,7 +20,8 @@ instance STRF_1152_Leiche (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ItMw_2H_Axe_L_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv (self);

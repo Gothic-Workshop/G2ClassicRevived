@@ -337,6 +337,70 @@ func void DIA_Baltram_HaveYourWarez_Info ()
 };
 
 
+///////////////////////////////////////////////////////////////////////
+//	Info Skip
+///////////////////////////////////////////////////////////////////////
+instance DIA_Addon_Baltram_Skip		(C_INFO)
+{
+	npc		 = 	VLK_410_Baltram;
+	nr		 = 	5;
+	condition	 = 	DIA_Addon_Baltram_Skip_Condition;
+	information	 = 	DIA_Addon_Baltram_Skip_Info;
+
+	description	 = 	"You're trading with pirates?";
+};
+
+func int DIA_Addon_Baltram_Skip_Condition ()
+{
+	if (Npc_HasItems (PIR_1400_Pirate_L, ItMi_BaltramPaket) == 0)
+	|| (Npc_HasItems (hero, ItMi_BaltramPaket) >= 1) 
+		{
+			return TRUE;
+		};
+};
+
+func void DIA_Addon_Baltram_Skip_Info ()
+{
+	AI_Output	(other, self, "DIA_Addon_Baltram_Skip_15_00"); //(casually) You're doing business with pirates?
+	AI_Output	(self, other, "DIA_Addon_Baltram_Skip_01_01"); //(feels caught) What? Who told you that?
+	AI_Output	(other, self, "DIA_Addon_Baltram_Skip_15_02"); //I talked to one of them. He seems to be waiting for you in his bay.
+	AI_Output	(self, other, "DIA_Addon_Baltram_Skip_01_03"); //What can you do? These are hard times. Everybody has to look after his own.
+	AI_Output (other, self, "DIA_Addon_Baltram_Skip_erwischen_15_00"); //Weren't you afraid of getting caught?
+	AI_Output (self, other, "DIA_Addon_Baltram_Skip_erwischen_01_01"); //That could happen. You found out, too, didn't you?
+	//AI_Output (self, other, "DIA_Addon_Baltram_Skip_erwischen_01_02"); //But you'll keep your mouth shut, right?
+	AI_Output (self, other, "DIA_Addon_Baltram_Skip_MIL_01_01"); //Hey, listen. I'll tell you all that I know and, in return, you won't rat on me, okay?
+
+
+	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
+	Info_AddChoice	(DIA_Addon_Baltram_Skip, "What is it you trade?", DIA_Addon_Baltram_Skip_was );
+	Info_AddChoice	(DIA_Addon_Baltram_Skip, "You will bear the consequences for this!", DIA_Addon_Baltram_Skip_MIL );
+};
+
+func void DIA_Addon_Baltram_Skip_MIL ()
+{
+	AI_Output (other, self, "DIA_Addon_Baltram_Skip_MIL_15_00"); //You will bear the consequences for this!
+	AI_Output (self ,other,"DIA_Baltram_WAREZ_01_02"); //Something had to happen one of these days!
+	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
+
+	BaltramRatOut = TRUE;
+};
+
+func void DIA_Addon_Baltram_Skip_was ()
+{
+	AI_Output			(other, self, "DIA_Addon_Baltram_Skip_was_15_00"); //(curtly) What is it you're trading?
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_was_01_01"); //I mostly supply them with food.
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_was_01_02"); //And for that, they give me the finest rum that is to be had in Khorinis.
+
+	AI_Output			(other, self, "DIA_Addon_Baltram_Skip_pirat_15_00"); //(curtly) What do you know about the pirates?
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_pirat_01_01"); //(hastily) They live in a remote part of the island of Khorinis.
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_pirat_01_02"); //It can only be reached with a cog or some other ship, as far as I know.
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_pirat_01_03"); //The citizens of Khorinis fear them. Quite rightly so, for they're nothing but a bunch of nasty cutthroats.
+	AI_Output			(self, other, "DIA_Addon_Baltram_Skip_pirat_01_04"); //Still, if you ask me, they're nowhere near as bad as the bandits.
+	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
+
+	BaltramPirateTrade = TRUE;
+};
+
 
 // ************************************************************
 // 			  				PICK POCKET

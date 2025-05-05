@@ -57,4 +57,29 @@ func void B_BlessAttribute (var C_NPC oth, var int attrib, var int points)
 		oth.attribute[ATR_MANA] = oth.attribute[ATR_MANA_MAX];
 		PrintScreen	(Print_BlessMana, -1, -1, FONT_SCREEN, 2);
 	};
+
+
+	if (attrib == NPC_TALENT_1H)
+	{
+		B_RaiseFightTalent (oth, NPC_TALENT_1H, 			points);
+		PrintScreen	(PRINT_PRAYADANOS_Bless1H, -1, -1, FONT_SCREEN, 2);
+	};
+
+	if (attrib == NPC_TALENT_2H)
+	{
+		B_RaiseFightTalent (oth, NPC_TALENT_2H, 			points);
+		PrintScreen	(PRINT_PRAYADANOS_Bless2H, -1, -1, FONT_SCREEN, 2);
+	};
+
+	if (attrib == NPC_TALENT_BOW)
+	{
+		B_RaiseFightTalent (oth, NPC_TALENT_BOW, 			points);
+		PrintScreen	(Print_PRAYADANOS_BlessBOW, -1, -1, FONT_SCREEN, 2);
+	};
+
+	if (attrib == NPC_TALENT_CROSSBOW)
+	{
+		B_RaiseFightTalent (oth, NPC_TALENT_CROSSBOW, 		points);
+		PrintScreen	(Print_PRAYADANOS_BlessCBOW, -1, -1, FONT_SCREEN, 2);
+	};
 };

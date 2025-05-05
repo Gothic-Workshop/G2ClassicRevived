@@ -87,7 +87,7 @@ instance DIA_Marduk_Gebetet		(C_INFO)
 func int DIA_Marduk_Gebetet_Condition ()
 {	
 	if (MIS_MardukBeten == LOG_RUNNING)
-	&& (Npc_KnowsInfo (other, PC_PrayShrine_Paladine))
+	&& (Npc_KnowsInfo (other, PC_PrayInnos_Paladine))
 	{
 		return TRUE;
 	};

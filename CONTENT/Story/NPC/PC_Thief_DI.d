@@ -34,7 +34,7 @@ INSTANCE PC_Thief_DI (Npc_Default)
 	B_CreateAmbientInv 	(self);
 			
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief",Face_L_Diego, BodyTex_L, ITAR_DIEGO);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief",Face_L_Diego, BodyTex_L, ITAR_REVIVED_STT_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 	

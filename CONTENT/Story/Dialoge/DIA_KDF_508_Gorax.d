@@ -478,7 +478,7 @@ func void DIA_Gorax_KDF_Info ()
 	AI_Output (self, other, "DIA_Gorax_KDF_14_01"); //There's a free chamber on the right here. Take the key. You'll find everything you need there.
 	
 	B_GiveInvItems (self, other,ItKe_KDFPlayer,1);
-	Wld_InsertItem (ItPo_Perm_Mana,"FP_ITEM_KDFPLAYER");
+	Wld_InsertItem (ITPO_REVIVED_BOOST_MANA_03,"FP_ITEM_KDFPLAYER");
 };
 //########################################################################
 //##

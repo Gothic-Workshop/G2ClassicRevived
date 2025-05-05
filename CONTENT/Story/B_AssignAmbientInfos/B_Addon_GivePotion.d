@@ -17,9 +17,9 @@ FUNC INT DIA_Addon_GivePotion_Condition()
 	if (self.aivar[AIV_PARTYMEMBER] == TRUE)
 	&& (self.flags	!= NPC_FLAG_IMMORTAL)	
 	{
-		if (Npc_HasItems (other,ItPo_Health_01) >= 1)
-		|| (Npc_HasItems (other,ItPo_Health_02) >= 1)
-		|| (Npc_HasItems (other,ItPo_Health_03) >= 1)
+		if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_01) >= 1)
+		|| (Npc_HasItems (other,ITPO_REVIVED_HEALTH_02) >= 1)
+		|| (Npc_HasItems (other,ITPO_REVIVED_HEALTH_03) >= 1)
 		{
 			return TRUE;
 		};
@@ -29,17 +29,17 @@ func VOID DIA_Addon_GivePotion_Info()
 {	
 	Info_ClearChoices (DIA_Addon_GivePotion);
 	Info_AddChoice (DIA_Addon_GivePotion,DIALOG_BACK,DIA_Addon_GivePotion_BACK);
-	if (Npc_HasItems (other,ItPo_Health_03) >= 1)
+	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_03) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give elixir of healing)",DIA_Addon_GivePotion_ItPo_Health_03);
+		Info_AddChoice (DIA_Addon_GivePotion,"(give elixir of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_03);
 	};
-	if (Npc_HasItems (other,ItPo_Health_02) >= 1)
+	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_02) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give extract of healing)",DIA_Addon_GivePotion_ItPo_Health_02);
+		Info_AddChoice (DIA_Addon_GivePotion,"(give extract of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_02);
 	};
-	if (Npc_HasItems (other,ItPo_Health_01) >= 1)
+	if (Npc_HasItems (other,ITPO_REVIVED_HEALTH_01) >= 1)
 	{
-		Info_AddChoice (DIA_Addon_GivePotion,"(give essence of healing)",DIA_Addon_GivePotion_ItPo_Health_01);
+		Info_AddChoice (DIA_Addon_GivePotion,"(give essence of healing)",DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_01);
 	};
 };
 // ------------------------------------------------------------
@@ -49,17 +49,17 @@ func void B_Addon_DrinkPotion ()
 
 	if ((self.attribute[ATR_HITPOINTS]) < (self.attribute[ATR_HITPOINTS_MAX])) //geändert m.F. 
 	{
-		if (Npc_HasItems(self,ItPo_Health_03) > 0)			
+		if (Npc_HasItems(self,ITPO_REVIVED_HEALTH_03) > 0)			
 		{
-			B_UseItem (self, ItPo_Health_03);
+			B_UseItem (self, ITPO_REVIVED_HEALTH_03);
 		}
-		else if (Npc_HasItems(self,ItPo_Health_02) > 0)
+		else if (Npc_HasItems(self,ITPO_REVIVED_HEALTH_02) > 0)
 		{
-			B_UseItem (self, ItPo_Health_02);
+			B_UseItem (self, ITPO_REVIVED_HEALTH_02);
 		}
-		else if (Npc_HasItems (self,ItPo_Health_01) > 0)
+		else if (Npc_HasItems (self,ITPO_REVIVED_HEALTH_01) > 0)
 		{
-			B_UseItem (self, ItPo_Health_01);
+			B_UseItem (self, ITPO_REVIVED_HEALTH_01);
 		};
 	};
 
@@ -71,21 +71,21 @@ func void DIA_Addon_GivePotion_BACK()
 	Info_ClearChoices (DIA_Addon_GivePotion);
 };
 // ------------------------------------------------------------
-func void DIA_Addon_GivePotion_ItPo_Health_03()
+func void DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_03()
 {
-	B_GiveInvItems (other,self,ItPo_Health_03,1);
+	B_GiveInvItems (other,self,ITPO_REVIVED_HEALTH_03,1);
 	B_Addon_DrinkPotion();
 };
 // ------------------------------------------------------------
-func void DIA_Addon_GivePotion_ItPo_Health_02()
+func void DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_02()
 {
-	B_GiveInvItems (other,self,ItPo_Health_02,1);
+	B_GiveInvItems (other,self,ITPO_REVIVED_HEALTH_02,1);
 	B_Addon_DrinkPotion();
 };
 // ------------------------------------------------------------
-func void DIA_Addon_GivePotion_ItPo_Health_01()
+func void DIA_Addon_GivePotion_ITPO_REVIVED_HEALTH_01()
 {
-	B_GiveInvItems (other,self,ItPo_Health_01,1);
+	B_GiveInvItems (other,self,ITPO_REVIVED_HEALTH_01,1);
 	B_Addon_DrinkPotion();
 };
 

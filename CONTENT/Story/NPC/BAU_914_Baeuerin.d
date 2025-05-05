@@ -40,7 +40,6 @@ instance BAU_914_Baeuerin (Npc_Default)
 
 FUNC VOID Rtn_Start_914 ()
 {	
-	TA_Cook_Stove		(07,00,20,00,"NW_BIGFARM_HOUSE_UP1_COOK");
+	TA_Cook_Stove			(07,00,20,00,"NW_BIGFARM_HOUSE_UP1_COOK");
     TA_Stand_Eating			(20,00,07,00,"NW_BIGFARM_STABLE_05");
 };
-

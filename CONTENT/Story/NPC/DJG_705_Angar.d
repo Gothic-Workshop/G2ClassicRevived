@@ -18,7 +18,7 @@ instance DJG_705_Angar (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ItMw_Zweihaender2);
-	CreateInvItems (self, ItPo_Health_03, 6);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 6);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 	
 	// ------ Inventory ------

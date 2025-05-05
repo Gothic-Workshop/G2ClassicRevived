@@ -12,7 +12,7 @@ instance BDT_1013_Bandit_L (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 0);	
+	B_SetAttributesToChapter (self, 1);	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;
@@ -26,7 +26,7 @@ instance BDT_1013_Bandit_L (Npc_Default)
 	//CreateInvItems (self, ItWr_BanditLetter_MIS,1);
 		
 	// ------ visuals ------				
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter",  Face_N_Homer, BodyTex_N, ITAR_BDT_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter",  Face_N_Homer, BodyTex_N, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
@@ -54,8 +54,8 @@ FUNC VOID RTN_Ambush_1013()
 
 FUNC VOID RTN_AWAY_1013()
 {
-	TA_Sit_Campfire (00,00,12,00,"NW_XARDAS_GOBBO_02");  
-	TA_Sit_Campfire (12,00,00,00,"NW_XARDAS_GOBBO_02");
+	TA_Sit_Campfire (00,00,12,00,"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02_IN_005");  
+	TA_Sit_Campfire (12,00,00,00,"NW_XARDAS_TOWER_WATERFALL_CAVE_SIDE_02_IN_005");
 };
 
 func VOID RTN_AWAY2_1013()
@@ -63,7 +63,3 @@ func VOID RTN_AWAY2_1013()
 	TA_FleeToWP (00,00,12,00,"NW_XARDAS_MONSTER_INSERT_01");
 	TA_FleeToWP (12,00,00,00,"NW_XARDAS_MONSTER_INSERT_01");
 };
-
-
-
-

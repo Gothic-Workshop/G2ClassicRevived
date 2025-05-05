@@ -10,7 +10,7 @@ instance GRD_4120_Bilgot (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesToChapter (self, 2);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
@@ -20,13 +20,13 @@ instance GRD_4120_Bilgot (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self, ItPo_Health_02, 4);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 4);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Ulf_Wohlers, BodyTex_P, ITAR_REVIVED_PAL_L_03);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Ulf_Wohlers, BodyTex_P, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
@@ -34,7 +34,7 @@ instance GRD_4120_Bilgot (Npc_Default)
 	B_GiveNpcTalents (self);
 	
 	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 30); //Grenzen für Talent-Level liegen bei 30 und 60
+	B_SetFightSkills (self, 40); //Grenzen für Talent-Level liegen bei 30 und 60
 	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4120;

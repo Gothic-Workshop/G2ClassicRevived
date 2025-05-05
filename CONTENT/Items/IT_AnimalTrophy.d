@@ -41,7 +41,7 @@ const int	Value_FiredragonHeart		=	400;
 const int	Value_SwampdragonHeart		=	400;
 const int	Value_RockdragonHeart		=	400;
 
-const int	Value_DragonBlood			=	200;
+const int	Value_DragonBlood			=	500;
 const int	Value_DragonScale			=	200;
 
 const int	Value_Keilerfur				= 	 15;	

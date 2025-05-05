@@ -63,7 +63,7 @@ instance DIA_Sergio_Isgaroth		(C_INFO)
 };
 func int DIA_Sergio_Isgaroth_Condition ()
 {	
-	if Npc_KnowsInfo (hero,PC_PrayShrine_Paladine)
+	if Npc_KnowsInfo (hero,PC_PrayInnos_Paladine)
 	&&  (Npc_GetDistToWP (self,"NW_MONASTERY_CHAPELL_02") <= 1500)
 	&& (Kapitel == 1)
 	{

@@ -27,7 +27,7 @@ instance Mil_310_Stadtwache (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Raven, BodyTex_N, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Raven, BodyTex_N, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

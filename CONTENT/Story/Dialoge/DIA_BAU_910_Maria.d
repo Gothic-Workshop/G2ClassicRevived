@@ -316,7 +316,7 @@ func void DIA_Maria_PERM_Info ()
 	{
 		AI_Output (self, other, "DIA_Maria_PERM_17_01"); //The paladins passed by here.
 		AI_Output (self, other, "DIA_Maria_PERM_17_02"); //At first we thought they were going to attack the farm, but the were headed for the Valley of Mines.
-	}
+	};
 	
 	if (Kapitel == 3)
 	{

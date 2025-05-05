@@ -58,8 +58,8 @@ FUNC VOID B_GiveTradeInv_Kjorn (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Bacon, 5);
 		CreateInvItems (slf,ItRw_Arrow,65);
 		CreateInvItems (slf,ItRw_Bolt,50);
-		CreateInvItems (slf,ItPo_Health_01,4);
-		CreateInvItems (slf,ItPo_Health_02,2);
+		CreateInvItems (slf,ITPO_REVIVED_HEALTH_01,4);
+		CreateInvItems (slf,ITPO_REVIVED_HEALTH_02,2);
 		
 		CreateInvItems (slf,ItKE_Lockpick,10);
 		
@@ -76,8 +76,8 @@ FUNC VOID B_GiveTradeInv_Kjorn (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Bacon, 5);
 		CreateInvItems (slf,ItRw_Arrow,55);
 		CreateInvItems (slf,ItRw_Bolt,55);
-		CreateInvItems (slf,ItPo_Health_01,4);
-		CreateInvItems (slf,ItPo_Health_02,2);
+		CreateInvItems (slf,ITPO_REVIVED_HEALTH_01,4);
+		CreateInvItems (slf,ITPO_REVIVED_HEALTH_02,2);
 
 		Kjorn_ItemsGiven_Chapter_5 = TRUE;
 	};

@@ -65,6 +65,36 @@ func void ZS_Dead ()
 			AlligatorJack_KrokosKilled = AlligatorJack_KrokosKilled +1;
 		};
 	};
+
+	// ------ Tod - Kommentare -----
+	if(NPC_IsPlayer(self) == TRUE)
+	{
+		var string deathmsg;
+		var int random;
+		random = Hlp_Random(10);
+		if (random == 0)
+		{
+			deathmsg = PRINT_DEATH_MESSAGE_0;
+		}
+		else if (random == 1)
+		{
+			deathmsg = PRINT_DEATH_MESSAGE_1;
+		}
+		else if (random == 2)
+		{
+			deathmsg = PRINT_DEATH_MESSAGE_2;
+		}
+		else if (random == 3)
+		{
+			deathmsg = PRINT_DEATH_MESSAGE_3;
+		}
+		else if (random >= 4)
+		{
+			deathmsg = PRINT_DEATH_MESSAGE_4;
+		};
+		
+		PrintScreen	(deathmsg ,-1,YPOS_LevelUp,FONT_Screen,2);
+	};
 		
 	// ------ weil sonst Händler bevor man zum ersten Mal TRADE gewählt hat nix haben ------
 	B_GiveTradeInv(self);//Joly:	STEHEN LASSEN!!!!!!!!!!!!!!!

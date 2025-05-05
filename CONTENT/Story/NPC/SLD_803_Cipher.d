@@ -46,7 +46,7 @@ instance SLD_803_Cipher (Npc_Default)
 FUNC VOID Rtn_Start_803 ()
 {
 	TA_Smalltalk	(07,35,23,35,"NW_BIGFARM_PATH_04_1");
-	TA_Sleep		(23,35,07,35,"NW_BIGFARM_HOUSE_SLD_SLEEP");		
+	TA_Sleep		(23,35,07,35,"NW_BIGFARM_MERCHUT_SLEEP_04");		
 };
 
 FUNC VOID Rtn_Tot_803 ()

@@ -255,45 +255,45 @@ func void PLAYER_HOTKEY_LAME_POTION()
 {
 	if (Npc_IsInState (hero,ZS_Dead) == FALSE)
 	{	
-		if (Npc_HasItems (hero,ItPo_Mana_03))
+		if (Npc_HasItems (hero,ITPO_REVIVED_MANA_03))
 		&& (((hero.attribute[ATR_MANA_MAX])-(hero.attribute[ATR_MANA])) >= Mana_Elixier)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_MANA,	Mana_Elixier);
-			Npc_RemoveInvItem (hero,ItPo_Mana_03);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_03);
 			B_LameSchlork ();
 		}
-		else if (Npc_HasItems (hero,ItPo_Mana_02))
+		else if (Npc_HasItems (hero,ITPO_REVIVED_MANA_02))
 		&& (((hero.attribute[ATR_MANA_MAX])-(hero.attribute[ATR_MANA])) >= MANA_Extrakt)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_MANA,	MANA_Extrakt);
-			Npc_RemoveInvItem (hero,ItPo_Mana_02);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_02);
 			B_LameSchlork ();
 		}
-		else if (Npc_HasItems (hero,ItPo_Mana_01))
+		else if (Npc_HasItems (hero,ITPO_REVIVED_MANA_01))
 		&& (((hero.attribute[ATR_MANA_MAX])-(hero.attribute[ATR_MANA])) >= MANA_Essenz)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_MANA,	MANA_Essenz);
-			Npc_RemoveInvItem (hero,ItPo_Mana_01);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_01);
 			B_LameSchlork ();
 		}
 		else if ((hero.attribute[ATR_MANA_MAX])!=(hero.attribute[ATR_MANA]))
 		{
-				if (Npc_HasItems (hero,ItPo_Mana_01))
+				if (Npc_HasItems (hero,ITPO_REVIVED_MANA_01))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_MANA,	Mana_Essenz);
-					Npc_RemoveInvItem (hero,ItPo_Mana_01);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_01);
 					B_LameSchlork ();
 				}
-				else if (Npc_HasItems (hero,ItPo_Mana_02))
+				else if (Npc_HasItems (hero,ITPO_REVIVED_MANA_02))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_MANA,	MANA_Extrakt);
-					Npc_RemoveInvItem (hero,ItPo_Mana_02);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_02);
 					B_LameSchlork ();
 				}
-				else if (Npc_HasItems (hero,ItPo_Mana_03))
+				else if (Npc_HasItems (hero,ITPO_REVIVED_MANA_03))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_MANA,	MANA_Elixier);
-					Npc_RemoveInvItem (hero,ItPo_Mana_03);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_MANA_03);
 					B_LameSchlork ();
 				}
 				else
@@ -313,45 +313,45 @@ func void PLAYER_HOTKEY_LAME_HEAL ()
 
 if (Npc_IsInState (hero,ZS_Dead)==FALSE)
 	{	
-		if (Npc_HasItems (hero,ItPo_HEALTH_03))
+		if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_03))
 		&& (((hero.attribute[ATR_HITPOINTS_MAX])-(hero.attribute[ATR_HITPOINTS])) >= HP_Elixier)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Elixier);
-			Npc_RemoveInvItem (hero,ItPo_HEALTH_03);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_03);
 			B_LameSchlork ();
 		}
-		else if (Npc_HasItems (hero,ItPo_HEALTH_02))
+		else if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_02))
 		&& (((hero.attribute[ATR_HITPOINTS_MAX])-(hero.attribute[ATR_HITPOINTS])) >= HP_Extrakt)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Extrakt);
-			Npc_RemoveInvItem (hero,ItPo_HEALTH_02);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_02);
 			B_LameSchlork ();
 		}
-		else if (Npc_HasItems (hero,ItPo_HEALTH_01))
+		else if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_01))
 		&& (((hero.attribute[ATR_HITPOINTS_MAX])-(hero.attribute[ATR_HITPOINTS])) >= HP_Essenz)
 		{
 			Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Essenz);
-			Npc_RemoveInvItem (hero,ItPo_HEALTH_01);
+			Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_01);
 			B_LameSchlork ();
 		}
 		else if ((hero.attribute[ATR_HITPOINTS_MAX])!=(hero.attribute[ATR_HITPOINTS]))
 		{
-				if (Npc_HasItems (hero,ItPo_HEALTH_01))
+				if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_01))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Essenz);
-					Npc_RemoveInvItem (hero,ItPo_HEALTH_01);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_01);
 					B_LameSchlork ();
 				}
-				else if (Npc_HasItems (hero,ItPo_HEALTH_02))
+				else if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_02))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Extrakt);
-					Npc_RemoveInvItem (hero,ItPo_HEALTH_02);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_02);
 					B_LameSchlork ();
 				}
-				else if (Npc_HasItems (hero,ItPo_HEALTH_03))
+				else if (Npc_HasItems (hero,ITPO_REVIVED_HEALTH_03))
 				{
 					Npc_ChangeAttribute	(hero,	ATR_HITPOINTS,	HP_Elixier);
-					Npc_RemoveInvItem (hero,ItPo_HEALTH_03);
+					Npc_RemoveInvItem (hero,ITPO_REVIVED_HEALTH_03);
 					B_LameSchlork ();
 				}
 				else

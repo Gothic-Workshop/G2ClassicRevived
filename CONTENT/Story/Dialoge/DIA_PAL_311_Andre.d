@@ -198,6 +198,7 @@ FUNC VOID DIA_Andre_PMSchulden_Info()
 	{
 		AI_Output (self, other, "DIA_Andre_PMSchulden_08_01"); //I had already asked myself if you would even dare to come here!
 		AI_Output (self, other, "DIA_Andre_PMSchulden_08_02"); //Apparently, the charges against you have multiplied!
+		B_SetAttitude (self, ATT_ANGRY);
 		if (Andre_Schulden < 1000)
 		{
 			AI_Output (self, other, "DIA_Andre_PMSchulden_08_03"); //I warned you! The penalty you have to pay now is higher!
@@ -250,6 +251,7 @@ FUNC VOID DIA_Andre_PMSchulden_Info()
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
+			B_SetAttitude (self, ATT_NEUTRAL);
 			AI_Output (self, other, "DIA_Andre_PMSchulden_08_11"); //In any case, I have decided to waive your debts.
 			AI_Output (self, other, "DIA_Andre_PMSchulden_08_12"); //See to it that you don't get into any more trouble.
 	
@@ -417,6 +419,9 @@ func void DIA_Andre_PETZMASTER_PayNow()
 {
 	AI_Output (other, self, "DIA_Andre_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
 	B_GiveInvItems (other, self, itmi_gold, Andre_Schulden);
+	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
+		B_SetAttitude (self, ATT_NEUTRAL);
+	};
 	AI_Output (self, other, "DIA_Andre_PETZMASTER_PayNow_08_01"); //Good! I shall see to it that everyone in the city learns of it - that will restore your reputation to some degree.
 
 	B_GrantAbsolution (LOC_CITY);
@@ -827,6 +832,7 @@ func int DIA_Andre_Auslieferung_Condition ()
 	if (Rengaru_Ausgeliefert == FALSE)
 	|| (Halvor_Ausgeliefert == FALSE)
 	|| (Nagur_Ausgeliefert == FALSE)
+	|| (BaltramInJail == FALSE)
 	|| (MIS_Canthars_KomproBrief == LOG_RUNNING)
 	{
 		return TRUE;
@@ -839,7 +845,7 @@ func void DIA_Andre_Auslieferung_Info ()
 	
 	Info_ClearChoices (DIA_Andre_Auslieferung);
 	
-	Info_AddChoice (DIA_Andre_Auslieferung,"I'll come back later (BACK)",DIA_Andre_Auslieferung_Back);
+	Info_AddChoice (DIA_Andre_Auslieferung,DIALOG_BACK,DIA_Andre_Auslieferung_Back);
 	
 	// ------ Rengaru -----
 	if (Rengaru_InKnast == TRUE)
@@ -864,12 +870,22 @@ func void DIA_Andre_Auslieferung_Info ()
 	&& (MIS_Canthars_KomproBrief_Day > (Wld_GetDay()-2))
 	{
 		Info_AddChoice (DIA_Andre_Auslieferung,"Canthar is trying to get rid of Sarah!",DIA_Andre_Auslieferung_Canthar);
+		if (Npc_HasItems (Sarah, ItWr_Canthars_KomproBrief_MIS) >= 1)
+		{
+			Info_AddChoice (DIA_Andre_Auslieferung,"Sarah is selling weapons to Onar.",DIA_Andre_Auslieferung_Sarah);
+		};
 	};
-	if (MIS_Canthars_KomproBrief == LOG_RUNNING)
-	&& (Npc_HasItems (Sarah, ItWr_Canthars_KomproBrief_MIS) >= 1)
-	&& (MIS_Canthars_KomproBrief_Day > (Wld_GetDay()-2))
+	// ------ Baltram -----
+	if (BaltramRatOut == TRUE)
+	&& (BaltramInJail == FALSE)
 	{
-		Info_AddChoice (DIA_Andre_Auslieferung,"Sarah is selling weapons to Onar.",DIA_Andre_Auslieferung_Sarah);
+		Info_AddChoice (DIA_Andre_Auslieferung,"Baltram provides goods to Pirates.",DIA_Andre_Auslieferung_Baltram);
+	};
+	// ------ Bounties -----
+	if (Npc_IsDead(Cassia)) //placeholder
+	&& (Bounty5 == FALSE)
+	{
+		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty1.",DIA_Andre_Auslieferung_Bounty);
 	};
 };
 
@@ -877,6 +893,35 @@ func void DIA_Andre_Auslieferung_Back()
 {
 	Info_ClearChoices (DIA_Andre_Auslieferung);
 };
+
+// ----------------------------------------
+func void DIA_Andre_Auslieferung_Bounty()
+{
+	AI_Output (self, other, "DIA_Andre_Auslieferung_Nagur_08_02"); //Here, take the bounty that you are entitled to.
+	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
+	
+	Bounty1 = TRUE;
+	B_GivePlayerXP (XP_Andre_Auslieferung);
+	Info_ClearChoices (DIA_Andre_Auslieferung);
+};
+
+// ----------------------------------------
+func void DIA_Andre_Auslieferung_Baltram()
+{	
+	//Rengaru in den Knast beamen
+	AI_Teleport			(VLK_410_Baltram,"NW_CITY_HABOUR_KASERN_RENGARU"); 
+	
+	AI_Output (self, other, "DIA_Andre_Auslieferung_Nagur_08_02"); //Here, take the bounty that you are entitled to.
+	B_GiveInvItems (self, other, itmi_gold, Kopfgeld);
+	
+	BaltramInJail = TRUE;
+	B_GivePlayerXP (XP_Andre_Auslieferung);
+	Info_ClearChoices (DIA_Andre_Auslieferung);
+	
+	B_StartOtherRoutine (VLK_410_Baltram,"PRISON");	
+};
+
+// ----------------------------------------
 
 func void DIA_Andre_Auslieferung_Rengaru()
 {	

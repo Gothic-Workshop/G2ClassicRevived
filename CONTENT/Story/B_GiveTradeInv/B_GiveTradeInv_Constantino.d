@@ -82,7 +82,7 @@ FUNC VOID B_GiveTradeInv_Constantino (var C_NPC slf)
 		CreateInvItems (slf, ItAt_ShadowHorn, 2); 
 		CreateInvItems (slf, ItAt_Wing, 2); 
 		CreateInvItems (slf, ItAt_WolfFur, 1); 
-		CreateInvItems (slf, ItPo_Health_01, 6); 
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 6); 
 
 		Constantino_ItemsGiven_Chapter_4 = TRUE;
 	};

@@ -22,7 +22,7 @@ INSTANCE KDF_508_Gorax (Npc_Default)
 	
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",Face_N_OldBald_Jeremiah, BodyTex_N, ITAR_KDF_L);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",Face_N_OldBald_Jeremiah, BodyTex_N, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	
@@ -38,6 +38,6 @@ INSTANCE KDF_508_Gorax (Npc_Default)
 
 FUNC VOID Rtn_Start_508 ()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_WINEMAKER_01");
-	TA_Sleep			(23,00,08,00,"NW_MONASTERY_MAGE02_BED_01");
+	TA_Stand_ArmsCrossed	(08,00,23,00,"NW_MONASTERY_WINEMAKER_01");
+	TA_Sleep				(23,00,08,00,"NW_MONASTERY_MAGE02_BED_01");
 };

@@ -23,7 +23,7 @@ instance VLK_434_Borka (Npc_Default)
 	
 	
 	// ------ Inventory ------
-	CreateInvItems (self, ItMi_Joint, 20);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 20);
 
 		
 	// ------ visuals ------																			

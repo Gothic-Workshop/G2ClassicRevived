@@ -42,10 +42,15 @@ INSTANCE ITPO_REVIVED_HEALTH_01 (C_Item)
 
 	value 			=	Value_HpEssenz;	
 
-	visual 			=	"ItFo_Potion_Health_01.3ds";
+	visual 			=	"REV_ITPO_HEALTH_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHealthPotion;
 	scemeName		=	"POTIONFAST";
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Essenz;
@@ -66,10 +71,15 @@ INSTANCE ITPO_REVIVED_HEALTH_02 (C_Item)
 
 	value 			=	Value_HpExtrakt;	
 
-	visual 			=	"ItFo_Potion_Health_02.3ds";
+	visual 			=	"REV_ITPO_HEALTH_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHealth2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Extrakt;
@@ -90,10 +100,15 @@ INSTANCE ITPO_REVIVED_HEALTH_03 (C_Item)
 
 	value 			=	Value_HpElixier;	
 
-	visual 			=	"ItFo_Potion_Health_01.3ds";
+	visual 			=	"REV_ITPO_HEALTH_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHealth3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Elixier;
@@ -118,10 +133,15 @@ INSTANCE ITPO_REVIVED_MANA_01 (C_Item)
 
 	value 			=	Value_ManaEssenz;	
 
-	visual 			=	"ItFo_Potion_Mana_01.3ds";
+	visual 			=	"REV_ITPO_MANA_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseManaPotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Essenz;
@@ -142,10 +162,15 @@ INSTANCE ITPO_REVIVED_MANA_02 (C_Item)
 
 	value 			=	Value_ManaExtrakt;	
 
-	visual 			=	"ItFo_Potion_Mana_02.3ds";
+	visual 			=	"REV_ITPO_MANA_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseMana2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Extrakt;
@@ -166,10 +191,15 @@ INSTANCE ITPO_REVIVED_MANA_03 (C_Item)
 
 	value 			=	Value_ManaElixier;	
 
-	visual 			=	"ItFo_Potion_Mana_03.3ds";
+	visual 			=	"REV_ITPO_MANA_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseMana3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Elixier;
@@ -194,10 +224,15 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_01 (C_Item)
 
 	value 			=	Value_PermHP_01;	
 
-	visual 			=	"ItFo_Potion_Health_Perma_01.3ds";
+	visual 			=	"REV_ITPO_HEALTH_PERM_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseLifePotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_HpMax;				COUNT[1]	= Boost_PermHP_01;
@@ -218,10 +253,15 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_02 (C_Item)
 
 	value 			=	Value_PermHP_02;	
 
-	visual 			=	"ItFo_Potion_Health_Perma_02.3ds";
+	visual 			=	"REV_ITPO_HEALTH_PERM_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseLife2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description		= name;
 	TEXT[1]				= NAME_Bonus_HpMax;				COUNT[1]	= Boost_PermHP_02;
@@ -242,10 +282,15 @@ INSTANCE ITPO_REVIVED_BOOST_HEALTH_03 (C_Item)
 
 	value 			=	Value_PermHP_03;	
 
-	visual 			=	"ItFo_Potion_Health_Perma_03.3ds";
+	visual 			=	"REV_ITPO_HEALTH_PERM_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseLife3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_HEALTHPOTION";
+
+	inv_rotz		= 1;
 
 	description		= name;
 	TEXT[1]				= NAME_Bonus_HpMax;				COUNT[1]	= Boost_PermHP_03;
@@ -268,10 +313,15 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_01 (C_Item)
 
 	value 			=	Value_PermMana_01;	
 
-	visual 			=	"ItFo_Potion_Mana_Perma_01.3ds";
+	visual 			=	"REV_ITPO_MANA_PERM_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseNectarPotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_ManaMax;			COUNT[1]	= Boost_PermMana_01;
@@ -292,10 +342,15 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_02 (C_Item)
 
 	value 			=	Value_PermMana_02;	
 
-	visual 			=	"ItFo_Potion_Mana_Perma_02.3ds";
+	visual 			=	"REV_ITPO_MANA_PERM_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseNectar2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_ManaMax;			COUNT[1]	= Boost_PermMana_02;
@@ -316,10 +371,15 @@ INSTANCE ITPO_REVIVED_BOOST_MANA_03 (C_Item)
 
 	value 			=	Value_PermMana_03;	
 
-	visual 			=	"ItFo_Potion_Mana_Perma_03.3ds";
+	visual 			=	"REV_ITPO_MANA_PERM_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseNectar3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_ManaMax;			COUNT[1]	= Boost_PermMana_03;
@@ -342,10 +402,15 @@ INSTANCE ITPO_REVIVED_BOOST_STR_01 (C_Item)
 
 	value 			=	Value_PermSTR_01;	
 
-	visual 			=	"ItFo_Potion_Strength_01.3ds";
+	visual 			=	"REV_ITPO_STR_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseStrengthPotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Str;				COUNT[1]	= Boost_PermSTR_01;
@@ -366,10 +431,15 @@ INSTANCE ITPO_REVIVED_BOOST_STR_02 (C_Item)
 
 	value 			=	Value_PermSTR_02;	
 
-	visual 			=	"ItFo_Potion_Strength_02.3ds";
+	visual 			=	"REV_ITPO_STR_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseStrength2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Str;				COUNT[1]	= Boost_PermSTR_02;
@@ -390,10 +460,15 @@ INSTANCE ITPO_REVIVED_BOOST_STR_03 (C_Item)
 
 	value 			=	Value_PermSTR_03;	
 
-	visual 			=	"ItFo_Potion_Strength_03.3ds";
+	visual 			=	"REV_ITPO_STR_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseStrength3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Str;				COUNT[1]	= Boost_PermSTR_03;
@@ -416,10 +491,15 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_01 (C_Item)
 
 	value 			=	Value_PermDEX_01;	
 
-	visual 			=	"ItFo_Potion_Dex_01.3ds";
+	visual 			=	"REV_ITPO_DEX_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseDexPotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermDEX_01;
@@ -440,10 +520,15 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_02 (C_Item)
 
 	value 			=	Value_PermDEX_02;	
 
-	visual 			=	"ItFo_Potion_Dex_02.3ds";
+	visual 			=	"REV_ITPO_DEX_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseDex2Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermDEX_02;
@@ -464,10 +549,15 @@ INSTANCE ITPO_REVIVED_BOOST_DEX_03 (C_Item)
 
 	value 			=	Value_PermDEX_03;	
 
-	visual 			=	"ItFo_Potion_Dex_03.3ds";
+	visual 			=	"REV_ITPO_DEX_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseDex3Potion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermDEX_03;
@@ -490,13 +580,15 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_01 (C_Item)
 
 	value 			=	Value_PermMaster_01;	
 
-	visual 			=	"ItFo_Potion_Master_01.3ds";
+	visual 			=	"REV_ITPO_MASTER_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseMasterPotion;
 	scemeName		=	"POTIONFAST";
-
+	
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_HEALTHPOTION"; 
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermMaster_01;
@@ -523,13 +615,15 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_02 (C_Item)
 
 	value 			=	Value_PermMaster_02;	
 
-	visual 			=	"ItFo_Potion_Master_02.3ds";
+	visual 			=	"REV_ITPO_MASTER_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseMaster2Potion;
 	scemeName		=	"POTIONFAST";
-
+	
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION"; 
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermMaster_02;
@@ -556,13 +650,15 @@ INSTANCE ITPO_REVIVED_BOOST_MASTER_03 (C_Item)
 
 	value 			=	Value_PermMaster_03;	
 
-	visual 			=	"ItFo_Potion_Master_02.3ds";
+	visual 			=	"REV_ITPO_MASTER_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseMaster3Potion;
 	scemeName		=	"POTIONFAST";
-
+	
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_MANAPOTION"; 
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Dex;				COUNT[1]	= Boost_PermMaster_03;
@@ -593,10 +689,15 @@ INSTANCE ITPO_REVIVED_SPEED_01 (C_Item)
 
 	value 			=	Value_Haste_01;	
 
-	visual 			=	"ItFo_Potion_Haste_01.3ds";
+	visual 			=	"REV_ITPO_HASTE_01.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHastePotion;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description		= name;
 	TEXT[1]			= "Enables the player to short term sprints.";
@@ -618,10 +719,15 @@ INSTANCE ITPO_REVIVED_SPEED_02 (C_Item)
 
 	value 			=	Value_Haste_02;	
 
-	visual 			=	"ItFo_Potion_Haste_01.3ds";
+	visual 			=	"REV_ITPO_HASTE_02.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHastePotion2;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description		= name;
 	TEXT[1]			= "Allows the player to sprint.";
@@ -643,10 +749,15 @@ INSTANCE ITPO_REVIVED_SPEED_03 (C_Item)
 
 	value 			=	Value_Haste_03;	
 
-	visual 			=	"ItFo_Potion_Haste_01.3ds";
+	visual 			=	"REV_ITPO_HASTE_03.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseHastePotion3;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER";
+
+	inv_rotz		= 1;
 
 	description		= name;
 	TEXT[1]			= "Enables the player to sprint longer.";
@@ -678,7 +789,9 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_01 (C_Item)
 	scemeName		=	"POTIONFAST";
 
 	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Elixier1;
@@ -703,6 +816,11 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseEggElixier;
 	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
 
 	description			= name;
 	TEXT[0]				= "Allows contact to the Sleeper.";
@@ -713,4 +831,65 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_02 (C_Item)
 	func void  UseEggElixier ()
 	{
  		B_RaiseAttribute	(self, ATR_MANA_MAX,	ManaMax_ElixierEgg);
+	};
+
+//****************************************************************************
+
+INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_01 (C_Item)
+{
+	name 			=	"Potion of Quick Healing";
+
+	mainflag 		=	ITEM_KAT_POTIONS;
+	flags 			=	ITEM_MULTI;
+
+	value 			=	Value_Elixier1;	
+
+	visual 			=	"ItFo_Potion_Elixier.3ds";
+	material 		=	MAT_GLAS;
+	on_state[0]		=	UseSpecialHeal;
+	scemeName		=	"POTIONFAST";
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= Mana_Elixier1;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Elixier1;
+};
+
+	func void  UseSpecialHeal ()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	Mana_Elixier1);	 
+	};
+
+INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
+{
+	name 			=	"Orc Medicine";
+
+	mainflag 		=	ITEM_KAT_POTIONS;
+	flags 			=	ITEM_MULTI;
+
+	value 			=	Value_ElixierEgg;	
+
+	visual 			=	"ItFo_Potion_Elixier_Egg.3ds";
+	material 		=	MAT_GLAS;
+	on_state[0]		=	UseOrcMedicine;
+	scemeName		=	"POTIONFAST";
+	
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_MANAPOTION";
+
+	inv_rotz		= 1;
+
+	description			= name;
+	TEXT[0]				= "Allows contact to the Sleeper.";
+	TEXT[1]				= NAME_Bonus_HpMax;			COUNT[1]	= ManaMax_ElixierEgg;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_ElixierEgg;
+};
+
+	func void  UseOrcMedicine ()
+	{
+ 		B_RaiseAttribute	(self, ATR_HITPOINTS_MAX,	ManaMax_ElixierEgg);
 	};

@@ -20,6 +20,8 @@ instance PIR_1400_Pirate_L (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ItMw_ShortSword2);
 	EquipItem (self, ItRw_sld_bow); 
+
+	CreateInvItems (self, ItMi_Packet_Baltram4Skip_Addon, 1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Pirat01, BodyTex_N, ITAR_PIR_L_Addon);

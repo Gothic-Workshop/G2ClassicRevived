@@ -164,7 +164,7 @@ FUNC VOID DIA_Bodo_WeedOrElse_Info()
 {
 	AI_Output (other, self, "DIA_Bodo_WeedOrElse_15_00"); //Give me that weed, or else!
 	AI_Output (self, other, "DIA_Bodo_WeedOrElse_12_01"); //Listen, all I've got is this one reefer of weed. Take it and leave me alone.
-	B_GiveInvItems (self, other, itmi_joint, 1);
+	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR, 1);
 	if (other.guild == GIL_NONE)
 	{
 		AI_Output (self, other, "DIA_Bodo_WeedOrElse_12_02"); //You know that Onar's mercenaries look out for us, right?

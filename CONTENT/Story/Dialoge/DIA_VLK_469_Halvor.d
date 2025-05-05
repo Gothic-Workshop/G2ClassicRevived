@@ -140,67 +140,6 @@ func void DIA_Halvor_Night_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Halvor_MissingPeople		(C_INFO)
-{
-	npc		 = 	VLK_469_Halvor;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Halvor_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Halvor_MissingPeople_Info;
-
-	description	 = 	"Can you tell me something about those missing people?";
-};
-
-func int DIA_Addon_Halvor_MissingPeople_Condition ()
-{
-	if (SC_HearedAboutMissingPeople == TRUE)
-	&& (MissingPeopleReturnedHome == FALSE)
-	&& (Halvor_Ausgeliefert == FALSE)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Halvor_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Halvor_MissingPeople_15_00"); //Can you tell me something about those missing people?
-	AI_Output	(self, other, "DIA_Addon_Halvor_MissingPeople_06_01"); //Missing people? This is a harbor, pal. Things like that are bound to happen.
-	AI_Output	(self, other, "DIA_Addon_Halvor_MissingPeople_06_02"); //The sea is treacherous, and bound to claim a life now and then.
-	AI_Output	(self, other, "DIA_Addon_Halvor_MissingPeople_06_03"); //Captains of large vessels will always sign on new sailors in large seaports such as Khorinis to complete their crews.
-	AI_Output	(self, other, "DIA_Addon_Halvor_MissingPeople_06_04"); //And if they don't find any volunteers, some people may get dragged off against their will. And then they're gone.
-	
-	Info_ClearChoices	(DIA_Addon_Halvor_MissingPeople);
-	Info_AddChoice	(DIA_Addon_Halvor_MissingPeople, DIALOG_BACK, DIA_Addon_Halvor_MissingPeople_Back );
-	Info_AddChoice	(DIA_Addon_Halvor_MissingPeople, "What ship would that have been?", DIA_Addon_Halvor_MissingPeople_schiff );
-	Info_AddChoice	(DIA_Addon_Halvor_MissingPeople, "Do you know of anyone who's missing?", DIA_Addon_Halvor_MissingPeople_wer );
-	Info_AddChoice	(DIA_Addon_Halvor_MissingPeople, "Are YOU missing someone?", DIA_Addon_Halvor_MissingPeople_you );
-};
-func void DIA_Addon_Halvor_MissingPeople_Back ()
-{
-	Info_ClearChoices	(DIA_Addon_Halvor_MissingPeople);
-};
-func void DIA_Addon_Halvor_MissingPeople_wer ()
-{
-	AI_Output			(other, self, "DIA_Addon_Halvor_MissingPeople_wer_15_00"); //Do you know of anyone who's missing?
-	AI_Output			(self, other, "DIA_Addon_Halvor_MissingPeople_wer_06_01"); //No idea. Ask the ship builders.
-
-	Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_WhoStolePeople,"The best advice Halvor the fishmonger could give me was to go ask the ship builders."); 
-};
-func void DIA_Addon_Halvor_MissingPeople_schiff ()
-{
-	AI_Output			(other, self, "DIA_Addon_Halvor_MissingPeople_schiff_15_00"); //What ship would that have been?
-	AI_Output			(self, other, "DIA_Addon_Halvor_MissingPeople_schiff_06_01"); //Good question. Not many ships have come into Khorinis lately, that's true.
-};
-func void DIA_Addon_Halvor_MissingPeople_you ()
-{
-	AI_Output			(other, self, "DIA_Addon_Halvor_MissingPeople_you_15_00"); //Are YOU missing someone?
-	AI_Output			(self, other, "DIA_Addon_Halvor_MissingPeople_you_06_01"); //Me? No.
-};
-
-///////////////////////////////////////////////////////////////////////
 //	Info MESSAGE
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Halvor_MESSAGE		(C_INFO)

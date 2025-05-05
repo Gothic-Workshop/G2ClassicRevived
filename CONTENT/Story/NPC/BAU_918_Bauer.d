@@ -39,6 +39,6 @@ instance BAU_918_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_918 ()
 {	
-	TA_Smalltalk (08,05,22,05,"NW_BIGFARM_KITCHEN_09");
-    TA_Smalltalk (22,05,08,05,"NW_BIGFARM_KITCHEN_09");
+	TA_Smalltalk		(08,00,22,00,"NW_BIGFARM_KITCHEN_09");
+    TA_Smalltalk		(22,00,08,00,"NW_BIGFARM_STABLE_09");
 };

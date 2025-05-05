@@ -165,7 +165,7 @@ FUNC VOID DIA_Marcos_Perm_Info()
 	if (self.attribute [ATR_HITPOINTS]) < (self.attribute [ATR_HITPOINTS_MAX] /2)  
 	{
 		AI_Output (self, other, "DIA_Marcos_Perm_04_01");//I need a strong draught of healing potion!
-		B_UseItem (self, ItPo_Health_03);  
+		B_UseItem (self, ITPO_REVIVED_HEALTH_03);  
 		
 	}
 	else if (MIS_Marcos_Jungs == LOG_RUNNING)

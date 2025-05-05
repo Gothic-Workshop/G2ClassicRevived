@@ -242,7 +242,7 @@ FUNC VOID DIA_Cipher_Joints_Info()
 	{
 		Info_ClearChoices (DIA_Cipher_Joints);
 		Info_AddChoice (DIA_Cipher_Joints, "I'll see what I can do ...", DIA_Cipher_Joints_Running);
-		if (Npc_HasItems (other, itmi_joint) > 0)
+		if (Npc_HasItems (other, ITMI_REVIVED_JOINT_REGULAR) > 0)
 		{
 			Info_AddChoice (DIA_Cipher_Joints, "Here's a few stalks for you ...", DIA_Cipher_Joints_Success);
 		};
@@ -259,7 +259,7 @@ func void DIA_Cipher_Joints_Success()
 {
 	AI_Output (other, self, "DIA_Cipher_Joints_Success_15_00"); //Here's a few stalks for you ...
 	
-	if (B_GiveInvItems (other, self, itmi_joint, 10))
+	if (B_GiveInvItems (other, self, ITMI_REVIVED_JOINT_REGULAR, 10))
 	{
 		AI_Output (self, other, "DIA_Cipher_Joints_Success_07_01"); //Ah! You are my man!
 		if (other.guild == GIL_NONE)
@@ -286,6 +286,89 @@ func void DIA_Cipher_Joints_Success()
 
 
 // ************************************************************
+// 			  				SELL SWAMPWEED
+// ************************************************************
+
+instance DIA_Cipher_Swampweed (C_INFO)
+{
+	npc			= Sld_803_Cipher;
+	nr			= 2;
+	condition	= DIA_Cipher_Swampweed_Condition;
+	information	= DIA_Cipher_Swampweed_Info;
+	permanent	= TRUE;
+	description = "Do you need more swampweed?";
+};                       
+
+FUNC INT DIA_Cipher_Swampweed_Condition()
+{
+	if (MIS_Cipher_BringWeed == LOG_SUCCESS)
+	{
+		return TRUE;
+	};
+};
+ 
+FUNC VOID DIA_Cipher_Swampweed_Info()
+{
+		AI_Output (other, self, "DIA_Addon_Fortuno_Herb_15_00"); //Do you need more swampweed?
+		AI_Output (self, other, "DIA_Cipher_YesJoin_07_04"); //You can surely scare some up someplace.
+
+	if(CipherBuysWeed != TRUE)
+	{
+		Log_CreateTopic (Topic_SoldierTrader,LOG_NOTE);
+		B_LogEntry (Topic_SoldierTrader,"Cipher will buy swampweed reefers from me.");
+		CipherBuysWeed = TRUE;
+	};
+
+
+	var int SwampweedCount;
+	var int SwampweedGeld;
+
+	SwampweedCount = (Npc_HasItems(other, ITMI_REVIVED_JOINT_REGULAR)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_APPLE)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_APPLEDOUBLE)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_HONEY)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_MUSHROOM)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_GREENNOVICE)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_NORTHDARK)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_DREAMCALL)
+					+ Npc_HasItems(other, ITMI_REVIVED_JOINT_DREAMCALL_02));
+
+	if(SwampweedCount == 0)
+	{
+		AI_Output (other, self, "DIA_Cipher_Joints_Running_15_00"); //I'll see what I can do.
+	} 
+	else
+	{
+		AI_Output (other, self, "DIA_Cipher_Joints_Success_15_00"); //Here's a few stalks for you.
+		AI_Output (self, other, "DIA_Cipher_Joints_Success_07_01"); //Ah! You are my man!
+	
+		
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_REGULAR, Npc_HasItems(other, ITMI_REVIVED_JOINT_REGULAR));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_APPLE, Npc_HasItems(other, ITMI_REVIVED_JOINT_APPLE));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_APPLEDOUBLE, Npc_HasItems(other, ITMI_REVIVED_JOINT_APPLEDOUBLE));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_HONEY, Npc_HasItems(other, ITMI_REVIVED_JOINT_HONEY));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_MUSHROOM, Npc_HasItems(other, ITMI_REVIVED_JOINT_MUSHROOM));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_GREENNOVICE, Npc_HasItems(other, ITMI_REVIVED_JOINT_GREENNOVICE));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_NORTHDARK, Npc_HasItems(other, ITMI_REVIVED_JOINT_NORTHDARK));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_DREAMCALL, Npc_HasItems(other, ITMI_REVIVED_JOINT_DREAMCALL));
+		Npc_RemoveInvItems(other, ITMI_REVIVED_JOINT_DREAMCALL_02, Npc_HasItems(other, ITMI_REVIVED_JOINT_DREAMCALL_02));
+		
+				SwampweedGeld = (SwampweedCount * Value_Joint); 
+
+			var string concatText;
+			concatText = ConcatStrings(IntToString(SwampweedCount), PRINT_ItemsGegeben);
+			AI_PrintScreen (concatText, -1, YPOS_ItemGiven, FONT_ScreenSmall, 2);
+		
+			B_GivePlayerXP (SwampweedGeld);
+
+			CreateInvItems (self, ItMi_Gold, SwampweedGeld); 
+			B_GiveInvItems (self, other, ItMi_Gold, SwampweedGeld);
+		
+	};
+};
+
+/* 
+// ************************************************************
 // 			  					TRADE
 // ************************************************************
 
@@ -311,7 +394,7 @@ FUNC INT DIA_Cipher_TRADE_Condition()
 FUNC VOID DIA_Cipher_TRADE_Info()
 {	
 	AI_Output (other, self, "DIA_Cipher_TRADE_15_00"); //Show me your wares.
-	if (Npc_HasItems(self, itmi_joint) > 0)
+	if (Npc_HasItems(self, ITMI_REVIVED_JOINT_REGULAR) > 0)
 	{
 		AI_Output (self, other, "DIA_Cipher_TRADE_07_01"); //Sure. Help yourself.
 	}
@@ -320,7 +403,7 @@ FUNC VOID DIA_Cipher_TRADE_Info()
 		AI_Output (self, other, "DIA_Cipher_TRADE_07_02"); //I don't have any swampweed at the moment. Do you want something else?
 	};
 };
-
+ */
 // ************************************************************
 // 			  					Dar Dieb
 // ************************************************************
@@ -425,11 +508,11 @@ FUNC VOID DIA_Cipher_KrautPaket_Info()
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_03"); //Doesn't matter, really, you're a decent guy.
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_04"); //Here, take this as a reward. Have fun with it!
 	B_GiveInvItems (self, other, itmi_gold, 200);
-	B_GiveInvItems (self, other, itmi_joint, 10);
+	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR, 10);
 	B_GivePlayerXP (XP_Cipher_KrautPaket);
 	
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_05"); //First let me roll a few ...
-	CreateInvItems (self, itmi_joint, 40);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 40);
 	Npc_RemoveInvItems (self, ItMi_HerbPaket, 1);
 	
 	MIS_Cipher_Paket = LOG_SUCCESS;

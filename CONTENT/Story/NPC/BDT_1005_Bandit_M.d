@@ -24,7 +24,7 @@ instance BDT_1005_Bandit_M (Npc_Default)
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",  Face_N_Homer, BodyTex_N, ITAR_BDT_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",  Face_N_Homer, BodyTex_N, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

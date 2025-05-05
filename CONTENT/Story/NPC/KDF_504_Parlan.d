@@ -30,7 +30,7 @@ INSTANCE KDF_504_Parlan (Npc_Default)
 	
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Corristo, BodyTex_N, ITAR_KDF_L);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Corristo, BodyTex_N, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	
@@ -46,6 +46,6 @@ INSTANCE KDF_504_Parlan (Npc_Default)
 
 FUNC VOID Rtn_Start_504 ()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_PLACE_03");
-    TA_Sleep				(23,00,08,00,"NW_MONASTERY_MAGE01_BED_02");
+	TA_Stand_ArmsCrossed		(08,00,23,00,"NW_MONASTERY_PLACE_03");
+    TA_Sleep					(23,00,08,00,"NW_MONASTERY_MAGE01_BED_02");
 };

@@ -40,7 +40,10 @@ func int DIA_Bosper_HALLO_Condition ()
 };
 func void DIA_Bosper_HALLO_Info ()
 {
-	AI_Output (self, other, "DIA_Bosper_HALLO_11_00"); //Welcome to my shop, stranger!
+	if (Npc_GetDistToWP(self, "NW_CITY_HUT_BOSPER_MERCHANT") < 500)
+	{
+		AI_Output (self, other, "DIA_Bosper_HALLO_11_00"); //Welcome to my shop, stranger!
+	};
 	AI_Output (self, other, "DIA_Bosper_HALLO_11_01"); //I am Bosper. I craft bows and trade in furs.
 	AI_Output (self, other, "DIA_Bosper_HALLO_11_02"); //What brings you to Khorinis?
 	

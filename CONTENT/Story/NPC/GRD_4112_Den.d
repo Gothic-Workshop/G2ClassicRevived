@@ -32,7 +32,7 @@ instance GRD_4112_Den (Npc_Default)
 	CreateInvItems (self, ItMi_GoldNecklace,   1);	
 	// ------ visuals ------																			
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Grim, BodyTex_N, ITAR_REVIVED_PAL_L_03);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Grim, BodyTex_N, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 

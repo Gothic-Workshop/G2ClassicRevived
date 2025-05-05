@@ -11,7 +11,7 @@ FUNC VOID B_GiveTradeInv_Matteo (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItLsTorch,5);
-		CreateInvItems (slf, ItPo_Health_01, 1); 
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 1); 
 		CreateInvItems (slf, ItFo_Cheese, 5); 
 		CreateInvItems (slf, ItFo_Bread, 4); 
 		CreateInvItems (slf, ItFo_Water, 1);

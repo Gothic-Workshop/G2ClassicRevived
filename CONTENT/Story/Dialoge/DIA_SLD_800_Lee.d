@@ -85,6 +85,7 @@ FUNC VOID DIA_Lee_PMSchulden_Info()
 
 	if (B_GetTotalPetzCounter(self) > Lee_LastPetzCounter)
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Lee_PMSchulden_04_01"); //I already told you not to do anything stupid here.
 		AI_Output (self, other, "DIA_Lee_PMSchulden_04_02"); //Onar has heard that you've earned yourself quite a record in the meanwhile .
 		if (Lee_Schulden < 1000)
@@ -226,6 +227,7 @@ FUNC VOID DIA_Lee_PETZMASTER_Info()
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Lee_PETZMASTER_04_02"); //It is good that you have come to me before everything becomes even worse for you.
 		AI_Output (self, other, "DIA_Lee_PETZMASTER_04_03"); //The mercenaries are tough lads and the farmers here aren't exactly squeamish, but you can't just go around killing people.
 		Lee_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
@@ -270,6 +272,7 @@ FUNC VOID DIA_Lee_PETZMASTER_Info()
 	// ------ Schaf getötet (nahezu uninteressant - in der City gibt es keine Schafe) ------
 	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Lee_PETZMASTER_04_16"); //Onar expects me to protect his farm. And that includes his sheep.
 		AI_Output (self, other, "DIA_Lee_PETZMASTER_04_17"); //You will have to pay him compensation!
 		
@@ -295,6 +298,9 @@ func void DIA_Lee_PETZMASTER_PayNow()
 {
 	AI_Output (other, self, "DIA_Lee_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
 	B_GiveInvItems (other, self, itmi_gold, Lee_Schulden);
+	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
+		B_SetAttitude (self, ATT_NEUTRAL);
+	};
 	AI_Output (self, other, "DIA_Lee_PETZMASTER_PayNow_04_01"); //Good! I'll see to it that Onar gets the money. You can consider the matter forgotten.
 
 	B_GrantAbsolution (LOC_FARM);
@@ -617,8 +623,8 @@ FUNC VOID DIA_Lee_JoinNOW_Info()
 			other.guild = GIL_SLD;
 			Npc_ExchangeRoutine (Lothar, "START");
 			
-			CreateInvItems (other, ITAR_REVIVED_ORG_H, 1);
-			AI_EquipArmor (other, ITAR_REVIVED_ORG_H);
+			CreateInvItems (other, ITAR_REVIVED_SLD_L, 1);
+			AI_EquipArmor (other, ITAR_REVIVED_SLD_L);
 						
 			Snd_Play ("LEVELUP"); 
 	

@@ -26,7 +26,7 @@ instance BDT_1068_Bandit_L (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Normal01, BodyTex_N, ITAR_REVIVED_SLD_L_BDT);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_Normal01, BodyTex_N, ITAR_REVIVED_BDT_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

@@ -20,13 +20,15 @@ instance PAL_2002_Silvestro  (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																	
-	
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ItMw_1h_Pal_Sword); 
+
+
 	// ------ Inventory ------
 	CreateInvItems (self,ItWr_Silvestro_MIS,1);
-	CreateInvItems (self, ItPO_Mana_02,2);
+	CreateInvItems (self, ITPO_REVIVED_MANA_02,2);
 	CreateInvItems (self,ItmI_Gold,100);
-	CreateInvItems (self,ItPo_Health_02,2);
+	CreateInvItems (self,ITPO_REVIVED_HEALTH_02,2);
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal20, BodyTex_N, ITAR_REVIVED_PAL_H);	

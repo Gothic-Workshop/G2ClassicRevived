@@ -384,8 +384,8 @@ func void DIA_Alrik_WannaFight_NOW()
 	
 	if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
 	{
-		CreateInvItems (self, ItPo_Health_03, 1); 
-		B_UseItem (self, ItPo_Health_03);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 1); 
+		B_UseItem (self, ITPO_REVIVED_HEALTH_03);
 	};
 	
 	AI_StopProcessInfos (self);
@@ -399,8 +399,8 @@ func void DIA_Alrik_WannaFight_Moment()
 	
 	if (self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
 	{
-		CreateInvItems (self, ItPo_Health_03, 1); 
-		B_UseItem (self, ItPo_Health_03);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 1); 
+		B_UseItem (self, ITPO_REVIVED_HEALTH_03);
 	};
 	
 	AI_StopProcessInfos (self);

@@ -466,14 +466,3 @@ func void DIA_1013_BANDIT_PERM_Info ()
 		AI_Output (self, other, "DIA_1013_BANDIT_PERM_01_03"); //I've told you everything I can.
 	};
 };
-
-
-
-
-
-
-
-
-
-
-

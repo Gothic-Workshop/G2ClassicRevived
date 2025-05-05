@@ -14,11 +14,11 @@ const int	Value_FishSoup	=	20;		const int	HP_FishSoup		=	10;
 const int	Value_Sausage	=	30;		const int	HP_Sausage		=	12;
 const int	Value_Honey		=	30;		const int	HP_Honey		=	12;
 
-const int	Value_Water		=	10;		const int	HP_Water		=	8;
+const int	Value_Water		=	8;		const int	HP_Water		=	8;
 const int	Value_Beer		=	20;		const int	HP_Beer			=	3;	const int	Mana_Beer		=	1;
-const int	HP_CoragonBeer	=	3;		const int	Mana_CoragonBeer=	3;
+const int	Value_CoragonBeer		=	40;		const int	HP_CoragonBeer	=	3;		const int	Mana_CoragonBeer=	3;
 
-const int	Value_Booze		=	15;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
+const int	Value_Booze		=	12;		const int	HP_Booze		=	4;	const int	Mana_Booze		=	1;
 const int	Value_Wine		=	20;		const int	HP_Wine			=	2;	const int	Mana_Wine		=	1;
 const int	Value_Milk		=	15; 	const int	HP_Milk			=	5;	const int	Mana_Milk		=	1;	// Joly: Wenn diese Werte geändert werden passt Lobarts Auftrag holMilch nicht mehr!!!!!!
 
@@ -65,15 +65,15 @@ INSTANCE ItFo_Apple (C_Item)
 			
 			if (Apple_Bonus == 7)  
 			{
-				Print	(PRINT_Eat1);
+				Print (PRINT_Eat_Apple1);
 			};
 			if (Apple_Bonus == 15)  
 			{
-				Print (PRINT_Eat2);
+				Print (PRINT_Eat_Apple2);
 			};
 			if (Apple_Bonus == 25)  
 			{
-				Print (PRINT_Eat3);
+				Print (PRINT_Eat_Apple3);
 				B_RaiseAttribute (self,	ATR_STRENGTH, 1);
 				Snd_Play	("LevelUp");
 				Apple_Bonus = 0;
@@ -309,12 +309,12 @@ INSTANCE ItFo_XPStew (C_Item)
 
 INSTANCE ItFo_CoragonsBeer (C_Item)
 {	
-	name 				=	"Beer";
+	name 				=	"Dark Paladin";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
 	
-	value 				=	Value_Beer;
+	value 				=	Value_CoragonBeer;
 	
 	visual 				=	"ItFo_Beer.3DS";
 	material 			=	MAT_GLAS;
@@ -326,7 +326,7 @@ INSTANCE ItFo_CoragonsBeer (C_Item)
 	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_CoragonBeer;
 	
 	TEXT[4]				= 	"Coragon's Special Beer";		
-	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Beer;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_CoragonBeer;
 
 };
 
@@ -477,8 +477,6 @@ INSTANCE ItFo_Beer (C_Item)
 	description			= 	name;
 	TEXT[1]				= 	NAME_Bonus_HP;		COUNT[1]	= HP_Beer;
 	TEXT[2]				= 	NAME_Bonus_Mana;	COUNT[2]	= Mana_Beer;
-	
-	TEXT[4]				= 	"Dark Paladin";		
 	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Beer;
 
 };

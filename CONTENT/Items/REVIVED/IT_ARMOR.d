@@ -1,21 +1,20 @@
 const int ARMOR_VALUE_MULTIPLIER	= 30;	// wird mit Schutzwert gegen EDGE-Schaden multipliziert
 
-const int VALUE_TPL_ARMOR_L = 1350;
-const int VALUE_TPL_ARMOR_M = 1650;
-const int VALUE_TPL_ARMOR_H = 2100;
+const int VALUE_SFB_ARMOR_L = 100;
+const int VALUE_VLK_ARMOR_L = 100;
+const int VALUE_VLK_ARMOR_M = 150;
 
-const int VALUE_STT_ARMOR_M =  750;
-const int VALUE_STT_ARMOR_H = 1200;
+const int VALUE_STT_ARMOR_M = 500;
+const int VALUE_STT_ARMOR_H = 800;
 
 const int VALUE_GRD_ARMOR_L = 1350;
 const int VALUE_GRD_ARMOR_M = 1650;
 const int VALUE_GRD_ARMOR_H = 2100;
+const int VALUE_GRD_ARMOR_S = 2100;
 
-const int VALUE_KDF_ARMOR_L = 1200;
-const int VALUE_KDF_ARMOR_H = 1500;
-
-const int VALUE_KDW_ARMOR_L = 1950;
-const int VALUE_KDW_ARMOR_H = 2100;
+const int VALUE_EBR_ARMOR_L =  750;
+const int VALUE_EBR_ARMOR_M =  750;
+const int VALUE_EBR_ARMOR_H = 1200;
 
 const int VALUE_ORG_ARMOR_L =  750;
 const int VALUE_ORG_ARMOR_M = 1050;
@@ -25,14 +24,33 @@ const int VALUE_SLD_ARMOR_L = 1350;
 const int VALUE_SLD_ARMOR_M = 1650;
 const int VALUE_SLD_ARMOR_H = 2100;
 
-const int VALUE_NOV_ARMOR_L = 500;
+const int VALUE_KDF_ARMOR_L = 1200;
+const int VALUE_KDF_ARMOR_M = 1500;
+const int VALUE_KDF_ARMOR_H = 1500;
+const int VALUE_KDF_ARMOR_S = 1500;
+
+const int VALUE_KDW_ARMOR_L = 1950;
+const int VALUE_KDW_ARMOR_M = 2100;
+const int VALUE_KDW_ARMOR_H = 2100;
+const int VALUE_KDW_ARMOR_S = 2100;
+
+const int VALUE_DMT_ARMOR_L = 1200;
+const int VALUE_DMT_ARMOR_M = 1500;
+const int VALUE_DMT_ARMOR_H = 1500;
+const int VALUE_DMT_ARMOR_S = 1500;
+
+const int VALUE_PAL_ARMOR_L = 1200;
+const int VALUE_PAL_ARMOR_M = 1500;
+const int VALUE_PAL_ARMOR_H = 1500;
+const int VALUE_PAL_ARMOR_S = 1500;
+
+const int VALUE_BDT_ARMOR_L = 250;
+const int VALUE_BDT_ARMOR_M = 550;
+const int VALUE_BDT_ARMOR_H = 1000;
+
 const int VALUE_NOV_ARMOR_M = 750;
-const int VALUE_NOV_ARMOR_H = 1200;
 
-const int VALUE_VLK_ARMOR_L = 250;
-const int VALUE_VLK_ARMOR_M = 500;
-
-const int VALUE_SFB_ARMOR_L = 250;
+const int VALUE_TPL_ARMOR_H = 2100;
 
 //****************************************************************************
 //			OLD CAMP
@@ -55,8 +73,8 @@ instance ITAR_REVIVED_VLK_L(C_Item)
 
 	wear 					=	WEAR_TORSO;
  
-	visual 					=	"vlkl.3ds";
-	visual_change 			=	"Hum_VLKL_ARMOR.asc";
+	visual 					=	"REV_VLKL.3ds";
+	visual_change 			=	"REV_ARMOR_VLK_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -86,8 +104,8 @@ instance ITAR_REVIVED_VLK_M(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"vlkm.3ds";
-	visual_change 			=	"Hum_VLKM_ARMOR.asc";
+	visual 					=	"REV_VLKM.3ds";
+	visual_change 			=	"REV_ARMOR_VLK_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -119,8 +137,8 @@ instance ITAR_REVIVED_STT_M(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sttm.3ds";
-	visual_change 			=	"Hum_STTM_ARMOR.asc";
+	visual 					=	"REV_STTM.3ds";
+	visual_change 			=	"REV_ARMOR_STT_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -150,8 +168,8 @@ instance ITAR_REVIVED_STT_H(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"stth.3ds";
-	visual_change 			=	"Hum_STTS_ARMOR.asc";
+	visual 					=	"REV_STTH.3ds";
+	visual_change 			=	"REV_ARMOR_STT_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -183,8 +201,8 @@ instance ITAR_REVIVED_GRD_L(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"grdl.3ds";
-	visual_change 			=	"Hum_GRDL_ARMOR.asc";
+	visual 					=	"REV_GRDL.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 	
@@ -217,8 +235,8 @@ instance ITAR_REVIVED_GRD_M(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"grdm.3ds";
-	visual_change 			=	"Hum_GRDM_ARMOR.asc";
+	visual 					=	"REV_GRDM.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 	
@@ -251,10 +269,44 @@ instance ITAR_REVIVED_GRD_H(C_Item)
 
 	wear 					=	WEAR_TORSO;
  
-	visual 					=	"grdh.3ds";
-	visual_change 			=	"Hum_GRDS_ARMOR.asc";
+	visual 					=	"REV_GRDH.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+instance ITAR_REVIVED_GRD_S(C_Item)
+{
+	name 					=	"Guardsman Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	70;
+	protection [PROT_BLUNT] = 	70;
+	protection [PROT_POINT] = 	70;
+	protection [PROT_FIRE] 	= 	10;
+	protection [PROT_MAGIC] = 	10;
+
+	value 					=	VALUE_GRD_ARMOR_S;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_GRDS.3ds";
+	visual_change 			=	"REV_ARMOR_GRD_S.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_WOOD;
 	
 	on_equip				=	Equip_GRD_ARMOR;
 	on_unequip				=	UnEquip_GRD_ARMOR;
@@ -318,14 +370,14 @@ instance ITAR_REVIVED_EBR_L(C_Item)
 	protection [PROT_FIRE] 	= 	35;
 	protection [PROT_MAGIC] = 	5;
 
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	value 					=	VALUE_EBR_ARMOR_L;
 
 	wear 					=	WEAR_TORSO;
     //ownerGuild 				= 	GIL_EBR;
 
 
-	visual 					=	"ebrm.3ds";
-	visual_change 			=	"Hum_EBRM_ARMOR.asc";
+	visual 					=	"REV_EBRM.3ds";
+	visual_change 			=	"REV_ARMOR_EBR_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -356,8 +408,8 @@ instance ITAR_REVIVED_EBR_M(C_Item)
 	wear 					=	WEAR_TORSO;
     //ownerGuild 				= 	GIL_EBR;
 
-	visual 					=	"ebrh2.3ds";
-	visual_change 			=	"Hum_EBRS_ARMOR2.asc";
+	visual 					=	"REV_EBRH.3ds";
+	visual_change 			=	"REV_ARMOR_EBR_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
@@ -374,7 +426,6 @@ instance ITAR_REVIVED_EBR_H(C_Item)
 {
 	name 					=	"Gomez' Armor";
 
-
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
@@ -390,8 +441,8 @@ instance ITAR_REVIVED_EBR_H(C_Item)
   	//ownerGuild 				= 	GIL_EBR;
 
 	//owner					=   EBR_100_GOMEZ;
-	visual 					=	"ebrh.3ds";
-	visual_change 			=	"Hum_EBRS_ARMOR.asc";
+	visual 					=	"REV_EBRS.3ds";
+	visual_change 			=	"REV_ARMOR_EBR_S.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
@@ -425,8 +476,8 @@ instance ITAR_REVIVED_SFB_L(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sfbl.3ds";
-	visual_change 			=	"Hum_SFBL_ARMOR.asc";
+	visual 					=	"REV_SFBL.3ds";
+	visual_change 			=	"REV_ARMOR_SFB_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -458,8 +509,8 @@ instance ITAR_REVIVED_ORG_L(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"orgl.3ds";
-	visual_change 			=	"Hum_ORGL_ARMOR.asc";
+	visual 					=	"REV_ORGL.3ds";
+	visual_change 			=	"REV_ARMOR_ORG_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -489,8 +540,8 @@ instance ITAR_REVIVED_ORG_M(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"orgm.3ds";
-	visual_change 			=	"Hum_ORGM_ARMOR.asc";
+	visual 					=	"REV_ORGM.3ds";
+	visual_change 			=	"REV_ARMOR_ORG_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -520,8 +571,8 @@ instance ITAR_REVIVED_ORG_H(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"orgh.3ds";
-	visual_change 			=	"Hum_ORGS_ARMOR.asc";
+	visual 					=	"REV_ORGH.3ds";
+	visual_change 			=	"REV_ARMOR_ORG_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -553,8 +604,8 @@ instance ITAR_REVIVED_SLD_L(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sldl.3ds";
-	visual_change 			=	"Hum_SLDL_ARMOR.asc";
+	visual 					=	"REV_SLDL.3ds";
+	visual_change 			=	"REV_ARMOR_SLD_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 	
@@ -587,8 +638,8 @@ instance ITAR_REVIVED_SLD_M(C_Item)
 
 	wear 					=	WEAR_TORSO;
  
-	visual 					=	"sldm.3ds";
-	visual_change 			=	"Hum_SLDM_ARMOR.asc";
+	visual 					=	"REV_SLDM.3ds";
+	visual_change 			=	"REV_ARMOR_SLD_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 	
@@ -621,8 +672,8 @@ instance ITAR_REVIVED_SLD_H(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sldh.3ds";
-	visual_change 			=	"Hum_SLDS_ARMOR.asc";
+	visual 					=	"REV_SLDH.3ds";
+	visual_change 			=	"REV_ARMOR_SLD_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 	
@@ -676,40 +727,9 @@ FUNC VOID UnEquip_SLD_ARMOR()
 //			PSI CAMP
 //****************************************************************************
 
-instance ITAR_REVIVED_NOV_L(C_Item)
-{
-	name 					=	"Novice's Loincloth";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=   15;
-	protection [PROT_BLUNT] = 	15;
-	protection [PROT_POINT] = 	0;
-	protection [PROT_FIRE] 	= 	10;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_NOV_ARMOR_L;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"novl.3ds";
-	visual_change 			=	"Hum_NOVL_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
 instance ITAR_REVIVED_NOV_M(C_Item)
 {
-	name 					=	"Light Novice's Armor";
+	name 					=	"Novice's Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -724,105 +744,10 @@ instance ITAR_REVIVED_NOV_M(C_Item)
 	value 					=	VALUE_NOV_ARMOR_M;
 
  
-	visual 					=	"novm.3ds";
-	visual_change 			=	"Hum_NOVM_ARMOR.asc";
+	visual 					=	"REV_NOVM.3ds";
+	visual_change 			=	"REV_ARMOR_NOV_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_NOV_H(C_Item)
-{
-	name 					=	"Novice's Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
-	protection [PROT_POINT] = 	5;
-	protection [PROT_FIRE] 	= 	20;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_NOV_ARMOR_H;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"novh.3ds";
-	visual_change 			=	"Hum_NOVS_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-/******************************************************************************************/
-
-instance ITAR_REVIVED_TPL_L(C_Item)
-{
-	name 					=	"Light Templar's Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	45;
-	protection [PROT_BLUNT] = 	45;
-	protection [PROT_POINT] = 	5;
-	protection [PROT_FIRE] 	= 	20;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_TPL_ARMOR_L;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"tpll.3ds";
-	visual_change 			=	"Hum_TPLL_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_TPL_M(C_Item)
-{
-	name 					=	"Templar's Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	55;
-	protection [PROT_BLUNT] = 	55;
-	protection [PROT_POINT] = 	10;
-	protection [PROT_FIRE] 	= 	25;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_TPL_ARMOR_M;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"tplm.3ds";
-	visual_change 			=	"Hum_TPLM_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -842,16 +767,16 @@ instance ITAR_REVIVED_TPL_H(C_Item)
 
 	protection [PROT_EDGE]	=	70;
 	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	10;
-	protection [PROT_FIRE] 	= 	35;
-	protection [PROT_MAGIC] = 	0;
+	protection [PROT_POINT] = 	60;
+	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_MAGIC] = 	25;
 
 	value 					=	VALUE_TPL_ARMOR_H;
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"tplh.3ds";
-	visual_change 			=	"Hum_TPLS_ARMOR.asc";
+	visual 					=	"REV_TPLS.3ds";
+	visual_change 			=	"REV_ARMOR_TPL_S.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
@@ -870,22 +795,55 @@ instance ITAR_REVIVED_TPL_H(C_Item)
 
 instance ITAR_REVIVED_KDF_L(C_Item)
 {
-	name 					=	"Fire Robe";
+	name 					=	"Fire Mage's Robe";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_MAGIC] = 	20;
+	wear 					=	WEAR_TORSO;
+
+ 	value 					=	VALUE_KDF_ARMOR_L;
+
+	visual 					=	"REV_KDFL.3ds";
+	visual_change 			=	"REV_ARMOR_KDF_L.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+	
+	on_equip				=	Equip_KDF_ARMOR;
+	on_unequip				=	UnEquip_KDF_ARMOR;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+instance ITAR_REVIVED_KDF_M(C_Item)
+{
+	name 					=	"Robe of Fire";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
 	protection [PROT_EDGE]	=	65;
 	protection [PROT_BLUNT] = 	65;
-	protection [PROT_POINT] = 	5;
+	protection [PROT_POINT] = 	40;
 	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	15;
+	protection [PROT_MAGIC] = 	40;
 	wear 					=	WEAR_TORSO;
 
  	value 					=	VALUE_KDF_ARMOR_L;
 
-	visual 					=	"kdfl.3ds";
-	visual_change 			=	"Hum_KDFL_ARMOR.asc";
+	visual 					=	"REV_KDFM.3ds";
+	visual_change 			=	"REV_ARMOR_KDF_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 	
@@ -908,17 +866,17 @@ instance ITAR_REVIVED_KDF_H(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	100;
+	protection [PROT_MAGIC] = 	100;
 	wear 					=	WEAR_TORSO;
 
 	value 					=	VALUE_KDF_ARMOR_H;
 
-	visual 					=	"kdfh.3ds";
-	visual_change 			=	"Hum_KDFS_ARMOR.asc";
+	visual 					=	"REV_KDFH.3ds";
+	visual_change 			=	"REV_ARMOR_KDF_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 	
@@ -972,23 +930,54 @@ FUNC VOID UnEquip_KDF_ARMOR()
 
 instance ITAR_REVIVED_KDW_L(C_Item)
 {
-	name 					=	"Water Robe";
+	name 					=	"Water Mage's Robe";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	40;
+	protection [PROT_BLUNT] = 	40;
+	protection [PROT_POINT] = 	40;
+	protection [PROT_FIRE] 	= 	20;
+	protection [PROT_MAGIC] = 	20;
+
+	value 					=	VALUE_KDW_ARMOR_L;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_KDWL.3ds";
+	visual_change 			=	"REV_ARMOR_KDW_L.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+	//TEXT[0]				=	"";
+	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
+};
+
+instance ITAR_REVIVED_KDW_M(C_Item)
+{
+	name 					=	"Robe of Water";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
 	protection [PROT_EDGE]	=	65;
 	protection [PROT_BLUNT] = 	65;
-	protection [PROT_POINT] = 	5;
+	protection [PROT_POINT] = 	40;
 	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	15;
+	protection [PROT_MAGIC] = 	40;
 
 	value 					=	VALUE_KDW_ARMOR_L;
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"kdwl.3ds";
-	visual_change 			=	"Hum_KDWL_ARMOR.asc";
+	visual 					=	"REV_KDWM.3ds";
+	visual_change 			=	"REV_ARMOR_KDW_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1008,82 +997,17 @@ instance ITAR_REVIVED_KDW_H(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
+	protection [PROT_EDGE]	=	80;
+	protection [PROT_BLUNT] = 	80;
+	protection [PROT_POINT] = 	80;
+	protection [PROT_FIRE] 	= 	100;
+	protection [PROT_MAGIC] = 	100;
 	wear 					=	WEAR_TORSO;
 
 	value 					=	VALUE_KDW_ARMOR_H;
 
-	visual 					=	"kdwh.3ds";
-	visual_change 			=	"Hum_KDWS_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-/******************************************************************************************/
-
-instance ITAR_REVIVED_GUR_M(C_Item)
-{
-	name 					=	"Guru's Robe";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	65;
-	protection [PROT_BLUNT] = 	65;
-	protection [PROT_POINT] = 	5;
-	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	15;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-	wear 					=	WEAR_TORSO;
-    //ownerGuild 				= 	GIL_GUR;
-
-	visual 					=	"gurm.3ds";
-	visual_change 			=	"Hum_GURM_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_GUR_H(C_Item)
-{
-	name 					=	"High Robe of the Gurus";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
-	wear 					=	WEAR_TORSO;
-
- 	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-   //ownerGuild 				= 	GIL_GUR;
-	visual 					=	"gurh.3ds";
-	visual_change 			=	"Hum_GURS_ARMOR.asc";
+	visual 					=	"REV_KDWH.3ds";
+	visual_change 			=	"REV_ARMOR_KDW_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1115,8 +1039,8 @@ instance ITAR_REVIVED_DMT_L (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"Nowicjusz_M_Dark.3ds";
-	visual_change 			=	"Nowicjusz_M_Dark.asc";
+	visual 					=	"REV_DMTL.3ds";
+	visual_change 			=	"REV_ARMOR_DMT_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 	
@@ -1145,9 +1069,9 @@ instance ITAR_REVIVED_DMT_M(C_Item)
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	120;
-	protection [PROT_BLUNT] = 	120;
-	protection [PROT_POINT] = 	60;
+	protection [PROT_EDGE]	=	100;
+	protection [PROT_BLUNT] = 	100;
+	protection [PROT_POINT] = 	100;
 	protection [PROT_FIRE] 	= 	80;
 	protection [PROT_MAGIC] = 	105;
 
@@ -1157,8 +1081,8 @@ instance ITAR_REVIVED_DMT_M(C_Item)
 
 	//ownerGuild 				= 	GIL_DMB;
 
-	visual 					=	"dmbm.3ds";
-	visual_change 			=	"Hum_DMBM_ARMOR.asc";
+	visual 					=	"REV_DMTM.3ds";
+	visual_change 			=	"REV_ARMOR_DMT_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1188,8 +1112,8 @@ instance ITAR_REVIVED_DMT_H (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"ItAr_Xardas.3ds";
-	visual_change 			=	"Armor_Xardas_H.asc";
+	visual 					=	"REV_DMTH.3ds";
+	visual_change 			=	"REV_ARMOR_DMT_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1207,34 +1131,29 @@ instance ITAR_REVIVED_DMT_H (C_Item)
 	COUNT[5]				= 	value;
 };
 
-//****************************************************************************
-//			GOTHIC ALPHA INSPIRED
-//****************************************************************************
-
-instance ITAR_REVIVED_GRD_M_02(C_Item)
+instance ITAR_REVIVED_DMT_S (C_Item)
 {
-	name 					=	"Guard's Armor";
+	name 					=	"Seeker's Robe";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
 
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
-	protection [PROT_FIRE] 	= 	10;
-	protection [PROT_MAGIC] = 	10;
-
-	value 					=	VALUE_GRD_ARMOR_M;
+	protection [PROT_EDGE]	=	120;
+	protection [PROT_BLUNT] = 	120;
+	protection [PROT_POINT] = 	60;
+	protection [PROT_FIRE] 	= 	80;
+	protection [PROT_MAGIC] = 	105;
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"grdm.3ds";
-	visual_change 			=	"AlphaGRDMfixed.asc";
+ 	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+
+	//ownerGuild 				= 	GIL_DMB;
+
+	visual 					=	"REV_DMTS.3ds";
+	visual_change 			=	"REV_ARMOR_DMT_S.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
-	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -1246,12 +1165,12 @@ instance ITAR_REVIVED_GRD_M_02(C_Item)
 };
 
 //****************************************************************************
-//			GOTHIC 1 MODIFIED
+//			BANDITS
 //****************************************************************************
 
-instance ITAR_REVIVED_SLD_L_BDT(C_Item)
+instance ITAR_REVIVED_BDT_L (C_Item)
 {
-	name 					=	"Light Mercenary's Armor";
+	name 					=	"Light Bandit Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1266,13 +1185,10 @@ instance ITAR_REVIVED_SLD_L_BDT(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sldl.3ds";
-	visual_change 			=	"ARMOR_SLD_L_Fixed.asc";
+	visual 					=	"REV_BDTL.3ds";
+	visual_change 			=	"REV_ARMOR_BDT_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
-	
-	on_equip				=	Equip_SLD_ARMOR;
-	on_unequip				=	UnEquip_SLD_ARMOR;
 
 	description				=	name;
 	//TEXT[0]				=	"";
@@ -1283,11 +1199,9 @@ instance ITAR_REVIVED_SLD_L_BDT(C_Item)
 	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
 };
 
-/******************************************************************************************/
-
-instance ITAR_REVIVED_STT_L_BDT(C_Item)
+instance ITAR_REVIVED_BDT_M (C_Item)
 {
-	name 					=	"Old Shadow's Dress";
+	name 					=	"Bandit Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1302,8 +1216,8 @@ instance ITAR_REVIVED_STT_L_BDT(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sttm.3ds";
-	visual_change 			=	"Schattenbuddler.asc";
+	visual 					=	"REV_BDTM.3ds";
+	visual_change 			=	"REV_ARMOR_BDT_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1315,9 +1229,10 @@ instance ITAR_REVIVED_STT_L_BDT(C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
 };
-instance ITAR_REVIVED_STT_L_BDT_02(C_Item)
+
+instance ITAR_REVIVED_BDT_H (C_Item)
 {
-	name 					=	"Old Shadow's Dress";
+	name 					=	"Heavy Bandit Armor";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -1332,8 +1247,8 @@ instance ITAR_REVIVED_STT_L_BDT_02(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"sttm.3ds";
-	visual_change 			=	"Hum_SttL_Armor_real.asc";
+	visual 					=	"REV_BDTH.3ds";
+	visual_change 			=	"REV_ARMOR_BDT_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -1345,352 +1260,6 @@ instance ITAR_REVIVED_STT_L_BDT_02(C_Item)
 	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
 	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
 };
-
-instance ITAR_REVIVED_STT_M_BDT(C_Item)
-{
-	name 					=	"Old Shadow's Dress";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	30;
-	protection [PROT_BLUNT] = 	30;
-	protection [PROT_POINT] = 	5;
-	protection [PROT_FIRE] 	= 	15;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_STT_ARMOR_M;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"sttm.3ds";
-	visual_change 			=	"Hum_STTM_ARMOR_delaCroix.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_STT_H_BDT(C_Item)
-{
-	name 					=	"Old Shadow's Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	40;
-	protection [PROT_BLUNT] = 	40;
-	protection [PROT_POINT] = 	5;
-	protection [PROT_FIRE] 	= 	20;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_STT_ARMOR_H;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"stth.3ds";
-	visual_change 			=	"Hum_STTS_ARMOR_delaCroix.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-//****************************************************************************
-//			GOTHIC 2 MODIFIED
-//****************************************************************************
-INSTANCE ITAR_JUDGE_02 (C_Item)
-{
-	name 					=	"Judge's Robe (without hat)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	10;
-	protection [PROT_BLUNT] = 	10;
-	protection [PROT_POINT] = 	10;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_ITAR_JUDGE;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Governor.3DS";
-	visual_change 			=	"Richter_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_PAL_M_02 (C_Item)
-{
-	name 					=	"Knight's Armor (without helmet)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	25;
-	
-	value 					=	VALUE_ITAR_PAL_M;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Pal_M.3ds";
-	visual_change 			=	"PaladinM_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-	
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_PAL_H_02 (C_Item)
-{
-	name 					=	"Paladin's Armor (without helmet)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	150;
-	protection [PROT_BLUNT] = 	150;
-	protection [PROT_POINT] = 	150;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	50;
-
-	value 					=	VALUE_ITAR_PAL_H;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Pal_H.3ds";
-	visual_change 			=	"PaladinS_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_PAL_SKEL_02 (C_Item)
-{
-	name 					=	"Old Knight's Armor (without helmet)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	100;
-	protection [PROT_FIRE] 	= 	50;
-	protection [PROT_MAGIC] = 	50;
-
-	value 					=	VALUE_ITAR_PAL_SKEL;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Pal_H.3ds";
-	visual_change 			=	"PaladinOld_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_DJG_M_02 (C_Item)
-{
-	name 					=	"Medium Dragon Hunter's Armor (without helmet)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	120;
-	protection [PROT_BLUNT]	= 	120;
-	protection [PROT_POINT] = 	120;
-	protection [PROT_FIRE] 	= 	75;
-	protection [PROT_MAGIC] = 	35;
-
-	value 					=	VALUE_ITAR_DJG_M;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Djg_M.3ds";
-	visual_change 			=	"DrachenjaegerM_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-	
-	TEXT[1]					=	NAME_Prot_Edge;		
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_DJG_H_02 (C_Item)
-{
-	name 					=	"Heavy Dragon Hunter's Armor (without helmet)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	150;
-	protection [PROT_BLUNT] = 	150;
-	protection [PROT_POINT] = 	150;
-	protection [PROT_FIRE] 	= 	100;
-	protection [PROT_MAGIC] = 	50;
-
-	value 					=	VALUE_ITAR_DJG_H;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_Djg_H.3ds";
-	visual_change 			=	"DrachenjaegerS_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-
-	description				=	name;
-
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-// ******************************************************
-INSTANCE ITAR_PIR_H_Addon_02 (C_Item)
-{
-	name 					=	"Captain's clothes (without hat)";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	60;
-	protection [PROT_BLUNT] = 	60;
-	protection [PROT_POINT] = 	60;
-	protection [PROT_FIRE] 	= 	0;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	VALUE_ITAR_PIR_H_Addon;
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"ItAr_PIR_H_ADDON.3ds";
-	visual_change 			=	"Kapitaen_OhneHelm.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-
-	TEXT[1]					=	NAME_Prot_Edge;			
-	COUNT[1]				= 	protection	[PROT_EDGE];
-	
-	TEXT[2]					=	NAME_Prot_Point;		
-	COUNT[2]				= 	protection	[PROT_POINT];
-	
-	TEXT[3] 				=	NAME_Prot_Fire;			
-	COUNT[3]				= 	protection	[PROT_FIRE];
-	
-	TEXT[4]					=	NAME_Prot_Magic;		
-	COUNT[4]				= 	protection	[PROT_MAGIC];
-	
-	TEXT[5]					=	NAME_Value;			
-	COUNT[5]				= 	value;
-};
-
 
 //****************************************************************************
 //			ROYAL GUARD / PALADINS
@@ -1714,78 +1283,8 @@ instance ITAR_REVIVED_PAL_L(C_Item)
 	wear 					=	WEAR_TORSO;
     //ownerGuild 				= 	GIL_GRD;
 
-	visual 					=	"grdi.3ds";
-	visual_change 			=	"Hum_GRDI_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_PAL_L_02(C_Item)
-{
-	name 					=	"Royal Guard Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE] 	=	80;
-	protection [PROT_BLUNT] = 	80;
-	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	30;
-	protection [PROT_MAGIC] = 	20;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-	wear 					=	WEAR_TORSO;
-    //ownerGuild 				= 	GIL_GRD;
-
-	visual 					=	"grdi.3ds";
-	visual_change 			=	"AlphaGRDIfixed.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_METAL;
-	
-	on_equip				=	Equip_GRD_ARMOR;
-	on_unequip				=	UnEquip_GRD_ARMOR;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_PAL_L_03(C_Item)
-{
-	name 					=	"Royal Guard Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE] 	=	80;
-	protection [PROT_BLUNT] = 	80;
-	protection [PROT_POINT] = 	40;
-	protection [PROT_FIRE] 	= 	30;
-	protection [PROT_MAGIC] = 	20;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-	wear 					=	WEAR_TORSO;
-    //ownerGuild 				= 	GIL_GRD;
-
-	visual 					=	"HUM_PALL_ARMOR.3ds";
-	visual_change 			=	"HUM_PALL_ARMOR.asc";
+	visual 					=	"REV_PALL.3ds";
+	visual_change 			=	"REV_ARMOR_PAL_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 	
@@ -1818,10 +1317,13 @@ INSTANCE ITAR_REVIVED_PAL_M (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"HUM_PALM_ARMOR.3ds";
-	visual_change 			=	"HUM_PALM_ARMOR.asc";
+	visual 					=	"REV_PALM.3ds";
+	visual_change 			=	"REV_ARMOR_PAL_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 	
@@ -1858,10 +1360,13 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"HUM_PALH_ARMOR.3ds";
-	visual_change 			=	"HUM_PALH_ARMOR.asc";
+	visual 					=	"REV_PALH.3ds";
+	visual_change 			=	"REV_ARMOR_PAL_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 
@@ -1881,7 +1386,7 @@ INSTANCE ITAR_REVIVED_PAL_H (C_Item)
 	COUNT[5]				= 	value;
 };
 
-INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
+INSTANCE ITAR_REVIVED_PAL_S (C_Item)
 {
 	name 					=	"Heavy Paladin Armor (without helmet)";
 
@@ -1898,10 +1403,13 @@ INSTANCE ITAR_REVIVED_PAL_H_02 (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"HUM_PALS_ARMOR.3ds";
-	visual_change 			=	"HUM_PALS_ARMOR.asc";
+	visual 					=	"REV_PALS.3ds";
+	visual_change 			=	"REV_ARMOR_PAL_S.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
+	
+	on_equip				=	Equip_GRD_ARMOR;
+	on_unequip				=	UnEquip_GRD_ARMOR;
 
 	description				=	name;
 
@@ -1943,8 +1451,8 @@ instance ITAR_REVIVED_DEMONHUNTER(C_Item)
 	wear 					=	WEAR_TORSO;
     //ownerGuild 				= 	GIL_GRD;
 
-	visual 					=	"ITAR_DHT2S.3ds";
-	visual_change 			=	"HUM_DHT2S_ARMOR.asc";
+	visual 					=	"REV_DHT.3ds";
+	visual_change 			=	"REV_ARMOR_DHT.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
@@ -1975,8 +1483,8 @@ instance ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 	wear 					=	WEAR_TORSO;
     //ownerGuild 				= 	GIL_GRD;
 
-	visual 					=	"ITAR_DHT2S2.3ds";
-	visual_change 			=	"HUM_DHT2S_ARMOR2.asc";
+	visual 					=	"REV_DHTS.3ds";
+	visual_change 			=	"REV_ARMOR_DHTS.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
@@ -1993,11 +1501,9 @@ instance ITAR_REVIVED_DEMONHUNTER_02(C_Item)
 //			SPECIAL
 //****************************************************************************
 
-
-
 instance ITAR_REVIVED_TPL_SKE(C_Item)
 {
-	name 					=	"Heavy Templar's Armor";
+	name 					=	"Heavy Templar's Armor (skeleton)";
 
 	mainflag 				=	ITEM_KAT_ARMOR;
 	flags 					=	0;
@@ -2012,147 +1518,13 @@ instance ITAR_REVIVED_TPL_SKE(C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"tplh.3ds";
-	visual_change 			=	"Armor_SkeWarrior.asc";
+	visual 					=	"REV_TPLS.3ds";
+	visual_change 			=	"REV_ARMOR_TPL_SKELETON.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_METAL;
 
 	description				=	name;
 	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-/******************************************************************************************/
-
-
-instance ITAR_REVIVED_LAW(C_Item)
-{
-	name 					=	"Judge's Robe";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE] 	= 	20;
-	protection [PROT_BLUNT] = 	20;
-	protection [PROT_POINT] = 	2;
-	protection [PROT_FIRE] 	= 	10;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-	wear 					=	WEAR_TORSO;
-    //ownerGuild 				= 	GIL_DMB;
-
-	visual 					=	"dmbm.3ds";
-	visual_change 			=	"Hum_LAW_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_LEATHER;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-/******************************************************************************************/
-
-instance ITAR_REVIVED_CRAWLER(C_Item)
-{
-	name 					=	"Crawler Plate Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE]	=	70;
-	protection [PROT_BLUNT] = 	70;
-	protection [PROT_POINT] = 	70;
-	protection [PROT_FIRE] 	= 	15;
-	protection [PROT_MAGIC] = 	0;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
-
-	wear 					=	WEAR_TORSO;
-	visual 					=	"crws.3ds";
-	visual_change 			=	"Hum_CRAWLER_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_WOOD;
-	
-	on_equip				=	Equip_ITAR_DJG_Crawler;
-	on_unequip				=	UnEquip_ITAR_DJG_Crawler;
-
-	description				=	name;
-	//TEXT[0]				=	"";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-/******************************************************************************************/
-
-instance ITAR_REVIVED_ORE_M(C_Item)
-{
-	name 					=	"Ancient Ore Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE] 	= 	95;
-	protection [PROT_BLUNT] = 	95;
-	protection [PROT_POINT] = 	25;
-	protection [PROT_FIRE] 	= 	40;
-	protection [PROT_MAGIC] = 	10;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER * 2; // x2 weil einzigartig
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"magie.3ds";
-	visual_change 			=	"Hum_MAGIE_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_WOOD;
-
-	description				=	name;
-	TEXT[0]					=	"This ancient armor was made of magic ore.";
-	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
-	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
-	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
-	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]	= protection	[PROT_MAGIC];
-	TEXT[5]					=	NAME_Value;				COUNT[5]	= value;
-};
-
-instance ITAR_REVIVED_ORE_H(C_Item)
-{
-	name 					=	"Improved ore Armor";
-
-	mainflag 				=	ITEM_KAT_ARMOR;
-	flags 					=	0;
-
-	protection [PROT_EDGE] 	= 	100;
-	protection [PROT_BLUNT] = 	100;
-	protection [PROT_POINT] = 	30;
-	protection [PROT_FIRE] 	= 	45;
-	protection [PROT_MAGIC] = 	15;
-
-	value 					=	protection [PROT_EDGE] * ARMOR_VALUE_MULTIPLIER * 2;	// x2 weil einzigartig
-
-	wear 					=	WEAR_TORSO;
-
-	visual 					=	"magie.3ds";
-	visual_change 			=	"Hum_MAGIE_ARMOR.asc";
-	visual_skin 			=	0;
-	material 				=	MAT_WOOD;
-
-	description				=	name;
-	TEXT[0]					=	"Stone, the smith, even managed to improve it!";
 	TEXT[1]					=	NAME_Prot_Edge;			COUNT[1]	= protection	[PROT_EDGE];
 	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]	= protection	[PROT_POINT];
 	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]	= protection	[PROT_FIRE];
@@ -2182,8 +1554,8 @@ instance ITAR_REVIVED_ARCHER (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"ItAr_dlC.3ds";
-	visual_change 			=	"Armor_dlC.asc";
+	visual 					=	"REV_DLC.3ds";
+	visual_change 			=	"REV_ARMOR_DLC.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -2259,8 +1631,8 @@ instance ITAR_REVIVED_BEGGAR (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"ItAr_Prisoner.3ds";
-	visual_change 			=	"HUM_BEG_CLOTHES.asc";
+	visual 					=	"REV_BEGGAR.3ds";
+	visual_change 			=	"REV_ARMOR_BEGGAR.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 
@@ -2283,6 +1655,210 @@ instance ITAR_REVIVED_BEGGAR (C_Item)
 };
 
 //****************************************************************************
+//			GOTHIC 2 MODIFIED
+//****************************************************************************
+INSTANCE ITAR_REVIVED_KNIGHT (C_Item)
+{
+	name 					=	"Old Knight's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	100;
+	protection [PROT_BLUNT] = 	100;
+	protection [PROT_POINT] = 	100;
+	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_MAGIC] = 	50;
+
+	value 					=	VALUE_ITAR_PAL_SKEL;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_RITTER_OLD.3ds";
+	visual_change 			=	"Armor_Pal_Skeleton.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	name;
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_KNIGHT_02 (C_Item)
+{
+	name 					=	"Old Knight's Armor (without helmet)";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	100;
+	protection [PROT_BLUNT] = 	100;
+	protection [PROT_POINT] = 	100;
+	protection [PROT_FIRE] 	= 	50;
+	protection [PROT_MAGIC] = 	50;
+
+	value 					=	VALUE_ITAR_PAL_SKEL;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_RITTER_OLD.3ds";
+	visual_change 			=	"REV_ARMOR_RITTER_OLD.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	name;
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+// ******************************************************
+INSTANCE ITAR_REVIVED_DJG_M (C_Item)
+{
+	name 					=	"Medium Dragon Hunter's Armor (without helmet)";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	120;
+	protection [PROT_BLUNT]	= 	120;
+	protection [PROT_POINT] = 	120;
+	protection [PROT_FIRE] 	= 	75;
+	protection [PROT_MAGIC] = 	35;
+
+	value 					=	VALUE_ITAR_DJG_M;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_DJGMS.3ds";
+	visual_change 			=	"REV_ARMOR_DJG_M.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	name;
+	
+	TEXT[1]					=	NAME_Prot_Edge;		
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+// ******************************************************
+INSTANCE ITAR_REVIVED_DJG_H (C_Item)
+{
+	name 					=	"Heavy Dragon Hunter's Armor (without helmet)";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	150;
+	protection [PROT_BLUNT] = 	150;
+	protection [PROT_POINT] = 	150;
+	protection [PROT_FIRE] 	= 	100;
+	protection [PROT_MAGIC] = 	50;
+
+	value 					=	VALUE_ITAR_DJG_H;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_DJGHS.3ds";
+	visual_change 			=	"REV_ARMOR_DJG_H.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_METAL;
+
+	description				=	name;
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+// ******************************************************
+INSTANCE ITAR_REVIVED_PIR_H (C_Item)
+{
+	name 					=	"Captain's clothes (without hat)";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+
+	protection [PROT_EDGE]	=	60;
+	protection [PROT_BLUNT] = 	60;
+	protection [PROT_POINT] = 	60;
+	protection [PROT_FIRE] 	= 	0;
+	protection [PROT_MAGIC] = 	0;
+
+	value 					=	VALUE_ITAR_PIR_H_Addon;
+
+	wear 					=	WEAR_TORSO;
+
+	visual 					=	"REV_PIRS.3ds";
+	visual_change 			=	"REV_ARMOR_PIR_S.asc";
+	visual_skin 			=	0;
+	material 				=	MAT_LEATHER;
+
+	description				=	name;
+
+	TEXT[1]					=	NAME_Prot_Edge;			
+	COUNT[1]				= 	protection	[PROT_EDGE];
+	
+	TEXT[2]					=	NAME_Prot_Point;		
+	COUNT[2]				= 	protection	[PROT_POINT];
+	
+	TEXT[3] 				=	NAME_Prot_Fire;			
+	COUNT[3]				= 	protection	[PROT_FIRE];
+	
+	TEXT[4]					=	NAME_Prot_Magic;		
+	COUNT[4]				= 	protection	[PROT_MAGIC];
+	
+	TEXT[5]					=	NAME_Value;			
+	COUNT[5]				= 	value;
+};
+
+
+//****************************************************************************
 //			OTHER - SPECIAL - FUN - IDK
 //****************************************************************************
 
@@ -2303,8 +1879,8 @@ instance ITAR_REVIVED_GORDONRAMSAY (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"ebrmGordon.3ds";
-	visual_change 			=	"Hum_EBRM_GORDON_ARMOR.asc";
+	visual 					=	"REV_EBRM_TATUNG.3ds";
+	visual_change 			=	"REV_ARMOR_EBR_M_TATUNG.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
 

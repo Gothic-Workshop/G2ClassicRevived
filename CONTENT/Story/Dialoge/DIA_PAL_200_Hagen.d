@@ -65,6 +65,7 @@ FUNC VOID DIA_Hagen_PMSchulden_Info()
 		
 		if (Hagen_Schulden > 1000)	{	Hagen_Schulden = 1000;	};
 		
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_01"); //You don't take the city laws very seriously, do you?
 		AI_Output (self, other, "DIA_Hagen_PMSchulden_04_02"); //The list of your offenses has grown longer.
 		if (Hagen_Schulden < 1000)
@@ -187,6 +188,7 @@ FUNC VOID DIA_Hagen_PETZMASTER_Info()
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_01"); //You have gotten yourself into a fine mess.
 		AI_Output (self, other, "DIA_Hagen_PETZMASTER_04_02"); //Murder is a serious crime!
 		Hagen_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
@@ -255,6 +257,9 @@ func void DIA_Hagen_PETZMASTER_PayNow()
 {
 	AI_Output (other, self, "DIA_Hagen_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
 	B_GiveInvItems (other, self, itmi_gold, Hagen_Schulden);
+	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
+		B_SetAttitude (self, ATT_NEUTRAL);
+	};
 	AI_Output (self, other, "DIA_Hagen_PETZMASTER_PayNow_04_01"); //Good! I shall see to it that every one in the city learns of it - this will restore your reputation to some degree.
 
 	B_GrantAbsolution (LOC_CITY);

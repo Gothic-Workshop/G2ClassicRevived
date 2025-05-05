@@ -43,5 +43,5 @@ instance SLD_805_Cord (Npc_Default)
 FUNC VOID Rtn_Start_805 ()
 {
 	TA_Practice_Sword 	(07,40,22,40,"NW_BIGFARM_CORD");
-    TA_Sleep			(22,40,07,40,"NW_BIGFARM_HOUSE_08");
+    TA_Sleep			(22,40,07,40,"NW_BIGFARM_MERCHUT_SLEEP_05");
 };

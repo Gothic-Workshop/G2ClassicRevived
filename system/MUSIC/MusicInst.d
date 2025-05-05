@@ -82,7 +82,7 @@ PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 
 INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 {
-	file				= "gamestart.sgt";
+	file				= "";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
@@ -284,7 +284,7 @@ INSTANCE DEF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
 INSTANCE DEF_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
 INSTANCE DEF_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 												
-INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
+//INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
 INSTANCE DEF_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
 INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 
@@ -292,11 +292,11 @@ INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
 // XXXXXXXX  DEFAULT_OLDWORLD [OWD_]  XXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
+//INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
+//INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
+//INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
 												
-INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
+//INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
 INSTANCE OWD_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
 INSTANCE OWD_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
 
@@ -305,8 +305,8 @@ INSTANCE OWD_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 INSTANCE INS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "di_daystd.sgt";		};
-INSTANCE INS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "di_daystd.sgt";		};
-INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "di_daystd.sgt";		};
+//INSTANCE INS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "di_daystd.sgt";		};
+//INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "di_daystd.sgt";		};
 												
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXX  BANDITENHÖHLE[BAN_]      XXXXXXXXXXXX
@@ -334,7 +334,7 @@ INSTANCE DLC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "dlc_dayfgt.sgt";		};
 // XXXXXXXX  KASERNE   [KAS_]         XXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "kas_daystd.sgt";		};
+//INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "kas_daystd.sgt";		};
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXX  KHORINIS   [KHO_]        XXXXXXXXXXXX
@@ -372,7 +372,7 @@ INSTANCE May_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "may_dayfgt.sgt";		};
 INSTANCE MOO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "mo_daystd.sgt";		};
 INSTANCE MOI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "mi_daystd.sgt";		};
 
-INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ban_daystd.sgt";		};
+//INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ban_daystd.sgt";		};
 INSTANCE MOD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ban_dayfgt.sgt";		};
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -626,3 +626,113 @@ INSTANCE TH_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "TH_day_fgt.sgt";					};
 
 INSTANCE TH_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
 
+
+
+
+
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
+// ###############                                                          #######################
+// ###############           zBassMusic Usage Here and shit                 #######################
+// ###############                                                          #######################
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// XXXXXXXX     N E W    W O R L D    XXXXXXXXXXXX
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Default
+INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Tymoris_02Cut.wav";		};
+
+
+
+// Khorinis
+INSTANCE KHO_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KhorinisNgt.wav";	};
+
+// Upper City
+//INSTANCE OBS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KhorinisNgt.wav";	};
+
+// Garrison
+INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Kaserne.mp3";		};
+INSTANCE KAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KASERNE-G1.mp3";		};
+
+
+
+// Monastery Dungeon
+INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Cathedral.mp3";		};
+
+
+
+// Dexter's Camp
+
+
+
+
+// Onar's Manor
+//INSTANCE HOF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BaronsCut.wav";		};
+//INSTANCE HOF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BaronsCut.wav";		};
+
+
+
+// Black Troll
+INSTANCE TRO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "gothic3_demo_thedig_virtual.mp3";		};
+
+
+
+// Second Passage
+INSTANCE PAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "can_day_std.sgt";		};
+//INSTANCE PAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OC_Ngt_Std.mp3";		};
+
+
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// XXXXXXXX     O L D    W O R L D    XXXXXXXXXXXX
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Default
+INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OW_Day_Std.mp3";		};
+INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
+INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owd_daystd.sgt";		};
+INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
+
+
+
+// Demon Tower
+INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "Xardas_Tower_G1_Orchestra_Cover.mp3";		};
+
+
+
+// Stone Fortress
+INSTANCE FOR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BehindTheSkull.mp3";		};
+
+
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+// XXXXX Dragon Locations XXXXX //
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+
+// Troll Canyon
+INSTANCE TRC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
+INSTANCE TRC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+
+// FreeMine Camp
+INSTANCE FMC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
+INSTANCE FMC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+
+// Sea Monastery
+INSTANCE SEA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
+INSTANCE SEA_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+
+
+
+
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// XXXXXXXX      I R D O R A T H      XXXXXXXXXXXX
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+// Default
+INSTANCE INS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "concept03.mp3";		};
+INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_fgt.sgt";		};

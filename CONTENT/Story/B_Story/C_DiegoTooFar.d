@@ -18,48 +18,48 @@ func int C_DiegoTooFar(var int tolerance) //tolerance wichtig in Dialog, sonst m
 	{
 		return LOC_ANGAR;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_ICEREGION_ENTRANCE_01") < (3000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_PATH_07_21_GUARD_MIDDLE") < (3000 + tolerance))
 	{
 		return LOC_ICE;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_PATH_046") < (1800 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_PATH_047") < (1800 + tolerance))
 	{
 		return LOC_SWAMP;
 	}
-	else if (Npc_GetDistToWP (hero, "CASTLE_5") < (1500 + tolerance))
+	else if (Npc_GetDistToWP (hero, "CASTLE_4") < (1500 + tolerance))
 	{
 		return LOC_FIRE;
 	}
-	else if (Npc_GetDistToWP (hero, "MT16") < (6500 + tolerance))
-	||		(Npc_GetDistToWP (hero, "MT13") < (5500 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_PATH_210") < (6500 + tolerance))
+	||		(Npc_GetDistToWP (hero, "MT_09") < (5500 + tolerance))
 	{
 		return LOC_LAKE;
 	}
-	else if (Npc_GetDistToWP (hero, "DT_MAINGATE") < (500 + tolerance))
+	else if (Npc_GetDistToWP (hero, "LOCATION_03_OUT") < (500 + tolerance))
 	|| 		(Wld_GetPlayerPortalGuild() == GIL_DMT)
 	|| 		( (Npc_GetDistToWP (hero, "DT_E3_03") < 1000) && (Npc_GetHeightToNpc(self, hero) > 1000) ) //freies Stück oben
 	{
 		return LOC_XARDAS;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_NEWMINE_03") < (2500 + tolerance))
-	|| 		(Npc_GetDistToWP (hero, "OW_NEWMINE_03_B") < (2500 + tolerance))
+	else if (Npc_GetDistToWP (hero, "LOCATION_23_CAVE_1_OUT") < (2500 + tolerance))
+	|| 		(Npc_GetDistToWP (hero, "LOCATION_23_CAVE_1_OUT_LAKE") < (2500 + tolerance))
 	{
 		return LOC_FAJETHMINE;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_MINE3_OUT") < (1200 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_SILVESTROMINE") < (1200 + tolerance))
 	{
 		return LOC_SILVESTROMINE;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_PATH_266") < (3000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "SPAWN_SNAPPER_OM_ENTRANCE_003") < (3000 + tolerance))
 	{
 		return LOC_GRIMESMINE;
 	}
-	else if (Npc_GetDistToWP (hero, "OC_CENTER_02") < (12000 + tolerance))
-	||		(Npc_GetDistToWP (hero, "OC_CENTER_05") < (12000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OCC_GATE_INSIDE_SMALLTALK") < (12000 + tolerance))
+	||		(Npc_GetDistToWP (hero, "OCC_FIGHTTRAINING") < (12000 + tolerance))
 	{
 		return LOC_BURG;
 	}
-	else if (Npc_GetDistToWP (hero, "OC_ORCBARRIER_08") < (5000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "PATH_OC_TO_WATERFALL03") < (5000 + tolerance))
 	||		(Npc_GetDistToWP (hero, "PATH_OC_PSI_01") < (5000 + tolerance))
 	{
 		return LOC_ORCBARRIER;

@@ -6,6 +6,16 @@ var int Baltram_ItemsGiven_Chapter_5;
 
 FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 {
+		if (BaltramPirateTrade == TRUE)
+		&& (BaltramSellRecipe == FALSE)
+		{
+			CreateInvItems (slf,ITWr_Addon_Lou_Rezept, 1); 
+			CreateInvItems (slf,ITWr_Addon_Lou_Rezept2, 1); 
+			CreateInvItems (slf,ITWr_Addon_Piratentod, 1); 
+
+			BaltramSellRecipe = TRUE;
+		};
+
 	if ((Kapitel >= 1)
 	&& (Baltram_ItemsGiven_Chapter_1 == FALSE))
 	{
@@ -17,6 +27,9 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Cheese, 2); 
 		
 		CreateInvItems (slf,ItAm_Hp_01, 1); 
+
+		CreateInvItems (slf,ItFo_Addon_Rum, 2); 
+		CreateInvItems (slf,ItFo_Addon_Grog, 2); 
 		
 		Baltram_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -31,6 +44,12 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFoMutton, 5); 
 		CreateInvItems (slf,ItFo_Stew , 5); 
 		CreateInvItems (slf,ItFo_Fishsoup, 5); 
+
+		if(BaltramPirateTrade == TRUE)
+		{
+			CreateInvItems (slf,ItFo_Addon_Rum, 2); 
+			CreateInvItems (slf,ItFo_Addon_Grog, 2); 
+		};
 
 		Baltram_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -48,6 +67,12 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Sausage, 5); 
 		CreateInvItems (slf,ItFo_Booze, 5); 
 
+		if(BaltramPirateTrade == TRUE)
+		{
+			CreateInvItems (slf,ItFo_Addon_Rum, 2); 
+			CreateInvItems (slf,ItFo_Addon_Grog, 2); 
+		};
+
 		Baltram_ItemsGiven_Chapter_3 = TRUE;
 	};
 
@@ -63,6 +88,12 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Stew , 5); 
 		CreateInvItems (slf,ItFo_Sausage, 5); 
 		CreateInvItems (slf,ItFo_Bacon, 5); 
+
+		if(BaltramPirateTrade == TRUE)
+		{
+			CreateInvItems (slf,ItFo_Addon_Rum, 4); 
+			CreateInvItems (slf,ItFo_Addon_Grog, 4); 
+		};
 		
 		Baltram_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -79,6 +110,12 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Stew , 5); 
 		CreateInvItems (slf,ItFo_Sausage, 5); 
 		CreateInvItems (slf,ItFo_Bacon, 5); 
+
+		if(BaltramPirateTrade == TRUE)
+		{
+			CreateInvItems (slf,ItFo_Addon_Rum, 4); 
+			CreateInvItems (slf,ItFo_Addon_Grog, 4); 
+		};
 
 		Baltram_ItemsGiven_Chapter_5 = TRUE;
 	};

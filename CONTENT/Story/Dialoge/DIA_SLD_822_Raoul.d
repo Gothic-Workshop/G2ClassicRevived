@@ -513,8 +513,8 @@ func void DIA_Raoul_TROLLFELL_ja ()
 {
 	AI_Output			(other, self, "DIA_Raoul_TROLLFELL_ja_15_00"); //Sold.
 	AI_Output			(self, other, "DIA_Raoul_TROLLFELL_ja_01_01"); //It was a pleasure.
-	CreateInvItems (self, ItPo_Health_03, 3);									
-	B_GiveInvItems (self, other, ItPo_Health_03, 3);					
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 3);									
+	B_GiveInvItems (self, other, ITPO_REVIVED_HEALTH_03, 3);					
 	CreateInvItems (self, ItMi_Gold, 500);									
 	B_GiveInvItems (self, other, ItMi_Gold, 500);					
 	Info_ClearChoices	(DIA_Raoul_TROLLFELL);

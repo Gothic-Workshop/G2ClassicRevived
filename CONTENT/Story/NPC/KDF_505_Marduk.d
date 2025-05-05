@@ -21,7 +21,7 @@ INSTANCE KDF_505_Marduk (Npc_Default)
 	B_CreateAmbientInv 	(self);
 	
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_OldMan_Gravo, BodyTex_P, ITAR_KDF_L);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_OldMan_Gravo, BodyTex_P, ITAR_REVIVED_KDF_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	
@@ -37,6 +37,6 @@ INSTANCE KDF_505_Marduk (Npc_Default)
 
 FUNC VOID Rtn_Start_505 ()
 {	
-	TA_Stand_Guarding		(08,00,23,00,"NW_MONASTERY_CORRIDOR_03");
-    TA_Sleep				(23,00,08,00,"NW_MONASTERY_MAGE01_BED_01");
+	TA_Stand_ArmsCrossed		(08,00,23,00,"NW_MONASTERY_CORRIDOR_05");
+    TA_Sleep					(23,00,08,00,"NW_MONASTERY_MAGE01_BED_01");
 };

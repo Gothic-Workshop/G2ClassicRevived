@@ -2,40 +2,16 @@
 // Quest Log
 // ***************
 
-const string  	theriddle_log 			= 	"The Stranger";
-var int riddle1;
-var int riddle2;
-var int riddle3;
-var int riddle4;
-var int riddle5;
-var int riddle6;
-
-
-var int theHunterRiddle_mis;
-const string  	theHunterRiddle_log 			= 	"Missing hunters";
-var int riddleHuntersFIRST;
-var int riddleHunters1;
-var int riddleHunters2;
-var int riddleHunters3;
-var int riddleHunters4;
-var int riddleHunters5;
-var int riddleHunters6;
-
-
-const string  	theQualshyRiddle_log 			= 	"Shadow";
-var int riddleQualshy1;
-var int riddleQualshy2;
-var int riddleQualshy3;
-var int riddleQualshy4;
-var int riddleQualshy5;
-var int riddleQualshy6;
-
-
 var int			MiltenORPedro_LostInnosStatue_Daron;
 var int 		TOPIC_Revived_DaronStatuette_END;
+
 const string	TOPIC_Revived_DaronStatuette		=	"Fire Mage in turmoil";
 
 const string	TOPIC_Revived_ThievesGuild			=	"Thieves' Guild";
+
+
+const string	TOPIC_Tobacco						=	"Mixing tobacco";
+const string	LogText_TobaccoLearned				=	"By mixing Abuyin's apple tobacco at an alchemist's bench I can make:";
 
 
 const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower can sell me food and frying pans.";
@@ -46,12 +22,38 @@ const string	LogText_Revived_GordonTrade	 		=	"Gordon Ramsay in the broken tower
 // Text
 // ***************
 
+// Death Messages
+const string PRINT_DEATH_MESSAGE_0		=	"Your journey ends here.";
+const string PRINT_DEATH_MESSAGE_1		=	"Maybe you should've spent more learning points.";
+const string PRINT_DEATH_MESSAGE_2		=	"Guess you weren't the Chosen One after all.";
+const string PRINT_DEATH_MESSAGE_3		=	"When was the last time you saved...?";
+const string PRINT_DEATH_MESSAGE_4		=	"You are finally free.";
+
+
+// Eating Bonus Messages
+const string PRINT_Eat_Apple1				= "You feel refreshed.";
+const string PRINT_Eat_Apple2				= "Tastes juicy and fresh.";
+const string PRINT_Eat_Apple3				= "You feel well and strong!";
+const string PRINT_Eat_SourApple1			= "The taste sparks your curiosity.";
+const string PRINT_Eat_SourApple2			= "You feel energized.";
+const string PRINT_Eat_SourApple3			= "You feel agile and alert!";
+const string PRINT_Eat_Pear1				= "Sweet and mellow taste.";
+const string PRINT_Eat_Pear2				= "You feel a strange clarity.";
+const string PRINT_Eat_Pear3				= "You feel open to new knowledge!";
+const string PRINT_Eat_MPMushroom1			= "You feel a spark of energy.";
+const string PRINT_Eat_MPMushroom2			= "The mushroom tingles with magic power.";
+const string PRINT_Eat_MPMushroom3			= "Your mind clears and mana flows!";
+const string PRINT_Eat_HPMushroom1			= "Earthy and rich in taste.";
+const string PRINT_Eat_HPMushroom2			= "The hearty flavor revitalizes you.";
+const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
+
+
 // Items
 const string NAME_RaiseStrDex		=	"Strength and Dexterity +";
-
 const string NAME_RaiseHPMP			=	"Hitpoints and Mana +";
-
 const string NAME_Addon_BeArArcher		= "Together with Archer's Suit +";
+
+const string PRINT_GotFood					= "Package was filled with food";
 
 
 // Spells
@@ -64,7 +66,8 @@ const string NAME_SPL_TrfMeatbug		= "Transform into Meatbug";
 
 // MobInter
 const string _STR_MESSAGE_OCLEVER_STUCKS	= "The lever doesn't move at all."			;
-const string _STR_MESSAGE_OCLEVER_MOVES		= "The statuette moves the lever."			;
+const string _STR_MESSAGE_ORCLEVER_MOVES	= "The statuette moves the lever."			;
+const string _STR_MESSAGE_PILLAR_STUCKS		= "The pillar won't budge."					;
 const string _STR_MESSAGE_WHEEL_STUCKS		= "The winch is jammed."					;
 
 
@@ -73,20 +76,60 @@ CONST STRING MOBNAME_CHESTOLD				= "Old Chest";
 CONST STRING MOBNAME_LEVER					= "Lever";
 CONST STRING MOBNAME_PILLAR					= "Pillar";
 
+CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
+
+CONST STRING MOBNAME_VINEYARD				= "Grapevine";
+
+CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
+
+CONST STRING MOBNAME_ORE_DEPLETED			= "";
+
+
+CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
+
+
+// Adanos Shrine
+
+const string NAME_PRAYADANOS_GIVENOTHING			= "I will pray and offer nothing.";
+const string NAME_PRAYADANOS_GIVELP1				= "I will pray and offer 1 learn point.";
+const string NAME_PRAYADANOS_GIVELP2				= "I will pray and offer 2 learn points.";
+const string NAME_PRAYADANOS_GIVELP3				= "I will pray and offer 3 learn points.";
+const string NAME_PRAYADANOS_GIVEEXP				= "I will pray and offer 1000 experience.";
+
+const string PRINT_PRAYADANOS_Bless1H				= "1H BONUS";
+const string PRINT_PRAYADANOS_Bless2H				= "2H BONUS";
+const string Print_PRAYADANOS_BlessBOW				= "BOW BONUS";
+const string Print_PRAYADANOS_BlessCBOW				= "CBOW BONUS";
+const string Print_PRAYADANOS_BlessWisp				= "Adanos blesses you.";
+const string Print_PRAYADANOS_BlessNone				= "Adanos thanks you for your prayer.";
+
+const string Print_PRAYADANOS_BlessCant				= "Adanos can't take your offering.";
+const string PRINT_BlessMANA_MAX					= "Adanos grants you: Mana + ";
+
+
+const string Print_PRAYBELIAR_GETLP				= "Beliar grants you 1 learn point.";
+
+
+// Cooking
+const string PRINT_CookingSuccess					= "Recipe prepared!";
+
 
 // Alchemy
+const string PRINT_PotionMixSuccess					= "Potions mixed!";
 const string PRINT_BoozeSuccess						= "Booze mixed!";
 const string PRINT_TabakSuccessREVIVED				= "Reefer rolled!";
 
 
-// Bookstands
-const string Print_LearnFromBookstand				= "You seem to have learned something new.";
-const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";
-
-
 // Skills
-const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";		
+const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";	
 
+const string Print_LearnFromBookstand				= "You seem to have learned something new.";
+const string Print_TalentFromBookstand				= "You seem to have picked up a new skill.";	
+
+const string PRINT_LearnBowyer					= "Learn: Bowmaking";
+const string PRINT_LearnCooking					= "Learn: Cooking";
+const string PRINT_LearnTobacco					= "Learn: Blend tobacco";
+const string PRINT_LearnBooze					= "Learn: Distill booze";
 
 
 // ***************
@@ -96,6 +139,17 @@ const string PRINT_ADDON_HACKCHANCE					= "Knowledge of digging improved! (+";
 const int	_TIME_MESSAGE_RAISEATTRIBUTE	=	4;
 
 
+// ***************
+// ZEN Constants
+// ***************
+
+const int ABANDONEDMINE_ZEN = 5;
+var int PlayerPassedAbandonedMine;
+var int EnterAM_Kapitel1;
+var int EnterAM_Kapitel2;
+var int EnterAM_Kapitel3;
+var int EnterAM_Kapitel4;
+var int EnterAM_Kapitel5;
 
 
 // ***************
@@ -133,7 +187,7 @@ var int SCUsed_OW_TELEPORTSTATION_STONEFORTRESS;
 var int SCUsed_AllOWTeleporststones;
 
 
-const int OreMob_All_Amount_MAX = 5;
+const int OreMob_All_Amount_MAX = 3;
 var int OreMob_01_Amount;
 var int OreMob_02_Amount;
 var int OreMob_03_Amount;
@@ -160,6 +214,10 @@ var int OreMob_23_Amount;
 var int OreMob_24_Amount;
 var int OreMob_25_Amount;
 var int OreMob_26_Amount;
+var int OreMob_27_Amount;
+var int OreMob_28_Amount;
+var int OreMob_29_Amount;
+var int OreMob_30_Amount;
 
 
 var int FirstJoint_01;
@@ -173,17 +231,34 @@ var int FirstJoint_HONEY;
 var int FirstJoint_MUSHROOM;
 
 var int OldApple_Bonus;
+var int Pear_Bonus;
 var int OldWine_Bonus;
-var int HellMushroom_Bonus;
+var int DiggerMushroom_Bonus;
+
+
+var int BilgotSecondPass;
+var int BilgotInKhorinis;
+
+var int DragonHunt_OriginalPass;
+var int DragonHunt_SecondPass;
 
 
 var int LesterKeyStolen;
 var int DIA_Peck_BUYARMOR_perm;
 var int DIA_Revived_Gordon_Trade_OneTime;
 
-var int BilgotSecondPass;
-var int TalbinSecondPass;
-var int DJGSecondPass;
+var int CipherBuysWeed;
+
+var int BaltramSellRecipe;
+var int BaltramPirateTrade;
+var int BaltramRatOut;
+var int BaltramInJail;
+
+var int Bounty1;
+var int Bounty2;
+var int Bounty3;
+var int Bounty4;
+var int Bounty5;
 
 
 
@@ -205,10 +280,6 @@ const int	XP_BookstandSpecific		= 50;
 
 const int	XP_BookstandPersonal		= 50;
 const int	XP_BookstandFireContest		= 50;
-
-const int 	XP_Revived_Chromanin		= 50;
-const int 	XP_Revived_MissingPeople	= 50;
-const int 	XP_Revived_QualshyNotes		= 50;
 
 
 
@@ -307,6 +378,65 @@ const int 	SPL_TeleportNC				= 91;
 const int 	SPL_TeleportPsi				= 92;
 
 
+// ***************
+// MOBSI
+// ***************
+
+const int	MOBSI_OREHACKEN					= 8;
+const int	MOBSI_CAULDRON					= 9;
+const int	MOBSI_PRAYADANOS				= 10;	
+
+
+
+
+// ***************
+// TALENTS
+// ***************
+
+const int NPC_TALENT_BOWMAKING			= 10;
+const int NPC_TALENT_COOKING			= 19;
+const int NPC_TALENT_BOOZE				= 20;
+const int NPC_TALENT_TOBACCO			= 21;
+
+
+
+// ***************
+// Swordmaking
+// ***************
+
+const int WEAPON_1H_REVIVED_01			= 13;
+const int WEAPON_1H_REVIVED_02			= 14;
+const int WEAPON_1H_REVIVED_03			= 15;
+const int WEAPON_1H_REVIVED_04			= 16;
+const int WEAPON_2H_REVIVED_01			= 17;
+const int WEAPON_2H_REVIVED_02			= 18;
+const int WEAPON_2H_REVIVED_03			= 19;
+const int WEAPON_2H_REVIVED_04			= 20;
+
+
+const int MAX_WEAPONS_MELEE 			= 21;
+var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
+
+
+
+// ***************
+// Bowmaking
+// ***************
+
+const int WEAPON_BOW_REVIVED_01			= 1;
+const int WEAPON_BOW_REVIVED_02			= 3;
+const int WEAPON_BOW_REVIVED_03			= 5;
+const int WEAPON_BOW_REVIVED_04			= 7;
+const int WEAPON_CBOW_REVIVED_01		= 2;
+const int WEAPON_CBOW_REVIVED_02		= 4;
+const int WEAPON_CBOW_REVIVED_03		= 6;
+const int WEAPON_CBOW_REVIVED_04		= 8;
+
+
+const int MAX_WEAPONS_RANGED 			= 9;
+var int PLAYER_TALENT_BOWYER[MAX_WEAPONS_RANGED];
+
+
 
 // ****************
 // Alchemy
@@ -334,50 +464,57 @@ const int POTION_Perm_MASTER_03  				= 32;
 
 
 // ****************
-// Alchemy (Schnaps)
+// Alchemy (Special)
 // ****************
 
-const int POTION_Booze_LouHammer  						= 33;
-const int POTION_Booze_LouHammerDouble  				= 34;
-const int POTION_Booze_FastHerring  					= 35;
-const int POTION_Booze_TurnipBooze  					= 36;
-const int POTION_Booze_VinoBooze  						= 37;
-const int POTION_Booze_WhiteRum  						= 38;
-const int POTION_Booze_MageWine  						= 39;
-const int POTION_Booze_RiceSchnaps  					= 40;
+const int POTION_Special_Experience		  		= 32;
+const int POTION_Special_DragonDrink	  		= 33;
+
+
+const int MAX_POTION						= 34;
+var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
+
+
+
+
+// ***************
+// Cooking
+// ***************
+
+const int COOKING_Stew					= 1;
+const int COOKING_FishSoup				= 2;
+const int COOKING_MeatbugRagout			= 3;
+const int COOKING_RootSoup				= 4;
+const int COOKING_MinecrawlerSoup		= 5;
+const int COOKING_FireStrips			= 6;
+
+
+const int MAX_COOKING 					= 20;
+var int PLAYER_TALENT_COOKING[MAX_COOKING];
+
+
+
+// ****************
+// Alchemy (Booze)
+// ****************
+
+const int BOOZE_LouHammer  					= 1;
+const int BOOZE_LouHammerDouble  			= 2;
+const int BOOZE_FastHerring  				= 3;
+const int BOOZE_TurnipBooze  				= 4;
+const int BOOZE_VinoBooze  					= 5;
+const int BOOZE_WhiteRum  					= 6;
+const int BOOZE_MageWine  					= 7;
+const int BOOZE_RiceSchnaps  				= 8;
+
+
+const int MAX_BOOZE							= 12;
+var int PLAYER_TALENT_BOOZE[MAX_BOOZE];
 
 
 
 // ****************
 // Alchemy (Weed)
-// ****************
-
-const int POTION_Weed_Regular							= 41;
-const int POTION_Weed_Apple								= 42;
-const int POTION_Weed_AppleDouble						= 43;
-const int POTION_Weed_Honey								= 44;
-const int POTION_Weed_Mushroom							= 45;
-const int POTION_Weed_GreenNovice						= 46;
-const int POTION_Weed_NorthernDark						= 47;
-const int POTION_Weed_Dreamcall							= 48;
-const int POTION_Weed_DreamcallStrong					= 49;
-
-
-
-// ****************
-// Alchemy (Special)
-// ****************
-
-const int POTION_Special_Experience		  				= 50;
-const int POTION_Special_DragonDrink	  				= 51;
-
-
-const int MAX_POTION						= 52;
-var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
-
-
-// ****************
-// Alchemy (Tobacco)
 // ****************
 
 const int TOBACCO_Apple						= 1;
@@ -386,20 +523,15 @@ const int TOBACCO_Honey						= 3;
 const int TOBACCO_Swampweed					= 4;
 const int TOBACCO_Mushroom					= 5;
 
+const int TOBACCO_Weed_Regular				= 6;
+const int TOBACCO_Weed_Apple				= 7;
+const int TOBACCO_Weed_AppleDouble			= 8;
+const int TOBACCO_Weed_Honey				= 9;
+const int TOBACCO_Weed_Mushroom				= 10;
+const int TOBACCO_Weed_GreenNovice			= 11;
+const int TOBACCO_Weed_NorthernDark			= 12;
+const int TOBACCO_Weed_Dreamcall			= 13;
+const int TOBACCO_Weed_DreamcallStrong		= 14;
 
-// ***************
-// Swordmaking
-// ***************
-
-const int WEAPON_1H_REVIVED_01			= 13;
-const int WEAPON_2H_REVIVED_01			= 14;
-const int WEAPON_1H_REVIVED_02			= 15;
-const int WEAPON_2H_REVIVED_02			= 16;
-const int WEAPON_1H_REVIVED_03			= 17;
-const int WEAPON_2H_REVIVED_03			= 18;
-const int WEAPON_1H_REVIVED_04			= 19;
-const int WEAPON_2H_REVIVED_04			= 20;
-
-
-const int MAX_WEAPONS 					= 21;
-var int PLAYER_TALENT_SMITH[MAX_WEAPONS];
+const int MAX_TOBACCO						= 15;
+var int PLAYER_TALENT_TOBACCO[MAX_TOBACCO];

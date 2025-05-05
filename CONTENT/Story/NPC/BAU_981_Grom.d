@@ -39,5 +39,5 @@ INSTANCE BAU_981_Grom (Npc_Default)
 FUNC VOID Rtn_Start_981 ()
 {	
 	TA_Saw 			(08,00,23,00,"NW_CASTLEMINE_TROLL_04_C"); 
-    TA_Sleep		(23,00,08,00,"NW_CASTLEMINE_TROLL_04");
+    TA_Sleep		(23,00,08,00,"NW_CASTLEMINE_TROLL_04_B");
 };

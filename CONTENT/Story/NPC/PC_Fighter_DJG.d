@@ -22,7 +22,7 @@ INSTANCE PC_Fighter_DJG (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, itmw_barbarenstreitaxt);
 	EquipItem			(self, ItRw_Crossbow_M_01);	
-	CreateInvItems (self, ItPo_Health_02, 6);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 
 	// ------ Inventory ------

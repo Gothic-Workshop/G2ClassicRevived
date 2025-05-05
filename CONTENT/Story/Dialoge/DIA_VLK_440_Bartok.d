@@ -157,15 +157,6 @@ func void DIA_Addon_Bartok_MissingPeople_Info ()
 	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_03"); //Don't ask me what happened next. I had had a few by then.
 	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_04"); //I vaguely remember Trokar saying that he was going out to get a few swampweed reefers. He never came back.
 
-	if(theHunterRiddle_mis != LOG_RUNNING)
-	{
-		Log_CreateTopic		(theHunterRiddle_log,		LOG_MISSION);
-		Log_SetTopicStatus	(theHunterRiddle_log,		LOG_RUNNING);
-
-		theHunterRiddle_mis = LOG_RUNNING;
-	};
-		B_LogEntry			(theHunterRiddle_log, "Trokar, a fellow hunter of Bartok's, has been missing for a while. I could look into that. Bartok said he went to harbor to get a few reefers...");
-	
 	Info_ClearChoices	(DIA_Addon_Bartok_MissingPeople);
 	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "Didn't you go looking for him?", DIA_Addon_Bartok_MissingPeople_such );
 	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "So where can I get some swampweed reefers?", DIA_Addon_Bartok_MissingPeople_wo );

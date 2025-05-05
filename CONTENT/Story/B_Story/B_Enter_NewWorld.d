@@ -953,4 +953,12 @@ FUNC VOID B_ENTER_NEWWORLD ()
 	if (Kapitel >= 6)	{B_ENTER_NEWWORLD_Kapitel_6 ();	};
 	CurrentLevel = NEWWORLD_ZEN; 
 	B_InitNpcGlobals ();
+		
+	if (BilgotSecondPass == TRUE)
+	&& (BilgotInKhorinis == FALSE)
+	{
+		Wld_InsertNpc(GRD_4121_Bilgot_NW, "NW_CASTLEMINE_TROLL_04_D");
+
+		BilgotInKhorinis = TRUE;
+	};	
 };

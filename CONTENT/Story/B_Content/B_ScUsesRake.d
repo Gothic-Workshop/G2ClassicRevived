@@ -26,21 +26,21 @@ FUNC VOID B_SCGetTreasure_S1()
 					RakeTreasureSuccess (ITMW_REVIVED_BLOODBLADE);
 				}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				else if ((Npc_GetDistToWP(hero,					"NW_LAKE_GREG_TREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[2]==FALSE)){
-				Wld_InsertItem 		(ItSe_GoldPocket100, 		"NW_LAKE_GREG_TREASURE_01"	); 							 		 RAKEPLACE[2]=TRUE;
+				else if ((Npc_GetDistToWP(hero,						"NW_LAKE_GREG_TREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[2]==FALSE)){
+				Wld_InsertItem 		(ItSe_GoldPocket100, 			"NW_LAKE_GREG_TREASURE_01"	); 							 		 RAKEPLACE[2]=TRUE;
 				RakeTreasureSuccess (ItSe_GoldPocket100);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				else if ((Npc_GetDistToWP(hero,					"NW_FARM3_GREGTREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[3]==FALSE)){
-				Wld_InsertItem 		(ITAT_REVIVED_ORCDOG, 		"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
+				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_GREGTREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[3]==FALSE)){
+				Wld_InsertItem 		(ITAT_REVIVED_ORCDOG, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
 				RakeTreasureSuccess (ITAT_REVIVED_ORCDOG);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				else if ((Npc_GetDistToWP(hero,					"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[4]==FALSE)){	
-				Wld_InsertItem 		(ItMi_SilverChalice, 		"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	); 							 RAKEPLACE[4]=TRUE;
-				RakeTreasureSuccess (ItMi_SilverChalice);}
+				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[4]==FALSE)){	
+				Wld_InsertItem 		(ItPl_Perm_Herb, 			"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	); 							 RAKEPLACE[4]=TRUE;
+				RakeTreasureSuccess (ItPl_Perm_Herb);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				else if ((Npc_GetDistToWP(hero,					"NW_BIGMILL_FARM3_01"	)< RAKE_BUDDEL_DIST_MIN) 			&& 	(RAKEPLACE[5]==FALSE)){
-				Wld_InsertItem 		(ItAm_Prot_Point_01, 		"NW_BIGMILL_FARM3_01"	); 						 		 		RAKEPLACE[5]=TRUE;
-				RakeTreasureSuccess (ItAm_Prot_Point_01);}
+				else if ((Npc_GetDistToWP(hero,						"NW_BIGMILL_FARM3_01"	)< RAKE_BUDDEL_DIST_MIN) 			&& 	(RAKEPLACE[5]==FALSE)){
+				Wld_InsertItem 		(ITAM_REVIVED_PROT_ARROW_01, 			"NW_BIGMILL_FARM3_01"	); 						 		 		RAKEPLACE[5]=TRUE;
+				RakeTreasureSuccess (ITAM_REVIVED_PROT_ARROW_01);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
 	
@@ -59,8 +59,8 @@ FUNC VOID B_SCGetTreasure_S1()
 				RakeTreasureSuccess (ITAM_REVIVED_DEMON);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_PLATEAU_ABANDONEDMINE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[9]==FALSE)){					 			
-				Wld_InsertItem 		(ITWR_REVIVED_CHROMANIN_01, 		"OW_TREASURE_PLATEAU_ABANDONEDMINE"	); 							 			 RAKEPLACE[9]=TRUE; 							 			
-				RakeTreasureSuccess (ITWR_REVIVED_CHROMANIN_01);};
+				Wld_InsertItem 		(ITRI_REVIVED_HP_02, 				"OW_TREASURE_PLATEAU_ABANDONEDMINE"	); 							 			 RAKEPLACE[9]=TRUE; 							 			
+				RakeTreasureSuccess (ITRI_REVIVED_HP_02);};
 	};	
 };
 

@@ -21,7 +21,7 @@ instance DJG_703_Cipher (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self, ItPo_Health_02, 6);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 	
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird

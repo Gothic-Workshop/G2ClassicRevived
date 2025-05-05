@@ -25,6 +25,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_1 ()
 // B_ENTER_OLDWORLD_Kapitel_2
 //****************************************************
 	var int EnterOW_Kapitel2;
+var int ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME;
 FUNC VOID B_ENTER_OLDWORLD_Kapitel_2 ()
 {
 	if (EnterOW_Kapitel2 == FALSE)
@@ -36,6 +37,44 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_2 ()
 		// ------ TAs ändern ------
 		//------------- Steht unten am Weg 1. Charakter in Oldworld---------------------------------------------------------
 	// ------ Respawn ------
+	if (ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME == FALSE)
+		{
+			// ------ Tote NPCs (Leichen)------
+			// Start 
+			B_KillNpc (Bruder);
+			B_KillNpc (VLK_Leiche3);
+			//Weg von Mine2 zu Cavalorns Hütte
+			B_KillNpc (VLK_Leiche2);
+			B_KillNpc (STRF_Leiche1);
+			B_KillNpc (STRF_Leiche2);
+			B_KillNpc (STRF_Leiche3);
+			//Mine 3
+			B_KillNpc (STRF_Leiche4);
+			B_KillNpc (STRF_Leiche5);
+			B_KillNpc (STRF_Leiche6);
+			B_KillNpc (STRF_Leiche7);
+			B_KillNpc (STRF_Leiche8);
+			
+			B_KillNpc (PAL_Leiche1);
+			B_KillNpc (PAL_Leiche2);
+			B_KillNpc (PAL_Leiche3);
+			
+			B_KillNpc (VLK_Leiche1);
+			
+			//bei Diegos Versteck- seine Leibgarde
+			B_KillNpc (PAL_Leiche4);
+			B_KillNpc (PAL_Leiche5);
+			
+			//in der Wolfshöhle gemauerter Raum
+			B_KillNpc (Olav);
+				
+			ENTER_OLDWORLD_FIRSTTIME_TRIGGER_ONETIME = TRUE;
+		};
+		
+	if (TschuessBilgot == TRUE)
+	{
+		B_RemoveNpc (Bilgot);
+	};	
 	
 	EnterOW_Kapitel2 = TRUE;
 	};
@@ -255,21 +294,21 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_OW_WARAN_ORC_01");
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_OW_WARAN_ORC_04");
 	
-		//Newmine
+		//Fajeth Mine
 		Wld_InsertNpc		(OrcElite_Roam, 		"OW_PATH_159");
-		Wld_InsertNpc		(OrcShaman_Sit, 		"OW_PATH_159");
+		Wld_InsertNpc		(OrcWarrior_Roam, 		"OW_PATH_159");
 
 		Wld_InsertNpc		(OrcElite_Roam, 		"OW_PATH_158");
-		Wld_InsertNpc		(OrcShaman_Sit,			"OW_PATH_158");
+		Wld_InsertNpc		(OrcWarrior_Roam,			"OW_PATH_158");
 		Wld_InsertNpc		(OrcWarrior_Roam, 		"OW_PATH_158");
 		
-		Wld_InsertNpc		(OrcWarrior_Roam, 	"LOCATION_23_01");
+		Wld_InsertNpc		(OrcShaman_Sit, 	"LOCATION_23_01");
 
 		//Umgebung Newmine
 		Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03"); 
 		Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_ORC_03");
-		Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
-		Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_BLOCKGOBBO_CAVE_DM6");
+		Wld_InsertNpc		(DragonSnapper,"OW_PATH_06_07_B");
+		Wld_InsertNpc		(DragonSnapper,"OW_PATH_06_07_B");
 		Wld_InsertNpc		(DragonSnapper,"OW_PATH_333");	
 		Wld_InsertNpc		(Warg,"OW_PATH_099");
 		Wld_InsertNpc		(Warg,"SPAWN_OW_WARAN_ORC_01");

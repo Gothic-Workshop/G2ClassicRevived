@@ -168,8 +168,8 @@ FUNC VOID DIA_Gaertner_Krautabak_Info()
 	B_GiveInvItems (other, self, ItMi_SumpfTabak,1);
 	Npc_RemoveInvItems (self,ItMi_SumpfTabak,1);
 	
-	CreateInvItems (self, Itmi_Joint,1);
-	B_UseItem (self, itmi_Joint);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR,1);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_PlayAni (self, "T_MAGRUN_2_HEASHOOT");
 	AI_Output (self ,other,"DIA_Gaertner_Krautabak_09_02"); //Ack...ackack....
 	AI_PlayAni (self, "T_HEASHOOT_2_STAND");

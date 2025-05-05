@@ -8,7 +8,7 @@ instance REVIVED_POCKET_GOTHIC(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_Red.3ds";
+	visual = "REV_IT_POCKET_RED.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_GOTHIC;
@@ -18,42 +18,7 @@ instance REVIVED_POCKET_GOTHIC(C_Item)
 };
 
 func void use_REVIVED_POCKET_GOTHIC()
-{	
-	CreateInvItems(hero, ITAR_REVIVED_VLK_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_VLK_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_EBR_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_EBR_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_EBR_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_SFB_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ORG_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ORG_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ORG_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_SLD_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_SLD_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_SLD_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_NOV_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_NOV_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_NOV_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_TPL_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_TPL_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_TPL_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_KDF_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_KDF_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_KDW_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_KDW_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GUR_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GUR_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_DMT_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_CRAWLER, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ORE_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ORE_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_LAW, 1);
-
+{
 	CreateInvItems(hero, ITMW_REVIVED_SICKLE, 1);	
 	CreateInvItems(hero, ITMW_REVIVED_RUSTYSWORD, 1);
 	CreateInvItems(hero, ITMW_REVIVED_SHORTSWORD, 1);
@@ -266,11 +231,13 @@ func void use_REVIVED_POCKET_GOTHIC()
 
 	CreateInvItems(hero, ITFO_REVIVED_MEATBUG, 20);
 	CreateInvItems(hero, ITFO_REVIVED_APPLE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_01, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_02, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_03, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_BLACK, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_BLUE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_RED, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_GREEN, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_PURPLE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_GRAPES_YELLOW, 20);
 	CreateInvItems(hero, ITFO_REVIVED_BREAD, 20);
-	CreateInvItems(hero, ITFO_REVIVED_HAM, 20);
 	CreateInvItems(hero, ITFO_REVIVED_CHEESE, 20);
 	CreateInvItems(hero, ITFO_REVIVED_RICE, 20);
 	CreateInvItems(hero, ITFO_REVIVED_PLANTSOUP, 20);
@@ -280,29 +247,6 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITFO_REVIVED_BEER, 20);
 	CreateInvItems(hero, ITFO_REVIVED_WINE, 20);
 	CreateInvItems(hero, ITFO_REVIVED_BOOZE, 20);
-
-	CreateInvItems(hero, ITPL_REVIVED_BLUEBERRY, 20);
-	CreateInvItems(hero, ITPL_REVIVED_FLAMEBERRY, 20);
-	CreateInvItems(hero, ITPL_REVIVED_SERAPHIS, 20);
-	CreateInvItems(hero, ITPL_REVIVED_VELAYIS, 20);
-	CreateInvItems(hero, ITPL_REVIVED_MOUNTAINMOSS, 20);
-	CreateInvItems(hero, ITPL_REVIVED_GRAVEMOSS, 20);
-	CreateInvItems(hero, ITPL_REVIVED_NIGHTSHADE, 20);
-	CreateInvItems(hero, ITPL_REVIVED_LINUM, 20);
-	CreateInvItems(hero, ITPL_REVIVED_ORCLEAF, 20);
-	CreateInvItems(hero, ITPL_REVIVED_OAKLEAF, 20);
-	CreateInvItems(hero, ITPL_REVIVED_HEALING_01, 20);
-	CreateInvItems(hero, ITPL_REVIVED_HEALING_02, 20);
-	CreateInvItems(hero, ITPL_REVIVED_HEALING_03, 20);
-	CreateInvItems(hero, ITPL_REVIVED_BLOODWOOD, 20);
-	CreateInvItems(hero, ITPL_REVIVED_TOWERWOOD, 20);
-	CreateInvItems(hero, ITPL_REVIVED_RAVENHERB, 20);
-	CreateInvItems(hero, ITPL_REVIVED_DARKHERB, 20);
-	CreateInvItems(hero, ITPL_REVIVED_STONEROOT, 20);
-	CreateInvItems(hero, ITPL_REVIVED_DRAGONROOT, 20);
-	CreateInvItems(hero, ITPL_REVIVED_HELLMUSHROOM, 20);
-	CreateInvItems(hero, ITPL_REVIVED_SLAVEBREAD, 20);
-	CreateInvItems(hero, ITPL_REVIVED_TROLLBERRY, 20);
 
 	CreateInvItems(hero, ITRU_REVIVED_TELEPORT_OC, 1); 
 	CreateInvItems(hero, ITRU_REVIVED_TELEPORT_NC, 1); 
@@ -350,23 +294,17 @@ func void use_REVIVED_POCKET_GOTHIC()
 
 	CreateInvItems(hero, ITWR_REVIVED_MAP_FOCUS, 1);
 	
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_01, 1);
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_02, 1);
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_03, 1);
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_04, 1);
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_05, 1);
-	CreateInvItems(hero, ITWR_REVIVED_CHROMANIN_06, 1);
-	
 	CreateInvItems(hero, ITMI_REVIVED_JOINT_GREENNOVICE, 5);
 	CreateInvItems(hero, ITMI_REVIVED_JOINT_NORTHDARK, 5);
 	CreateInvItems(hero, ITMI_REVIVED_JOINT_DREAMCALL, 5);
 	CreateInvItems(hero, ITMI_REVIVED_JOINT_DREAMCALL_02, 5);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_SULFUR, 1);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_MERCURY, 1);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_SALT, 1);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_SYRIANOIL, 1);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_MOLERATGREASE, 1);
-	CreateInvItems(hero, ITMI_REVIVED_ALCHEMY_ALCOHOL, 1);
+	CreateInvItems(hero, ITMI_REVIVED_SALT, 1);
+	CreateInvItems(hero, ITMI_REVIVED_SUGAR, 1);
+	CreateInvItems(hero, ITMI_REVIVED_SYRIANOIL, 1);
+	CreateInvItems(hero, ITMI_REVIVED_STONEOIL, 1);
+	CreateInvItems(hero, ITMI_REVIVED_PUREALCOHOL, 1);
+	CreateInvItems(hero, ITMI_REVIVED_VINEGAR, 1);
+	CreateInvItems(hero, ITMI_REVIVED_MAGICWATER, 1);
 	CreateInvItems(hero, ITMI_REVIVED_OLDCOIN, 1);
 	CreateInvItems(hero, ITMI_REVIVED_FIGURINE, 1);
 
@@ -383,7 +321,7 @@ instance REVIVED_POCKET_GOTHIC2(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_Blue.3ds";
+	visual = "REV_IT_POCKET_BLUE.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_GOTHIC2;
@@ -394,18 +332,8 @@ instance REVIVED_POCKET_GOTHIC2(C_Item)
 
 func void use_REVIVED_POCKET_GOTHIC2()
 {
-	CreateInvItems(hero, ITAR_JUDGE_02, 1);
-	CreateInvItems(hero, ITAR_PAL_M_02, 1);
-	CreateInvItems(hero, ITAR_PAL_H_02, 1);
-	CreateInvItems(hero, ITAR_PAL_SKEL_02, 1);
-	CreateInvItems(hero, ITAR_DJG_M_02, 1);
-	CreateInvItems(hero, ITAR_DJG_H_02, 1);
-	CreateInvItems(hero, ITAR_PIR_H_Addon_02, 1);
-
 	CreateInvItems(hero, ITHE_REVIVED_JUDGE, 1);
-	CreateInvItems(hero, ITHE_REVIVED_PAL_M, 1);
-	CreateInvItems(hero, ITHE_REVIVED_PAL_H, 1);
-	CreateInvItems(hero, ITHE_REVIVED_PAL_OLD, 1);
+	CreateInvItems(hero, ITHE_REVIVED_KNIGHT, 1);
 	CreateInvItems(hero, ITHE_REVIVED_DJG_M, 1);
 	CreateInvItems(hero, ITHE_REVIVED_DJG_H, 1);
 	CreateInvItems(hero, ITHE_REVIVED_PIR_M, 1);
@@ -442,7 +370,7 @@ instance REVIVED_POCKET_GOTHICLEFTOVER(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_Gold.3ds";
+	visual = "REV_IT_POCKET_PURPLE.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_GOTHICLEFTOVER;
@@ -466,7 +394,7 @@ instance REVIVED_POCKET_WOG(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_White.3ds";
+	visual = "REV_IT_POCKET_YELLOW.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_WOG;
@@ -477,19 +405,6 @@ instance REVIVED_POCKET_WOG(C_Item)
 
 func void use_REVIVED_POCKET_WOG()
 {
-	CreateInvItems(hero, ITAR_REVIVED_DMT_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_DMT_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_BEGGAR, 1);
-	CreateInvItems(hero, ITAR_REVIVED_GRD_M_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_PAL_L_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER, 1);
-	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_ARCHER, 1);
-
-	CreateInvItems(hero, ITAR_REVIVED_SLD_L_BDT, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_L_BDT_02, 1);
-
 	CreateInvItems(hero, ITBE_REVIVED_ARCHER, 1);
 
 	CreateInvItems(hero, ITMW_REVIVED_URIZIEL_1H, 1);
@@ -515,43 +430,81 @@ instance REVIVED_POCKET_NEUE(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_black_Shiny.3ds";
+	visual = "REV_IT_POCKET_CYAN.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_NEUE;
 	description = "REVIVED_POCKET_NEUE";
 	text[4] = "All new additions from myself or my friends";
-	text[5] = "Mostly just fun items.";
+	text[5] = "Including changes for existing items.";
 };
 
 func void use_REVIVED_POCKET_NEUE()
 {
+	CreateInvItems(hero, ITAR_REVIVED_VLK_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_VLK_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_STT_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_GRD_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_GRD_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_GRD_S, 1);
+	CreateInvItems(hero, ITAR_REVIVED_GRD_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_EBR_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_EBR_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_EBR_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SFB_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_ORG_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_ORG_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_ORG_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SLD_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SLD_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SLD_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_NOV_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_TPL_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDF_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDF_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDF_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDW_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDW_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KDW_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DMT_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DMT_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DMT_S, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DMT_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_BDT_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_BDT_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_BDT_H, 1);
 	CreateInvItems(hero, ITAR_REVIVED_PAL_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_PAL_L_03, 1);
 	CreateInvItems(hero, ITAR_REVIVED_PAL_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_PAL_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_PAL_H_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_M_BDT, 1);
-	CreateInvItems(hero, ITAR_REVIVED_STT_H_BDT, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PAL_S, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER_02, 1);
+	CreateInvItems(hero, ITAR_REVIVED_TPL_SKE, 1);
+	CreateInvItems(hero, ITAR_REVIVED_ARCHER, 1);
+	CreateInvItems(hero, ITAR_REVIVED_BEGGAR, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KNIGHT, 1);
+	CreateInvItems(hero, ITAR_REVIVED_KNIGHT_02, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DJG_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_DJG_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PIR_H, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GORDONRAMSAY, 1);
 
-	CreateInvItems(hero, ITHE_REVIVED_PAL_S, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_BLACK, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_BLUE, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_GREEN, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_PURPLE, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_RED, 1);
+	CreateInvItems(hero, ITPL_REVIVED_BERRY_YELLOW, 1);
+	CreateInvItems(hero, ITPL_REVIVED_SEED_BLUE, 1);
+	CreateInvItems(hero, ITPL_REVIVED_SEED_GREEN, 1);
+	CreateInvItems(hero, ITPL_REVIVED_SEED_RED, 1);
+	CreateInvItems(hero, ITPL_REVIVED_SEED_YELLOW, 1);
+	CreateInvItems(hero, ITPL_REVIVED_MUSHROOM_RED, 1);
+
+	CreateInvItems(hero, ITHE_REVIVED_PAL, 1);
 
 	CreateInvItems(hero, ITKE_REVIVED_GORDONRAMSAY, 1);
-
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_01, 1);
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_02, 1);
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_03, 1);
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_04, 1);
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_05, 1);
-	CreateInvItems(hero, ITWR_REVIVED_HUNTERNOTES_06, 1);
-
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_01, 1);
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_02, 1);
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_03, 1);
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_04, 1);
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_05, 1);
-	CreateInvItems(hero, ITWR_REVIVED_QUALSHY_06, 1);
 };
 
 //****************************************************************************
@@ -564,7 +517,7 @@ instance REVIVED_POCKET_DEBUG(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_black_Shiny.3ds";
+	visual = "REV_IT_POCKET_BLACK.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_DEBUG;
@@ -577,6 +530,7 @@ func void use_REVIVED_POCKET_DEBUG()
 {
 	CreateInvItems(hero, REVIVED_LEARN_ALCHEMY_ALL, 1);
 	CreateInvItems(hero, REVIVED_LEARN_SMITHING_ALL, 1);
+	CreateInvItems(hero, REVIVED_LEARN_BOWMAKING_ALL, 1);
 	CreateInvItems(hero, REVIVED_LEARN_TROPHIES_ALL, 1);
 	CreateInvItems(hero, REVIVED_LEARN_RUNES_ALL, 1);
 	CreateInvItems(hero, REVIVED_LEARN_TALENTS_ALL, 1);
@@ -590,7 +544,7 @@ instance REVIVED_POCKET_ALLES(C_Item)
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
-	visual = "ItMi_Pocket_black.3ds";
+	visual = "REV_IT_POCKET_WHITE.3ds";
 	scemeName = "MAPSEALED";
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_ALLES;

@@ -169,7 +169,7 @@ func void DIA_Borka_BUYHERB_Info ()
 	AI_Output (other, self, "DIA_Borka_BUYHERB_15_00"); //I've heard you're selling weed.
 	
 	if (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == TRUE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M_02) == TRUE)
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == TRUE)
 	{
 		AI_Output (self, other, "DIA_Borka_BUYHERB_11_01"); //I'm sorry, Mr. City Guard, sir. There must have been a mistake. I know nothing about weed.
 	}
@@ -227,7 +227,7 @@ func int DIA_Borka_SECOND_CHANCE_Condition ()
 	if 	(Borka_Deal == TRUE)
 	&&  (Npc_HasItems (other, ItmI_Gold) >= 50)
 	&&  (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_L) == FALSE) 
-	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M_02) == FALSE)
+	|| (Hlp_IsItem (heroArmor, ITAR_REVIVED_GRD_M) == FALSE)
 	{
 		return TRUE;
 	};
@@ -239,7 +239,7 @@ func void DIA_Borka_SECOND_CHANCE_Info ()
 	AI_Output (self, other, "DIA_Borka_SECOND_CHANCE_11_01"); //All right ...
 	AI_PlayAni (self, "T_SEARCH");
 	AI_Output (self, other, "DIA_Borka_SECOND_CHANCE_11_02"); //... here's a fresh, resinous stalk of weed.
-	B_GiveInvItems (self, hero, ItMi_Joint, 1);
+	B_GiveInvItems (self, hero, ITMI_REVIVED_JOINT_REGULAR, 1);
 	Borka_Deal = 2;
 	AI_StopProcessInfos (self);
 };

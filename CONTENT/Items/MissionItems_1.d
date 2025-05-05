@@ -181,7 +181,7 @@ instance ItMi_MariasGoldPlate (C_Item)
 
 INSTANCE ItRi_ValentinosRing(C_Item) //bei Cassia als Belohnung
 {
-	name 					=	NAME_Ring;
+	name 					=	"Valentino's Ring";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -198,7 +198,7 @@ INSTANCE ItRi_ValentinosRing(C_Item) //bei Cassia als Belohnung
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				= "Valentino's Ring";
+	description				= name;
 
 	TEXT[2]					= NAME_Prot_Edge;
 	COUNT[2]				= Ri_ProtEdge;
@@ -1215,7 +1215,7 @@ INSTANCE ItRi_Prot_Point_01_MIS(C_Item)
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description				=  "Wood Protection";
+	description				=  name;
 	
 	TEXT[2]					= NAME_Prot_Point;
 	COUNT[2]				= Ri_ProtPoint;

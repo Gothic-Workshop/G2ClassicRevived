@@ -40,9 +40,6 @@ instance BAU_905_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_905 ()
 {	
-	TA_Pick_FP 			(07,00,22,00,"NW_BIGFARM_FIELD_01");
-    TA_Sit_Chair			(22,00,07,00,"NW_BIGFARM_STABLE_06");
+	TA_Pick_FP 				(07,00,22,00,"NW_BIGFARM_FIELD_01");
+    TA_Sit_Chair			(22,00,07,00,"NW_BIGFARM_STABLE_04");
 };
-
-
-

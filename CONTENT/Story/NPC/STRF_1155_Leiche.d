@@ -20,7 +20,8 @@ instance STRF_1155_Leiche (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ItMw_2H_Axe_L_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv (self);
@@ -28,7 +29,7 @@ instance STRF_1155_Leiche (Npc_Default)
 		
 	// ------ visuals ------																			
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart12, BodyTex_N, ITAR_Prisoner);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart12, BodyTex_N, ITAR_REVIVED_VLK_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
 	

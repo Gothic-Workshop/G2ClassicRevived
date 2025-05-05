@@ -24,7 +24,7 @@ instance STRF_1110_Straefling (Npc_Default)
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_Orry, BodyTex_N, ITAR_Prisoner);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_Orry, BodyTex_N, ITAR_REVIVED_VLK_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
@@ -40,6 +40,6 @@ instance STRF_1110_Straefling (Npc_Default)
 
 FUNC VOID Rtn_Start_1110 ()
 {	
-	TA_Pick_Ore			(08,00,23,00,"OW_OM_PICKSLOT_10");
+	TA_Pick_Ore			(08,00,23,00,"OW_OM_PICKSLOT_09");
     TA_Sit_Campfire		(23,00,08,00,"LOCATION_23_CAVE_1_OUT_CAMPFIRE");
 };

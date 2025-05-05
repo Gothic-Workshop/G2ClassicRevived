@@ -66,8 +66,8 @@ func void DIA_Brutus_AFTER_FIGHT_Info ()
 		{
 			AI_Output (self, other, "DIA_Brutus_AFTER_FIGHT_06_04"); //This here potion will help you get back on your feet. It also works wonders for your bowels!
 		
-			CreateInvItems (self, ItPo_Health_01,1);
-			B_GiveInvItems (self, hero, ItPo_Health_01,1); 
+			CreateInvItems (self, ITPO_REVIVED_HEALTH_01,1);
+			B_GiveInvItems (self, hero, ITPO_REVIVED_HEALTH_01,1); 
 			Brutus_einmalig = TRUE;
 		};
 	}

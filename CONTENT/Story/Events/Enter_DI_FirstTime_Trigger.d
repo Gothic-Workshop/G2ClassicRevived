@@ -14,7 +14,7 @@ func void ENTER_DI_FIRSTTIME_TRIGGER ()
 	
 	if (hero.attribute[ATR_DEXTERITY] < 15)//Joly:wegen Brückenevent
 	{
-		Wld_InsertItem	(ItPo_Perm_DEX, "FP_ITEM_DI_ENTER_05");
+		Wld_InsertItem	(ITPO_REVIVED_BOOST_DEX_03, "FP_ITEM_DI_ENTER_05");
 	};
 
 //###############################################
@@ -48,13 +48,13 @@ func void ENTER_DI_FIRSTTIME_TRIGGER ()
 					};
 					Wld_InsertItem	(ItMi_Flask, "FP_ITEM_SHIP_06");
 					
-					if 	(((Npc_HasItems (hero, ItAt_IcedragonHeart) >= 1)
+					/* if 	(((Npc_HasItems (hero, ItAt_IcedragonHeart) >= 1)
 					|| 	(Npc_HasItems (hero, ItAt_RockdragonHeart)	>= 1)
 					|| 	(Npc_HasItems (hero, ItAt_FiredragonHeart)	>= 1)
 					|| 	(Npc_HasItems (hero, ItAt_SwampdragonHeart)	>= 1))== FALSE)
 						{
 							CreateInvItems	(OrkElite_AntiPaladinOrkOberst_DI,	ItAt_RockdragonHeart ,1);
-						};	
+						};	 */
 				};
 		//##############################################################################################################
 	//Lehrer Logs

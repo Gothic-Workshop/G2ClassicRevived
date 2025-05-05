@@ -12,14 +12,14 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems	 (slf, ItMi_Gold,		100);  
 
 		CreateInvItems 	 (slf, ItPl_SwampHerb, 9);  //Joly: für Dealer
-		CreateInvItems 	 (slf, ItMi_Joint, 3);  	//Joly: für Dealer
+		CreateInvItems 	 (slf, ITMI_REVIVED_JOINT_REGULAR, 3);  	//Joly: für Dealer
 
 		CreateInvItems   (slf, ItMi_Sulfur,   	2);
 		CreateInvItems   (slf, ItMi_Quartz, 	1);
 
 		CreateInvItems   (slf, ItMi_Flask,  	5);
-		CreateInvItems   (slf, ItPo_Mana_01,  	4);
-		CreateInvItems   (slf, ItPo_Health_01,	3);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,  	4);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,	3);
 		
 		CreateInvItems   (slf, ItPo_Health_Addon_04,	3);
 		CreateInvItems   (slf, ItPo_Mana_Addon_04,		3);
@@ -40,7 +40,7 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Flask, 7); 
 
 		CreateInvItems 	 (slf, ItPl_SwampHerb, 7);  
-		CreateInvItems 	 (slf, ItMi_Joint, 2);  	
+		CreateInvItems 	 (slf, ITMI_REVIVED_JOINT_REGULAR, 2);  	
 	
 		CreateInvItems 	 (slf, ItPl_Temp_Herb, 2); 
 		CreateInvItems 	 (slf, ItPl_Perm_Herb, 1); 
@@ -55,11 +55,11 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Sulfur, 	2);
 		CreateInvItems   (slf, ItMi_Quartz, 	2);
 	
-		CreateInvItems   (slf, ItPo_Health_01,  3);
-		CreateInvItems   (slf, ItPo_Health_02,  4);
-		CreateInvItems   (slf, ItPo_Mana_01,	5);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_01,  3);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  4);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	5);
 
-		CreateInvItems (slf, ItPo_Health_01, 1); 
+		CreateInvItems (slf, ITPO_REVIVED_HEALTH_01, 1); 
 
 		Sagitta_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -71,7 +71,7 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		
 		CreateInvItems 	 (slf, ItPl_SwampHerb, 7);
-		CreateInvItems 	 (slf, ItMi_Joint, 2);  	
+		CreateInvItems 	 (slf, ITMI_REVIVED_JOINT_REGULAR, 2);  	
 		CreateInvItems   (slf, ItMi_Flask,  	5);
 
 		CreateInvItems 	 (slf, ItPl_Temp_Herb, 3); 
@@ -91,9 +91,9 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems   (slf, ItMi_Rockcrystal, 2);
 		CreateInvItems   (slf, ItMi_Coal, 	1);
 
-		CreateInvItems   (slf, ItPo_Health_02,  3);
-		CreateInvItems   (slf, ItPo_Health_03,  2);
-		CreateInvItems   (slf, ItPo_Mana_01,	6);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  3);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  2);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	6);
 
 	 
 		CreateInvItems   (slf, ItSc_TrfGiantRat, 1);
@@ -109,7 +109,7 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 150); 
 		
 		CreateInvItems 	 (slf, ItPl_SwampHerb, 8);
-		CreateInvItems 	 (slf, ItMi_Joint, 2);  	
+		CreateInvItems 	 (slf, ITMI_REVIVED_JOINT_REGULAR, 2);  	
 		CreateInvItems   (slf, ItMi_Flask,  	5);
 
 		CreateInvItems   (slf, ItMi_Sulfur, 	4);
@@ -128,10 +128,10 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems (slf, ItPl_Mana_Herb_02, 2); 
 		CreateInvItems (slf, ItPl_Speed_Herb_01, 1); 
 
-		CreateInvItems   (slf, ItPo_Health_02,  6);
-		CreateInvItems   (slf, ItPo_Health_03,  4);
-		CreateInvItems   (slf, ItPo_Mana_01,	7);
-		CreateInvItems   (slf, ItPo_Mana_02,	3);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  6);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  4);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	7);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	3);
 		
 		CreateInvItems   (slf, ItPo_Health_Addon_04,	3);
 		CreateInvItems   (slf, ItPo_Mana_Addon_04,		3);
@@ -148,7 +148,7 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 200); 
 
 		CreateInvItems 	 (slf, ItPl_SwampHerb, 9);
-		CreateInvItems 	 (slf, ItMi_Joint, 2);  	
+		CreateInvItems 	 (slf, ITMI_REVIVED_JOINT_REGULAR, 2);  	
 		CreateInvItems   (slf, ItMi_Flask,  	5);
 
 		CreateInvItems   (slf, ItMi_Sulfur, 	4);
@@ -169,10 +169,10 @@ FUNC VOID B_GiveTradeInv_Sagitta (var C_NPC slf)
 	
 		CreateInvItems (slf, ItPl_Speed_Herb_01, 1); 
 
-		CreateInvItems   (slf, ItPo_Health_02,  9);
-		CreateInvItems   (slf, ItPo_Health_03,  7);
-		CreateInvItems   (slf, ItPo_Mana_01,	9);
-		CreateInvItems   (slf, ItPo_Mana_02,	2);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  9);
+		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_03,  7);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	9);
+		CreateInvItems   (slf, ITPO_REVIVED_MANA_02,	2);
 		
 		CreateInvItems   (slf, ItPo_Health_Addon_04,	3);
 		CreateInvItems   (slf, ItPo_Mana_Addon_04,		3);

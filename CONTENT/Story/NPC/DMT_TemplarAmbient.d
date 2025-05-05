@@ -54,7 +54,7 @@ instance DMT_TemplarAmbientL (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesToChapter (self, 3);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_L);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_SKE);	
 };
 
 instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
@@ -63,7 +63,7 @@ instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesToChapter (self, 4);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_SKE);	
 };
 
 instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.

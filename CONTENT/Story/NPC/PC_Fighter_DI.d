@@ -29,7 +29,7 @@ INSTANCE PC_Fighter_DI (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, itmw_streitaxt2);
 	EquipItem			(self, ItRw_Crossbow_M_01);	
-	CreateInvItems (self, ItPo_Health_02, 6);									
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

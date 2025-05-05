@@ -46,7 +46,7 @@ func void B_CreateAmbientInv_VLK (var int InventorySet)
 	{
 	CreateInvItems (self, ItFo_Apple, 1);
 	CreateInvItems (self, ItFo_Cheese, 1);
-	CreateInvItems (self, ItPo_Health_01, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
 	CreateInvItems (self, ItMi_gold, 11);
 	}
 	else if InventorySet ==0
@@ -78,7 +78,7 @@ func void B_CreateAmbientInv_BAU (var int InventorySet)
 	{
 	CreateInvItems (self, ItFo_Apple, 1);
 	CreateInvItems (self, ItFo_Cheese, 1);
-	CreateInvItems (self, ItPo_Health_01, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
 	CreateInvItems (self, ItMi_gold, 17);
 	}
 	else if InventorySet ==4
@@ -98,7 +98,7 @@ func void B_CreateAmbientInv_BAU (var int InventorySet)
 	else if InventorySet ==6
 	{
 	CreateInvItems (self, ItPl_Forestberry, 1);
-	CreateInvItems (self, ItMi_Joint, 1);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 1);
 	CreateInvItems (self, ItFo_Cheese, 1);
 	CreateInvItems (self, ItPl_Planeberry, 1);
 	CreateInvItems (self, ItMi_gold, 11);
@@ -154,7 +154,7 @@ func void B_CreateAmbientInv_NOV (var int InventorySet)
 	CreateInvItems (self, ItPl_Forestberry, 1);
 	CreateInvItems (self, ItFo_Fish, 1);
 	CreateInvItems (self, ItFo_Bread, 1);
-	CreateInvItems (self, ItPo_Mana_01, 1);
+	CreateInvItems (self, ITPO_REVIVED_MANA_01, 1);
 	CreateInvItems (self, ItMi_gold, 12);
 	}
 	else if InventorySet ==0
@@ -182,7 +182,7 @@ func void B_CreateAmbientInv_SLD (var int InventorySet)
 	else if InventorySet ==3
 	{
 	CreateInvItems (self, ItFo_Stew, 1);
-	CreateInvItems (self, ItMi_Joint, 2);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 2);
 	CreateInvItems (self, ItMi_gold, 16);
 	}
 	else if InventorySet ==4
@@ -223,7 +223,7 @@ func void B_CreateAmbientInv_KDF (var int InventorySet)
 	}
 	else if InventorySet ==2
 	{
-	CreateInvItems (self, ItPo_Mana_02, 1);
+	CreateInvItems (self, ITPO_REVIVED_MANA_02, 1);
 	CreateInvItems (self, ItMi_Sulfur, 1);
 	CreateInvItems (self, ItMi_Flask, 1);
 	CreateInvItems (self, ItMi_gold, 36);
@@ -239,7 +239,7 @@ func void B_CreateAmbientInv_KDF (var int InventorySet)
 	else if InventorySet ==4
 	{
 	CreateInvItems (self, ItFo_Sausage, 1);
-	CreateInvItems (self, ItPo_Health_03, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_03, 1);
 	CreateInvItems (self, ItFo_Booze, 1);
 	CreateInvItems (self, ItMi_gold, 36);
 	}
@@ -276,7 +276,7 @@ func void B_CreateAmbientInv_MIL (var int InventorySet)
 	}
 	else if InventorySet ==2
 	{
-	CreateInvItems (self, ItPo_Health_01, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
 	CreateInvItems (self, ItPl_Health_Herb_01, 3);
 	CreateInvItems (self, ItFoMutton, 1);
 	CreateInvItems (self, ItMi_gold, 17);
@@ -327,7 +327,7 @@ func void B_CreateAmbientInv_DJG (var int InventorySet)
 	else if InventorySet ==2
 	{
 	CreateInvItems (self, ItFo_Milk, 1);
-	CreateInvItems (self, ItMi_Joint, 1);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 1);
 	CreateInvItems (self, ItPl_Health_Herb_02, 1);
 	CreateInvItems (self, ItMi_gold, 46);
 	}
@@ -349,12 +349,12 @@ func void B_CreateAmbientInv_DJG (var int InventorySet)
 	{
 	CreateInvItems (self, ItFo_Stew, 1);
 	CreateInvItems (self, ItPl_Health_Herb_02, 1);
-	CreateInvItems (self, ItMi_Joint, 1);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 1);
 	CreateInvItems (self, ItMi_gold, 43);
 	}
 	else if InventorySet ==6
 	{
-	CreateInvItems (self, ItPo_Health_02, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
 	CreateInvItems (self, ItFo_Booze, 2);
 	CreateInvItems (self, ItFo_Wine, 1);
 	CreateInvItems (self, ItMi_gold, 46);
@@ -410,7 +410,7 @@ if 		InventorySet ==1
 	}
 	else if InventorySet ==6
 	{
-	CreateInvItems (self, ItPo_Health_02, 1);
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
 	CreateInvItems (self, ItPl_Speed_Herb_01, 2);
 	CreateInvItems (self, ItMi_Coal, 1);
 	CreateInvItems (self, ItMi_gold, 37);
@@ -427,13 +427,13 @@ func void B_CreateAmbientInv_DMT (var int InventorySet)
 {
 	if 	(InventorySet == 1) 
 	{
-		CreateInvItems (self, ItPo_Mana_01, 1);
+		CreateInvItems (self, ITPO_REVIVED_MANA_01, 1);
 		CreateInvItems (self, ItMi_Pitch, 1);
 		CreateInvItems (self, ItMi_gold, 42);
 	}
 	else if (InventorySet == 2)
 	{
-		CreateInvItems (self, ItPo_Mana_02, 1);
+		CreateInvItems (self, ITPO_REVIVED_MANA_02, 1);
 		CreateInvItems (self, ItMi_gold, 35);
 		CreateInvItems (self, ItMi_Aquamarine, 1);
 	}
@@ -441,30 +441,30 @@ func void B_CreateAmbientInv_DMT (var int InventorySet)
 	{
 		CreateInvItems (self, ItMi_Sulfur, 1);
 		CreateInvItems (self, ItMi_gold, 23);
-		CreateInvItems (self, ItPo_Mana_01, 1);
+		CreateInvItems (self, ITPO_REVIVED_MANA_01, 1);
 	}
 	else if (InventorySet == 4)
 	{
 		CreateInvItems (self, ItMi_Rockcrystal, 1);
-		CreateInvItems (self, ItPo_Health_01, 1);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
 		CreateInvItems (self, ItMi_gold, 46);
 	}
 	else if (InventorySet == 5)
 	{
 		CreateInvItems (self, ItMi_Quartz, 1);
 		CreateInvItems (self, ItMi_gold, 43);
-		CreateInvItems (self, ItPo_Health_02, 1);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 1);
 	}
 	else if (InventorySet == 6)
 	{
-		CreateInvItems (self, ItPo_Speed, 1);
+		CreateInvItems (self, ITPO_REVIVED_SPEED_01, 1);
 		CreateInvItems (self, ItMi_Coal, 1);
 		CreateInvItems (self, ItMi_gold, 37);
 	}
 	else if (InventorySet == 0)
 	{
 		CreateInvItems (self, ItMi_Rockcrystal, 1);
-		CreateInvItems (self, ItPo_Health_01, 1);
+		CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 1);
 		CreateInvItems (self, ItMi_gold, 40);
 	};
 };
@@ -515,19 +515,19 @@ if 	InventorySet ==1
 		CreateInvItems (self, ItFo_Apple, 1);
 		CreateInvItems (self, ItFO_Addon_Grog,2);
 		CreateInvItems (self, ItMi_Gold,12);
-		CreateInvItems (self ,ItMi_Joint,3);
+		CreateInvItems (self ,ITMI_REVIVED_JOINT_REGULAR,3);
 	}
 	else if InventorySet ==3
 	{
 		CreateInvItems (self, ItFo_Beer, 1);
-		CreateInvItems (self ,ItPo_Health_01,1);
+		CreateInvItems (self ,ITPO_REVIVED_HEALTH_01,1);
 		CreateInvItems (self ,ItMi_GoldRing,1);
 	}
 	else if InventorySet ==4
 	{ 
 		CreateInvItems (self, ItFo_Addon_Grog,2);
 		CreateInvItems (self, ItFo_Cheese, 1);
-		CreateInvItems (self ,itMi_Joint,1);
+		CreateInvItems (self ,ITMI_REVIVED_JOINT_REGULAR,1);
 		CreateInvItems (self ,ItMi_Gold,9);
 	}
 	else if InventorySet ==5
@@ -565,12 +565,12 @@ if 	InventorySet ==1
 		CreateInvItems (self, ItFo_Apple, 1);
 		CreateInvItems (self, ItFO_Booze,2);
 		CreateInvItems (self ,ItMi_GoldNugget_Addon,1);
-		CreateInvItems (self ,ItMi_Joint,3);
+		CreateInvItems (self ,ITMI_REVIVED_JOINT_REGULAR,3);
 	}
 	else if InventorySet ==3
 	{
 		CreateInvItems (self, ItFo_Beer, 1);
-		CreateInvItems (self ,ItPo_Health_01,1);
+		CreateInvItems (self ,ITPO_REVIVED_HEALTH_01,1);
 		CreateInvItems (self ,ItMi_SilverRing,1);
 		CreateInvItems (self, ItFO_Beer,2);
 	}
@@ -578,7 +578,7 @@ if 	InventorySet ==1
 	{ 
 		CreateInvItems (self, ItKe_lockpick,1);
 		CreateInvItems (self, ItFo_Cheese, 1);
-		CreateInvItems (self ,itMi_Joint,1);
+		CreateInvItems (self ,ITMI_REVIVED_JOINT_REGULAR,1);
 		CreateInvItems (self ,ItMi_GoldNugget_Addon,1);
 	}
 	else if InventorySet ==5

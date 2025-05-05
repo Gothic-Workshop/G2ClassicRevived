@@ -57,12 +57,12 @@ FUNC VOID DIA_Dar_Hallo_Info()
 func void DIA_Dar_Hallo_Ja()
 {
 	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_00"); //Sure.
-	CreateInvItem (other, itmi_joint);
-	B_UseItem (other, itmi_joint);
+	CreateInvItem (other, ITMI_REVIVED_JOINT_REGULAR);
+	B_UseItem (other, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_01"); //Not bad, eh?
 	AI_Output (other, self, "DIA_Dar_Hallo_Ja_15_02"); //Where did you get the stuff?
-	CreateInvItem (self, itmi_joint);
-	B_UseItem (self, itmi_joint);
+	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other, "DIA_Dar_Hallo_Ja_03_03"); //(grins) I have my sources.
 	Info_ClearChoices (DIA_Dar_Hallo);	
 };
@@ -248,7 +248,7 @@ FUNC VOID DIA_Dar_AufsMaul_Info()
 {
 	AI_Output (other, self, "DIA_Dar_AufsMaul_15_00"); //I'll knock it out of you!
 	AI_Output (self, other, "DIA_Dar_AufsMaul_03_01"); //Relax. I'm way too stoned to fight with you!
-	B_GiveInvItems (self, other, itmi_joint, 1);
+	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR, 1);
 	AI_Output (self, other, "DIA_Dar_AufsMaul_03_02"); //Here, first take a big toke!
 };
 
@@ -313,12 +313,12 @@ FUNC VOID DIA_Dar_Pilztabak_Info()
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_01"); //Sounds interesting. Give it here.
 	B_GiveInvItems (other, self, Itmi_Pilztabak, 1);
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_02"); //All right, here we go ...
-	CreateInvItem (self, itmi_joint);
-	B_UseItem (self, itmi_joint);
+	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_03"); //Have you ever smoked that stuff YOURSELF?
 	AI_Output (other, self, "DIA_Dar_Pilztabak_15_04"); //Well ...
-	CreateInvItem (self, itmi_joint);
-	B_UseItem (self, itmi_joint);
+	CreateInvItem (self, ITMI_REVIVED_JOINT_REGULAR);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_05"); //Have you or haven't you?
 	AI_Output (other, self, "DIA_Dar_Pilztabak_15_06"); //I've been sort of busy ...
 	AI_Output (self, other, "DIA_Dar_Pilztabak_03_07"); //Oh, shit!

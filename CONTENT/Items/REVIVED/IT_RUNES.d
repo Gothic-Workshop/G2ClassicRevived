@@ -4,7 +4,7 @@
 
 INSTANCE ITRU_REVIVED_TELEPORT_OC (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportOC;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -31,7 +31,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_OC (C_Item)
 
 INSTANCE ITRU_REVIVED_TELEPORT_NC (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportNC;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -58,7 +58,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_NC (C_Item)
 
 INSTANCE ITRU_REVIVED_TELEPORT_PSI (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportPsi;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -85,7 +85,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_PSI (C_Item)
 
 INSTANCE ITRU_REVIVED_TELEPORT_DT (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportOWDemonTower;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;

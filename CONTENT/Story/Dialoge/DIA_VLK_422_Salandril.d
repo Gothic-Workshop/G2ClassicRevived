@@ -135,7 +135,7 @@ func void DIA_Salandril_Trank_Info ()
 	AI_Output (self, other, "DIA_Salandril_Trank_13_00"); //I've heard you were with the paladins in the Valley of Mines. I'm impressed.
 	AI_Output (self, other, "DIA_Salandril_Trank_13_01"); //You should take your time and browse my goods. Right now, I have a very special potion to offer.
 	
-	CreateInvItems (self,ItPo_Perm_DEX,1);
+	CreateInvItems (self,ITPO_REVIVED_BOOST_DEX_03,1);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Trade

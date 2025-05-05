@@ -30,7 +30,7 @@ INSTANCE NONE_100_Xardas (Npc_Default)
 	
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Xardas , BodyTex_N, ITAR_XARDAS);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Xardas , BodyTex_N, ITAR_REVIVED_DMT_M);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	

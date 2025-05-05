@@ -110,8 +110,8 @@ INSTANCE Crypt_Skeleton_Lord	(Mst_Skeleton_Lord)
 	B_SetVisuals_Skeleton_Lord ();
 	
 	CreateInvItems	(self,ItMi_Gold,500);
-	CreateInvItems 	(self,ItPo_Mana_03,2);
-	CreateInvItems 	(self,ItPo_Health_03,2);
+	CreateInvItems 	(self,ITPO_REVIVED_HEALTH_03,2);
+	CreateInvItems 	(self,ITPO_REVIVED_MANA_03,2);
 };
 
 

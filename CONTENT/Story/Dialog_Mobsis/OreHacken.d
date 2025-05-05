@@ -1,6 +1,6 @@
 FUNC INT B_OreMob_Bestimmung()
 {
-	//bin ich mobsi X und habe ich noch Gold übrig?
+	//	OLDWORLD
 	if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_01") && (OreMob_All_Amount_MAX > OreMob_01_Amount)
 	{
 		OreMob_01_Amount = (OreMob_01_Amount +1);
@@ -69,6 +69,88 @@ FUNC INT B_OreMob_Bestimmung()
 	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_14") && (OreMob_All_Amount_MAX > OreMob_14_Amount)
 	{
 		OreMob_14_Amount = (OreMob_14_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_15") && (OreMob_All_Amount_MAX > OreMob_15_Amount)
+	{
+		OreMob_15_Amount = (OreMob_15_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_16") && (OreMob_All_Amount_MAX > OreMob_16_Amount)
+	{
+		OreMob_16_Amount = (OreMob_16_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_17") && (OreMob_All_Amount_MAX > OreMob_17_Amount)
+	{
+		OreMob_17_Amount = (OreMob_17_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_18") && (OreMob_All_Amount_MAX > OreMob_18_Amount)
+	{
+		OreMob_18_Amount = (OreMob_18_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_19") && (OreMob_All_Amount_MAX > OreMob_19_Amount)
+	{
+		OreMob_19_Amount = (OreMob_19_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_20") && (OreMob_All_Amount_MAX > OreMob_20_Amount)
+	{
+		OreMob_20_Amount = (OreMob_20_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "OW_OM_PICKSLOT_21") && (OreMob_All_Amount_MAX > OreMob_21_Amount)
+	{
+		OreMob_21_Amount = (OreMob_21_Amount +1);
+		return TRUE;
+	}
+
+	//	ABANDONED MINE
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_000") && (OreMob_All_Amount_MAX > OreMob_22_Amount)
+	{
+		OreMob_22_Amount = (OreMob_22_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_001") && (OreMob_All_Amount_MAX > OreMob_23_Amount)
+	{
+		OreMob_23_Amount = (OreMob_23_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_002") && (OreMob_All_Amount_MAX > OreMob_24_Amount)
+	{
+		OreMob_24_Amount = (OreMob_24_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_007") && (OreMob_All_Amount_MAX > OreMob_25_Amount)
+	{
+		OreMob_25_Amount = (OreMob_25_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_018") && (OreMob_All_Amount_MAX > OreMob_26_Amount)
+	{
+		OreMob_26_Amount = (OreMob_26_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_008") && (OreMob_All_Amount_MAX > OreMob_27_Amount)
+	{
+		OreMob_27_Amount = (OreMob_27_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_014") && (OreMob_All_Amount_MAX > OreMob_28_Amount)
+	{
+		OreMob_28_Amount = (OreMob_28_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_019") && (OreMob_All_Amount_MAX > OreMob_29_Amount)
+	{
+		OreMob_29_Amount = (OreMob_29_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_005") && (OreMob_All_Amount_MAX > OreMob_30_Amount)
+	{
+		OreMob_30_Amount = (OreMob_30_Amount +1);
 		return TRUE;
 	};
 	
@@ -157,16 +239,14 @@ FUNC VOID PC_OreHacken_Addon_Hour_Info()
 	var int CurrentChance;
 	CurrentChance = Hlp_Random (100);
 	
-	var int MultiNugget;
-	MultiNugget = Hlp_Random (10);
+	/* var int MultiNugget;
+	MultiNugget = Hlp_Random (10); */
 		
 	if (B_OreMob_Bestimmung() == TRUE)
 	{
 		if (CurrentChance <= Hero_HackChance)
 		{
-			//----Gold verteilen-----------------------
-			
-			if (OreCounter >= 20)
+			/* if (OreCounter >= 20)
 			&& (MultiNugget >= 8)
 			{
 				CreateInvItems (hero, ItMi_GoldNugget_Addon, 3);	
@@ -188,7 +268,11 @@ FUNC VOID PC_OreHacken_Addon_Hour_Info()
 				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
 				Truemmer_Count = 0;
 				OreCounter = (OreCounter +1);
-			};
+			}; */
+				CreateInvItems (hero, ItMi_GoldNugget_Addon, 1);	
+				PrintScreen ("1 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+				Truemmer_Count = 0;
+				OreCounter = (OreCounter +1);
 		}
 		else
 		{
@@ -229,7 +313,7 @@ FUNC VOID PC_OreHacken_Addon_TSchlag_Info()
 	var int TruemmerChance;
 	TruemmerChance = Hlp_Random (100);
 		
-	if (TruemmerChance < 5)
+	if (TruemmerChance <= 5)
 	{
 			PrintScreen ("Nothing...", -1, -1, FONT_ScreenSmall, 2);	
 	}
@@ -242,20 +326,20 @@ FUNC VOID PC_OreHacken_Addon_TSchlag_Info()
 		if (TruemmerChance >= 85)
 		{
 			//----Gold verteilen-----------------------
-			CreateInvItems (hero, ItMi_Nugget, 6);	
-			PrintScreen ("6 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			CreateInvItems (hero, ItMi_Nugget, 4);	
+			PrintScreen ("4 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
 			
 		}
 		else if (TruemmerChance >= 50)
 		{
-			CreateInvItems (hero, ItMi_Nugget, 4);	
-			PrintScreen ("4 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
+			CreateInvItems (hero, ItMi_Nugget, 3);	
+			PrintScreen ("3 ore nuggets mined!", -1, -1, FONT_ScreenSmall, 2);	
 		
 		}
 		else 
 		{
-			CreateInvItems (hero, ItMi_Nugget, 3);	
-			PrintScreen ("3 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
+			CreateInvItems (hero, ItMi_Nugget, 2);	
+			PrintScreen ("2 ore nugget mined!", -1, -1, FONT_ScreenSmall, 2);	
 		};
 	};
 	Truemmer_Count = 0;

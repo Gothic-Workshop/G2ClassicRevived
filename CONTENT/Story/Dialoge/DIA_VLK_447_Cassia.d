@@ -857,7 +857,7 @@ FUNC VOID DIA_Cassia_Belohnung_Gold()
 FUNC VOID DIA_Cassia_Belohnung_Trank()
 {
 	AI_Output (other, self, "DIA_Cassia_Belohnung_15_03");//Give me the potions.
-	B_GiveInvItems (self, other, ItPo_Health_03,4);
+	B_GiveInvItems (self, other, ITPO_REVIVED_HEALTH_03,4);
 	
 	Info_ClearChoices (DIA_Cassia_Belohnung);
 };

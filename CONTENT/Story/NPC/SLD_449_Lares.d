@@ -33,7 +33,7 @@ instance SLD_449_Lares (Npc_Default)
 	CreateInvItems (self, ItMw_Schwert3,1);//zur Sicherheit - bei Waffenverlust hat er 'ne neue M.F.
 	CreateInvItems (self, ItMi_Gold, 100);	
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
-	CreateInvItems (self, ItPo_Health_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.								
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.								
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Lares, BodyTex_N,ITAR_Vlk_L);	
@@ -52,12 +52,12 @@ instance SLD_449_Lares (Npc_Default)
 FUNC VOID Rtn_PreStart_449()
 {
 	TA_Stand_Guarding   (08,00,20,00,"NW_CITY_HABOUR_02_B");
-	TA_Smalltalk		(20,00,08,00,"NW_CITY_HABOUR_TAVERN01_IN");
+	TA_Stand_Guarding	(20,00,08,00,"NW_CITY_HABOUR_02_B");
 }; 
 FUNC VOID Rtn_Start_449()
 {	
 	TA_Stand_Guarding   (08,00,20,00,"NW_CITY_HABOUR_02_B");
-	TA_Smalltalk		(20,00,08,00,"NW_CITY_HABOUR_TAVERN01_IN");
+	TA_Smalltalk		(20,00,08,00,"NW_CITY_HABOUR_SMALLTALK_LARES");
 };
 FUNC VOID Rtn_Guide_449 ()
 {

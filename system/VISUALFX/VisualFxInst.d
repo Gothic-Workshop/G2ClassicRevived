@@ -4967,6 +4967,20 @@ INSTANCE SLOW_TIME(CFx_Base_Proto)
 };
 
 
+INSTANCE SLOW_TIME_SHORT(CFx_Base_Proto)
+{
+	// userstring 0: world  time scaler
+	// userstring 1: player time scaler
+ 	visName_S      		= "time.slw";
+ 	userString[0]     	= "0.5";
+ 	userString[1]     	= "0.5";
+	emFXLifeSpan    	= 15;						// achtung, zeitdauer ist hier skaliert mit dem time scaler
+	emFXTriggerDelay	= 6;						// achtung, zeitdauer ist hier skaliert mit dem time scaler
+	emFXCreate_S		= "SLOW_TIME_CHILD";
+	emTrjOriginNode 	= "BIP01";
+};
+
+
 INSTANCE SLOW_TIME_CHILD(CFx_Base_Proto)
 {
 	// userstring 0: world  time scaler

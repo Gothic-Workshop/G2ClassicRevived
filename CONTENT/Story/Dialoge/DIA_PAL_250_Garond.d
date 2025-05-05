@@ -58,6 +58,7 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 
 	if (B_GetTotalPetzCounter(self) > Garond_LastPetzCounter)
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Garond_PMSchulden_10_01"); //And that has gone up following the most recent accusations.
 		AI_Output (self, other, "DIA_Garond_PMSchulden_10_02"); //You seem to have gotten into even more trouble.
 		
@@ -191,6 +192,7 @@ FUNC VOID DIA_Garond_PETZMASTER_Info()
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_MURDER) 
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_01"); //I've been asking myself how long it would take until you came to me.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_02"); //Murder is just about the last thing I need here.
 		AI_Output (self, other, "DIA_Garond_PETZMASTER_10_03"); //I need every single one of my people - and now I'm left with one less again!
@@ -262,6 +264,9 @@ func void DIA_Garond_PETZMASTER_PayNow()
 {
 	AI_Output (other, self, "DIA_Garond_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
 	B_GiveInvItems (other, self, itmi_gold, Garond_Schulden);
+	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
+		B_SetAttitude (self, ATT_NEUTRAL);
+	};
 	AI_Output (self, other, "DIA_Garond_PETZMASTER_PayNow_10_01"); //All right, I'll tell the lads to calm down then. But don't let me catch you at this sort of crap ever again!
 
 	B_GrantAbsolution (LOC_OLDCAMP);
@@ -363,7 +368,7 @@ FUNC VOID DIA_Garond_NeedProof_Info()
 	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Of well - I guess I have no choice.
 	
 	MIS_ScoutMine = LOG_RUNNING;
-	B_StartOtherRoutine (Jergan,"FAJETH");
+	B_StartOtherRoutine (Jergan,"Silvestro");
 	
 	B_LogEntry (TOPIC_MISOLDWORLD,"Before Commander Garond sends me back, he wants me to seek out the three scraper troops and tell him how much ore they have stacked away.");
 	

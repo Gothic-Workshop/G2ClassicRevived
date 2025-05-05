@@ -55,6 +55,6 @@ FUNC VOID Rtn_Start_422 ()
 
 FUNC VOID Rtn_KlosterUrteil_422 ()
 {	
-	TA_Stand_ArmsCrossed	(08,00,22,00,"ALTAR");
-	TA_Stand_ArmsCrossed	(22,00,08,00,"ALTAR");
+	TA_Sit_Bench	(08,00,22,00,"NW_MONASTERY_CHURCH_BENCH_001");
+	TA_Sit_Bench	(22,00,08,00,"NW_MONASTERY_CHURCH_BENCH_001");
 };

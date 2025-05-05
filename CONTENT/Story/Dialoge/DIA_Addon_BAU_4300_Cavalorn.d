@@ -472,8 +472,8 @@ func void DIA_Addon_Cavalorn_AUSRUESTUNG_Info ()
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_AUSRUESTUNG_08_05"); //I still have 2 healing potions here. Interested?
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_AUSRUESTUNG_15_06"); //Sure. Give 'em here.
 	
-	CreateInvItems (self, ItPo_Health_01, 2);									
-	B_GiveInvItems (self, other, ItPo_Health_01, 2);					
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 2);									
+	B_GiveInvItems (self, other, ITPO_REVIVED_HEALTH_01, 2);					
 
 };
 

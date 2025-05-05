@@ -105,8 +105,6 @@ FUNC INT DIA_Babo_Sergio_Condition()
 {
 	if Npc_KnowsInfo (other, DIA_Sergio_Babo)
 	&& (other.guild == GIL_NOV)
-	
-	
 	{ 
 		return TRUE;
 	};	

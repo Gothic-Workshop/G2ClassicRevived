@@ -754,7 +754,7 @@ instance ItRw_Addon_FireBow (C_Item)
 
 instance ItRw_Addon_MagicBolt (C_Item)
 {
-	name 				=	"Magic quarrel";
+	name 				=	"Magic bolt";
 
 	mainflag 			=	ITEM_KAT_MUN;
 	flags 				=	ITEM_CROSSBOW | ITEM_MULTI;

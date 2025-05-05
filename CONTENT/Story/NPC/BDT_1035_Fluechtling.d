@@ -42,6 +42,6 @@ instance BDT_1035_Fluechtling (Npc_Default)
 
 FUNC VOID Rtn_Start_1035 ()
 {	
-	TA_Smalltalk	(08,00,23,00,"NW_BIGFARM_HOUSE_OUT_05"); 
-    TA_Smalltalk	(23,00,08,00,"NW_BIGFARM_HOUSE_OUT_05");
+	TA_Smalltalk	(08,00,23,00,"NW_BIGFARM_HOUSE_OUT_04"); 
+    TA_Smalltalk	(23,00,08,00,"NW_BIGFARM_HOUSE_OUT_04");
 };

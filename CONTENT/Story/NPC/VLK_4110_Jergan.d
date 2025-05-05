@@ -43,12 +43,21 @@ instance VLK_4110_Jergan (Npc_Default)
 
 FUNC VOID Rtn_Start_4110 ()
 {	
-	TA_Stand_ArmsCrossed			(08,00,23,00,"OW_SPAWN_SCOUT");
-    TA_Stand_ArmsCrossed			(23,00,08,00,"OW_SPAWN_SCOUT");
- 
+	TA_Stand_ArmsCrossed	(08,00,23,00,"OW_SPAWN_SCOUT");
+    TA_Smoke_Joint			(23,00,08,00,"OW_SPAWN_SCOUT");
+};
+FUNC VOID Rtn_Silvestro_4110 ()
+{
+	TA_Pray_Innos			(08,00,23,00,"OW_SILVESTROMINE_CAMP");
+	TA_Pray_Innos			(08,00,23,00,"OW_SILVESTROMINE_CAMP");
+};
+FUNC VOID Rtn_OldMine_4110 ()
+{
+	TA_Stand_Eating			(08,00,23,00,"OW_OM_ENTRANCE03_003");
+	TA_Stand_Drinking		(08,00,23,00,"OW_OM_ENTRANCE03_003");
 };
 FUNC VOID Rtn_Fajeth_4110 ()
 {	
-	TA_Sit_Bench			 (08,00,23,00,"LOCATION_23_CAVE_1_IN");
-    TA_Stand_Guarding	 (23,00,08,00,"LOCATION_23_CAVE_1_IN");
+	TA_Sit_Bench			(08,00,23,00,"LOCATION_23_CAVE_1_IN");
+	TA_Stand_Guarding		(23,00,08,00,"LOCATION_23_CAVE_1_IN");
 };

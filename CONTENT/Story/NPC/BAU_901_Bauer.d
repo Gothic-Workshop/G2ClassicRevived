@@ -38,9 +38,6 @@ instance BAU_901_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_901 ()
 {
-	TA_Stand_Eating			(08,00,20,00,"NW_BIGFARM_HOUSE_11");
+	TA_Rake_FP				(08,00,20,00,"NW_FARM4_FIELD_04");
     TA_Sleep				(20,00,08,00,"NW_BIGFARM_STABLE_SLEEP_01");		
 };
-
-
-

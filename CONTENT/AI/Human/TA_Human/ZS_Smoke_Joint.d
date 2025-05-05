@@ -15,9 +15,9 @@ func void ZS_Smoke_Joint()
 		AI_GotoWP	(self, self.wp);
 	};
 	
-	if (Npc_HasItems (self,ItMi_Joint) == 0)
+	if (Npc_HasItems (self,ITMI_REVIVED_JOINT_REGULAR) == 0)
 	{
-		CreateInvItem (self,ItMi_Joint);				
+		CreateInvItem (self,ITMI_REVIVED_JOINT_REGULAR);				
 	};
 	self.aivar[AIV_TAPOSITION] = NOTINPOS;
 };
@@ -50,7 +50,7 @@ func int ZS_Smoke_Joint_loop()
 	
 	if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
 	{
-		AI_UseItemToState 	(self,ItMi_JOINT,0);
+		AI_UseItemToState 	(self,ITMI_REVIVED_JOINT_REGULAR,0);
 		self.aivar[AIV_TAPOSITION] = ISINPOS;
 	};			
 
@@ -70,7 +70,7 @@ func int ZS_Smoke_Joint_loop()
 
 func void ZS_Smoke_Joint_end()
 {
-	AI_UseItemToState (self, ItMi_Joint, -1);
+	AI_UseItemToState (self, ITMI_REVIVED_JOINT_REGULAR, -1);
 };
 
 

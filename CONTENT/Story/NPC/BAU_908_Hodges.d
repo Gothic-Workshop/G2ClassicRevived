@@ -46,7 +46,8 @@ instance BAU_908_Hodges (Npc_Default)
 FUNC VOID Rtn_Start_908 ()
 {	
 	TA_Smith_Sharp		    (07,00,19,00,"NW_BIGFARM_SMITH_SHARP");
-    TA_Sleep				(19,00,07,00,"NW_BIGFARM_STABLE_SLEEP_02");
+    TA_Sit_Bench			(19,00,22,00,"NW_BIGFARM_PATH_04_1B");
+    TA_Sleep				(22,00,07,00,"NW_BIGFARM_STABLE_SLEEP_02");
 };
 
 FUNC VOID Rtn_Kap3PreInnosEye_908 ()
@@ -57,6 +58,6 @@ FUNC VOID Rtn_Kap3PreInnosEye_908 ()
 
 FUNC VOID Rtn_BennetWeg_908 ()
 {	
-	TA_Stand_Eating		    (07,00,19,00,"NW_BIGFARM_PATH_HODGES");
+	TA_Sit_Bench		    (07,00,19,00,"NW_BIGFARM_PATH_04_1B");
     TA_Stand_Drinking		(19,00,07,00,"NW_BIGFARM_PATH_HODGES");
 };

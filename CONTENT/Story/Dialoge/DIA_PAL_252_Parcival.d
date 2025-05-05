@@ -48,8 +48,7 @@ func void DIA_Parcival_Schurfer_Info ()
 	AI_Output (self, other, "DIA_Parcival_Schurfer_13_01"); //I assembled the three groups.
 	AI_Output (self, other, "DIA_Parcival_Schurfer_13_02"); //Marcos, Fajeth and Silvestro are the paladins who each lead a group.
 	AI_Output (self, other, "DIA_Parcival_Schurfer_13_03"); //Marcos' group set out in the direction of an old mine - led by an old digger named Grimes.
-	AI_Output (self, other, "DIA_Parcival_Schurfer_13_04"); //The other two groups set out together.
-	AI_Output (self, other, "DIA_Parcival_Schurfer_13_05"); //Jergan, one of our scouts, has reported that they set up camp near a large tower.
+	//AI_Output (self, other, "DIA_Parcival_Schurfer_13_04"); //The other two groups set out together.
 	
 	B_LogEntry (TOPIC_ScoutMine,"The scraper troops are each led by a paladin. Marcos, Fajeth and Silvestro.");
 	B_LogEntry (TOPIC_ScoutMine,"Marcos' group went towards what used to be the old mine. Their scout is the digger Grimes."); 
@@ -80,6 +79,7 @@ func void DIA_Parcival_Diego_Info ()
 {
 	AI_Output (other, self, "DIA_Parcival_Diego_15_00"); //Which group of scrapers did Diego go with?
 	AI_Output (self, other, "DIA_Parcival_Diego_13_01"); //This convict - Diego? He's with paladin Silvestro's group.
+	AI_Output (self, other, "DIA_Parcival_Schurfer_13_05"); //Jergan, one of our scouts, has reported that they set up camp near a large tower.
 	
 	B_LogEntry (TOPIC_ScoutMine,"Diego's with the scrapers who are being led by the paladin Silvestro."); 
 };

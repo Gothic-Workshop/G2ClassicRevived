@@ -55,8 +55,8 @@ func void DIA_Zuris_PICKPOCKET_DoIt()
 {
 	if (other.attribute[ATR_DEXTERITY] >= 40)
 	{
-		CreateInvItems (self,ITPO_Health_03,1);
-		B_GiveInvItems (self, other, ITPO_Health_03, 1);
+		CreateInvItems (self,ITPO_REVIVED_BOOST_MASTER_01,1);
+		B_GiveInvItems (self, other, ITPO_REVIVED_BOOST_MASTER_01, 1);
 		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
 		B_GiveThiefXP ();
 		Info_ClearChoices (DIA_Zuris_PICKPOCKET);

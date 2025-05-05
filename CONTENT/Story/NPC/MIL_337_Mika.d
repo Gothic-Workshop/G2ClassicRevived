@@ -17,14 +17,14 @@ instance Mil_337_Mika (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ItMw_1h_Mil_Sword);
-	CreateInvItems (self, ItPo_Health_01, 4);	//Joly: damit er frisch bei Farm2 ankommt.								
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 4);	//Joly: damit er frisch bei Farm2 ankommt.								
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fatbald", Face_L_ToughBart_Quentin, BodyTex_L, ITAR_REVIVED_GRD_M_02);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fatbald", Face_L_ToughBart_Quentin, BodyTex_L, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

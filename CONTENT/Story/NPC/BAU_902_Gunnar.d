@@ -41,7 +41,7 @@ instance BAU_902_Gunnar (Npc_Default)
 
 FUNC VOID Rtn_Start_902 ()
 {	
-	TA_Smalltalk		(08,00,19,59,"NW_BIGFARM_STABLE_OUT_01");
+	TA_Smalltalk			(08,00,19,59,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_02");
     TA_Sit_Chair			(19,59,08,00,"NW_BIGFARM_STABLE_06");
 };
 

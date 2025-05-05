@@ -382,7 +382,7 @@ FUNC VOID DIA_Oric_NeedStuff_Health ()
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_Health_11_01"); //A good choice. May it be of benefit to you.
 	
 	CreateInvItems (self,ItPo_Health_03,3);
-	B_GiveInvItems (self ,other,ItPo_Health_03,3);
+	B_GiveInvItems (self ,other,ITPO_REVIVED_HEALTH_03,3);
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);
 };
@@ -392,8 +392,8 @@ FUNC VOID DIA_Oric_NeedStuff_Mana ()
 	AI_Output (other,self ,"DIA_Oric_NeedStuff_Mana_15_00"); //I'll take the mana potions.
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_Mana_11_01"); //I hope you can use them. May Innos protect you.
 	
-	CreateInvItems (self,ItPo_Mana_03,3);
-	B_GiveInvItems (self ,other,ItPo_Health_03,3);
+	CreateInvItems (self,ITPO_REVIVED_MANA_03,3);
+	B_GiveInvItems (self ,other,ITPO_REVIVED_MANA_03,3);
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);
 };
@@ -403,8 +403,8 @@ FUNC VOID DIA_Oric_NeedStuff_Strength ()
 	AI_Output (other,self ,"DIA_Oric_NeedStuff_Strength_15_00"); //I'll take the elixir of strength.
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_Strength_11_01"); //Here, this will certainly come in useful. I wish you luck.
 
-	CreateInvItems (self,ItPo_Perm_STR,1);
-	B_GiveInvItems (self ,other,ItPo_Perm_STR,1);
+	CreateInvItems (self,ITPO_REVIVED_BOOST_STR_02,1);
+	B_GiveInvItems (self ,other,ITPO_REVIVED_BOOST_STR_02,1);
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);
 };
@@ -414,8 +414,8 @@ FUNC VOID DIA_Oric_NeedStuff_Dexterity ()
 	AI_Output (other,self ,"DIA_Oric_NeedStuff_Dexterity_15_00"); //I'll take the elixir of dexterity.
 	AI_Output (self ,other,"DIA_Oric_NeedStuff_Dexterity_11_01"); //May your arrows never fail to hit their target. Here you are.
 
-	CreateInvItems (self,ItPo_Perm_DEX,1);
-	B_GiveInvItems (self ,other,ItPo_Perm_DEX,1);
+	CreateInvItems (self,ITPO_REVIVED_BOOST_DEX_02,1);
+	B_GiveInvItems (self ,other,ITPO_REVIVED_BOOST_DEX_02,1);
 	
 	Info_ClearChoices (DIA_Oric_NeedStuff);
 };

@@ -125,6 +125,10 @@ FUNC VOID DIA_Abuyin_Kraut_Info()
 	AI_Output (other, self,"DIA_Abuyin_Kraut_15_00");//What kind of tobacco do you offer?
 	AI_Output (self, other,"DIA_Abuyin_Kraut_13_01");//My pipes are filled with spicy, refreshing apple tobacco.
 	AI_Output (self, other,"DIA_Abuyin_Kraut_13_02");//Help yourself whenever you want, Son of Adventure.
+
+	AI_Output (other, self,"DIA_Abuyin_anderen_15_00");//Do you have other tobacco as well?
+	AI_Output (self, other,"DIA_Abuyin_anderen_13_01");//I offer only the very best tobacco. This apple blend is a symphony from my homeland, the Southern Isles.
+	AI_Output (self, other,"DIA_Abuyin_anderen_13_02");//But, of course, I'm always open to trying a different sort of tobacco - if somebody should succeed in producing a really good tobacco.
 };
 // ************************************************************
 // 			  	anderen Tabak?
@@ -136,7 +140,7 @@ INSTANCE DIA_Abuyin_anderen(C_INFO)
 	condition	= DIA_Abuyin_anderen_Condition;
 	information	= DIA_Abuyin_anderen_Info;
 	permanent	= FALSE;
-	description	= "Do you have other tobacco as well?";
+	description	= "How is that done?";
 };                       
 FUNC INT DIA_Abuyin_anderen_Condition()
 {	
@@ -147,34 +151,20 @@ FUNC INT DIA_Abuyin_anderen_Condition()
 };
 FUNC VOID DIA_Abuyin_anderen_Info()
 {	
-	AI_Output (other, self,"DIA_Abuyin_anderen_15_00");//Do you have other tobacco as well?
-	AI_Output (self, other,"DIA_Abuyin_anderen_13_01");//I offer only the very best tobacco. This apple blend is a symphony from my homeland, the Southern Isles.
-	AI_Output (self, other,"DIA_Abuyin_anderen_13_02");//But, of course, I'm always open to trying a different sort of tobacco - if somebody should succeed in producing a really good tobacco.
 	AI_Output (other, self,"DIA_Abuyin_anderen_15_03");//How is that done?
 	AI_Output (self, other,"DIA_Abuyin_anderen_13_04");//Start with my apple tobacco as a basis. And then try combining it with another ingredient.
 	AI_Output (self, other,"DIA_Abuyin_anderen_13_05");//This is done at an alchemist's bench, provided you know the essentials of alchemy.
-};
-// ************************************************************
-// 			  	Woher 
-// ************************************************************
-INSTANCE DIA_Abuyin_Woher(C_INFO)
-{
-	npc			= VLK_456_Abuyin;
-	nr			= 2;
-	condition	= DIA_Abuyin_Woher_Condition;
-	information	= DIA_Abuyin_Woher_Info;
-	permanent	= FALSE;
-	description	= "Where can I get apple tobacco?";
-};                       
-FUNC INT DIA_Abuyin_Woher_Condition()
-{	
-	if Npc_KnowsInfo (other,DIA_Abuyin_anderen)
-	{	
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Abuyin_Woher_Info()
-{	
+	
+		PrintScreen			(PRINT_LearnTobacco, -1, -1, FONT_Screen, 2);
+		Npc_SetTalentSkill	(hero, NPC_TALENT_TOBACCO,			1);
+
+		Log_CreateTopic (TOPIC_Tobacco,LOG_NOTE);
+		B_LogEntry (TOPIC_Tobacco,LogText_TobaccoLearned); 
+
+		Log_AddEntry(TOPIC_Tobacco,"Apple tobacco, which can be used to roll apple-taste reefers."); 
+		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Apple] = TRUE;
+		Log_AddEntry(TOPIC_Tobacco,"'Apple Joint': 1 Swampweed and 1 Apple tobacco.");
+
 	AI_Output (other, self,"DIA_Abuyin_Woher_15_00");//Where can I get apple tobacco?
 	AI_Output (self, other,"DIA_Abuyin_Woher_13_01");//I shall give you two portions. It is up to you in your wisdom to do with them whatever you want.
 	AI_Output (self, other,"DIA_Abuyin_Woher_13_02");//If you crave more, then direct your steps towards Zuris, the Master of Potions. He produces this tobacco and he sells it, too.
@@ -185,8 +175,8 @@ FUNC VOID DIA_Abuyin_Woher_Info()
 FUNC VOID B_TabakProbieren()
 {
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Nichts_13_00");//Let me try your tobacco.
-	CreateInvItems (self, ItMi_Joint,1);
-	B_UseItem (self, ItMi_Joint);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR,1);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Nichts_13_01");//No, I'm afraid this mixture does not agree with me. But maybe you'll find somebody else who really appreciates this ... er ... delicacy.
 };
 // ************************************************************
@@ -266,8 +256,8 @@ FUNC VOID DIA_Abuyin_Mischung_Super ()
 	B_GiveInvItems (other, self, ItMi_Honigtabak, 1);
 		
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Super_13_00");//Let me try your tobacco.
-	CreateInvItems (self, ItMi_Joint,1);
-	B_UseItem (self, ItMi_Joint);
+	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR,1);
+	B_UseItem (self, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Super_13_01");//This tastes incredible! I've never had a better smoke in my life!
 	AI_Output (self, other,"DIA_Abuyin_Mischung_Super_13_02");//How did you prepare this blend?
 	AI_Output (other, self,"DIA_Abuyin_Mischung_Super_15_03");//I mixed the tobacco with honey.
@@ -417,8 +407,8 @@ FUNC VOID DIA_Abuyin_Zukunft_Trance()
 		AI_Output (self, other,"DIA_Abuyin_Zukunft_Trance_13_01");//(Trance) ... Men in shining armor ... a magician ... your friend is with them ... he is waiting for you ...
 		AI_Output (self, other,"DIA_Abuyin_Zukunft_Trance_13_02");//(Trance) ... Fire! An attack ... a mighty creature ... the flames ... many ... shall die ...
 		
-		AI_Output (self, other,"DIA_Addon_Abuyin_Zukunft_Trance_13_00");//(Trance) ... what is that ... ? A city... Ruins ... Quarhodron in Jharkendar ...
-		AI_Output (self, other,"DIA_Addon_Abuyin_Zukunft_Trance_13_01");//(Trance) ... he is summoned ... Quarhodron in Jharkendar!
+		//AI_Output (self, other,"DIA_Addon_Abuyin_Zukunft_Trance_13_00");//(Trance) ... what is that ... ? A city... Ruins ... Quarhodron in Jharkendar ...
+		//AI_Output (self, other,"DIA_Addon_Abuyin_Zukunft_Trance_13_01");//(Trance) ... he is summoned ... Quarhodron in Jharkendar!
 		
 		AI_PlayAni  (self,"T_HEASHOOT_2_STAND");
 		AI_Output (self, other,"DIA_Abuyin_Zukunft_Trance_13_03");//... I'm sorry - the vision is over. There's nothing more I can see.

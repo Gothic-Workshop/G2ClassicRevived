@@ -6,7 +6,7 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 /******************************************************************************************/
 	INSTANCE  ItAm_Mana_Angar_MIS(C_Item)
 {
-	name 			=	NAME_Amulett;
+	name 			=	"Angar's Magic Amulet";
 
 	mainflag 		=	ITEM_KAT_MAGIC;
 	flags 			=	ITEM_AMULET|ITEM_MISSION;
@@ -23,7 +23,7 @@ const int Value_OrcEliteRing 	= 130;//Joly: nicht ändern
 	wear			= 	WEAR_EFFECT;
 	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
-	description		= "Angar's Magic Amulet";
+	description		= name;
 	
 	TEXT[2]			= NAME_Bonus_Mana;
 	COUNT[2]		= 10;

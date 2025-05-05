@@ -304,29 +304,29 @@ func void B_UpgrateBeliarsWeapon ()//Joly: vorher C_ScCanUpgrateBeliarsWeapon au
 
 	if (hero.guild == GIL_KDF)
 	{
-		Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+		Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 		if 		(BeliarWeapCurrentLvL >= 1)	
 		{
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_GreenTentacle,PC_PrayShrine_UPGRATEBELIARSWEAPON_GreenTentacle);	
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_GreenTentacle,PC_PrayBeliar_UPGRATEBELIARSWEAPON_GreenTentacle);	
 		};
 		if (BeliarWeapCurrentLvL >= 2) 
 		{
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_SuckEnergy,PC_PrayShrine_UPGRATEBELIARSWEAPON_SuckEnergy);	
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_SuckEnergy,PC_PrayBeliar_UPGRATEBELIARSWEAPON_SuckEnergy);	
 			
 		};
 		if (BeliarWeapCurrentLvL >= 3) 
 		{
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_SummonGuardian,PC_PrayShrine_UPGRATEBELIARSWEAPON_NAME_SPL_SummonGuardian);	
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_BeliarsRage,PC_PrayShrine_UPGRATEBELIARSWEAPON_BeliarsRage);
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_SummonGuardian,PC_PrayBeliar_UPGRATEBELIARSWEAPON_NAME_SPL_SummonGuardian);	
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_BeliarsRage,PC_PrayBeliar_UPGRATEBELIARSWEAPON_BeliarsRage);
 		};
 		if (BeliarWeapCurrentLvL >= 4) 
 		{
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_Swarm,PC_PrayShrine_UPGRATEBELIARSWEAPON_Swarm);
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_summonZombie,PC_PrayShrine_UPGRATEBELIARSWEAPON_summonZombie);	
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_Swarm,PC_PrayBeliar_UPGRATEBELIARSWEAPON_Swarm);
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_summonZombie,PC_PrayBeliar_UPGRATEBELIARSWEAPON_summonZombie);	
 		};
 		if (BeliarWeapCurrentLvL >= 5) 
 		{
-			Info_AddChoice (PC_PrayShrine_UPGRATEBELIARSWEAPON,NAME_SPL_Skull,PC_PrayShrine_UPGRATEBELIARSWEAPON_SPL_Skull);	
+			Info_AddChoice (PC_PrayBeliar_UPGRATEBELIARSWEAPON,NAME_SPL_Skull,PC_PrayBeliar_UPGRATEBELIARSWEAPON_SPL_Skull);	
 		};
 	}
 	else
@@ -388,68 +388,68 @@ func void B_UpgrateBeliarsWeapon ()//Joly: vorher C_ScCanUpgrateBeliarsWeapon au
 	};
 };
 
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_GreenTentacle ()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_GreenTentacle ()
 {
 	CreateInvItem	(hero, ItRu_GreenTentacle);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE ); 
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);     
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_SuckEnergy ()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_SuckEnergy ()
 {
 	CreateInvItem	(hero, ItRu_SuckEnergy);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE );
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);       
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_NAME_SPL_SummonGuardian()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_NAME_SPL_SummonGuardian()
 {
 	CreateInvItem	(hero, ItRu_SummonGuardian);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE );
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);       
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_BeliarsRage()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_BeliarsRage()
 {
 	CreateInvItem	(hero, ItRu_BeliarsRage);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE );  
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);     
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_Swarm()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_Swarm()
 {
 	CreateInvItem	(hero, ItRu_Swarm);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE ); 
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);      
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_summonZombie()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_summonZombie()
 {
 	CreateInvItem	(hero, ItRu_SummonZombie);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE );   
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);    
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
-FUNC VOID PC_PrayShrine_UPGRATEBELIARSWEAPON_SPL_Skull()
+FUNC VOID PC_PrayBeliar_UPGRATEBELIARSWEAPON_SPL_Skull()
 {
 	CreateInvItem	(hero, ItRu_Skull);
 	Wld_PlayEffect("spellFX_BeliarsWeapon_Upgrate",  self, self, 0, 0, 0, FALSE );   
 	PrintScreen	(PRINT_Addon_RuneGiven, -1, 45, FONT_ScreenSmall, 2);    
 	Snd_Play ("CS_Prayer_WaveOfInsanity");
 	BeliarsWeaponUpgrated = TRUE;
-	Info_ClearChoices (PC_PrayShrine_UPGRATEBELIARSWEAPON);
+	Info_ClearChoices (PC_PrayBeliar_UPGRATEBELIARSWEAPON);
 };
 
 	

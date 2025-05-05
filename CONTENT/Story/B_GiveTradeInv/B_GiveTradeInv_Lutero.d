@@ -16,7 +16,7 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf,ItSC_Charm , 1); 
 		CreateInvItems (slf,ItMi_HolyWater, 1); 
 		CreateInvItems (slf,ItMi_Sulfur, 1); 
-		CreateInvItems (slf,ItPo_Speed, 1); 
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_01, 1); 
 		CreateInvItems (slf,ItMi_Pitch, 1);
 		CreateInvItems (slf,ItMi_Coal, 1);
 		CreateInvItems (slf,ItMi_ApfelTabak, 1);
@@ -39,7 +39,7 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf,ItLsTorch , 10); 
 		CreateInvItems (slf,ItSC_Charm , 2);
 		CreateInvItems (slf,ItAt_Sting , 1);
-		CreateInvItems (slf,ItPo_Speed, 2);
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_01, 2);
 		CreateInvItems (slf,ItWr_ZweihandBuch, 1);
 		CreateInvItems (slf,ItWr_EinhandBuch, 1);
 				
@@ -50,11 +50,11 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 	&& (Lutero_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
-		CreateInvItems (slf,ItPo_Speed, 1); 
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_02, 1); 
 		CreateInvItems (slf,ItMi_DarkPearl, 1); 
 		CreateInvItems (slf,ItPl_Temp_Herb , 1);
 		CreateInvItems (slf,ItLsTorch , 10); 
-		CreateInvItems (slf,ItPo_Speed, 3);
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_01, 3);
 		CreateInvItems (slf,ItSC_Charm , 3);
 		CreateInvItems (slf,ItAt_CrawlerMandibles, 1);
 		CreateInvItems (slf,ItBe_Addon_DEX_10, 1);
@@ -69,9 +69,9 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 150); 
 		CreateInvItems (slf,ItMi_Rockcrystal, 1);
 		CreateInvItems (slf,ItAt_StoneGolemHeart,  1); 
-		CreateInvItems (slf,ItPo_Speed, 1); 
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_03, 1); 
 		CreateInvItems (slf,ItPl_Temp_Herb , 1);
-		CreateInvItems (slf,ItPo_Speed, 4);
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_01, 4);
 		CreateInvItems (slf,ItLsTorch , 10); 
 		CreateInvItems (slf,ItSC_Charm , 3);
 		
@@ -86,7 +86,7 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf,ItAt_DemonHeart, 1);  
 		CreateInvItems (slf,ItPl_Perm_Herb, 1); 
 		CreateInvItems (slf,ItMi_RuneBlank, 1); 
-		CreateInvItems (slf,ItPo_Speed, 1); 
+		CreateInvItems (slf,ITPO_REVIVED_SPEED_03, 1); 
 
 		Lutero_ItemsGiven_Chapter_5 = TRUE;
 	};

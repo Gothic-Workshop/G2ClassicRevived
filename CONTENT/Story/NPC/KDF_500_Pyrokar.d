@@ -43,8 +43,8 @@ FUNC VOID Rtn_Start_500 ()
 
 FUNC VOID Rtn_RitualInnosEyeRepair_500 ()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_TROLLAREA_RITUAL_02");
-    TA_Stand_Guarding	(23,00,08,00,"NW_TROLLAREA_RITUAL_02");
+	TA_Stand_ArmsCrossed	(08,00,23,00,"NW_TROLLAREA_RITUAL_02");
+    TA_Stand_ArmsCrossed	(23,00,08,00,"NW_TROLLAREA_RITUAL_02");
 };
 
 

@@ -14,6 +14,7 @@ const int Value_LousHammer = 30;
 const int Mana_LousHammer = 1;
 
 const int Value_SchlafHammer = 60;
+const int Mana_SchlafHammer = 2;
 
 const int Value_FireStew = 180;
 const int STR_FireStew	= 1;
@@ -119,6 +120,7 @@ INSTANCE ItFo_Addon_Grog(C_Item)
 //-----------------------------
 
 var int Hammer_Once;	//damit der Magier sich nicht für 30 Gold superviel MANA kauft!!
+var int SchlafHammer_Once;	//damit der Magier sich nicht für 30 Gold superviel MANA kauft!!
 
 INSTANCE ItFo_Addon_LousHammer (C_Item)
 {
@@ -181,10 +183,12 @@ INSTANCE ItFo_Addon_SchlafHammer (C_Item)
 
 	FUNC VOID UseSchlafHammer()
 	{
-		if (self.attribute[ATR_HITPOINTS] > 2)
+		if SchlafHammer_Once == FALSE
 		{
-			self.attribute[ATR_HITPOINTS] = (self.attribute[ATR_HITPOINTS]/2);
+			B_RaiseAttribute (self,	ATR_MANA_MAX, Mana_SchlafHammer);
+			SchlafHammer_Once = TRUE;
 		};
+		AI_StartState	(self,ZS_MagicSleep,1,"");
 	};
 	
 	

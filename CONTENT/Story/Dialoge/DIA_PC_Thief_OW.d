@@ -52,6 +52,10 @@ FUNC VOID DIA_DiegoOw_Hallo_Info()
 	AI_Output (self ,other,"DIA_DiegoOw_Silvestro_11_03");//Say - how did you manage to get across the pass? I thought that it was swarming with orcs.
 	AI_Output (other ,self,"DIA_DiegoOw_Silvestro_15_04");//There is a path through the abandoned mine which isn't held by orcs.
 	AI_Output (self ,other,"DIA_DiegoOw_Silvestro_11_05");//That's good to know. Then I will head for Khorinis before long - I've got a few old accounts to settle there.
+
+	AI_Output (other ,self,"DIA_DiegoOw_Ritter_15_00");//What about the two dead knights in front of your hideout?
+	AI_Output (self ,other,"DIA_DiegoOw_Ritter_11_01");//They met their doom during a fight with a group of snappers.
+	AI_Output (self ,other,"DIA_DiegoOw_Ritter_11_02");//Well, the Valley of Mines has its own rules. I told them so. But they wouldn't listen to me.
 };	
 
 //******************************************************************
@@ -139,33 +143,6 @@ FUNC VOID DIA_DiegoOw_Mine_Info()
 	AI_Output (self ,other,"DIA_DiegoOw_Mine_11_02");//He said that we should take the ore to a safe place.
 	AI_Output (self ,other,"DIA_DiegoOw_Mine_11_03");//Well, since I was planning to skedaddle anyway, I volunteered to hide the ore.
 	AI_Output (self ,other,"DIA_DiegoOw_Mine_11_04");//And that was lucky for me. Because the scrapers met with a few minecrawlers. And none of them survived.
-};
-//******************************************************************
-//			Ritter
-//******************************************************************
-INSTANCE DIA_DiegoOw_Ritter(C_INFO)
-{
-	npc			= PC_Thief_Ow;
-	nr			= 4;
-	condition	= DIA_DiegoOw_Ritter_Condition;
-	information	= DIA_DiegoOw_Ritter_Info;
-	permanent	= FALSE;
-	description = "What about the two dead knights ...";
-};                       
-
-FUNC INT DIA_DiegoOw_Ritter_Condition()
-{	
-	if (Npc_HasItems (PAL_Leiche4,ItMI_OldCoin) == 0)
-	|| (Npc_HasItems (PAL_Leiche5,ItMI_OldCoin) == 0)
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_DiegoOw_Ritter_Info()
-{	
-	AI_Output (other ,self,"DIA_DiegoOw_Ritter_15_00");//What about the two dead knights in front of your hideout?
-	AI_Output (self ,other,"DIA_DiegoOw_Ritter_11_01");//They met their doom during a fight with a group of snappers.
-	AI_Output (self ,other,"DIA_DiegoOw_Ritter_11_02");//Well, the Valley of Mines has its own rules. I told them so. But they wouldn't listen to me.
 };
 //******************************************************************
 //			Perm
@@ -457,28 +434,28 @@ FUNC VOID DIA_Addon_ThiefOW_GoHome_Info()
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
 		Npc_ExchangeRoutine	(self,"START");
 	}
-	else if (Npc_GetDistToWP (self, "DT_E1_04") < (1500+1000)) //XARDAS
+	else if (Npc_GetDistToWP (self, "LOCATION_03_IN") < (1500+1000)) //XARDAS
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_02"); //I'll wait by the tower outside.
 		AI_StopProcessInfos (self);
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
-		Npc_ExchangeRoutine	(self,"XARDAS");
+		Npc_ExchangeRoutine	(self,"DEMONTOWER");
 	}
-	else if (Npc_GetDistToWP (self, "OW_NEWMINE_11") < (4000+1000)) //FAJETHMINE
+	else if (Npc_GetDistToWP (self, "LOCATION_23_CAVE_1_OUT_CENTER") < (4000+1000)) //FAJETHMINE
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_03"); //I'll wait near the mine.
 		AI_StopProcessInfos (self); 
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
 		Npc_ExchangeRoutine	(self,"FAJETH");
 	}
-	else if (Npc_GetDistToWP (self, "OW_MINE3_OUT") < (1200+1000)) //SILVESTROMINE
+	else if (Npc_GetDistToWP (self, "OW_SILVESTROMINE_ENTRANCE") < (1200+1000)) //SILVESTROMINE
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_04"); //I'll wait in front of the mine.
 		AI_StopProcessInfos (self); 
 		self.aivar[AIV_PARTYMEMBER] = FALSE;
 		Npc_ExchangeRoutine	(self,"SILVESTRO");
 	}
-	else if (Npc_GetDistToWP (self, "OW_PATH_266") < (3000+1000)) //GRIMESMINE
+	else if (Npc_GetDistToWP (self, "OW_OM_ENTRANCE02") < (3000+1000)) //GRIMESMINE
 	{
 		AI_Output (self, other, "DIA_Addon_Diego_GoHome_11_05"); //I'll wait close by.
 		AI_StopProcessInfos (self);
@@ -573,14 +550,14 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 	}
 	else if (C_DiegoTooFar(1000) == LOC_SWAMP)
 	{
-		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_06"); //This swamp is a dead end.
-		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_07"); //I wouldn't be surprised if there's even a dragon lurking for us inside.
+		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_06"); //This swamp is a dead end.
+		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_07"); //I wouldn't be surprised if there's even a dragon lurking for us inside.
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_08"); //Let's not go in there.
 	}
 	else if (C_DiegoTooFar(1000) == LOC_FIRE)
 	{
-		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_09"); //If we keep walking up the mountain, we're sure to meet a dragon.
-		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_10"); //And I would love to get to Khorinis ALIVE.
+		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_09"); //If we keep walking up the mountain, we're sure to meet a dragon.
+		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_10"); //And I would love to get to Khorinis ALIVE.
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_11"); //Let's take a different path.
 	}
 	else if (C_DiegoTooFar(1000) == LOC_LAKE)
@@ -735,7 +712,7 @@ instance DIA_Addon_ThiefOW_Nostalgie (C_INFO)
 };                       
 FUNC INT DIA_Addon_ThiefOW_Nostalgie_Condition()
 {
-	if (Npc_GetDistToWP (self, "WP_INTRO14") < 2000)
+	if (Npc_GetDistToWP (self, "WP_INTRO_SHORE") < 200)
 	{
 		return TRUE;
 	};
@@ -746,7 +723,8 @@ func VOID DIA_Addon_ThiefOW_Nostalgie_Info()
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_02"); //When we met here for the first time?
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_03"); //It's been ages ...
 	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_04"); //There was something ELSE in this place - hmm - damn! I just can't remember.
-	AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_05"); //Whatever ...
+	//AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_05"); //Whatever ...
+	AI_Output (self, other, "DIA_Buster_Hello_IfYouSaySo_15_00"); //Whatever you say.
 	B_GivePlayerXP (500);
 	hero.exp = hero.exp + 500;
 	PrintScreen (ConcatStrings(NAME_Addon_NostalgieBonus, IntToString(500)), -1, 60, FONT_Screen, 2);

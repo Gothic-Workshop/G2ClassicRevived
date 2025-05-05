@@ -84,7 +84,8 @@ FUNC VOID DIA_Parlan_PMSchulden_Info()
 	if (B_GetTotalPetzCounter(self) > Parlan_LastPetzCounter)
 	{
 		AI_Output (self, other, "DIA_Parlan_PMSchulden_05_01"); //And although you were already accused, you have laden more guilt upon yourself.
-		
+		B_SetAttitude (self, ATT_ANGRY);
+
 		if (Parlan_Schulden < 1000)
 		{
 			AI_Output (self, other, "DIA_Parlan_PMSchulden_05_02"); //Your guilt can only be purged by a larger donation to the monastery.
@@ -137,6 +138,7 @@ FUNC VOID DIA_Parlan_PMSchulden_Info()
 		// ------- Schulden erlassen oder trotzdem zahlen ------
 		if (B_GetGreatestPetzCrime(self) == CRIME_NONE)
 		{
+			B_SetAttitude (self, ATT_NEUTRAL);
 			AI_Output (self, other, "DIA_Parlan_PMSchulden_05_10"); //Your sins are now forgiven.
 			AI_Output (self, other, "DIA_Parlan_PMSchulden_05_11"); //Take care that it stays that way!
 	
@@ -227,6 +229,7 @@ FUNC VOID DIA_Parlan_PETZMASTER_Info()
 	{
 		AI_Output (self, other, "DIA_Parlan_PETZMASTER_05_01"); //You are guilty of the worst of all crimes! Murder!
 	
+		B_SetAttitude (self, ATT_ANGRY);
 		Parlan_Schulden = (B_GetTotalPetzCounter(self) * 50); 		//Anzahl der Zeugen * 50
 		Parlan_Schulden = Parlan_Schulden + 500;						//PLUS Mörder-Malus
 		if ((PETZCOUNTER_City_Theft + PETZCOUNTER_City_Attack + PETZCOUNTER_City_Sheepkiller) > 0)
@@ -267,6 +270,7 @@ FUNC VOID DIA_Parlan_PETZMASTER_Info()
 	// ------ Schaf getötet ------
 	if (B_GetGreatestPetzCrime(self) == CRIME_SHEEPKILLER) 
 	{
+		B_SetAttitude (self, ATT_ANGRY);
 		AI_Output (self, other, "DIA_Parlan_PETZMASTER_05_13"); //You have killed our sheep. You will pay compensation for that!
 		
 		
@@ -292,6 +296,9 @@ func void DIA_Parlan_PETZMASTER_PayNow()
 {
 	AI_Output (other, self, "DIA_Parlan_PETZMASTER_PayNow_15_00"); //I want to pay the penalty!
 	B_GiveInvItems (other, self, itmi_gold, Parlan_Schulden);
+	if(Npc_GetAttitude(self, other) != ATT_NEUTRAL){
+		B_SetAttitude (self, ATT_NEUTRAL);
+	};
 	AI_Output (self, other, "DIA_Parlan_PETZMASTER_PayNow_05_01"); //I accept your donation. Your transgressions are forgiven. May Innos give you the wisdom not to make the same mistakes again.
 
 	B_GrantAbsolution (LOC_MONASTERY);
@@ -1194,9 +1201,9 @@ FUNC VOID DIA_Parlan_IAmParlan_Info()
 			
 		Info_ClearChoices (DIA_Parlan_IAmParlan);
 		Info_AddChoice (DIA_Parlan_IAmParlan,"I shall do what I please.",DIA_Parlan_IAmParlan_MyChoice);
-		Info_AddChoice (DIA_Parlan_IAmParlan,"Sure.",DIA_Parlan_IAmParlan_OK);
+		Info_AddChoice (DIA_Parlan_IAmParlan,"Yes, Master.",DIA_Parlan_IAmParlan_OK);
 	};
-	Wld_InsertItem (ItKe_KlosterBibliothek,"NW_MONASTERY_CORRIDOR_02"); 
+	//Wld_InsertItem (ItKe_KlosterBibliothek,"NW_MONASTERY_CORRIDOR_02"); 
 };
 
 FUNC VOID DIA_Parlan_IAmParlan_MyChoice ()
@@ -1210,7 +1217,8 @@ FUNC VOID DIA_Parlan_IAmParlan_MyChoice ()
 
 FUNC VOID DIA_Parlan_IAmParlan_OK()
 {
-	AI_Output (other,self ,"DIA_Parlan_IAmParlan_OK_15_00"); //Sure.
+	//AI_Output (other,self ,"DIA_Parlan_IAmParlan_OK_15_00"); //Sure.
+	AI_Output (other, self, "DIA_Pyrokar_AUGEGEHEILT_15_02"); //Yes, Master.
 	AI_Output (self ,other,"DIA_Parlan_IAmParlan_OK_05_01"); //I certainly hope so.
 
 	Info_ClearChoices (DIA_Parlan_IAmParlan);
@@ -1429,9 +1437,58 @@ FUNC VOID DIA_Parlan_Kap5_EXIT_Info()
 
 
 
+// ************************************************************
+// 			  				PICK POCKET
+// ************************************************************
 
+INSTANCE DIA_Parlan_PICKPOCKET (C_INFO)
+{
+	npc			= KDF_504_Parlan;
+	nr			= 999;
+	condition	= DIA_Parlan_PICKPOCKET_Condition;
+	information	= DIA_Parlan_PICKPOCKET_Info;
+	permanent	= TRUE;
+	description = "(It would be difficult to steal his key)";
+};                       
 
+FUNC INT DIA_Parlan_PICKPOCKET_Condition()
+{
+	if (Npc_GetTalentSkill (other,NPC_TALENT_PICKPOCKET) == 1) 
+	&& (self.aivar[AIV_PlayerHasPickedMyPocket] == FALSE)
+	&& (Npc_HasItems(self, ItKe_KlosterBibliothek) >= 1)
+	&& (other.attribute[ATR_DEXTERITY] >= (80 - Theftdiff))
+	&& (Kapitel >= 3)
+	&& (hero.guild == GIL_SLD || hero.guild == GIL_DJG)
+	{
+		return TRUE;
+	};
+};
+ 
+FUNC VOID DIA_Parlan_PICKPOCKET_Info()
+{	
+	Info_ClearChoices	(DIA_Parlan_PICKPOCKET);
+	Info_AddChoice		(DIA_Parlan_PICKPOCKET, DIALOG_BACK 		,DIA_Parlan_PICKPOCKET_BACK);
+	Info_AddChoice		(DIA_Parlan_PICKPOCKET, DIALOG_PICKPOCKET	,DIA_Parlan_PICKPOCKET_DoIt);
+};
 
-
-
-
+func void DIA_Parlan_PICKPOCKET_DoIt()
+{
+	if (other.attribute[ATR_DEXTERITY] >= 80)
+	{
+		B_GiveInvItems (self, other, ItKe_KlosterBibliothek, 1);
+		self.aivar[AIV_PlayerHasPickedMyPocket] = TRUE;
+		B_GiveThiefXP ();
+		Info_ClearChoices (DIA_Parlan_PICKPOCKET);
+	}
+	else
+	{
+		B_ResetThiefLevel();
+		AI_StopProcessInfos	(self);
+		B_Attack (self, other, AR_Theft, 1); //reagiert trotz IGNORE_Theft mit NEWS
+	};
+};
+	
+func void DIA_Parlan_PICKPOCKET_BACK()
+{
+	Info_ClearChoices (DIA_Parlan_PICKPOCKET);
+};

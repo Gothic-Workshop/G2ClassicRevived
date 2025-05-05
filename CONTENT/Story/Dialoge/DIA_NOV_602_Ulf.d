@@ -406,8 +406,8 @@ FUNC VOID DIA_Ulf_Abrechnung_Rauch()
 	AI_Output (other, self, "DIA_Ulf_Abrechnung_Rauch_15_00"); //Have you got anything to smoke?
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_01"); //You're lucky. I've actually got something right here.
 	
-	B_GiveInvItems (self, other, ITmi_Joint,1);
-	B_UseItem (other, itmI_Joint);
+	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR,1);
+	B_UseItem (other, ITMI_REVIVED_JOINT_REGULAR);
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_Rauch_03_02"); //Let's get it over with.
 	
 	AI_StopProcessInfos (self);

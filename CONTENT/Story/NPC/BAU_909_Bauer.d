@@ -39,7 +39,6 @@ instance BAU_909_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_909 ()
 {	
-	//raus
+	TA_Rake_FP			(08,00,20,00,"NW_FARM4_FIELD_04");
+	TA_Pick_FP			(20,00,08,00,"NW_BIGFARM_BIGTREE_STABLE_02");
 };
-
-

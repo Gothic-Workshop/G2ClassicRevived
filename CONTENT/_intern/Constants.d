@@ -957,7 +957,7 @@ const int NPC_TALENT_MAGE				= 7;
 // Special-Talents
 const int NPC_TALENT_SNEAK				= 8;
 const int NPC_TALENT_REGENERATE			= 9;	//??? was ist davon drin?
-const int NPC_TALENT_FIREMASTER			= 10;	//??? was ist davon drin?
+//const int NPC_TALENT_FIREMASTER			= 10;	//??? was ist davon drin?
 const int NPC_TALENT_ACROBAT			= 11;	//--> Anis ändern!
 
 // NEW Talents //werden komplett auf Scriptebene umgesetzt - Programm braucht sie nur für Ausgabe im Characterscreen
@@ -969,9 +969,9 @@ const int NPC_TALENT_TAKEANIMALTROPHY	= 16;
 
 const int NPC_TALENT_FOREIGNLANGUAGE	= 17;
 const int NPC_TALENT_WISPDETECTOR		= 18;
-const int NPC_TALENT_C					= 19;
+/* const int NPC_TALENT_C					= 19;
 const int NPC_TALENT_D					= 20;
-const int NPC_TALENT_E					= 21;
+const int NPC_TALENT_E					= 21; */
 
 const int NPC_TALENT_MAX				= 22;	//ehem. 12
 

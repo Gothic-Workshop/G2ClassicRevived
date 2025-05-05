@@ -44,12 +44,12 @@ instance VLK_4132_Talbin_NW (Npc_Default)
 
 FUNC VOID Rtn_PreStart_4132 ()
 {	
-	TA_Stand_Eating (08,00,23,00,"LEVELCHANGE");
-    TA_Stand_Eating	(23,00,08,00,"LEVELCHANGE");
+	TA_Stand_Eating (08,00,23,00,"NW_TO_PASS_04");
+    TA_Stand_Eating	(23,00,08,00,"NW_TO_PASS_04");
 };
 
 FUNC VOID Rtn_Farm_4132 ()
 {	
-	TA_Stand_Eating	(08,00,23,00,"NW_FARM2_OUT_07");
-    TA_Stand_Eating	(23,00,08,00,"NW_FARM2_OUT_07");
+	TA_Sit_Bench 		(08,00,23,00,"NW_TAVERNE_TROLLAREA_MONSTER_02_02"); 
+    TA_Sit_Bench		(23,00,08,00,"NW_TAVERNE_TROLLAREA_MONSTER_02_02");
 };

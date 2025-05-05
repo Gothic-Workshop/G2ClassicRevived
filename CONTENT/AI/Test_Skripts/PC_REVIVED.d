@@ -7,6 +7,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	level			= 30;
 	voice			= 15;
 	id				= 0;
+
+	self.aivar[AIV_INVINCIBLE] = true;
 	
 	//--------- abilities --------
 	attribute[ATR_STRENGTH] =		300;
@@ -18,6 +20,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	
 	exp				= (500*((level+1)/2)*(level+1));
 	exp_next		= (500*((level+2)/2)*(level+1));
+	
+	B_SetFightSkills (self, 100);
 
 	//-------- visuals --------
 	// 						animations
@@ -35,12 +39,25 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	Npc_SetTalentSkill	(self, NPC_TALENT_RUNES, 			1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_ALCHEMY, 			1);
 	Npc_SetTalentSkill	(self, NPC_TALENT_TAKEANIMALTROPHY,	1);
-	
-	B_SetFightSkills (self, 100);
-	
-	EquipItem (self, ITMW_REVIVED_DEMONSLAYER_2H);
 
-//---------------------------------------------------------------------
+	Npc_SetTalentSkill	(self, NPC_TALENT_BOWMAKING,		1);
+	Npc_SetTalentSkill	(self, NPC_TALENT_COOKING,			1);
+	Npc_SetTalentSkill	(self, NPC_TALENT_BOOZE,			1);
+	Npc_SetTalentSkill	(self, NPC_TALENT_TOBACCO,			1);
+
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Teeth] 			= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Claws]			= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Fur] 				= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Heart] 			= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ShadowHorn] 		= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_FireTongue] 		= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFWing] 			= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_BFSting] 			= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_Mandibles] 		= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_CrawlerPlate] 	= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] 	= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;
+	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;
 
 	PLAYER_TALENT_ALCHEMY[CHARGE_Innoseye] = TRUE;
 
@@ -81,44 +98,53 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	PLAYER_TALENT_ALCHEMY[POTION_SPEED_02] = TRUE;
 	PLAYER_TALENT_ALCHEMY[POTION_SPEED_03] = TRUE;
 
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_LouHammer] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_LouHammerDouble] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_FastHerring] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_TurnipBooze] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_VinoBooze] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_WhiteRum] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_MageWine] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Booze_RiceSchnaps] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_LouHammer] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_LouHammerDouble] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_FastHerring] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_TurnipBooze] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_VinoBooze] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_WhiteRum] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_MageWine] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_RiceSchnaps] = TRUE;
 
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_Regular] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_Apple] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_Honey] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_Mushroom] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_GreenNovice] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_NorthernDark] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_Dreamcall] = TRUE;
-	PLAYER_TALENT_ALCHEMY[POTION_Weed_DreamcallStrong] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Regular] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Apple] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Honey] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Mushroom] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_GreenNovice] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall] = TRUE;
+	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong] = TRUE;
 
 //---------------------------------------------------------------------
 
-	PLAYER_TALENT_SMITH[WEAPON_Common] 			= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_02]	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 	= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_Common] 				= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_Special_02]		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_Special_03] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_Special_03] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_Special_04] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_Special_04] 		= TRUE;
 
-	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] 	= TRUE;
-	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] 	= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] 		= TRUE;
+	PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] 		= TRUE;
+
+	PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_01] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_02] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_03] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_BOW_REVIVED_04] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_01] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_02] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_03] 	= TRUE;
+	PLAYER_TALENT_BOWYER[WEAPON_CBOW_REVIVED_04] 	= TRUE;
 
 //---------------------------------------------------------------------
 
@@ -168,6 +194,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	PLAYER_TALENT_RUNES[SPL_ArmyOfDarkness] 		= TRUE;
 	PLAYER_TALENT_RUNES[SPL_Shrink] 				= TRUE;
 
+
 		//########################################
 		//########################################
 		//###								   ###
@@ -175,8 +202,33 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 		//###								   ###	
 		//########################################
 		//########################################
+	
+	EquipItem (self, ITMW_REVIVED_DEMONSLAYER_2H);
+
+//---------------------------------------------------------------------
 
 	
+	CreateInvItems(self, ITAM_REVIVED_PROT_ARROW_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_MELEE_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_MELEE_02, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_WEAPON_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_MAGIC_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_FIRE_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_FIRE_02, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_MAGIC_FIRE, 1);
+	CreateInvItems(self, ITAM_REVIVED_PROT_TOTAL_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_HP_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_MP_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_HP_MP_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_DEX_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_DEX_02, 1);
+	CreateInvItems(self, ITAM_REVIVED_STR_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_STR_02, 1);
+	CreateInvItems(self, ITAM_REVIVED_STR_DEX_01, 1);
+	CreateInvItems(self, ITAM_REVIVED_PSI, 1);
+	CreateInvItems(self, ITAM_REVIVED_KDW, 1);
+	CreateInvItems(self, ITAM_REVIVED_DEMON, 1);
+
 	CreateInvItems(self, ITAR_REVIVED_VLK_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_VLK_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_STT_M, 1);
@@ -184,6 +236,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_GRD_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_GRD_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_GRD_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_GRD_S, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_EBR_H, 1);
@@ -194,26 +247,77 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAR_REVIVED_SLD_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_SLD_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_SLD_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_NOV_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_NOV_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_NOV_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_TPL_L, 1);
-	CreateInvItems(self, ITAR_REVIVED_TPL_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_TPL_H, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDF_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_KDF_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDF_H, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDW_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_KDW_M, 1);
 	CreateInvItems(self, ITAR_REVIVED_KDW_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_GUR_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_GUR_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_DMT_L, 1);
 	CreateInvItems(self, ITAR_REVIVED_DMT_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_LAW, 1);
-	CreateInvItems(self, ITAR_REVIVED_CRAWLER, 1);
-	CreateInvItems(self, ITAR_REVIVED_ORE_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_ORE_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_DMT_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_DMT_S, 1);
+	CreateInvItems(self, ITAR_REVIVED_BDT_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_BDT_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_BDT_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_PAL_L, 1);
+	CreateInvItems(self, ITAR_REVIVED_PAL_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_PAL_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_PAL_S, 1);
+	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER, 1);
+	//CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_TPL_SKE, 1);
+	CreateInvItems(self, ITAR_REVIVED_ARCHER, 1);
+	CreateInvItems(self, ITAR_REVIVED_BEGGAR, 1);
+	CreateInvItems(self, ITAR_REVIVED_KNIGHT, 1);
+	CreateInvItems(self, ITAR_REVIVED_KNIGHT_02, 1);
+	CreateInvItems(self, ITAR_REVIVED_DJG_M, 1);
+	CreateInvItems(self, ITAR_REVIVED_DJG_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_PIR_H, 1);
+	CreateInvItems(self, ITAR_REVIVED_GORDONRAMSAY, 1);
+
+	CreateInvItems(self, ITBE_REVIVED_ARCHER, 1);
+
+	CreateInvItems(self, ITFO_REVIVED_MEATBUG, 1);
+	CreateInvItems(self, ITFO_REVIVED_APPLE, 1);
+	CreateInvItems(self, ITFO_REVIVED_HONEY, 1);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_BLACK, 20);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_BLUE, 20);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_RED, 20);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_GREEN, 20);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_PURPLE, 20);
+	CreateInvItems(self, ITFO_REVIVED_GRAPES_YELLOW, 20);
+	CreateInvItems(self, ITFO_REVIVED_BREAD, 1);
+	CreateInvItems(self, ITFO_REVIVED_CHEESE, 1);
+	CreateInvItems(self, ITFO_REVIVED_RICE, 1);
+	CreateInvItems(self, ITFO_REVIVED_PLANTSOUP, 1);
+	CreateInvItems(self, ITFO_REVIVED_BUGSOUP, 1);
+	CreateInvItems(self, ITFO_REVIVED_CRAWLERSOUP, 1);                                          
+	CreateInvItems(self, ITFO_REVIVED_WATER, 1);
+	CreateInvItems(self, ITFO_REVIVED_BEER, 1);
+	CreateInvItems(self, ITFO_REVIVED_WINE, 1);
+	CreateInvItems(self, ITFO_REVIVED_BOOZE, 1);
+
+	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_01, 1);
+	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_02, 1);
+	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_03, 1);
+	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_04, 1);
+	CreateInvItems(self, ITHE_REVIVED_JUDGE, 1);
+	CreateInvItems(self, ITHE_REVIVED_PAL, 1);
+	CreateInvItems(self, ITHE_REVIVED_KNIGHT, 1);
+	CreateInvItems(self, ITHE_REVIVED_DJG_M, 1);
+	CreateInvItems(self, ITHE_REVIVED_DJG_H, 1);
+	CreateInvItems(self, ITHE_REVIVED_PIR_M, 1);
+	CreateInvItems(self, ITHE_REVIVED_PIR_H, 1);
+
+	CreateInvItems(self, ITKE_REVIVED_STONEFORTRESS, 1);
+	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);
 
 	CreateInvItems(self, ITMW_REVIVED_SICKLE, 1);	
 	CreateInvItems(self, ITMW_REVIVED_RUSTYSWORD, 1);
+	CreateInvItems(self, ITMW_REVIVED_OLDSWORD, 1);
 	CreateInvItems(self, ITMW_REVIVED_SHORTSWORD, 1);
 	CreateInvItems(self, ITMW_REVIVED_FARMERDEFENSE, 1);
 	CreateInvItems(self, ITMW_REVIVED_LURKERBITE, 1);
@@ -295,8 +399,12 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_KRUSHKARROK, 1);
 	CreateInvItems(self, ITMW_REVIVED_GRACHTNAKK, 1);
 	CreateInvItems(self, ITMW_REVIVED_SHABANAKK, 1);
+	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H, 1); 
+	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H_CHARGED, 1); 
 	CreateInvItems(self, ITMW_REVIVED_URIZIEL_2H, 1); 
 	CreateInvItems(self, ITMW_REVIVED_URIZIEL_2H_CHARGED, 1); 
+	CreateInvItems(self, ITMW_REVIVED_DEMONSLAYER_1H, 1); 
+	//CreateInvItems(self, ITMW_REVIVED_DEMONSLAYER_2H, 1); 
 	CreateInvItems(self, ITMW_REVIVED_ULUMULU, 1);
 	CreateInvItems(self, ITMW_REVIVED_CLEFTEROFWORLDS, 1); 
 	CreateInvItems(self, ITMW_REVIVED_LIGHTBRINGER, 1); 
@@ -304,6 +412,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_DEMONSTRIKE, 1); 
 	CreateInvItems(self, ITMW_REVIVED_BANISHINGBLADE, 1); 
 
+	CreateInvItems(self, ITMW_REVIVED_SWORD_JACKAL, 1);
 	CreateInvItems(self, ITMW_REVIVED_SWORD_SCAR, 1);
 	CreateInvItems(self, ITMW_REVIVED_SWORD_ARTO, 1);
 	CreateInvItems(self, ITMW_REVIVED_SWORD_RAVEN, 1);
@@ -326,6 +435,66 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_AXE_GORN, 1);
 	CreateInvItems(self, ITMW_REVIVED_STAFF_YBERION, 1);
 	CreateInvItems(self, ITMW_REVIVED_STAFF_RICELORD, 1);
+
+	CreateInvItems(self, ITMI_REVIVED_JOINT_GREENNOVICE, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_NORTHDARK, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_DREAMCALL, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_DREAMCALL_02, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_REGULAR, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_APPLE, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_APPLEDOUBLE, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_HONEY, 1);
+	CreateInvItems(self, ITMI_REVIVED_JOINT_MUSHROOM, 1);
+	CreateInvItems(self, ITMI_REVIVED_SALT, 1);
+	CreateInvItems(self, ITMI_REVIVED_SUGAR, 1);
+	CreateInvItems(self, ITMI_REVIVED_SYRIANOIL, 1);
+	CreateInvItems(self, ITMI_REVIVED_STONEOIL, 1);
+	CreateInvItems(self, ITMI_REVIVED_PUREALCOHOL, 1);
+	CreateInvItems(self, ITMI_REVIVED_VINEGAR, 1);
+	CreateInvItems(self, ITMI_REVIVED_MAGICWATER, 1);
+	CreateInvItems(self, ITMI_REVIVED_FIGURINE, 1);
+	CreateInvItems(self, ITMI_REVIVED_WARHORN, 1);
+	CreateInvItems(self, ITMI_REVIVED_OLDCOIN, 1);
+	CreateInvItems(self, ITMI_REVIVED_MAGICORE, 1);
+
+	CreateInvItems(self, ITPL_REVIVED_BERRY_BLACK, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRY_BLUE, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRY_GREEN, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRY_PURPLE, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRY_RED, 1);
+	CreateInvItems(self, ITPL_REVIVED_BERRY_YELLOW, 1);
+	CreateInvItems(self, ITPL_REVIVED_SEED_BLUE, 1);
+	CreateInvItems(self, ITPL_REVIVED_SEED_GREEN, 1);
+	CreateInvItems(self, ITPL_REVIVED_SEED_RED, 1);
+	CreateInvItems(self, ITPL_REVIVED_SEED_YELLOW, 1);
+	CreateInvItems(self, ITPL_REVIVED_MUSHROOM_RED, 1);
+
+	CreateInvItems(self, ITPO_REVIVED_HEALTH_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_HEALTH_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_HEALTH_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_MANA_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_MANA_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_MANA_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_SPEED_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_SPEED_02, 1);
+	CreateInvItems(self, ITPO_REVIVED_SPEED_03, 1);
+	CreateInvItems(self, ITPO_REVIVED_SPECIAL_MANA_01, 1);
+	CreateInvItems(self, ITPO_REVIVED_SPECIAL_MANA_02, 1);
 
 	CreateInvItems(self, ITRW_REVIVED_BOW_SMALL_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_SMALL_02, 1);
@@ -350,29 +519,9 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_02, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_03, 1);
 	CreateInvItems(self, ITRW_REVIVED_CROSSBOW_04, 1);
-
 	CreateInvItems(self, ITRW_REVIVED_BOW_DIEGO, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_WOLF, 1);
 
-	CreateInvItems(self, ITAM_REVIVED_PROT_ARROW_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_MELEE_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_WEAPON_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_MAGIC_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_FIRE_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_FIRE_02, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_MAGIC_FIRE, 1);
-	CreateInvItems(self, ITAM_REVIVED_PROT_TOTAL_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_DEX_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_DEX_02, 1);
-	CreateInvItems(self, ITAM_REVIVED_STR_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_STR_02, 1);
-	CreateInvItems(self, ITAM_REVIVED_STR_DEX_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_HP_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_MP_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_HP_MP_01, 1);
-	CreateInvItems(self, ITAM_REVIVED_PSI, 1);
-	CreateInvItems(self, ITAM_REVIVED_KDW, 1);
-	
 	CreateInvItems(self, ITRI_REVIVED_PROT_ARROW_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_ARROW_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_MELEE_01, 1);
@@ -386,228 +535,76 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITRI_REVIVED_PROT_MAGIC_FIRE_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_PROT_TOTAL_02, 1);
+	CreateInvItems(self, ITRI_REVIVED_HP_01, 1);
+	CreateInvItems(self, ITRI_REVIVED_HP_02, 1);
+	CreateInvItems(self, ITRI_REVIVED_MP_01, 1);
+	CreateInvItems(self, ITRI_REVIVED_HP_MP_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_DEX_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_DEX_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_STR_01, 1);
 	CreateInvItems(self, ITRI_REVIVED_STR_02, 1);
 	CreateInvItems(self, ITRI_REVIVED_STR_DEX_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_02, 1);
-	CreateInvItems(self, ITRI_REVIVED_MP_01, 1);
-	CreateInvItems(self, ITRI_REVIVED_HP_MP_01, 1);
-
-	CreateInvItems(self, ITPO_REVIVED_HEALTH_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_HEALTH_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_HEALTH_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_MANA_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_MANA_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_MANA_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_HEALTH_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MANA_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_STR_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_DEX_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_BOOST_MASTER_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_SPEED_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_SPEED_02, 10);
-	CreateInvItems(self, ITPO_REVIVED_SPEED_03, 10);
-	CreateInvItems(self, ITPO_REVIVED_SPECIAL_MANA_01, 10);
-	CreateInvItems(self, ITPO_REVIVED_SPECIAL_MANA_02, 10);
-
-	CreateInvItems(self, ITFO_REVIVED_MEATBUG, 20);
-	CreateInvItems(self, ITFO_REVIVED_APPLE, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_01, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_02, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_03, 20);
-	CreateInvItems(self, ITFO_REVIVED_BREAD, 20);
-	CreateInvItems(self, ITFO_REVIVED_HAM, 20);
-	CreateInvItems(self, ITFO_REVIVED_CHEESE, 20);
-	CreateInvItems(self, ITFO_REVIVED_RICE, 20);
-	CreateInvItems(self, ITFO_REVIVED_PLANTSOUP, 20);
-	CreateInvItems(self, ITFO_REVIVED_BUGSOUP, 20);
-	CreateInvItems(self, ITFO_REVIVED_CRAWLERSOUP, 20);
-	CreateInvItems(self, ITFO_REVIVED_WATER, 20);
-	CreateInvItems(self, ITFO_REVIVED_BEER, 20);
-	CreateInvItems(self, ITFO_REVIVED_WINE, 20);
-	CreateInvItems(self, ITFO_REVIVED_BOOZE, 20);
-
-	CreateInvItems(self, ITPL_REVIVED_BLUEBERRY, 20);
-	CreateInvItems(self, ITPL_REVIVED_FLAMEBERRY, 20);
-	CreateInvItems(self, ITPL_REVIVED_SERAPHIS, 20);
-	CreateInvItems(self, ITPL_REVIVED_VELAYIS, 20);
-	CreateInvItems(self, ITPL_REVIVED_MOUNTAINMOSS, 20);
-	CreateInvItems(self, ITPL_REVIVED_GRAVEMOSS, 20);
-	CreateInvItems(self, ITPL_REVIVED_NIGHTSHADE, 20);
-	CreateInvItems(self, ITPL_REVIVED_LINUM, 20);
-	CreateInvItems(self, ITPL_REVIVED_ORCLEAF, 20);
-	CreateInvItems(self, ITPL_REVIVED_OAKLEAF, 20);
-	CreateInvItems(self, ITPL_REVIVED_HEALING_01, 20);
-	CreateInvItems(self, ITPL_REVIVED_HEALING_02, 20);
-	CreateInvItems(self, ITPL_REVIVED_HEALING_03, 20);
-	CreateInvItems(self, ITPL_REVIVED_BLOODWOOD, 20);
-	CreateInvItems(self, ITPL_REVIVED_TOWERWOOD, 20);
-	CreateInvItems(self, ITPL_REVIVED_RAVENHERB, 20);
-	CreateInvItems(self, ITPL_REVIVED_DARKHERB, 20);
-	CreateInvItems(self, ITPL_REVIVED_STONEROOT, 20);
-	CreateInvItems(self, ITPL_REVIVED_DRAGONROOT, 20);
-	CreateInvItems(self, ITPL_REVIVED_HELLMUSHROOM, 20);
-	CreateInvItems(self, ITPL_REVIVED_SLAVEBREAD, 20);
-	CreateInvItems(self, ITPL_REVIVED_TROLLBERRY, 20);
 
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_OC, 1); 
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_NC, 1); 
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_PSI, 1); 
 	CreateInvItems(self, ITRU_REVIVED_TELEPORT_DT, 1); 
 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_CITY, 1); 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_MONASTERY, 1); 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_BIGFARM, 1); 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_XARDAS, 1); 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_TAVERNE, 1); 
+	CreateInvItems(self, ITSC_REVIVED_TELEPORT_ORC, 1); 
 	CreateInvItems(self, ITSC_REVIVED_TRANSFORM_MEATBUG, 1);
 
 	CreateInvItems(self, ITAT_REVIVED_DAMLURKER, 1);
 	CreateInvItems(self, ITAT_REVIVED_ORCDOG, 1);
 	CreateInvItems(self, ITAT_REVIVED_ICEGOLEM, 1);
 	CreateInvItems(self, ITAT_REVIVED_CRAWLEREGG, 1);
-	
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_01, 1);
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_02, 1);
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_03, 1);
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_04, 1);
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_05, 1);
-	CreateInvItems(self, ITWR_REVIVED_CHROMANIN_06, 1);
-	
-	CreateInvItems(self, ITMI_REVIVED_JOINT_GREENNOVICE, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_NORTHDARK, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_DREAMCALL, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_DREAMCALL_02, 5);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_SULFUR, 1);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_MERCURY, 1);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_SALT, 1);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_SYRIANOIL, 1);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_MOLERATGREASE, 1);
-	CreateInvItems(self, ITMI_REVIVED_ALCHEMY_ALCOHOL, 1);
-	CreateInvItems(self, ITMI_REVIVED_OLDCOIN, 1);
-	CreateInvItems(self, ITMI_REVIVED_FIGURINE, 1);
 
-	CreateInvItems(self, ITKE_REVIVED_STONEFORTRESS, 1);
-
-//---------------------------------------------------------------------
-
-	CreateInvItems(self, ITAR_JUDGE_02, 1);
-	CreateInvItems(self, ITAR_PAL_M_02, 1);
-	CreateInvItems(self, ITAR_PAL_H_02, 1);
-	CreateInvItems(self, ITAR_PAL_SKEL_02, 1);
-	CreateInvItems(self, ITAR_DJG_M_02, 1);
-	CreateInvItems(self, ITAR_DJG_H_02, 1);
-	CreateInvItems(self, ITAR_PIR_H_Addon_02, 1);
-
-	CreateInvItems(self, ITHE_REVIVED_JUDGE, 1);
-	CreateInvItems(self, ITHE_REVIVED_PAL_M, 1);
-	CreateInvItems(self, ITHE_REVIVED_PAL_H, 1);
-	CreateInvItems(self, ITHE_REVIVED_PAL_OLD, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_M, 1);
-	CreateInvItems(self, ITHE_REVIVED_DJG_H, 1);
-	CreateInvItems(self, ITHE_REVIVED_PIR_M, 1);
-	CreateInvItems(self, ITHE_REVIVED_PIR_H, 1);
-
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_CITY, 3);
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_MONASTERY, 3);
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_BIGFARM, 3);
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_XARDAS, 3);
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_TAVERNE, 3);
-	CreateInvItems(self, ITSC_REVIVED_TELEPORT_ORC, 3);
-
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_03, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_04, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_05, 1);
+	CreateInvItems(self, ITWR_REVIVED_CIRCLE_KDF_06, 1);
+	CreateInvItems(self, ITWR_REVIVED_GIFTFROMTHEGODS, 1);
+	CreateInvItems(self, ITWR_REVIVED_SECRETSOFMAGIC, 1);
+	CreateInvItems(self, ITWR_REVIVED_POWERFULART, 1);
+	CreateInvItems(self, ITWR_REVIVED_ELEMENTARYARCANUM, 1);
+	CreateInvItems(self, ITWR_REVIVED_TRUEPOWER, 1);
+	CreateInvItems(self, ITWR_REVIVED_MAGICORE, 1);
+	CreateInvItems(self, ITWR_REVIVED_ASTRONOMY, 1);
+	CreateInvItems(self, ITWR_REVIVED_ARCANUMGOLUM_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_ARCANUMGOLUM_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_WORDSOFGODS_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_WORDSOFGODS_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_WORDSOFGODS_03, 1);
+	CreateInvItems(self, ITWR_REVIVED_VARANT_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_VARANT_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_MYRTANAPOETRY, 1);
+	CreateInvItems(self, ITWR_REVIVED_HUNTANDPREY, 1);
+	CreateInvItems(self, ITWR_REVIVED_BLOODFLIES, 1);
+	CreateInvItems(self, ITWR_REVIVED_ARTOFFIGHTING, 1);
+	CreateInvItems(self, ITWR_REVIVED_RECIPES_01, 1);
+	CreateInvItems(self, ITWR_REVIVED_RECIPES_02, 1);
+	CreateInvItems(self, ITWR_REVIVED_KALOMSRECIPE, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_GAROND, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_DRAGONS, 1);
 	CreateInvItems(self, ITWR_REVIVED_MAP_VALLEY_CAVES, 1);
-
-	CreateInvItems(self, ITMI_REVIVED_MAGICORE, 1);
-
-	CreateInvItems(self, ITMI_REVIVED_JOINT_REGULAR, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_APPLE, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_APPLEDOUBLE, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_HONEY, 5);
-	CreateInvItems(self, ITMI_REVIVED_JOINT_MUSHROOM, 5);
+	CreateInvItems(self, ITWR_REVIVED_MAP_FOCUS, 1);
+	CreateInvItems(self, ITWR_REVIVED_ALMANAC, 1);
+	CreateInvItems(self, ITWR_REVIVED_CRYPT, 1);
+	CreateInvItems(self, ITWR_REVIVED_CERTIFICATE, 1);
 	
-//---------------------------------------------------------------------
-
-	CreateInvItems(self, ITAM_REVIVED_DEMON, 1);
-	
-//---------------------------------------------------------------------
-
-	CreateInvItems(self, ITAR_REVIVED_DMT_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_DMT_L, 1);
-	CreateInvItems(self, ITAR_REVIVED_BEGGAR, 1);
-	CreateInvItems(self, ITAR_REVIVED_GRD_M_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_L_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER, 1);
-	//CreateInvItems(self, ITAR_REVIVED_DEMONHUNTER_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_ARCHER, 1);
-	
-	CreateInvItems(self, ITAR_REVIVED_SLD_L_BDT, 1);
-	CreateInvItems(self, ITAR_REVIVED_STT_L_BDT, 1);
-	CreateInvItems(self, ITAR_REVIVED_STT_L_BDT_02, 1);
-
-	CreateInvItems(self, ITBE_REVIVED_ARCHER, 1);
-
-	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H, 1);
-	CreateInvItems(self, ITMW_REVIVED_URIZIEL_1H_CHARGED, 1);
-	//CreateInvItems(self, ITMW_REVIVED_URIZIEL_2H, 1);
-	//CreateInvItems(self, ITMW_REVIVED_URIZIEL_2H_CHARGED, 1);
-	CreateInvItems(self, ITMW_REVIVED_DEMONSLAYER_1H, 1);
-	//CreateInvItems(self, ITMW_REVIVED_DEMONSLAYER_2H, 1);
-
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_01, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_02, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_03, 1);
-	CreateInvItems(self, ITHE_REVIVED_SPECTACLES_04, 1);
-	
-//---------------------------------------------------------------------
-
-	CreateInvItems(self, ITAR_REVIVED_PAL_L, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_L_03, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_M, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_H, 1);
-	CreateInvItems(self, ITAR_REVIVED_PAL_H_02, 1);
-	CreateInvItems(self, ITAR_REVIVED_STT_M_BDT, 1);
-	CreateInvItems(self, ITAR_REVIVED_STT_H_BDT, 1);
-	CreateInvItems(self, ITAR_REVIVED_GORDONRAMSAY, 1);
-
-	CreateInvItems(self, ITHE_REVIVED_PAL_S, 1);
-	
-	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);
-
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_FIRST, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_01, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_02, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_03, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_04, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_05, 1);
-	CreateInvItems(self, ITWR_REVIVED_HUNTERNOTES_06, 1);
-
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_01, 1);
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_02, 1);
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_03, 1);
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_04, 1);
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_05, 1);
-	CreateInvItems(self, ITWR_REVIVED_QUALSHY_06, 1);
-	
-//---------------------------------------------------------------------
-
 	CreateInvItems(self, REVIVED_LEARN_ALCHEMY_ALL, 1);
 	CreateInvItems(self, REVIVED_LEARN_SMITHING_ALL, 1);
-	CreateInvItems(self, REVIVED_LEARN_TROPHIES_ALL, 1);
+	CreateInvItems(self, REVIVED_LEARN_BOWMAKING_ALL, 1);
 	CreateInvItems(self, REVIVED_LEARN_RUNES_ALL, 1);
+	CreateInvItems(self, REVIVED_LEARN_TROPHIES_ALL, 1);
 	CreateInvItems(self, REVIVED_LEARN_TALENTS_ALL, 1);
-	
-//---------------------------------------------------------------------
 
 	CreateInvItems(self, REVIVED_POCKET_GOTHIC, 1);
 	CreateInvItems(self, REVIVED_POCKET_GOTHIC2, 1);
@@ -615,4 +612,5 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, REVIVED_POCKET_WOG, 1);
 	CreateInvItems(self, REVIVED_POCKET_NEUE, 1);
 	CreateInvItems(self, REVIVED_POCKET_DEBUG, 1);
+	CreateInvItems(self, REVIVED_POCKET_ALLES, 1);
 };

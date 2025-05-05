@@ -105,7 +105,7 @@ FUNC VOID DIA_Peck_BUYARMOR_Info()
 	{
 		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other,	"DIA_Peck_Add_12_05"); //Here, take it.
-		B_GiveInvItems (self,other, ITAR_REVIVED_GRD_M_02,1);
+		B_GiveInvItems (self,other, ITAR_REVIVED_GRD_M,1);
 		DIA_Peck_BUYARMOR_perm = TRUE;
 	}
 	else

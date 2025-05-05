@@ -56,6 +56,7 @@ FUNC VOID DIA_Grimes_Hallo_Info()
 		Wld_InsertNpc (Snapper,"SPAWN_SNAPPER_OM_ENTRANCE_003");
 		
 		Grimes_First = TRUE;
+		B_StartOtherRoutine (Jergan,"Fajeth");
 	};
 };
 // ************************************************************

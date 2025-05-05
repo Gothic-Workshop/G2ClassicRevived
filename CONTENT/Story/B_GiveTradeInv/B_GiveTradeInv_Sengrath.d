@@ -16,8 +16,8 @@ FUNC VOID B_GiveTradeInv_Sengrath (var C_NPC slf)
 	&& (Sengrath_ItemsGiven_Chapter_2 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
-		CreateInvItems (slf, ITPo_Mana_01, 10);
-		CreateInvItems (slf, ITPo_Mana_02,  5);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 10);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02,  5);
 		
 		// ------ Scrolls -------
 		CreateInvItems (slf, ITSc_Zap, 3);
@@ -39,8 +39,8 @@ FUNC VOID B_GiveTradeInv_Sengrath (var C_NPC slf)
 	&& (Sengrath_ItemsGiven_Chapter_3 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
-		CreateInvItems (slf, ITPo_Mana_01, 10);
-		CreateInvItems (slf, ITPo_Mana_02,  5);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 10);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02,  5);
 		Sengrath_ItemsGiven_Chapter_3 = TRUE;
 	};
 
@@ -48,8 +48,8 @@ FUNC VOID B_GiveTradeInv_Sengrath (var C_NPC slf)
 	&& (Sengrath_ItemsGiven_Chapter_4 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 150); 
-		CreateInvItems (slf, ITPo_Mana_01, 10);
-		CreateInvItems (slf, ITPo_Mana_02,  5);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 10);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02,  5);
 
 		Sengrath_ItemsGiven_Chapter_4 = TRUE;
 	};
@@ -58,8 +58,8 @@ FUNC VOID B_GiveTradeInv_Sengrath (var C_NPC slf)
 	&& (Sengrath_ItemsGiven_Chapter_5 == FALSE))
 	{
 		CreateInvItems (slf, ItMi_Gold, 200); 
-		CreateInvItems (slf, ITPo_Mana_01, 10);
-		CreateInvItems (slf, ITPo_Mana_02,  5);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_01, 10);
+		CreateInvItems (slf, ITPO_REVIVED_MANA_02,  5);
 	
 		Sengrath_ItemsGiven_Chapter_5 = TRUE;
 	};

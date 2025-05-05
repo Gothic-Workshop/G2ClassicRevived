@@ -1,622 +1,289 @@
-const int	Value_Waldbeeren	=	5;		const int	HP_Waldbeeren		=	10;
-const int	Value_Flammendorn	=	6;		const int	HP_Flammendorn		=	12;
-const int	Value_Seraphis		=	7;		const int	HP_Seraphis			=	14;
-const int	Value_Velayis		=	8;		const int	HP_Velayis			=	16;
-const int	Value_Bergmoos		=	9;		const int	HP_Bergmoos			=	18;
-const int	Value_Grabmoos		=	10;		const int	HP_Grabmoos			=	20;
-const int	Value_Nachtschatten	=	11;		const int	HP_Nachtschatten	=	22;
-const int	Value_Mondschatten	=	12;		const int	HP_Mondschatten		=	24;
-const int	Value_Orkblatt		=	13;		const int	HP_Orkblatt			=	26;
-const int	Value_Eichenblatt	=	14;		const int	HP_Eichenblatt		=	28;
-
-const int	Value_Hollenpilz	=	 3;		const int	HP_Hollenpilz		=	 6;
-const int	Value_Sklavenbrot	=	 9;		const int	HP_Sklavenbrot		=	15;
-
-const int	Value_Heilkrauter1	=	14;		const int	HP_Heilkrauter1		=	30;
-const int	Value_Heilkrauter2	=	19;		const int	HP_Heilkrauter2		=	39;
-const int	Value_Heilkrauter3	=	24;		const int	HP_Heilkrauter3		=	49;
-
-const int	Value_Trollkirsche	=	15;		const int	HP_Trollkirsche		=	20;
-
-const int	Value_Blutbuche		=	3;		const int	Mana_Blutbuche		=	5;
-const int	Value_Turmeiche		=	8;		const int	Mana_Turmeiche		=	10;
-const int	Value_Rabenkraut	=	12;		const int	Mana_Rabenkraut		=	15;
-const int	Value_Dunkelkraut	=	17;		const int	Mana_Dunkelkraut	=	20;
-const int	Value_Steimwurzel	=	20;		const int	Mana_Steinwurzel	=	25;
-const int	Value_Drachenwurzel	=	23;		const int	Mana_Drachenwurzel	=	30;
+const int	REV_Value_Berry			=	5;		const int	REV_Bonus_Berry			=	1;
+const int	REV_Value_Seeds			=	5;		const int	REV_Bonus_Seeds			=	1;
+const int	REV_Value_Mushroom		=	5;		const int	REV_Bonus_Mushroom		=	1;
+const int	REV_Value_Riceplant		=	5;		const int	REV_Bonus_Riceplant		=	1;
 
 
 //****************************************************************************
-//			HEALTH PLANTS
+//			FUNCTIONS
 //****************************************************************************
 
-INSTANCE ITPL_REVIVED_BLUEBERRY (C_Item)
+func void UseBerrys ()
+{
+	Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_Bonus_Berry);
+};
+
+func void UseSeeds ()
+{
+	Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_Bonus_Seeds);
+};
+
+func void UseMushrooms ()
+{
+	Npc_ChangeAttribute	(self,	ATR_MANA,	REV_Bonus_Mushroom);
+};
+
+func void UseRiceplant ()
+{
+	Npc_ChangeAttribute	(self,	ATR_Hitpoints,	REV_Bonus_Riceplant);
+};
+
+//****************************************************************************
+//			BERRIES
+//****************************************************************************
+
+INSTANCE ITPL_REVIVED_BERRY_BLACK (C_Item)
 {	
-	name 				=	"Blueberries";
+	name 				=	"Black berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Waldbeeren;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_BERRYS_01.3ds";
+	visual 				=	"REV_ITPL_BERRY_BLACK.3ds";
 	material 			=	MAT_LEATHER;
 	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Waldbeeren;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Waldbeeren;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
-
-		func void UseBerrys ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Waldbeeren);
-		};
 
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_FLAMEBERRY (C_Item)
+INSTANCE ITPL_REVIVED_BERRY_BLUE (C_Item)
 {	
-	name 				=	"Flame Thorn";
+	name 				=	"Blue berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Flammendorn;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_FLAMEBERRY_01.3ds";
+	visual 				=	"REV_ITPL_BERRY_BLUE.3ds";
 	material 			=	MAT_LEATHER;
-	on_state [0]		=   Useflame;
+	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Flammendorn;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Flammendorn;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
-
-		func void Useflame ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Flammendorn);
-		};
 
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_SERAPHIS (C_Item)
+INSTANCE ITPL_REVIVED_BERRY_GREEN (C_Item)
 {	
-	name 				=	"Seraphis";
+	name 				=	"Green berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Seraphis;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_SERAPHIS_01.3ds";
+	visual 				=	"REV_ITPL_BERRY_GREEN.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]			= Useseraphis;	
+	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Seraphis;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Seraphis;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
 
-		func void Useseraphis ()
-		{			
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Seraphis);
-		};
-		
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_MOUNTAINMOSS (C_Item)
+INSTANCE ITPL_REVIVED_BERRY_PURPLE (C_Item)
 {	
-	name 				=	"Mountain Moss";
+	name 				=	"Purple berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Bergmoos;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_MOUNTAINMOSS_01.3ds";
+	visual 				=	"REV_ITPL_BERRY_PURPLE.3ds";
 	material 			=	MAT_LEATHER;
-	on_state [0]		=   Usemoos;
+	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Bergmoos;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Bergmoos;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
 
-		func void Usemoos ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Bergmoos);
-		};
-		
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_GRAVEMOSS (C_Item)
+INSTANCE ITPL_REVIVED_BERRY_RED (C_Item)
 {	
-	name 				=	"Grave Moss";
+	name 				=	"Red berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Grabmoos;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_MOUNTAINMOSS_02.3ds";
+	visual 				=	"REV_ITPL_BERRY_RED.3ds";
 	material 			=	MAT_LEATHER;
-	on_state [0]		=   Usemoos2;
+	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Grabmoos;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Grabmoos;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
-
-		func void Usemoos2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Grabmoos);
-		};
 
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_NIGHTSHADE (C_Item)
+INSTANCE ITPL_REVIVED_BERRY_YELLOW (C_Item)
 {	
-	name 				=	"Solanaceae";
+	name 				=	"Yellow berries";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Nachtschatten;
+	value 				=	REV_Value_Berry;
 
-	visual 				=	"ITPL_NIGHTSHADOW_01.3ds";
+	visual 				=	"REV_ITPL_BERRY_YELLOW.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]         = Usenight;
+	on_state [0]		=   UseBerrys;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Nachtschatten;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Nachtschatten;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Berry;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Berry;
 };
-
-		func void Usenight ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Nachtschatten);
-		};
-		
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_ORCLEAF (C_Item)
-{	
-	name 				=	"Orc Leaf";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Orkblatt;
-
-	visual 				=	"ITPL_ORCHERB_01.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			= 	Useorc;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Orkblatt;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Orkblatt;
-};
-
-		func void Useorc ()
-		{	
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Orkblatt);
-		};
-		
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_OAKLEAF (C_Item)
-{	
-	name 				=	"Oak Leaf";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Eichenblatt;
-
-	visual 				=	"ITPL_ORCHERB_02.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			= Useorc2;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Eichenblatt;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Eichenblatt;
-};
-
-		func void Useorc2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Eichenblatt);
-		};
 
 //****************************************************************************
-
-INSTANCE ITPL_REVIVED_HEALING_01 (C_Item)
-{	
-	name 				=	"Healing Leaves";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Heilkrauter1;
-
-	visual 				=	"ITPL_HERB_HEALTH_01.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=	UsePlants1;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Heilkrauter1;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Heilkrauter1;
-};
-
-	func void UsePlants1 ()
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Heilkrauter1);
-	};
-
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_HEALING_02 (C_Item)
-{	
-	name 				=	"Healing Herbs";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Heilkrauter2;
-
-	visual 				=	"ITPL_HERB_HEALTH_02.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=	UsePlants2;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Heilkrauter2;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Heilkrauter2;
-};
-
-		func void UsePlants2 ()
-		{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Heilkrauter2);
-	};
-
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_HEALING_03 (C_Item)
-{	
-	name 				=	"Healing Root";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Heilkrauter3;
-
-	visual 				=	"ITPL_HERB_HEALTH_03.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=	UsePlants3;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Heilkrauter3;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Heilkrauter3;
-};
-
-	func void UsePlants3 ()
-	{			
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Heilkrauter3);
-	};
-
-//****************************************************************************
-//			MANA PLANTS
+//			SEEDS
 //****************************************************************************
 
-INSTANCE ITPL_REVIVED_VELAYIS (C_Item)
+INSTANCE ITPL_REVIVED_SEED_BLUE (C_Item)
 {	
-	name 				=	"Velayis";
+	name 				=	"Blue seeds";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Velayis;
+	value 				=	REV_Value_Seeds;
 
-	visual 				=	"ITPL_VELAYIS_01.3ds";
+	visual 				=	"REV_ITPL_SEEDS_BLUE.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]			= UseVelayis;	
+	on_state [0]		=   UseSeeds;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Velayis;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Velayis;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Seeds;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Seeds;
 };
 
-		func void UseVelayis ()
-		{			
-			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Velayis);
-		};
-		
 /******************************************************************************************/
 
-instance ITPL_REVIVED_BLOODWOOD (C_ITEM)
+INSTANCE ITPL_REVIVED_SEED_GREEN (C_Item)
 {	
-	name 					=	"Copper Beech Seed";
+	name 				=	"Green seeds";
 
-	mainflag 				=	ITEM_KAT_FOOD;
-	flags 					=	ITEM_MULTI;	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
 
-	value 					=	Value_Blutbuche;
+	value 				=	REV_Value_Seeds;
 
-	visual 					=	"ITPL_BLOODWOOD_01.3ds";
-	material 				=	MAT_LEATHER;
-	on_state[0]				=  Useblood;
-	scemeName				=	"FOOD";
+	visual 				=	"REV_ITPL_SEEDS_GREEN.3ds";
+	material 			=	MAT_LEATHER;
+	on_state [0]		=   UseSeeds;
+	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Blutbuche;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Blutbuche;                          	
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Seeds;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Seeds;
 };
-                                       
-		func void Useblood ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Blutbuche);
-		};   
-		                                  
+
 /******************************************************************************************/
 
-instance ITPL_REVIVED_TOWERWOOD (C_ITEM)
+INSTANCE ITPL_REVIVED_SEED_RED (C_Item)
 {	
-	name 					=	"Tower Oak Seed";
+	name 				=	"Red seeds";
 
-	mainflag 				=	ITEM_KAT_FOOD;
-	flags 					=	ITEM_MULTI;	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
 
-	value 					=	Value_Turmeiche;
+	value 				=	REV_Value_Seeds;
 
-	visual 					=	"ITPL_BLOODWOOD_02.3ds";
-	material 				=	MAT_LEATHER;
-	on_state[0]				=  Useblood2;
-	scemeName				=	"FOOD";
+	visual 				=	"REV_ITPL_SEEDS_RED.3ds";
+	material 			=	MAT_LEATHER;
+	on_state [0]		=   UseSeeds;
+	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Turmeiche;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Turmeiche;                    	
-};                                        
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Seeds;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Seeds;
+};
 
-		func void Useblood2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Turmeiche);
-		};
-		                 
 /******************************************************************************************/
 
-INSTANCE ITPL_REVIVED_RAVENHERB (C_Item)
+INSTANCE ITPL_REVIVED_SEED_YELLOW (C_Item)
 {	
-	name 				=	"Raven Herb";
+	name 				=	"Yellow seeds";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Rabenkraut;
+	value 				=	REV_Value_Seeds;
 
-	visual 				=	"ITPL_RAVENHERB_01.3ds";
+	visual 				=	"REV_ITPL_SEEDS_YELLOW.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]			= Useraven;
+	on_state [0]		=   UseSeeds;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Rabenkraut;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Rabenkraut;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Seeds;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Seeds;
 };
-
-		func void Useraven ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Rabenkraut);
-		}; 
-		  
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_DARKHERB (C_Item)
-{	
-	name 				=	"Dark Herbs";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Dunkelkraut;
-
-	visual 				=	"ITPL_RAVENHERB_02.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=   Useraven2;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Dunkelkraut;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Dunkelkraut;
-};
-
-		func void Useraven2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Dunkelkraut);
-		}; 
-		 
-/******************************************************************************************/ 
-
-INSTANCE ITPL_REVIVED_STONEROOT (C_Item)
-{	
-	name 				=	"Stoneroot";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Steimwurzel;
-
-	visual 				=	"ItFo_Plants_Stoneroot_01.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=   Useroot;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Steinwurzel;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Steimwurzel;
-};
-
-		func void Useroot ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Steinwurzel);
-		}; 
-		
-/******************************************************************************************/  
-
-INSTANCE ITPL_REVIVED_DRAGONROOT (C_Item)
-{	
-	name 				=	"Dragonroot";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Drachenwurzel;
-
-	visual 				=	"ItFo_Plants_Stoneroot_01.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]			=   Useroot2;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= Mana_Drachenwurzel;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Drachenwurzel;
-};
-
-		func void Useroot2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	Mana_Drachenwurzel);
-		}; 
-		
-/******************************************************************************************/
-
-INSTANCE ITPL_REVIVED_LINUM (C_Item)
-{	
-	name 				=	"Lunanaceae";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	Value_Mondschatten;
-
-	visual 				=	"ITPL_NIGHTSHADOW_02.3ds";
-	material 			=	MAT_LEATHER;
-	on_state[0]         = Usemoon;
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Mondschatten;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Mondschatten;
-};
-
-		func void Usemoon ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Mondschatten);
-		};
-
-
 
 //****************************************************************************
 //			MUSHROOMS 
 //****************************************************************************
 
-INSTANCE ITPL_REVIVED_HELLMUSHROOM (C_Item)
+INSTANCE ITPL_REVIVED_MUSHROOM_RED (C_Item)
 {	
-	name 				=	"Hell Mushrooms";
+	name 				=	"Red mushroom";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Hollenpilz;
+	value 				=	REV_Value_Mushroom;
 
-	visual 				=	"ITPL_REVIVED_MUSHROOM_02.3ds";
+	visual 				=	"REV_ITPL_MUSHROOM_RED.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]			= Usemush;
+	on_state [0]		=   UseMushrooms;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Hollenpilz;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Hollenpilz;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Mushroom;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Mushroom;
 };
 
-		func void Usemush ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Hollenpilz);
-		
-			if (Npc_IsPlayer (self))
-			{
-				HellMushroom_Bonus = HellMushroom_Bonus + 1;
-				
-				if (HellMushroom_Bonus == 50)  
-				{
-					B_RaiseAttribute	(self, ATR_HITPOINTS_MAX, 5);
-					Npc_ChangeAttribute	(self, ATR_HITPOINTS, 5);
-					Snd_Play	("LevelUp");
-					HellMushroom_Bonus = 0;
-				};
-			};
-		};
+//****************************************************************************
+//			RICE
+//****************************************************************************
 
-INSTANCE ITPL_REVIVED_SLAVEBREAD (C_Item)
+INSTANCE ITPL_REVIVED_RICEPLANT (C_Item)
 {	
-	name 				=	"Slave's Bread";
+	name 				=	"Rice plant";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;	
 
-	value 				=	Value_Sklavenbrot;
+	value 				=	REV_Value_Riceplant;
 
-	visual 				=	"ITPL_REVIVED_MUSHROOM_01.3ds";
+	visual 				=	"ItPl_Weed.3ds";
 	material 			=	MAT_LEATHER;
-	on_state[0]			= 	Usemush2;
+	on_state [0]		=   UseRiceplant;
 	scemeName			=	"FOOD";
 
 	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= HP_Sklavenbrot;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Sklavenbrot;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_Bonus_Riceplant;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Riceplant;
 };
-
-		func void Usemush2 ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_MANA,	HP_Sklavenbrot);
-		};
-
-
-
-//****************************************************************************
-//			OTHER
-//****************************************************************************
-
-INSTANCE ITPL_REVIVED_TROLLBERRY (C_Item)
-{	
-	name 					=	"Troll Nightshade";
-
-	mainflag 				=	ITEM_KAT_FOOD;
-	flags 					=	ITEM_MULTI;	
-
-	value 					=	Value_Trollkirsche;
-
-	visual 					=	"ITPL_TROLLBERRYS_01.3ds";
-	material 				=	MAT_LEATHER;
-	on_state [0]			=   UseTrollberrys;
-	scemeName				=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= HP_Trollkirsche;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_Trollkirsche;
-};
-
-		func void UseTrollberrys ()
-		{
-			Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	-HP_Trollkirsche);
-		};

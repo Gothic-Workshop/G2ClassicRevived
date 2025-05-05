@@ -8,7 +8,7 @@ INSTANCE DIA_Boltan_EXIT   (C_INFO)
 	condition   = DIA_Boltan_EXIT_Condition;
 	information = DIA_Boltan_EXIT_Info;
 	permanent   = TRUE;
-	description = "I was just going.";
+	description = DIALOG_ENDE;
 };
 
 FUNC INT DIA_Boltan_EXIT_Condition()

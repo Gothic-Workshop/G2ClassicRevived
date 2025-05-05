@@ -20,7 +20,7 @@ instance Vlk_2001_Syra (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems		(self, ItPo_Health_02, 	1);
+	CreateInvItems		(self, ITPO_REVIVED_HEALTH_02, 	1);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_PinkHair, BodyTex_N, NO_ARMOR);	

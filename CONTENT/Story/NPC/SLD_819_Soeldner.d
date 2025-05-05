@@ -26,7 +26,7 @@ instance SLD_819_Soeldner (Npc_Default)
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Tough_Drago, BodyTex_P, ITAR_SLD_H);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Tough_Drago, BodyTex_P, ITAR_SLD_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
@@ -43,7 +43,7 @@ instance SLD_819_Soeldner (Npc_Default)
 FUNC VOID Rtn_Start_819 ()
 {
 	TA_Stand_Drinking 			(07,45,23,45,"NW_BIGFARM_KITCHEN_03");
-    TA_Sleep					(23,45,07,45,"NW_BIGFARM_HOUSE_SLD_SLEEP");		
+    TA_Sleep					(23,45,07,45,"NW_BIGFARM_MERCHUT_SLEEP_03");		
 };
 
 

@@ -46,8 +46,8 @@ instance SLD_811_Wolf (Npc_Default)
 
 FUNC VOID Rtn_Start_811 ()
 {
-	TA_Sit_Bench				(08,00,22,00,"NW_BIGFARM_PATH_03");
-    TA_Stand_Eating 		(22,00,08,00,"NW_BIGFARM_KITCHEN_03");	
+	TA_Sit_Bench				(08,00,22,00,"NW_BIGFARM_MERCHUT_BENCH");
+    TA_Stand_Eating 			(22,00,08,00,"NW_BIGFARM_KITCHEN_03");	
 };
 
 FUNC VOID Rtn_BengarsFarm_811 ()

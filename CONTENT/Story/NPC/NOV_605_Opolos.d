@@ -38,8 +38,8 @@ INSTANCE NOV_605_Opolos (Npc_Default)
 
 FUNC VOID Rtn_Start_605()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_SHEEP_05");
-    TA_Stand_Guarding	(23,00,08,00,"NW_MONASTERY_SHEEP_05");
+	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_SHEEP_OPOLOS");
+    TA_Stand_Guarding	(23,00,08,00,"NW_MONASTERY_SHEEP_OPOLOS");
 };
 
 FUNC VOID Rtn_Favour_605()

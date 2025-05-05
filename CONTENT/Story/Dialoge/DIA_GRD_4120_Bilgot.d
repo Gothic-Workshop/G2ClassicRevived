@@ -180,7 +180,7 @@ instance DIA_Bilgot_TAKEYOUWITHME		(C_INFO)
 	condition	 = 	DIA_Bilgot_TAKEYOUWITHME_Condition;
 	information	 = 	DIA_Bilgot_TAKEYOUWITHME_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"(Keep promise)";
+	description	 = 	"It's time, Bilgot!";
 };
 func int DIA_Bilgot_TAKEYOUWITHME_Condition ()
 {
@@ -244,7 +244,8 @@ instance DIA_Bilgot_BEIBRUECKEANGEKOMMEN		(C_INFO)
 };
 func int DIA_Bilgot_BEIBRUECKEANGEKOMMEN_Condition ()
 {
-	if (Npc_GetDistToWP(self,"OW_PATH_1_17")<1000) 				
+	if (Npc_GetDistToWP(self,"OW_PATH_1_17")<1000) 	
+	|| (Npc_GetDistToWP(self,"OW_PATH_ORETRAIL_2_008")<1000) 			
 	{
 		return TRUE;
 	};
@@ -263,7 +264,16 @@ func void DIA_Bilgot_BEIBRUECKEANGEKOMMEN_Info ()
 	B_GivePlayerXP (XP_BilgotEscort);
 	
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
-	Npc_ExchangeRoutine	(self, "FLEEOUTOFOW");
+	
+	if (Npc_GetDistToWP(self,"OW_PATH_1_17")<1000) 				
+	{
+		Npc_ExchangeRoutine	(self, "FLEEOUTOFOW");
+	}
+	else if (Npc_GetDistToWP(self,"OW_PATH_ORETRAIL_2_008")<1000) 				
+	{
+		Npc_ExchangeRoutine	(self, "FLEEOUTOFOWPASS");
+		BilgotSecondPass = TRUE;
+	};
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info LetztePause
@@ -280,7 +290,8 @@ instance DIA_Bilgot_LetztePause		(C_INFO)
 
 func int DIA_Bilgot_LetztePause_Condition ()
 {
-	if (Npc_GetDistToWP(self,"OW_BILGOT_PASS")<1000) 				
+	if (Npc_GetDistToWP(self,"OW_BILGOT_PASS")<1000) 	
+	|| (Npc_GetDistToWP(self,"OW_BILGOT_PASS_2")<1000) 			
 	{
 		return TRUE;
 	};
