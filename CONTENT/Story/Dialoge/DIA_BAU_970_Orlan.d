@@ -182,7 +182,7 @@ func void DIA_Orlan_RUESTUNG_Buy ()
 	//AI_Output				(other, self,"DIA_Orlan_RUESTUNG_Buy_15_00"); //I'd like to buy the leather armor.
 	AI_Output				(other, self, "DIA_Orlan_HotelZimmer_ja_15_00"); //All right. Here's the dough.
 
-	if (B_GiveInvItems		(other, self, ITAR_REVIVED_ARCHER, 1800))
+	if (B_GiveInvItems		(other, self, ITMI_GOLD, 1800))
 		{
 			AI_Output			(self, other,"DIA_Orlan_RUESTUNG_Buy_05_01"); //A wise decision.
 

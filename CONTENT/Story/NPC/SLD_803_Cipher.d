@@ -49,6 +49,12 @@ FUNC VOID Rtn_Start_803 ()
 	TA_Sleep		(23,35,07,35,"NW_BIGFARM_MERCHUT_SLEEP_04");		
 };
 
+FUNC VOID Rtn_BeatDar_803 ()
+{
+	TA_Stand_ArmsCrossed	(08,00,22,00,"NW_BIGFARM_KITCHEN_CIPHER");
+	TA_Smoke_Joint			(22,00,08,00,"NW_BIGFARM_KITCHEN_CIPHER");		
+};
+
 FUNC VOID Rtn_Tot_803 ()
 {
 	TA_Sleep		(08,00,23,00,"TOT");

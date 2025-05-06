@@ -882,8 +882,8 @@ func void DIA_Andre_Auslieferung_Info ()
 		Info_AddChoice (DIA_Andre_Auslieferung,"Baltram provides goods to Pirates.",DIA_Andre_Auslieferung_Baltram);
 	};
 	// ------ Bounties -----
-	if (Npc_IsDead(Cassia)) //placeholder
-	&& (Bounty5 == FALSE)
+	if (Npc_IsDead(PAL_311_Andre)) //placeholder
+	&& (Bounty1 == FALSE)
 	{
 		Info_AddChoice (DIA_Andre_Auslieferung,"Bounty1.",DIA_Andre_Auslieferung_Bounty);
 	};

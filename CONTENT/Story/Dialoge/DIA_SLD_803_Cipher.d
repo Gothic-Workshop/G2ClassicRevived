@@ -440,6 +440,8 @@ FUNC VOID DIA_Cipher_DarDieb_Info()
 	
 	AI_StopProcessInfos(self);
 	other.aivar[AIV_INVINCIBLE] = FALSE;
+
+	Npc_ExchangeRoutine(self, "BeatDar");
 	B_Attack (self, Dar, AR_NONE, 0);
 };
 
@@ -473,6 +475,7 @@ FUNC VOID DIA_Cipher_DarLOST_Info()
 	AI_Output (self, other, "DIA_Cipher_DarLOST_07_03"); //The little beggar has no business going through my chest!
 	
 	B_GivePlayerXP ((XP_Ambient)*2);
+	Npc_ExchangeRoutine(self, "Start");
 };
 
 // ************************************************************
