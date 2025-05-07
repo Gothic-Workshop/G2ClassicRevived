@@ -151,7 +151,8 @@ instance DIA_Engor_RSkaufen		(C_INFO)
 	condition	 = 	DIA_Engor_RSkaufen_Condition;
 	information	 = 	DIA_Engor_RSkaufen_Info;
 	permanent 	 =  TRUE;
-	description	 = 	"Buy Royal Guard Armor (Protection: Weapons 80, Arrows 40. Price: 2400 gold)"; 
+	//description	 = 	"Buy Royal Guard Armor (Protection: Weapons 80, Arrows 40. Price: 2400 gold)"; 
+	description	 = 	"Buy Heavy Guard's Armor (Protection: Weapons 80, Arrows 80. Price: 2400 gold)"; 
 };
 //--------------------------------------
 var int DIA_Engor_RSkaufen_perm;
@@ -171,7 +172,10 @@ func void DIA_Engor_RSkaufen_Info ()
 	{
 		AI_Output (other, self, "DIA_Engor_RSkaufen_15_00"); //Give me the armor.
 		AI_Output (self, other, "DIA_Engor_RSkaufen_13_01"); //Here you are, it'll protect you well - it's a damn good piece of work.
-		B_GiveInvItems (self,other, ITAR_REVIVED_PAL_L,1);
+		//CreateInvItems 	(self, ITAR_REVIVED_PAL_L, 1);
+		//B_GiveInvItems (self,other, ITAR_REVIVED_PAL_L,1);
+		CreateInvItems 	(self, ITAR_REVIVED_GRD_H, 1);
+		B_GiveInvItems (self,other, ITAR_REVIVED_GRD_H,1);
 		DIA_Engor_RSkaufen_perm = TRUE;
 	}
 	else

@@ -352,8 +352,8 @@ instance DIA_Addon_Baltram_Skip		(C_INFO)
 
 func int DIA_Addon_Baltram_Skip_Condition ()
 {
-	if (Npc_HasItems (PIR_1400_Pirate_L, ItMi_BaltramPaket) == 0)
-	|| (Npc_HasItems (hero, ItMi_BaltramPaket) >= 1) 
+	if (Npc_HasItems (PIR_1400_Pirate_L, ItMi_Packet_Baltram4Skip_Addon) == 0)
+	|| (Npc_HasItems (hero, ItMi_Packet_Baltram4Skip_Addon) >= 1) 
 		{
 			return TRUE;
 		};

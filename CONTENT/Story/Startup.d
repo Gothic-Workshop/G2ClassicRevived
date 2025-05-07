@@ -1522,18 +1522,18 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_099");	
 	Wld_InsertNpc		(OrcBiter,"OW_PATH_099");
 
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORCBRIDGE_END");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORCBRIDGE_END");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORCBRIDGE_END");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORCBRIDGE_END");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORCBRIDGE_END");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORCBRIDGE_END");	
 
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_02_MOVE");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_02_MOVE");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_02_MOVE");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_02_MOVE");	
 
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_02_GUARD_SPAWN");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_02_GUARD_SPAWN");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_02_GUARD_SPAWN");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_02_GUARD_SPAWN");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_02_GUARD_SPAWN");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_02_GUARD_SPAWN");	
 
-	Wld_InsertNpc   	(OrcCity_Dance,"OW_ORC_PLACE_01");	
+/* 	Wld_InsertNpc   	(OrcCity_Dance,"OW_ORC_PLACE_01");	
 	Wld_InsertNpc   	(OrcCity_Dance,"OW_ORC_PLACE_01_MOVEMENT3");	
 	Wld_InsertNpc   	(OrcCity_Drum,"OW_ORC_HUT_01");	
 	Wld_InsertNpc   	(OrcCity_Drum,"OW_ORC_HUT_02");	
@@ -1541,18 +1541,18 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcCity_Dance,"OW_ORC_PATH_06_1");	
 	Wld_InsertNpc   	(OrcCity_Dance,"OW_ORC_HUT_03_MOVEMENT");	
 	Wld_InsertNpc   	(OrcCity_Drum,"OW_ORC_HUT_03");	
-	Wld_InsertNpc   	(OrcCity_Drum,"OW_ORC_HUT_04");	
+	Wld_InsertNpc   	(OrcCity_Drum,"OW_ORC_HUT_04");	 */
 
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_06_4");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_ORC_PATH_06_4");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_06_4");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_ORC_PATH_06_4");	
 
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_PATH_06_13_GUARD");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_PATH_06_13_GUARD");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_PATH_06_13_GUARD");	
-	Wld_InsertNpc   	(OrcCity_Guard,"OW_PATH_06_13_GUARD");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_06_13_GUARD");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_06_13_GUARD");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_06_13_GUARD");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"OW_PATH_06_13_GUARD");	
 
-	Wld_InsertNpc   	(OrcCity_Guard,"FP_ORC_GUARD_SHAMANE");	
-	Wld_InsertNpc   	(OrcCity_Guard,"FP_ORC_GUARD_SHAMANE");
+	Wld_InsertNpc   	(OrcWarrior_Roam,"FP_ORC_GUARD_SHAMANE");	
+	Wld_InsertNpc   	(OrcWarrior_Roam,"FP_ORC_GUARD_SHAMANE");
 
 	Wld_InsertNpc		(OrcShaman_Sit,"OW_ORC_SHAMAN_ROOM2");	
 	Wld_InsertNpc		(OrcShaman_Sit,"OW_ORC_SHAMAN_ROOM2_2");	
@@ -1562,11 +1562,11 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcElite_Roam,"OW_ORC_SHAMAN_ROOM3_1");	
 	Wld_InsertNpc   	(OrcElite_Roam,"OW_ORC_SHAMAN_ROOM3_2");		
 
-	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_13");	
+/* 	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_13");	
 	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_14_HEILIGTUM2");	
 	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_14_HEILIGTUM3");	
 	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_14_HEILIGTUM");	
-	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_15");	
+	Wld_InsertNpc   	(OrcCity_Pray,"OW_PATH_06_15");	 */
 
 	Wld_InsertNpc   	(OrcElite_Roam,"OW_ORC_BOSS3");	
 	Wld_InsertNpc   	(OrcElite_Roam,"OW_ORC_BOSS3");	
