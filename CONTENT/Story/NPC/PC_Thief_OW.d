@@ -93,3 +93,9 @@ FUNC VOID Rtn_Pass_1()
 	TA_Sit_Campfire				(08,00,23,00,"OW_BILGOT_PASS");
     TA_Sit_Campfire				(23,00,08,00,"OW_BILGOT_PASS");
 };
+
+FUNC VOID Rtn_SecondPass_1()
+{	
+	TA_Sit_Campfire				(08,00,23,00,"OW_BILGOT_PASS_2");
+    TA_Sit_Campfire				(23,00,08,00,"OW_BILGOT_PASS_2");
+};

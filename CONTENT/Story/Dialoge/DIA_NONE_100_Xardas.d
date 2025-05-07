@@ -655,13 +655,6 @@ func void DIA_Xardas_INNOSEYEBROKEN_Info ()
 	MIS_SCKnowsInnosEyeIsBroken  = TRUE;
 	B_GivePlayerXP (XP_Ambient);
 	
-	Info_ClearChoices	(DIA_Xardas_INNOSEYEBROKEN);
-	Info_AddChoice	(DIA_Xardas_INNOSEYEBROKEN, "What now?", DIA_Xardas_INNOSEYEBROKEN_wasnun );
-
-
-};
-func void DIA_Xardas_INNOSEYEBROKEN_wasnun ()
-{
 	AI_Output			(other, self, "DIA_Xardas_INNOSEYEBROKEN_wasnun_15_00"); //What now?
 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_01"); //This is a painful blow. We have to reorient ourselves. I shall retreat and ponder the matter.
 	AI_Output			(self, other, "DIA_Xardas_INNOSEYEBROKEN_wasnun_14_02"); //In the meantime, you should go to town and talk to Vatras the Water Mage. I could imagine that maybe he knows what is to be done.
@@ -670,7 +663,6 @@ func void DIA_Xardas_INNOSEYEBROKEN_wasnun ()
 
 	MIS_Xardas_GoToVatrasInnoseye = LOG_RUNNING;
 };
-
 
 ///////////////////////////////////////////////////////////////////////
 //	Info RitualRequest

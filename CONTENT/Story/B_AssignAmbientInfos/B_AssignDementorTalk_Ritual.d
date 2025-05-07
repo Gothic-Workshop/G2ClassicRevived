@@ -19,15 +19,6 @@ func void B_AssignDementorTalk_Ritual ()
 		B_LogEntry (TOPIC_INNOSEYE, "Those sinister guys are getting on my nerves. They destroyed the Eye of Innos. I've no idea how I'm supposed to fix it.");
  		B_LogEntry (TOPIC_TraitorPedro, "I found the Eye of Innos. But there hasn't been a trace of Pedro anywhere so far. Those black magicians are in cahoots with him.");
 		B_GivePlayerXP (XP_SCKnowsInnosEyeIsBroken);
-
-		if (!Npc_IsDead (Hodges))
-		{
-			B_StartOtherRoutine (Hodges,"BennetWeg");
-		};
-			B_StartOtherRoutine (Bennet,"PRISON");
-
-			B_StartOtherRoutine	(Lothar,"Tot");
-			B_KillNpc (Lothar);
 	}
 	else
 	{

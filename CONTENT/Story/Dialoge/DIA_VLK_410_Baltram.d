@@ -383,6 +383,19 @@ func void DIA_Addon_Baltram_Skip_MIL ()
 	Info_ClearChoices	(DIA_Addon_Baltram_Skip);
 
 	BaltramRatOut = TRUE;
+
+	if(MIS_BaltramTrade == LOG_RUNNING)
+	{
+		MIS_BaltramTrade = LOG_FAILED;
+	};
+
+	if(MIS_Baltram_ScoutAkil == LOG_RUNNING)
+	{
+		MIS_Baltram_ScoutAkil = LOG_FAILED;
+
+		Log_SetTopicStatus (TOPIC_Baltram,LOG_FAILED);
+		B_LogEntry (TOPIC_Baltram, "I can't finish the delivery if I threw Baltram in jail.");
+	};
 };
 
 func void DIA_Addon_Baltram_Skip_was ()

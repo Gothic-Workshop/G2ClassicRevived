@@ -60,7 +60,15 @@ FUNC VOID B_SCGetTreasure_S1()
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_PLATEAU_ABANDONEDMINE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[9]==FALSE)){					 			
 				Wld_InsertItem 		(ITRI_REVIVED_HP_02, 				"OW_TREASURE_PLATEAU_ABANDONEDMINE"	); 							 			 RAKEPLACE[9]=TRUE; 							 			
-				RakeTreasureSuccess (ITRI_REVIVED_HP_02);};
+				RakeTreasureSuccess (ITRI_REVIVED_HP_02);}
+				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_STONEFORTRESS"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[9]==FALSE)){					 			
+				Wld_InsertItem 		(ItMi_GoldNugget_Addon, 			"OW_TREASURE_STONEFORTRESS"	); 							 			 RAKEPLACE[9]=TRUE; 							 			
+				RakeTreasureSuccess (ItMi_GoldNugget_Addon);}
+				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_STONEHENGE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[9]==FALSE)){					 			
+				Wld_InsertItem 		(ItBe_Addon_Prot_MAGIC, 			"OW_TREASURE_STONEHENGE"	); 							 			 RAKEPLACE[9]=TRUE; 							 			
+				RakeTreasureSuccess (ItBe_Addon_Prot_MAGIC);};
 	};	
 };
 

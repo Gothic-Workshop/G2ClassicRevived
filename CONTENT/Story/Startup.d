@@ -2050,7 +2050,10 @@ func void STARTUP_SURFACE ()
 		// Old Mine
 		Wld_SendTrigger("EVT_AM_LOB_GATE_BIG");
 
-		// Templeruin
+		// Free Mine
+		Wld_SendTrigger("FREEMINEGATE");
+
+		// Old Monastery
 		Wld_SendTrigger("EVT_OW_FOKUS_GATE_MOVER_01");
 
 		// Exchange Place

@@ -670,7 +670,16 @@ func void B_Diego_WirSindDa()
 	
 	AI_StopProcessInfos (self);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
-	Npc_ExchangeRoutine	(self,"PASS");
+
+	if (Npc_GetDistToWP (self, "OW_PATH_1_17") < 1000)
+	|| (Npc_GetDistToWP (self, "WP_INTRO_SHORE") < 800)
+	{
+		Npc_ExchangeRoutine	(self,"PASS");
+	}
+	else if (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 1000)
+	{
+		Npc_ExchangeRoutine	(self,"SECONDPASS");
+	};
 	
 	Diego_angekommen = TRUE;
 };
@@ -686,7 +695,8 @@ INSTANCE DIA_Addon_ThiefOW_Angekommen (C_INFO)
 };                       
 FUNC INT DIA_Addon_ThiefOW_Angekommen_Condition()
 {
-	if (Npc_GetDistToWP (self, "OW_VM_ENTRANCE") < 800)
+	if (Npc_GetDistToWP (self, "OW_PATH_1_17") < 800)
+	|| (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 800)
 	{
 		return TRUE;
 	};

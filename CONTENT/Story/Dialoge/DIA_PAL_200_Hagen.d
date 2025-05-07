@@ -794,12 +794,12 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	AI_Output (other,self ,"DIA_Lord_Hagen_Knight_Yes_15_04"); //I swear!
 	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_05"); //Then, from now on, you are a member of our fellowship.
 	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_06"); //I hereby appoint you a warrior of Innos.
-	AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_07"); //I give to you the weapons and armor of a knight. Bear them with pride, knight!
+	//AI_Output (self ,other,"DIA_Lord_Hagen_Knight_Yes_04_07"); //I give to you the weapons and armor of a knight. Bear them with pride, knight!
 
-	CreateInvItems (self,ITAR_PAL_M,1);
-	B_GiveInvItems (self,other,ITAR_PAL_M,1);
+	CreateInvItems (self,ITAR_REVIVED_PAL_M,1);
+	B_GiveInvItems (self,other,ITAR_REVIVED_PAL_M,1);
 
-	if ((other.HitChance[NPC_TALENT_2H]) >= (other.HitChance[NPC_TALENT_1H])) //Damit der SC auch seine Lieblingswaffe bekommt ;-)
+	/* if ((other.HitChance[NPC_TALENT_2H]) >= (other.HitChance[NPC_TALENT_1H])) //Damit der SC auch seine Lieblingswaffe bekommt ;-)
 	{
 		CreateInvItems (self,ItMw_2h_Pal_Sword,1);
 		B_GiveInvItems (self,other,ItMw_2h_Pal_Sword,1);
@@ -808,7 +808,7 @@ FUNC VOID DIA_Lord_Hagen_Knight_Yes()
 	{
 		CreateInvItems (self,ItMw_1h_Pal_Sword,1);
 		B_GiveInvItems (self,other,ItMw_1h_Pal_Sword,1);
-	};		 
+	};	 */	 
 	
 	AI_UnequipArmor (other);
 	AI_EquipArmor 	(other,ITAR_REVIVED_PAL_M);
@@ -1022,39 +1022,14 @@ func void DIA_Lord_Hagen_BACKINTOWN_Info ()
 	
 	B_LogEntry (TOPIC_INNOSEYE,"Lord Hagen's given me a message. This will cause Master Pyrokar to hand me the Eye of Innos at the monastery.");
 
-			Wld_InsertNpc 		(VLK_4250_Jorgen,"NW_MONASTERY_BRIDGE_01");
-			Wld_InsertNpc		(BDT_1050_Landstreicher, "NW_TROLLAREA_NOVCHASE_01");
-			Wld_InsertNpc		(BDT_1051_Wegelagerer, "NW_TROLLAREA_RITUALFOREST_09"); 
-			Wld_InsertNpc		(BDT_1052_Wegelagerer, "NW_TROLLAREA_RITUALFOREST_09");
-			B_KillNpc 			(BDT_1020_Bandit_L);	//Joly: macht Platz für DMT_1200_Dementor
-			Wld_InsertNpc		(DMT_1200_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			//Wld_InsertNpc		(DMT_1201_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			Wld_InsertNpc		(DMT_1202_Dementor, "NW_TROLLAREA_RITUAL_01");
-			//Wld_InsertNpc		(DMT_1203_Dementor, "NW_TROLLAREA_RITUAL_02");//Joly:waren zu viele!
-			Wld_InsertNpc		(DMT_1204_Dementor, "NW_TROLLAREA_RITUAL_03");
-			//Wld_InsertNpc		(DMT_1205_Dementor, "NW_TROLLAREA_RITUAL_04");
-			Wld_InsertNpc		(DMT_1206_Dementor, "NW_TROLLAREA_RITUAL_05");
-			Wld_InsertNpc		(DMT_1207_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			//Wld_InsertNpc		(DMT_1208_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			Wld_InsertNpc		(DMT_1209_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			Wld_InsertNpc		(DMT_1210_Dementor, "NW_TROLLAREA_RITUALPATH_01");
-			Wld_InsertNpc		(DMT_1211_Dementor, "NW_TROLLAREA_RITUALPATH_01");
 			B_StartOtherRoutine (Pedro,"Tot"); 
 				if (Npc_IsDead (MiltenNW))	//Wichtig, damit Milten vor dem Kloster steht!!!!!
 				{ 
 					Wld_InsertNpc (PC_MAGE_NW ,"NW_MONASTERY_ENTRY_01");
 					B_StartOtherRoutine (MiltenNW,"START");		//zur Sicherheit
 				};		
-			Wld_InsertNpc		(NOV_650_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_650_ToterNovize);
-			Wld_InsertNpc		(NOV_651_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_651_ToterNovize);
-			Wld_InsertNpc		(NOV_652_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_652_ToterNovize);
-			Wld_InsertNpc		(NOV_653_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_653_ToterNovize);
-			Wld_InsertNpc		(NOV_654_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_654_ToterNovize);
-			Wld_InsertNpc		(NOV_655_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_655_ToterNovize);
-			Wld_InsertNpc		(NOV_656_ToterNovize, "NW_TROLLAREA_RITUALPATH_01"); B_KillNpc (NOV_656_ToterNovize);
 	
 			TEXT_Innoseye_Setting	=	TEXT_Innoseye_Setting_Broken; 
-			Wld_InsertItem		(ItMi_InnosEye_Broken_Mis , "FP_TROLLAREA_RITUAL_ITEM"); 
 };
 
 //--------Hier kommt der gesamte Befreie den schmied Klumpatsch-------------

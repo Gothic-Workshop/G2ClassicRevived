@@ -551,10 +551,11 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()		//Alchemiebücher
 					Doc_SetPage 	( nDocID,  0, "Book_Brown_L.tga", 	0 		); 
 					Doc_SetPage 	( nDocID,  1, "Book_Brown_R.tga",	0		);
 					
-					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
+					Doc_SetFont 	( nDocID, -1, FONT_BookHeadline	   			); 	
 					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   		);  	
 
 					Doc_PrintLine	( nDocID,  0, "Prisoners"					);
+					Doc_SetFont 	( nDocID, -1, FONT_Book	   			); 	
 					Doc_PrintLine	( nDocID,  0, ""					);
 				if(Rengaru_Ausgeliefert == TRUE)
 				{
@@ -576,12 +577,11 @@ FUNC VOID Use_BookstandRevived_SPECIFIC1_S1()		//Alchemiebücher
 					Doc_PrintLines	( nDocID,  0, "Borka: Swampweed dealer"					);
 				};
 					Doc_PrintLine	( nDocID,  0, ""					);
+				if(BaltramInJail == LOG_SUCCESS)
+				{
+					Doc_PrintLines	( nDocID,  0, "Baltram: Trade with pirates"					);
+				};
 					Doc_PrintLine	( nDocID,  0, ""					);
-					
-					
-					Doc_PrintLines	( nDocID,  0, "");
-			
-					
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, ""					);

@@ -1145,38 +1145,12 @@ func void DIA_Harad_RepairNecklace_Info ()
 	AI_Output (self ,other,"DIA_Harad_RepairNecklace_12_02"); //People don't have money in their pockets any more, and nobody's gotten rich here in quite a while.
 	AI_Output (self ,other,"DIA_Harad_RepairNecklace_12_03"); //Most of them are just glad if they have enough to eat.
 	
-	MIS_SCKnowsInnosEyeIsBroken  = TRUE; 	
-};
-
-//*********************************************************************
-//	Wo finde ich einen Goldschmied?
-//*********************************************************************
-instance DIA_Harad_Goldsmith		(C_INFO)
-{
-	npc		 	 = 	VLK_412_Harad;
-	nr           = 	8;
-	condition	 = 	DIA_Harad_Goldsmith_Condition;
-	information	 = 	DIA_Harad_Goldsmith_Info;
-	permanent	 = 	FALSE;
-	description	 = 	"Where can I find a goldsmith?";
-};
-
-func int DIA_Harad_Goldsmith_Condition ()
-{
-	if 	(Npc_KnowsInfo (other,DIA_Harad_RepairNecklace)) 
-  	{
-  		return TRUE;
-  	};
-};
-
-func void DIA_Harad_Goldsmith_Info ()
-{
 	AI_Output (other,self ,"DIA_Harad_Goldsmith_15_00"); //Where can I find a goldsmith?
 	AI_Output (self ,other,"DIA_Harad_Goldsmith_12_01"); //There's supposed to be a good smith with the mercenaries on Onar's farm.
 	AI_Output (self ,other,"DIA_Harad_Goldsmith_12_02"); //Maybe you should look there.
+
+	MIS_SCKnowsInnosEyeIsBroken  = TRUE; 	
 };
-
-
 
 // ************************************************************
 // 			  				PICK POCKET
