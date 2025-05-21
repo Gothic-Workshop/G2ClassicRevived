@@ -364,8 +364,9 @@ FUNC INT DIA_Jesper_Truhe_Condition()
 	if (Mob_HasItems ("MOB_FINGERS", Itmi_Gold) < 300)
 	|| (Mob_HasItems ("MOB_FINGERS", Itmi_Silvercup) < 5)
 	|| (Mob_HasItems ("MOB_FINGERS", Itmi_Goldcup) < 1)
-	|| (Mob_HasItems ("MOB_FINGERS", ItAM_Strg_01) < 1)
-	|| (Mob_HasItems ("MOB_FINGERS", ItPO_perm_Dex) < 1)
+	|| (Mob_HasItems ("MOB_FINGERS", ITAM_REVIVED_STR_DEX_01) < 1)
+	|| (Mob_HasItems ("MOB_FINGERS", ITPO_REVIVED_BOOST_DEX_03) < 1)
+	&& (Npc_KnowsInfo (other,DIA_Jesper_Tuer))
 	{
 		return TRUE;
 	};

@@ -346,8 +346,8 @@ FUNC INT DIA_MiltenOW_Versteck_Condition()
 FUNC VOID DIA_MiltenOW_Versteck_Info()
 {
 	AI_Output	(other,self ,"DIA_MiltenOW_Versteck_15_00"); //I got an answer from Gorn. He says the gold is at the south gate.
-	AI_Output	(self ,other,"DIA_MiltenOW_Versteck_03_01"); //(bitter) Former south gate, you mean to say. The dragon has reduced it to rubble.
-	AI_Output	(other,self ,"DIA_MiltenOW_Versteck_15_02"); //How do I get there?
+	//AI_Output	(self ,other,"DIA_MiltenOW_Versteck_03_01"); //(bitter) Former south gate, you mean to say. The dragon has reduced it to rubble.
+	//AI_Output	(other,self ,"DIA_MiltenOW_Versteck_15_02"); //How do I get there?
 	AI_Output	(self ,other,"DIA_MiltenOW_Versteck_03_03"); //That is near the orcs' ram. The south gate was to the right of that.
 	AI_Output	(self ,other,"DIA_MiltenOW_Versteck_03_04"); //It won't be easy - so keep your head down and hurry.
 	
@@ -424,7 +424,7 @@ FUNC INT DIA_MiltenOW_TeachCircle2_Condition()
 {	
 	if (other.guild == GIL_KDF)
 	&& (Npc_KnowsInfo (other,DIA_MiltenOW_Lehren))
-	&& (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) < 2)
+	&& (Npc_GetTalentSkill (other, NPC_TALENT_MAGE) == 1)
 	{
 		return TRUE;
 	};

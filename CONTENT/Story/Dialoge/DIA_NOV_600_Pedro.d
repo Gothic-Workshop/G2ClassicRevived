@@ -194,6 +194,7 @@ func int DIA_Addon_Pedro_Statuette_Condition ()
 	&& (Npc_KnowsInfo (other,DIA_Pedro_Rules))
 	&& (hero.guild != GIL_NOV)
 	&& (hero.guild != GIL_KDF)
+	&& (hero.guild != GIL_NONE)
 	{
 		return TRUE;
 	};
@@ -201,7 +202,7 @@ func int DIA_Addon_Pedro_Statuette_Condition ()
 func void DIA_Addon_Pedro_Statuette_Info ()
 {
 	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_15_00"); //I've got this statuette here. I think they're missing it in the monastery.
-	if (Kapitel < 3)
+	if (Kapitel <= 3)
 	{
 		AI_Output (self, other, "DIA_Addon_Pedro_Statuette_09_03"); //I can't let you in even with this precious gem, I'm afraid.
 	};

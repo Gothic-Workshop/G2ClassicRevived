@@ -452,10 +452,19 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMI_REVIVED_PUREALCOHOL, 1);
 	CreateInvItems(self, ITMI_REVIVED_VINEGAR, 1);
 	CreateInvItems(self, ITMI_REVIVED_MAGICWATER, 1);
-	CreateInvItems(self, ITMI_REVIVED_FIGURINE, 1);
 	CreateInvItems(self, ITMI_REVIVED_WARHORN, 1);
 	CreateInvItems(self, ITMI_REVIVED_OLDCOIN, 1);
 	CreateInvItems(self, ITMI_REVIVED_MAGICORE, 1);
+
+	CreateInvItems(self, ITMI_REVIVED_STUFF_CUP_01, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_CUP_02, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_AMPHORE, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_MUG, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_PLATE, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_SILVERWARE, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_PIPE, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_IDOL_01, 1);
+	CreateInvItems(self, ITMI_REVIVED_STUFF_IDOL_02, 1);
 
 	CreateInvItems(self, ITPL_REVIVED_BERRY_BLACK, 1);
 	CreateInvItems(self, ITPL_REVIVED_BERRY_BLUE, 1);

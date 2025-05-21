@@ -461,7 +461,8 @@ func int DIA_Addon_Vatras_TellMe_Condition ()
 {
 	if (Kapitel >= 3)
 	&& (Fernando_Erz == TRUE)
-	&& (MIS_Vatras_FindTheBanditTrader == 0)
+	&& (MIS_Vatras_FindTheBanditTrader != LOG_SUCCESS)
+	&& (Vatras_ToMartin == FALSE)
 	{
 		return TRUE;
 	};
@@ -472,18 +473,7 @@ func void DIA_Addon_Vatras_TellMe_Info ()
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Philo_05_01"); //We stand between the order of Innos and the chaos of Beliar.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Philo_05_02"); //If one of the two sides should gain the upper hand, it will mean either total loss of freedom, or deadly chaos.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Philo_05_03"); //Therefore, we guard the balance between the two. That's what makes life in this world possible at all.
-	
-	if (MIS_Vatras_FindTheBanditTrader == 0)
-	{
-		Info_AddChoice (DIA_Addon_Vatras_TellMe, "And what does that mean in concrete terms?", DIA_Addon_Vatras_TellMe_Konkret);
-	};
-};
-func void DIA_Addon_Vatras_TellMe_BACK()
-{
-	Info_ClearChoices (DIA_Addon_Vatras_TellMe);
-};
-func void DIA_Addon_Vatras_TellMe_Konkret()
-{
+
 	AI_Output (other, self, "DIA_Addon_Vatras_TellMe_Konkret_15_00"); //(frowning) And what does that mean in concrete terms?
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_01"); //The fall of the barrier has evoked numerous threats.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_02"); //The bandits are probably the most obvious one.
@@ -492,6 +482,7 @@ func void DIA_Addon_Vatras_TellMe_Konkret()
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Add_05_00"); //We have found out that the bandits receive regular deliveries from a weapons merchant in Khorinis. 
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_05"); //We try to find such people and keep them from endangering the city.
 	AI_Output (self, other, "DIA_Addon_Vatras_TellMe_Konkret_05_06"); //If you can find out anything about this, let me know.
+	
 	MIS_Vatras_FindTheBanditTrader = LOG_RUNNING;
 	Vatras_ToMartin = TRUE;
 	Log_CreateTopic (TOPIC_Addon_BanditTrader, LOG_MISSION);

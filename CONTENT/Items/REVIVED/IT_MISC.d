@@ -1,5 +1,9 @@
 const int	REV_Value_Joint				= 60;
 
+const int	REV_Value_Nugget			= 100;
+
+const int	REV_Value_Stuff				= 10;
+
 
 //****************************************************************************
 //			SWAMPWEED
@@ -429,24 +433,6 @@ INSTANCE ITMI_REVIVED_MAGICWATER (C_Item)
 //			MISCELLANEOUS
 //****************************************************************************
 
-INSTANCE ITMI_REVIVED_FIGURINE (C_Item)
-{
-	name 				=	"Figurine";
-
-	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
-
-	value 				=	0;
-
-	visual 				=	"ItMi_Stuff_Idol_Sleeper_01.3DS";
-	material 			=	MAT_CLAY;
-
-	description			=	name;
-	TEXT[0]				= "This figure is a misshapen";
-	TEXT[1]				= "being with a mask.";
-	TEXT[2]				= "The mask is surrounded by six big stings.";
-};
-
 INSTANCE ITMI_REVIVED_WARHORN (C_Item)
 {
 	name 				=	"Horn";
@@ -482,11 +468,6 @@ INSTANCE ITMI_REVIVED_OLDCOIN (C_Item)
 	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
 };
 
-
-//****************************************************************************
-//			MISSION
-//****************************************************************************
-
 INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 {
 	name 				=	"Lump of Ore";
@@ -494,7 +475,7 @@ INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
 
-	value 				=	Value_Nugget;
+	value 				=	REV_Value_Nugget;
 
 	visual 				=	"REV_ItMi_Nugget_NoMagic.3ds";
 	material 			=	MAT_STONE;
@@ -510,5 +491,177 @@ INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 	COUNT[5]			=	value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_MISC2_STANDARD;
+};
+
+
+//****************************************************************************
+//			STUFF
+//****************************************************************************
+
+INSTANCE ITMI_REVIVED_STUFF_AMPHORE (C_Item)
+{
+	name 				=	"Amphore";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Amphore_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
 	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_CUP_01 (C_Item)
+{
+	name 				=	"Cup";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Cup_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_CUP_02 (C_Item)
+{
+	name 				=	"Cup";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Cup_02.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_MUG (C_Item)
+{
+	name 				=	"Mug";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Mug_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_PLATE (C_Item)
+{
+	name 				=	"Metal plate";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Plate_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_SILVERWARE (C_Item)
+{
+	name 				=	"Silverware";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Silverware_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_PIPE (C_Item)
+{
+	name 				=	"Pipe";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Pipe_01.3ds";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
+{
+	name 				=	"Figurine";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MISSION;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"ItMi_Stuff_Idol_Sleeper_01.3DS";
+	material 			=	MAT_CLAY;
+
+	description			=	name;
+	TEXT[0]				=	"This figure is a misshapen";
+	TEXT[1]				=	"being with a mask.";
+	TEXT[2]				=	"The mask is surrounded by six big stings.";
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
+};
+
+INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
+{
+	name 				=	"Figurine";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_Stuff;
+
+	visual 				=	"REV_ITMI_STUFF_IDOL_OGRONT_01.3DS";
+	material 			=	MAT_STONE;
+
+	description			= 	name;
+	TEXT[0]				=	"This figure is a misshapen";
+	TEXT[1]				=	"being with a mask.";
+	TEXT[2]				=	"The mask is surrounded by six big stings.";
+	
+	TEXT[5]				= 	NAME_Value;	
+	COUNT[5]			=	value;
 };

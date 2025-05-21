@@ -294,6 +294,8 @@ func int DIA_MiltenNW_Statuette_Condition ()
 	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
 	&& (Npc_KnowsInfo (other,DIA_MiltenNW_Monastery))
 	&& (hero.guild != GIL_KDF)
+	&& (hero.guild != GIL_NOV)
+	&& (hero.guild != GIL_NONE)
 	&& (MiltenNW_GivesMonasteryKey != TRUE)
 	{
 		return TRUE;

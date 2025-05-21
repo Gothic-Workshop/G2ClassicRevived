@@ -328,6 +328,7 @@ FUNC INT PC_PrayBeliar_UPGRATEBELIARSWEAPON_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYIDOL)
 	&& ((C_ScCanUpgrateBeliarsWeapon ()) == TRUE)
 	&& ((C_ScHasBeliarsWeapon ()) == TRUE)
+	&& (RavenIsDead == TRUE)
 	{	
 		return TRUE;
 	};
