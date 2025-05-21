@@ -339,36 +339,6 @@ const int	Value_Joint3			=	20;
 // Magic
 // ***************
 
-const int	SPL_HEALING_HP_PER_MP		=	10;
-
-const int	SPL_SENDCAST_LIGHT			=	1;
-const int	SPL_SENDCAST_FIREBOLT		=	1;
-const int	SPL_SENDCAST_FIREBALL		=	5;
-const int	SPL_SENDCAST_FIRESTORM		=	10;
-const int	SPL_SENDCAST_FIRERAIN		=	15;
-const int	SPL_SENDCAST_TELEPORT		=	5;
-const int	SPL_SENDCAST_THUNDERBOLT	=	1;
-const int	SPL_SENDCAST_THUNDERBALL	=	5;
-const int	SPL_SENDCAST_ICECUBE		=	3;
-const int	SPL_SENDCAST_ICEWAVE		=	8;
-
-const int	SPL_SENDCAST_SUMMONDEMON	=	20;
-const int	SPL_SENDCAST_SUMMONSKELETON	=	10;
-const int	SPL_SENDCAST_SUMMONGOLEM	=	15;
-const int	SPL_SENDCAST_ARMYOFDARKNESS	=	25;
-
-const int	SPL_SENDCAST_MASSDEATH		=	10;
-const int	SPL_SENDCAST_DESTROYUNDEAD	=	5;
-const int	SPL_SENDCAST_WINDFIST		=	3;
-const int	SPL_SENDCAST_STORMFIST		=	8;
-const int	SPL_SENDCAST_CHARM			=	5;
-const int	SPL_SENDCAST_SLEEP			=	3;
-const int	SPL_SENDCAST_FEAR			=	5;
-const int	SPL_SENDCAST_BERZERK		=	10;
-const int	SPL_SENDCAST_BREATHOFDEATH	=	5;
-const int	SPL_SENDCAST_NEW1			=	5;		// Spell SPL_NEW1 (URIZIEL-Rune mit speziellen Spieler-BreathOfDeath)
-const int	SPL_SENDCAST_SHRINK			=	5;
-
 // Remember to comment SPL_Reserved_ in CONSTANTS.d
 
 const int	SPL_TrfMeatbug				= 64;
