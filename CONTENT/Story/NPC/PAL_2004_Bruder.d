@@ -21,10 +21,11 @@ instance PAL_2004_Bruder  (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	B_CreateAmbientInv 	(self);
+	EquipItem	(self, ItMw_1h_Pal_Sword); 
 	// ------ Inventory ------
 	CreateInvItems (self,ItRu_PalLight,1);
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_REVIVED_PAL_S);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	

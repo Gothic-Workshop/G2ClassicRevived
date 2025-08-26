@@ -16,17 +16,10 @@ instance SLD_803_Cipher (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_MACE_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	
-	CreateInvItems (self, ItRw_Arrow, 50);
-	CreateInvItems (self, ItRw_Bow_L_02, 1);
-	CreateInvItems (self, ItRw_Sld_Bow, 1);
-	CreateInvItems (self, ItMw_2H_OrcAxe_01, 1);
-	
-	CreateInvItems (self, ItLsTorch, 8);
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart10, BodyTex_N, ITAR_REVIVED_ORG_L);		

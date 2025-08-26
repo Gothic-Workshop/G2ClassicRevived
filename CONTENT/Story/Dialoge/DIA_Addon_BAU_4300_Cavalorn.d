@@ -213,11 +213,10 @@ func void DIA_Addon_Cavalorn_Beutel_Info ()
 	B_GivePlayerXP (XP_Ambient);
 	Info_ClearChoices	(DIA_Addon_Cavalorn_Beutel);
 
-	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_Beutel))
-		&& ((Npc_HasItems (other,ItSe_ADDON_CavalornsBeutel))||(Npc_HasItems (other,ItMi_Nugget)))
-			{
-				Info_AddChoice	(DIA_Addon_Cavalorn_Beutel, "Sure.", DIA_Addon_Cavalorn_Beutel_ja );
-			};
+	if ((Npc_HasItems (other,ItSe_ADDON_CavalornsBeutel))||(Npc_HasItems (other,ItMi_Nugget)))
+	{
+		Info_AddChoice	(DIA_Addon_Cavalorn_Beutel, "Sure.", DIA_Addon_Cavalorn_Beutel_ja );
+	};
 	Info_AddChoice	(DIA_Addon_Cavalorn_Beutel, "No.", DIA_Addon_Cavalorn_Beutel_no );
 };
 
@@ -308,7 +307,6 @@ instance DIA_Addon_Cavalorn_WASMACHSTDU		(C_INFO)
 func int DIA_Addon_Cavalorn_WASMACHSTDU_Condition ()
 {
 	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_HALLO))
-	&& (MIS_Addon_Nefarius_BringMissingOrnaments == 0)
 		{
 			return TRUE;
 		};
@@ -319,71 +317,21 @@ func void DIA_Addon_Cavalorn_WASMACHSTDU_Info ()
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_WASMACHSTDU_15_00"); //What are you doing here?
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_WASMACHSTDU_08_01"); //I'm sitting tight. If it hadn't been for these damned bandits, I wouldn't be here.
 	
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info Banditen
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Cavalorn_Banditen		(C_INFO)
-{
-	npc		 = 	Bau_4300_Addon_Cavalorn;
-	nr		 = 	10;
-	condition	 = 	DIA_Addon_Cavalorn_Banditen_Condition;
-	information	 = 	DIA_Addon_Cavalorn_Banditen_Info;
-
-	description	 = 	"What was that about bandits?";
-};
-
-func int DIA_Addon_Cavalorn_Banditen_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_WASMACHSTDU))
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Cavalorn_Banditen_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Cavalorn_Banditen_15_00"); //What was that about bandits?
+	//AI_Output	(other, self, "DIA_Addon_Cavalorn_Banditen_15_00"); //What was that about bandits?
+	AI_Output	(other, self, "DIA_Addon_Cavalorn_ARTEFAKT_15_00"); //You were robbed by the bandits?
+	AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_01"); //(furious) Yes. They beat me down and tossed me to the goblins for lunch.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_Banditen_08_01"); //Have you slept through the last few weeks?
 	AI_Output	(other, self, "DIA_Addon_Cavalorn_Banditen_15_02"); //Eh...
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_Banditen_08_03"); //I'm talking about all the riff-raff from the penal colony that are making themselves at home here in the area. Plundering and murdering for all they're worth.
 	AI_Output	(self, other, "DIA_Addon_Cavalorn_Banditen_08_04"); //(sighs) I guess I'm lucky they didn't kill me. I let down my guard for one moment, and they clubbed me from behind.
 	
-	if (C_BragoBanditsDead () == FALSE) 
+	if (MIS_Addon_Cavalorn_KillBrago != LOG_SUCCESS) //(C_BragoBanditsDead () == FALSE) 
 	{
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_Banditen_08_05"); //No idea how I'll get all my stuff back now.
+	
+		AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_02"); //It was damned important stuff. A letter and all my money. I absolutely have to get it back.
+		AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_03"); //But without someone to watch my back, I'm not going back there. That cowardly rabble...
 	};
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info ARTEFAKT
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Cavalorn_ARTEFAKT		(C_INFO)
-{
-	npc		 = 	BAU_4300_Addon_Cavalorn;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Cavalorn_ARTEFAKT_Condition;
-	information	 = 	DIA_Addon_Cavalorn_ARTEFAKT_Info;
-
-	description	 = 	"You were robbed by the bandits?";
-};
-
-func int DIA_Addon_Cavalorn_ARTEFAKT_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_Banditen))
-	&& (MIS_Addon_Cavalorn_KillBrago != LOG_SUCCESS)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Cavalorn_ARTEFAKT_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Cavalorn_ARTEFAKT_15_00"); //You were robbed by the bandits?
-	AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_01"); //(furious) Yes. They beat me down and tossed me to the goblins for lunch.
-	AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_02"); //It was damned important stuff. A letter and all my money. I absolutely have to get it back.
-	AI_Output	(self, other, "DIA_Addon_Cavalorn_ARTEFAKT_08_03"); //But without someone to watch my back, I'm not going back there. That cowardly rabble...
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -401,7 +349,7 @@ instance DIA_Addon_Cavalorn_HELFEN		(C_INFO)
 
 func int DIA_Addon_Cavalorn_HELFEN_Condition ()
 {
-	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_ARTEFAKT))
+	if (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_WASMACHSTDU))
 	&& (C_BragoBanditsDead () == FALSE)//Joly:VORSICHT!!!!!muss als letztes Stehen
 	{
 		return TRUE;
@@ -510,6 +458,10 @@ func void DIA_Addon_Cavalorn_LETSKILLBANDITS_Info ()
 	if (Bdt_1013_Away == FALSE)
 	{
 		Ambusher_1013.aivar[AIV_EnemyOverride] = FALSE;
+	} else {
+		Ambusher_1013.guild = GIL_OUT;
+		CreateInvItems (Ambusher_1013,ITAR_LEATHER_L,1);
+		AI_EquipArmor 	(Ambusher_1013,ITAR_LEATHER_L);
 	};
 	Ambusher_1014.aivar[AIV_EnemyOverride] = FALSE;
 	Ambusher_1015.aivar[AIV_EnemyOverride] = FALSE;
@@ -591,7 +543,7 @@ instance DIA_Addon_Cavalorn_PCKilledBrago		(C_INFO)
 func int DIA_Addon_Cavalorn_PCKilledBrago_Condition ()
 {
 	if 	(MIS_Addon_Cavalorn_KillBrago == 0)
-	&&  (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_Banditen))
+	&&  (Npc_KnowsInfo (other, DIA_Addon_Cavalorn_WASMACHSTDU))
 	&&	(C_BragoBanditsDead () == TRUE) 	//Joly:VORSICHT!!!!!muss als letztes Stehen
 	{
 		return TRUE;

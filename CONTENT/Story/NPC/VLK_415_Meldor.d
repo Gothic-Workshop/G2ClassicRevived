@@ -18,8 +18,9 @@ instance VLK_415_Meldor (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
 	
-	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Vlk_Dagger);
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_1H_CLUB_02);
+	
 	//EquipItem			(self, fehlt);
 	
 	// ------ Inventory ------

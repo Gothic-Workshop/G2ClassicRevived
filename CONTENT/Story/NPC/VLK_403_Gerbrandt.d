@@ -14,8 +14,9 @@ instance VLK_403_Gerbrandt (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem (self,ItMw_1h_Vlk_Mace);
+	// ------ Equippte Waffen ------
+	EquipItem (self,ITMW_REVIVED_1H_SWORD_LONG_02);
+	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	CreateInvItems (self,ItSe_GoldPocket100,1);

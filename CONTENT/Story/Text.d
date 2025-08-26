@@ -19,7 +19,7 @@ CONST STRING MOBNAME_GRINDSTONE		= "Whetstone";			//Schleifstein
 CONST STRING MOBNAME_WHEEL			= "Winch";					//Winde
 CONST STRING MOBNAME_LAB			= "Alchemist's Bench";			//Alchemietisch
 CONST STRING MOBNAME_BOOKSTAND		= "Bookstand";			//Buchständer
-CONST STRING MOBNAME_BOOKSBOARD		= "Bookstand";			//Kommode mit Buch
+CONST STRING MOBNAME_BOOKSBOARD		= "Booksboard";			//Kommode mit Buch
 CONST STRING MOBNAME_CHAIR			= "";						//Stühle
 CONST STRING MOBNAME_CAULDRON		= "Cauldron";					//Kochkessel
 CONST STRING MOBNAME_SEAT			= "";						//Sessel
@@ -160,7 +160,7 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 	"Paladin"		,
 	"Militia"			,
 	"Citizen"		,
-	"Magician"		,
+	"Fire Mage"		,
 	"Novice"		,
 	"Dragon Hunter"	,
 	"Mercenary"		,
@@ -168,7 +168,7 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 	"Bandit"		,
 	"Convict"		,
 	"Seeker"		,
-	"Land Dweller"	,
+	"Outlander"	,
 	"Pirate"			, //Addon
 	"Water Mage"	, //Addon
 	"D"				,
@@ -209,14 +209,14 @@ CONST STRING TXT_GUILDS	[GIL_MAX] =	{
 	"Swamp Golem"	, //Addon
 	"Guard"		, //Addon
 	"Stone Puma"		, //Addon
-	"A"				, //Addon
+	"Fanatic",		//53 - GIL_FANATIC | "A"				, //Addon
 	"Guard"		, //Addon
 	"Zombie"		, //Addon
 	""				,
 	""				,
 	""				, //58 - Gil_Seperator_Orc
 	"Orc"			,
-	"Orc"			,
+	"Friendly Orc"	,
 	"Undead Orc"	,
 	"Draconian"		,
 	"X"				,
@@ -327,7 +327,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"TXT_SPL_DEATHBOLT",		// 61	SPL_Deathbolt
 	"TXT_SPL_DEATHBALL",		// 62	SPL_Deathball
 	"TXT_SPL_CONCUSSIONBOLT",	// 63	SPL_ConcussionBolt
-	"Transform into Meatbug",	// 64	SPL_Reserved_64
+	"Transform into Meatbug",	// 64	SPL_TrfMeatbug
 	"TXT_SPL_RESERVED_65",		// 65	SPL_Reserved_65
 	"TXT_SPL_RESERVED_66",		// 66	SPL_Reserved_66
 	"TXT_SPL_RESERVED_67",		// 67	SPL_Reserved_67
@@ -361,7 +361,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	// ...
 	"Teleport to New Camp",		// 90	SPL_TeleportNC
 	"Teleport to Brotherhood",	// 91	SPL_TeleportPSI
-	"TXT_SPL_RESERVED_92",		// 92	SPL_Reserved_92
+	"Orc Teleport",		// 92	SPL_Reserved_92
 	"TXT_SPL_RESERVED_93",		// 93	SPL_Reserved_93
 	"TXT_SPL_RESERVED_94",		// 94	SPL_Reserved_94
 	"TXT_SPL_RESERVED_95",		// 95	SPL_Reserved_95
@@ -682,26 +682,26 @@ const string PRINT_Addon_NadjaWait		= "Wait. About the weed...";
 // INVENTAR
 // *************************************************************
 
-const string NAME_Currency					= "Gold:";
+const string NAME_Currency					= "Gold ";
 const string PRINT_Trade_Not_Enough_Gold	= "You don't have enough gold to buy this item.";
 
 // *************************************************************
 // TEXTE FÜR ITEM-BESCHREIBUNGEN IM	INV.
 // *************************************************************
 
-const string NAME_Value			= "Value:";
+const string NAME_Value			= "Value";
 
-const string NAME_Mag_Circle	= "Circle:";
-const string NAME_Manakosten	= "Mana cost:";
-const string NAME_MinManakosten = "Mana cost (min):";
-const string NAME_ManakostenMax	= "Mana cost (max):";
+const string NAME_Mag_Circle	= "Circle";
+const string NAME_Manakosten	= "Mana cost";
+const string NAME_MinManakosten = "Mana cost (min)";
+const string NAME_ManakostenMax	= "Mana cost (max)";
 const string NAME_ManaPerSec	= "Mana per sec.";
 const string NAME_Duration		= "Duration (mins)";
 const string NAME_Sec_Duration	= "Duration (secs)";
 
-const string NAME_Mana_needed	= "Mana required:";
-const string NAME_Str_needed	= "Strength required:";
-const string NAME_Dex_needed	= "Dexterity required:";
+const string NAME_Mana_needed	= "Mana required";
+const string NAME_Str_needed	= "Strength required";
+const string NAME_Dex_needed	= "Dexterity required";
 
 const string NAME_Spell_Load	= "Boostable spell";
 const string NAME_Spell_Invest	= "Sustainable spell";
@@ -717,26 +717,26 @@ const string NAME_Damage_Max	= "Maximum damage";
 const string NAME_PerMana		= " (per mana)";
 const string NAME_DamagePerSec	= "Damage per sec.";
 
-const string NAME_Prot_Edge		= "Weapon Protection:";
-const string NAME_Prot_Point	= "Arrow Protection:";
-const string NAME_Prot_Fire		= "Fire Protection:";
-const string NAME_Prot_Magic	= "Magic Protection:";
+//const string NAME_Prot_Edge		= "Weapon Protection";
+const string NAME_Prot_Point	= "Arrow Protection";
+const string NAME_Prot_Fire		= "Fire Protection";
+const string NAME_Prot_Magic	= "Magic Protection";
 
-const string NAME_Bonus_HP		= "Hitpoint bonus:";
-const string NAME_Bonus_Mana	= "Mana bonus:";
+const string NAME_Bonus_HP		= "Hitpoint bonus";
+const string NAME_Bonus_Mana	= "Mana bonus";
 
 
-const string NAME_Bonus_HpMax	= "Bonus for maximum Hitpoints:";
-const string NAME_Bonus_ManaMax	= "Bonus for maximum Mana:";
+const string NAME_Bonus_HpMax	= "Bonus for maximum Hitpoints";
+const string NAME_Bonus_ManaMax	= "Bonus for maximum Mana";
 
-const string NAME_Bonus_Dex		= "Dexterity bonus:";
-const string NAME_Bonus_Str		= "Strength bonus:";
+const string NAME_Bonus_Dex		= "Dexterity bonus";
+const string NAME_Bonus_Str		= "Strength bonus";
 
 const string NAME_OneHanded		= "One-Handed Weapon";
 const string NAME_TwoHanded		= "Two-Handed Weapon";
 
 const string NAME_HealingPerMana = "Healing per Mana";
-const string NAME_HealingPerCast = "Healing:";
+const string NAME_HealingPerCast = "Healing";
 
 const string NAME_Addon_NostalgieBonus = "Nostalgia Bonus:";
 

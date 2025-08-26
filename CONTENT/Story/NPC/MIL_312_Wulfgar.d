@@ -16,7 +16,7 @@ instance Mil_312_Wulfgar (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
 	
 	
 	// ------ Inventory ------
@@ -40,13 +40,13 @@ instance Mil_312_Wulfgar (Npc_Default)
 FUNC VOID Rtn_PreStart_312 ()
 {	
 	TA_Stand_ArmsCrossed		(06,55,21,00,"NW_CITY_HABOUR_KASERN_CENTRE_01");
-    TA_Sit_Throne 				(21,00,05,00,"NW_CITY_KASERN_BARRACK02_02");
-   	TA_Practice_Sword 			(05,00,06,55,"NW_CITY_HABOUR_KASERN_CENTRE_01");
+    TA_Sit_Throne 				(21,00,04,30,"NW_CITY_KASERN_BARRACK02_02");
+   	TA_Practice_Sword 			(04,30,06,55,"NW_CITY_HABOUR_KASERN_CENTRE_01");
 };
 FUNC VOID Rtn_Start_312 ()
 {	
 	TA_Stand_ArmsCrossed		(06,55,21,00,"NW_CITY_HABOUR_KASERN_CENTRE_01");
     TA_Sit_Throne 				(21,00,00,07,"NW_CITY_KASERN_BARRACK02_02");
-   	TA_Smalltalk				(00,07,05,00,"NW_CITY_HABOUR_KASERN_OFFICE");
-    TA_Practice_Sword 			(05,00,06,55,"NW_CITY_HABOUR_KASERN_CENTRE_01");
+   	TA_Smalltalk				(00,07,04,30,"NW_CITY_HABOUR_KASERN_OFFICE");
+    TA_Practice_Sword 			(04,30,06,55,"NW_CITY_HABOUR_KASERN_CENTRE_01");
 };

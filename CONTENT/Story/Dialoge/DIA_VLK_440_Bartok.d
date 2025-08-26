@@ -158,6 +158,7 @@ func void DIA_Addon_Bartok_MissingPeople_Info ()
 	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_04"); //I vaguely remember Trokar saying that he was going out to get a few swampweed reefers. He never came back.
 
 	Info_ClearChoices	(DIA_Addon_Bartok_MissingPeople);
+	Info_AddChoice		(DIA_Addon_Bartok_MissingPeople,DIALOG_BACK,DIA_Bartok_PICKPOCKET_BACK);
 	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "Didn't you go looking for him?", DIA_Addon_Bartok_MissingPeople_such );
 	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "So where can I get some swampweed reefers?", DIA_Addon_Bartok_MissingPeople_wo );
 };

@@ -15,8 +15,9 @@ instance VLK_419_Buerger (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem (self,ItMw_1h_Vlk_Mace); 
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_07);
+
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 

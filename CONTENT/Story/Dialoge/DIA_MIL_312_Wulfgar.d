@@ -371,7 +371,7 @@ instance DIA_Wulfgar_Bonus		(C_INFO)
 func int DIA_Wulfgar_Bonus_Condition ()
 {
 	if Npc_IsInState (self, ZS_Talk)
-	&& (Wld_IsTime (05,02,06,54))
+	&& (Wld_IsTime (04,31,06,54))
 	{
 		return TRUE;
 	};

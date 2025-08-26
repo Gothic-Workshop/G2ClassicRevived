@@ -21,7 +21,7 @@ instance PAL_297_Ritter (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_2h_Pal_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 	EquipItem			(self, ItRw_Mil_Crossbow);
 	
 	// ------ Inventory ------

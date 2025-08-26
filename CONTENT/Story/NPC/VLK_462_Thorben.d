@@ -16,7 +16,7 @@ instance VLK_462_Thorben (Npc_Default)
 	fight_tactic 		= FAI_HUMAN_COWARD;
 	
 	// ------ Equippte Waffen ------																
-	EquipItem (self, ItMw_1h_Bau_Mace);
+	EquipItem (self, ITMW_REVIVED_1H_NAILMACE_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

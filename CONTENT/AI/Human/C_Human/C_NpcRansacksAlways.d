@@ -14,7 +14,7 @@ func int C_NpcRansacksAlways (var C_Npc slf)
 	};
 	
 	if (Hlp_GetInstanceID(slf) == Hlp_GetInstanceID(Rod))
-	&& (Npc_HasItems(other, ItMw_2h_Rod) > 0)
+	&& (Npc_HasItems(other, ITMW_REVIVED_2H_SWORD_ROD) > 0)
 	{
 		return TRUE;
 	};

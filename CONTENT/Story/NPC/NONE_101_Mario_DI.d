@@ -28,7 +28,7 @@ instance None_101_Mario_DI (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_Sturmbringer);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

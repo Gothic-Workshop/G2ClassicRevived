@@ -214,8 +214,8 @@ func void DIA_Peck_WEAPON_Info ()
 		{
 			AI_Output (self, other, "DIA_Peck_WEAPON_12_02"); //Well, look who's here. Our new comrade. And he wants a sword.
 			AI_Output (self, other, "DIA_Peck_WEAPON_12_03"); //You didn't tell Andre I was in the Red Lantern. You seem to be okay. Here, take your sword.
-			AI_Output (self ,other,"DIA_Peck_Add_12_00"); //It's the best that I have.
-			B_GiveInvItems 		(self, hero	, ItMw_Schwert1, 1); // edles Schwert 35
+			AI_Output (self ,other, "DIA_Peck_Add_12_00"); //It's the best that I have.
+			B_GiveInvItems 		(self, hero	, ITMW_REVIVED_1H_SWORD_LONG_01, 1); // edles Schwert 35
 	
 		}
 		else if (MIS_Andre_Peck == LOG_SUCCESS) // ist schon korrekt, das SUCCESS gilt für Andre M.F.
@@ -224,7 +224,7 @@ func void DIA_Peck_WEAPON_Info ()
 			AI_Output (self, other, "DIA_Peck_WEAPON_12_05"); //And now you want a blade from me ... all right, you'll get a blade. Here. And now drop dead.
 			AI_Output (self, other, "DIA_Peck_WEAPON_12_06"); //If you want a better weapon, then go to the merchants in the market.
 	
-			B_GiveInvItems (self, hero, ITMW_REVIVED_SHORTSWORD,1);// rostiges Schwert
+			B_GiveInvItems (self, hero, ITMW_REVIVED_1H_SWORD_SHORT_01,1);// rostiges Schwert
 			
 		};
 		DIA_Peck_WEAPON_perm = TRUE;

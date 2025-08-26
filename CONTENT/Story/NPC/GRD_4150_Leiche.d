@@ -21,7 +21,7 @@ instance GRD_4150_Leiche (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------
-	EquipItem	(self, ITMW_REVIVED_GUARDHAND); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_04); 
 	
 	// ------ Inventory ------
 	

@@ -29,7 +29,7 @@ PROTOTYPE Mst_Default_Dragon_Swamp(C_Npc)
 	protection	[PROT_MAGIC]		= 150;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_FIRE|DAM_FLY;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
@@ -75,7 +75,7 @@ func void B_SetVisuals_Dragon_Swamp()
 INSTANCE Dragon_Swamp	(Mst_Default_Dragon_Swamp)
 {
 	name		=	"Pandrodor";
-	flags				   			= 	NPC_FLAG_IMMORTAL;
+	flags		= 	NPC_FLAG_IMMORTAL;
 	fight_tactic	=	FAI_DRAGON;
 	B_SetVisuals_Dragon_Swamp();
 	Npc_SetToFistMode(self);

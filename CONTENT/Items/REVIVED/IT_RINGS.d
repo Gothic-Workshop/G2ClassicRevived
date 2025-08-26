@@ -257,7 +257,7 @@ FUNC VOID UnEquip_Schutzring_Magie2()
 
 /******************************************************************************************/
 
-instance ITRI_REVIVED_PROT_FIRE_01(C_Item)
+INSTANCE ITRI_REVIVED_PROT_FIRE_01(C_Item)
 {
 	name 					=	"Ring of Flame Protection";
 

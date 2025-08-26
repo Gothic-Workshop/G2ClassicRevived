@@ -26,7 +26,7 @@ func void B_ReadySpell(var C_NPC slf, var int spell, var int mana)
 	if ( Npc_IsDrawingSpell(slf) == spell )
 	{
 		return;
-	}	
+	};
 	
 	// ------ NSC hat Zauber schon auf der Hand ------
 	if (Npc_GetActiveSpell(slf) == spell) 

@@ -71,7 +71,7 @@ INSTANCE ItPo_Addon_Geist_02(C_Item)
 	{
 		if Npc_IsPlayer (self)
 		{
-			B_GivePlayerXP (XP_Ambient * (XP_Ambient / 2));
+			B_GivePlayerXP (XP_Ambient * 5);
 		};
 	};
 /******************************************************************************************/	

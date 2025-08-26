@@ -15,9 +15,9 @@ instance VLK_417_Constantino (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem (self, itmw_1h_bau_axe);
-	EquipItem (self,ITHE_REVIVED_SPECTACLES_02);
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_WALKINGSTICK_01);
+	EquipItem (self, ITHE_REVIVED_SPECTACLES_02);
 	
 	// ------ Inventory ------
 	// Händler

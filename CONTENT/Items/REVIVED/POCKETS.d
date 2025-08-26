@@ -1,10 +1,10 @@
-//****************************************************************************
+/* //****************************************************************************
 //			GOTHIC 1
 //****************************************************************************
 
-instance REVIVED_POCKET_GOTHIC(C_Item)
+INSTANCE REVIVED_POCKET_GOTHIC(C_Item)
 {
-	name = "Gothic Items";
+	name = "Melee Weapons";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 10;
@@ -13,8 +13,7 @@ instance REVIVED_POCKET_GOTHIC(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = use_REVIVED_POCKET_GOTHIC;
 	description = "REVIVED_POCKET_GOTHIC";
-	text[4] = "All 'Gothic 1' Items";
-	text[5] = "Taken straight from the 1.08j-EN scripts.";
+	text[5] = "All Melee Weapons";
 };
 
 func void use_REVIVED_POCKET_GOTHIC()
@@ -256,9 +255,33 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITSC_REVIVED_TRANSFORM_MEATBUG, 1);
 
 	CreateInvItems(hero, ITAT_REVIVED_DAMLURKER, 1);
-	CreateInvItems(hero, ITAT_REVIVED_ORCDOG, 1);
-	CreateInvItems(hero, ITAT_REVIVED_ICEGOLEM, 1);
-	CreateInvItems(hero, ITAT_REVIVED_CRAWLEREGG, 1);
+	CreateInvItems(hero, ITAT_REVIVED_CRAWLEREGG, 10);
+	CreateInvItems(hero, ITAT_REVIVED_SCAVENGEREGG, 10);
+
+	CreateInvItems(hero, ITAT_REVIVED_FUR_ORCDOG, 5);
+	CreateInvItems(hero, ITAT_REVIVED_FUR_ICEWOLF, 5);
+	CreateInvItems(hero, ITAT_REVIVED_FUR_PANTHER, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_SNAPPER, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_DRAGONSNAPPER, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_RAZOR, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_BITER, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_WARAN, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_FIREWARAN, 5);
+	CreateInvItems(hero, ITAT_REVIVED_SKIN_ALLIGATOR, 5);
+	
+	CreateInvItems(hero, ITAT_REVIVED_DEMONHEART, 10);
+	CreateInvItems(hero, ITAT_REVIVED_DEMONLORDHEART, 10);
+	
+	CreateInvItems(hero, ITAT_REVIVED_GOLEMHEART_FIRE, 1);
+	CreateInvItems(hero, ITAT_REVIVED_GOLEMHEART_ICE, 1);
+	CreateInvItems(hero, ITAT_REVIVED_GOLEMHEART_ROCK, 1);
+	CreateInvItems(hero, ITAT_REVIVED_GOLEMHEART_SWAMP, 1);
+	
+	CreateInvItems(hero, ITAT_REVIVED_DRAGONHEART_UNDEAD, 1);
+	CreateInvItems(hero, ITAT_REVIVED_DRAGONHEART_FIRE, 1);
+	CreateInvItems(hero, ITAT_REVIVED_DRAGONHEART_ICE, 1);
+	CreateInvItems(hero, ITAT_REVIVED_DRAGONHEART_ROCK, 1);
+	CreateInvItems(hero, ITAT_REVIVED_DRAGONHEART_SWAMP, 1);
 
 	CreateInvItems(hero, ITWR_REVIVED_CIRCLE_KDF_01, 1);
 	CreateInvItems(hero, ITWR_REVIVED_CIRCLE_KDF_02, 1);
@@ -325,7 +348,7 @@ func void use_REVIVED_POCKET_GOTHIC()
 //			GOTHIC 2 BUT MORE IDK
 //****************************************************************************
 
-instance REVIVED_POCKET_GOTHIC2(C_Item)
+INSTANCE REVIVED_POCKET_GOTHIC2(C_Item)
 {
 	name = "Gothic 2 Items";
 	mainflag = ITEM_KAT_NONE;
@@ -374,7 +397,7 @@ func void use_REVIVED_POCKET_GOTHIC2()
 //			GOTHIC LEFTOVERS
 //****************************************************************************
 
-instance REVIVED_POCKET_GOTHICLEFTOVER(C_Item)
+INSTANCE REVIVED_POCKET_GOTHICLEFTOVER(C_Item)
 {
 	name = "Unused Gothic Items";
 	mainflag = ITEM_KAT_NONE;
@@ -398,7 +421,7 @@ func void use_REVIVED_POCKET_GOTHICLEFTOVER()
 //			FROM WORLD OF GOTHIC
 //****************************************************************************
 
-instance REVIVED_POCKET_WOG(C_Item)
+INSTANCE REVIVED_POCKET_WOG(C_Item)
 {
 	name = "WorldOfGothic Items";
 	mainflag = ITEM_KAT_NONE;
@@ -434,7 +457,7 @@ func void use_REVIVED_POCKET_WOG()
 //			MY STUFF
 //****************************************************************************
 
-instance REVIVED_POCKET_NEUE(C_Item)
+INSTANCE REVIVED_POCKET_NEUE(C_Item)
 {
 	name = "All Revived Items";
 	mainflag = ITEM_KAT_NONE;
@@ -451,8 +474,8 @@ instance REVIVED_POCKET_NEUE(C_Item)
 
 func void use_REVIVED_POCKET_NEUE()
 {
-	CreateInvItems(hero, ITAR_REVIVED_VLK_L, 1);
-	CreateInvItems(hero, ITAR_REVIVED_VLK_M, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SFB_L, 1);
+	CreateInvItems(hero, ITAR_REVIVED_SFB_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_STT_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_STT_H, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GRD_L, 1);
@@ -469,8 +492,8 @@ func void use_REVIVED_POCKET_NEUE()
 	CreateInvItems(hero, ITAR_REVIVED_SLD_L, 1);
 	CreateInvItems(hero, ITAR_REVIVED_SLD_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_SLD_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_NOV_M, 1);
-	CreateInvItems(hero, ITAR_REVIVED_TPL_H, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PSI_NOV, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PSI_TPL, 1);
 	CreateInvItems(hero, ITAR_REVIVED_KDF_L, 1);
 	CreateInvItems(hero, ITAR_REVIVED_KDF_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_KDF_H, 1);
@@ -490,14 +513,13 @@ func void use_REVIVED_POCKET_NEUE()
 	CreateInvItems(hero, ITAR_REVIVED_PAL_S, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DEMONHUNTER_02, 1);
-	CreateInvItems(hero, ITAR_REVIVED_TPL_SKE, 1);
+	CreateInvItems(hero, ITAR_REVIVED_PSI_TPL_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_ARCHER, 1);
 	CreateInvItems(hero, ITAR_REVIVED_BEGGAR, 1);
 	CreateInvItems(hero, ITAR_REVIVED_KNIGHT, 1);
 	CreateInvItems(hero, ITAR_REVIVED_KNIGHT_02, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DJG_M, 1);
 	CreateInvItems(hero, ITAR_REVIVED_DJG_H, 1);
-	CreateInvItems(hero, ITAR_REVIVED_PIR_H, 1);
 	CreateInvItems(hero, ITAR_REVIVED_GORDONRAMSAY, 1);
 
 	CreateInvItems(hero, ITPL_REVIVED_BERRY_BLACK, 1);
@@ -521,7 +543,7 @@ func void use_REVIVED_POCKET_NEUE()
 //			OTHER STUFF
 //****************************************************************************
 
-instance REVIVED_POCKET_DEBUG(C_Item)
+INSTANCE REVIVED_POCKET_DEBUG(C_Item)
 {
 	name = "All Debug Items";
 	mainflag = ITEM_KAT_NONE;
@@ -548,7 +570,7 @@ func void use_REVIVED_POCKET_DEBUG()
 
 //****************************************************************************
 
-instance REVIVED_POCKET_ALLES(C_Item)
+INSTANCE REVIVED_POCKET_ALLES(C_Item)
 {
 	name = "All Item Pockets";
 	mainflag = ITEM_KAT_NONE;
@@ -573,3 +595,4 @@ func void use_REVIVED_POCKET_ALLES()
 	CreateInvItems(hero, REVIVED_POCKET_DEBUG, 1);
 };
 
+ */

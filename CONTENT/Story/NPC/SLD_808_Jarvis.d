@@ -16,8 +16,8 @@ instance SLD_808_Jarvis (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
-	EquipItem			(self, ItRw_Sld_Bow);	
+	EquipItem			(self, ITMW_REVIVED_1H_MACE_WAR_03);
+	EquipItem			(self, ITRW_REVIVED_BOW_LONG_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

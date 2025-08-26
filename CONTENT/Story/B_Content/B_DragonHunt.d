@@ -50,7 +50,6 @@ func void B_DragonHunt()
 			B_StartOtherRoutine(DJG_708_Kurgan,"StartPass");
 		};
 
-
 		DragonHuntStart_Once = TRUE;
 	};
 };

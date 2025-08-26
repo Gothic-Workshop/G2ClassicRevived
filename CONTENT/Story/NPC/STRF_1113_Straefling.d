@@ -24,7 +24,7 @@ instance STRF_1113_Straefling (Npc_Default)
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal14, BodyTex_N, ITAR_REVIVED_VLK_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal14, BodyTex_N, ITAR_REVIVED_SFB_M);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 

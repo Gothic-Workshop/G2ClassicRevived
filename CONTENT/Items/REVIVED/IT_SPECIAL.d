@@ -9,7 +9,7 @@
 //			DEBUG
 //****************************************************************************
 
-instance REVIVED_LEARN_ALCHEMY_ALL(C_Item)
+INSTANCE REVIVED_LEARN_ALCHEMY_ALL(C_Item)
 {
 	name = "DEBUG (Potion Learn)";
 	mainflag = ITEM_KAT_NONE;
@@ -87,7 +87,7 @@ func void use_REVIVED_LEARN_ALCHEMY_ALL()
 
 //****************************************************************************
 
-instance REVIVED_LEARN_SMITHING_ALL(C_Item)
+INSTANCE REVIVED_LEARN_SMITHING_ALL(C_Item)
 {
 	name = "DEBUG (Smithing Learn)";
 	mainflag = ITEM_KAT_NONE;
@@ -127,7 +127,7 @@ func void use_REVIVED_LEARN_SMITHING_ALL()
 
 //****************************************************************************
 
-instance REVIVED_LEARN_BOWMAKING_ALL(C_Item)
+INSTANCE REVIVED_LEARN_BOWMAKING_ALL(C_Item)
 {
 	name = "DEBUG (Bowmaking Learn)";
 	mainflag = ITEM_KAT_NONE;
@@ -157,7 +157,7 @@ func void use_REVIVED_LEARN_BOWMAKING_ALL()
 
 //****************************************************************************
 
-instance REVIVED_LEARN_RUNES_ALL(C_Item)
+INSTANCE REVIVED_LEARN_RUNES_ALL(C_Item)
 {
 	name = "DEBUG (Runes Learn)";
 	mainflag = ITEM_KAT_NONE;
@@ -208,7 +208,7 @@ func void use_REVIVED_LEARN_RUNES_ALL()
 
 //****************************************************************************
 
-instance REVIVED_LEARN_TROPHIES_ALL(C_Item)
+INSTANCE REVIVED_LEARN_TROPHIES_ALL(C_Item)
 {
 	name = "DEBUG (Trophies Learn)";
 	mainflag = ITEM_KAT_NONE;
@@ -243,7 +243,7 @@ func void use_REVIVED_LEARN_TROPHIES_ALL()
 
 //****************************************************************************
 
-instance REVIVED_LEARN_TALENTS_ALL(C_Item)
+INSTANCE REVIVED_LEARN_TALENTS_ALL(C_Item)
 {
 	name = "DEBUG (Talent Learn)";
 	mainflag = ITEM_KAT_NONE;

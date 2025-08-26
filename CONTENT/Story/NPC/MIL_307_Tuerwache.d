@@ -16,14 +16,14 @@ instance MIL_307_Tuerwache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
 		
 	// ------ visuals ------																		
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Horatio, BodyTex_N, ITAR_REVIVED_GRD_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Horatio, BodyTex_N, ITAR_REVIVED_GRD_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

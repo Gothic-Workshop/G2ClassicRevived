@@ -19,8 +19,8 @@ instance VLK_494_Attila (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Axe);
-	EquipItem			(self, ItRw_Mil_Crossbow);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_02);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_01);
 	
 	// ------ Inventory ------
 	CreateInvItem (self, ItKe_ThiefGuildKey_MIS);  // Schlüssel zur geheimen Diebesgilde

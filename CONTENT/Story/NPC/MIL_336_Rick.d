@@ -19,7 +19,7 @@ instance Mil_336_Rick (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

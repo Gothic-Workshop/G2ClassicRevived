@@ -518,40 +518,6 @@ func void DIA_Lord_Hagen_Pass_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Info Ornament
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Lord_Hagen_Ornament		(C_INFO)
-{
-	npc		 	= PAL_200_Hagen;
-	nr		 	= 10;
-	condition	= DIA_Addon_Lord_Hagen_Ornament_Condition;
-	information	= DIA_Addon_Lord_Hagen_Ornament_Info;
-
-	description	= "I'm looking for a metal ornament.";
-};
-
-func int DIA_Addon_Lord_Hagen_Ornament_Condition ()
-{
-	if (MIS_Addon_Cavalorn_GetOrnamentFromPAL == LOG_RUNNING)
-	&& (Lord_Hagen_GotOrnament == FALSE)
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Addon_Lord_Hagen_Ornament_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Lord_Hagen_GiveOrnament_15_00"); //I am looking for a metal ornament. It should have been by the stone circle near Lobart's farm.
-	AI_Output	(self, other, "DIA_Addon_Lord_Hagen_GiveOrnament_04_01"); //If you mean this thing here ... we suspected that it might be a magical rune, but it turned out to be completely worthless.
-	AI_Output	(self, other, "DIA_Addon_Lord_Hagen_GiveOrnament_04_02"); //You can have it if you like. I have no use for it.
-	
-	CreateInvItems (self, ItMi_Ornament_Addon, 1);									
-	B_GiveInvItems (self, other, ItMi_Ornament_Addon, 1);	
-	Lord_Hagen_GotOrnament = TRUE;
-	B_GivePlayerXP (XP_Ambient);	
-};
-
-///////////////////////////////////////////////////////////////////////
 //	Info Khorinis
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Lord_Hagen_Khorinis (C_INFO)
@@ -1522,7 +1488,8 @@ FUNC VOID DIA_Lord_Hagen_AllDragonsDead_Info()
 	MIS_SCVisitShip = LOG_RUNNING;
 	AI_StopProcessInfos (self);
 	Npc_ExchangeRoutine	(self,"ShipFree");	
-	Npc_ExchangeRoutine (Andre,"ShipFree");
+	//Npc_ExchangeRoutine (Andre,"ShipFree");
+	B_StartOtherRoutine (Andre,"ShipFree");
 };
 
 // ************************************************************

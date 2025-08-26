@@ -158,6 +158,7 @@ func int DIA_Addon_Gorax_DaronsStatue_Condition ()
 	if (MiltenORPedro_LostInnosStatue_Daron == FALSE)
 	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
 	&& (DIA_Gorax_GOLD_perm == FALSE)
+	&& ((NOV_Aufnahme == TRUE) || (MiltenNW_GivesMonasteryKey == TRUE))
 	{
 		return TRUE;
 	};

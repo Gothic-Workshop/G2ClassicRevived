@@ -15,11 +15,10 @@ instance VLK_478_Buergerin (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																	
-		
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 	// ------ Inventory ------
-	B_CreateAmbientInv 	(self);
-	EquipItem (self, ItMw_1h_Vlk_Dagger);	
+	B_CreateAmbientInv 	(self);	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", FaceBabe_N_OldBrown, BodyTex_N, ITAR_VlkBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 

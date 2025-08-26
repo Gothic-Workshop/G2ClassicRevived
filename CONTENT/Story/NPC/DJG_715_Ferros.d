@@ -16,7 +16,7 @@ instance DJG_715_Ferros (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
 	EquipItem			(self, ItRw_Crossbow_M_01);	
 	
 	// ------ Inventory ------
@@ -40,8 +40,8 @@ instance DJG_715_Ferros (Npc_Default)
 
 FUNC VOID Rtn_Start_715 ()
 {
-	TA_Stand_Eating						(08,00,12,00,"OCC_SHADOWS_CORNER_MOVEMENT4");
-	TA_Smalltalk						(12,00,22,00,"OCC_SHADOWS_CORNER_MOVEMENT4");
+	TA_Stand_Eating						(08,00,12,00,"OCC_SHADOWS_CORNER_BENCH");
+	TA_Smalltalk						(12,00,22,00,"OCC_SHADOWS_CORNER_SMALLTALK");
 	TA_Sleep							(22,00,08,00,"OCC_MERCS_LEFT_ROOM_BED6");	
 };
 

@@ -19,7 +19,7 @@ instance SLD_841_Engardo (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;  
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_2h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_LIGHT_01);
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 

@@ -16,7 +16,7 @@ instance VLK_433_Bromor (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Dagger); 
+	EquipItem	(self, ITMW_REVIVED_1H_DAGGER_02); 
 	
 
 	// ------ Inventory ------

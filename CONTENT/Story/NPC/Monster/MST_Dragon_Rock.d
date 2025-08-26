@@ -29,7 +29,7 @@ PROTOTYPE Mst_Default_Dragon_Rock(C_Npc)
 	protection	[PROT_MAGIC]		= 160;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_FIRE|DAM_FLY;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
@@ -76,7 +76,7 @@ func void B_SetVisuals_Dragon_Rock()
 INSTANCE Dragon_Rock	(Mst_Default_Dragon_Rock)
 {
 	name				=	"Pedrakhan";
-	flags				   			= 	NPC_FLAG_IMMORTAL;
+	flags				= 	NPC_FLAG_IMMORTAL;
 	B_SetVisuals_Dragon_Rock();
 	Npc_SetToFistMode(self);
 };

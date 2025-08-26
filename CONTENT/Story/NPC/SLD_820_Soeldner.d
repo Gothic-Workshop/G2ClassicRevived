@@ -17,7 +17,7 @@ instance SLD_820_Soeldner (Npc_Default) //Türwache Onars Haus
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
 	EquipItem			(self, ItRw_Sld_Bow);
 
 

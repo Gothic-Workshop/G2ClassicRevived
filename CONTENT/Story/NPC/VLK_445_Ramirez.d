@@ -20,7 +20,7 @@ instance VLK_445_Ramirez (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_Meisterdegen); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BANDIT_02); 
 	
 	
 	// ------ Inventory ------

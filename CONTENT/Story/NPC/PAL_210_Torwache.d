@@ -17,7 +17,7 @@ instance Pal_210_Torwache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_2H_Pal_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 	
 	
 	// ------ Inventory ------

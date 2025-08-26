@@ -972,6 +972,16 @@ INSTANCE spellFX_INCOVATION_WHITE (CFx_Base_Proto)
     	sfxid				= "SFX_Circle";
      	sfxisambient		= 1;
 };
+
+INSTANCE spellFX_INCOVATION_GRAY (CFx_Base_Proto)
+{
+		visname_S 			= "INVOCATION_GRAY";
+		emtrjmode_s 		= "FIXED";
+		emTrjOriginNode 	= "BIP01";
+		lightpresetname		= "WHITEBLEND";
+    	sfxid				= "SFX_Circle";
+     	sfxisambient		= 1;
+};
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXX
 ///   													XX  L I G H T S T A R  XX
 ///   													XXXXXXXXXXXXXXXXXXXXXXXXX

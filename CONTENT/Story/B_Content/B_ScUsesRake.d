@@ -22,8 +22,8 @@ FUNC VOID B_SCGetTreasure_S1()
 	//NEWWORLD_ZEN
 				if ((Npc_GetDistToWP(hero,							"NW_BIGFARM_LAKE_CAVE_07"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[Greg_FirstSecret]==FALSE))
 				{
-					Wld_InsertItem 		(ITMW_REVIVED_BLOODBLADE, 	"NW_BIGFARM_LAKE_CAVE_07"	); 				 			 RAKEPLACE[Greg_FirstSecret]=TRUE;	//Joly: Auftrag von GREG_NW  RAKEPLACE[1] wird als Abfrage verwendet, nicht ändern.
-					RakeTreasureSuccess (ITMW_REVIVED_BLOODBLADE);
+					Wld_InsertItem 		(ITMI_REVIVED_MAGICORE, 	"NW_BIGFARM_LAKE_CAVE_07"	); 				 			 RAKEPLACE[Greg_FirstSecret]=TRUE;	//Joly: Auftrag von GREG_NW  RAKEPLACE[1] wird als Abfrage verwendet, nicht ändern.
+					RakeTreasureSuccess (ITMI_REVIVED_MAGICORE);
 				}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_LAKE_GREG_TREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[2]==FALSE)){
@@ -31,8 +31,8 @@ FUNC VOID B_SCGetTreasure_S1()
 				RakeTreasureSuccess (ItSe_GoldPocket100);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_GREGTREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[3]==FALSE)){
-				Wld_InsertItem 		(ITAT_REVIVED_ORCDOG, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
-				RakeTreasureSuccess (ITAT_REVIVED_ORCDOG);}
+				Wld_InsertItem 		(ITAT_REVIVED_FUR_ORCDOG, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
+				RakeTreasureSuccess (ITAT_REVIVED_FUR_ORCDOG);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[4]==FALSE)){	
 				Wld_InsertItem 		(ItPl_Perm_Herb, 			"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	); 							 RAKEPLACE[4]=TRUE;

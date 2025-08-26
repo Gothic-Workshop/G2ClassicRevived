@@ -25,15 +25,16 @@ instance SLD_449_Lares (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_Schwert3); 
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ITMW_REVIVED_1H_AXE_LARES); 										
+	EquipItem	(self, ITRW_REVIVED_BOW_LONG_01); 
 	
 	
 	// ------ Inventory ------
-	CreateInvItems (self, ItMw_Schwert3,1);//zur Sicherheit - bei Waffenverlust hat er 'ne neue M.F.
 	CreateInvItems (self, ItMi_Gold, 100);	
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit er gefunden wird, wenn er im Kampf stirbt
-	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.								
+	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 5);	//Mattes: damit er frisch bei Taverne ankommt.
+	CreateInvItems (self, ITAR_REVIVED_ORG_H, 1);								
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Lares, BodyTex_N,ITAR_Vlk_L);	
@@ -61,8 +62,8 @@ FUNC VOID Rtn_Start_449()
 };
 FUNC VOID Rtn_Guide_449 ()
 {
-	TA_Guide_Player  (08,00,20,00,"NW_TAVERNE_BIGFARM_05");
-	TA_Guide_Player	 (20,00,08,00,"NW_TAVERNE_BIGFARM_05");
+	TA_Guide_Player  (08,00,20,00,"NW_BIGFARM_LAKE_03");
+	TA_Guide_Player	 (20,00,08,00,"NW_BIGFARM_LAKE_03");
 };
 
 FUNC VOID Rtn_WaitForShip_449 ()

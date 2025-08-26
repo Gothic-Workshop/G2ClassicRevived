@@ -16,14 +16,14 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 		CreateInvItems (slf,ItMi_Moleratlubric_MIS , 1); 
 
 		// ------ Waffen ------
-		CreateInvItems (slf,ItMw_ShortSword1 , 3); 
-		CreateInvItems (slf,ItMw_Schwert2 , 2); 
-		CreateInvItems (slf,ItMW_Addon_Hacker_1h_01, 1);
-		CreateInvItems (slf,ItMW_Addon_Hacker_2h_01, 1);
-		CreateInvItems (slf,ItMw_Meisterdegen, 1);
-		CreateInvItems (slf,ItMw_ShortSword5 , 1); 
-		CreateInvItems (slf,ItMw_Schwert4 , 1); 
-		CreateInvItems (slf,ItMw_Runenschwert , 1); 
+		CreateInvItems (slf,ITMW_REVIVED_1H_SWORD_SHORT_01 , 1); 
+		CreateInvItems (slf,ITMW_REVIVED_1H_SWORD_01 , 1); 
+		CreateInvItems (slf,ITMW_REVIVED_1H_SWORD_HACKER_02, 1);
+		CreateInvItems (slf,ITMW_REVIVED_2H_SWORD_LIGHT_01, 1);
+		CreateInvItems (slf,ITMW_REVIVED_1H_MACE_03, 1);
+		CreateInvItems (slf,ITMW_REVIVED_1H_SWORD_SHORT_04 , 1); 
+		CreateInvItems (slf,ITMW_REVIVED_2H_AXE_LIGHT_03 , 1); 
+		CreateInvItems (slf,ITMW_REVIVED_2H_SWORD_02 , 1); 
 		
 		CreateInvItems (slf,ItRi_Mana_01, 1); 
 		

@@ -19,7 +19,7 @@ instance VLK_4006_Bote (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_AXE_01); 
 	
 	
 	// ------ Inventory ------

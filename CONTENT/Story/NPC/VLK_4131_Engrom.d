@@ -16,8 +16,8 @@ instance VLK_4131_Engrom (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_VLK_Axe);
-	EquipItem			(self, ItRW_MIL_Crossbow);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

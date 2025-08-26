@@ -27,8 +27,9 @@ instance SLD_449_Lares_DI (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_SLD_Sword); 
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ITMW_REVIVED_1H_AXE_LARES); 										
+	EquipItem	(self, ITRW_REVIVED_BOW_LONG_01); 
 	
 	
 	// ------ Inventory ------

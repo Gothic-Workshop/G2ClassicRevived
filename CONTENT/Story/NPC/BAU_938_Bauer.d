@@ -22,7 +22,7 @@ instance BAU_938_Bauer (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Bau_Axe);
+	EquipItem			(self, ITMW_REVIVED_1H_SICKLE_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

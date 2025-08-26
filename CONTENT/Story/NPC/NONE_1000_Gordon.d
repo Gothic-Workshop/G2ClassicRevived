@@ -15,7 +15,7 @@ instance NONE_1000_Gordon (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_URIZIEL_1H_CHARGED);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SCAR);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

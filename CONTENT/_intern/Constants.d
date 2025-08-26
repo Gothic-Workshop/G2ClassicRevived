@@ -359,7 +359,7 @@ const int GIL_ALLIGATOR					= 49	;
 const int GIL_SWAMPGOLEM				= 50	;
 const int GIL_Stoneguardian				= 51	;
 const int GIL_Gargoyle					= 52	;
-const int GIL_Empty_A					= 53	;
+//const int GIL_Empty_A					= 53	;
 const int GIL_SummonedGuardian			= 54	;
 const int GIL_SummonedZombie			= 55	;
 const int GIL_EMPTY_B					= 56	;
@@ -780,7 +780,7 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	// ...
 	"Teleport",				// 90	SPL_TeleportNC
 	"Teleport",				// 91	SPL_TeleportPSI
-	"Light",				// 92	SPL_Reserved_92
+	"Teleport",				// 92	SPL_TeleportOrc
 	"Light",				// 93	SPL_Reserved_93
 	"Light",				// 94	SPL_Reserved_94
 	"Light",				// 95	SPL_Reserved_95
@@ -925,7 +925,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	// ...
 	"HEA", //"XXX",  				// 90	SPL_TeleportNC
 	"HEA", //"XXX",  				// 91	SPL_TeleportPsi
-	"XXX",  				// 92	SPL_Reserved_92
+	"HEA", //"XXX",  				// 92	SPL_TeleportOrc
 	"XXX",  				// 93	SPL_Reserved_93
 	"XXX",  				// 94	SPL_Reserved_94
 	"XXX",  				// 95	SPL_Reserved_95

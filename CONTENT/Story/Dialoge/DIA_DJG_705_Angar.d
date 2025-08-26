@@ -129,7 +129,7 @@ func void DIA_Angar_WIEKOMMSTDUHIERHER_amulett ()
 {
 	AI_Output			(other, self, "DIA_Angar_WIEKOMMSTDUHIERHER_amulett_15_00"); //Where exactly did you lose your amulet?
 
-	if (DJG_Angar_SentToStones ==FALSE)
+	if (DJG_Angar_SentToStones == FALSE)
 	{
 		AI_Output			(self, other, "DIA_Angar_WIEKOMMSTDUHIERHER_amulett_04_01"); //Somewhere in the south, shortly before I awoke here in the castle.
 		B_LogEntry (TOPIC_AngarsAmulett,"The amulet is supposed to be somewhere in the south. Angar's going to go looking for it."); 
@@ -137,7 +137,7 @@ func void DIA_Angar_WIEKOMMSTDUHIERHER_amulett ()
 	else
 	{
 		AI_Output			(self, other, "DIA_Angar_WIEKOMMSTDUHIERHER_amulett_04_02"); //It must be here somewhere.
-		B_LogEntry (TOPIC_AngarsAmulett,"The amulet is near a rock tomb in the south of the Valley of Mines."); 
+		B_LogEntry (TOPIC_AngarsAmulett,"The amulet is in a vicinity of the mountain fortress in the south of the Valley of Mines."); 
 	};
 	AI_Output			(self, other, "DIA_Angar_WIEKOMMSTDUHIERHER_amulett_04_03"); //I suspect it was stolen. I absolutely must have it back.
 };
@@ -237,6 +237,10 @@ func void B_AngarsAmulettAbgeben()
 	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_15_00"); //I found your amulet.
 	AI_Output			(self, other, "DIA_Angar_FOUNDAMULETT_04_01"); //Thank you. I thought I would never see it again.
 
+	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_besonders_15_00"); //What makes it so special for you?
+	AI_Output			(self, other, "DIA_Angar_FOUNDAMULETT_besonders_04_01"); //It was a gift.
+	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_besonders_15_02"); //I see.
+
 	B_GiveInvItems (other, self, ItAm_Mana_Angar_MIS,1);
 	
 	DJG_AngarGotAmulett = TRUE;
@@ -246,22 +250,7 @@ func void B_AngarsAmulettAbgeben()
 func void DIA_Angar_FOUNDAMULETT_Info ()
 {
 	B_AngarsAmulettAbgeben ();
-
-	Info_AddChoice	(DIA_Angar_FOUNDAMULETT, "What makes it so special for you?", DIA_Angar_FOUNDAMULETT_besonders );
-	Info_AddChoice	(DIA_Angar_FOUNDAMULETT, "What are you planning to do now?", DIA_Angar_FOUNDAMULETT_nun );
-};
-
-func void DIA_Angar_FOUNDAMULETT_besonders ()
-{
-	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_besonders_15_00"); //What makes it so special for you?
-	AI_Output			(self, other, "DIA_Angar_FOUNDAMULETT_besonders_04_01"); //It was a gift.
-	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_besonders_15_02"); //I see.
-
-
-};
-
-func void DIA_Angar_FOUNDAMULETT_nun ()
-{
+	
 	AI_Output			(other, self, "DIA_Angar_FOUNDAMULETT_nun_15_00"); //What are you planning to do now?
 	AI_Output			(self, other, "DIA_Angar_FOUNDAMULETT_nun_04_01"); //Get out of this accursed valley.
 	AI_Output			(self, other, "DIA_Angar_FOUNDAMULETT_nun_04_02"); //Perhaps we shall meet again. Farewell.
@@ -330,8 +319,7 @@ func void DIA_Angar_DJG_ANWERBEN_wo ()
 {
 	AI_Output			(other, self, "DIA_Angar_DJG_ANWERBEN_wo_15_00"); //Where do you want to look?
 	AI_Output			(self, other, "DIA_Angar_DJG_ANWERBEN_wo_04_01"); //I shall go to the south, where I was last.
-	AI_Output			(self, other, "DIA_Angar_DJG_ANWERBEN_wo_04_02"); //There is a cave tomb there, surrounded by many boulders.
-
+	//AI_Output			(self, other, "DIA_Angar_DJG_ANWERBEN_wo_04_02"); //There is a cave tomb there, surrounded by many boulders.
 };
 func void DIA_Angar_DJG_ANWERBEN_gehen ()
 {
@@ -360,7 +348,7 @@ instance DIA_AngarDJG_WASMACHSTDU		(C_INFO)
 func int DIA_AngarDJG_WASMACHSTDU_Condition ()
 {
 	if 	(
-		(Npc_GetDistToWP(self,"OW_DJG_WATCH_STONEHENGE_01")<8000) 
+		(Npc_GetDistToWP(self,"PATH_TO_PLATEAU03_002")<8000) 
 		&&	(Npc_KnowsInfo(other, DIA_Angar_DJG_ANWERBEN)) 
 		&& (DJG_AngarGotAmulett == FALSE)
 		)
@@ -374,9 +362,13 @@ func void DIA_AngarDJG_WASMACHSTDU_Info ()
 	AI_Output			(other, self, "DIA_AngarDJG_WASMACHSTDU_15_00"); //Is something wrong?
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_01"); //Do you hear that? Never in my life have I heard such a dreadful noise!
 	AI_Output			(other, self, "DIA_AngarDJG_WASMACHSTDU_15_02"); //What do you mean? I don't hear a thing!
-	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_03"); //The whole area here stinks of death and destruction. The putrid creatures guard the rocky entrance to the crypt in front of us.
+	//AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_03"); //The whole area here stinks of death and destruction. The putrid creatures guard the rocky entrance to the crypt in front of us.
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_04"); //Something ghastly is concealing itself in there and sending its henchmen to the surface of this world.
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_05"); //I am almost certain that my amulet was lost somewhere here.
+
+	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_01"); //Something will not let me get close to the entrance!
+	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_02"); //It is guarded by a magical creature. I have seen it at night, searching the area. A disgusting thing.
+	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_03"); //It glides back and forth between the trees, and you get the impression that it sucks up all life in its surroundings like a sponge.
 
 	if (Angar_willDJGwerden == TRUE)
 	{
@@ -388,40 +380,6 @@ func void DIA_AngarDJG_WASMACHSTDU_DJG ()
 	AI_Output			(other, self, "DIA_AngarDJG_WASMACHSTDU_DJG_15_00"); //Have you talked to the dragon hunters?
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_DJG_04_01"); //Yes. But I had expected a fellowship like the one we had in the Swamp Camp.
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_DJG_04_02"); //The boys are nothing but a wild, motley collection of idiots. It's nothing for me.
-};
-
-
-///////////////////////////////////////////////////////////////////////
-//	Info WhatsInThere
-///////////////////////////////////////////////////////////////////////
-instance DIA_AngarDJG_WHATSINTHERE		(C_INFO)
-{
-	npc		 = 	DJG_705_Angar;
-	nr		 = 	10;
-	condition	 = 	DIA_AngarDJG_WHATSINTHERE_Condition;
-	information	 = 	DIA_AngarDJG_WHATSINTHERE_Info;
-
-	description	 = 	"What's hiding in the cave in the rocks?";
-};
-
-func int DIA_AngarDJG_WHATSINTHERE_Condition ()
-{
-	if (Npc_KnowsInfo(other, DIA_AngarDJG_WASMACHSTDU))
-		&& (DJG_AngarGotAmulett == FALSE)
-		{
-				return TRUE;
-		};
-};
-
-func void DIA_AngarDJG_WHATSINTHERE_Info ()
-{
-	AI_Output			(other, self, "DIA_AngarDJG_WHATSINTHERE_15_00"); //What's hiding in the cave in the rocks?
-	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_01"); //Something will not let me get close to the entrance!
-	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_02"); //It is guarded by a magical creature. I have seen it at night, searching the area. A disgusting thing.
-	AI_Output			(self, other, "DIA_AngarDJG_WHATSINTHERE_04_03"); //It glides back and forth between the trees, and you get the impression that it sucks up all life in its surroundings like a sponge.
-
-	//Log_AddEntry (TOPIC_Dragonhunter,"Ich habe Angar im Minental gefunden. Er vermutet, daß sich in der Felsengruft, wo er sich aufhält, ein Drache befindet, der hier seine untoten Helfer an die Oberfläche entsendet.");
-	B_LogEntry (TOPIC_Dragonhunter,"I found Angar in the Valley of Mines.");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -439,7 +397,7 @@ instance DIA_AngarDJG_WANTTOGOINTHERE		(C_INFO)
 
 func int DIA_AngarDJG_WANTTOGOINTHERE_Condition ()
 {
-	if (Npc_KnowsInfo(other, DIA_AngarDJG_WHATSINTHERE))
+	if (Npc_KnowsInfo(other, DIA_AngarDJG_WASMACHSTDU))
 		&& (DJG_AngarGotAmulett == FALSE)
 		{
 				return TRUE;
@@ -480,7 +438,7 @@ instance DIA_AngarDJG_UndeadMageDead		(C_INFO)
 func int DIA_AngarDJG_UndeadMageDead_Condition ()
 {
 	if 	(
-		(Npc_GetDistToWP(self,"OW_UNDEAD_DUNGEON_02")<1000) 
+		(Npc_GetDistToWP(self,"LOCATION_19_03_ROOM6")<1000) 
 		&& (DJG_AngarAngriff == TRUE)
 		&& (DJG_AngarGotAmulett == FALSE)
 		&& (Npc_IsDead(SkeletonMage_Angar))
@@ -492,47 +450,11 @@ func int DIA_AngarDJG_UndeadMageDead_Condition ()
 
 func void DIA_AngarDJG_UndeadMageDead_Info ()
 {
+	AI_Output			(self, other, "DIA_AngarDJG_UNDEADMAGECOMES_04_00"); //(whispers) There it is! Do you hear that?
 	AI_Output			(self, other, "DIA_AngarDJG_UndeadMageDead_04_00"); //(bellows) Only death and destruction. I must get out of here.
 	AI_StopProcessInfos (self);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine	(self,"RunToEntrance");
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info UndeadMageComes
-///////////////////////////////////////////////////////////////////////
-instance DIA_AngarDJG_UNDEADMAGECOMES		(C_INFO)
-{
-	npc		 = 	DJG_705_Angar;
-	nr		 = 	13;
-	condition	 = 	DIA_AngarDJG_UNDEADMAGECOMES_Condition;
-	information	 = 	DIA_AngarDJG_UNDEADMAGECOMES_Info;
-	important	 = 	TRUE;
-};
-
-func int DIA_AngarDJG_UNDEADMAGECOMES_Condition ()
-{
-		
-	if 	(
-		(Npc_GetDistToWP(self,"OW_PATH_3_13")<500) 				
-		&&	(Npc_KnowsInfo(other, DIA_AngarDJG_WANTTOGOINTHERE))
-		&& ((Npc_KnowsInfo(other, DIA_AngarDJG_UndeadMageDead))==FALSE)
-		&& (DJG_AngarGotAmulett == FALSE)
-		&& (Npc_IsDead(SkeletonMage_Angar))
-		)
-			{
-				return TRUE;
-			};
-};
-
-func void DIA_AngarDJG_UNDEADMAGECOMES_Info ()
-{
-	AI_Output			(self, other, "DIA_AngarDJG_UNDEADMAGECOMES_04_00"); //(whispers) There it is! Do you hear that?
-	
-	AI_StopProcessInfos (self);   
- 	
- 	Npc_ExchangeRoutine	(self,"GotoStonehendgeEntrance"); 
-
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -551,7 +473,7 @@ instance DIA_Angar_WASISTLOS		(C_INFO)
 func int DIA_Angar_WASISTLOS_Condition ()
 {
 	if 	(
-		(Npc_GetDistToWP(self,"OW_PATH_3_STONES")<1000) 				
+		(Npc_GetDistToWP(self,"LOCATION_19_01")<1000) 				
 		&& (DJG_AngarGotAmulett == FALSE)
 		&& (Npc_IsDead(SkeletonMage_Angar))
 		)	
@@ -640,9 +562,13 @@ func int DIA_Angar_PERMKAP4_Condition ()
 func void DIA_Angar_PERMKAP4_Info ()
 {
 	AI_Output			(other, self, "DIA_Angar_PERMKAP4_15_00"); //I don't like to leave you alone!
-	AI_Output			(self, other, "DIA_Angar_PERMKAP4_04_01"); //Sure. Off you go. I'll see you.
+	//AI_Output			(self, other, "DIA_Angar_PERMKAP4_04_01"); //Sure. Off you go. I'll see you.
+
+	AI_Output			(other, self, "DIA_AngarDJG_WANTTOGOINTHERE_15_00"); //Let's go together.
+	AI_Output			(self, other, "DIA_AngarDJG_WANTTOGOINTHERE_04_01"); //I shall try it. But be careful.
 
 	AI_StopProcessInfos (self);	
+	self.aivar[AIV_PARTYMEMBER] = TRUE;
 };
 
 

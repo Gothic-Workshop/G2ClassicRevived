@@ -14,10 +14,7 @@ FUNC VOID B_GiveTradeInv_Constantino (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Flask, 5); 
 		CreateInvItems (slf, ItAt_GoblinBone, 1); 
 		CreateInvItems (slf, ItAt_Wing, 3); 
-		CreateInvItems (slf, ITWr_Addon_Health_04, 1); //NEUES REZEPT
-		CreateInvItems (slf, ITWr_Addon_Mana_04, 1); //NEUES REZEPT
-		CreateInvItems (slf,ItWr_Astronomy_Mis,1);	//Für  Mission HygalsBringBook
-			
+
 		Constantino_ItemsGiven_Chapter_1 = TRUE;
 	};
 	
@@ -35,6 +32,9 @@ FUNC VOID B_GiveTradeInv_Constantino (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Rockcrystal, 2); 
 		CreateInvItems (slf, ItAt_GoblinBone, 2); 
 		CreateInvItems (slf, ItPl_Mushroom_01, 5); 
+		
+		CreateInvItems (slf, ITWr_Addon_Health_04, 1); //NEUES REZEPT
+		CreateInvItems (slf, ITWr_Addon_Mana_04, 1); //NEUES REZEPT
 		
 		Constantino_ItemsGiven_Chapter_2 = TRUE;
 	};	
@@ -59,6 +59,8 @@ FUNC VOID B_GiveTradeInv_Constantino (var C_NPC slf)
 		CreateInvItems (slf, ItAt_ShadowHorn, 1); 
 		CreateInvItems (slf, ItAt_SkeletonBone, 1); 
 		CreateInvItems (slf, ItBe_Addon_Prot_FIRE, 1); 
+		
+		CreateInvItems (slf, ItWr_Astronomy_Mis,1);	//Für  Mission HygalsBringBook
 		
 		Constantino_ItemsGiven_Chapter_3 = TRUE;
 	};

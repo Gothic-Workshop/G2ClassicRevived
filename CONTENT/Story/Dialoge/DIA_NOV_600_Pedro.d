@@ -191,10 +191,10 @@ func int DIA_Addon_Pedro_Statuette_Condition ()
 {	
 	if (Npc_HasItems (other,ItMi_LostInnosStatue_Daron))
 	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
-	&& (Npc_KnowsInfo (other,DIA_Pedro_Rules))
+	//&& (Npc_KnowsInfo (other,DIA_Pedro_Rules))
 	&& (hero.guild != GIL_NOV)
 	&& (hero.guild != GIL_KDF)
-	&& (hero.guild != GIL_NONE)
+	//&& (hero.guild != GIL_NONE)
 	{
 		return TRUE;
 	};

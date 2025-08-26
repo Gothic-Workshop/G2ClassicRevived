@@ -14,8 +14,8 @@ INSTANCE KDF_510_Hyglas (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																	
-	
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_GOOD_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

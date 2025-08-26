@@ -18,7 +18,7 @@ instance BDT_1061_Wache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_ShortSword2);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_01);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

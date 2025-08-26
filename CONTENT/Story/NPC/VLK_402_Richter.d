@@ -14,7 +14,8 @@ instance VLK_402_Richter (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
-	// ------ Equippte Waffen ------																
+	// ------ Equippte Waffen ------
+	EquipItem (self,ITMW_REVIVED_2H_STAFF_JUDGE);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

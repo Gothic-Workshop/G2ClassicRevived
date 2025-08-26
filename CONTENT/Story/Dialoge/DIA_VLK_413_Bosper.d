@@ -875,7 +875,26 @@ func void DIA_Bosper_SellFur_Info ()
 			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ItAt_Addon_KeilerFur) * Value_KeilerFur) );
 			B_GiveInvItems(other, self, ItAt_Addon_KeilerFur, Npc_HasItems(other, ItAt_Addon_KeilerFur));
 		};
-		
+
+		if (Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG) > 0)
+		{
+			AI_Wait (self,3);
+			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG) * REV_VALUE_ORCDOGFUR) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_ORCDOG, Npc_HasItems(other, ITAT_REVIVED_FUR_ORCDOG));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF) > 0)
+		{
+			AI_Wait (self,3);
+			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF) * REV_VALUE_ICEWOLFFUR) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_ICEWOLF, Npc_HasItems(other, ITAT_REVIVED_FUR_ICEWOLF));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER) > 0)
+		{
+			AI_Wait (self,3);
+			B_GiveInvItems(self, other, itmi_gold, (Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER) * REV_VALUE_PANTHERFUR) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_FUR_PANTHER, Npc_HasItems(other, ITAT_REVIVED_FUR_PANTHER));
+		};
+
 		if (Npc_HasItems(other, ItAt_SheepFur) > 0)
 		{
 			AI_Output (self, other, "DIA_Bosper_SellFur_11_01"); //A sheep skin? You didn't go slaughter some farmer's sheep in the pasture, did you?

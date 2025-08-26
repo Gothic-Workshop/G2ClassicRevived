@@ -15,7 +15,7 @@ instance BDT_1016_Bandit_M (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------		
-	EquipItem			(self, ItMw_1h_VLK_Axe);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);
 	EquipItem			(self, ItRw_SLD_Bow);
 	
 	// ------ Inventory ------

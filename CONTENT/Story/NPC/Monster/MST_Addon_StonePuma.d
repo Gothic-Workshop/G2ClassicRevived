@@ -5,7 +5,7 @@
 PROTOTYPE Mst_Default_StonePuma(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Panther";
+	name							=	"Stone Panther";
 	guild							=	GIL_Gargoyle;
 	aivar[AIV_MM_REAL_ID]			= 	ID_Gargoyle;
 	level							=	20;
@@ -19,11 +19,11 @@ PROTOTYPE Mst_Default_StonePuma(C_Npc)
 	attribute	[ATR_MANA] 			=	0;
 
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	0;
-	protection	[PROT_EDGE]			=	0;
-	protection	[PROT_POINT]		=	0;
-	protection	[PROT_FIRE]			=	0;
-	protection	[PROT_FLY]			=	0;
+	protection	[PROT_BLUNT]		=	120;
+	protection	[PROT_EDGE]			=	120;
+	protection	[PROT_POINT]		=	80;
+	protection	[PROT_FIRE]			=	90;
+	protection	[PROT_FLY]			=	90;
 	protection	[PROT_MAGIC]		=	0;
 
 	//----- Damage Types ----
@@ -67,13 +67,33 @@ func void B_SetVisuals_StonePuma()
 	Mdl_SetVisualBody		(self,	"StonePuma_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_Panther()
+{
+	Mdl_SetVisual			(self,	"StonePuma.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"DaemonPuma_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //*******************
-//	StonePuma    	
+//	Instances    	
 //*******************
 
 INSTANCE StonePuma	(Mst_Default_StonePuma)
 {
 	B_SetVisuals_StonePuma();
+	Npc_SetToFistMode(self);
+};
+
+
+INSTANCE Panther	(Mst_Default_StonePuma)
+{
+	name							=	"Panther";
+	aivar[AIV_MM_REAL_ID]			= 	ID_PANTHER;
+
+	protection	[PROT_BLUNT]		=	100;
+	protection	[PROT_EDGE]			=	100;
+	
+	B_SetVisuals_Panther();
 	Npc_SetToFistMode(self);
 };

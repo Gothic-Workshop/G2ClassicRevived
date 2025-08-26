@@ -26,16 +26,15 @@ INSTANCE PC_Psionic_DI (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
-	// ------ Equippte Waffen ------																	
-	
+	// ------ Equippte Waffen ------
+	EquipItem (self,ITMW_REVIVED_1H_MACE_LESTER);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem (self,ItMw_Kriegshammer2);
 	
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_Lester, BodyTex_P, ITAR_REVIVED_NOV_M);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_Lester, BodyTex_P, ITAR_REVIVED_PSI_NOV);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 	

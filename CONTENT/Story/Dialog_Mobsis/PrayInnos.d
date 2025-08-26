@@ -466,3 +466,61 @@ FUNC VOID PC_PrayInnos_BlessSword_FINAL_Info()
 		};	
 	};
 }; 
+
+
+//*******************************************************
+//	Purify Sword
+//*******************************************************
+INSTANCE PC_PrayInnos_PurifySword (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 2;
+	condition		= PC_PrayInnos_PurifySword_Condition;
+	information		= PC_PrayInnos_PurifySword_Info;
+	permanent		= TRUE;
+	description		= PurifySword; 
+};
+
+FUNC INT PC_PrayInnos_PurifySword_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
+	&& (hero.guild == GIL_DJG)
+	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500) 
+	&& (DJG_KnowsAbout_Puryfing == TRUE)  
+	&& (Npc_HasItems (hero,ITMW_REVIVED_2H_INNOS_SWORD_01) >= 1)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_PrayInnos_PurifySword_Info()
+{
+	if (ShrineIsObsessed == TRUE)
+	{
+		SC_IsObsessed = TRUE;
+		PrintScreen	(PRINT_SCIsObsessed, -1,-1,FONT_Screen,2);
+		Snd_Play ("DEM_Die");
+	}
+	else
+	{	
+		if (Npc_HasItems (hero,ItPo_PotionOfDeath_01_Mis) >= 1)
+		|| (Npc_HasItems (hero,ItPo_PotionOfDeath_02_Mis) >= 1)
+		{
+			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
+			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
+			
+			if (Npc_HasItems (hero,ITMW_REVIVED_2H_INNOS_SWORD_01) >= 1)		//2H-Waffe
+			{	
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_INNOS_SWORD_01, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_2H_INNOS_SWORD_02, 1);
+				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
+				Snd_Play ("MFX_Heal_Cast" );
+				B_GivePlayerXP (XP_SwordBlessed2);
+			};
+		}
+		else
+		{
+			AI_PrintScreen	(PRINT_NoInnosTears, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
+		};	
+	};
+}; 

@@ -20,7 +20,7 @@ instance VLK_4301_Addon_Farim (Npc_Default)
 	
 	// ------ Equippte Waffen ------																
 	CreateInvItems (self, ItMi_Aquamarine, 1);	//Joly: für Mission							
-	EquipItem	(self, ItMw_1h_Bau_Mace); 
+	EquipItem	(self, ITMW_REVIVED_1H_HATCHET_01); 
 	
 	
 	// ------ Inventory ------

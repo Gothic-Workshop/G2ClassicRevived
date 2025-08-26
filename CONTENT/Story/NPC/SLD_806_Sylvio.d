@@ -10,13 +10,13 @@ instance SLD_806_Sylvio (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesToChapter (self, 5);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
 	EquipItem			(self, ItRw_Sld_Bow);	
 	
 	// ------ Inventory ------
@@ -40,8 +40,9 @@ instance SLD_806_Sylvio (Npc_Default)
 
 FUNC VOID Rtn_Start_806 ()
 {
-	TA_Sit_Chair				(08,00,22,00,"NW_BIGFARM_KITCHEN_BULLCO");
-    TA_Sit_Chair				(22,00,08,00,"NW_BIGFARM_KITCHEN_BULLCO");		
+	TA_Sit_Chair				(08,00,20,00,"NW_BIGFARM_KITCHEN_BULLCO");
+	TA_Pee						(20,00,20,15,"NW_BIGFARM_TREE_PISS");
+    TA_Sit_Chair				(20,15,08,00,"NW_BIGFARM_KITCHEN_BULLCO");		
 };
 
 

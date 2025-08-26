@@ -24,18 +24,18 @@ PROTOTYPE Mst_Default_Dragon_Ice(C_Npc)
 	protection	[PROT_BLUNT]		= 180;
 	protection	[PROT_EDGE]			= 180;
 	protection	[PROT_POINT]		= 180;	
-	protection	[PROT_FIRE]			= 180;
+	protection	[PROT_FIRE]			= 100;
 	protection	[PROT_FLY]			= 180;	
 	protection	[PROT_MAGIC]		= 180;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_FIRE|DAM_FLY;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;
-	damage		[DAM_INDEX_FIRE]	=	159;
+	damage		[DAM_INDEX_FIRE]	=	160;
 	damage		[DAM_INDEX_FLY]		=	1; //Opfer fliegt für Fire+Fly
-//	damage		[DAM_INDEX_MAGIC]	=	0;
+	damage		[DAM_INDEX_MAGIC]	=	100;
 
 	//----- Kampf-Taktik ----	
 	fight_tactic	=	FAI_DRAGON;
@@ -76,7 +76,7 @@ func void B_SetVisuals_Dragon_Ice()
 INSTANCE Dragon_Ice	(Mst_Default_Dragon_Ice)
 {
 	name	=	"Finkregh";
-	flags				   			= 	NPC_FLAG_IMMORTAL;
+	flags	= 	NPC_FLAG_IMMORTAL;
 	B_SetVisuals_Dragon_Ice();
 	Npc_SetToFistMode(self);
 };

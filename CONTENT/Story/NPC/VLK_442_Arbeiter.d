@@ -19,7 +19,7 @@ instance VLK_442_Arbeiter (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
- 	EquipItem	(self, ItMw_1h_VLK_Axe); 
+ 	EquipItem	(self, ITMW_REVIVED_1H_HATCHET_01); 
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

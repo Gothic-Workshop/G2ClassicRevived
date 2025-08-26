@@ -16,7 +16,7 @@ instance DJG_731_ToterDrachenjaeger (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2H_SLD_Axe);
+	EquipItem			(self, ITMW_REVIVED_2H_AXE_OLD_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

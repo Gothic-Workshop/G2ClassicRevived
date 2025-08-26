@@ -505,7 +505,7 @@ func void STARTUP_NEWCAMP ()
 	Wld_InsertNpc		(Draconian,"NC_PLACE08");
 	Wld_InsertNpc		(Draconian,"NC_ENTRANCE_WP");
 
-	Wld_InsertItem (ItWr_KDWLetter,"FP_ITEM_OW_01");
+	Wld_InsertItem (ItWr_KDWLetter,"FP_ITEM_OW_00");
 };
 
 	func void INIT_SUB_NEWCAMP ()
@@ -818,6 +818,91 @@ func void STARTUP_DEMONTOWER ()
 		INIT_SUB_DEMONTOWER();
 	};
 
+func void STARTUP_FORTRESS ()
+{
+	Wld_InsertNpc		(StoneGolem,"FORTRESS_ENTRANCE_003");
+
+	Wld_InsertNpc		(Draconian,"FORTRESS_ENTRANCE_006");
+};
+
+	func void INIT_SUB_FORTRESS ()
+	{
+	// ------ ROOMS ------
+		Wld_AssignRoomToGuild("BF1", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BF2", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BFK", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BFS", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BFM", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BFT", GIL_PUBLIC);
+		Wld_AssignRoomToGuild("BFT", GIL_PUBLIC);
+
+	// ------ TRIGGERS ------
+		//Wld_SendTrigger("EVT_OW_MOUNTAINRUIN_01");
+
+	// ------ OBJECTROUTINE ------
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_01", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_01", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_01", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_02", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_02", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_02", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_03", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_03", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_03", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_04", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_04", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_04", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_05", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_05", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_05", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_06", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_06", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_06", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_07", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_07", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_07", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_08", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_08", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_08", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_09", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_09", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_09", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_10", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_10", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_10", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_11", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_11", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_11", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_12", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_12", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_12", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_01", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_01", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_01", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_02", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_02", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_02", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_03", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_03", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_03", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_04", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_04", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_04", 0);
+		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_05", 1);
+		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_05", 1);
+		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_05", 0);
+	};
+
+	func void INIT_FORTRESS ()
+	{
+		B_InitMonsterAttitudes ();
+		B_InitGuildAttitudes();
+		B_InitNpcGlobals ();    
+		
+		INIT_SUB_FORTRESS();
+	};
+
+
 
 func void STARTUP_SURFACE ()
 {
@@ -1097,8 +1182,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Scavenger,"FP_ROAM_OW_SCAVENGER_01_06");
 	Wld_InsertNpc		(Scavenger,"FP_ROAM_OW_SCAVENGER_01_07");
 	
-	Wld_InsertNpc		(FireWaran,"SPAWN_OW_SCA_01_BADITS2");
-	Wld_InsertNpc		(FireWaran,"SPAWN_OW_SCA_01_BADITS2");
+	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCA_01_BADITS2");
+	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCA_01_BADITS2");
 	
 	Wld_InsertNpc		(FireWaran,"SPAWN_OW_SCA_01_BADITS7");
 	Wld_InsertNpc		(FireWaran,"SPAWN_OW_SCA_01_BADITS7");
@@ -1121,20 +1206,12 @@ func void STARTUP_SURFACE ()
 
 
 	// Troll Canyon
-	Wld_InsertNpc	(FireWaran,	"LOCATION_12_000");
-	Wld_InsertNpc	(FireWaran,	"LOCATION_12_000"); 
-	Wld_InsertNpc	(FireWaran,	"LOCATION_12_001");
+	Wld_InsertNpc	(FireWaran,	"SPAWNOW_PATH_190_MOVMENT");
+	Wld_InsertNpc	(FireWaran,	"SPAWNOW_PATH_190_MOVMENT"); 
+	Wld_InsertNpc	(Draconian,	"SPAWNOW_PATH_190_MOVMENT");
+	Wld_InsertNpc	(Draconian,	"SPAWNOW_PATH_190_MOVMENT");
 
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_004");
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_005");
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_006");
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_007");
-
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_WHEEL");
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_WHEEL");
-
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_012");
-	Wld_InsertNpc	(Draconian,	"LOCATION_12_012");
+	Wld_InsertNpc	(FireGolem,	"LOCATION_12_011");
 	
 	Wld_InsertItem	(ItMi_Zeitspalt_Addon,"OW_ITEM_FIREHORT_01");
 
@@ -1331,16 +1408,16 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Skeleton,"OW_PATH_07_01");
 	Wld_InsertNpc		(Skeleton,"OW_PATH_090");
 
-	Wld_InsertNpc		(Skeleton_Templar,"LOCATION_05_02_STONEHENGE");
-	Wld_InsertNpc		(Skeleton_Templar,"LOCATION_05_02_STONEHENGE2");
-	Wld_InsertNpc		(Skeleton_Templar,"LOCATION_05_02_STONEHENGE3");
-	Wld_InsertNpc		(SkeletonMage_Angar,"LOCATION_05_02_STONEHENGE4");
-	Wld_InsertNpc		(Skeleton_Templar,"LOCATION_05_02_STONEHENGE5");
+	Wld_InsertNpc		(Zombie01,"LOCATION_05_02_STONEHENGE");
+	Wld_InsertNpc		(Zombie02,"LOCATION_05_02_STONEHENGE2");
+	Wld_InsertNpc		(Zombie04,"LOCATION_05_02_STONEHENGE3");
+	Wld_InsertNpc		(Shadowbeast_Skeleton_Angar,"LOCATION_05_02_STONEHENGE4");
+	Wld_InsertNpc		(Zombie03,"LOCATION_05_02_STONEHENGE5");
 
-	Wld_InsertNpc		(SkeletonMage,"OW_PATH_033_TO_CAVE5_000");
-	Wld_InsertNpc		(Shadowbeast_Skeleton_Angar,"OW_PATH_033_TO_CAVE5");
+	Wld_InsertNpc		(Skeleton_Lord,"OW_PATH_033_TO_CAVE5_000");
+	Wld_InsertNpc		(Bloodhound,"OW_PATH_033_TO_CAVE5");
 
-	Wld_InsertNpc		(SkeletonMage,"OW_PATH_091");
+	Wld_InsertNpc		(Skeleton_Lord,"OW_PATH_091");
 
 
 	// Stonehenge area
@@ -1489,7 +1566,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_BLACKWOLF07_SPAWN01");
 
-	Wld_InsertItem 		(ItWr_GilbertLetter,"FP_ITEM_OW_02");
+	Wld_InsertItem 		(ItWr_GilbertLetter,"FP_OW_ITEM_14");
 
 
 	// Orc Territory (Orc City Outside)
@@ -1745,6 +1822,17 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE2_02_05");
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE2_02_05");
 
+	Wld_InsertNpc		(VLK_4148_Gestath,"PATH_TO_PLATEAU03_001");
+
+	Wld_InsertNpc		(Shadowbeast,"PATH_TO_PLATEAU04_RIGHT");
+
+	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND01");
+	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND02_CAVE");
+	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND04");
+	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND05");
+	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND07_001");
+
+
 
 	// Old Castle
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_5");	
@@ -1774,60 +1862,6 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_07");	
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_09");
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_22");
-
-
-	// Stone Fortress
-	Wld_InsertNpc		(VLK_4148_Gestath,"PATH_TO_PLATEAU03_001");
-
-	Wld_InsertNpc		(Shadowbeast,"PATH_TO_PLATEAU04_RIGHT");
-
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND01");
-
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND02_CAVE");
-
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND04");
-
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND05");
-
-	Wld_InsertNpc		(StoneGolem,"PATH_TO_PLATEAU04_BRIDGE2");
-
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND07_001");
-
-	Wld_InsertNpc		(StoneGolem,"LOCATION_19_03_PATH_RUIN7");
-
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_PATH_RUIN9");
-
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_PEMTAGRAM_ENTRANCE");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_PENTAGRAMM");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_PEMTAGRAM_MOVEMENT");
-
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_ROOM6");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_ROOM6_BARRELCHAMBER");
-
-	Wld_InsertNpc		(Skeleton_Lord,"LOCATION_19_03_ROOM6_BARRELCHAMBER2");
-	Wld_InsertNpc		(DemonLord,"LOCATION_19_03_ROOM6_BARRELCHAMBER2_000");
-	Wld_InsertNpc		(DemonLord,"LOCATION_19_03_ROOM6_BARRELCHAMBER2_001");
-
-	Wld_InsertNpc		(Shadowbeast_Addon_Fire,"LOCATION_19_03_ROOM3");
-
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_HARPYE1");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_HARPYE2");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_ETAGE6");
-
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_ETAGE7");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_HARPYE4");
-	Wld_InsertNpc		(Draconian,"LOCATION_19_03_SECOND_HARPYE3");
-
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_SECOND_ETAGE_BALCON2");
-
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY2");
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY2");
-
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY3");
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY3");
-
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY4");
-	Wld_InsertNpc		(Harpie,"LOCATION_19_03_BALCONY4");
 
 
 	// Orc Graveyard (Outside)
@@ -1975,6 +2009,35 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
 	Wld_InsertNpc		(DragonSnapper,"OW_PATH_WOLF05_SPAWN02");
+
+	// Orc Tents
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_000");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_000");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_000");
+	
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_001");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_001");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_001");
+	
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_002");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_002");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_002");
+
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_003");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_003");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_003");
+	
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_004");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_004");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_004");
+	
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_005");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_005");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_005");
+	
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_006");
+	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_006");
+	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_006");
 };
 
 	func void INIT_SUB_SURFACE ()
@@ -2081,6 +2144,7 @@ FUNC VOID INIT_OLDWORLD ()
 		INIT_SUB_PSICAMP();
 		INIT_SUB_FREEMINECAMP();
 		INIT_SUB_DEMONTOWER();
+		INIT_SUB_FORTRESS();
 		INIT_SUB_SURFACE();	
 
 	// ------ INIT NPC ------
@@ -2105,6 +2169,7 @@ FUNC VOID STARTUP_OLDWORLD ()
 	STARTUP_PSICAMP();
 	STARTUP_FREEMINECAMP();
 	STARTUP_DEMONTOWER();
+	STARTUP_FORTRESS();
 	STARTUP_SURFACE();
 
 	//Wld_SetTime	(00,00);//Joly:nachtstart wegen video
@@ -2741,12 +2806,16 @@ func void INIT_NewWorld_Part_Farm_01()
 // ------ Xardas -------
 func void STARTUP_NewWorld_Part_Xardas_01()
 {
-	Wld_InsertItem (ItBE_Addon_STR_5, "FP_ITEM_XARDAS_03");
+	//Wld_InsertItem (ItBE_Addon_STR_5, "FP_ITEM_XARDAS_03");
+
+	Wld_InsertItem (ITWR_REVIVED_ALMANAC, "FP_ITEM_XARDAS_STPLATE_01");
 
 	Wld_InsertItem (ITMI_REVIVED_STUFF_IDOL_02, "FP_ITEM_XARDAS_02");
-	Wld_InsertItem (ITFO_REVIVED_BREAD, "FP_ITEM_XARDAS_04");
-	Wld_InsertItem (ITPO_REVIVED_BOOST_DEX_01, "FP_ITEM_XARDAS_05");
+	Wld_InsertItem (ITFO_REVIVED_BREAD_01, "FP_ITEM_XARDAS_04");
+	Wld_InsertItem (ITPO_REVIVED_BOOST_STR_01, "FP_ITEM_XARDAS_05");
 	Wld_InsertItem (ITFO_REVIVED_PLANTSOUP, "FP_ITEM_XARDAS_06");
+
+	Wld_InsertItem (ITMI_REVIVED_STUFF_IDOL_01, "FP_ITEM_XARDAS_07");
 
 	////////////////////////////////////////////////////////////////////////////
 	//----------------------- Spielstart Gothic2------------------------------//
@@ -2756,7 +2825,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc		(NONE_100_Xardas, 	"NW_XARDAS_START");
 	Wld_InsertNpc		(PC_Psionic, 		"NW_XARDAS_TOWER_PATH_01");
 		
-	Wld_InsertItem 		(Itke_Xardas,		"FP_ITEM_XARDAS_07");
+	Wld_InsertItem 		(Itke_Xardas,		"FP_SPAWN_X_GUERTEL");
 
 	Wld_InsertNpc		(BDT_1013_Bandit_L, "NW_XARDAS_STAIRS_01");
 	Wld_InsertNpc		(BDT_1014_Bandit_L, "NW_XARDAS_BANDITS_LEFT");
@@ -4341,6 +4410,18 @@ FUNC VOID INIT_NewWorld()
 
 
 
+
+
+
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+		// *************
+		// ABANDONED MINE
+		// *************
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+
+
 func void STARTUP_AbandonedMine()
 {
 	PlayerPassedAbandonedMine = TRUE;
@@ -4399,4 +4480,104 @@ func void INIT_AbandonedMine()
 {
 	INIT_SUB_AbandonedMine();
 	B_Enter_AbandonedMine();
+};
+
+
+
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+		// *************
+		// FREE MINE
+		// *************
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+FUNC VOID STARTUP_FREEMINE ()	
+{
+	//-------- globale Story-Variable --------
+	EnteredFreeMine = TRUE;
+
+	//--------------------Minecrawler-------------------------
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_01");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_04");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_05");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_06");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_09");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_14");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_17");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_29");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_28");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_32");//
+	Wld_InsertNpc				(MinecrawlerWarrior		, "FP_ROAM_CRAWLER_34");//
+};
+
+FUNC VOID INIT_FREEMINE ()	
+{
+	//-------------------Fackeln-----------------------------
+	Wld_SetMobRoutine			(00,00, "FIREPLACE", 1);
+
+	//-------- Attitüden initialisieren --------
+    B_InitMonsterAttitudes ();
+	B_InitGuildAttitudes();
+};
+
+
+
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+		// *************
+		// ORC GRAVEYARD
+		// *************
+	////////////////////////////////////////////////////////////////////////////
+	////////////////////////////////////////////////////////////////////////////
+FUNC VOID STARTUP_ORCGRAVEYARD ()
+{
+	//-------- globale Story-Variable --------
+	EnteredOrcGraveyard = TRUE;
+
+	//-------- 1. Höhle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_006");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_015");
+	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_016");
+
+	//-------- 2. Höhle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019B");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_019D");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_020B");
+	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_020");
+	
+	//-------- 3. Höhle --------
+	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
+	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
+	Wld_InsertNpc		(Skeleton_Templar,		"GRYD_025");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_048");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_048");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_043");
+
+	//-------- 1. Nebenstollen --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_031");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_032");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_037");
+	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_039");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_040");
+	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_042");
+
+	//-------- 2. Nebenstollen --------
+	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_047");
+	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_047");
+
+	//-------- Große Halle --------
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_061");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_062");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_058");
+	Wld_InsertNpc		(OrcWarrior_Roam,		"GRYD_068");
+	Wld_InsertNpc		(OrcElite_Roam,			"GRYD_055");
+};
+
+FUNC VOID INIT_ORCGRAVEYARD ()
+{
+	Wld_SetMobRoutine 	(00,00, "FIREPLACE", 1);
+
+	//-------- Attitüden initialisieren --------
+    B_InitMonsterAttitudes ();
+	B_InitGuildAttitudes();
 };

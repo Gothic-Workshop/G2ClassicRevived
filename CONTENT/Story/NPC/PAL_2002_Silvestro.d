@@ -21,7 +21,7 @@ instance PAL_2002_Silvestro  (Npc_Default)
 	fight_tactic = FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------
-	EquipItem	(self, ItMw_1h_Pal_Sword); 
+	EquipItem	(self, ItMw_2h_Pal_Sword); 
 
 
 	// ------ Inventory ------

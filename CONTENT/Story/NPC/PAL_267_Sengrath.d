@@ -15,8 +15,8 @@ instance PAL_267_Sengrath (Npc_Default)
 	fight_tactic = FAI_NAILED;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Pal_Sword);
-	EquipItem			(self, ItRw_Mil_Crossbow);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_PALADIN_02); //ok but what about it when he's dead
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_SENGRATH);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -45,6 +45,6 @@ FUNC VOID Rtn_Start_267 ()
 
 FUNC VOID Rtn_ORCBARRIER_267 ()
 {	
-	TA_Sleep		(08,00,23,00,"OW_ORCBARRIER_12");
-    TA_Sleep		(23,00,08,00,"OW_ORCBARRIER_12");
+	TA_Sleep		(08,00,23,00,"PATH_OC_FOGTOWER03");
+    TA_Sleep		(23,00,08,00,"PATH_OC_FOGTOWER03");
 };

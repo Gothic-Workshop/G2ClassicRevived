@@ -22,7 +22,11 @@ FUNC INT DIA_Dragon_Fire_Exit_Condition()
 FUNC VOID DIA_Dragon_Fire_Exit_Info()
 {	
 	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
-	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);	 
+	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);
+
+	Wld_PlayEffect("spellFX_INCOVATION_RED",  self, self, 0, 0, 0, FALSE );
+	Wld_PlayEffect("spellFX_FireRain",  self, self, 0, 0, 0, FALSE );
+	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
 	AI_Output			(self, other, "DIA_Dragon_Fire_Exit_20_00"); //The Eye has lost its power, and you will not survive the next day.
 

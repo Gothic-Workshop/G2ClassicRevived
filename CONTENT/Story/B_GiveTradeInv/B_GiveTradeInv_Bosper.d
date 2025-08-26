@@ -14,11 +14,11 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 30); 
 		
 		// ------ Waffen ------
-		CreateInvItems (slf, ItRw_Bow_L_01, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_02, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_L_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_03, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_SMALL_05, 1); 
 			
 		// ------ Ringe / Amulette -------
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
@@ -36,10 +36,11 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Bolt, 50); 
 		CreateInvItems (slf, ItBe_Addon_DEX_5, 1); 
 		
-		CreateInvItems (slf, ItRw_Bow_M_01, 1); 
-		CreateInvItems (slf, ItRw_Bow_M_02, 1); 
-		CreateInvItems (slf, ItRw_Bow_M_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_M_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_03, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_05, 1); 
 		
 		Bosper_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -50,7 +51,12 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		CreateInvItems (slf, ItRw_Arrow, 100); 
 		CreateInvItems (slf, ItRw_Bolt, 100); 
-		CreateInvItems (slf,ItBe_Addon_DEX_10, 1);
+		CreateInvItems (slf, ItBe_Addon_DEX_10, 1);
+
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_06, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_07, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_08, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_LONG_09, 1); 
 		Bosper_ItemsGiven_Chapter_3 = TRUE;
 	};
 
@@ -61,10 +67,11 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 180); 
 		CreateInvItems (slf, ItRw_Bolt, 160); 
 		
-		CreateInvItems (slf, ItRw_Bow_H_01, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_02, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_03, 1); 
-		CreateInvItems (slf, ItRw_Bow_H_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_WAR_01, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_WAR_02, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_WAR_03, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_WAR_04, 1); 
+		CreateInvItems (slf, ITRW_REVIVED_BOW_WAR_05, 1); 
 		
 		Bosper_ItemsGiven_Chapter_4 = TRUE;
 	};

@@ -19,8 +19,8 @@ instance VLK_480_Fellan (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem (self, ItMw_ShortSword2);
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_HATCHET_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

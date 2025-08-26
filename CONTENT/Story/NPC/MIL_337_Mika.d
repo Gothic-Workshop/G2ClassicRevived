@@ -16,7 +16,7 @@ instance Mil_337_Mika (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_01, 4);	//Joly: damit er frisch bei Farm2 ankommt.								
 	
 	// ------ Inventory ------

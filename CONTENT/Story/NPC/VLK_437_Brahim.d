@@ -18,8 +18,9 @@ instance VLK_437_Brahim (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																
-	
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_WALKINGSTICK_01);	
+
 	// ------ Inventory ------
 	// Händler
 

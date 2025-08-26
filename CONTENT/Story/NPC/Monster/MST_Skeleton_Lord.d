@@ -67,27 +67,6 @@ func void B_SetVisuals_Skeleton_Lord()
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, 0, ITAR_PAL_SKEL);
 };
-func void B_SetVisuals_Skeleton_Templar()
-{
-	Mdl_SetVisual		(self,	"HumanS.mds");
-	//Mdl_ApplyOverlayMds 	(self,	"humans_skeleton.mds"); //FIXME s.Skeleton.
-	Mdl_ApplyOverlayMds 	(self,	"humans_1hST1.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_2hST2.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_BowT1.mds");
-	Mdl_ApplyOverlayMds 	(self,	"humans_CBowT1.mds");
-	//							Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	B_SetNpcVisual 		(self, MALE, "Ske_Head", 0, BodyTex_Sick, ITAR_REVIVED_TPL_SKE);
-};
-
-
-//**************************************************************
-//	Schattentemplar
-//**************************************************************
-
-INSTANCE Skeleton_Templar	(Mst_Skeleton_Lord)
-{
-	B_SetVisuals_Skeleton_Templar ();
-};
 
 
 //**************************************************************

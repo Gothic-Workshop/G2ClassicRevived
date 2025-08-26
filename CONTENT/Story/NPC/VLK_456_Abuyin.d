@@ -16,7 +16,7 @@ instance VLK_456_Abuyin (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Dagger);
+	EquipItem	(self, ITMW_REVIVED_2H_STAFF_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

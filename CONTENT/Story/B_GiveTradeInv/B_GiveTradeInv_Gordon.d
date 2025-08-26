@@ -13,15 +13,15 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Pan, 50);
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
-		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_APPLE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLACK, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLUE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_RED, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_GREEN, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_PURPLE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_YELLOW, 20);
-		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
-		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_BREAD_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_CHEESE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_RICE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_PLANTSOUP, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BUGSOUP, 20);
@@ -40,15 +40,15 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Pan, 50);
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
-		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_APPLE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLACK, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLUE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_RED, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_GREEN, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_PURPLE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_YELLOW, 20);
-		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
-		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_BREAD_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_CHEESE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_RICE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_PLANTSOUP, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BUGSOUP, 20);
@@ -67,15 +67,15 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Pan, 50);
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
-		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_APPLE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLACK, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLUE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_RED, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_GREEN, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_PURPLE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_YELLOW, 20);
-		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
-		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_BREAD_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_CHEESE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_RICE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_PLANTSOUP, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BUGSOUP, 20);
@@ -94,15 +94,15 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Pan, 50);
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
-		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_APPLE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLACK, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLUE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_RED, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_GREEN, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_PURPLE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_YELLOW, 20);
-		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
-		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_BREAD_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_CHEESE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_RICE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_PLANTSOUP, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BUGSOUP, 20);
@@ -121,15 +121,15 @@ FUNC VOID B_GiveTradeInv_Revived_Gordon (var C_NPC slf)
 		CreateInvItems	(slf, ItMi_Pan, 50);
 
 		CreateInvItems(slf, ITFO_REVIVED_MEATBUG, 20);
-		CreateInvItems(slf, ITFO_REVIVED_APPLE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_APPLE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLACK, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_BLUE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_RED, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_GREEN, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_PURPLE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_GRAPES_YELLOW, 20);
-		CreateInvItems(slf, ITFO_REVIVED_BREAD, 20);
-		CreateInvItems(slf, ITFO_REVIVED_CHEESE, 20);
+		CreateInvItems(slf, ITFO_REVIVED_BREAD_01, 20);
+		CreateInvItems(slf, ITFO_REVIVED_CHEESE_01, 20);
 		CreateInvItems(slf, ITFO_REVIVED_RICE, 20);
 		CreateInvItems(slf, ITFO_REVIVED_PLANTSOUP, 20);
 		CreateInvItems(slf, ITFO_REVIVED_BUGSOUP, 20);

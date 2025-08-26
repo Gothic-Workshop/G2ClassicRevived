@@ -1362,15 +1362,6 @@ INSTANCE ITWR_REVIVED_RECIPES_01 (C_ITEM)
 	scemeName				=	"MAP";
 	description			= "Recipes";
 	TEXT[0]				= "Volume 1";
-	////COUNT[0]			= ;
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
-	//TEXT[2]				= "";
-	//COUNT[2]			= ;
-	//TEXT[3] 			= "";
-	//COUNT[3]			= ;
-	//TEXT[4]				= ""; 
-	////COUNT[4]			= ;
 	TEXT[5]				= NAME_Value;
 	COUNT[5]			= value;
 	on_state[0]				=	UseRezepturen;
@@ -1421,15 +1412,6 @@ INSTANCE ITWR_REVIVED_RECIPES_02 (C_ITEM)
 	scemeName				=	"MAP";
 	description			= "Recipes";
 	TEXT[0]				= "Volume 2";
-	////COUNT[0]			= ;
-	//TEXT[1]				= "";
-	////COUNT[1]			= ;
-	//TEXT[2]				= "";
-	//COUNT[2]			= ;
-	//TEXT[3] 			= "";
-	//COUNT[3]			= ;
-	//TEXT[4]				= ""; 
-	////COUNT[4]			= ;
 	TEXT[5]				= NAME_Value;
 	COUNT[5]			= value;
 	on_state[0]				=	UseRezepturen2;
@@ -1547,9 +1529,9 @@ func VOID Use_KalomsRecipe()
 //			MAPS
 //****************************************************************************
 
-instance ITWR_REVIVED_MAP_VALLEY (C_Item)
+INSTANCE ITWR_REVIVED_MAP_VALLEY (C_Item)
 {
-	name 		= "Map of the Valley of Mines";
+	name 		= "Map of the Valley of Mines (supplemented)";
 
 	mainflag 	= ITEM_KAT_DOCS;
 	flags 		= ITEM_MISSION|ITEM_MULTI;
@@ -1563,8 +1545,8 @@ instance ITWR_REVIVED_MAP_VALLEY (C_Item)
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
+	TEXT[0]		= "Ur-Shak, the Orc shaman, has sketched in";
+	TEXT[1]		= "the Orc territory!";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 };
@@ -1579,13 +1561,50 @@ instance ITWR_REVIVED_MAP_VALLEY (C_Item)
 		var int Document;
 		Document =	Doc_CreateMap		();
 					Doc_SetPages		(Document, 1);
-					Doc_SetPage 		(Document, 0, "MAP_VALLEYOFMINES.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetPage 		(Document, 0, "REV_MAP_VALLEYOFMINES.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetLevel		(Document, "VALLEYOFMINES\OLDWORLD.zen");
+					Doc_SetLevelCoords	(Document, -75642, 55012, 74528, -54472);
+					Doc_Show			(Document);
+	};
+INSTANCE ITWR_REVIVED_MAP_VALLEY_NOORC (C_Item)
+{
+	name 		= "Map of the Valley of Mines";
+
+	mainflag 	= ITEM_KAT_DOCS;
+	flags 		= ITEM_MISSION|ITEM_MULTI;
+
+	value 		= 350;
+
+	visual 		= "ItWr_Map_01.3DS";
+	material 	= MAT_LEATHER;
+
+	scemeName	= "MAP";
+	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_NOORC;
+
+	description	= name;
+	TEXT[0]		= "Unfortunately, a big territory in the";
+	TEXT[1]		= "southwest is missing.";
+	TEXT[5]		= NAME_Value;
+	COUNT[5]	= value;
+};
+
+	func void Use_ITWR_REVIVED_MAP_VALLEY_NOORC()
+	{
+		if (Npc_IsPlayer(self))
+		{
+			B_SetPlayerMap(ITWR_REVIVED_MAP_VALLEY_NOORC);
+		};
+
+		var int Document;
+		Document =	Doc_CreateMap		();
+					Doc_SetPages		(Document, 1);
+					Doc_SetPage 		(Document, 0, "REV_MAP_VALLEYOFMINES_NOORC.tga", TRUE);  // TRUE = scale to fullscreen
 					Doc_SetLevel		(Document, "VALLEYOFMINES\OLDWORLD.zen");
 					Doc_SetLevelCoords	(Document, -75642, 55012, 74528, -54472);
 					Doc_Show			(Document);
 	};
 
-instance ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
+INSTANCE ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 {
 	name 		= "Garond's Mine Map";
 
@@ -1601,7 +1620,7 @@ instance ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_GAROND;
 
 	description	= name;
-	TEXT[0]		= "";
+	TEXT[0]		= "It's only part of the full map";
 	TEXT[1]		= "";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
@@ -1617,13 +1636,13 @@ instance ITWR_REVIVED_MAP_VALLEY_GAROND (C_Item)
 		var int Document;
 		Document =	Doc_CreateMap		();
 					Doc_SetPages		(Document, 1);
-					Doc_SetPage 		(Document, 0, "MAP_VALLEYOFMINES_GAROND.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetPage 		(Document, 0, "REV_MAP_VALLEYOFMINES_GAROND.tga", TRUE);  // TRUE = scale to fullscreen
 					Doc_SetLevel		(Document, "VALLEYOFMINES\OLDWORLD.zen");
 					Doc_SetLevelCoords	(Document, -75642, 55012, 74528, -54472);
 					Doc_Show			(Document);
 	};
 
-instance ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
+INSTANCE ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 {
 	name 		= "Dragon locations in the Valley";
 
@@ -1639,8 +1658,8 @@ instance ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 	on_state[0]	= Use_ITWR_REVIVED_MAP_VALLEY_DRAGONS;
 
 	description	= name;
-	TEXT[0]		= "";
-	TEXT[1]		= "";
+	TEXT[0]		= "The placement of the orc symbols";
+	TEXT[1]		= "are oddly familiar";
 	TEXT[5]		= NAME_Value;
 	COUNT[5]	= value;
 };
@@ -1655,13 +1674,13 @@ instance ITWR_REVIVED_MAP_VALLEY_DRAGONS (C_Item)
 		var int Document;
 		Document =	Doc_CreateMap		();
 					Doc_SetPages		(Document, 1);
-					Doc_SetPage 		(Document, 0, "MAP_VALLEYOFMINES_DRAGONS.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetPage 		(Document, 0, "REV_MAP_VALLEYOFMINES_DRAGONS.tga", TRUE);  // TRUE = scale to fullscreen
 					Doc_SetLevel		(Document, "VALLEYOFMINES\OLDWORLD.zen");
 					Doc_SetLevelCoords	(Document, -75642, 55012, 74528, -54472);
 					Doc_Show			(Document);
 	};
 
-instance ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
+INSTANCE ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
 {
 	name 		= "Caves of the Valley of Mines";
 
@@ -1693,7 +1712,7 @@ instance ITWR_REVIVED_MAP_VALLEY_CAVES (C_Item)
 		var int Document;
 		Document =	Doc_CreateMap		();
 					Doc_SetPages		(Document, 1);
-					Doc_SetPage 		(Document, 0, "MAP_VALLEYOFMINES_CAVES.tga", TRUE);  // TRUE = scale to fullscreen
+					Doc_SetPage 		(Document, 0, "REV_MAP_VALLEYOFMINES_CAVES.tga", TRUE);  // TRUE = scale to fullscreen
 					Doc_SetLevel		(Document, "VALLEYOFMINES\OLDWORLD.zen");
 					Doc_SetLevelCoords	(Document, -75642, 55012, 74528, -54472);
 					Doc_Show			(Document);

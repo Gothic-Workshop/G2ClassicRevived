@@ -16,7 +16,7 @@ instance Mil_306_Tuerwache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	
 	// ------ Inventory ------
@@ -40,7 +40,7 @@ instance Mil_306_Tuerwache (Npc_Default)
 
 FUNC VOID Rtn_Start_306 ()
 {	
-	TA_Stand_Guarding	(08,00,18,45,"NW_CITY_JUDGE_GUARD_01");
-	TA_Stand_Guarding	(18,45,22,00,"NW_CITY_UPTOWN_JUDGE_01");
-    TA_Stand_Guarding	(22,00,08,00,"NW_CITY_JUDGE_GUARD_01");
+	TA_Stand_Guarding	(08,00,18,45,"NW_CITY_UPTOWN_JUDGE_05");
+	TA_Stand_Guarding	(18,45,22,00,"NW_CITY_RICHTER_COOK");
+    TA_Stand_Guarding	(22,00,08,00,"NW_CITY_RICHTER");
 };

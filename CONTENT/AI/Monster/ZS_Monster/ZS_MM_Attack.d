@@ -82,7 +82,7 @@ func int ZS_MM_Attack_Loop ()
 	// ------ HACK: Orks nicht in die Burg ------
 	if (CurrentLevel == OLDWORLD_ZEN) //Joly: verbessert Performance in anderen Leveln
 	{
-		if (Npc_GetDistToWP (self, "OC_ORCTARAN_FREE") <= 500) 
+		if (Npc_GetDistToWP (hero, "OC_ORCTARAN_FREE") <= 500) 
 		{
 			Npc_ClearAIQueue(self);
 			AI_StandUp		(self);

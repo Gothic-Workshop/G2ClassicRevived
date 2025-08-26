@@ -27,8 +27,9 @@ INSTANCE PC_Thief_DI (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_1H_SLD_Sword);  
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_04);  
+	EquipItem (self, ITRW_REVIVED_BOW_DIEGO); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

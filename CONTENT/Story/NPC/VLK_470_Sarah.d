@@ -16,7 +16,7 @@ instance VLK_470_Sarah (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_1h_Vlk_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_07);
 		
 	// ------ Inventory ------
 	// Händler

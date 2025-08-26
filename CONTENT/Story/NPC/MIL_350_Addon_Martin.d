@@ -18,7 +18,7 @@ instance Mil_350_Addon_Martin (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
 	
 	
 	// ------ Inventory ------

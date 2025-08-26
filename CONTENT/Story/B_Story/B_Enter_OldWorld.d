@@ -146,9 +146,9 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(Snapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
 		
 		//Xardas alter DT
-		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E3_06");
-		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E3_05");
-		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E3_07");
+		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E2_09");
+		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E2_08");
+		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E2_07");
 		Wld_InsertNpc	(DMT_DementorAmbient,"DT_E1_05");
 		Wld_InsertNpc	(DMT_DementorAmbient,"DT");
 		Wld_InsertNpc	(DMT_DementorAmbient,"OW_PATH_133");
@@ -180,13 +180,16 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		
 		// ------ Immortal-Flags löschen ------
 		if ((Npc_IsDead(Engrom)) == FALSE)
-			{
+		{
 			B_StartOtherRoutine (Engrom,"Obsessed");
 			CreateInvItems 	(Engrom, ItAt_TalbinsLurkerSkin, 1);
-			if (hero.guild == GIL_KDF){CreateInvItems (Engrom,ITWR_DementorObsessionBook_MIS,1);	}
-			else {B_KillNpc  (Engrom);	};
+				if (hero.guild == GIL_KDF){
+					CreateInvItems (Engrom,ITWR_DementorObsessionBook_MIS,1);	
+				} else {
+					B_KillNpc  (Engrom);	
+				};
 			EngromIsGone = TRUE;
-			};
+		};
 				
 				
 		// ------ Tote NSCs ------ 
@@ -202,11 +205,10 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		if ((Npc_IsDead(Sengrath))== FALSE)		 //Joly: Sengrath Missing in Action auf der Suche nach seiner verlorenen Armbrust.
 			{
 				B_StartOtherRoutine	(Sengrath,"ORCBARRIER");
-				if (Npc_HasItems (Sengrath,ItRw_Mil_Crossbow))
+				if (!(Npc_HasItems (Sengrath,ITRW_REVIVED_CROSSBOW_SENGRATH)))
 				{
-					Npc_RemoveInvItem	(Sengrath, ItRw_Mil_Crossbow );
+	 				CreateInvItems 	(Sengrath, ITRW_REVIVED_CROSSBOW_SENGRATH, 1);	
 	 			};
-	 			CreateInvItems 	(Sengrath, ItRw_SengrathsArmbrust_MIS, 1);	
 	 			Sengrath_Missing = TRUE;								
 				B_KillNpc     	(Sengrath);
 			};
@@ -494,7 +496,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Minecrawlerwarrior,"OW_MINE3_LEFT_05");
 		Wld_InsertNpc	(DragonSnapper,"OW_MINE3_LEFT_07");
 		
-		Wld_InsertItem 	(ItMi_GoldChalice,"FP_ROAM_MC_04");
+		Wld_InsertItem 	(ItMi_GoldChalice,"FP_OW_ITEM_10");
 	
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_117");
 
@@ -524,7 +526,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_SCAVENGER13_SPAWN01");
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_SCAVENGER13_SPAWN01");
 
-		Wld_InsertItem 	(ItRw_Bow_H_02,"FP_ROAM_ITEM_SPECIAL_01");
+		Wld_InsertItem 	(ItRw_Bow_H_02,"FP_OW_ITEM_11");
 		
 		Wld_InsertNpc	(DragonSnapper,"OW_PATH_07_19");
 		
@@ -567,12 +569,19 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Draconian,"PLATEAU_ROUND02_CAVE_MOVE");
 		Wld_InsertNpc	(Draconian,"PLATEAU_ROUND02_CAVE_MOVE");
 
-		Wld_InsertItem 	(ItMi_GoldChest,"FP_ROAM_ITEM_SPECIAL_03");
+		Wld_InsertItem 	(ItMi_GoldChest,"FP_OW_ITEM_12");
 		
 		Wld_InsertNpc	(Draconian,"LOCATION_18_OUT");
 		Wld_InsertNpc	(Draconian,"LOCATION_18_OUT");
 		Wld_InsertNpc	(Draconian,"FP_ROAM_OW_ROCK_DRACONIAN_07");
-		Wld_InsertItem 	(ItSc_Firestorm,"FP_ROAM_OW_ROCK_DRACONIAN_07_2");
+		Wld_InsertItem 	(ItSc_Firestorm,"FP_OW_ITEM_13");
+
+		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_PEMTAGRAM_ENTRANCE");
+		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_PENTAGRAMM");
+		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM3");
+		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM2");
+		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM4");
+		Wld_InsertNpc	(SkeletonMage_Angar,"LOCATION_19_03_ROOM6");
 	
 		//Orkbarriere
 		
@@ -616,7 +625,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 			else if (Talbin_FollowsThroughPass == LOG_SUCCESS)
 				{
 					B_RemoveNpc 	(VLK_4130_Talbin);
-					Talbin_FollowsThroughPass = LOG_FAILED;	//Joly: absoluter Schluß
+					//Talbin_FollowsThroughPass = LOG_FAILED;	//Joly: absoluter Schluß
 				};
 };
 

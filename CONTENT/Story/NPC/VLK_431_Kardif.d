@@ -19,7 +19,7 @@ instance VLK_431_Kardif (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_Bau_Mace); 
+	EquipItem	(self, ITMW_REVIVED_1H_CLUB_01); 
 	
 	
 	// ------ Inventory ------

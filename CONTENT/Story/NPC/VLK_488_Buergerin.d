@@ -22,7 +22,7 @@ instance VLK_488_Buergerin (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem (self, ItMw_1h_Vlk_Dagger);
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 		
 	// ------ visuals ------						FaceBabe_N_HairAndCloth																
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_BabeHair", FaceBabe_N_HairAndCloth, BodyTex_N, ITAR_BauBabe_L);	

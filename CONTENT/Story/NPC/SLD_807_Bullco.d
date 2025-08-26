@@ -16,13 +16,13 @@ instance SLD_807_Bullco (Npc_Default)
 	aivar[AIV_IGNORE_Theft]			= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesToChapter (self, 3);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Axe);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_02);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -50,19 +50,19 @@ FUNC VOID Rtn_Start_807 ()
 
 func void Rtn_Pee_807 ()
 {
-	TA_Pee			(08,00,08,15,"NW_BIGFARM_TREE");
+	TA_Pee			(08,00,08,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(08,15,10,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(10,00,10,15,"NW_BIGFARM_TREE");
+	TA_Pee			(10,00,10,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(10,15,12,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(12,00,12,15,"NW_BIGFARM_TREE");
+	TA_Pee			(12,00,12,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(12,15,14,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(14,00,14,15,"NW_BIGFARM_TREE");
+	TA_Pee			(14,00,14,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(14,15,16,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(16,00,16,15,"NW_BIGFARM_TREE");
+	TA_Pee			(16,00,16,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(16,15,18,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(18,00,18,15,"NW_BIGFARM_TREE");
+	TA_Pee			(18,00,18,15,"NW_BIGFARM_TREE_PISS");
 	TA_Sit_Chair	(18,15,20,00,"NW_BIGFARM_KITCHEN_SYLVIO");
-	TA_Pee			(20,00,20,15,"NW_BIGFARM_TREE");
+	TA_Stand_Guarding			(20,00,20,15,"NW_BIGFARM_TREE_GUARD");
 	TA_Sit_Chair	(20,15,08,00,"NW_BIGFARM_KITCHEN_SYLVIO");
 };
 

@@ -15,7 +15,7 @@ INSTANCE BAU_982_Grimbald (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ItMw_1h_SLD_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01); 
 	EquipItem	(self, ItRw_Sld_Bow);
 	
 	// ------ Inventory ------

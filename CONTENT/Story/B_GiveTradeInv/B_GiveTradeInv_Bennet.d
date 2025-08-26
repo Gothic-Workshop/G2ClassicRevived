@@ -14,7 +14,7 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMiSwordraw, 3); 
 		
 		// ------ Waffen ------
-		CreateInvItems (slf, ItMw_1H_Mace_L_04, 2);
+		CreateInvItems (slf, ITMW_REVIVED_1H_MACE_WAR_01, 2);
 		
 		// ------ Ringe / Amulette ------
 		
@@ -39,9 +39,6 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 450); 
 		CreateInvItems (slf, ItMiSwordraw, 3); 
 		
-		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
-		//***********************************
-		CreateInvItems (slf, ItMi_Nugget, 1); 
 		//***********************************
 		CreateInvItems (slf, ItBE_Addon_MC, 1); 
 		Bennet_ItemsGiven_Chapter_3 = TRUE;
@@ -53,9 +50,6 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Gold, 700); 
 		CreateInvItems (slf, ItMiSwordraw, 3); 
 	
-		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
-		//***********************************
-		CreateInvItems (slf, ItMi_Nugget, 2); 
 		//***********************************
 
 		Bennet_ItemsGiven_Chapter_4 = TRUE;
@@ -66,10 +60,7 @@ FUNC VOID B_GiveTradeInv_Bennet (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 1100); 
 		CreateInvItems (slf, ItMiSwordraw, 3); 
-		
-		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
-		//***********************************
-		CreateInvItems (slf, ItMi_Nugget, 2); 
+		 
 		//***********************************
 
 		Bennet_ItemsGiven_Chapter_5 = TRUE;

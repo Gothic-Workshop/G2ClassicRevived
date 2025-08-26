@@ -94,7 +94,7 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 	
 						Doc_PrintLine	( nDocID,  0, "");
 						Doc_PrintLines	( nDocID,  0, "... I hope the dome may protect the ore from the menace of Beliar. The King is naive enough to believe that we built the dome as protection against breakouts. Well, as long as such ruses enable us to fulfill our higher goals, let it be so. I can only hope we have enough time left to prepare for the fight. As soon as the dome around the Valley of Mines has been erected, I will use all the power at my disposal to intervene in the impeding fight.");
-						Doc_PrintLines	( nDocID,  0, "");
+						Doc_PrintLine	( nDocID,  0, "");
 			
 					
 	
@@ -149,16 +149,19 @@ FUNC VOID Use_FINALDRAGONEQUIPMENT_S1()		//Buchständer in der geheimen Bibliothe
 			B_LogEntry (TOPIC_TalentSmith,"If I add 4 units of ore and 5 of dragon blood, I can forge an ORE DRAGON SLAYER.");
 			B_LogEntry (TOPIC_TalentSmith,"If I add 5 units of ore and 5 of dragon blood, I can forge a LARGE ORE DRAGON SLAYER.");
 			PlayerGetsFinalDJGArmor = TRUE;
-		
+			DJG_KnowsAbout_Puryfing = TRUE;
 						
 						Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1);
 						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "From: Weapons of the dragon lord."); 
-						Doc_PrintLines	( nDocID,  1, "To make an armor of dragon scales as hard as possible, the scales may be coated with the ore mined in the valley on the isle of Karynis."					);
+						//Doc_PrintLines	( nDocID,  1, "From: Weapons of the Dragon Lord."); 
+						Doc_PrintLines	( nDocID,  1, "'To make an armor of dragon scales as hard as possible, the scales may be coated with the ore mined in the valley on the isle of Karynis.'"					);
 						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "To make a blade worthy of a dragon lord, the blade should be steeped in dragon blood. Even 5 phials of the blood can give the steel unequalled sharpness and strength."					);
+						Doc_PrintLines	( nDocID,  1, "'To make a blade worthy of a dragon lord, the blade should be steeped in dragon blood. Even 5 phials of the blood can give the steel unequalled sharpness and strength.'"					);
 						Doc_PrintLine	( nDocID,  1, "");
-						Doc_PrintLines	( nDocID,  1, "Note: 'Karynis' probably refers to what is now known as Khorinis.");
+						//Doc_PrintLines	( nDocID,  1, "Note: 'Karynis' probably refers to what is now known as Khorinis.");
+						Doc_PrintLine	( nDocID,  1, "Note:");
+						Doc_PrintLines	( nDocID,  1, "I am now reasonably certain that the Tears of Innos are what the paladins of old used in the long forgotten ritual Consecration of the Sword. That means I should be able to use the little bottle I found to regain the powers of a consecrated blade."	);
+						Doc_PrintLine	( nDocID,  1, "");
 						Doc_Show		( nDocID );
 		};
 		

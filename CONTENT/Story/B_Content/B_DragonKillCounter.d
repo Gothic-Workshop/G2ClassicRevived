@@ -78,7 +78,7 @@ func int B_DragonKillCounter (var C_NPC current_dragon)
 		Log_SetTopicStatus(TOPIC_BackToShip, LOG_RUNNING);
 		B_LogEntry (TOPIC_BackToShip, PRINT_DragKillCount); 
 
-		AI_Teleport	(hero, "UNDEAD_ENDTELEPORT");	 
+		//AI_Teleport	(hero, "UNDEAD_ENDTELEPORT");	 
 
 		if ((hero.guild == GIL_MIL) || (hero.guild == GIL_PAL))
 		{

@@ -89,7 +89,7 @@ FUNC VOID DIA_Rod_WannaLearn_Info()
 		AI_Output (self, other, "DIA_Rod_WannaLearn_06_01"); //I'm not a bad fighter, but that doesn't mean I'm a good teacher.
 		AI_Output (self, other, "DIA_Rod_WannaLearn_06_02"); //Still, I think I can show you the basics of two-handed combat anyway.
 		
-		if (Npc_HasItems (self, ItMw_2h_Rod) == 0)
+		if (Npc_HasItems (self, ITMW_REVIVED_2H_SWORD_ROD) == 0)
 		{
 			AI_Output (self, other, "DIA_Rod_WannaLearn_06_03"); //That is, if you give me back my sword.
 		}
@@ -198,7 +198,7 @@ FUNC VOID DIA_Rod_WannaJoin_Info()
 {	
 	AI_Output (other, self, "DIA_Rod_WannaJoin_15_00"); //I want to join the mercenaries!
 	
-	if (Npc_HasItems (self, ItMw_2h_Rod) == 0)
+	if (Npc_HasItems (self, ITMW_REVIVED_2H_SWORD_ROD) == 0)
 	{
 		AI_Output (self, other, "DIA_Rod_WannaJoin_06_01"); //So what about handing me my sword back first, eh?
 	}
@@ -361,7 +361,7 @@ FUNC INT DIA_Rod_Wette_Condition()
 	if (self.aivar[AIV_DefeatedByPlayer] == FALSE)
 	&& (Rod_WetteGewonnen == FALSE)
 	&& (Npc_KnowsInfo (other, DIA_Rod_BINStarkGenug))
-	&& (Npc_HasItems (self, ItMw_2h_Rod) > 0)
+	&& (Npc_HasItems (self, ITMW_REVIVED_2H_SWORD_ROD) > 0)
 	&& (Rod_WetteAngenommen == FALSE)
 	{
 		return TRUE;
@@ -401,7 +401,7 @@ func void DIA_Rod_Wette_Yes()
 		AI_Output (other, self, "DIA_Rod_Wette_Yes_15_02"); //Here!
 		AI_Output (self, other, "DIA_Rod_Wette_Yes_06_03"); //(gloating) All right, let's see then how strong you are ...
 		
-		B_GiveInvItems (self, other, ItMw_2h_Rod, 1);
+		B_GiveInvItems (self, other, ITMW_REVIVED_2H_SWORD_ROD, 1);
 		
 		if (other.attribute[ATR_STRENGTH] >= 30)
 		{
@@ -427,7 +427,7 @@ func void DIA_Rod_Wette_Yes()
 		
 		Info_ClearChoices (DIA_Rod_Wette);
 		
-		//Npc_RemoveInvItems (other,ItMw_2h_Rod,((Npc_HasItems (other,ItMw_2h_Rod))-1));		//Hoshi: Wilder HAck bitte stehen lassen!
+		//Npc_RemoveInvItems (other,ITMW_REVIVED_2H_SWORD_ROD,((Npc_HasItems (other,ITMW_REVIVED_2H_SWORD_ROD))-1));		//Hoshi: Wilder HAck bitte stehen lassen!
 		// Mike: AAAARGH!!!! genau DAS war der Fehler!!!
 			
 		Info_AddChoice (DIA_Rod_Wette, "I think not ...", DIA_Rod_Wette_KeepIt);
@@ -452,7 +452,7 @@ func void DIA_Rod_Wette_GiveBack()
 
 func void DIA_Rod_Wette_GiveBack2()
 {
-	B_GiveInvItems (other, self, ItMw_2h_Rod, 1);		
+	B_GiveInvItems (other, self, ITMW_REVIVED_2H_SWORD_ROD, 1);		
 	if (Rod_WetteGewonnen == FALSE)
 	{
 		AI_Output (self, other, "DIA_Rod_Wette_GiveBack_06_01"); //You're nothing but a wimp after all!
@@ -490,7 +490,7 @@ instance DIA_Rod_GiveItBack (C_INFO)
 
 FUNC INT DIA_Rod_GiveItBack_Condition()
 {
-	if (Npc_HasItems (other, ItMw_2h_Rod) > 0)
+	if (Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_ROD) > 0)
 	{	
 		return TRUE;
 	};
@@ -498,7 +498,7 @@ FUNC INT DIA_Rod_GiveItBack_Condition()
  
 FUNC VOID DIA_Rod_GiveItBack_Info()
 {	
-	B_GiveInvItems (other, self, ItMw_2h_Rod, 1);
+	B_GiveInvItems (other, self, ITMW_REVIVED_2H_SWORD_ROD, 1);
 	
 	AI_Output (other, self, "DIA_Rod_GiveItBack_15_00"); //Here's your sword back!
 	AI_Output (self, other, "DIA_Rod_GiveItBack_06_01"); //High time, too!
@@ -560,7 +560,7 @@ FUNC VOID DIA_Rod_PERM_Info()
 		{
 			AI_Output (self, other, "DIA_Rod_PERM_06_04"); //You don't belong here, you'd better go hang out somewhere else!
 		};
-	}
+	};
 
 	if (Kapitel >= 3)
 	{

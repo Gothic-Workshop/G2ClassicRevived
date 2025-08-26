@@ -326,7 +326,7 @@ func void DIA_Torlof_RUF_Info ()
 	{
 		Points_Sld = Points_Sld + 1;
 	}
-	else if (Npc_HasItems (Rod, ItMw_2h_Rod) == 0)
+	else if (Npc_HasItems (Rod, ITMW_REVIVED_2H_SWORD_ROD) == 0)
 	{
 		AI_Output (self, other, "DIA_Torlof_RUF_01_10"); //Rod just wants to have his sword back.
 	}

@@ -16,7 +16,7 @@ instance GRD_4145_Waffenknecht (Npc_Default)
 	fight_tactic	= FAI_NAILED;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1H_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -80,7 +80,7 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_M) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_S) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_PAL_H_02) == TRUE))
 		{
 			return FALSE;
 		}

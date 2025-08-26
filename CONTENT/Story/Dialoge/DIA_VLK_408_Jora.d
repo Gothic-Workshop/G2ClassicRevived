@@ -471,7 +471,7 @@ func void DIA_Jora_AlriksSchwert_Info ()
 	AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_01"); //Do you mean that ragged fellow who traded his weapon to me for a few torches and chunks of meat?
 	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_02"); //That's him.
 	
-	if (Npc_HasItems (self, ItMw_AlriksSword_Mis) > 0)
+	if (Npc_HasItems (self, ITMW_REVIVED_1H_SWORD_ALRIK) > 0)
 	{
 		AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_03"); //I still have the sword.
 		AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_04"); //How much do you want for it?
@@ -479,7 +479,7 @@ func void DIA_Jora_AlriksSchwert_Info ()
 		{
 			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_05"); //Well - for you ...
 			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_06"); //Ah, so what! Here, take it. After all, you did help me get my gold back ...
-			B_GiveInvItems (self, other, ItMw_AlriksSword_Mis, 1);
+			B_GiveInvItems (self, other, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 		}
 		else
 		{
@@ -508,7 +508,7 @@ instance DIA_Jora_BUYAlriksSchwert	(C_INFO)
 func int DIA_Jora_BUYAlriksSchwert_Condition ()
 {
 	if (Npc_KnowsInfo(other, DIA_Jora_AlriksSchwert))
-	&& (Npc_HasItems (self, ItMw_AlriksSword_Mis) > 0)
+	&& (Npc_HasItems (self, ITMW_REVIVED_1H_SWORD_ALRIK) > 0)
 	{
 		return TRUE;
 	};
@@ -528,7 +528,7 @@ func void DIA_Jora_BUYAlriksSchwert_Info ()
 		//else
 		//{
 			AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_04"); //Here you go - (cunning) that was a good deal.
-			B_GiveInvItems (self, other, ItMw_AlriksSword_Mis, 1);
+			B_GiveInvItems (self, other, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 		//};
 	}
 	else

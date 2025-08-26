@@ -441,7 +441,7 @@ FUNC VOID DIA_Cipher_DarDieb_Info()
 	AI_StopProcessInfos(self);
 	other.aivar[AIV_INVINCIBLE] = FALSE;
 
-	Npc_ExchangeRoutine(self, "BeatDar");
+	//Npc_ExchangeRoutine(self, "BeatDar");
 	B_Attack (self, Dar, AR_NONE, 0);
 };
 
@@ -511,7 +511,7 @@ FUNC VOID DIA_Cipher_KrautPaket_Info()
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_03"); //Doesn't matter, really, you're a decent guy.
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_04"); //Here, take this as a reward. Have fun with it!
 	B_GiveInvItems (self, other, itmi_gold, 200);
-	B_GiveInvItems (self, other, ITMI_REVIVED_JOINT_REGULAR, 10);
+	B_GiveInvItems (self, other, ItMi_SumpfTabak, 5);
 	B_GivePlayerXP (XP_Cipher_KrautPaket);
 	
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_05"); //First let me roll a few ...

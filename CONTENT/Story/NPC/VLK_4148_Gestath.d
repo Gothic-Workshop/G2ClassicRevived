@@ -15,7 +15,7 @@ INSTANCE VLK_4148_Gestath (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ItMw_2h_SLD_Sword); 
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_LIGHT_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

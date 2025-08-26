@@ -18,7 +18,7 @@ INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 
 	value 				=	REV_Value_Joint;
 
-	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
+	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -51,7 +51,7 @@ INSTANCE ITMI_REVIVED_JOINT_NORTHDARK (C_Item)
 
 	value 				=	REV_Value_Joint;
 
-	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
+	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -84,7 +84,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL (C_Item)
 
 	value 				=	REV_Value_Joint;
 
-	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
+	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -117,7 +117,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 
 	value 				=	REV_Value_Joint;
 
-	visual 				=	"ITMI_JOINT_SWAMPWEED.3ds";
+	visual 				=	"ItMi_Joint_Ger.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -155,7 +155,7 @@ INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint_US.3ds";
+	visual 				=	"ItMi_Joint.3ds";
 	material 			=	MAT_LEATHER;
 
 	scemeName			=	"JOINT";
@@ -188,7 +188,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ITMI_JOINT_REGULAR.3ds";
+	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -219,7 +219,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ITMI_JOINT_REGULAR.3ds";
+	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -250,7 +250,7 @@ INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ITMI_JOINT_REGULAR.3ds";
+	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -281,7 +281,7 @@ INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ITMI_JOINT_REGULAR.3ds";
+	visual 				=	"ItMi_Joint_US.3ds";
 	material 			=	MAT_WOOD;
 
 	scemeName			=	"JOINT";
@@ -438,7 +438,7 @@ INSTANCE ITMI_REVIVED_WARHORN (C_Item)
 	name 				=	"Horn";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags				=	ITEM_MISSION;
+	flags				=	ITEM_MULTI;
 
 	value 				=	9;
 
@@ -629,7 +629,7 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
 	name 				=	"Figurine";
 
 	mainflag 			=	ITEM_KAT_NONE;
-	flags 				=	ITEM_MISSION;
+	flags 				=	ITEM_MULTI;
 
 	value 				=	REV_Value_Stuff;
 
@@ -660,7 +660,7 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
 	description			= 	name;
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
-	TEXT[2]				=	"The mask is surrounded by six big stings.";
+	TEXT[2]				=	"The mask is surrounded by two big stings.";
 	
 	TEXT[5]				= 	NAME_Value;	
 	COUNT[5]			=	value;

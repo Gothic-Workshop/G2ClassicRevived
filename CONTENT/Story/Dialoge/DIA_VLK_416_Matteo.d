@@ -170,7 +170,7 @@ instance DIA_Matteo_LEATHER		(C_INFO)
 	condition	 = 	DIA_Matteo_LEATHER_Condition;
 	information	 = 	DIA_Matteo_LEATHER_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"Buy leather armor. Protection: weapons 25, arrow 20. (250 gold)";
+	description	 = 	"Buy 'Heavy Leather Armor'. Protection: weapons 35, arrows 30, fire 15 (1600 gold)";
 };
 
 func int DIA_Matteo_LEATHER_Condition ()

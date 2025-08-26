@@ -19,7 +19,7 @@ instance VLK_432_Moe (Npc_Default)
 	fight_tactic	= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_Bau_Mace); 
+	EquipItem	(self, ITMW_REVIVED_1H_CLUB_01); 
 	
 	
 	// ------ Inventory ------

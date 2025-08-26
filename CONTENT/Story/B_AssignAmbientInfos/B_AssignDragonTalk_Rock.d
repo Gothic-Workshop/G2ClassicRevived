@@ -22,7 +22,11 @@ FUNC INT DIA_Dragon_Rock_Exit_Condition()
 FUNC VOID DIA_Dragon_Rock_Exit_Info()
 {	
 	Npc_RemoveInvItems (other,ItMi_InnosEye_MIS,1);
-	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);	 
+	CreateInvItems 	   (other,ItMi_InnosEye_Discharged_MIS,1);
+
+	Wld_PlayEffect("spellFX_INCOVATION_GRAY",  self, self, 0, 0, 0, FALSE );
+	Wld_PlayEffect("FX_EarthQuake",  self, self, 0, 0, 0, FALSE );
+	Wld_PlayEffect("SFX_Circle",  self, self, 0, 0, 0, FALSE ); 
 
 	AI_Output			(self, other, "DIA_Dragon_Rock_Exit_20_00"); //Enough words. Your temporary power is exhausted. The Eye has lost its strength. Prepare to die.
 

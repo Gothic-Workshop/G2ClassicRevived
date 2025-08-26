@@ -19,7 +19,7 @@ instance VLK_441_Garvell (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Axe); 
+	EquipItem	(self, ITMW_REVIVED_1H_AXE_01); 
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

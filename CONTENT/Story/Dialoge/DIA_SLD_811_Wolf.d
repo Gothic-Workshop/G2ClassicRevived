@@ -319,9 +319,7 @@ FUNC VOID DIA_Wolf_AboutCrawler_Info()
 	
 	MIS_Wolf_BringCrawlerPlates = LOG_RUNNING;
 	
-	Log_CreateTopic (TOPIC_Wolf_BringCrawlerPlates,LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Wolf_BringCrawlerPlates,LOG_RUNNING);
-	B_LogEntry (TOPIC_Wolf_BringCrawlerPlates,"Wolf can make me an armor out of 10 crawler plates.");
+	B_LogEntry (Topic_SoldierTrader,"Wolf can make me an armor out of 10 crawler plates.");
 };
 
 
@@ -440,6 +438,7 @@ FUNC VOID DIA_Wolf_ArmorReady_Info()
 			AI_Output (other, self, "DIA_Wolf_ArmorReady_15_04"); //Thank you!
 			AI_Output (self, other, "DIA_Wolf_ArmorReady_08_05"); //Don't mention it.
 			Player_GotCrawlerArmor = TRUE;
+			MIS_Wolf_BringCrawlerPlates = LOG_SUCCESS;
 		};
 	}
 	else

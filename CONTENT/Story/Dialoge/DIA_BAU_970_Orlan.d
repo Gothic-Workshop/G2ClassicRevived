@@ -173,8 +173,8 @@ func void DIA_Orlan_RUESTUNG_Info ()
 
 	Info_ClearChoices		(DIA_Orlan_RUESTUNG);
 
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, DIALOG_BACK	,	DIA_Orlan_RUESTUNG_BACK);	
-	Info_AddChoice			(DIA_Orlan_RUESTUNG, "'Archer's Suit'. Protection: weapons 40, arrows 60, fire 15 (1800 gold)" , DIA_Orlan_RUESTUNG_Buy);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, "I'll think about it."	,	DIA_Orlan_RUESTUNG_BACK);	
+	Info_AddChoice			(DIA_Orlan_RUESTUNG, "'Archer's Suit'. Protection: weapons 40, arrows 60, fire 10 (1800 gold)" , DIA_Orlan_RUESTUNG_Buy);	
 };  
 
 func void DIA_Orlan_RUESTUNG_Buy ()

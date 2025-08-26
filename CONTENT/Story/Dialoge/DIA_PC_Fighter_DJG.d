@@ -37,7 +37,8 @@ instance DIA_GornDJG_STARTCAMP		(C_INFO)
 
 func int DIA_GornDJG_STARTCAMP_Condition ()
 {
-	if (Npc_GetDistToWP(self,"OW_DJG_STARTCAMP_01")<1000) 				
+	if (Npc_GetDistToWP(self,"OW_DJG_STARTCAMP_01")<1000) 		
+	|| (Npc_GetDistToWP(self,"OW_PATH_ORETRAIL_2_DJGCAMP_02")<1000) 			
 		{
 			return TRUE;
 		};
@@ -143,39 +144,14 @@ func void DIA_GornDJG_WHATSUP_A_Dragon ()
 
 	GornDJG_WhatMonsters = TRUE;
 
-	B_LogEntry (TOPIC_Dragonhunter,"According to Gorn, there's a dragon in the old rock fortress."); 
-	
-	Info_ClearChoices	(DIA_GornDJG_WHATSUP);
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info WhatMonsters
-///////////////////////////////////////////////////////////////////////
-instance DIA_GornDJG_WHATMONSTERS		(C_INFO)
-{
-	npc		 = 	PC_Fighter_DJG;
-	condition	 = 	DIA_GornDJG_WHATMONSTERS_Condition;
-	information	 = 	DIA_GornDJG_WHATMONSTERS_Info;
-
-	description	 = 	"What kind of monsters would those be?";
-};
-
-func int DIA_GornDJG_WHATMONSTERS_Condition ()
-{
-	if (GornDJG_WhatMonsters == TRUE)
-		{
-				return TRUE;
-		};
-};
-
-func void DIA_GornDJG_WHATMONSTERS_Info ()
-{
 	AI_Output			(other, self, "DIA_GornDJG_WHATMONSTERS_15_00"); //What kind of monsters would those be?
 	AI_Output			(self, other, "DIA_GornDJG_WHATMONSTERS_12_01"); //I couldn't quite make them out properly, but they walk upright and have scaly skin. They move over the rocks like snappers that have gotten a whiff of prey.
 	AI_Output			(self, other, "DIA_GornDJG_WHATMONSTERS_12_02"); //I can hear them snuffling and snorting clear down here. I think they've taken over the whole plain up there.
 
+	B_LogEntry (TOPIC_Dragonhunter,"According to Gorn, there might be a dragon in the old rock fortress."); 
+	
+	Info_ClearChoices	(DIA_GornDJG_WHATSUP);
 };
-
 
 ///////////////////////////////////////////////////////////////////////
 //	Info WahtAboutOrcs
@@ -222,7 +198,7 @@ instance DIA_GornDJG_HELPKILLDRACONIANS		(C_INFO)
 func int DIA_GornDJG_HELPKILLDRACONIANS_Condition ()
 {
 	if 	(
-		(Npc_KnowsInfo(other, DIA_GornDJG_WHATMONSTERS))
+		(GornDJG_WhatMonsters == TRUE)
 		&& (Npc_KnowsInfo(other, DIA_GornDJG_WAHTABOUTORCS))
 		&& ((Npc_IsDead(RockDragon))== FALSE)
 		)
@@ -291,7 +267,7 @@ instance DIA_GornDJG_BISHIERHIN		(C_INFO)
 
 func int DIA_GornDJG_BISHIERHIN_Condition ()
 {
-	if (Npc_GetDistToWP(self,"LOCATION_19_01")<1000) 				
+	if (Npc_GetDistToWP(self,"LOCATION_19_03_PATH_RUIN10")<1000) 				
 		{
 			return TRUE;
 		};
@@ -321,8 +297,7 @@ instance DIA_GornDJG_DRAGONDEAD		(C_INFO)
 	npc		 	 = 	PC_Fighter_DJG;
 	condition	 = 	DIA_GornDJG_DRAGONDEAD_Condition;
 	information	 = 	DIA_GornDJG_DRAGONDEAD_Info;
-
-	description	 = 	"The rock dragon is dead!";	
+	important	 = 	TRUE;
 };
 
 func int DIA_GornDJG_DRAGONDEAD_Condition ()
@@ -330,7 +305,7 @@ func int DIA_GornDJG_DRAGONDEAD_Condition ()
 	if 	(
 		(Npc_KnowsInfo(other, DIA_GornDJG_WHATSUP))
 		&& (Npc_GetDistToWP(self,"OW_DJG_ROCKCAMP_01")<1000)
-		&&  ((Npc_IsDead(RockDragon))== TRUE)
+		&&  ((Npc_IsDead(SkeletonMage_Angar))== TRUE)
 		)
 		{
 				return TRUE;
@@ -339,7 +314,7 @@ func int DIA_GornDJG_DRAGONDEAD_Condition ()
 
 func void DIA_GornDJG_DRAGONDEAD_Info ()
 {
-	AI_Output			(other, self, "DIA_GornDJG_DRAGONDEAD_15_00"); //The rock dragon is dead!
+	//AI_Output			(other, self, "DIA_GornDJG_DRAGONDEAD_15_00"); //The rock dragon is dead!
 	AI_Output			(self, other, "DIA_GornDJG_DRAGONDEAD_12_01"); //I don't hear any more screams! Were you up in the rock fortress?
 	AI_Output			(other, self, "DIA_GornDJG_DRAGONDEAD_15_02"); //Yes!
 	AI_Output			(self, other, "DIA_GornDJG_DRAGONDEAD_12_03"); //Ha ha! I thought as much. Wherever you show up, there won't be one stone left standing.

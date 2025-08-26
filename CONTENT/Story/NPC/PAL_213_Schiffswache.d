@@ -16,7 +16,7 @@ instance Pal_213_Schiffswache (Npc_Default)
 	fight_tactic		= FAI_NAILED;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_2H_PAL_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 
 	
 	// ------ Inventory ------

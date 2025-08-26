@@ -2346,6 +2346,12 @@ INSTANCE INVOCATION_RED  (INVOCATION)
     vistexcolorend_s = "255 0 0";
 };
 
+INSTANCE INVOCATION_GRAY  (INVOCATION)
+{
+	vistexcolorstart_s = "128 128 128";
+    vistexcolorend_s = "128 128 128";
+};
+
 INSTANCE INVOCATION_WHITE  (INVOCATION)
 {
 	vistexcolorstart_s = "255 255 255";

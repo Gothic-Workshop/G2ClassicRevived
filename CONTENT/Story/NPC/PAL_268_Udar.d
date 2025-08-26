@@ -16,7 +16,7 @@ instance PAL_268_Udar  (Npc_Default)
 	fight_tactic = FAI_NAILED;	//damit er nicht runterspringt
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_2h_Pal_Sword);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 	EquipItem (self, ItRw_Crossbow_H_01);
 	
 	// ------ Inventory ------

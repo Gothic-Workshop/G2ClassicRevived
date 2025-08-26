@@ -112,7 +112,7 @@ INSTANCE OrcCity_Pray (Mst_Default_OrcShaman)
 	B_SetVisuals_OrcShaman();
 
 	//-------- inventory --------
-	CreateInvItem	(self,	ITMW_REVIVED_GRACHTNAKK);	
+	CreateInvItem	(self,	ITMW_REVIVED_ORC_STAFF_01);	
 
 	//-------- ai --------
 	start_aistate	= ZS_Orc_Pray;
@@ -126,7 +126,7 @@ INSTANCE OrcShaman_Sit_CanyonLibraryKey (Mst_Default_OrcShaman)
 	B_SetVisuals_OrcShaman();
 	
 	//-------- inventory --------
-	EquipItem (self, ITMW_REVIVED_SHABANAKK);
+	EquipItem (self, ITMW_REVIVED_ORC_STAFF_02);
 	
 	CreateInvItems (self, ITKE_CANYONLIBRARY_HIERARCHY_BOOKS_ADDON, 1);									
 	

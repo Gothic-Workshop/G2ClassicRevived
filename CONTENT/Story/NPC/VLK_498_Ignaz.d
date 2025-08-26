@@ -19,12 +19,11 @@ instance VLK_498_Ignaz (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_Bau_Axe);
+	EquipItem	(self, ITMW_REVIVED_1H_CLUB_01);
 	EquipItem	(self, ITHE_REVIVED_SPECTACLES_01); 
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem (self,ITHE_REVIVED_SPECTACLES_01);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_N_Corristo, BodyTex_N, ITAR_Smith);

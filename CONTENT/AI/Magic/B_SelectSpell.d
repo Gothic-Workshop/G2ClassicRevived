@@ -246,18 +246,37 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 		};
 	};
 	
-
-	// ------ Sumpfdrache ------
-	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)
+	// ------ Sumpfgolem ------
+	if (slf.guild == GIL_FIREGOLEM)
 	{
 		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
 		{
 			CreateInvItems (slf, ItRu_InstantFireball, 1);
 		};
 		
+		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_MELEE)
+		{
+			B_ReadySpell (slf, SPL_InstantFireball,	SPL_Cost_InstantFireball);
+			return TRUE;
+		}
+		else
+		{
+			return FALSE; //Nahkampfangriff
+		};
+	};
+	
+
+	// ------ Sumpfdrache ------
+	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)
+	{
+		if (Npc_HasItems (slf, ITAT_REVIVED_DRAGONHEART_SWAMP) == 0)
+		{
+			CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_SWAMP, 1);
+		};
+		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_SWARM, REV_SPL_COST_DRAGONHEART);
 			return TRUE;
 		}
 		else
@@ -269,14 +288,14 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Felsdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
+		if (Npc_HasItems (slf, ITAT_REVIVED_DRAGONHEART_ROCK) == 0)
 		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
+			CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ROCK, 1);
 		};
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_WINDFIST, REV_SPL_COST_DRAGONHEART);
 			return TRUE;
 		}
 		else
@@ -288,14 +307,14 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Feuerdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
+		if (Npc_HasItems (slf, ITAT_REVIVED_DRAGONHEART_FIRE) == 0)
 		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
+			CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_FIRE, 1);
 		};
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_Pyrokinesis, REV_SPL_COST_DRAGONHEART);
 			return TRUE;
 		}
 		else
@@ -307,14 +326,14 @@ func int B_SelectSpell (var C_NPC slf, var C_NPC oth)
 	// ------ Eisdrache ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)
 	{
-		if (Npc_HasItems (slf, ItRu_InstantFireball) == 0)
+		if (Npc_HasItems (slf, ITAT_REVIVED_DRAGONHEART_ICE) == 0)
 		{
-			CreateInvItems (slf, ItRu_InstantFireball, 1);
+			CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ICE, 1);
 		};
 		
 		if (Npc_GetDistToNpc(slf,oth) > FIGHT_DIST_DRAGON_MAGIC)
 		{
-			B_ReadySpell (slf, SPL_InstantFireball, SPL_Cost_InstantFireball);
+			B_ReadySpell (slf, SPL_ICELANCE, REV_SPL_COST_DRAGONHEART);
 			return TRUE;
 		}
 		else

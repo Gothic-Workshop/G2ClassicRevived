@@ -21,8 +21,8 @@ instance SLD_811_Wolf (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Axe);
-	EquipItem			(self, ItRw_Sld_Bow);
+	EquipItem			(self, ITMW_REVIVED_1H_MACE_WAR_01);
+	EquipItem			(self, ITRW_REVIVED_BOW_WOLF);
 
 
 	// ------ Inventory ------

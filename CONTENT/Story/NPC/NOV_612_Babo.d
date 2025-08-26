@@ -15,12 +15,12 @@ INSTANCE NOV_612_Babo (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ItMw_1h_Nov_Mace); 															
+	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 															
 	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	CreateInvItems (self, ItMw_1h_Nov_Mace,1);
+	CreateInvItems (self, ITMW_REVIVED_2H_STAFF_NOVICE_01,1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal07, BodyTex_N, ITAR_NOV_L);		

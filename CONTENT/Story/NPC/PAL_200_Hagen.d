@@ -23,14 +23,14 @@ instance Pal_200_Hagen (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_2h_Pal_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_PAL_S);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_PAL_H_02);	
 	Mdl_SetModelFatness	(self, 1.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 

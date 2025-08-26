@@ -15,8 +15,8 @@ instance VLK_4200_Buergerin (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																	
-	
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 	
 	
 	// ------ Inventory ------

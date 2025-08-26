@@ -16,7 +16,7 @@ instance VLK_458_Rupert (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Dagger); 
+	EquipItem	(self, ITMW_REVIVED_1H_CLUB_02); 
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ItFo_Apple,12);

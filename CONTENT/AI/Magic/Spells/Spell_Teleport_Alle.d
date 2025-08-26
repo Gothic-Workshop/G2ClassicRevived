@@ -33,14 +33,16 @@ func int Spell_Logic_TeleportAlle (var int manaInvested)
 {
 	if (Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll))
 	{
+		if (manaInvested == 0) { return SPL_NEXTLEVEL; };
 		return SPL_SENDCAST;
 	}
 	else if (self.attribute[ATR_MANA] >= SPL_Cost_Teleport)
 	{
+		if (manaInvested == 0) { return SPL_NEXTLEVEL; };
 		return SPL_SENDCAST;
 	};
 	
-	return SPL_NEXTLEVEL;
+	return SPL_SENDSTOP;
 };
 
 

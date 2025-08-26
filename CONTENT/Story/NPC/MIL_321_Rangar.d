@@ -16,7 +16,7 @@ instance Mil_321_Rangar (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	CreateInvItems (self,ItKe_City_Tower_02,1);
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -1019,10 +1019,10 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 	{
 		if(PotionInstance == TOBACCO_AppleDouble)
 		{
-			if (Npc_HasItems (self, ITFO_REVIVED_APPLE) 			>= amount)
+			if (Npc_HasItems (self, ITFO_REVIVED_APPLE_01) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_ApfelTabak) 				>= amount)
 			{
-				Npc_RemoveInvItems (hero,ITFO_REVIVED_APPLE, 		amount);
+				Npc_RemoveInvItems (hero,ITFO_REVIVED_APPLE_01, 		amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
 				
 				CreateInvItems	   (hero,ItMi_DoppelTabak,amount);  
@@ -3156,7 +3156,7 @@ FUNC VOID PC_ItMi_Tabak_Info ()
 	{
 		Info_AddChoice 	(PC_ItMi_Tabak,"...with swampweed",PC_ItMi_Tabak_Swampherb);
 	};
-	if (Npc_HasItems (hero, ITFO_REVIVED_APPLE) >=1)
+	if (Npc_HasItems (hero, ITFO_REVIVED_APPLE_01) >=1)
 	{
 		Info_AddChoice 	(PC_ItMi_Tabak,"...with sour apple",PC_ItMi_Tabak_AppleDouble);
 	};	

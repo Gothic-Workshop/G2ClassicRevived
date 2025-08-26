@@ -19,8 +19,8 @@ instance BAU_961_Gaan (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_LURKERBITE);
-	EquipItem			(self, ItRw_Sld_Bow);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_03);
+	EquipItem			(self, ITRW_REVIVED_BOW_LONG_09);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

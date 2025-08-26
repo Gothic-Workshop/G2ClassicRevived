@@ -20,7 +20,7 @@ instance DJG_705_Angar_DI (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_ANGAR);
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 	

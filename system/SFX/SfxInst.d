@@ -15,7 +15,7 @@
 //==========================\\
 //==========================\\
 
-INSTANCE 		GAMESTART					(C_SFX_DEF)		{file="gamestart.wav";							vol=127;						};
+INSTANCE 		GAMESTART					(C_SFX_DEF)		{file="gamestart.wav";							vol=100;						};
 INSTANCE 		NEWGAME						(C_SFX_DEF)		{file="nosound.wav";							vol=0;							};
 INSTANCE 		OCEAN_WARN					(C_SFX_DEF)		{file="ocean_warn.wav";							vol=127;						};
 INSTANCE 		OPEN_PORTAL					(C_SFX_DEF)		{file="openportal.wav";							vol=127;						};
@@ -1645,13 +1645,13 @@ INSTANCE Play_Lute_A2	(C_SFX_DEF) {file= "Lute_3.wav";        vol = 127;		};
 				                                                                                                        		
 			
 /* Zombie */
-				INSTANCE ZOM_Ambient					(C_SFX_DEF) {file= "ZOM_Ambient03.wav";				vol = 75;			};
-				INSTANCE ZOM_Ambient_A1					(C_SFX_DEF) {file= "ZOM_Ambient04.wav";				vol = 75;			};
-				INSTANCE ZOM_Ambient_A2					(C_SFX_DEF) {file= "ZOM_Ambient06.wav";				vol = 50;			};
+				INSTANCE ZOM_Ambient					(C_SFX_DEF) {file= "ZOMBIE_01.wav";					vol = 75;			};
+				INSTANCE ZOM_Ambient_A1					(C_SFX_DEF) {file= "ZOM_Ambient01.wav";				vol = 75;			};
+				INSTANCE ZOM_Ambient_A2					(C_SFX_DEF) {file= "ZOM_Ambient02.wav";				vol = 75;			};
 				INSTANCE ZOM_Ambient_A3					(C_SFX_DEF) {file= "ZOM_Ambient03.wav";				vol = 75;			};
-				INSTANCE ZOM_Ambient_A4					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};
-				INSTANCE ZOM_Ambient_A5					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};
-				INSTANCE ZOM_Ambient_A6					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};
+				INSTANCE ZOM_Ambient_A4					(C_SFX_DEF) {file= "ZOM_Ambient04.wav";				vol = 75;			};
+				INSTANCE ZOM_Ambient_A5					(C_SFX_DEF) {file= "ZOM_Ambient05.wav";				vol = 75;			};
+				INSTANCE ZOM_Ambient_A6					(C_SFX_DEF) {file= "ZOM_Ambient06.wav";				vol = 75;			};
 				INSTANCE ZOM_Ambient_A7					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};
 				INSTANCE ZOM_Ambient_A8					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};
 				INSTANCE ZOM_Ambient_A9					(C_SFX_DEF) {file= "nosound.wav";					vol = 0;			};

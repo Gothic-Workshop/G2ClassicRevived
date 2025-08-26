@@ -16,7 +16,7 @@ instance VLK_407_Hakon (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_ShortSword2);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_02);
 	
 	// ------ Inventory ------
 	// Händler

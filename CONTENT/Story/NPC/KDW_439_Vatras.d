@@ -25,8 +25,8 @@ instance KDW_439_Vatras (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
-
+	// ------ Equippte Waffen ------
+	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_GOOD_02);
 	
 	// ------ Inventory ------
 	CreateInvItems 		(self, ItSc_LightHeal,2);

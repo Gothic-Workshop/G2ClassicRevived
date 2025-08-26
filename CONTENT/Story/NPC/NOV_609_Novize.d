@@ -15,7 +15,7 @@ INSTANCE NOV_609_Novize (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ItMw_1h_Nov_Mace); 
+	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

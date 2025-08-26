@@ -22,8 +22,7 @@ instance Vlk_2000_Thorus (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_SWORD_THORUS);
-	//EquipItem			(self, ItRw_Crossbow_01);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_THORUS);
 	EquipItem	(self, ITHE_REVIVED_SPECTACLES_03); 
 	
 	// ------ Inventory ------
@@ -47,8 +46,6 @@ instance Vlk_2000_Thorus (Npc_Default)
 
 FUNC VOID Rtn_Start_2000 ()
 {	
-	//TA_Sit_Bench	(08,00,23,00,"XXX");
-    //TA_Sit_Bench	(23,00,08,00,"XXX");
 	TA_Stand_ArmsCrossed	(08,00,22,00,"NW_CITY_UPTOWN_PATH_22");
 	TA_Stand_ArmsCrossed	(22,00,08,00,"NW_CITY_UPTOWN_PATH_22");
 };

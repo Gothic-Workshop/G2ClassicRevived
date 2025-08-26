@@ -20,7 +20,7 @@ instance VLK_475_Buerger (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_07); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

@@ -26,9 +26,9 @@ INSTANCE PC_Fighter_DI (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem			(self, itmw_streitaxt2);
-	EquipItem			(self, ItRw_Crossbow_M_01);	
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_2H_AXE_GORN);
+	
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	
 	// ------ Inventory ------

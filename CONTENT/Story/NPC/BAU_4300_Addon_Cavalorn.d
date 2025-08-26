@@ -17,8 +17,8 @@ instance Bau_4300_Addon_Cavalorn (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_ShortSword2);
-	EquipItem (self, ItRw_sld_bow);  
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_SHORT_05);
+	EquipItem (self, ITRW_REVIVED_BOW_CAVALORN);  
 	CreateInvItems (self, ITAR_BAU_L, 1);	
 
 	// ------ Inventory ------

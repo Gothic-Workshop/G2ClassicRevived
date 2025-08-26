@@ -105,7 +105,7 @@ FUNC VOID DIA_Dragomir_Dangerous_Info()
 	Log_SetTopicStatus(TOPIC_DragomirsArmbrust, LOG_RUNNING);
 	B_LogEntry (TOPIC_DragomirsArmbrust,"Dragomir lost his crossbow at a strange stone circle in the high northern mountains."); 
 
-	Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_ITEM_DRAGOMIRARMBRUST"); 
+	Wld_InsertItem	(ITRW_REVIVED_CROSSBOW_DRAGOMIR , "FP_ITEM_DRAGOMIRARMBRUST"); 
 	MIS_DragomirsArmbrust = LOG_RUNNING;
 };
 
@@ -124,7 +124,7 @@ INSTANCE DIA_Dragomir_Armbrust   (C_INFO)
 FUNC INT DIA_Dragomir_Armbrust_Condition()
 {
 	if (MIS_DragomirsArmbrust == LOG_RUNNING)
-	&& (Npc_HasItems (other,ItRw_DragomirsArmbrust_MIS))
+	&& (Npc_HasItems (other,ITRW_REVIVED_CROSSBOW_DRAGOMIR))
 	{ 
 		return TRUE;
 	};		
@@ -132,7 +132,7 @@ FUNC INT DIA_Dragomir_Armbrust_Condition()
 FUNC VOID DIA_Dragomir_Armbrust_Info()
 {
 	AI_Output (other,self ,"DIA_Dragomir_Armbrust_15_00"); //Here. I found your crossbow.
-	B_GiveInvItems (other, self, ItRw_DragomirsArmbrust_MIS, 1);					
+	B_GiveInvItems (other, self, ITRW_REVIVED_CROSSBOW_DRAGOMIR, 1);					
 	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_01"); //Indeed, this is mine. Don't tell me you were up by the stone circle?!
 	AI_Output (other,self ,"DIA_Dragomir_Armbrust_15_02"); //Most certainly!
 	AI_Output (self ,other,"DIA_Dragomir_Armbrust_12_03"); //That was pretty reckless of you. But thanks anyway.

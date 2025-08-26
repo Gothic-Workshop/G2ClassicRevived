@@ -15,7 +15,7 @@ INSTANCE BAU_984_Niclas (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem	(self, ItMw_1h_SLD_Sword);
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01);
 	EquipItem 	(self,itRw_SLD_BOW); 
 	
 	// ------ Inventory ------

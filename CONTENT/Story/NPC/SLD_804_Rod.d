@@ -16,7 +16,7 @@ instance SLD_804_Rod (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2h_Rod);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_ROD);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -30,7 +30,7 @@ instance SLD_804_Rod (Npc_Default)
 	B_GiveNpcTalents (self);
 	
 	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 50); //Grenzen für Talent-Level liegen bei 30 und 60
+	B_SetFightSkills (self, 60); //Grenzen für Talent-Level liegen bei 30 und 60
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_804;

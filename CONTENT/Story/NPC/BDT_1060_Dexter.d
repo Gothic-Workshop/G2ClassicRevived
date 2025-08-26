@@ -17,8 +17,9 @@ instance BDT_1060_Dexter (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_ShortSword2);
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_WHISTLER);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_04);
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

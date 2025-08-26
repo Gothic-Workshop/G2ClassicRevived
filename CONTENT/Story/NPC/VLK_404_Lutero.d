@@ -14,8 +14,9 @@ instance VLK_404_Lutero (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem (self,ItMw_1h_Vlk_Mace);
+	// ------ Equippte Waffen ------
+	EquipItem (self,ITMW_REVIVED_1H_SWORD_LONG_04);
+	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 

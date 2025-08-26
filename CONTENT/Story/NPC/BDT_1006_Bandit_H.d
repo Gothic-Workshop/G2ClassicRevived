@@ -16,7 +16,7 @@ instance BDT_1006_Bandit_H (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2h_SLD_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_LIGHT_01);
 	EquipItem			(self, ItRw_SLD_Bow);
 	
 	// ------ Inventory ------

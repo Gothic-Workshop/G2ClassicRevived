@@ -15,8 +15,7 @@ instance VLK_4005_Arbeiter (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_Bau_Mace); 
+	// ------ Equippte Waffen ------
 	
 	
 	// ------ Inventory ------

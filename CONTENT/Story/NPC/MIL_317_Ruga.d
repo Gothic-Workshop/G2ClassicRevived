@@ -16,7 +16,7 @@ instance Mil_317_Ruga (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
 	EquipItem 			(self, ItRw_Mil_Crossbow);
 	
 	

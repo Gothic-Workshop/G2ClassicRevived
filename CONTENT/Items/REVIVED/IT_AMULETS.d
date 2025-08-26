@@ -2,7 +2,7 @@
 //			PROTECTION
 //****************************************************************************
 
-instance ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
+INSTANCE ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 {
 	name 			=	"Amulet of Oak Skin";
 
@@ -41,7 +41,7 @@ instance ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 	};
 
 
-instance ITAM_REVIVED_PROT_MELEE_01(C_Item)
+INSTANCE ITAM_REVIVED_PROT_MELEE_01(C_Item)
 {
 	name 			=	"Armor Amulet";
 
@@ -82,7 +82,7 @@ instance ITAM_REVIVED_PROT_MELEE_01(C_Item)
 	};
 
 
-instance ITAM_REVIVED_PROT_MELEE_02(C_Item)
+INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 {
 	name 			=	"Protective Amulet";
 
@@ -124,7 +124,7 @@ instance ITAM_REVIVED_PROT_MELEE_02(C_Item)
 	};
 
 
-instance ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
+INSTANCE ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 {
 	name 			=	"Amulet of Stone Skin";
 
@@ -169,7 +169,7 @@ instance ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
+INSTANCE ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 {
 	name 			=	"Amulet of Spiritual Power";
 
@@ -208,7 +208,7 @@ instance ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_PROT_FIRE_01(C_Item)
+INSTANCE ITAM_REVIVED_PROT_FIRE_01(C_Item)
 {
 	name 			=	"Amulet of Flames";
 
@@ -247,7 +247,7 @@ instance ITAM_REVIVED_PROT_FIRE_01(C_Item)
 	};
 
 
-instance ITAM_REVIVED_PROT_FIRE_02(C_Item)
+INSTANCE ITAM_REVIVED_PROT_FIRE_02(C_Item)
 {
 	name 			= "Orc Talisman";
 
@@ -288,7 +288,7 @@ FUNC VOID UnEquip_OrcTalisman()
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
+INSTANCE ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 {
 	name 			=	"Amulet of Purification";
 
@@ -333,7 +333,7 @@ instance ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
+INSTANCE ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 {
 	name 			=	"Amulet of Ore Skin";
 
@@ -389,7 +389,7 @@ instance ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 //			BOOST
 //****************************************************************************
 
-instance ITAM_REVIVED_HP_01(C_Item)
+INSTANCE ITAM_REVIVED_HP_01(C_Item)
 {
 	name 			=	"Amulet of Life Force";
 
@@ -439,7 +439,7 @@ instance ITAM_REVIVED_HP_01(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_MP_01(C_Item)
+INSTANCE ITAM_REVIVED_MP_01(C_Item)
 {
 	name 			=	"Amulet of Magic";
 
@@ -480,7 +480,7 @@ instance ITAM_REVIVED_MP_01(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_HP_MP_01(C_Item)
+INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 {
 	name 			=	"Amulet of Enlightenment";
 
@@ -538,7 +538,7 @@ instance ITAM_REVIVED_HP_MP_01(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_DEX_01(C_Item)
+INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 {
 	name 			=	"Amulet of Agility";
 
@@ -577,7 +577,7 @@ instance ITAM_REVIVED_DEX_01(C_Item)
 	};
 
 
-instance ITAM_REVIVED_DEX_02(C_Item)
+INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 {
 	name 			=	"Amulet of Dexterity";
 
@@ -616,7 +616,7 @@ instance ITAM_REVIVED_DEX_02(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_STR_01(C_Item)
+INSTANCE ITAM_REVIVED_STR_01(C_Item)
 {
 	name 			=	"Amulet of Power";
 
@@ -654,7 +654,7 @@ instance ITAM_REVIVED_STR_01(C_Item)
 	};
 
 
-instance ITAM_REVIVED_STR_02(C_Item)
+INSTANCE ITAM_REVIVED_STR_02(C_Item)
 {
 	name 			=	"Amulet of Strength";
 
@@ -694,7 +694,7 @@ instance ITAM_REVIVED_STR_02(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_STR_DEX_01(C_Item)
+INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 {
 	name 			=	"Amulet of Might";
 
@@ -740,7 +740,7 @@ instance ITAM_REVIVED_STR_DEX_01(C_Item)
 //			SPECIAL
 //****************************************************************************
 
-instance ITAM_REVIVED_PSI(C_Item)
+INSTANCE ITAM_REVIVED_PSI(C_Item)
 {
 	name 			=	"Sign of the Brotherhood";
 
@@ -765,7 +765,7 @@ instance ITAM_REVIVED_PSI(C_Item)
 
 /******************************************************************************************/
 
-instance ITAM_REVIVED_KDW(C_Item)
+INSTANCE ITAM_REVIVED_KDW(C_Item)
 {
 	name 			=	"Messenger's amulet of the Magicians of Water";
 
@@ -795,7 +795,7 @@ instance ITAM_REVIVED_KDW(C_Item)
 	Schwarz wie das Böse
 	Schwarz verheisst Macht
 */
-instance ITAM_REVIVED_DEMON(C_Item)
+INSTANCE ITAM_REVIVED_DEMON(C_Item)
 {
 	name 			=	"Amulet of Summoning";
 
@@ -827,11 +827,16 @@ instance ITAM_REVIVED_DEMON(C_Item)
 		{		
 			var C_NPC DetWsp;
 			DetWsp = Hlp_GetNpc (Summoned_Demon);
-			AI_Teleport (DetWsp, "TOT");
-			Wld_SpawnNpcRange (self, Summoned_Demon, 1, 1000);
-			//Wld_PlayEffect("spellFX_Fear", Summoned_Demon, Summoned_Demon, 0, 0, 0, FALSE );
-			Snd_Play ("MFX_FEAR_CAST" );
-			Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", hero, hero, 0, 0, 0, FALSE );
+
+				AI_Teleport (DetWsp, "TOT");
+				Wld_SpawnNpcRange (self, Summoned_Demon, 1, 1000);
+			
+				//Wld_PlayEffect("spellFX_Fear", Summoned_Demon, Summoned_Demon, 0, 0, 0, FALSE );
+
+				Snd_Play ("MFX_FEAR_CAST" );
+				Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE );
+
+				Npc_ChangeAttribute (self, ATR_HITPOINTS, self.attribute[ATR_HITPOINTS] / 2);
 		};
 	};
 
@@ -842,18 +847,19 @@ instance ITAM_REVIVED_DEMON(C_Item)
 		{		
 			var C_NPC DetWsp;
 			DetWsp = Hlp_GetNpc (Summoned_Demon);
+			
+				Snd_Play ("zombie_01");
+				Wld_PlayEffect("spellFX_Fear", self, self, 0, 0, 0, FALSE );
+
+			AI_Teleport (DetWsp, "TOT");
 
 			if (Npc_IsDead(DetWsp) == FALSE)
 			{
 				Npc_ChangeAttribute (DetWsp, ATR_HITPOINTS, -DetWsp.attribute[ATR_HITPOINTS_MAX]);
 			};
-			
-				Snd_Play ("zombie_01");
-				Wld_PlayEffect("spellFX_Fear", hero, hero, 0, 0, 0, FALSE );
 
-			AI_Teleport (DetWsp, "TOT");
 			B_RemoveNpc (DetWsp);
-			AI_Teleport (DetWsp, "TOT");
+			//AI_Teleport (DetWsp, "TOT");
 		};
 	};
 

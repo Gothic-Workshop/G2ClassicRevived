@@ -21,7 +21,7 @@ instance VLK_446_Jesper (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_Sld_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_02); 
 	
 	
 	// ------ Inventory ------

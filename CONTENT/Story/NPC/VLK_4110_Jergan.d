@@ -19,7 +19,7 @@ instance VLK_4110_Jergan (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------			
-	EquipItem			(self, ItMw_2h_Sld_Axe);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

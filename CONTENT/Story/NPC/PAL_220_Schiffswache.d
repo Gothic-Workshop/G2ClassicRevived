@@ -16,7 +16,7 @@ instance Pal_220_Schiffswache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1H_Pal_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_PALADIN_02);
 		
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

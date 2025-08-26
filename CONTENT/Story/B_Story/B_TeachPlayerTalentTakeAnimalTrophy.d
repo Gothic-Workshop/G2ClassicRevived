@@ -55,24 +55,10 @@ func int B_TeachPlayerTalentTakeAnimalTrophy (var C_NPC slf, var C_NPC oth, var 
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove plates from dead minecrawler.");};
 	if (trophy == TROPHY_DrgSnapperHorn)	{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DrgSnapperHorn] 	= TRUE;	
 	B_LogEntry (TOPIC_TalentAnimalTrophy,"...remove horn from dead dragon snapper.");};
-	if (trophy == TROPHY_DragonScale) 		{	
-												PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;	
-												CreateInvItems (Swampdragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Rockdragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Firedragon, ItAt_DragonScale, 12);	
-												CreateInvItems (Icedragon, 	ItAt_DragonScale, 12);
-												
-												B_LogEntry (TOPIC_TalentAnimalTrophy,"... remove dragon scales from the hide of dead dragons.");	
-											};
-	if (trophy == TROPHY_DragonBlood)		{	
-												PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;	
-												CreateInvItems (Swampdragon, ItAt_DragonBlood, 2);	
-												CreateInvItems (Rockdragon, ItAt_DragonBlood, 2);	
-												CreateInvItems (Firedragon, ItAt_DragonBlood, 2);	
-												CreateInvItems (Icedragon, ItAt_DragonBlood, 2);	
-											
-												B_LogEntry (TOPIC_TalentAnimalTrophy,"... collect the blood from a dead dragon.");
-											};
+	if (trophy == TROPHY_DragonScale) 		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonScale] 		= TRUE;	
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"... remove dragon scales from the hide of dead dragons.");};
+	if (trophy == TROPHY_DragonBlood)		{	PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_DragonBlood] 		= TRUE;	
+	B_LogEntry (TOPIC_TalentAnimalTrophy,"... collect the blood from a dead dragon.");};
 
 	PrintScreen			(PRINT_LearnTakeAnimalTrophy, -1, -1, FONT_Screen, 2);
 	

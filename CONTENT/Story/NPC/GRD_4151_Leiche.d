@@ -20,7 +20,8 @@ instance GRD_4151_Leiche (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
+	// ------ Equippte Waffen ------	
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_04); 															
 	
 	
 	// ------ Inventory ------

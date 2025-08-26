@@ -594,7 +594,8 @@ instance DIA_Lares_GoNow (C_INFO)
 func int DIA_Lares_GoNow_Condition ()
 {	
 	if (Lares_WayToOnar == TRUE)
-	 	&& (Kapitel < 3)
+	&& ((Kapitel < 3) && (hero.guild != GIL_SLD))
+	&& Hlp_StrCmp 	 (Npc_GetNearestWP(self),"NW_CITY_HABOUR_02_B")
 			{
 				return TRUE;
 			};
@@ -620,6 +621,37 @@ func void DIA_Lares_GoNow_Info ()
 	};
 };
 
+///////////////////////////////////////////////////////////////////////
+//	Info OnarFarmGuide Stop
+///////////////////////////////////////////////////////////////////////
+instance DIA_Addon_Lares_OnarFarmGuide		(C_INFO)
+{
+	npc		 = 	SLD_449_Lares;
+	nr		 = 	5;
+	condition	 = 	DIA_Addon_Lares_OnarFarmGuide_Condition;
+	information	 = 	DIA_Addon_Lares_OnarFarmGuide_Info;
+	important	 = 	TRUE;
+};
+
+func int DIA_Addon_Lares_OnarFarmGuide_Condition ()
+{
+	if (LaresGuide_ZuOnar == TRUE) 
+	&& Hlp_StrCmp  (Npc_GetNearestWP(self),"NW_CITY_TO_FOREST_11")
+		{
+			return TRUE;
+		};
+};
+
+func void DIA_Addon_Lares_OnarFarmGuide_Info ()
+{	
+	AI_UnequipArmor	(self);
+	AI_EquipArmor 	(self, ITAR_REVIVED_ORG_H);
+
+	AI_Output	(self, other, "DIA_Addon_Lares_ArrivedPortalInterWeiter_09_00"); //What's wrong? Are you still holding up?
+	
+	AI_Output	(other, self, "DIA_Addon_Lares_PortalInterWEITER_15_01"); //(irritated) Yeah, yeah.
+};
+
 // ************************************************************
 // 			  					Angekommen 
 // ************************************************************
@@ -635,7 +667,7 @@ instance DIA_Lares_GUIDE		(C_INFO)
 func int DIA_Lares_GUIDE_Condition ()
 {	
 	if (LaresGuide_ZuOnar == TRUE)
-	&& Hlp_StrCmp 	 (Npc_GetNearestWP(self),"NW_TAVERNE_BIGFARM_05")
+	&& Hlp_StrCmp 	 (Npc_GetNearestWP(self),"NW_BIGFARM_LAKE_03")
 	{
 		return TRUE;
 	};
@@ -653,9 +685,14 @@ func void DIA_Lares_GUIDE_Info ()
 	AI_Output (self, other, "DIA_Lares_GUIDE_09_02"); //So, the rest of the way you can manage alone. I have to get back to the city, I've got a few things to take care of...
 	AI_Output (self, other, "DIA_Lares_GUIDE_09_03"); //Just follow this road here, and remember - stand up for yourself and don't take any crap, and it'll be smooth sailing.
 	
+	AI_Output (self, other, "DIA_Addon_Lares_HaltsMaul_09_01"); //I'll see you later, down at the harbor.
+
 	AI_StopProcessInfos (self);
 	
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
+
+	AI_UnequipArmor	(self);
+	AI_EquipArmor 	(self, ITAR_Vlk_L);
 	
 	Npc_ExchangeRoutine (self,"START");
 	LaresGuide_ZuOnar = LOG_SUCCESS; //Joly: schluss mit Onar guide

@@ -17,7 +17,7 @@ instance SLD_816_Fester (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem (self, ItMw_1h_Sld_Axe);
+	EquipItem (self, ITMW_REVIVED_1H_AXE_02);
 	EquipItem (self, ItRw_Sld_Bow);
 	CreateInvItems (self, itrw_arrow, 10);
 

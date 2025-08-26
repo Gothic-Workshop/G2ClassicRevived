@@ -29,7 +29,7 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 	fight_tactic	=	FAI_HUMAN_STRONG;	
 	B_SetFightSkills (self, 90); 
 	
-	EquipItem	(self, ITMW_REVIVED_KINGBLADE);
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_LIGHT_04);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
@@ -54,7 +54,7 @@ instance DMT_TemplarAmbientL (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesToChapter (self, 3);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_SKE);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
 };
 
 instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
@@ -63,7 +63,7 @@ instance DMT_TemplarAmbientM (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesToChapter (self, 4);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_SKE);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL_02);	
 };
 
 instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht an (alle NSCs), VORSICHT, nur bedacht in bewohnte Gebiete setzten.
@@ -72,5 +72,5 @@ instance DMT_TemplarAmbientH (Default_AmbientTemplar)	//Joly: greift auf Sicht a
 	B_SetAttributesToChapter (self, 5);
 	
 	// ------ visuals ------
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_TPL_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_PSI_TPL);	
 };

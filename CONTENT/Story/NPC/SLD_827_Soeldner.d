@@ -16,7 +16,7 @@ instance SLD_827_Soeldner (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_2h_Sld_Axe);
+	EquipItem			(self, ITMW_REVIVED_2H_AXE_OLD_01);
 
 
 	// ------ Inventory ------
@@ -41,6 +41,6 @@ instance SLD_827_Soeldner (Npc_Default)
 FUNC VOID Rtn_Start_827 ()
 {
 	TA_Smalltalk 		(07,02,20,58,"NW_BIGFARM_ALLEE_HUT");
-    TA_Sit_Chair 		(20,58,07,02,"NW_BIGFARM_MERCHUT_04");
+    TA_Sit_Bench 		(20,58,07,02,"NW_BIGFARM_HUT_BENCH");
 };
 

@@ -1146,7 +1146,7 @@ INSTANCE ITAR_DJG_L (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"REV_DJGL.3ds";
+	visual 					=	"ItAr_Djg_L.3ds";
 	visual_change 			=	"Armor_Djg_L.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
@@ -1186,7 +1186,7 @@ INSTANCE ITAR_DJG_M (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"REV_DJGM.3ds";
+	visual 					=	"ItAr_Djg_M.3ds";
 	visual_change 			=	"Armor_Djg_M.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;
@@ -1226,7 +1226,7 @@ INSTANCE ITAR_DJG_H (C_Item)
 
 	wear 					=	WEAR_TORSO;
 
-	visual 					=	"REV_DJGH.3ds";
+	visual 					=	"ItAr_Djg_H.3ds";
 	visual_change 			=	"Armor_Djg_H.asc";
 	visual_skin 			=	0;
 	material 				=	MAT_LEATHER;

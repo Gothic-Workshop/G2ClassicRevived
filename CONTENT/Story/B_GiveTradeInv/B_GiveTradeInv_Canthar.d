@@ -18,11 +18,20 @@ FUNC VOID B_GiveTradeInv_Canthar (var C_NPC slf)
 		CreateInvItems (slf, ItMi_Saw, 1);
 		
 		// ------ Waffen ------
-		CreateInvItems (slf, ItMw_Nagelkeule, 1); 
-		CreateInvItems (slf, ItMw_ShortSword5, 1); 
-		CreateInvItems (slf, ItMw_Hellebarde, 1); 
-		CreateInvItems (slf, ItMw_Piratensaebel, 1); 
-		CreateInvItems (slf, ItMw_Schwert2, 2); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_SICKLE_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_POKER_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_SCYTHE_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_HATCHET_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_SLEDGEHAMMER_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_CLUB_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_CLUB_02, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_NAILMACE_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_WALKINGSTICK_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_BRANCH_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_KNIFE_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_DAGGER_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_DAGGER_02, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_SWORD_07, 1); 
 		
 		CreateInvItems (slf, ItAm_Prot_Mage_01, 1); 
 
@@ -44,13 +53,11 @@ FUNC VOID B_GiveTradeInv_Canthar (var C_NPC slf)
 	{
 		CreateInvItems (slf, ItMi_Gold, 100); 
 		
-		CreateInvItems (slf, ItMw_Spicker, 1); 
-		CreateInvItems (slf, ItMw_Bartaxt, 1); 
-		CreateInvItems (slf, ItMw_Zweihaender3, 1); 
-		CreateInvItems (slf, ItMw_Rabenschnabel, 1); 
-		CreateInvItems (slf, ItMw_Streitkolben, 1); 
-		CreateInvItems (slf, ItMw_Krummschwert, 1); 
-		CreateInvItems (slf, ItMw_Sturmbringer, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_STAFF_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_BALL_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_GOOD_01, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_MAGESTAFF_BLADES_01, 1); 
 			
 		Canthar_ItemsGiven_Chapter_3 = TRUE;
 	};

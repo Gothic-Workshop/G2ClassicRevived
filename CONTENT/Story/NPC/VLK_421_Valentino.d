@@ -16,7 +16,7 @@ instance VLK_421_Valentino (Npc_Default)
 	fight_tactic		= FAI_HUMAN_NORMAL;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem (self, ItMw_1h_Vlk_Mace); 
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_VALENTINO); 
 		
 	// ------ Inventory ------
 	CreateInvItems (self, ItMi_Gold, 200);

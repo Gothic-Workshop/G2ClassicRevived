@@ -20,7 +20,7 @@ instance BDT_1031_Fluechtling (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG ;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_SLD_Sword); 
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01); 
 	
 	
 	// ------ Inventory ------

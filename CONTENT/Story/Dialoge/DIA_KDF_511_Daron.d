@@ -371,10 +371,9 @@ instance DIA_Addon_Daron_GuildHelp		(C_INFO)
 func int DIA_Addon_Daron_GuildHelp_Condition ()
 {
 	if (MIS_Addon_Vatras_Go2Daron == LOG_RUNNING)
-	&& (Npc_KnowsInfo (other, DIA_Daron_Stadt))
-		{
-			return TRUE;
-		};
+	{
+		return TRUE;
+	};
 };
 
 func void DIA_Addon_Daron_GuildHelp_Info ()
@@ -505,6 +504,7 @@ func void DIA_Addon_Daron_ReturnedStatue_Info ()
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
+	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 };
 
 // ************************************************************

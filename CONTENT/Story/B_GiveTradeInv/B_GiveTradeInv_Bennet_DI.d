@@ -8,11 +8,10 @@ FUNC VOID B_GiveTradeInv_Bennet_DI (var C_NPC slf)
 		CreateInvItems (slf, ItRw_Arrow, 140); 
 		CreateInvItems (slf, ItRw_Bolt, 140); 
 		
-		CreateInvItems (slf, ItMw_ElBastardo, 1);
-		CreateInvItems (slf, ItMw_Folteraxt, 1); 
-		CreateInvItems (slf, ItMw_Zweihaender4, 1); 
-		CreateInvItems (slf, ItMw_Barbarenstreitaxt, 1); 
-		CreateInvItems (slf, ItMw_Berserkeraxt, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_03, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_1H_SWORD_BASTARD_04, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_SWORD_HEAVY_04, 1); 
+		CreateInvItems (slf, ITMW_REVIVED_2H_AXE_HEAVY_04, 1); 
 		
 		//Joly: ERZROHLING!!  NICHT ZU VIELE !!!
 		//***********************************

@@ -86,40 +86,13 @@ func void DIA_Gaan_WALD_Info ()
 	AI_Output			(self, other, "DIA_Gaan_WALD_03_04"); //Now that the orcs are roaming all over the place, you have to be a bit careful.
 	AI_Output			(self, other, "DIA_Gaan_WALD_03_05"); //I don't want to have to drag you to the herb witch.
 
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Info sagitta
-///////////////////////////////////////////////////////////////////////
-instance DIA_Gaan_SAGITTA		(C_INFO)
-{
-	npc		 = 	BAU_961_Gaan;
-	nr		 = 	7;
-	condition	 = 	DIA_Gaan_SAGITTA_Condition;
-	information	 = 	DIA_Gaan_SAGITTA_Info;
-
-	description	 = 	"Herb witch?";
-};
-
-func int DIA_Gaan_SAGITTA_Condition ()
-{
-	if (Npc_KnowsInfo(other, DIA_Gaan_WALD))
-		{
-				return TRUE;
-		};
-};
-
-func void DIA_Gaan_SAGITTA_Info ()
-{
 	AI_Output			(other, self, "DIA_Gaan_SAGITTA_15_00"); //Herb witch?
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_01"); //Her name is Sagitta. She is the healer for the farmers and the other people who live outside the harbor city.
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_02"); //A truly curious female.
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_03"); //No one really likes going to her and everybody enjoys gossiping about her.
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_04"); //But if you're sick, you won't find better help than Sagitta and her kitchen full of healing herbs.
 	AI_Output			(self, other, "DIA_Gaan_SAGITTA_03_05"); //You'll find her in the strip of woods behind Sekob's farm.
-
 };
-
 
 // ************************************************************
 // 			  			  ASK TEACHER 
@@ -230,6 +203,10 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 
 			Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
 		
+			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_ReptileSkin] == FALSE)
+			{ 
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Reptile skins",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_ReptileSkin)),  DIA_Gaan_TEACHHUNTING_ReptileSkin);
+			};
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_Teeth] == FALSE)
 			{ 
 				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Remove teeth",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_Teeth)),  DIA_Gaan_TEACHHUNTING_Teeth);
@@ -253,7 +230,7 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 			if (PLAYER_TALENT_TAKEANIMALTROPHY [TROPHY_DrgSnapperHorn] == FALSE)
 			&& (MIS_Gaan_Snapper == LOG_SUCCESS)
 			{ 
-				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Daragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
+				Info_AddChoice	(DIA_Gaan_TEACHHUNTING, B_BuildLearnString ("Dragon snapper horn",B_GetLearnCostTalent (other,NPC_TALENT_TAKEANIMALTROPHY, TROPHY_DrgSnapperHorn)),  DIA_Gaan_TEACHHUNTING_DrgSnapperHorn);
 			};
 		}
 		else
@@ -265,6 +242,18 @@ func void DIA_Gaan_TEACHHUNTING_Info ()
 func void DIA_Gaan_TEACHHUNTING_BACK()
 {
 	Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
+};
+
+// ------ Reptile Skin ------
+func void DIA_Gaan_TEACHHUNTING_ReptileSkin()
+{
+	if (B_TeachPlayerTalentTakeAnimalTrophy (self, other, TROPHY_ReptileSkin))
+		{
+		};
+
+		Info_ClearChoices	(DIA_Gaan_TEACHHUNTING);
+		Info_AddChoice		(DIA_Gaan_TEACHHUNTING, DIALOG_BACK, DIA_Gaan_TEACHHUNTING_BACK);
+		
 };
 
 // ------ Klauen hacken ------
@@ -517,7 +506,10 @@ instance DIA_Gaan_MONSTERTOT		(C_INFO)
 
 func int DIA_Gaan_MONSTERTOT_Condition ()
 {
-	if 	((Npc_IsDead(Gaans_Snapper))== TRUE)
+	if 	(
+		(Npc_KnowsInfo(other, DIA_Gaan_MONSTER))
+		&&((Npc_IsDead(Gaans_Snapper)) == TRUE)
+		)
 			{
 					return TRUE;
 			};
@@ -540,6 +532,93 @@ func void DIA_Gaan_MONSTERTOT_Info ()
 	MIS_Gaan_Snapper = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Gaan_WaldSnapper);
 	AI_StopProcessInfos (self);
+};
+
+
+// *******************************************************
+//				 		SellSkin
+// *******************************************************	
+
+
+instance DIA_Gaan_SellSkin (C_INFO)
+{
+	npc			= BAU_961_Gaan;
+	nr 			= 600;
+	condition	= DIA_Gaan_SellSkin_Condition;
+	information	= DIA_Gaan_SellSkin_Info;
+	permanent	= TRUE;
+	description	= "I've got a few skins for you ...";
+};
+func int DIA_Gaan_SellSkin_Condition ()
+{
+	if (Gaan_TeachPlayer == TRUE)
+	&& (PLAYER_TALENT_TAKEANIMALTROPHY[TROPHY_ReptileSkin] == TRUE)
+	{
+		return TRUE;
+	};
+};
+func void DIA_Gaan_SellSkin_Info ()
+{
+	AI_Output (other, self, "DIA_Bosper_SellFur_15_00"); //I've got a few skins for you ...
+	
+	if (Npc_HasItems(other, itat_LurkerSkin) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_DRAGONSNAPPER) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_RAZOR) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_BITER) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_WARAN) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_FIREWARAN) > 0)
+	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_ALLIGATOR) > 0)
+	{
+
+		if (Npc_HasItems(other, itat_LurkerSkin) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, itat_LurkerSkin) * Value_ReptileSkin) );
+			B_GiveInvItems(other, self, itat_LurkerSkin, Npc_HasItems(other, itat_LurkerSkin));
+		};
+		
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER) * REV_VALUE_SNAPPERSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_SNAPPER, Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_DRAGONSNAPPER) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_DRAGONSNAPPER) * REV_VALUE_DRAGONSNAPPERSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_DRAGONSNAPPER, Npc_HasItems(other, ITAT_REVIVED_SKIN_DRAGONSNAPPER));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_RAZOR) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_RAZOR) * REV_VALUE_RAZORSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_RAZOR, Npc_HasItems(other, ITAT_REVIVED_SKIN_RAZOR));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_BITER) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_BITER) * REV_VALUE_BITERSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_BITER, Npc_HasItems(other, ITAT_REVIVED_SKIN_BITER));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_WARAN) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_WARAN) * REV_VALUE_WARANSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_WARAN, Npc_HasItems(other, ITAT_REVIVED_SKIN_WARAN));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_FIREWARAN) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_FIREWARAN) * REV_VALUE_FIREWARANSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_FIREWARAN, Npc_HasItems(other, ITAT_REVIVED_SKIN_FIREWARAN));
+		};
+		if (Npc_HasItems(other, ITAT_REVIVED_SKIN_ALLIGATOR) > 0)
+		{
+			B_GiveInvItems(self, other, ITMI_GOLD, (Npc_HasItems(other, ITAT_REVIVED_SKIN_ALLIGATOR) * REV_VALUE_ALLIGATORSKIN) );
+			B_GiveInvItems(other, self, ITAT_REVIVED_SKIN_ALLIGATOR, Npc_HasItems(other, ITAT_REVIVED_SKIN_ALLIGATOR));
+		};
+		
+		AI_Output(self,other,"DIA_Gaan_PayTeacher_03_01"); //Thanks. Now you're talking.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Gaan_AskTeacher_03_02"); //Pelts and other trophies bring a lot of money in the market.
+	};
 };
 
 

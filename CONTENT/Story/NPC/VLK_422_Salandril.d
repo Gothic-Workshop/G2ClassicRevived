@@ -17,8 +17,8 @@ instance VLK_422_Salandril (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
-	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItMw_1h_VLK_Dagger); 
+	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_02);
 	EquipItem	(self, ITHE_REVIVED_SPECTACLES_02); 
 	
 	// ------ Inventory ------

@@ -85,7 +85,7 @@ INSTANCE DIA_Jergan_Burg   (C_INFO)
 FUNC INT DIA_Jergan_Burg_Condition()
 {	
 	if Npc_KnowsInfo (other,DIA_Jergan_Hallo)
-	&& (Npc_GetDistToWP (self, "OW_STAND_JERGAN") <= 1000)
+	&& (Npc_GetDistToWP (self, "OW_STAND_SCOUT") <= 1000)
 	{
 		return TRUE;
 	};

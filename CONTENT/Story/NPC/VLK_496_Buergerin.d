@@ -19,7 +19,7 @@ instance VLK_496_Buergerin (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	EquipItem (self, ItMw_1h_Vlk_Dagger);
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 	// ------ visuals ------																						
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", FaceBabe_N_OldBrown, BodyTex_N, ITAR_VlkBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 

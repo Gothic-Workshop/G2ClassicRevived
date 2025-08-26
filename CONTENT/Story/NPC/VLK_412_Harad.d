@@ -16,7 +16,7 @@ instance VLK_412_Harad (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1H_Mace_L_04);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
 	
 	// ------ Inventory ------
 	// Händler

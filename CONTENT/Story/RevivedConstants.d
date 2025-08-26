@@ -31,8 +31,8 @@ const string PRINT_DEATH_MESSAGE_4		=	"You are finally free.";
 
 
 // Eating Bonus Messages
-const string PRINT_Eat_Apple1				= "You feel refreshed.";
-const string PRINT_Eat_Apple2				= "Tastes juicy and fresh.";
+const string PRINT_Eat_Apple1				= "Tastes juicy and fresh.";
+const string PRINT_Eat_Apple2				= "You feel refreshed.";
 const string PRINT_Eat_Apple3				= "You feel well and strong!";
 const string PRINT_Eat_SourApple1			= "The taste sparks your curiosity.";
 const string PRINT_Eat_SourApple2			= "You feel energized.";
@@ -40,8 +40,8 @@ const string PRINT_Eat_SourApple3			= "You feel agile and alert!";
 const string PRINT_Eat_Pear1				= "Sweet and mellow taste.";
 const string PRINT_Eat_Pear2				= "You feel a strange clarity.";
 const string PRINT_Eat_Pear3				= "You feel open to new knowledge!";
-const string PRINT_Eat_MPMushroom1			= "You feel a spark of energy.";
-const string PRINT_Eat_MPMushroom2			= "The mushroom tingles with magic power.";
+const string PRINT_Eat_MPMushroom1			= "The mushroom tingles with magic power.";
+const string PRINT_Eat_MPMushroom2			= "You feel a spark of energy.";
 const string PRINT_Eat_MPMushroom3			= "Your mind clears and mana flows!";
 const string PRINT_Eat_HPMushroom1			= "Earthy and rich in taste.";
 const string PRINT_Eat_HPMushroom2			= "The hearty flavor revitalizes you.";
@@ -49,16 +49,31 @@ const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
 
 
 // Items
-const string NAME_RaiseStrDex		=	"Strength and Dexterity +";
-const string NAME_RaiseHPMP			=	"Hitpoints and Mana +";
-const string NAME_Addon_BeArArcher		= "Together with Archer's Suit +";
+const string NAME_OrcWeapon				=	"Orc Weapon";
+const string NAME_BlessedWeapon1H		=	"One-Handed Weapon (Blessed)";
+const string NAME_BlessedWeapon2H		=	"Two-Handed Weapon (Blessed)";
+const string NAME_TaintedWeapon1H		=	"One-Handed Weapon (Tainted)";
+const string NAME_TaintedWeapon2H		=	"Two-Handed Weapon (Tainted)";
 
-const string PRINT_GotFood					= "Package was filled with food";
+const string NAME_HP_needed				=	"Mana required";
+
+const string NAME_Penalty_HP			=	"Hitpoint penalty";
+const string NAME_Penalty_Mana			=	"Mana penalty";
+
+const string NAME_Prot_Edge				=	"Slash Protection";
+const string NAME_Prot_Blunt			=	"Blunt Protection";
+
+const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
+const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
+const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
+
+const string PRINT_GotFood				=	"Package was filled with food";
 
 
 // Spells
-const string NAME_SPL_TeleportNC			= "Teleport to New Camp";
-const string NAME_SPL_TeleportPsi			= "Teleport to Brotherhood";
+// You have to change it in Text.d too...
+const string NAME_SPL_TeleportNC		= "Teleport to New Camp";
+const string NAME_SPL_TeleportPsi		= "Teleport to Brotherhood";
 const string NAME_SPL_TeleportOrc		= "Orc Teleport";
 
 const string NAME_SPL_TrfMeatbug		= "Transform into Meatbug";
@@ -78,17 +93,17 @@ CONST STRING MOBNAME_PILLAR					= "Pillar";
 
 CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
 
+CONST STRING MOBNAME_STOMPER				= "Stomper";
+
 CONST STRING MOBNAME_VINEYARD				= "Grapevine";
-
-CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
-
 CONST STRING MOBNAME_ORE_DEPLETED			= "";
 
 
+CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
 CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
 
 
-// Adanos Shrine
+// Shrines
 
 const string NAME_PRAYADANOS_GIVENOTHING			= "I will pray and offer nothing.";
 const string NAME_PRAYADANOS_GIVELP1				= "I will pray and offer 1 learn point.";
@@ -106,8 +121,9 @@ const string Print_PRAYADANOS_BlessNone				= "Adanos thanks you for your prayer.
 const string Print_PRAYADANOS_BlessCant				= "Adanos can't take your offering.";
 const string PRINT_BlessMANA_MAX					= "Adanos grants you: Mana + ";
 
+const string PurifySword							= "Purify Sword (Tears of Innos)";
 
-const string Print_PRAYBELIAR_GETLP				= "Beliar grants you 1 learn point.";
+const string Print_PRAYBELIAR_GETLP					= "Beliar grants you 1 learn point.";
 
 
 // Cooking
@@ -151,6 +167,22 @@ var int EnterAM_Kapitel3;
 var int EnterAM_Kapitel4;
 var int EnterAM_Kapitel5;
 
+const int FREEMINE_ZEN = 6;
+var int EnteredFreeMine;
+var int EnterFM_Kapitel1;
+var int EnterFM_Kapitel2;
+var int EnterFM_Kapitel3;
+var int EnterFM_Kapitel4;
+var int EnterFM_Kapitel5;
+
+const int ORCGRAVEYARD_ZEN = 7;
+var int EnteredOrcGraveyard;
+var int EnterOG_Kapitel1;
+var int EnterOG_Kapitel2;
+var int EnterOG_Kapitel3;
+var int EnterOG_Kapitel4;
+var int EnterOG_Kapitel5;
+
 
 // ***************
 // AI Constants
@@ -166,6 +198,16 @@ const int Face_N_DelaCroix			= 	168;
 
 const int ID_MINECRAWLERQUEEN		=	65;
 const int FAI_MINECRAWLERQUEEN		=	47;
+
+const int ID_PANTHER				=	66;
+
+const int ID_FANATIC				=	67;
+
+
+// ***************
+// Guilds
+// ***************
+const int GIL_FANATIC				=	53;
 
 
 
@@ -242,6 +284,7 @@ var int BilgotInKhorinis;
 var int DragonHunt_OriginalPass;
 var int DragonHunt_SecondPass;
 
+var int DJG_KnowsAbout_Puryfing;
 
 var int LesterKeyStolen;
 var int DIA_Peck_BUYARMOR_perm;
@@ -340,12 +383,11 @@ const int	Value_Joint3			=	20;
 // ***************
 
 // Remember to comment SPL_Reserved_ in CONSTANTS.d
-
 const int	SPL_TrfMeatbug				= 64;
 
-const int 	SPL_TeleportOrc				= 90;
-const int 	SPL_TeleportNC				= 91;
-const int 	SPL_TeleportPsi				= 92;
+const int 	SPL_TeleportNC				= 90;
+const int 	SPL_TeleportPsi				= 91;
+const int 	SPL_TeleportOrc				= 92;
 
 
 // ***************

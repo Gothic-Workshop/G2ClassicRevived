@@ -16,7 +16,7 @@ instance DJG_702_Rod (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1h_Sld_Sword);
+	EquipItem			(self, ITMW_REVIVED_2H_SWORD_ROD);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

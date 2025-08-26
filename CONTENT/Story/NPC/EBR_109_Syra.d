@@ -15,7 +15,7 @@ instance Vlk_2001_Syra (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	//EquipItem			(self, ItMw_1h_Vlk_Dagger);
+	//EquipItem			(self, ITMW_REVIVED_1H_DAGGER_01);
 	//EquipItem			(self, ItRw_Crossbow_L_01);
 	
 	// ------ Inventory ------

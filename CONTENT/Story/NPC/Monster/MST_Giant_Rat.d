@@ -150,5 +150,6 @@ INSTANCE YRat	(Mst_Default_Giant_Rat)
 	B_SetVisuals_Giant_Rat();
 	Mdl_SetModelScale(self, 0.5, 0.5, 0.5);
 	Npc_SetToFistMode(self);
+	Npc_RemoveInvItem (self, ITFO_REVIVED_MEATBUG);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };

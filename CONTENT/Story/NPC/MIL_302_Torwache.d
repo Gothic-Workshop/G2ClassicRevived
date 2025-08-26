@@ -16,7 +16,7 @@ instance Mil_302_Torwache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1h_Mil_Sword);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	
 	// ------ Inventory ------
@@ -24,7 +24,7 @@ instance Mil_302_Torwache (Npc_Default)
 
 		
 	// ------ visuals ------																		
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal05, BodyTex_N, ITAR_REVIVED_GRD_M);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Normal05, BodyTex_N, ITAR_REVIVED_GRD_H);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
@@ -40,6 +40,6 @@ instance Mil_302_Torwache (Npc_Default)
 
 FUNC VOID Rtn_Start_302 ()
 {	
-	TA_Guard_Passage	(08,00,23,00,"NW_CITY_GUARDOFFICE_GUARD_01");
-    TA_Guard_Passage	(23,00,08,00,"NW_CITY_GUARDOFFICE_GUARD_01");
+	TA_Guard_Passage	(08,00,23,00,"NW_CITY_UPTOWN_JUDGE_01");
+    TA_Guard_Passage	(23,00,08,00,"NW_CITY_UPTOWN_JUDGE_01");
 };

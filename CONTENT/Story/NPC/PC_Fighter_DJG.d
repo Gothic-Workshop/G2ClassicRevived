@@ -19,9 +19,9 @@ INSTANCE PC_Fighter_DJG (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
-	// ------ Equippte Waffen ------																	
-	EquipItem			(self, itmw_barbarenstreitaxt);
-	EquipItem			(self, ItRw_Crossbow_M_01);	
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_2H_AXE_GORN);
+	
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_02, 6);									
 	CreateInvItems (self, ItMi_OldCoin, 1);	//Joly: damit man seine Leiche findet, wenn er im Kampf stirbt!									
 
@@ -63,8 +63,8 @@ FUNC VOID Rtn_Start_704 ()
 
 FUNC VOID Rtn_RunToRockRuinBridge_704 ()
 {	
-	TA_RunToWP		(08,00,23,00,"LOCATION_19_01");
-    TA_RunToWP		(23,00,08,00,"LOCATION_19_01");
+	TA_RunToWP		(08,00,23,00,"LOCATION_19_03_PATH_RUIN10");
+    TA_RunToWP		(23,00,08,00,"LOCATION_19_03_PATH_RUIN10");
 };
 
 FUNC VOID Rtn_Tot_704 ()

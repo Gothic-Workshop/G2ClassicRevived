@@ -21,8 +21,8 @@ INSTANCE PC_Mage_OW (Npc_Default)
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
-	// ------ Equippte Waffen ------																	
-	
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_2H_STAFF_NOVICE_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

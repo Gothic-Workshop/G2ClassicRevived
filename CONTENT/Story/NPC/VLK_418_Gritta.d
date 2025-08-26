@@ -21,6 +21,7 @@ instance VLK_418_Gritta (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
 																		
 		
 	// ------ Inventory ------

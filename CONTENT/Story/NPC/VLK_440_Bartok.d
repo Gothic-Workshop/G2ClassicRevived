@@ -10,13 +10,13 @@ instance VLK_440_Bartok (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);
+	B_SetAttributesToChapter (self, 6);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem	(self, ItRw_Bow_M_03); 
+	EquipItem	(self, ITRW_REVIVED_BOW_LONG_03); 
 	EquipItem	(self, ItMW_Addon_Hacker_1h_01); 
 	
 	// ------ Inventory ------

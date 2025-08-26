@@ -709,9 +709,22 @@ func void DIA_Lothar_OWRunning_Info ()
 	AI_StopProcessInfos (self);
 };
 
+
+// ***************************************************************
+//							Oldworld
+// ***************************************************************
+func void DIA_Lothar_DragonsProof()
+{
+	AI_Output (self ,other, "DIA_Lothar_Add_01_60"); //So there really are dragons?
+	AI_Output (self ,other, "DIA_Lothar_Add_01_61"); //I have done you an injustice. I shall pray to Innos for forgiveness for my behavior.
+	
+	AI_StopProcessInfos (self);
+};
+
 // ***************************************************************
 //							Oldworld Running UND Brief
 // ***************************************************************
+
 instance DIA_Lothar_OWRunningBrief (C_INFO)
 {
 	npc			 = 	Pal_203_Lothar;
@@ -732,10 +745,32 @@ func int DIA_Lothar_OWRunningBrief_Condition ()
 func void DIA_Lothar_OWRunningBrief_Info ()
 {
 	AI_Output (other, self, "DIA_Lothar_Add_15_59"); //I have the proof! Here is the letter from Commander Garond!
-	AI_Output (self ,other, "DIA_Lothar_Add_01_60"); //So there really are dragons?
-	AI_Output (self ,other, "DIA_Lothar_Add_01_61"); //I have done you an injustice. I shall pray to Innos for forgiveness for my behavior.
-	
-	AI_StopProcessInfos (self);
+
+	DIA_Lothar_DragonsProof();
+};
+
+// ***************************************************************
+//							Oldworld Success Brief
+// ***************************************************************
+instance DIA_Lothar_OWSuccessBrief (C_INFO)
+{
+	npc			 = 	Pal_203_Lothar;
+	nr			 = 	2;
+	condition	 = 	DIA_Lothar_OWSuccessBrief_Condition;
+	information	 = 	DIA_Lothar_OWSuccessBrief_Info;
+	permanent    =  FALSE;
+	important	 = 	TRUE;
+};
+func int DIA_Lothar_OWSuccessBrief_Condition ()
+{	
+	if (MIS_OLDWORLD == LOG_SUCCESS)
+	{
+		return TRUE;
+	};
+};
+func void DIA_Lothar_OWSuccessBrief_Info ()
+{
+	DIA_Lothar_DragonsProof();
 };
 
 // ***************************************************************

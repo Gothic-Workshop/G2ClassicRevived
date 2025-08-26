@@ -19,7 +19,7 @@ instance Vlk_424_Alwin (Npc_Default) //Metzger
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_1h_Vlk_Axe);
+	EquipItem (self, ITMW_REVIVED_1H_AXE_01);
 	
 	
 	// ------ Inventory ------

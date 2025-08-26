@@ -16,7 +16,7 @@ instance GRD_4106_Dobar (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ItMw_1H_Vlk_Axe);
+	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -67,6 +67,12 @@ FUNC VOID Rtn_Start_4106 ()
     TA_Smith_Cool			(19,30,20,00,"OCC_STABLE_SMITHY"	);
     
     TA_Sleep				(20,00,08,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED7");
+};
+
+FUNC VOID Rtn_OBSESSED_4106 ()
+{	
+	TA_Sleep		(08,00,23,00,"OW_PATH_306");
+    TA_Sleep		(23,00,08,00,"OW_PATH_306");
 };
 
 FUNC VOID Rtn_Tot_4106 () 

@@ -16,7 +16,7 @@ instance GRD_4107_Parlaf (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_LONGSWORD);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_LONG_01);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -42,6 +42,12 @@ FUNC VOID Rtn_Start_4107 ()
 {	
 	TA_Smith_Sharp			(08,00,20,00,"OCC_STABLE_LEFT_FRONT");
     TA_Sleep				(20,00,08,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED1");
+};
+
+FUNC VOID Rtn_OBSESSED_4107 ()
+{	
+	TA_Sleep		(08,00,23,00,"OW_PATH_3_07");
+    TA_Sleep		(23,00,08,00,"OW_PATH_3_07");
 };
 
 FUNC VOID Rtn_Tot_4107 ()

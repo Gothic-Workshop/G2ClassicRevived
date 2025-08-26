@@ -22,7 +22,7 @@ instance GRD_4112_Den (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem (self, ItMw_1H_Vlk_Dagger);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_02);
 	
 	// ------ Inventory ------
 	CreateInvItems (self, ItMi_Gold, 200);

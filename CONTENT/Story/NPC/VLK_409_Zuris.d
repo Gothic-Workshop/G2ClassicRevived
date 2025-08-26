@@ -16,7 +16,7 @@ instance VLK_409_Zuris (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ItMw_1H_VLK_DAGGER);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_01);
 	
 	// ------ Inventory ------
 	// Händler
