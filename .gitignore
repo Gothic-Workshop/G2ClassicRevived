@@ -1,4 +1,6 @@
 .dls/*
+
 *.DAT
 *.BIN
 *.CSL
+*.INF
