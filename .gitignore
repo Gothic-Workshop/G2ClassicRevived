@@ -1,2 +1,4 @@
 .dls/*
-_compiled/*
+*.DAT
+*.BIN
+*.CSL
