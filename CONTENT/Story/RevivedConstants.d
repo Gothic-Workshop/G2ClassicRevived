@@ -50,18 +50,26 @@ const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
 
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";
+const string NAME_HolyWeapon1H			=	"One-Handed Weapon (Holy)";
+const string NAME_HolyWeapon2H			=	"Two-Handed Weapon (Holy)";
 const string NAME_BlessedWeapon1H		=	"One-Handed Weapon (Blessed)";
 const string NAME_BlessedWeapon2H		=	"Two-Handed Weapon (Blessed)";
 const string NAME_TaintedWeapon1H		=	"One-Handed Weapon (Tainted)";
 const string NAME_TaintedWeapon2H		=	"Two-Handed Weapon (Tainted)";
 
-const string NAME_HP_needed				=	"Mana required";
+const string NAME_HP_needed				=	"Hitpoints required";
 
 const string NAME_Penalty_HP			=	"Hitpoint penalty";
 const string NAME_Penalty_Mana			=	"Mana penalty";
 
 const string NAME_Prot_Edge				=	"Slash Protection";
 const string NAME_Prot_Blunt			=	"Blunt Protection";
+
+const string NAME_Damage_Edge			=	"Slash Damage";
+const string NAME_Damage_Blunt			=	"Blunt Damage";
+const string NAME_Damage_Point			=	"Point Damage";
+const string NAME_Damage_Magic			=	"Magic Damage";
+const string NAME_Damage_Fire			=	"Fire Damage";
 
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
 const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
@@ -96,15 +104,32 @@ CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
 CONST STRING MOBNAME_STOMPER				= "Stomper";
 
 CONST STRING MOBNAME_VINEYARD				= "Grapevine";
-CONST STRING MOBNAME_ORE_DEPLETED			= "";
+CONST STRING MOBNAME_ORE_DEPLETED			= "Depleted Ore";
 
 
 CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
 CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
 
 
-// Shrines
+// Graves
+CONST STRING MOBNAME_GRAVE_REVIVED_01		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_02		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_03		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_04		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_05		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_06		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_07		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_08		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_09		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_10		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_11		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_12		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_13		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_14		= "";
+CONST STRING MOBNAME_GRAVE_REVIVED_15		= "";
 
+
+// Shrines
 const string NAME_PRAYADANOS_GIVENOTHING			= "I will pray and offer nothing.";
 const string NAME_PRAYADANOS_GIVELP1				= "I will pray and offer 1 learn point.";
 const string NAME_PRAYADANOS_GIVELP2				= "I will pray and offer 2 learn points.";
@@ -200,8 +225,9 @@ const int ID_MINECRAWLERQUEEN		=	65;
 const int FAI_MINECRAWLERQUEEN		=	47;
 
 const int ID_PANTHER				=	66;
+const int ID_BLACKWOLF				=	67;
 
-const int ID_FANATIC				=	67;
+const int ID_FANATIC				=	68;
 
 
 // ***************
@@ -391,12 +417,37 @@ const int 	SPL_TeleportOrc				= 92;
 
 
 // ***************
+// Crafting Variables
+// ***************
+
+var int PotionMixMultiple;
+var int PotionMakeMultiple;
+var int PotionInstance;
+var int PotionDialogue;
+
+var int HealthStart;
+var int ManaStart;
+var int SpecialStart;
+var int SpecialHealth;
+var int SpecialMana;
+var int SpecialStr;
+var int SpecialDex;
+var int SpecialSpeed;
+var int MixingStart;
+
+var int BoozeStart;
+var int TabakStart;
+var int TabakBlend;
+
+
+// ***************
 // MOBSI
 // ***************
 
 const int	MOBSI_OREHACKEN					= 8;
 const int	MOBSI_CAULDRON					= 9;
-const int	MOBSI_PRAYADANOS				= 10;	
+const int	MOBSI_PAN						= 10;	
+const int	MOBSI_PRAYADANOS				= 11;	
 
 
 
@@ -493,12 +544,15 @@ var int PLAYER_TALENT_ALCHEMY[MAX_POTION];
 // Cooking
 // ***************
 
-const int COOKING_Stew					= 1;
+const int COOKING_MeatStew				= 1;
 const int COOKING_FishSoup				= 2;
 const int COOKING_MeatbugRagout			= 3;
 const int COOKING_RootSoup				= 4;
 const int COOKING_MinecrawlerSoup		= 5;
-const int COOKING_FireStrips			= 6;
+const int COOKING_Marmalade				= 6;
+const int COOKING_RiceBowl				= 7;
+const int COOKING_FruitSalad			= 8;
+const int COOKING_ConvictStew			= 9;
 
 
 const int MAX_COOKING 					= 20;
@@ -515,9 +569,10 @@ const int BOOZE_LouHammerDouble  			= 2;
 const int BOOZE_FastHerring  				= 3;
 const int BOOZE_TurnipBooze  				= 4;
 const int BOOZE_VinoBooze  					= 5;
-const int BOOZE_WhiteRum  					= 6;
+const int BOOZE_MonsterDrink  					= 6;
 const int BOOZE_MageWine  					= 7;
 const int BOOZE_RiceSchnaps  				= 8;
+const int BOOZE_Mead		  				= 9;
 
 
 const int MAX_BOOZE							= 12;
