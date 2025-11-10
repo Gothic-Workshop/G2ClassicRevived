@@ -1,6 +1,6 @@
 func void ZS_Concert ()
 {	
-	Perception_Set_Normal();
+	/* Perception_Set_Normal();
 	
 	B_ResetAll (self);
 	
@@ -11,36 +11,12 @@ func void ZS_Concert ()
 		AI_GotoWP	(self, self.wp);
 	};
 
-	self.aivar[AIV_TAPOSITION] = NOTINPOS;
+	self.aivar[AIV_TAPOSITION] = NOTINPOS; */
 };
 	
 func int ZS_Concert_Loop ()
 {
-/*	if (Npc_IsOnFP (self, "SWEEP"))
-	{	
-		AI_AlignToFP (self);
-		if (self.aivar[AIV_TAPOSITION] == NOTINPOS_WALK)
-  		{
-  			self.aivar[AIV_TAPOSITION] = NOTINPOS;
-  		};	
-	}	
-	else if (Wld_IsFPAvailable(self,"SWEEP"))
-	{
-		AI_GotoFP 		(self, "SWEEP");
-		AI_StandUp 		(self);
-		AI_AlignToFP 	(self);
-		self.aivar[AIV_TAPOSITION] = NOTINPOS_WALK;
-	}
-	else
-	{
-		AI_AlignToWP (self);
-		if (self.aivar[AIV_TAPOSITION] == NOTINPOS_WALK)
-  		{
-  			self.aivar[AIV_TAPOSITION] = NOTINPOS;
-  		};
-	};
-	*/
-	if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
+	/* if (self.aivar[AIV_TAPOSITION] == NOTINPOS)
 	{
 	
 			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PIR_1394_Addon_InExtremo_YellowPfeiffer))
@@ -79,12 +55,12 @@ func int ZS_Concert_Loop ()
 		self.aivar[AIV_TAPOSITION] = ISINPOS;
 	};
 
-	return LOOP_CONTINUE;
+	return LOOP_CONTINUE; */
 };
 
 func void ZS_Concert_End ()
 {
-	
+	/* 
 			if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(PIR_1394_Addon_InExtremo_YellowPfeiffer))
 			{
 				AI_UseItemToState 	(self,ItMi_IEDudelGelb,-1);
@@ -112,5 +88,5 @@ func void ZS_Concert_End ()
 			else 
 			{
 				 //AI_UseItemToState 	(self,fehlt,1); andere
-			};
+			}; */
 };
