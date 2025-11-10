@@ -5,7 +5,7 @@ instance PIR_1390_Addon_InExtremo_DrPymonte (Npc_Default)
 {
 	//-------- primary data --------
 	name 						=	"Dr. Pymonte";
-   	npctype						= 	npctype_main;
+	npctype						=	NPCTYPE_AMBIENT;
    	guild 						=	GIL_NONE;
 	level 						=	4;
 	voice						=	12; 
@@ -27,7 +27,7 @@ instance PIR_1390_Addon_InExtremo_DrPymonte (Npc_Default)
 	// 				animations
 	Mdl_SetVisual		(self,	"HUMANS.MDS");
 	//							Body-Mesh						Body-Tex	Skin-Color	Head-MMS			Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody 	(self,	"HUM_IE_PYMONTE_INSTRUMENT",	DEFAULT,	DEFAULT,	"HUM_HEAD_PYMONTE", DEFAULT,  	DEFAULT, 	-1);
+	Mdl_SetVisualBody 	(self,	"HUM_IE_PYMONTE_INSTRUMENT",	DEFAULT,	DEFAULT,	"HUM_HEAD_PYMONTENEU", DEFAULT,  	DEFAULT, 	-1);
 	
 	fight_tactic	=	FAI_HUMAN_STRONG;
 	

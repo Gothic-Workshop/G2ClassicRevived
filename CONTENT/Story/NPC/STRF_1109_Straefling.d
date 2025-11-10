@@ -16,7 +16,7 @@ instance STRF_1109_Straefling (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem (self, ItMw_2H_Axe_L_01 );
+	EquipItem (self, ITMW_REVIVED_2H_PICKAXE );
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

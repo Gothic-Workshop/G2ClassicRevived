@@ -228,8 +228,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		Wld_InsertNpc 	(Dragonsnapper,	"NW_FARM4_WOOD_MONSTER_05"); 
 		Wld_InsertNpc 	(Dragonsnapper,	"NW_FARM4_WOOD_MONSTER_05"); 
 
-		Wld_InsertNpc 	(Dragonsnapper,	"NW_CASTLEMINE_TROLL_02"); 
-		Wld_InsertNpc 	(Dragonsnapper,	"NW_CASTLEMINE_TROLL_02"); 
+		Wld_InsertNpc 	(Snapper,	"NW_CASTLEMINE_TROLL_02"); 
+		Wld_InsertNpc 	(Snapper,	"NW_CASTLEMINE_TROLL_02"); 
 
 		Wld_InsertNpc 	(Dragonsnapper, 	"NW_FARM3_PATH_11_SMALLRIVER_10");
 		Wld_InsertNpc 	(Dragonsnapper, 	"NW_FARM3_PATH_11_SMALLRIVER_10");
@@ -249,11 +249,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_CITY_TO_FOREST_01");
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_CITY_TO_FOREST_15");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_07");
-		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_08");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_09");
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_10");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_11");
-		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_12");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_13");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_14");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_15");

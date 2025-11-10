@@ -197,11 +197,13 @@ func int DIA_Harad_OrcSuccess_Condition ()
 {
 	if (MIS_Harad_Orc == LOG_RUNNING)
 	{
-		if (Npc_HasItems(other, ItMw_2H_OrcAxe_01) > 0)
-		|| (Npc_HasItems(other, ItMw_2H_OrcAxe_02) > 0)
-		|| (Npc_HasItems(other, ItMw_2H_OrcAxe_03) > 0)
-		|| (Npc_HasItems(other, ItMw_2H_OrcAxe_04) > 0)
-		|| (Npc_HasItems(other, ItMw_2H_OrcSword_01) > 0)
+		if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_01) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_02) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_03) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_04) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_SWORD_01) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_SWORD_02) > 0)
+		|| (Npc_HasItems(other, ITMW_REVIVED_ORC_MACE_01) > 0)
 		{
 			return TRUE;
 		};
@@ -212,26 +214,40 @@ func void DIA_Harad_OrcSuccess_Info ()
 	AI_Output (other, self, "DIA_Harad_OrcSuccess_15_00"); //I've got the orc weapon you wanted.
 	AI_Output (self, other, "DIA_Harad_OrcSuccess_12_01"); //Show me ...
 	
-		if (Npc_HasItems(other, ItMw_2H_OrcAxe_01) > 0)
+		if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_01) > 0)
 		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_01, 1);
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_AXE_01, 1);
 		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_02) > 0)
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_02) > 0)
 		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_02, 1);
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_AXE_02, 1);
 		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_03) > 0)
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_03) > 0)
 		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_03, 1);
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_AXE_03, 1);
 		}
-		else if (Npc_HasItems(other, ItMw_2H_OrcAxe_04) > 0)
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_04) > 0)
 		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcAxe_04, 1);
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_AXE_04, 1);
 		}
-		else //if (Npc_HasItems(other, ItMw_2H_OrcSword_01) > 0)
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_SWORD_01) > 0)
 		{
-			B_GiveInvItems (other, self, ItMw_2H_OrcSword_01, 1);
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_SWORD_01, 1);
+		}
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_SWORD_02) > 0)
+		{
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_SWORD_02, 1);
+		}
+		else if (Npc_HasItems(other, ITMW_REVIVED_ORC_MACE_01) > 0)
+		{
+			B_GiveInvItems (other, self, ITMW_REVIVED_ORC_MACE_01, 1);
 		};
+
+	AI_EquipBestMeleeWeapon	(self);
+	AI_ReadyMeleeWeapon		(self);
+	AI_PlayAni				(self, "T_1HSINSPECT");
+	AI_RemoveWeapon			(self);
+	AI_UnequipWeapons		(self);
 	
 	if (Harad_HakonMission == TRUE)
 	{

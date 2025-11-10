@@ -74,7 +74,7 @@ INSTANCE OrcWarrior_Roam (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -91,7 +91,7 @@ INSTANCE OrcWarrior_Rest (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_02);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_02);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -108,7 +108,7 @@ INSTANCE OrcWarrior_Sit (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -146,7 +146,7 @@ INSTANCE OrcWarrior_Harad (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_01);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_01);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -162,7 +162,7 @@ INSTANCE OrcWarrior_Lobart1 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -176,7 +176,7 @@ INSTANCE OrcWarrior_Lobart2 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -190,7 +190,7 @@ INSTANCE OrcWarrior_Lobart3 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -204,7 +204,7 @@ INSTANCE OrcWarrior_Lobart4 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -218,7 +218,7 @@ INSTANCE OrcWarrior_Lobart5 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -232,7 +232,7 @@ INSTANCE OrcWarrior_Lobart6 (Mst_Default_OrcWarrior)
 	B_SetVisuals_OrcWarrior();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_03);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;

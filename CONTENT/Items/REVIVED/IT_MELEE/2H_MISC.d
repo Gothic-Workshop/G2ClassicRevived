@@ -1,5 +1,5 @@
 
-const int	REV_Damage_2H_Pickaxe				=	30;
+const int	REV_Damage_2H_Pickaxe				=	25;
 const int	REV_Condition_2H_Pickaxe			=	10;
 const int	REV_Range_2H_Pickaxe				=	80;
 const int	REV_Value_2H_Pickaxe				=	200;
@@ -24,7 +24,7 @@ INSTANCE ITMW_REVIVED_2H_PICKAXE (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Pickaxe;
-	visual 				=	"ItMw_2H_Pickaxe_01.3DS";
+	visual 				=	"REV_2H_PICKAXE_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;

@@ -130,7 +130,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(Snapper,"OW_GOBBO_PLACE_SPAWN");
 		
 		//-------------BanditenLager------------------ Cavalorns hut
- 		Wld_InsertNpc	(BDT_1006_Bandit_H,"OW_CAVALORN_01"); 
+ 		/* Wld_InsertNpc	(BDT_1006_Bandit_H,"OW_CAVALORN_01"); 
 		Wld_InsertNpc	(BDT_1007_Bandit_H,"OW_SAWHUT_GREENGOBBO_SPAWN"); 
 
 		Wld_InsertNpc	(BDT_1003_Bandit_M,"OW_SAWHUT_MOLERAT_MOVEMENT");
@@ -139,7 +139,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(BDT_1006_Bandit_H,"OW_SAWHUT_SLEEP_01");
 		Wld_InsertNpc	(BDT_1005_Bandit_M,"PATH_OC_NC_4");
 		Wld_InsertNpc	(BDT_1000_Bandit_L,"OW_SAWHUT_MEATBUG_SPAWN");
-		Wld_InsertNpc	(BDT_1003_Bandit_M,"OW_SAWHUT_GREENGOBBO_SPAWN");
+		Wld_InsertNpc	(BDT_1003_Bandit_M,"OW_SAWHUT_GREENGOBBO_SPAWN"); */
 		
 		//Snapper vor Mine3 
 		Wld_InsertNpc	(Snapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
@@ -229,10 +229,10 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		
 		// ------ TAs ändern ------
 		Npc_ExchangeRoutine	(Brutus,"Meatbugs");  
-		Wld_InsertNpc		(Meatbug_Brutus1,"OC_FOLTER_SHARP");	
-		Wld_InsertNpc		(Meatbug_Brutus2,"OC_FOLTER_SHARP");	
-		Wld_InsertNpc		(Meatbug_Brutus3,"OC_FOLTER_SHARP");	
-		Wld_InsertNpc		(Meatbug_Brutus4,"OC_FOLTER_SHARP");	
+		Wld_InsertNpc		(Meatbug_Brutus1,"OCC_MERCS_DUNGEON_003");	
+		Wld_InsertNpc		(Meatbug_Brutus2,"OCC_MERCS_DUNGEON_003");	
+		Wld_InsertNpc		(Meatbug_Brutus3,"OCC_MERCS_DUNGEON_003");	
+		Wld_InsertNpc		(Meatbug_Brutus4,"OCC_MERCS_DUNGEON_003");	
 	
 		Wld_InsertNpc		(DJG_700_Sylvio,		"OC1"); 
 

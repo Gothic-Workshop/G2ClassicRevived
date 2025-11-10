@@ -14,12 +14,12 @@ FUNC VOID ZS_Pick_Ore ()
     {
 		AI_GotoWP	(self, self.wp);
 	};
-	if (Npc_HasItems (self,ItMw_2H_Axe_L_01) == 0)
+	if (Npc_HasItems (self,ITMW_REVIVED_2H_PICKAXE) == 0)
 	{
-		CreateInvItem (self,ItMw_2H_Axe_L_01);				
+		CreateInvItem (self,ITMW_REVIVED_2H_PICKAXE);				
 	};
 	
-	EquipItem (self,ItMw_2H_Axe_L_01);
+	EquipItem (self,ITMW_REVIVED_2H_PICKAXE);
 };
 
 FUNC int ZS_Pick_Ore_Loop ()

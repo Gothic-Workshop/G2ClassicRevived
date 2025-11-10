@@ -75,7 +75,7 @@ INSTANCE OrcShaman_Sit (Mst_Default_OrcShaman)
 	B_SetVisuals_OrcShaman();
 	
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_01);
+	EquipItem (self, ITMW_REVIVED_ORC_MACE_01);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -95,7 +95,7 @@ INSTANCE OrcShaman_Hosh_Pak (Mst_Default_OrcShaman)
 	B_SetVisuals_OrcShaman();
 	
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_01);
+	EquipItem (self, ITMW_REVIVED_ORC_MACE_01);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;

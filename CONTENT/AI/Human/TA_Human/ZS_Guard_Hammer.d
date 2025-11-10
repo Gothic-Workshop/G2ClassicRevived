@@ -49,11 +49,11 @@ func int ZS_Guard_Hammer_loop()
 		self.aivar[AIV_TAPOSITION] = ISINPOS;
 	};	
 	// hier legt Nov_608_Garwig den Hammer zurück, wenn er ihn in der Tasche hat und <= 500 cm von seinem WP entfernt ist.	M.F.	
-	if (Npc_HasItems (self, Holy_Hammer_MIS) == 1)
+	if (Npc_HasItems (self, ITMW_REVIVED_2H_HAMMER_HOLY) == 1)
 	&& (Npc_GetDistToWP (self, "NW_MONASTERY_SANCTUM_01") <= 500)
 	{
-		Npc_RemoveInvItems 	(self, Holy_Hammer_MIS,1); 
-		Wld_InsertItem 		(Holy_Hammer_MIS,"FP_HAMMER"); 
+		Npc_RemoveInvItems 	(self, ITMW_REVIVED_2H_HAMMER_HOLY,1); 
+		Wld_InsertItem 		(ITMW_REVIVED_2H_HAMMER_HOLY,"FP_HAMMER"); 
 	};
 		
 //*******************************************************

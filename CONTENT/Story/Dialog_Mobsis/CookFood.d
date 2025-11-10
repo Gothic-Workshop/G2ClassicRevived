@@ -1,4 +1,3 @@
-
 // ****************************************************
 // COOKFOOD_S1
 // *****************************************************
@@ -46,6 +45,86 @@ FUNC VOID PC_CookFood_End_Info()
 //****************************************************************************
 //****************************************************************************
 
+INSTANCE PC_Cook_MeatStew (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_MeatStew_Condition;
+	information		= PC_Cook_MeatStew_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Meat Stew"; 
+};
+FUNC INT PC_Cook_MeatStew_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_MeatStew] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_MeatStew_Info ()
+{
+	if (Npc_HasItems (hero, ItFoMuttonRaw) 				>= 2) 
+	&& (Npc_HasItems (hero, ItFo_Addon_Shellflesh) 	  	>= 2) 
+	&& (Npc_HasItems (hero, ItFo_Sausage) 				>= 1) 
+	&& (Npc_HasItems (hero, ItFo_Bacon) 				>= 1) 
+	{
+		Npc_RemoveInvItems (hero,ItFoMuttonRaw,				2);
+		Npc_RemoveInvItems (hero,ItFo_Addon_Shellflesh, 	2);
+		Npc_RemoveInvItems (hero,ItFo_Sausage, 				1);
+		Npc_RemoveInvItems (hero,ItFo_Bacon, 				1);
+				
+		CreateInvItems	   (hero,ItFo_Stew,					1);  // replace with updated Meat Stew
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_FishSoup (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_FishSoup_Condition;
+	information		= PC_Cook_FishSoup_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Fish Soup"; 
+};
+FUNC INT PC_Cook_FishSoup_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_FishSoup] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_FishSoup_Info ()
+{
+	if (Npc_HasItems (hero, ItFo_Fish) 				>= 2) 
+	&& (Npc_HasItems (hero, ItFo_Water) 	  		>= 1) 
+	{
+		Npc_RemoveInvItems (hero,ItFo_Fish,				2);
+		Npc_RemoveInvItems (hero,ItFo_Water, 			1);
+				
+		CreateInvItems	   (hero,ItFo_FishSoup,			1); // Update Fish Soup
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
 INSTANCE PC_Cook_MeatbugSoup (C_INFO)
 {
 	nr       		= 1;
@@ -53,7 +132,7 @@ INSTANCE PC_Cook_MeatbugSoup (C_INFO)
 	condition		= PC_Cook_MeatbugSoup_Condition;
 	information		= PC_Cook_MeatbugSoup_Info;
 	permanent		= TRUE;
-	description		= "Prepare a Meatbug soup"; 
+	description		= "Prepare a Meatbug Ragout"; 
 };
 FUNC INT PC_Cook_MeatbugSoup_Condition()
 {	
@@ -65,16 +144,255 @@ FUNC INT PC_Cook_MeatbugSoup_Condition()
 };
 FUNC VOID PC_Cook_MeatbugSoup_Info ()
 {
-	if 	(
-			(
-				(Npc_HasItems (hero, ItAt_IcedragonHeart) >= 1)
-				|| 		(Npc_HasItems (hero, ItAt_RockdragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_FiredragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_SwampdragonHeart)	>= 1)	
-			)
-			&& 		(Npc_HasItems (hero, ItMi_InnosEye_Discharged_MIS)    >= 1)	
-		) 
+	if (Npc_HasItems (hero, ItPl_Mushroom_01) 			>= 5) 
+	&& (Npc_HasItems (hero, ITFO_REVIVED_MEATBUG) 	  	>= 3) 
+	&& (Npc_HasItems (hero, ITPL_REVIVED_RICEPLANT) 	>= 2) 
 	{
+		Npc_RemoveInvItems (hero,ItPl_Mushroom_01,			5);
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_MEATBUG, 		3);
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_RICEPLANT, 	2);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_BUGSOUP,		1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_RootSoup (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_RootSoup_Condition;
+	information		= PC_Cook_RootSoup_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Root Soup"; 
+};
+FUNC INT PC_Cook_RootSoup_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_RootSoup] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_RootSoup_Info ()
+{
+	if (Npc_HasItems (hero, ItPl_Planeberry) 			>= 2) 
+	&& (Npc_HasItems (hero, ItPl_Forestberry) 	  		>= 2) 
+	&& (Npc_HasItems (hero, ItPl_SwampHerb) 			>= 2) 
+	{
+		Npc_RemoveInvItems (hero,ItPl_Planeberry,			2);
+		Npc_RemoveInvItems (hero,ItPl_Forestberry, 			2);
+		Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			2);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_PLANTSOUP,	1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_MinecrawlerSoup (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_MinecrawlerSoup_Condition;
+	information		= PC_Cook_MinecrawlerSoup_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Minecrawler Soup"; 
+};
+FUNC INT PC_Cook_MinecrawlerSoup_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_MinecrawlerSoup] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_MinecrawlerSoup_Info ()
+{
+	if (Npc_HasItems (hero, ItAt_CrawlerMandibles) 		>= 2) 
+	&& (Npc_HasItems (hero, ItPl_SwampHerb) 	  		>= 4)
+	{
+		Npc_RemoveInvItems (hero,ItAt_CrawlerMandibles,		2);
+		Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			4);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_CRAWLERSOUP,	1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_RiceBowl (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_RiceBowl_Condition;
+	information		= PC_Cook_RiceBowl_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Rice bowl"; 
+};
+FUNC INT PC_Cook_RiceBowl_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_RiceBowl] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_RiceBowl_Info ()
+{
+	if (Npc_HasItems (hero, ITPL_REVIVED_RICEPLANT) 	>= 3) 
+	{
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_RICEPLANT,	3);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_RICE,		1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_Marmalade (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_Marmalade_Condition;
+	information		= PC_Cook_Marmalade_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Berry marmalade"; 
+};
+FUNC INT PC_Cook_Marmalade_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_Marmalade] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_Marmalade_Info ()
+{
+	if (Npc_HasItems (hero, ITPL_REVIVED_GRAPES) 		>= 2) 
+	&& (Npc_HasItems (hero, ITPL_REVIVED_BERRIES) 	  	>= 2) 
+	&& (Npc_HasItems (hero, ItPl_Planeberry) 			>= 2) 
+	&& (Npc_HasItems (hero, ItPl_Forestberry) 			>= 2) 
+	{
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_GRAPES,		2);
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_BERRIES, 		2);
+		Npc_RemoveInvItems (hero,ItPl_Planeberry, 			2);
+		Npc_RemoveInvItems (hero,ItPl_Forestberry, 			2);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_MARMALADE,	1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_FruitSalad (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_FruitSalad_Condition;
+	information		= PC_Cook_FruitSalad_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Fruit salad"; 
+};
+FUNC INT PC_Cook_FruitSalad_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_FruitSalad] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_FruitSalad_Info ()
+{
+	if (Npc_HasItems (hero, ItFo_Apple) 				>= 1) 
+	&& (Npc_HasItems (hero, ITFO_REVIVED_PEAR) 	  		>= 1) 
+	&& (Npc_HasItems (hero, ITPL_REVIVED_BERRIES) 		>= 1) 
+	&& (Npc_HasItems (hero, ItFo_Milk) 					>= 1) 
+	{
+		Npc_RemoveInvItems (hero,ItFo_Apple,				1);
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_PEAR, 		1);
+		Npc_RemoveInvItems (hero,ITPL_REVIVED_BERRIES, 		1);
+		Npc_RemoveInvItems (hero,ItFo_Milk, 				1);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_FRUITSALAD,	1);  
+		Print (PRINT_CookingSuccess);
+	}
+	else 
+	{
+		Print (PRINT_ProdItemsMissing);
+	};	
+	//B_ENDPRODUCTIONDIALOG ();
+};
+
+//*******************************************************
+//*******************************************************
+
+INSTANCE PC_Cook_ConvictStew (C_INFO)
+{
+	nr       		= 1;
+	npc				= PC_Hero;
+	condition		= PC_Cook_ConvictStew_Condition;
+	information		= PC_Cook_ConvictStew_Info;
+	permanent		= TRUE;
+	description		= "Prepare a Convict's Stew"; 
+};
+FUNC INT PC_Cook_ConvictStew_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	== MOBSI_CAULDRON) 
+	&& (PLAYER_TALENT_COOKING[COOKING_ConvictStew] == TRUE))
+	{		
+		return TRUE;
+	};
+};
+FUNC VOID PC_Cook_ConvictStew_Info ()
+{
+	if (Npc_HasItems (hero, ITFO_REVIVED_BREAD_01) 		>= 1) 
+	&& (Npc_HasItems (hero, ITFO_REVIVED_CHEESE_01) 	>= 1) 
+	&& (Npc_HasItems (hero, ITFO_REVIVED_BEER) 			>= 1) 
+	&& (Npc_HasItems (hero, ITFO_REVIVED_WATER) 		>= 1) 
+	{
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_BREAD_01,		1);
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_CHEESE_01, 	1);
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_BEER, 		1);
+		Npc_RemoveInvItems (hero,ITFO_REVIVED_WATER, 		1);
+				
+		CreateInvItems	   (hero,ITFO_REVIVED_OLDSTEW,		1);  
 		Print (PRINT_CookingSuccess);
 	}
 	else 

@@ -10,13 +10,13 @@ instance GRD_4107_Parlaf (Npc_Default)
 	npctype		= NPCTYPE_OCMAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesToChapter (self, 2);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_1H_SWORD_LONG_01);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

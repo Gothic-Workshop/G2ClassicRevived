@@ -1,52 +1,52 @@
 
-const int	REV_Damage_2H_Axe_Old_01			=	25;
-const int	REV_Condition_2H_Axe_Old_01			=	25;
+const int	REV_Damage_2H_Axe_Old_01			=	40;
+const int	REV_Condition_2H_Axe_Old_01			=	40;
 const int	REV_Range_2H_Axe_Old_01				=	80;
 const int	REV_Value_2H_Axe_Old_01				=	50;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Old_02			=	28;
-const int	REV_Condition_2H_Axe_Old_02			=	20;
+const int	REV_Damage_2H_Axe_Old_02			=	55;
+const int	REV_Condition_2H_Axe_Old_02			=	55;
 const int	REV_Range_2H_Axe_Old_02				=	80;
 const int	REV_Value_2H_Axe_Old_02				=	70;
 //******************************************************************//
 const int	REV_Damage_2H_Axe_Old_03			=	125;
 const int	REV_Condition_2H_Axe_Old_03			=	125;
 const int	REV_Range_2H_Axe_Old_03				=	80;
-const int	REV_Value_2H_Axe_Old_03				=	0;
+const int	REV_Value_2H_Axe_Old_03				=	1000;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Axe_Light_01			=	60;
 const int	REV_Condition_2H_Axe_Light_01		=	60;
 const int	REV_Range_2H_Axe_Light_01			=	70;
-const int	REV_Value_2H_Axe_Light_01			=	0;
+const int	REV_Value_2H_Axe_Light_01			=	800;
 //******************************************************************//
 const int	REV_Damage_2H_Axe_Light_02			=	90;
 const int	REV_Condition_2H_Axe_Light_02		=	85;
 const int	REV_Range_2H_Axe_Light_02			=	70;
-const int	REV_Value_2H_Axe_Light_02			=	0;
+const int	REV_Value_2H_Axe_Light_02			=	800;
 //******************************************************************//
 const int	REV_Damage_2H_Axe_Light_03			=	80;
 const int	REV_Condition_2H_Axe_Light_03		=	80;
 const int	REV_Range_2H_Axe_Light_03			=	70;
 const int	REV_Value_2H_Axe_Light_03			=	1000;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Heavy_01			=	60;
-const int	REV_Condition_2H_Axe_Heavy_01		=	60;
+const int	REV_Damage_2H_Axe_Heavy_01			=	110;
+const int	REV_Condition_2H_Axe_Heavy_01		=	110;
 const int	REV_Range_2H_Axe_Heavy_01			=	100;
 const int	REV_Value_2H_Axe_Heavy_01			=	3500;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Heavy_02			=	80;
-const int	REV_Condition_2H_Axe_Heavy_02		=	80;
+const int	REV_Damage_2H_Axe_Heavy_02			=	200;
+const int	REV_Condition_2H_Axe_Heavy_02		=	170;
 const int	REV_Range_2H_Axe_Heavy_02			=	100;
 const int	REV_Value_2H_Axe_Heavy_02			=	3000;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Heavy_03			=	70;
-const int	REV_Condition_2H_Axe_Heavy_03		=	70;
+const int	REV_Damage_2H_Axe_Heavy_03			=	140;
+const int	REV_Condition_2H_Axe_Heavy_03		=	130;
 const int	REV_Range_2H_Axe_Heavy_03			=	100;
 const int	REV_Value_2H_Axe_Heavy_03			=	2800;
 //******************************************************************//
-const int	REV_Damage_2H_Axe_Heavy_04			=	75;
-const int	REV_Condition_2H_Axe_Heavy_04		=	75;
+const int	REV_Damage_2H_Axe_Heavy_04			=	150;
+const int	REV_Condition_2H_Axe_Heavy_04		=	150;
 const int	REV_Range_2H_Axe_Heavy_04			=	100;
 const int	REV_Value_2H_Axe_Heavy_04			=	3800;
 //******************************************************************//
@@ -95,7 +95,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_01 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Old_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -120,7 +120,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_02 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Old_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -145,7 +145,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_OLD_03 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Old_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -170,7 +170,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_01 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Light_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -195,7 +195,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_02 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Light_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -220,7 +220,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LIGHT_03 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Light_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -245,7 +245,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_01 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Heavy_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -270,7 +270,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_02 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Heavy_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -295,7 +295,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_03 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Heavy_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -320,7 +320,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_HEAVY_04 (C_Item)
 	visual 				=	"ItMw_2H_Axe_Heavy_04.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -352,7 +352,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LEE (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Lee";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -380,7 +380,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_SYLVIO (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Sylvio";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -408,7 +408,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_TORLOF (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Torlof";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -436,7 +436,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_GORN (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Gorn";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

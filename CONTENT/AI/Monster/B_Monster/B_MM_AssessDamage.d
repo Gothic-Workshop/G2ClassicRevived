@@ -11,10 +11,10 @@ func void B_MM_AssessDamage ()
 	// EXIT IF
 	
 	// ------ SONDERFALL: Magic Golem ------ 				//JUUUUNGEEEEE!!!
-	if (Npc_HasItems (other, Holy_Hammer_MIS) > 0)
+	if (Npc_HasItems (other, ITMW_REVIVED_2H_HAMMER_HOLY) > 0)
 	{
 		var C_NPC MagGol; MagGol = Hlp_GetNpc(MagicGolem);
-		Npc_GetInvItem(other, Holy_Hammer_MIS); //befüllt 'item'
+		Npc_GetInvItem(other, ITMW_REVIVED_2H_HAMMER_HOLY); //befüllt 'item'
 		var C_ITEM OthWeap; OthWeap = Npc_GetReadiedWeapon(other);
 		
 		if (Hlp_GetInstanceID(self) == Hlp_GetInstanceID(MagGol))

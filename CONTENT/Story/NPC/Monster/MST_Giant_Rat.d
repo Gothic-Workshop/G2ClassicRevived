@@ -125,7 +125,7 @@ INSTANCE YRat	(Mst_Default_Giant_Rat)
 	name							=	"Rat";
 	level							=	1;
 	guild							=	GIL_MEATBUG;
-	aivar[AIV_MM_REAL_ID]			= 	ID_MEATBUG;
+	aivar[AIV_MM_REAL_ID]			= 	ID_Giant_Rat;
 	
 	//----- Attribute ----
 	attribute	[ATR_STRENGTH]		=	5;

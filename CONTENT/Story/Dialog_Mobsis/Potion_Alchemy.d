@@ -56,10 +56,6 @@ FUNC VOID PC_PotionAlchemy_End_Info()
 };
 
 //*******************************************************
-var int PotionMixMultiple;
-var int PotionMakeMultiple;
-var int PotionInstance;
-var int PotionDialogue;
 
 INSTANCE PC_PotionAlchemy_Stop (C_Info)
 {
@@ -263,6 +259,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (ManaStart == TRUE)
 	{
 		if(PotionInstance == POTION_Mana_01)
@@ -314,6 +311,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialStart == TRUE)
 	{
 		if(PotionInstance == POTION_Special_Experience)
@@ -432,6 +430,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialHealth == TRUE)
 	{
 		if(PotionInstance == POTION_Perm_HEALTH_01)
@@ -489,6 +488,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialMana == TRUE)
 	{
 		if(PotionInstance == POTION_Perm_MANA_01)
@@ -546,6 +546,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialStr == TRUE)
 	{
 		if(PotionInstance == POTION_Perm_STR_01)
@@ -597,6 +598,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialDex == TRUE)
 	{
 		if(PotionInstance == POTION_Perm_DEX_01)
@@ -648,6 +650,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (SpecialSpeed == TRUE)
 	{
 		if(PotionInstance == POTION_SPEED_01)
@@ -699,21 +702,22 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (BoozeStart == TRUE)
 	{
 		if(PotionInstance == BOOZE_LouHammer)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ItPl_Beet) 						>= amount * 2)
+			&& (Npc_HasItems (self, ItPl_SwampHerb)					>= amount)
+			&& (Npc_HasItems (self, ItAt_SharkTeeth)				>= amount)
+			&& (Npc_HasItems (self, ItFo_Addon_Rum) 				>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ItPl_Beet,				amount * 2);
+				Npc_RemoveInvItems (self, ItPl_SwampHerb,			amount);
+				Npc_RemoveInvItems (self, ItAt_SharkTeeth,			amount);
+				Npc_RemoveInvItems (self, ItFo_Addon_Rum,			amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ItFo_Addon_LousHammer,		amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -723,17 +727,17 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_LouHammerDouble)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ItPl_Beet)						>= amount * 2)
+			&& (Npc_HasItems (self, ItPl_SwampHerb) 				>= amount)
+			&& (Npc_HasItems (self, ItAt_SharkTeeth)				>= amount)
+			&& (Npc_HasItems (self, ItFo_Addon_LousHammer) 			>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ItPl_Beet,				amount * 2);
+				Npc_RemoveInvItems (self, ItPl_SwampHerb,			amount);
+				Npc_RemoveInvItems (self, ItAt_SharkTeeth,			amount);
+				Npc_RemoveInvItems (self, ItFo_Addon_LousHammer,	amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ItFo_Addon_SchlafHammer,		amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -743,17 +747,15 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_FastHerring)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ItFo_Fish)						>= amount)
+			&& (Npc_HasItems (self, ItPl_Speed_Herb_01) 			>= amount)
+			&& (Npc_HasItems (self, ItFo_Addon_Rum)					>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ItFo_Fish,				amount);
+				Npc_RemoveInvItems (self, ItPl_Speed_Herb_01,		amount);
+				Npc_RemoveInvItems (self, ItFo_Addon_Rum,			amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ItFo_Addon_SchnellerHering,		amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -763,17 +765,15 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_TurnipBooze)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ItPl_Beet) 						>= amount * 4)
+			&& (Npc_HasItems (self, ItFo_Beer)						>= amount)
+			&& (Npc_HasItems (self, ItAt_CrawlerMandibles)			>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ItPl_Beet,				amount * 4);
+				Npc_RemoveInvItems (self, ItFo_Beer,				amount);
+				Npc_RemoveInvItems (self, ItAt_CrawlerMandibles,	amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ITFO_REVIVED_TURNIPBOOZE,		amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -783,37 +783,17 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_VinoBooze)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ITPL_REVIVED_BERRIES) 			>= amount * 2)
+			&& (Npc_HasItems (self, ItFo_Apple)						>= amount * 2)
+			&& (Npc_HasItems (self, ITFO_REVIVED_PEAR)				>= amount * 4)
+			&& (Npc_HasItems (self, ItAt_Wing) 						>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ITPL_REVIVED_BERRIES,		amount * 2);
+				Npc_RemoveInvItems (self, ItFo_Apple,				amount * 2);
+				Npc_RemoveInvItems (self, ITFO_REVIVED_PEAR,		amount * 4);
+				Npc_RemoveInvItems (self, ItAt_Wing,				amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
-				Print (PRINT_BoozeSuccess);
-			}
-				else 
-			{
-				AlchemyCraft_NoIngredients();
-			};	
-		}
-		else if(PotionInstance == BOOZE_WhiteRum)
-		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
-			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
-				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ITFO_REVIVED_VINOBOOZE,	amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -823,17 +803,33 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_MageWine)
 		{
-			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
-			&& (Npc_HasItems (self, ItPl_Beet)					>= amount * 2)
-			&& (Npc_HasItems (self, ItAt_SharkTeeth)			>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ITPL_REVIVED_GRAPES) 			>= amount * 4)
+			&& (Npc_HasItems (self, ItAt_Sting)						>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_SwampHerb,		amount);
-				Npc_RemoveInvItems (self, ItPl_Beet,			amount * 2);
-				Npc_RemoveInvItems (self, ItAt_SharkTeeth,		amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ITPL_REVIVED_GRAPES,		amount * 4);
+				Npc_RemoveInvItems (self, ItAt_Sting,				amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_LousHammer,amount);  
+				CreateInvItems	   (hero,ITFO_REVIVED_MAGEWINE,		amount);  
+				Print (PRINT_BoozeSuccess);
+			}
+				else 
+			{
+				AlchemyCraft_NoIngredients();
+			};	
+		}
+		else if(PotionInstance == BOOZE_MonsterDrink)
+		{
+			if (Npc_HasItems (self, ItPl_Perm_Herb) 			>= amount * 2)
+			&& (Npc_HasItems (self, ItAt_TrollTooth)			>= amount * 2)
+			&& (Npc_HasItems (self, ItAt_Teeth)					>= amount * 4)
+			&& (Npc_HasItems (self, ItAt_Claw) 					>= amount * 4)
+			{
+				Npc_RemoveInvItems (self, ItPl_Perm_Herb,		amount * 2);
+				Npc_RemoveInvItems (self, ItAt_TrollTooth,		amount * 2);
+				Npc_RemoveInvItems (self, ItAt_Teeth,			amount * 4);
+				Npc_RemoveInvItems (self, ItAt_Claw,			amount * 4);
+				
+				CreateInvItems	   (hero,ITFO_REVIVED_MONSTERDRINK,amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -843,15 +839,29 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == BOOZE_RiceSchnaps)
 		{
-			if (Npc_HasItems (self, ItPl_Speed_Herb_01) 		>= amount)
-			&& (Npc_HasItems (self, ItFo_Fish)					>= amount)
-			&& (Npc_HasItems (self, ItFo_Addon_Rum) 			>= amount)
+			if (Npc_HasItems (self, ITPL_REVIVED_RICEPLANT) 	>= amount * 4)
+			&& (Npc_HasItems (self, ItAt_LurkerClaw)			>= amount)
 			{
-				Npc_RemoveInvItems (self, ItPl_Speed_Herb_01,	amount);
-				Npc_RemoveInvItems (self, ItFo_Fish,			amount);
-				Npc_RemoveInvItems (self, ItFo_Addon_Rum,		amount);
+				Npc_RemoveInvItems (self, ITPL_REVIVED_RICEPLANT,amount * 4);
+				Npc_RemoveInvItems (self, ItAt_LurkerClaw,		amount);
 				
-				CreateInvItems	   (hero,ItFo_Addon_SchnellerHering,amount);  
+				CreateInvItems	   (hero,ITFO_REVIVED_RICEBOOZE,amount);  
+				Print (PRINT_BoozeSuccess);
+			}
+				else 
+			{
+				AlchemyCraft_NoIngredients();
+			};	
+		}
+		else if(PotionInstance == BOOZE_Mead)
+		{
+			if (Npc_HasItems (self, ITFO_REVIVED_HONEY) 		>= amount * 2)
+			&& (Npc_HasItems (self, ItAt_BugMandibles)			>= amount)
+			{
+				Npc_RemoveInvItems (self, ITFO_REVIVED_HONEY,	amount * 2);
+				Npc_RemoveInvItems (self, ItAt_BugMandibles,	amount);
+				
+				CreateInvItems	   (hero,ITFO_REVIVED_MEAD,		amount);  
 				Print (PRINT_BoozeSuccess);
 			}
 				else 
@@ -860,6 +870,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (TabakStart == TRUE)
 	{
 		if(PotionInstance == TOBACCO_Weed_Regular)
@@ -946,11 +957,11 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		{
 			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_SumpfTabak) 			>= amount)
-			&& (Npc_HasItems (self, ITPL_REVIVED_MUSHROOM_RED)		>= amount)
+			&& (Npc_HasItems (self, ItPl_Mushroom_01)		>= amount)
 			{
 				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
 				Npc_RemoveInvItems (hero,ItMi_SumpfTabak, 			amount);
-				Npc_RemoveInvItems (hero,ITPL_REVIVED_MUSHROOM_RED, 	amount);
+				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, 	amount);
 				
 				CreateInvItems	   (hero,ITMI_REVIVED_JOINT_GREENNOVICE,amount);  
 				Print (PRINT_TabakSuccessREVIVED);
@@ -964,11 +975,11 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		{
 			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_SumpfTabak) 			>= amount)
-			&& (Npc_HasItems (self, ITPL_REVIVED_MUSHROOM_RED)			>= amount)
+			&& (Npc_HasItems (self, ItPl_Mushroom_01)			>= amount)
 			{
 				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
 				Npc_RemoveInvItems (hero,ItMi_SumpfTabak, 			amount);
-				Npc_RemoveInvItems (hero,ITPL_REVIVED_MUSHROOM_RED, 		amount);
+				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, 			amount);
 				
 				CreateInvItems	   (hero,ITMI_REVIVED_JOINT_NORTHDARK,amount);  
 				Print (PRINT_TabakSuccessREVIVED);
@@ -982,11 +993,11 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		{
 			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_SumpfTabak) 			>= amount)
-			&& (Npc_HasItems (self, ITPL_REVIVED_MUSHROOM_RED)		>= amount)
+			&& (Npc_HasItems (self, ItPl_Mushroom_01)			>= amount)
 			{
 				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
 				Npc_RemoveInvItems (hero,ItMi_SumpfTabak, 			amount);
-				Npc_RemoveInvItems (hero,ITPL_REVIVED_MUSHROOM_RED, 		amount);
+				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, 		amount);
 				
 				CreateInvItems	   (hero,ITMI_REVIVED_JOINT_DREAMCALL,amount);  
 				Print (PRINT_TabakSuccessREVIVED);
@@ -1000,11 +1011,11 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		{
 			if (Npc_HasItems (self, ItPl_SwampHerb) 			>= amount)
 			&& (Npc_HasItems (self, ItMi_SumpfTabak) 			>= amount)
-			&& (Npc_HasItems (self, ITPL_REVIVED_MUSHROOM_RED)		>= amount)
+			&& (Npc_HasItems (self, ItPl_Mushroom_01)			>= amount)
 			{
 				Npc_RemoveInvItems (hero,ItPl_SwampHerb, 			amount);
 				Npc_RemoveInvItems (hero,ItMi_SumpfTabak, 			amount);
-				Npc_RemoveInvItems (hero,ITPL_REVIVED_MUSHROOM_RED,	 	amount);
+				Npc_RemoveInvItems (hero,ItPl_Mushroom_01,	 		amount);
 				
 				CreateInvItems	   (hero,ITMI_REVIVED_JOINT_DREAMCALL_02,amount);  
 				Print (PRINT_TabakSuccessREVIVED);
@@ -1015,6 +1026,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			};	
 		};
 	}
+//****************************************************************************
 	else if (TabakBlend == TRUE)
 	{
 		if(PotionInstance == TOBACCO_AppleDouble)
@@ -1023,7 +1035,7 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 			&& (Npc_HasItems (self, ItMi_ApfelTabak) 				>= amount)
 			{
 				Npc_RemoveInvItems (hero,ITFO_REVIVED_APPLE_01, 		amount);
-				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
+				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 				amount);
 				
 				CreateInvItems	   (hero,ItMi_DoppelTabak,amount);  
 				Print (PRINT_TabakSuccess);
@@ -1067,10 +1079,10 @@ func void AlchemyCraftMultiple_Logic(var int amount)
 		}
 		else if(PotionInstance == TOBACCO_Mushroom)
 		{
-			if (Npc_HasItems (self, ITPL_REVIVED_MUSHROOM_RED) 		>= amount)
+			if (Npc_HasItems (self, ItPl_Mushroom_01) 		>= amount)
 			&& (Npc_HasItems (self, ItMi_ApfelTabak) 				>= amount)
 			{
-				Npc_RemoveInvItems (hero,ITPL_REVIVED_MUSHROOM_RED, amount);
+				Npc_RemoveInvItems (hero,ItPl_Mushroom_01, amount);
 				Npc_RemoveInvItems (hero,ItMi_ApfelTabak, 			amount);
 				
 				CreateInvItems	   (hero,ItMi_PilzTabak,amount);  
@@ -1180,7 +1192,6 @@ FUNC VOID PC_Charge_InnosEye_Info ()
 //****************************************************************************
 //****************************************************************************
 
-var int HealthStart;
 //----------------------
 INSTANCE PC_Health_Start (C_Info)
 {
@@ -1363,7 +1374,6 @@ FUNC VOID PC_ItPo_Health_04_Info ()
 //****************************************************************************
 //****************************************************************************
 
-var int ManaStart;
 //----------------------
 INSTANCE PC_Mana_Start (C_Info)
 {
@@ -1547,7 +1557,6 @@ FUNC VOID PC_ItPo_Mana_04_Info ()
 //****************************************************************************
 //****************************************************************************
 
-var int SpecialStart;
 //----------------------
 INSTANCE PC_Special_Start (C_Info)
 {
@@ -1778,7 +1787,6 @@ FUNC VOID PC_ITPO_PERM_MASTER_03_Info ()
 //****************************************************************************
 //****************************************************************************
 
-var int SpecialHealth;
 //----------------------
 INSTANCE PC_SPECIAL_HEALTH_Start (C_Info)
 {
@@ -1916,7 +1924,6 @@ FUNC VOID PC_ITPO_REVIVED_BOOST_HEALTH_03_Info ()
 //	REVIVED - SPECIAL MANA
 //*******************************************************
 
-var int SpecialMana;
 //----------------------
 INSTANCE PC_SPECIAL_MANA_Start (C_Info)
 {
@@ -2054,7 +2061,6 @@ FUNC VOID PC_ITPO_REVIVED_BOOST_MANA_03_Info ()
 //	REVIVED - SPECIAL STR
 //*******************************************************
 
-var int SpecialStr;
 //----------------------
 INSTANCE PC_SPECIAL_STR_Start (C_Info)
 {
@@ -2192,7 +2198,6 @@ FUNC VOID PC_ITPO_REVIVED_BOOST_STR_03_Info ()
 //	REVIVED - SPECIAL DEX
 //*******************************************************
 
-var int SpecialDex;
 //----------------------
 INSTANCE PC_SPECIAL_DEX_Start (C_Info)
 {
@@ -2330,7 +2335,6 @@ FUNC VOID PC_ITPO_REVIVED_BOOST_DEX_03_Info ()
 //	REVIVED - SPECIAL SPEED
 //*******************************************************
 
-var int SpecialSpeed;
 //----------------------
 INSTANCE PC_SPECIAL_SPEED_Start (C_Info)
 {
@@ -2465,175 +2469,6 @@ FUNC VOID PC_ITPO_REVIVED_SPEED_03_Info ()
 };
 
 
-//****************************************************************************
-//****************************************************************************
-//			MIXING POTIONS
-//			MIXING POTIONS
-//			MIXING POTIONS
-//****************************************************************************
-//****************************************************************************
-var int MixingStart;
-//----------------------
-INSTANCE PC_Mixing_Start (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 9;
-	condition		= PC_Mixing_Start_Condition;
-	information		= PC_Mixing_Start_Info;
-	permanent		= TRUE;
-	description		= "Mix weaker potions into higher stages"; 
-};
-
-FUNC INT PC_Mixing_Start_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	&& (SpecialStart == FALSE)
-	&& (MixingStart == FALSE)
-	&& (SpecialHealth == FALSE)
-	&& (SpecialMana == FALSE)
-	&& (SpecialStr == FALSE)
-	&& (SpecialDex == FALSE)
-	&& (SpecialSpeed == FALSE)
-	&& (BoozeStart == FALSE)
-	&& (TabakStart == FALSE)
-	&& (HealthStart == FALSE)
-	&& (ManaStart == FALSE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_Mixing_Start_Info()
-{
-	MixingStart = TRUE;
-};
-
-//*******************************************************
-
-INSTANCE PC_Mixing_Stop (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 99;
-	condition		= PC_Mixing_Stop_Condition;
-	information		= PC_Mixing_Stop_Info;
-	permanent		= TRUE;
-	description		= DIALOG_BACK; 
-};
-
-FUNC INT PC_Mixing_Stop_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
-	&& (MixingStart == TRUE)
-	{	
-		return TRUE;
-	};
-};
-FUNC VOID PC_Mixing_Stop_Info()
-{
-	MixingStart = FALSE;
-};
-
-//*******************************************************
-
-INSTANCE PC_Mixing_Health_02 (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 1;
-	condition		= PC_Mixing_Health_02_Condition;
-	information		= PC_Mixing_Health_02_Info;
-	permanent		= TRUE;
-	description		= "Mix Essence of Life (x2) into Extract of Life (x1)"; 
-};
-
-FUNC INT PC_Mixing_Health_02_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
-	&& (MixingStart == TRUE)
-	&& (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_02] == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_Mixing_Health_02_Info()
-{
-	AlchemyCraftMultiple_Input(PC_Mixing_Health_02, POTION_HEALTH_02);	
-};
-INSTANCE PC_Mixing_Health_03 (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 2;
-	condition		= PC_Mixing_Health_03_Condition;
-	information		= PC_Mixing_Health_03_Info;
-	permanent		= TRUE;
-	description		= "Mix Extract of Life (x2) into Elixir of Life (x1)"; 
-};
-
-FUNC INT PC_Mixing_Health_03_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
-	&& (MixingStart == TRUE)
-	&& (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_03] == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_Mixing_Health_03_Info()
-{
-	AlchemyCraftMultiple_Input(PC_Mixing_Health_03, POTION_HEALTH_03);	
-};
-//*******************************************************
-
-INSTANCE PC_Mixing_Mana_02 (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 3;
-	condition		= PC_Mixing_Mana_02_Condition;
-	information		= PC_Mixing_Mana_02_Info;
-	permanent		= TRUE;
-	description		= "Mix Essence of Magic Energy (x2) into Extract of Magic Energy (x1)"; 
-};
-
-FUNC INT PC_Mixing_Mana_02_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
-	&& (MixingStart == TRUE)
-	&& (PLAYER_TALENT_ALCHEMY[POTION_MANA_02] == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_Mixing_Mana_02_Info()
-{
-	AlchemyCraftMultiple_Input(PC_Mixing_Mana_02, POTION_MANA_02);	
-};
-INSTANCE PC_Mixing_Mana_03 (C_Info)
-{
-	npc				= PC_Hero;
-	nr				= 4;
-	condition		= PC_Mixing_Mana_03_Condition;
-	information		= PC_Mixing_Mana_03_Info;
-	permanent		= TRUE;
-	description		= "Mix Extract of Magic Energy (x2) into Elixir of Magic Energy (x1)"; 
-};
-
-FUNC INT PC_Mixing_Mana_03_Condition ()
-{
-	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
-	&& (MixingStart == TRUE)
-	&& (PLAYER_TALENT_ALCHEMY[POTION_MANA_03] == TRUE)
-	{	
-		return TRUE;
-	};
-};
-
-FUNC VOID PC_Mixing_Mana_03_Info()
-{
-	AlchemyCraftMultiple_Input(PC_Mixing_Mana_03, POTION_MANA_03);	
-};
-
 
 
 //****************************************************************************
@@ -2644,7 +2479,6 @@ FUNC VOID PC_Mixing_Mana_03_Info()
 //****************************************************************************
 //****************************************************************************
 
-var int BoozeStart;
 //----------------------
 INSTANCE PC_Booze_Start (C_Info)
 {
@@ -2711,7 +2545,7 @@ INSTANCE PC_Booze_Lou (C_Info)
 	condition		= PC_Booze_Lou_Condition;
 	information		= PC_Booze_Lou_Info;
 	permanent		= TRUE;
-	description		= "Lou's Hammer"; 
+	description		= "Lou's Hammer (2 Turnip, 1 Swampweed, 1 Swampshark tooth, 1 White Rum)"; 
 };
 
 FUNC INT PC_Booze_Lou_Condition ()
@@ -2736,7 +2570,7 @@ INSTANCE PC_Booze_Schlaf (C_Info)
 	condition		= PC_Booze_Schlaf_Condition;
 	information		= PC_Booze_Schlaf_Info;
 	permanent		= TRUE;
-	description		= "Lou's Hammer Double"; 
+	description		= "Lou's Double Hammer (2 Turnip, 1 Swampweed, 1 Swampshark tooth, 1 Lou's Hammer)"; 
 };
 
 FUNC INT PC_Booze_Schlaf_Condition ()
@@ -2762,7 +2596,7 @@ INSTANCE PC_Booze_SchnellerHering (C_Info)
 	condition		= PC_Booze_SchnellerHering_Condition;
 	information		= PC_Booze_SchnellerHering_Info;
 	permanent		= TRUE;
-	description		= "Hasty Herring"; 
+	description		= "Hasty Herring (1 Fish, 1 Snapperweed, 1 White Rum)"; 
 };
 
 FUNC INT PC_Booze_SchnellerHering_Condition ()
@@ -2788,7 +2622,7 @@ INSTANCE PC_Booze_TurnipBooze (C_Info)
 	condition		= PC_Booze_TurnipBooze_Condition;
 	information		= PC_Booze_TurnipBooze_Info;
 	permanent		= TRUE;
-	description		= "Turnip Booze"; 
+	description		= "Turnip Booze (4 Turnip, 1 Beer, 1 Minecrawler Mandibles)"; 
 };
 
 FUNC INT PC_Booze_TurnipBooze_Condition ()
@@ -2814,7 +2648,7 @@ INSTANCE PC_Booze_VinoBooze (C_Info)
 	condition		= PC_Booze_VinoBooze_Condition;
 	information		= PC_Booze_VinoBooze_Info;
 	permanent		= TRUE;
-	description		= "Sweet Wine"; 
+	description		= "Vino's Special (2 Berries, 2 Apple, 4 Pear, 1 Bloodfly's wings)"; 
 };
 
 FUNC INT PC_Booze_VinoBooze_Condition ()
@@ -2833,29 +2667,29 @@ FUNC VOID PC_Booze_VinoBooze_Info()
 };	
 
 //********************************
-INSTANCE PC_Booze_WhiteRum (C_Info)
+INSTANCE PC_BOOZE_MonsterDrink (C_Info)
 {
 	npc				= PC_Hero;
 	nr				= 6;
-	condition		= PC_Booze_WhiteRum_Condition;
-	information		= PC_Booze_WhiteRum_Info;
+	condition		= PC_BOOZE_MonsterDrink_Condition;
+	information		= PC_BOOZE_MonsterDrink_Info;
 	permanent		= TRUE;
-	description		= "White Rum"; 
+	description		= "Monster Drink (2 King's Sorrel, 2 Troll Tusk, 4 Teeth, 4 Claws)"; 
 };
 
-FUNC INT PC_Booze_WhiteRum_Condition ()
+FUNC INT PC_BOOZE_MonsterDrink_Condition ()
 {
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
 	&& (BoozeStart == TRUE)
-	&& (PLAYER_TALENT_BOOZE[BOOZE_WhiteRum] == TRUE)
+	&& (PLAYER_TALENT_BOOZE[BOOZE_MonsterDrink] == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_Booze_WhiteRum_Info()
+FUNC VOID PC_BOOZE_MonsterDrink_Info()
 {
-	AlchemyCraftMultiple_Input(PC_Booze_WhiteRum, BOOZE_WhiteRum);	
+	AlchemyCraftMultiple_Input(PC_BOOZE_MonsterDrink, BOOZE_MonsterDrink);	
 };	
 
 //********************************
@@ -2866,7 +2700,7 @@ INSTANCE PC_Booze_MageWine (C_Info)
 	condition		= PC_Booze_MageWine_Condition;
 	information		= PC_Booze_MageWine_Info;
 	permanent		= TRUE;
-	description		= "Monastery Wine"; 
+	description		= "Monastery Wine (4 Grapes, 1 Bloodfly's stinger)"; 
 };
 
 FUNC INT PC_Booze_MageWine_Condition ()
@@ -2892,7 +2726,7 @@ INSTANCE PC_Booze_RiceSchnaps (C_Info)
 	condition		= PC_Booze_RiceSchnaps_Condition;
 	information		= PC_Booze_RiceSchnaps_Info;
 	permanent		= TRUE;
-	description		= "Rice Schnapps"; 
+	description		= "Rice Schnapps (4 Riceplant, 1 Lurker claws)"; 
 };
 
 FUNC INT PC_Booze_RiceSchnaps_Condition ()
@@ -2910,6 +2744,32 @@ FUNC VOID PC_Booze_RiceSchnaps_Info()
 	AlchemyCraftMultiple_Input(PC_Booze_RiceSchnaps, BOOZE_RiceSchnaps);	
 };	
 
+//********************************
+INSTANCE PC_Booze_Mead (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 8;
+	condition		= PC_Booze_Mead_Condition;
+	information		= PC_Booze_Mead_Info;
+	permanent		= TRUE;
+	description		= "Mead (2 Honey comb, 1 Field Raider mandibles)"; 
+};
+
+FUNC INT PC_Booze_Mead_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
+	&& (BoozeStart == TRUE)
+	&& (PLAYER_TALENT_BOOZE[BOOZE_Mead] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Booze_Mead_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Booze_Mead, BOOZE_Mead);	
+};	
+
 
 //****************************************************************************
 //****************************************************************************
@@ -2919,8 +2779,6 @@ FUNC VOID PC_Booze_RiceSchnaps_Info()
 //****************************************************************************
 //****************************************************************************
 
-var int TabakStart;
-var int TabakBlend;
 //----------------------
 INSTANCE PC_Tabak_Start (C_Info)
 {
@@ -3209,7 +3067,7 @@ FUNC VOID PC_ItMi_Tabak_Swampherb()
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_NorthernDark] = TRUE;
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Dreamcall] = TRUE;
 		PLAYER_TALENT_TOBACCO[TOBACCO_Weed_DreamcallStrong] = TRUE;
-		Log_AddEntry(TOPIC_Tobacco,"Swampweed tobacco, which can be used to roll swampweed reefers.\nRecipes:\n\n'Joint': 1 Swampweed and 1 Swampweed tobacco.\n\n'Green Novice': 2 Swampweed, 1 Meadow Knotweed and 1 Swampweed tobacco.\n\n'Northern Dark': 1 Swampweed and 1 Swampweed tobacco.\n\n'Dreamcall': 1 Swampweed and 1 Swampweed tobacco.\n\n'Prepared Dreamcall': 1 Swampweed and 1 Swampweed tobacco.");
+		Log_AddEntry(TOPIC_Tobacco,"Swampweed tobacco, which can be used to roll swampweed reefers.\nRecipes:\n\n'Joint': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Green Novice': 2 Swampweed, 1 Meadow Knotweed and 1 Swampweed tobacco.\n\n'Northern Dark': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.\n\n'Prepared Dreamcall': 1 Swampweed, 1 Swampweed tobacco and 1 Dark Mushroom.");
 	};
 	
 	//B_ENDPRODUCTIONDIALOG ();		
@@ -3229,3 +3087,173 @@ FUNC VOID PC_ItMi_Tabak_Mushroom_01()
 	//B_ENDPRODUCTIONDIALOG ();		
 };
 
+
+
+
+//****************************************************************************
+//****************************************************************************
+//			MIXING POTIONS
+//			MIXING POTIONS
+//			MIXING POTIONS
+//****************************************************************************
+//****************************************************************************
+//----------------------
+INSTANCE PC_Mixing_Start (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 9;
+	condition		= PC_Mixing_Start_Condition;
+	information		= PC_Mixing_Start_Info;
+	permanent		= TRUE;
+	description		= "Mix weaker potions into higher stages"; 
+};
+
+FUNC INT PC_Mixing_Start_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
+	&& (SpecialStart == FALSE)
+	&& (MixingStart == FALSE)
+	&& (SpecialHealth == FALSE)
+	&& (SpecialMana == FALSE)
+	&& (SpecialStr == FALSE)
+	&& (SpecialDex == FALSE)
+	&& (SpecialSpeed == FALSE)
+	&& (BoozeStart == FALSE)
+	&& (TabakStart == FALSE)
+	&& (HealthStart == FALSE)
+	&& (ManaStart == FALSE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Start_Info()
+{
+	MixingStart = TRUE;
+};
+
+//*******************************************************
+
+INSTANCE PC_Mixing_Stop (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 99;
+	condition		= PC_Mixing_Stop_Condition;
+	information		= PC_Mixing_Stop_Info;
+	permanent		= TRUE;
+	description		= DIALOG_BACK; 
+};
+
+FUNC INT PC_Mixing_Stop_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	{	
+		return TRUE;
+	};
+};
+FUNC VOID PC_Mixing_Stop_Info()
+{
+	MixingStart = FALSE;
+};
+
+//*******************************************************
+
+INSTANCE PC_Mixing_Health_02 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 1;
+	condition		= PC_Mixing_Health_02_Condition;
+	information		= PC_Mixing_Health_02_Info;
+	permanent		= TRUE;
+	description		= "Mix Essence of Life (x2) into Extract of Life (x1)"; 
+};
+
+FUNC INT PC_Mixing_Health_02_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_02] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Health_02_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Health_02, POTION_HEALTH_02);	
+};
+INSTANCE PC_Mixing_Health_03 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 2;
+	condition		= PC_Mixing_Health_03_Condition;
+	information		= PC_Mixing_Health_03_Info;
+	permanent		= TRUE;
+	description		= "Mix Extract of Life (x2) into Elixir of Life (x1)"; 
+};
+
+FUNC INT PC_Mixing_Health_03_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_HEALTH_03] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Health_03_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Health_03, POTION_HEALTH_03);	
+};
+//*******************************************************
+
+INSTANCE PC_Mixing_Mana_02 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 3;
+	condition		= PC_Mixing_Mana_02_Condition;
+	information		= PC_Mixing_Mana_02_Info;
+	permanent		= TRUE;
+	description		= "Mix Essence of Magic Energy (x2) into Extract of Magic Energy (x1)"; 
+};
+
+FUNC INT PC_Mixing_Mana_02_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_MANA_02] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Mana_02_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Mana_02, POTION_MANA_02);	
+};
+INSTANCE PC_Mixing_Mana_03 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 4;
+	condition		= PC_Mixing_Mana_03_Condition;
+	information		= PC_Mixing_Mana_03_Info;
+	permanent		= TRUE;
+	description		= "Mix Extract of Magic Energy (x2) into Elixir of Magic Energy (x1)"; 
+};
+
+FUNC INT PC_Mixing_Mana_03_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_MANA_03] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Mana_03_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Mana_03, POTION_MANA_03);	
+};

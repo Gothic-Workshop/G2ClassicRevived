@@ -74,7 +74,7 @@ INSTANCE UndeadOrcWarrior (Mst_Default_UndeadOrcWarrior)
 	B_SetVisuals_UndeadOrcWarrior();
 	
 	// ------ Inventory ------
-	EquipItem (self, ItMw_2H_OrcAxe_02);
+	EquipItem (self, ITMW_REVIVED_ORC_MACE_01);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;

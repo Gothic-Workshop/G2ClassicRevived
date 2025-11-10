@@ -4,18 +4,18 @@ const int	REV_Range_1H_Axe_Old_01				=	70;
 const int	REV_Value_1H_Axe_Old_01				=	50;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_1H_Axe_01				=	30;
-const int	REV_Condition_1H_Axe_01				=	25;
+const int	REV_Damage_1H_Axe_01				=	50;
+const int	REV_Condition_1H_Axe_01				=	40;
 const int	REV_Range_1H_Axe_01					=	70;
 const int	REV_Value_1H_Axe_01					=	100;
 //******************************************************************//
-const int	REV_Damage_1H_Axe_02				=	40;
-const int	REV_Condition_1H_Axe_02				=	35;
+const int	REV_Damage_1H_Axe_02				=	60;
+const int	REV_Condition_1H_Axe_02				=	60;
 const int	REV_Range_1H_Axe_02					=	70;
 const int	REV_Value_1H_Axe_02					=	700;
 //******************************************************************//
-const int	REV_Damage_1H_Axe_03				=	40;
-const int	REV_Condition_1H_Axe_03				=	40;
+const int	REV_Damage_1H_Axe_03				=	90;
+const int	REV_Condition_1H_Axe_03				=	90;
 const int	REV_Range_1H_Axe_03					=	70;
 const int	REV_Value_1H_Axe_03					=	500;
 //******************************************************************//
@@ -58,7 +58,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_OLD_01 (C_Item)
 	visual 				=	"ItMw_1H_Axe_Old_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -83,7 +83,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_01 (C_Item)
 	visual 				=	"ItMw_1H_Axe_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -108,7 +108,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_02 (C_Item)
 	visual 				=	"ItMw_1H_Axe_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -133,7 +133,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_03 (C_Item)
 	visual 				=	"ItMw_1H_Axe_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -167,7 +167,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_CORD (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Cord";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -195,7 +195,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_LARES (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Lares";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -223,7 +223,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_BIFF (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Biff";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

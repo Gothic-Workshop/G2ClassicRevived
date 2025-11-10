@@ -18,7 +18,7 @@ instance BDT_10302_Addon_RangerBandit_L (Npc_Default)
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ItMw_Addon_BanditTrader);
 	//EquipItem			(self, ItRw_SLD_Bow);
-	CreateInvItems (self, ItWr_StonePlateCommon_Addon, 1);	//Joly: will Erol wieder haben!								
+	//CreateInvItems (self, ItWr_StonePlateCommon_Addon, 1);	//Joly: will Erol wieder haben!								
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

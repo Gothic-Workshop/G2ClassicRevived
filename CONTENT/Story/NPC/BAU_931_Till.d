@@ -80,7 +80,7 @@ FUNC VOID Rtn_FollowKloster_931 ()
 
 FUNC VOID Rtn_City_931 ()
 {	
-	TA_Stand_ArmsCrossed   	(08,00,20,00,"NW_CITY_MERCHANT_PATH_36_B");  
+	TA_Stand_ArmsCrossed   	(08,00,20,00,"NW_CITY_MERCHANT_PATCH_46_B");  
     TA_Sleep			 	(20,00,08,00,"NW_CITY_HOTEL_BED_06");
 };
 

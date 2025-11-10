@@ -74,7 +74,7 @@ INSTANCE Draconian			(Mst_Default_Draconian)
 	B_SetVisuals_Draconian();
 	
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcSword_01);
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_03);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;

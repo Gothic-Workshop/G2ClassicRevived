@@ -79,7 +79,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_01 (C_Item)
 	visual 				=	"ItRw_Crossbow_L_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -104,7 +104,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_LIGHT_02 (C_Item)
 	visual 				=	"ItRw_Crossbow_L_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -129,7 +129,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_01 (C_Item)
 	visual 				=	"ItRw_Crossbow_M_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -154,7 +154,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_02 (C_Item)
 	visual 				=	"ItRw_Crossbow_M_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -179,7 +179,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_03 (C_Item)
 	visual 				=	"ItRw_Crossbow_M_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -204,7 +204,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_04 (C_Item)
 	visual 				=	"REV_CROSSBOW_M_04.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -229,7 +229,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_01 (C_Item)
 	visual 				=	"ItRwCrossbow4.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -254,7 +254,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_02 (C_Item)
 	visual 				=	"REV_CROSSBOW_HEAVY_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -279,7 +279,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_HEAVY_03 (C_Item)
 	visual 				=	"ItRw_Crossbow_H_01.mms";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -342,13 +342,13 @@ INSTANCE ITRW_REVIVED_CROSSBOW_MAGIC_01 (C_Item)
 	cond_value[2]  		= 	REV_Condition_Crossbow_Magic_01;
 
 	munition			=	ITRW_REVIVED_MAGICBOLT;
-	visual 				=	"ItRwCrossbow2.mms";
+	visual 				=	"ItRw_Crossbow_H_01.mms";
 
 	wear				=	WEAR_EFFECT;
 	effect				=	"SPELLFX_CROSSBOW";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -370,13 +370,13 @@ INSTANCE ITRW_REVIVED_CROSSBOW_FIRE_01 (C_Item)
 	cond_value[2]  		= 	REV_Condition_Crossbow_Fire_01;
 
 	munition			=	ITRW_REVIVED_FIREBOLT;
-	visual 				=	"ItRwCrossbow2.mms";
+	visual 				=	"ItRw_Crossbow_H_01.mms";
 	
 	wear				=	WEAR_EFFECT;
 	effect				=	"SPELLFX_FIREBOW";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -407,7 +407,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Dragomir";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
@@ -434,7 +434,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_SENGRATH (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Sengrath";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Point;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

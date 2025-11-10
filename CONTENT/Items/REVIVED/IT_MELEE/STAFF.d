@@ -8,8 +8,8 @@ const int	REV_Condition_2H_Staff_02			=	35;
 const int	REV_Range_2H_Staff_02				=	130;
 const int	REV_Value_2H_Staff_02				=	1000;
 //******************************************************************//
-const int	REV_Damage_2H_Staff_03				=	70;
-const int	REV_Condition_2H_Staff_03			=	70;
+const int	REV_Damage_2H_Staff_03				=	30;
+const int	REV_Condition_2H_Staff_03			=	10;
 const int	REV_Range_2H_Staff_03				=	130;
 const int	REV_Value_2H_Staff_03				=	2500;
 //******************************************************************//
@@ -37,64 +37,73 @@ const int	REV_Value_2H_Staff_Judge			=	150;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Normal_01		=	55;
-const int	REV_Condition_2H_MageStaff_Normal_01	=	85;
+const int	REV_Condition_2H_MageStaff_Normal_01	=	40;
 const int	REV_Range_2H_MageStaff_Normal_01		=	140;
 const int	REV_Value_2H_MageStaff_Normal_01		=	1500;
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Normal_02		=	65;
-const int	REV_Condition_2H_MageStaff_Normal_02	=	100;
+const int	REV_Condition_2H_MageStaff_Normal_02	=	40;
 const int	REV_Range_2H_MageStaff_Normal_02		=	140;
 const int	REV_Value_2H_MageStaff_Normal_02		=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Normal_03		=	65;
-const int	REV_Condition_2H_MageStaff_Normal_03	=	100;
+const int	REV_Condition_2H_MageStaff_Normal_03	=	40;
 const int	REV_Range_2H_MageStaff_Normal_03		=	140;
 const int	REV_Value_2H_MageStaff_Normal_03		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Ball_01			=	55;
-const int	REV_Condition_2H_MageStaff_Ball_01		=	85;
+//******************************************************************//
+const int	REV_Damage_2H_MageStaff_Ball_01			=	70;
+const int	REV_Condition_2H_MageStaff_Ball_01		=	60;
 const int	REV_Range_2H_MageStaff_Ball_01			=	140;
 const int	REV_Value_2H_MageStaff_Ball_01			=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Ball_02			=	65;
-const int	REV_Condition_2H_MageStaff_Ball_02		=	100;
+const int	REV_Damage_2H_MageStaff_Ball_02			=	70;
+const int	REV_Condition_2H_MageStaff_Ball_02		=	60;
 const int	REV_Range_2H_MageStaff_Ball_02			=	140;
 const int	REV_Value_2H_MageStaff_Ball_02			=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Ball_03			=	65;
-const int	REV_Condition_2H_MageStaff_Ball_03		=	100;
+const int	REV_Damage_2H_MageStaff_Ball_03			=	70;
+const int	REV_Condition_2H_MageStaff_Ball_03		=	60;
 const int	REV_Range_2H_MageStaff_Ball_03			=	140;
 const int	REV_Value_2H_MageStaff_Ball_03			=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_01			=	55;
-const int	REV_Condition_2H_MageStaff_Good_01		=	85;
+//******************************************************************//
+const int	REV_Damage_2H_MageStaff_Good_01			=	85;
+const int	REV_Condition_2H_MageStaff_Good_01		=	120;
 const int	REV_Range_2H_MageStaff_Good_01			=	140;
 const int	REV_Value_2H_MageStaff_Good_01			=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_02			=	65;
-const int	REV_Condition_2H_MageStaff_Good_02		=	100;
+const int	REV_Damage_2H_MageStaff_Good_02			=	85;
+const int	REV_Condition_2H_MageStaff_Good_02		=	120;
 const int	REV_Range_2H_MageStaff_Good_02			=	140;
 const int	REV_Value_2H_MageStaff_Good_02			=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_03			=	65;
-const int	REV_Condition_2H_MageStaff_Good_03		=	100;
+const int	REV_Damage_2H_MageStaff_Good_03			=	85;
+const int	REV_Condition_2H_MageStaff_Good_03		=	120;
 const int	REV_Range_2H_MageStaff_Good_03			=	140;
 const int	REV_Value_2H_MageStaff_Good_03			=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_01		=	55;
-const int	REV_Condition_2H_MageStaff_Blades_01	=	85;
+//******************************************************************//
+const int	REV_Damage_2H_MageStaff_Blades_01		=	100;
+const int	REV_Condition_2H_MageStaff_Blades_01	=	200;
 const int	REV_Range_2H_MageStaff_Blades_01		=	140;
 const int	REV_Value_2H_MageStaff_Blades_01		=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_02		=	65;
-const int	REV_Condition_2H_MageStaff_Blades_02	=	100;
+const int	REV_Damage_2H_MageStaff_Blades_02		=	100;
+const int	REV_Condition_2H_MageStaff_Blades_02	=	200;
 const int	REV_Range_2H_MageStaff_Blades_02		=	140;
 const int	REV_Value_2H_MageStaff_Blades_02		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_03		=	65;
-const int	REV_Condition_2H_MageStaff_Blades_03	=	100;
+const int	REV_Damage_2H_MageStaff_Blades_03		=	100;
+const int	REV_Condition_2H_MageStaff_Blades_03	=	200;
 const int	REV_Range_2H_MageStaff_Blades_03		=	140;
 const int	REV_Value_2H_MageStaff_Blades_03		=	2000;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Damage_2H_MageStaff_Great_01		=	100;
+const int	REV_Condition_2H_MageStaff_Great_01		=	200;
+const int	REV_Range_2H_MageStaff_Great_01			=	140;
+const int	REV_Value_2H_MageStaff_Great_01			=	2000;
 
 
 
@@ -120,7 +129,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_01 (C_Item)
 	visual 				=	"ItMw_2H_Staff_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -145,7 +154,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_02 (C_Item)
 	visual 				=	"ItMw_2H_Staff_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -170,7 +179,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_03 (C_Item)
 	visual 				=	"ItMw_2H_Staff_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -196,7 +205,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_01 (C_Item)
 	visual 				=	"REV_2H_STAFF_NOVICE_FIRE.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -221,7 +230,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_02 (C_Item)
 	visual 				=	"REV_2H_STAFF_NOVICE_WATER.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -253,7 +262,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 	visual 				=	"ItMw_2H_Staff_03.3DS";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -281,7 +290,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_JUDGE (C_Item)
 
 	description			= name;
 	TEXT[0]				= "It belongs to the Judge.";
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -313,7 +322,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -340,7 +349,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -367,7 +376,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -395,7 +404,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -422,7 +431,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -449,7 +458,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -477,7 +486,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF3";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -504,7 +513,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF3";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -531,7 +540,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF4";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -559,7 +568,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF2";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -586,7 +595,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF5";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -613,7 +622,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF2";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -626,26 +635,26 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 //****************************************************************************
 INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GREAT_01 (C_Item)
 {
-	name 				=	"---";
+	name 				=	"Magic Staff";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_AXE;
 	material 			=	MAT_WOOD;
 
-	value 				=	REV_Value_2H_MageStaff_Blades_03;
+	value 				=	REV_Value_2H_MageStaff_Great_01;
 
-	damageTotal			= 	REV_Damage_2H_MageStaff_Blades_03;
+	damageTotal			= 	REV_Damage_2H_MageStaff_Great_01;
 	damagetype 			=	DAM_BLUNT;
-	range    			=  	REV_Range_2H_MageStaff_Blades_03;
+	range    			=  	REV_Range_2H_MageStaff_Great_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
-	cond_value[2]  		= 	REV_Condition_2H_MageStaff_Blades_03;
+	cond_value[2]  		= 	REV_Condition_2H_MageStaff_Great_01;
 
-	visual 				=	"ItMW_MageStaff_Blades_2H_03.3DS"; 
-	effect				=	"SPELLFX_MAGESTAFF2";
+	visual 				=	"REV_MAGICSTAFF_01.3DS"; 
+	effect				=	"SPELLFX_FIRESWORDBLACK";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;

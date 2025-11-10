@@ -9,7 +9,7 @@ const int	REV_Range_Orc_Axe_02				=	110;
 const int	REV_Value_Orc_Axe_02				=	50;
 //******************************************************************//
 const int	REV_Damage_Orc_Axe_03				=	70;
-const int	REV_Condition_Orc_Axe_03			=	80;
+const int	REV_Condition_Orc_Axe_03			=	90;
 const int	REV_Range_Orc_Axe_03				=	110;
 const int	REV_Value_Orc_Axe_03				=	70;
 //******************************************************************//
@@ -41,7 +41,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_01 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -66,7 +66,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_02 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -91,7 +91,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_03 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -116,7 +116,7 @@ INSTANCE ITMW_REVIVED_ORC_AXE_04 (C_Item)
 	visual 				=	"ItMw_2H_OrcAxe_04.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;

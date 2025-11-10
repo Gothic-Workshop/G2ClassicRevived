@@ -22,6 +22,7 @@ instance DJG_701_Bullco (Npc_Default)
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	EquipItem	(self, ITHE_REVIVED_DJG_M);
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird

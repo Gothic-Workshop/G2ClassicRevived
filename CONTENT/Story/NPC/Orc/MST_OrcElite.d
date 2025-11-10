@@ -73,7 +73,7 @@ INSTANCE OrcElite_Roam (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcSword_02);
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_02);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -89,7 +89,7 @@ INSTANCE OrcElite_Rest (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcSword_02);
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_02);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -105,7 +105,7 @@ INSTANCE OrcElite_Sit (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcSword_02);
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_02);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -159,7 +159,7 @@ INSTANCE OrcElite_AntiPaladin (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	CreateInvItems (self, ItRi_OrcEliteRing, 1);									
 	
 	//----- Daily Routine ----
@@ -188,7 +188,7 @@ INSTANCE OrcElite_AntiPaladin1 (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	CreateInvItems (self, ItRi_OrcEliteRing, 1);									
 	
 	start_aistate				= ZS_MM_Rtn_DragonRest;
@@ -212,7 +212,7 @@ INSTANCE OrcElite_AntiPaladin2 (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	CreateInvItems (self, ItRi_OrcEliteRing, 1);									
 	
 	//----- Daily Routine ----
@@ -235,7 +235,7 @@ INSTANCE OrcElite_AntiPaladin3 (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	CreateInvItems (self, ItRi_OrcEliteRing, 1);									
 	
 	//----- Daily Routine ----
@@ -262,7 +262,7 @@ INSTANCE OrkElite_AntiPaladinOrkOberst_DI (Mst_Default_OrcElite)
 	aivar[AIV_EnemyOverride] = TRUE;
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	CreateInvItems (self, ItKe_OrkKnastDI_MIS, 1);
 	CreateInvItems (self, ItRi_OrcEliteRing, 1);									
 
@@ -281,7 +281,7 @@ INSTANCE OrcElite_DIOberst1_Rest (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -296,7 +296,7 @@ INSTANCE OrcElite_DIOberst2_Rest (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;
@@ -311,7 +311,7 @@ INSTANCE OrcElite_DIOberst3_Rest (Mst_Default_OrcElite)
 	B_SetVisuals_OrcElite();
 
 	//-------- inventory --------
-	EquipItem (self, ItMw_2H_OrcAxe_04);
+	EquipItem (self, ITMW_REVIVED_ORC_AXE_04);
 	
 	//----- Daily Routine ----
 	start_aistate				= ZS_MM_AllScheduler;

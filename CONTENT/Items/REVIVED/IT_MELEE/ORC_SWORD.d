@@ -8,36 +8,36 @@ const int	REV_Condition_Orc_Sword_02			=	120;
 const int	REV_Range_Orc_Sword_02				=	140;
 const int	REV_Value_Orc_Sword_02				=	150;
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_03				=	90;
+const int	REV_Damage_Orc_Sword_03				=	80;
 const int	REV_Condition_Orc_Sword_03			=	100;
 const int	REV_Range_Orc_Sword_03				=	140;
 const int	REV_Value_Orc_Sword_03				=	50;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_Key_01			=	0;
-const int	REV_Condition_Orc_Sword_Key_01		=	0;
-const int	REV_Range_Orc_Sword_Key_01			=	0;
-const int	REV_Value_Orc_Sword_Key_01			=	0;
+const int	REV_Damage_Orc_Sword_Key_01			=	100;
+const int	REV_Condition_Orc_Sword_Key_01		=	200;
+const int	REV_Range_Orc_Sword_Key_01			=	120;
+const int	REV_Value_Orc_Sword_Key_01			=	999;
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_Key_02			=	0;
-const int	REV_Condition_Orc_Sword_Key_02		=	0;
-const int	REV_Range_Orc_Sword_Key_02			=	0;
-const int	REV_Value_Orc_Sword_Key_02			=	0;
+const int	REV_Damage_Orc_Sword_Key_02			=	110;
+const int	REV_Condition_Orc_Sword_Key_02		=	210;
+const int	REV_Range_Orc_Sword_Key_02			=	120;
+const int	REV_Value_Orc_Sword_Key_02			=	999;
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_Key_03			=	0;
-const int	REV_Condition_Orc_Sword_Key_03		=	0;
-const int	REV_Range_Orc_Sword_Key_03			=	0;
-const int	REV_Value_Orc_Sword_Key_03			=	0;
+const int	REV_Damage_Orc_Sword_Key_03			=	120;
+const int	REV_Condition_Orc_Sword_Key_03		=	220;
+const int	REV_Range_Orc_Sword_Key_03			=	120;
+const int	REV_Value_Orc_Sword_Key_03			=	999;
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_Key_04			=	0;
-const int	REV_Condition_Orc_Sword_Key_04		=	0;
-const int	REV_Range_Orc_Sword_Key_04			=	0;
-const int	REV_Value_Orc_Sword_Key_04			=	0;
+const int	REV_Damage_Orc_Sword_Key_04			=	130;
+const int	REV_Condition_Orc_Sword_Key_04		=	230;
+const int	REV_Range_Orc_Sword_Key_04			=	120;
+const int	REV_Value_Orc_Sword_Key_04			=	999;
 //******************************************************************//
-const int	REV_Damage_Orc_Sword_Key_05			=	0;
-const int	REV_Condition_Orc_Sword_Key_05		=	0;
-const int	REV_Range_Orc_Sword_Key_05			=	0;
-const int	REV_Value_Orc_Sword_Key_05			=	0;
+const int	REV_Damage_Orc_Sword_Key_05			=	140;
+const int	REV_Condition_Orc_Sword_Key_05		=	240;
+const int	REV_Range_Orc_Sword_Key_05			=	120;
+const int	REV_Value_Orc_Sword_Key_05			=	999;
 
 
 
@@ -63,7 +63,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_01 (C_Item)
 	visual 				=	"ItMw_2H_OrcSword_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -88,7 +88,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_02 (C_Item)
 	visual 				=	"ItMw_2H_OrcSword_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -110,10 +110,10 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_03 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_Orc_Sword_03;
-	visual 				=	"ItMw_2H_OrcSword_01.3DS";
+	visual 				=	"REV_IRON_HEAVYCLAYMORE.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -143,10 +143,9 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_01 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[2] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[3]				=	"This was the sword of the undead";
-	TEXT[4]				=	"Orc priest Varrag-Hashor.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
@@ -169,10 +168,9 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_02 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[2] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[3]				=	"This was the sword of the undead";
-	TEXT[4]				=	"Orc priest Varrag-Kasorg.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
@@ -195,10 +193,9 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_03 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[2] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[3]				=	"This was the sword of the undead";
-	TEXT[4]				=	"Orc priest Varrag-Unhilqt.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
@@ -221,10 +218,9 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_04 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[2] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[3]				=	"This was the sword of the undead";
-	TEXT[4]				=	"Orc priest Varrag-Ruuushk.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
@@ -247,9 +243,8 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_KEY_05 (C_Item)
 	visual 				=	"ItMi_SleeperKey_01.3DS";
 
 	description			= 	name;
-	TEXT[1]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
-	TEXT[2] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
-	TEXT[3]				=	"This was the sword of the undead";
-	TEXT[4]				=	"high Orc priest Grash-Varrag-Arushat.";
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[1]	= damageTotal;
+	TEXT[3] 			= 	NAME_Hp_needed;					COUNT[2]	= cond_value[2];
+	TEXT[4] 			= 	NAME_OrcWeapon;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

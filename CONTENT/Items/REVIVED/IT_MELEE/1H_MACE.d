@@ -1,35 +1,35 @@
-const int	REV_Damage_1H_Mace_01				=	28;
-const int	REV_Condition_1H_Mace_01			=	20;
+const int	REV_Damage_1H_Mace_01				=	60;
+const int	REV_Condition_1H_Mace_01			=	60;
 const int	REV_Range_1H_Mace_01				=	90;
 const int	REV_Value_1H_Mace_01				=	400;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_02				=	30;
-const int	REV_Condition_1H_Mace_02			=	20;
+const int	REV_Damage_1H_Mace_02				=	75;
+const int	REV_Condition_1H_Mace_02			=	75;
 const int	REV_Range_1H_Mace_02				=	90;
 const int	REV_Value_1H_Mace_02				=	400;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_03				=	35;
-const int	REV_Condition_1H_Mace_03			=	30;
+const int	REV_Damage_1H_Mace_03				=	40;
+const int	REV_Condition_1H_Mace_03			=	40;
 const int	REV_Range_1H_Mace_03				=	90;
 const int	REV_Value_1H_Mace_03				=	600;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_War_01			=	22;
-const int	REV_Condition_1H_Mace_War_01		=	20;
+const int	REV_Damage_1H_Mace_War_01			=	50;
+const int	REV_Condition_1H_Mace_War_01		=	50;
 const int	REV_Range_1H_Mace_War_01			=	90;
 const int	REV_Value_1H_Mace_War_01			=	350;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_War_02			=	35;
-const int	REV_Condition_1H_Mace_War_02		=	25;
+const int	REV_Damage_1H_Mace_War_02			=	80;
+const int	REV_Condition_1H_Mace_War_02		=	80;
 const int	REV_Range_1H_Mace_War_02			=	90;
 const int	REV_Value_1H_Mace_War_02			=	800;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_War_03			=	50;
-const int	REV_Condition_1H_Mace_War_03		=	45;
+const int	REV_Damage_1H_Mace_War_03			=	110;
+const int	REV_Condition_1H_Mace_War_03		=	110;
 const int	REV_Range_1H_Mace_War_03			=	90;
 const int	REV_Value_1H_Mace_War_03			=	1600;
 //******************************************************************//
-const int	REV_Damage_1H_Mace_War_04			=	60;
-const int	REV_Condition_1H_Mace_War_04		=	50;
+const int	REV_Damage_1H_Mace_War_04			=	125;
+const int	REV_Condition_1H_Mace_War_04		=	110;
 const int	REV_Range_1H_Mace_War_04			=	90;
 const int	REV_Value_1H_Mace_War_04			=	2000;
 //******************************************************************//
@@ -77,7 +77,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_01 (C_Item)
 	visual 				=	"ItMw_1H_Mace_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -102,7 +102,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_02 (C_Item)
 	visual 				=	"ItMw_1H_Mace_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -127,7 +127,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_03 (C_Item)
 	visual 				=	"ItMw_1H_Mace_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -152,7 +152,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_01 (C_Item)
 	visual 				=	"ItMw_1H_Mace_War_01.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -177,7 +177,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_02 (C_Item)
 	visual 				=	"ItMw_1H_Mace_War_02.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -202,7 +202,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_03 (C_Item)
 	visual 				=	"ItMw_1H_Mace_War_03.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -227,7 +227,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_WAR_04 (C_Item)
 	visual 				=	"ItMw_1H_Mace_War_04.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -260,7 +260,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_LESTER (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Lester";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -288,7 +288,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_NAMIB (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Baal Namib";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -316,7 +316,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_MOE (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Moe";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -344,7 +344,7 @@ INSTANCE ITMW_REVIVED_1H_MACE_FORTUNO (C_Item)
 
 	description			= 	name;
 	TEXT[0]				=	"It belongs to Fortuno";
-	TEXT[2]				= 	NAME_Damage;					COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_OneHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
