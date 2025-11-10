@@ -963,8 +963,6 @@ FUNC VOID DIA_Constantino_TEACH_Info()
 		Info_AddChoice (DIA_Constantino_TEACH, B_BuildLearnString ("Mana Extract", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Mana_02)), DIA_Constantino_TEACH_Mana02);                 
 	};
 	if (PLAYER_TALENT_ALCHEMY[POTION_SPEED_01] == FALSE)
-	&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == TRUE)
-	&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == TRUE)
 	{
 		Info_AddChoice (DIA_Constantino_TEACH,B_BuildLearnString ("Potion of Swiftness", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_SPEED_01)),DIA_Constantino_TEACH_Speed01);
 	};

@@ -324,8 +324,6 @@ FUNC VOID DIA_Ignaz_Teach_Info()
 	};
 	
 	if ( PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_01] == FALSE)
-	&& ( PLAYER_TALENT_ALCHEMY[POTION_Mana_01] == TRUE)
-	&& ( PLAYER_TALENT_ALCHEMY[POTION_Health_01] == TRUE)
 	{
 		Info_AddChoice (DIA_Ignaz_Teach,B_BuildLearnString ("Essence of Dexterity", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_DEX_01)) ,DIA_Ignaz_Teach_Dexterity_01);
 		talente = (talente + 1);
