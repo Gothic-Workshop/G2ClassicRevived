@@ -20,10 +20,10 @@ PROTOTYPE Mst_Default_StoneGolem(C_Npc)
 	
 	//----- Protections ----
 	protection	[PROT_BLUNT]		=	50;
-	protection	[PROT_EDGE]			=	100;
-	protection	[PROT_POINT]		=	150;
-	protection	[PROT_FIRE]			=	100;
-	protection	[PROT_FLY]			=	100;	
+	protection	[PROT_EDGE]			=	200;
+	protection	[PROT_POINT]		=	200;
+	protection	[PROT_FIRE]			=	200;
+	protection	[PROT_FLY]			=	200;	
 	protection	[PROT_MAGIC]		=	100;
 	
 	//---- Damage Types ----
