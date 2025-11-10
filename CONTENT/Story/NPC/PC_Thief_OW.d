@@ -11,7 +11,7 @@ INSTANCE PC_Thief_OW (Npc_Default)
 	guild 		= GIL_NONE;
 	id 			= 1;
 	voice 		= 11;
-	flags       = 0;//NPC_FLAG_IMMORTAL;															
+	flags       = NPC_FLAG_IMMORTAL;															
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ Aivars -------
