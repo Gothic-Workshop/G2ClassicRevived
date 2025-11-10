@@ -246,10 +246,23 @@ FUNC VOID DIA_Rupert_YourOffer_Info()
 {	
 	AI_Output (other,self ,"DIA_Rupert_YourOffer_15_00"); //What do you have to offer?
 	AI_Output (self ,other,"DIA_Rupert_YourOffer_03_01"); //At the moment, I don't have much choice.
+	AI_Output (self ,other,"DIA_Rupert_YourOffer_03_02"); //The damned landowner doesn't deliver any more, and what we get from the small farms isn't enough to meet the demands of the city.
+	
 	if (hero.guild != GIL_SLD)
 	&& (hero.guild != GIL_DJG)
 	{ 
-		AI_Output (self ,other,"DIA_Rupert_YourOffer_03_02"); //The damned landowner doesn't deliver any more, and what we get from the small farms isn't enough to meet the demands of the city.
+		AI_Output (other,self ,"DIA_Rupert_Bauernaufstand_15_00"); //Tell me more about the peasants' revolt.
+		AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_01"); //It's quite simple: Onar, the fat landowner, won't pay any more taxes to the city.
+		AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_02"); //Imagine! We're at war with the orcs and the fat slob wants everything for himself!
+		AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_03"); //Normally, the city guard would take firm measures in such cases.
+		AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_04"); //But now comes the best part: they say Onar has hired mercenaries to keep the troops from the city off his back!
+		AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_05"); //MERCENARIES! The whole thing will end in a damn war! As if ONE war weren't enough!
+		
+		AI_Output (other,self ,"DIA_Rupert_Mercs_15_00"); //What do you know about Onar's mercenaries?
+		AI_Output (self	,other,"DIA_Rupert_Mercs_03_01"); //I heard that most of them are former convicts from the mining colony.
+		AI_Output (self	,other,"DIA_Rupert_Mercs_03_02"); //And their leader is supposed to have been a big shot with the King - a general or something - whom they put away as a traitor!
+		AI_Output (self	,other,"DIA_Rupert_Mercs_03_03"); //These are terrible times.
+	
 	};
 };
 
@@ -275,11 +288,6 @@ FUNC INT DIA_Rupert_Trade_Condition()
 };
 FUNC VOID DIA_Rupert_Trade_Info()
 {	
-	if (Npc_HasItems (self, itfo_cheese) < 5)
-	{
-		CreateInvItems (self, ItFo_cheese, 5);
-	};
-	
 	AI_Output (other,self ,"DIA_Rupert_Trade_15_00"); //Show me your wares.
 	if (hero.guild == GIL_KDF)
 	|| (hero.guild == GIL_PAL)
@@ -287,65 +295,3 @@ FUNC VOID DIA_Rupert_Trade_Info()
 		AI_Output (self,other,"DIA_Rupert_Trade_03_01"); //I must beg your pardon for my poor selection. A man in your position is certainly used to better.
 	};
 };
-
-// ************************************************************
-// 			  				 Bauernaufstand
-// ************************************************************
-INSTANCE DIA_Rupert_Bauernaufstand(C_INFO)
-{
-	npc			= VLK_458_Rupert;
-	nr			= 4;
-	condition	= DIA_Rupert_Bauernaufstand_Condition;
-	information	= DIA_Rupert_Bauernaufstand_Info;
-	permanent	= FALSE;
-	description = "Tell me more about the peasants' revolt.";
-};                       
-FUNC INT DIA_Rupert_Bauernaufstand_Condition()
-{	
-	if (Npc_KnowsInfo (other,DIA_Rupert_YourOffer))
-	&& (hero.guild == GIL_NONE)
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Rupert_Bauernaufstand_Info()
-{	
-	AI_Output (other,self ,"DIA_Rupert_Bauernaufstand_15_00"); //Tell me more about the peasants' revolt.
-	AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_01"); //It's quite simple: Onar, the fat landowner, won't pay any more taxes to the city.
-	AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_02"); //Imagine! We're at war with the orcs and the fat slob wants everything for himself!
-	AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_03"); //Normally, the city guard would take firm measures in such cases.
-	AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_04"); //But now comes the best part: they say Onar has hired mercenaries to keep the troops from the city off his back!
-	AI_Output (self ,other,"DIA_Rupert_Bauernaufstand_03_05"); //MERCENARIES! The whole thing will end in a damn war! As if ONE war weren't enough!
-};
-
-// ***************************************************************
-//							Söldner
-// ***************************************************************
-INSTANCE DIA_Rupert_Mercs(C_INFO)
-{
-	npc			= VLK_458_Rupert;
-	nr			= 4;
-	condition	= DIA_Rupert_Mercs_Condition;
-	information	= DIA_Rupert_Mercs_Info;
-	permanent	= FALSE;
-	description = "What do you know about Onar's mercenaries?";
-};                       
-FUNC INT DIA_Rupert_Mercs_Condition()
-{	
-	if (Npc_KnowsInfo (other,DIA_Rupert_Bauernaufstand))
-	&& (hero.guild != GIL_SLD)
-	&& (hero.guild != GIL_DJG)
-	{
-		return TRUE;
-	};
-};
-FUNC VOID DIA_Rupert_Mercs_Info()
-{	
-	AI_Output (other,self ,"DIA_Rupert_Mercs_15_00"); //What do you know about Onar's mercenaries?
-	AI_Output (self	,other,"DIA_Rupert_Mercs_03_01"); //I heard that most of them are former convicts from the mining colony.
-	AI_Output (self	,other,"DIA_Rupert_Mercs_03_02"); //And their leader is supposed to have been a big shot with the King - a general or something - whom they put away as a traitor!
-	AI_Output (self	,other,"DIA_Rupert_Mercs_03_03"); //These are terrible times.
-};
-
-
-
