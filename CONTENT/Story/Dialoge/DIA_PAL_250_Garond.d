@@ -365,10 +365,11 @@ FUNC VOID DIA_Garond_NeedProof_Info()
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_06"); //I've got three troops of scrapers out there, but they haven't sent me a single nugget.
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_07"); //Visit the mining sites and report back to me how much ore they have stored.
 	AI_Output (self ,other,"DIA_Garond_NeedProof_10_08"); //Then I'll write you a letter that you are going to take back to Lord Hagen.
-	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Of well - I guess I have no choice.
+	AI_Output (other,self ,"DIA_Garond_NeedProof_15_09"); //Oh well - I guess I have no choice.
 	
 	MIS_ScoutMine = LOG_RUNNING;
 	B_StartOtherRoutine (Jergan,"Silvestro");
+	Npc_ExchangeRoutine (self,"START");
 	
 	B_LogEntry (TOPIC_MISOLDWORLD,"Before Commander Garond sends me back, he wants me to seek out the three scraper troops and tell him how much ore they have stacked away.");
 	

@@ -41,12 +41,13 @@ instance PAL_260_Tandor  (Npc_Default)
 
 FUNC VOID Rtn_Start_260 ()
 {	
-	TA_Stand_ArmsCrossed		(08,00,23,00,"OCC_STABLE_BACK_STORE");
-    TA_Stand_ArmsCrossed		(23,00,08,00,"OCC_STABLE_BACK_STORE");
+	TA_Stand_ArmsCrossed		(08,00,20,00,"OCC_STABLE_BACK_STORE");
+    TA_Stand_ArmsCrossed		(20,00,22,00,"OCC_BARONS_GREATHALL_CENTER_MOVEMENT4");
+	TA_Stand_Eating				(22,00,08,00,"OCC_STABLE_BACK_STORE");
 };
 
 FUNC VOID Rtn_PostenVerlassen_260 ()
 {	
 	TA_Practice_Sword		(08,00,23,00,"OCC_FIGHTTRAINING_003");
-    TA_Stand_Eating			(23,00,08,00,"OCC_STABLE_ENTRANCE_INSERT");
+    TA_Stand_Drinking		(23,00,08,00,"OCC_STABLE_ENTRANCE_INSERT");
 };
