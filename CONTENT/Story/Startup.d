@@ -907,10 +907,21 @@ func void STARTUP_FORTRESS ()
 func void STARTUP_SURFACE ()
 {
 	// Dragons
-	Wld_InsertNpc		(Dragon_Swamp,			"OW_SWAMPDRAGON");
-	Wld_InsertNpc		(Dragon_Rock, 			"OW_STONEDRAGON");
-	Wld_InsertNpc		(Dragon_Fire, 			"OW_FIREDRAGON");
-	Wld_InsertNpc		(Dragon_Ice, 			"OW_ICEDRAGON");
+	Wld_InsertNpc		(Dragon_Swamp,					"OW_SWAMPDRAGON");
+	Wld_InsertItem		(ItWr_StonePlateCommon_Addon,	"OW_ITEM_SWAMPHORT_01"); 
+	Wld_InsertItem		(ITRI_REVIVED_STR_DEX_01,		"OW_ITEM_SWAMPHORT_02"); 
+
+	Wld_InsertNpc		(Dragon_Rock, 					"OW_STONEDRAGON");
+	Wld_InsertItem		(ITAM_REVIVED_STR_DEX_01,		"OW_ITEM_ROCKHORT_01"); 
+	Wld_InsertItem		(ITPO_REVIVED_BOOST_MASTER_03,	"OW_ITEM_ROCKHORT_02"); 
+
+	Wld_InsertNpc		(Dragon_Fire, 					"OW_FIREDRAGON");
+	Wld_InsertItem		(ITRW_REVIVED_CROSSBOW_FIRE_01,	"OW_ITEM_FIREHORT_01"); 
+	Wld_InsertItem		(ItMi_Sextant,			"OW_ITEM_FIREHORT_02"); 
+
+	Wld_InsertNpc		(Dragon_Ice, 					"OW_ICEDRAGON");
+	Wld_InsertItem		(ItWr_Addon_LPBook,				"OW_ITEM_ICEHORT_01"); 
+	Wld_InsertItem		(ItAt_DragonEgg_MIS,			"OW_ITEM_ICEHORT_02"); 
 
 
 	// Exchange Place			
@@ -1212,8 +1223,6 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc	(Draconian,	"SPAWNOW_PATH_190_MOVMENT");
 
 	Wld_InsertNpc	(FireGolem,	"LOCATION_12_011");
-	
-	Wld_InsertItem	(ItMi_Zeitspalt_Addon,"OW_ITEM_FIREHORT_01");
 
 
 	// Old Mine
@@ -2461,7 +2470,7 @@ func void STARTUP_NewWorld_Part_City_01()
 
 	//Wld_InsertNpc		(VLK_4200_Buergerin	, "NW_CITY_ENTRANCE_01"); //Smalltalk
 
-	Wld_InsertNpc		(Vlk_2000_Thorus, "NW_CITY_ENTRANCE_01");
+	Wld_InsertNpc		(MIL_2000_Thorus, "NW_CITY_ENTRANCE_01");
 
 	Wld_InsertNpc		(VLK_4006_Bote, "NW_CITY_ENTRANCE_01");
 
@@ -2816,6 +2825,8 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertItem (ITFO_REVIVED_PLANTSOUP, "FP_ITEM_XARDAS_06");
 
 	Wld_InsertItem (ITMI_REVIVED_STUFF_IDOL_01, "FP_ITEM_XARDAS_07");
+		
+	Wld_InsertItem 		(ITKE_REVIVED_XARDAS,		"FP_SPAWN_X_GUERTEL");
 
 	////////////////////////////////////////////////////////////////////////////
 	//----------------------- Spielstart Gothic2------------------------------//
@@ -2824,8 +2835,6 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	//---NSCs---
 	Wld_InsertNpc		(NONE_100_Xardas, 	"NW_XARDAS_START");
 	Wld_InsertNpc		(PC_Psionic, 		"NW_XARDAS_TOWER_PATH_01");
-		
-	Wld_InsertItem 		(Itke_Xardas,		"FP_SPAWN_X_GUERTEL");
 
 	Wld_InsertNpc		(BDT_1013_Bandit_L, "NW_XARDAS_STAIRS_01");
 	Wld_InsertNpc		(BDT_1014_Bandit_L, "NW_XARDAS_BANDITS_LEFT");
