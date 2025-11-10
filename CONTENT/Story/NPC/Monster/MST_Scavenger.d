@@ -66,6 +66,13 @@ func void B_SetVisuals_Scavenger()
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Sca_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
+	
+func void B_SetVisuals_ScavengerFeather()
+{
+	Mdl_SetVisual			(self,	"Scavenger.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Sca_Body2",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
 
 
 //***************
@@ -79,6 +86,13 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
+
+INSTANCE ScavengerFeather	(Mst_Default_Scavenger)
+{
+	B_SetVisuals_ScavengerFeather();
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFoMuttonRaw, 1);
+};
 
 
 
