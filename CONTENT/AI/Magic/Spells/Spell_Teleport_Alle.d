@@ -139,23 +139,7 @@ func void Spell_Cast_TeleportFarm()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	var int random;	random = Hlp_Random (4);
-	if (random == 0)
-	{
-		AI_Teleport		(self, "NW_BIGFARM_CHAPEL");
-	}
-	else if (random == 1)
-	{
-		AI_Teleport		(self, "NW_BIGFARM_CHAPEL_05");
-	} 
-	else if (random == 2)
-	{
-		AI_Teleport		(self, "NW_BIGFARM_CHAPEL_04");
-	} 
-	else if (random == 3)
-	{
-		AI_Teleport		(self, "NW_BIGFARM_CHAPEL_03");
-	};
+	AI_Teleport		(self, "NW_BIGFARM_CHAPEL_004");
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
 
@@ -191,22 +175,14 @@ func void Spell_Cast_TeleportPassNW()
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_Teleport;
 	};
 
-	var int random;	random = Hlp_Random (4);
+	var int random;	random = Hlp_Random (2);
 	if (random == 0)
 	{
-		AI_Teleport		(self, "NW_TO_PASS_03");
+		AI_Teleport		(self, "NW_FARM3_PATH_11_SMALLRIVER_13");
 	}
 	else if (random == 1)
 	{
-		AI_Teleport		(self, "NW_TO_PASS_04");
-	} 
-	else if (random == 2)
-	{
-		AI_Teleport		(self, "NW_GREATPEASENT_TO_PASS");
-	} 
-	else if (random == 3)
-	{
-		AI_Teleport		(self, "NW_PASS_GATE_02");
+		AI_Teleport		(self, "NW_FARM3_BIGWOOD_TO_VALLEY");
 	};
 	AI_PlayAni		(self, "T_HEASHOOT_2_STAND" );
 };
