@@ -1,4 +1,4 @@
-instance Vlk_2000_Thorus (Npc_Default)
+instance MIL_2000_Thorus (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_Stadtwache; //"Thorus";
