@@ -56,7 +56,7 @@ INSTANCE ItFo_Addon_Shellflesh (C_Item)
 //-----------------------------
 INSTANCE ItFo_Addon_Rum(C_Item)
 {
-	name 			=	"Rum";
+	name 			=	"White Rum";
 
 	mainflag 		=	ITEM_KAT_FOOD;
 	flags 			=	ITEM_MULTI;
@@ -68,7 +68,7 @@ INSTANCE ItFo_Addon_Rum(C_Item)
 	on_state[0]		=	UseRum;
 	scemeName		=	"POTIONFAST";
 
-	description		= 	"White Rum";
+	description		= 	name;
 	
 	TEXT[1]			= 	NAME_Bonus_Mana;				
 	COUNT[1]		= 	Mana_Rum;
@@ -136,7 +136,7 @@ INSTANCE ItFo_Addon_LousHammer (C_Item)
 	on_state[0]		=	UseLouHammer;
 	scemeName		=	"POTIONFAST";
 
-	description		= 	"Lou's Hammer";
+	description		= 	name;
 	
 	TEXT[1]			= 	"Effect          ???";				
 	

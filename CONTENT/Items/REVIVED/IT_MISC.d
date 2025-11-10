@@ -24,7 +24,7 @@ INSTANCE ITMI_REVIVED_JOINT_GREENNOVICE (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_GREENNOVICE;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_GREENNOVICE()
 {
@@ -57,7 +57,7 @@ INSTANCE ITMI_REVIVED_JOINT_NORTHDARK (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_NORTHDARK;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_NORTHDARK()
 {
@@ -90,7 +90,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_DREAMCALL;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_DREAMCALL()
 {
@@ -126,7 +126,7 @@ INSTANCE ITMI_REVIVED_JOINT_DREAMCALL_02 (C_Item)
 	TEXT[0]		    	= "Swampweed with a stronger";
 	TEXT[1]             = "effect than normal weed.";
 	//TEXT[3]             = "For the Guru Baal-Tyon!";
-	TEXT[5]				= NAME_Value;					COUNT[4]	= REV_Value_Joint;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 
 func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
@@ -146,7 +146,7 @@ func void Use_ITMI_REVIVED_JOINT_DREAMCALL_02()
 };
 
 /******************************************************************************************/
-INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
+INSTANCE ITMI_REVIVED_JOINT_REGULAR (C_Item)
 {
 	name 				=	"Joint";
 
@@ -155,15 +155,13 @@ INSTANCE ITMI_REVIVED_JOINT_REGULAR(C_Item)
 
 	value 				=	Value_Joint;
 
-	visual 				=	"ItMi_Joint.3ds";
+	visual 				=	"ItMi_Joint_01.3ds";
 	material 			=	MAT_LEATHER;
 
 	scemeName			=	"JOINT";
 	on_state[0]			= 	Use_ITMI_REVIVED_JOINT_REGULAR;
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			= 	value;	
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_REGULAR()
 {
@@ -174,7 +172,7 @@ func void Use_ITMI_REVIVED_JOINT_REGULAR()
 			B_GivePlayerXP (25);
 			FirstJoint_REGULAR = TRUE;
 		};
-		Wld_PlayEffect ("SLOW_TIME", self, self, 0, 0, 0, FALSE);
+		Wld_PlayEffect ("SLOW_TIME_SHORT", self, self, 0, 0, 0, FALSE);
 	};
 };
 
@@ -194,7 +192,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLE (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLE;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Joint;
 };
 func void Use_ITMI_REVIVED_JOINT_APPLE()
 {
@@ -225,7 +223,7 @@ INSTANCE ITMI_REVIVED_JOINT_APPLEDOUBLE (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_APPLEDOUBLE;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 func void Use_ITMI_REVIVED_JOINT_APPLEDOUBLE()
 {
@@ -256,7 +254,7 @@ INSTANCE ITMI_REVIVED_JOINT_HONEY (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_HONEY;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 func void Use_ITMI_REVIVED_JOINT_HONEY()
 {
@@ -287,7 +285,7 @@ INSTANCE ITMI_REVIVED_JOINT_MUSHROOM (C_Item)
 	scemeName			=	"JOINT";
 	on_state[0]			= Use_ITMI_REVIVED_JOINT_MUSHROOM;
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 {
@@ -328,7 +326,7 @@ INSTANCE ITMI_REVIVED_SALT (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Salt;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Salt;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_SUGAR (C_Item)
@@ -344,7 +342,7 @@ INSTANCE ITMI_REVIVED_SUGAR (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Sugar;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Sugar;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
@@ -360,7 +358,7 @@ INSTANCE ITMI_REVIVED_SYRIANOIL (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_SyrianOil;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_SyrianOil;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_STONEOIL (C_Item)
@@ -376,7 +374,7 @@ INSTANCE ITMI_REVIVED_STONEOIL (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_StoneOil;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_StoneOil;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_PUREALCOHOL (C_Item)
@@ -392,7 +390,7 @@ INSTANCE ITMI_REVIVED_PUREALCOHOL (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_PureAlcohol;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_PureAlcohol;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_VINEGAR (C_Item)
@@ -408,7 +406,7 @@ INSTANCE ITMI_REVIVED_VINEGAR (C_Item)
 	material 			=	MAT_GLAS;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_Vinegar;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_Vinegar;
 };
 /******************************************************************************************/
 INSTANCE ITMI_REVIVED_MAGICWATER (C_Item)
@@ -426,7 +424,7 @@ INSTANCE ITMI_REVIVED_MAGICWATER (C_Item)
 	description			= name;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= REV_Value_MagicWater;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= REV_Value_MagicWater;
 };
 
 //****************************************************************************
@@ -448,8 +446,7 @@ INSTANCE ITMI_REVIVED_WARHORN (C_Item)
 	scemeName			=	"HORN";
 
 	description			= name;
-	TEXT[5]				= NAME_Value;
-	COUNT[5]			= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_OLDCOIN (C_Item)
@@ -465,7 +462,7 @@ INSTANCE ITMI_REVIVED_OLDCOIN (C_Item)
 	material 			=	MAT_METAL;
 
 	description			= name;
-	TEXT[4]				= NAME_Value;					COUNT[4]	= value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
@@ -486,9 +483,7 @@ INSTANCE ITMI_REVIVED_MAGICORE(C_Item)
 	description			= 	name;
 
 	TEXT[0]				=	"The ore is faded and does not shine.";
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 	
 	INV_ZBIAS				= INVCAM_ENTF_MISC2_STANDARD;
 };
@@ -511,9 +506,7 @@ INSTANCE ITMI_REVIVED_STUFF_AMPHORE (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_CUP_01 (C_Item)
@@ -529,9 +522,7 @@ INSTANCE ITMI_REVIVED_STUFF_CUP_01 (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_CUP_02 (C_Item)
@@ -547,9 +538,7 @@ INSTANCE ITMI_REVIVED_STUFF_CUP_02 (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_MUG (C_Item)
@@ -565,9 +554,7 @@ INSTANCE ITMI_REVIVED_STUFF_MUG (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_PLATE (C_Item)
@@ -583,9 +570,7 @@ INSTANCE ITMI_REVIVED_STUFF_PLATE (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_SILVERWARE (C_Item)
@@ -601,9 +586,7 @@ INSTANCE ITMI_REVIVED_STUFF_SILVERWARE (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_PIPE (C_Item)
@@ -619,9 +602,7 @@ INSTANCE ITMI_REVIVED_STUFF_PIPE (C_Item)
 	material 			=	MAT_STONE;
 
 	description			= 	name;
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
@@ -640,9 +621,7 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_01 (C_Item)
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
 	TEXT[2]				=	"The mask is surrounded by six big stings.";
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
 INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
@@ -661,7 +640,5 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
 	TEXT[2]				=	"The mask is surrounded by two big stings.";
-	
-	TEXT[5]				= 	NAME_Value;	
-	COUNT[5]			=	value;
+	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };

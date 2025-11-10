@@ -6,30 +6,30 @@ const int	REV_Prot_Fire_BEGGAR				=	0;
 const int	REV_Prot_Magic_BEGGAR				=	0;
 //******************************************************************//
 const int	REV_Value_LEATHER_L					=	500;
-const int	REV_Prot_Edge_LEATHER_L				=	30;
+const int	REV_Prot_Edge_LEATHER_L				=	25;
 const int	REV_Prot_Blunt_LEATHER_L			=	25;
 const int	REV_Prot_Point_LEATHER_L			=	20;
-const int	REV_Prot_Fire_LEATHER_L				=	5;
+const int	REV_Prot_Fire_LEATHER_L				=	10;
 const int	REV_Prot_Magic_LEATHER_L			=	0;
 //******************************************************************//
 const int	REV_Value_LEATHER_M					=	500;
 const int	REV_Prot_Edge_LEATHER_M				=	30;
 const int	REV_Prot_Blunt_LEATHER_M			=	25;
 const int	REV_Prot_Point_LEATHER_M			=	20;
-const int	REV_Prot_Fire_LEATHER_M				=	5;
+const int	REV_Prot_Fire_LEATHER_M				=	10;
 const int	REV_Prot_Magic_LEATHER_M			=	0;
 //******************************************************************//
 const int	REV_Value_LEATHER_H					=	500;
-const int	REV_Prot_Edge_LEATHER_H				=	30;
-const int	REV_Prot_Blunt_LEATHER_H			=	25;
-const int	REV_Prot_Point_LEATHER_H			=	20;
-const int	REV_Prot_Fire_LEATHER_H				=	5;
+const int	REV_Prot_Edge_LEATHER_H				=	35;
+const int	REV_Prot_Blunt_LEATHER_H			=	35;
+const int	REV_Prot_Point_LEATHER_H			=	30;
+const int	REV_Prot_Fire_LEATHER_H				=	15;
 const int	REV_Prot_Magic_LEATHER_H			=	0;
 //******************************************************************//
 const int	REV_Value_ARCHER					=	800;
 const int	REV_Prot_Edge_ARCHER				=	40;
-const int	REV_Prot_Blunt_ARCHER				=	30;
-const int	REV_Prot_Point_ARCHER				=	40;
+const int	REV_Prot_Blunt_ARCHER				=	40;
+const int	REV_Prot_Point_ARCHER				=	60;
 const int	REV_Prot_Fire_ARCHER				=	10;
 const int	REV_Prot_Magic_ARCHER				=	0;
 //******************************************************************//

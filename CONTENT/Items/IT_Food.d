@@ -109,7 +109,7 @@ INSTANCE ItFo_Cheese (C_Item)
 
 INSTANCE ItFo_Bacon (C_Item)
 {	
-	name 				=	"Ham";
+	name 				=	"Bacon";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;

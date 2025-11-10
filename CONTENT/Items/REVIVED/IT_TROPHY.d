@@ -16,6 +16,7 @@ CONST INT	REV_VALUE_ALLIGATORSKIN		=	150;
 
 CONST INT	REV_VALUE_ORCDOGFUR			=	30;
 CONST INT	REV_VALUE_ICEWOLFFUR		=	20;
+CONST INT	REV_VALUE_BLACKWOLFFUR		=	20;
 CONST INT	REV_VALUE_PANTHERFUR		=	200;
 
 /******************************************************************************************/
@@ -66,7 +67,7 @@ INSTANCE ITAT_REVIVED_SCAVENGEREGG(C_Item)
 
 	value 					=	REV_VALUE_SCAVENGEREGG;
 
-	visual 					=	"ItAt_Crawlerqueen.3ds"; 
+	visual 					=	"REV_ITAT_SCAVENGER_EGG_01.3DS"; 
 	material 				=	MAT_LEATHER;
 
 	description				=	name;
@@ -101,6 +102,22 @@ INSTANCE ITAT_REVIVED_FUR_ICEWOLF (C_Item)
 	value 				=	REV_VALUE_ICEWOLFFUR;
 
 	visual 				=	"REV_ITAT_ICEWOLF_01.3DS";
+	material 			=	MAT_LEATHER;
+
+	description				=	name;
+	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+};
+
+INSTANCE ITAT_REVIVED_FUR_BLACKWOLF (C_Item)
+{
+	name 				=	"Skin of a Black Wolf";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_VALUE_BLACKWOLFFUR;
+
+	visual 				=	"REV_ITAT_BLACKWOLF_01.3DS";
 	material 			=	MAT_LEATHER;
 
 	description				=	name;

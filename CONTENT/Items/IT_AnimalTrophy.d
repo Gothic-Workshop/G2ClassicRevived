@@ -48,7 +48,7 @@ const int	Value_Keilerfur				= 	 15;
 /*****************ADDON*************************************************************************/
 INSTANCE ItAt_Addon_BCKopf (C_Item)
 {
-	name 				=	"Head";
+	name 				=	"Mantis head";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MULTI;
@@ -59,7 +59,7 @@ INSTANCE ItAt_Addon_BCKopf (C_Item)
 	material 			=	MAT_LEATHER;
 	
 
-	description			= 	"Mantis head";
+	description			= 	name;
 	TEXT[0]				= 	"";
 	TEXT[2]				= 	"";
 	TEXT[3]				= 	"";

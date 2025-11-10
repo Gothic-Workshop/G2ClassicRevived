@@ -7,7 +7,6 @@ const int	REV_Value_HamCooked			=	 50;	const int	REV_HP_HamCooked		=	40;
 const int	REV_Value_Apple				=	 6;		const int	REV_HP_Apple			=	4;
 const int	REV_Value_Pear				=	 12;	const int	REV_HP_Pear				=	8;
 const int	REV_Value_Honeycomb			=	30;		const int	REV_HP_Honeycomb		=	8;
-const int	REV_Value_Grapes			=	 6;		const int	REV_HP_Grapes			=	5;
 
 const int	REV_Value_Carrot			=	12;		const int	REV_HP_Carrot			=	10;
 const int	REV_Value_Cabbage			=	18;		const int	REV_HP_Cabbage			=	8;
@@ -19,12 +18,21 @@ const int	REV_Value_StinkyCheese		=	 8;		const int	REV_HP_StinkyCheese		=	5;
 const int	REV_Value_StaleWater		=	 3;		const int	REV_HP_StaleWater		=	2;
 const int	REV_Value_OldBeer			=	 6;		const int	REV_HP_OldBeer			=	3;
 const int	REV_Value_OldWine			=	 8;		const int	REV_HP_OldWine			=	3;
-const int	REV_Value_RiceSchnapps		=	10;		const int	REV_HP_RiceSchnapps		=	3;
 
-const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	10;
-const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	 7;
+const int	REV_Value_TurnipBooze		=	16;		const int	REV_HP_TurnipBooze		=	3;
+const int	REV_Value_VinoBooze			=	25;		const int	REV_HP_VinoBooze		=	3;
+const int	REV_Value_MageWine			=	30;		const int	REV_HP_MageWine			=	3;
+const int	REV_Value_MonsterDrink		=	50;		const int	REV_HP_MonsterDrink		=	3;
+const int	REV_Value_RiceSchnapps		=	 6;		const int	REV_HP_RiceSchnapps		=	3;
+const int	REV_Value_Mead				=	12;		const int	REV_HP_Mead				=	3;
+
 const int	REV_Value_MeatbugRagout		=	 4;		const int	REV_HP_MeatbugRagout	=	 9;
+const int	REV_Value_RootSoup			=	 3;		const int	REV_HP_RootSoup			=	 7;
 const int	REV_Value_CrawlerSoup		=	10;		const int	REV_HP_CrawlerSoup		=	15;
+const int	REV_Value_Rice				=	 5;		const int	REV_HP_Rice				=	10;
+const int	REV_Value_Marmalade			=	25;		const int	REV_HP_Marmalade		=	10;
+const int	REV_Value_FruitSalad		=	20;		const int	REV_HP_FruitSalad		=	10;
+const int	REV_Value_OldStew			=	 1;		const int	REV_HP_OldStew			=	10;
 
 
 //****************************************************************************
@@ -129,7 +137,7 @@ INSTANCE ITFO_REVIVED_HAM_02 (C_Item)
 
 INSTANCE ITFO_REVIVED_APPLE_01 (C_Item)
 {	
-	name 				=	"Sour Apple";
+	name 				=	"Sour apple";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -174,7 +182,7 @@ INSTANCE ITFO_REVIVED_APPLE_01 (C_Item)
 
 INSTANCE ITFO_REVIVED_APPLE_02 (C_Item)
 {	
-	name 				=	"Old Apple";
+	name 				=	"Old apple";
 
 	mainflag 			=	ITEM_KAT_FOOD;
 	flags 				=	ITEM_MULTI;
@@ -271,122 +279,6 @@ INSTANCE ITFO_REVIVED_HONEY (C_Item)
 
 /******************************************************************************************/
 
-INSTANCE ITFO_REVIVED_GRAPES_BLACK (C_Item)
-{	
-	name 				=	"Black Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_BLACK.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITFO_REVIVED_GRAPES_BLUE (C_Item)
-{	
-	name 				=	"Blue Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_BLUE.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITFO_REVIVED_GRAPES_RED (C_Item)
-{	
-	name 				=	"Red Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_RED.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITFO_REVIVED_GRAPES_GREEN (C_Item)
-{	
-	name 				=	"Green Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_GREEN.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITFO_REVIVED_GRAPES_PURPLE (C_Item)
-{	
-	name 				=	"Purple Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_PURPLE.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-INSTANCE ITFO_REVIVED_GRAPES_YELLOW (C_Item)
-{	
-	name 				=	"Yellow Grapes";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Grapes;
-
-	visual 				=	"REV_ITPL_WINEBERRY_YELLOW.3ds";
-	on_state[0]         = 	UseWineberrys;  
-	scemeName			=	"FOOD";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Grapes;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-
-func void UseWineberrys () 
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Grapes);
-	};
-
-/******************************************************************************************/
-
 INSTANCE ITFO_REVIVED_BREAD_01 (C_Item)
 {	
 	name 				=	"Hard bread";
@@ -479,111 +371,6 @@ INSTANCE ITFO_REVIVED_CHEESE_02 (C_Item)
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	-REV_HP_BadFood);
 	};
 
-
-/******************************************************************************************/
-
-INSTANCE ITFO_REVIVED_RICE (C_Item)
-{	
-	name 				=	"Rice";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;	
-
-	value 				=	REV_Value_Rice;
-
-	visual 				=	"ItFo_Rice_01.3ds";
-	scemeName			=	"RICE";
-	on_state[0]			=	UseRice;
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Rice;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-	FUNC VOID UseRice()
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Rice);
-	};
-
-
-//****************************************************************************
-//			SOUP
-//****************************************************************************
-
-INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
-{	
-	name 				=	"Root Soup";
-
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_RootSoup;
-
-	visual 				=	"ItFo_Soup_01.3ds";
-	scemeName			=	"RICE";
-	on_state[0]			=	UseSoup;
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RootSoup;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-	FUNC VOID UseSoup()
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RootSoup);
-	};
-
-/******************************************************************************************/
-
-INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
-{	
-	name 				=	"Meatbug Ragout";
-	
-	mainflag 			=	ITEM_KAT_FOOD;
-	flags 				=	ITEM_MULTI;
-
-	value 				=	REV_Value_MeatbugRagout;
-
-	visual 				=	"ItFo_Meatbugragout_01.3ds"; 
-	material 			=	MAT_LEATHER;
-	scemeName			=	"RICE";
-	on_state[0]			=	UseMeatbugragout;
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatbugRagout;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
-};
-
-	FUNC VOID UseMeatbugragout()
-	{
-		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatbugRagout);
-	};
-
-/******************************************************************************************/
-
-INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)                                          
-{	                                                                
-	name 				=	"Minecrawler Soup";
-	                                                            
-	mainflag 			=	ITEM_KAT_FOOD;  
-	flags 				=	ITEM_MULTI;
-                                                                    
-	value 				=	REV_Value_CrawlerSoup;              
-                                                                    
-	visual 				=	"ItFo_Crawlersoup_01.3ds";    
-	material 			=	MAT_LEATHER;
-	on_state[0]			=	UseCrawlersoup;   
-	scemeName			=	"RICE";
-
-	description			= name;
-	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= REV_HP_CrawlerSoup;
-	TEXT[5]				= NAME_Value;					COUNT[5]	= value;                                                    
-};
-
-	FUNC VOID UseCrawlersoup()
-	{
-		Npc_ChangeAttribute	(self,	ATR_MANA,	REV_HP_CrawlerSoup);
-	};
 
 //****************************************************************************
 //			DRINKS
@@ -698,9 +485,118 @@ INSTANCE ITFO_REVIVED_WINE (C_Item)
 			};
 	};
 
+
+
+
+//****************************************************************************
+//			BOOZE
+//****************************************************************************
+
+INSTANCE ITFO_REVIVED_TURNIPBOOZE (C_Item)
+{	
+	name 				=	"Turnip Booze";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RiceSchnapps;
+
+	visual 				=	"ItFo_Booze_01.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseTurnipBooze;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseTurnipBooze()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
 /******************************************************************************************/
 
-INSTANCE ITFO_REVIVED_BOOZE (C_Item)
+INSTANCE ITFO_REVIVED_VINOBOOZE (C_Item)
+{	
+	name 				=	"Vino's Special";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RiceSchnapps;
+
+	visual 				=	"ItFo_Booze_01.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseVinoBooze;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseVinoBooze()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_MAGEWINE (C_Item)
+{	
+	name 				=	"Monastery Wine";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RiceSchnapps;
+
+	visual 				=	"ItFo_Booze_01.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseMageWine;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseMageWine()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_MONSTERDRINK (C_Item)
+{	
+	name 				=	"Monster Drink";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RiceSchnapps;
+
+	visual 				=	"ItFo_Booze_01.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseMonsterDrink;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseMonsterDrink()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_RICEBOOZE (C_Item)
 {	
 	name 				=	"Rice Schnapps";
 
@@ -711,7 +607,7 @@ INSTANCE ITFO_REVIVED_BOOZE (C_Item)
 
 	visual 				=	"ItFo_Booze_01.3ds";
 	material 			=	MAT_GLAS;
-	on_state[0]			=	UseBooze;
+	on_state[0]			=	UseRiceBooze;
 	scemeName			=	"POTION";
 
 	description			= name;
@@ -719,7 +615,228 @@ INSTANCE ITFO_REVIVED_BOOZE (C_Item)
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
 };
 
-	FUNC VOID UseBooze()
+	FUNC VOID UseRiceBooze()
 	{
 		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_MEAD (C_Item)
+{	
+	name 				=	"Mead";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RiceSchnapps;
+
+	visual 				=	"ItFo_Booze_01.3ds";
+	material 			=	MAT_GLAS;
+	on_state[0]			=	UseMead;
+	scemeName			=	"POTION";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RiceSchnapps;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseMead()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RiceSchnapps);
+	};
+
+
+
+
+
+
+
+
+
+//****************************************************************************
+//			COOKING
+//****************************************************************************
+
+INSTANCE ITFO_REVIVED_BUGSOUP (C_Item)
+{	
+	name 				=	"Meatbug Ragout";
+	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_MeatbugRagout;
+
+	visual 				=	"ItFo_Meatbugragout_01.3ds"; 
+	material 			=	MAT_LEATHER;
+	scemeName			=	"RICE";
+	on_state[0]			=	UseMeatbugragout;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatbugRagout;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseMeatbugragout()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatbugRagout);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_PLANTSOUP (C_Item)
+{	
+	name 				=	"Root Soup";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_RootSoup;
+
+	visual 				=	"ItFo_Soup_01.3ds";
+	scemeName			=	"RICE";
+	on_state[0]			=	UseSoup;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_RootSoup;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseSoup()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_RootSoup);
+	};
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_CRAWLERSOUP (C_Item)                                          
+{	                                                                
+	name 				=	"Minecrawler Soup";
+	                                                            
+	mainflag 			=	ITEM_KAT_FOOD;  
+	flags 				=	ITEM_MULTI;
+                                                                    
+	value 				=	REV_Value_CrawlerSoup;              
+                                                                    
+	visual 				=	"ItFo_Crawlersoup_01.3ds";    
+	material 			=	MAT_LEATHER;
+	on_state[0]			=	UseCrawlersoup;   
+	scemeName			=	"RICE";
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_Mana;				COUNT[1]	= REV_HP_CrawlerSoup;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;                                                    
+};
+
+	FUNC VOID UseCrawlersoup()
+	{
+		Npc_ChangeAttribute	(self,	ATR_MANA,	REV_HP_CrawlerSoup);
+	};
+
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_RICE (C_Item)
+{	
+	name 				=	"Rice bowl";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;	
+
+	value 				=	REV_Value_Rice;
+
+	visual 				=	"ItFo_Rice_01.3ds";
+	scemeName			=	"RICE";
+	on_state[0]			=	UseRice;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_Rice;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseRice()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_Rice);
+	};
+
+
+/******************************************************************************************/
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_MARMALADE (C_Item)
+{	
+	name 				=	"Berry marmalade";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+	
+	value 				=	Value_Honey;
+	
+	visual 				=	"ItFo_Honey.3DS";
+	material 			=	MAT_STONE;
+	scemeName			=	"FOODHUGE";
+	on_state[0]			=	UseMarmalade;
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= HP_Honey;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Honey;
+};
+
+	FUNC VOID UseMarmalade()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Honey);
+	};
+
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_FRUITSALAD (C_Item)
+{	
+	name 				=	"Fruit salad";
+
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+	
+	value 				=	Value_Honey;
+	
+	visual 				=	"ItFo_Rice_01.3DS";
+	material 			=	MAT_STONE;
+	scemeName			=	"FOODHUGE";
+	on_state[0]			=	UseFruitSalad;
+
+	description			= 	name;
+	TEXT[1]				= 	NAME_Bonus_HP;	COUNT[1]	= HP_Honey;
+	TEXT[5]				= 	NAME_Value;		COUNT[5]	= Value_Honey;
+};
+
+	FUNC VOID UseFruitSalad()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	HP_Honey);
+	};
+
+
+/******************************************************************************************/
+
+INSTANCE ITFO_REVIVED_OLDSTEW (C_Item)
+{	
+	name 				=	"Convict's Stew";
+	
+	mainflag 			=	ITEM_KAT_FOOD;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_Value_MeatbugRagout;
+
+	visual 				=	"ItFo_Meatbugragout_01.3ds"; 
+	material 			=	MAT_LEATHER;
+	scemeName			=	"RICE";
+	on_state[0]			=	UseOldstew;
+
+	description			= name;
+	TEXT[1]				= NAME_Bonus_HP;				COUNT[1]	= REV_HP_MeatbugRagout;
+	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
+};
+
+	FUNC VOID UseOldstew()
+	{
+		Npc_ChangeAttribute	(self,	ATR_HITPOINTS,	REV_HP_MeatbugRagout);
 	};

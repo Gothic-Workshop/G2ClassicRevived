@@ -98,14 +98,27 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	PLAYER_TALENT_ALCHEMY[POTION_SPEED_02] = TRUE;
 	PLAYER_TALENT_ALCHEMY[POTION_SPEED_03] = TRUE;
 
+//---------------------------------------------------------------------
+
+	PLAYER_TALENT_COOKING[COOKING_MeatStew] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_FishSoup] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_MeatbugRagout] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_RootSoup] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_MinecrawlerSoup] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_Marmalade] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_RiceBowl] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_FruitSalad] = TRUE;
+	PLAYER_TALENT_COOKING[COOKING_ConvictStew] = TRUE;
+
 	PLAYER_TALENT_BOOZE[BOOZE_LouHammer] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_LouHammerDouble] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_FastHerring] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_TurnipBooze] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_VinoBooze] = TRUE;
-	PLAYER_TALENT_BOOZE[BOOZE_WhiteRum] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_MonsterDrink] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_MageWine] = TRUE;
 	PLAYER_TALENT_BOOZE[BOOZE_RiceSchnaps] = TRUE;
+	PLAYER_TALENT_BOOZE[BOOZE_Mead] = TRUE;
 
 	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Regular] = TRUE;
 	PLAYER_TALENT_TOBACCO[TOBACCO_Weed_Apple] = TRUE;
@@ -357,6 +370,7 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITMW_REVIVED_2H_MAGESTAFF_BLADES_01, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_MAGESTAFF_BLADES_02, 1);
 	CreateInvItems(self, ITMW_REVIVED_2H_MAGESTAFF_BLADES_03, 1);
+	CreateInvItems(self, ITMW_REVIVED_2H_MAGESTAFF_GREAT_01, 1);
 	//******************************************************************//
 	CreateInvItems(self, ITRW_REVIVED_BOW_SMALL_01, 1);
 	CreateInvItems(self, ITRW_REVIVED_BOW_SMALL_02, 1);
@@ -437,12 +451,6 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_APPLE_02, 20);
 	CreateInvItems(self, ITFO_REVIVED_PEAR, 20);
 	CreateInvItems(self, ITFO_REVIVED_HONEY, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_BLACK, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_BLUE, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_RED, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_GREEN, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_PURPLE, 20);
-	CreateInvItems(self, ITFO_REVIVED_GRAPES_YELLOW, 20);
 	CreateInvItems(self, ITFO_REVIVED_BREAD_01, 20);
 	CreateInvItems(self, ITFO_REVIVED_BREAD_02, 20);
 	CreateInvItems(self, ITFO_REVIVED_CHEESE_01, 20);
@@ -454,19 +462,10 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITFO_REVIVED_WATER, 20);
 	CreateInvItems(self, ITFO_REVIVED_BEER, 20);
 	CreateInvItems(self, ITFO_REVIVED_WINE, 20);
-	CreateInvItems(self, ITFO_REVIVED_BOOZE, 20);
+	CreateInvItems(self, ITFO_REVIVED_RICEBOOZE, 20);
 	//******************************************************************//
-	CreateInvItems(self, ITPL_REVIVED_BERRY_BLACK, 20);
-	CreateInvItems(self, ITPL_REVIVED_BERRY_BLUE, 20);
-	CreateInvItems(self, ITPL_REVIVED_BERRY_GREEN, 20);
-	CreateInvItems(self, ITPL_REVIVED_BERRY_PURPLE, 20);
-	CreateInvItems(self, ITPL_REVIVED_BERRY_RED, 20);
-	CreateInvItems(self, ITPL_REVIVED_BERRY_YELLOW, 20);
-	CreateInvItems(self, ITPL_REVIVED_SEED_BLUE, 20);
-	CreateInvItems(self, ITPL_REVIVED_SEED_GREEN, 20);
-	CreateInvItems(self, ITPL_REVIVED_SEED_RED, 20);
-	CreateInvItems(self, ITPL_REVIVED_SEED_YELLOW, 20);
-	CreateInvItems(self, ITPL_REVIVED_MUSHROOM_RED, 20);
+	CreateInvItems(self, ITPL_REVIVED_BERRIES, 20);
+	CreateInvItems(self, ITPL_REVIVED_GRAPES, 20);
 	CreateInvItems(self, ITPL_REVIVED_RICEPLANT, 20);
 	//******************************************************************//
 	CreateInvItems(self, ITBE_REVIVED_ARCHER, 1);
@@ -632,6 +631,8 @@ INSTANCE PC_REVIVED(NPC_DEFAULT)
 	CreateInvItems(self, ITAT_REVIVED_DRAGONHEART_SWAMP, 1);
 	//******************************************************************//
 	CreateInvItems(self, ITKE_REVIVED_STONEFORTRESS, 1);
+	CreateInvItems(self, ITKE_REVIVED_GOMEZ, 1);
+	CreateInvItems(self, ITKE_REVIVED_XARDAS, 1);
 	CreateInvItems(self, ITKE_REVIVED_GORDONRAMSAY, 1);
 	//******************************************************************//
 	CreateInvItems(self, ITMI_REVIVED_JOINT_GREENNOVICE, 10);

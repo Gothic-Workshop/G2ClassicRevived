@@ -836,7 +836,13 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 				Snd_Play ("MFX_FEAR_CAST" );
 				Wld_PlayEffect("spellFX_SummonCreature_ORIGIN", self, self, 0, 0, 0, FALSE );
 
-				Npc_ChangeAttribute (self, ATR_HITPOINTS, self.attribute[ATR_HITPOINTS] / 2);
+				//Npc_ChangeAttribute (hero, ATR_HITPOINTS, -(hero.attribute[ATR_HITPOINTS] / 2));
+				
+				AI_PlayAni		(hero,    "T_MAD_2_MADDOWN");
+				AI_PlayAni		(hero,    "S_MADDOWN");
+				AI_PlayAni		(hero,    "T_MADDOWN_2_STAND");
+				AI_PlayAni		(hero,    "T_STAND_2_MAD");
+				B_Say_Overlay	(hero, hero, "SVM_15_Aargh_5"); //Aaargh!
 		};
 	};
 
@@ -859,7 +865,7 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 			};
 
 			B_RemoveNpc (DetWsp);
-			//AI_Teleport (DetWsp, "TOT");
+			AI_Teleport (DetWsp, "TOT");
 		};
 	};
 

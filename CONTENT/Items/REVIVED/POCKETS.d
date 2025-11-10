@@ -230,12 +230,12 @@ func void use_REVIVED_POCKET_GOTHIC()
 
 	CreateInvItems(hero, ITFO_REVIVED_MEATBUG, 20);
 	CreateInvItems(hero, ITFO_REVIVED_APPLE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_BLACK, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_BLUE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_RED, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_GREEN, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_PURPLE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_GRAPES_YELLOW, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_BLACK, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_BLUE, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_RED, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_GREEN, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_PURPLE, 20);
+	CreateInvItems(hero, ITPL_REVIVED_GRAPES_YELLOW, 20);
 	CreateInvItems(hero, ITFO_REVIVED_BREAD, 20);
 	CreateInvItems(hero, ITFO_REVIVED_CHEESE, 20);
 	CreateInvItems(hero, ITFO_REVIVED_RICE, 20);
@@ -245,7 +245,7 @@ func void use_REVIVED_POCKET_GOTHIC()
 	CreateInvItems(hero, ITFO_REVIVED_WATER, 20);
 	CreateInvItems(hero, ITFO_REVIVED_BEER, 20);
 	CreateInvItems(hero, ITFO_REVIVED_WINE, 20);
-	CreateInvItems(hero, ITFO_REVIVED_BOOZE, 20);
+	CreateInvItems(hero, ITFO_REVIVED_RICEBOOZE, 20);
 
 	CreateInvItems(hero, ITRU_REVIVED_TELEPORT_OC, 1); 
 	CreateInvItems(hero, ITRU_REVIVED_TELEPORT_NC, 1); 

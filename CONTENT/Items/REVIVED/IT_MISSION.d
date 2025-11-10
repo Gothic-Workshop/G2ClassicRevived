@@ -29,7 +29,7 @@ FUNC VOID Use_BaltramPackageRevived ()
 		CreateInvItems (hero, ITFO_REVIVED_APPLE_01, 4);
 		CreateInvItems (hero, ITFO_REVIVED_PEAR, 6);
 		CreateInvItems (hero, ITFO_REVIVED_RICE, 4);
-		CreateInvItems (hero, ITFO_REVIVED_GRAPES_RED, 2);
-		CreateInvItems (hero, ITFO_REVIVED_GRAPES_PURPLE, 2);
+		CreateInvItems (hero, ITPL_REVIVED_GRAPES, 2);
+		CreateInvItems (hero, ITPL_REVIVED_BERRIES, 2);
 		Print (PRINT_GotFood);
 };

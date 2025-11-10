@@ -11,7 +11,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_OC (C_Item)
 	
 	value 				=	Value_Ru_TeleportSeaport;
 	
-	visual				=	"ITRU_TELEPORT_OC.3ds";	
+	visual				=	"ITRU_REV_TELEPORT_OC.3ds";	
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOC;
@@ -38,7 +38,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_NC (C_Item)
 	
 	value 				=	Value_Ru_TeleportSeaport;
 	
-	visual				=	"ITRU_TELEPORT_NC.3ds";	
+	visual				=	"ITRU_REV_TELEPORT_NC.3ds";	
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportNC;
@@ -65,7 +65,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_PSI (C_Item)
 	
 	value 				=	Value_Ru_TeleportSeaport;
 	
-	visual				=	"ITRU_TELEPORT_DT.3ds";	
+	visual				=	"ITRU_REV_TELEPORT_PSI.3ds";	
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportPSI;
@@ -92,7 +92,7 @@ INSTANCE ITRU_REVIVED_TELEPORT_DT (C_Item)
 	
 	value 				=	Value_Ru_TeleportSeaport;
 	
-	visual				=	"ITRU_TELEPORT_PSI.3ds";	
+	visual				=	"ITRU_REV_TELEPORT_DT.3ds";	
 	material			=	MAT_STONE;
 
 	spell				= 	SPL_TeleportOWDemonTower;

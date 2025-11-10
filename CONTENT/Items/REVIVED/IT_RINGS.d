@@ -1,498 +1,539 @@
+const int	REV_Value_Prot_Arrow_01				=	30;
+const int	REV_Change_Prot_Arrow_01			=	3;
+//******************************************************************//
+const int	REV_Value_Prot_Arrow_02				=	50;
+const int	REV_Change_Prot_Arrow_02			=	5;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_Melee_01				=	30;
+const int	REV_Change_Prot_Melee_01			=	3;
+//******************************************************************//
+const int	REV_Value_Prot_Melee_02				=	50;
+const int	REV_Change_Prot_Melee_02			=	5;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_Weapon_01			=	50;
+const int	REV_Change_Prot_Weapon_01			=	5;
+//******************************************************************//
+const int	REV_Value_Prot_Weapon_02			=	75;
+const int	REV_Change_Prot_Weapon_02			=	7;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_Magic_01				=	30;
+const int	REV_Change_Prot_Magic_01			=	3;
+//******************************************************************//
+const int	REV_Value_Prot_Magic_02				=	50;
+const int	REV_Change_Prot_Magic_02			=	5;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_Fire_01				=	30;
+const int	REV_Change_Prot_Fire_01				=	3;
+//******************************************************************//
+const int	REV_Value_Prot_Fire_02				=	50;
+const int	REV_Change_Prot_Fire_02				=	5;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_MagicFire_01			=	50;
+const int	REV_Change_Prot_MagicFire_01		=	5;
+//******************************************************************//
+const int	REV_Value_Prot_MagicFire_02			=	75;
+const int	REV_Change_Prot_MagicFire_02		=	7;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_Prot_Total_01				=	100;
+const int	REV_Change_Prot_Total_01			=	5;
+//******************************************************************//
+const int	REV_Value_Prot_Total_02				=	200;
+const int	REV_Change_Prot_Total_02			=	10;
+//******************************************************************//
+//******************************************************************//
+//******************************************************************//
+
+
+
+
 //****************************************************************************
 //			PROTECTION
 //****************************************************************************
 
 INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
 {
-	name 					=	"Ring of Wooden Skin";
+	name 				=	"Ring of Wooden Skin";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	200;
+	value 				=	REV_Value_Prot_Arrow_01;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_ARROW_01;
+	on_unequip			=	UnEquip_PROT_ARROW_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Geschosse1;
-	on_unequip				=	UnEquip_Schutzring_Geschosse1;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Point;
-	COUNT[2]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Arrow_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Geschosse1()
+FUNC VOID Equip_PROT_ARROW_01()
 {
-	self.protection [PROT_POINT] 		+=  5;
+	self.protection [PROT_POINT] 		+=  REV_Change_Prot_Arrow_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Geschosse1()
+FUNC VOID UnEquip_PROT_ARROW_01()
 {
-	self.protection [PROT_POINT] 		-=  5;
+	self.protection [PROT_POINT] 		-=  REV_Change_Prot_Arrow_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_ARROW_02(C_Item)
 {
-	name 					=	"Ring of Stone Skin";
+	name 				=	"Ring of Stone Skin";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	400;
+	value 				=	REV_Value_Prot_Arrow_02;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_ARROW_02;
+	on_unequip			=	UnEquip_PROT_ARROW_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Geschosse2;
-	on_unequip				=	UnEquip_Schutzring_Geschosse2;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Point;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Arrow_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Geschosse2()
+FUNC VOID Equip_PROT_ARROW_02()
 {
-	self.protection [PROT_POINT] 		+=  10;
+	self.protection [PROT_POINT] 		+=  REV_Change_Prot_Arrow_02;
 };
 
-FUNC VOID UnEquip_Schutzring_Geschosse2()
+FUNC VOID UnEquip_PROT_ARROW_02()
 {
-	self.protection [PROT_POINT] 		-=  10;
+	self.protection [PROT_POINT] 		-=  REV_Change_Prot_Arrow_02;
 };
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_MELEE_01(C_Item)
 {
-	name 					=	"Ring of Iron Skin";
+	name 				=	"Ring of Iron Skin";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	200;
+	value 				=	REV_Value_Prot_Melee_01;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_MELEE_01;
+	on_unequip			=	UnEquip_PROT_MELEE_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Waffen1;
-	on_unequip				=	UnEquip_Schutzring_Waffen1;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_Prot_Melee_01;
+	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_Prot_Melee_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Waffen1()
+FUNC VOID Equip_PROT_MELEE_01()
 {
-	self.protection [PROT_EDGE] 		+=  5;
-	self.protection [PROT_BLUNT]		+=  5;
+	self.protection [PROT_EDGE] 		+=  REV_Change_Prot_Melee_01;
+	self.protection [PROT_BLUNT]		+=  REV_Change_Prot_Melee_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Waffen1()
+FUNC VOID UnEquip_PROT_MELEE_01()
 {
-	self.protection [PROT_EDGE] 		-=  5;
-	self.protection [PROT_BLUNT]		-=  5;
+	self.protection [PROT_EDGE] 		-=  REV_Change_Prot_Melee_01;
+	self.protection [PROT_BLUNT]		-=  REV_Change_Prot_Melee_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_MELEE_02(C_Item)
 {
-	name 					=	"Ring of Ore Skin";
+	name 				=	"Ring of Ore Skin";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	400;
+	value 				=	REV_Value_Prot_Melee_02;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_MELEE_02;
+	on_unequip			=	UnEquip_PROT_MELEE_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Waffen2;
-	on_unequip				=	UnEquip_Schutzring_Waffen2;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_Prot_Melee_02;
+	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_Prot_Melee_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Waffen2()
+FUNC VOID Equip_PROT_MELEE_02()
 {
-	self.protection [PROT_EDGE] 		+=  10;
-	self.protection [PROT_BLUNT]		+=  10;
+	self.protection [PROT_EDGE] 		+=  REV_Change_Prot_Melee_02;
+	self.protection [PROT_BLUNT]		+=  REV_Change_Prot_Melee_02;
 };
 
-FUNC VOID UnEquip_Schutzring_Waffen2()
+FUNC VOID UnEquip_PROT_MELEE_02()
 {
-	self.protection [PROT_EDGE] 		-=  10;
-	self.protection [PROT_BLUNT]		-=  10;
-};		
+	self.protection [PROT_EDGE] 		-=  REV_Change_Prot_Melee_02;
+	self.protection [PROT_BLUNT]		-=  REV_Change_Prot_Melee_02;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_WEAPON_01(C_ITEM)
 {
-	name 					=	"Ring of Steadfastness";
+	name 				=	"Ring of Steadfastness";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	600;
+	value 				=	REV_Value_Prot_Weapon_01;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_WEAPON_01;
+	on_unequip			=	UnEquip_PROT_WEAPON_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=  	Equip_Schutzring_Geschosse1_Waffen1;
-	on_unequip				= 	UnEquip_Schutzring_Geschosse1_Waffen1;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 5;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_Prot_Weapon_01;
+	TEXT[2]				= 	NAME_Prot_Blunt;				COUNT[2]	= REV_Change_Prot_Weapon_01;
+	TEXT[3]				= 	NAME_Prot_Point;				COUNT[3]	= REV_Change_Prot_Weapon_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Geschosse1_Waffen1()
+FUNC VOID Equip_PROT_WEAPON_01()
 {
-	self.protection [PROT_EDGE] 		+=  5;
-	self.protection [PROT_BLUNT]		+=  5;
-	self.protection [PROT_POINT]		+=  5;
+	self.protection [PROT_EDGE] 		+=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_BLUNT]		+=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_POINT]		+=  REV_Change_Prot_Weapon_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Geschosse1_Waffen1()
+FUNC VOID UnEquip_PROT_WEAPON_01()
 {
-	self.protection [PROT_EDGE] 		-=  5;
-	self.protection [PROT_BLUNT]		-=  5;
-	self.protection [PROT_POINT]		-=  5;
+	self.protection [PROT_EDGE] 		-=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_BLUNT]		-=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_POINT]		-=  REV_Change_Prot_Weapon_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_WEAPON_02(C_ITEM)
 {
-	name 					=	"Ring of Impeachability";
+	name 				=	"Ring of Impeachability";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	800;
+	value 				=	REV_Value_Prot_Weapon_02;
 
-	visual 					=	"ITRI_RING_02.3ds";
+	on_equip			=	Equip_PROT_WEAPON_02;
+	on_unequip			=	UnEquip_PROT_WEAPON_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=  	Equip_Schutzring_Geschosse2_Waffen2;
-	on_unequip				= 	UnEquip_Schutzring_Geschosse2_Waffen2;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 10;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_Prot_Weapon_02;
+	TEXT[2]				= 	NAME_Prot_Blunt;				COUNT[2]	= REV_Change_Prot_Weapon_02;
+	TEXT[3]				= 	NAME_Prot_Point;				COUNT[3]	= REV_Change_Prot_Weapon_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Geschosse2_Waffen2()
+FUNC VOID Equip_PROT_WEAPON_02()
 {
-	self.protection [PROT_EDGE] 		+=  10;
-	self.protection [PROT_BLUNT]		+=  10;
-	self.protection [PROT_POINT]		+=  10;
+	self.protection [PROT_EDGE] 		+=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_BLUNT]		+=  REV_Change_Prot_Weapon_01;
+	self.protection [PROT_POINT]		+=  REV_Change_Prot_Weapon_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Geschosse2_Waffen2()
+FUNC VOID UnEquip_PROT_WEAPON_02()
 {
-	self.protection [PROT_EDGE] 		-=  10;
-	self.protection [PROT_BLUNT]		-=  10;
-	self.protection [PROT_POINT]		-=  10;
+	self.protection [PROT_EDGE] 		-=  REV_Change_Prot_Weapon_02;
+	self.protection [PROT_BLUNT]		-=  REV_Change_Prot_Weapon_02;
+	self.protection [PROT_POINT]		-=  REV_Change_Prot_Weapon_02;
 };
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_01(C_ITEM)
 {
-	name 					=	"Ring of Spiritual Power";
+	name 				=	"Ring of Spiritual Protection";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	400;
+	value 				=	REV_Value_Prot_Magic_01;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_MAGIC_01;
+	on_unequip			=	UnEquip_PROT_MAGIC_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Magie2;
-	on_unequip				=	UnEquip_Schutzring_Magie2;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 3;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_Prot_Magic_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Magie2()
+FUNC VOID Equip_PROT_MAGIC_01()
 {
-	self.protection [PROT_MAGIC] 		+=  3;
+	self.protection [PROT_MAGIC] 		+=  REV_Change_Prot_Magic_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Magie2()
+FUNC VOID UnEquip_PROT_MAGIC_01()
 {
-	self.protection [PROT_MAGIC] 		-=  3;
-};	
+	self.protection [PROT_MAGIC] 		-=  REV_Change_Prot_Magic_01;
+};
+
+INSTANCE ITRI_REVIVED_PROT_MAGIC_02(C_ITEM)
+{
+	name 				=	"Protection of Magic";
+
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_Prot_Magic_02;
+
+	on_equip			=	Equip_PROT_MAGIC_02;
+	on_unequip			=	UnEquip_PROT_MAGIC_02;	
+
+	visual 				=	"ITRI_RING_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_Prot_Magic_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+FUNC VOID Equip_PROT_MAGIC_02()
+{
+	self.protection [PROT_MAGIC] 		+=  REV_Change_Prot_Magic_02;
+};
+
+FUNC VOID UnEquip_PROT_MAGIC_02()
+{
+	self.protection [PROT_MAGIC] 		-=  REV_Change_Prot_Magic_02;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_FIRE_01(C_Item)
 {
-	name 					=	"Ring of Flame Protection";
+	name 				=	"Ring of Flame Protection";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	200;
+	value 				=	REV_Value_Prot_Fire_01;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_FIRE_01;
+	on_unequip			=	UnEquip_PROT_FIRE_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Feuer1;
-	on_unequip				=	UnEquip_Schutzring_Feuer1;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 3;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_Fire_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Feuer1()
+FUNC VOID Equip_PROT_FIRE_01()
 {
-	self.protection [PROT_FIRE] 		+=  3;
+	self.protection [PROT_FIRE] 		+=  REV_Change_Prot_Fire_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Feuer1()
+FUNC VOID UnEquip_PROT_FIRE_01()
 {
-	self.protection [PROT_FIRE] 		-=  3;
+	self.protection [PROT_FIRE] 		-=  REV_Change_Prot_Fire_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_FIRE_02(C_Item)
 {
-	name 					=	"Protection of Fire";
+	name 				=	"Protection of Fire";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	400;
+	value 				=	REV_Value_Prot_Fire_02;
 
-	visual 					=	"ITRI_RING_01.3ds";
+	on_equip			=	Equip_PROT_FIRE_02;
+	on_unequip			=	UnEquip_PROT_FIRE_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Feuer2;
-	on_unequip				=	UnEquip_Schutzring_Feuer2;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_Fire_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Feuer2()
+FUNC VOID Equip_PROT_FIRE_02()
 {
-	self.protection [PROT_FIRE] 		+=  5;
+	self.protection [PROT_FIRE] 		+=  REV_Change_Prot_Fire_02;
 };
 
-FUNC VOID UnEquip_Schutzring_Feuer2()
+FUNC VOID UnEquip_PROT_FIRE_02()
 {
-	self.protection [PROT_FIRE] 		-=  5;
+	self.protection [PROT_FIRE] 		-=  REV_Change_Prot_Fire_02;
 };
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_01(C_ITEM)
 {
-	name 					=	"Ring of Lesser Purification";
+	name 				=	"Ring of Lesser Purification";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	600;
+	value 				=	REV_Value_Prot_MagicFire_01;
 
-	visual 					=	"ITRI_RING_02.3ds";
+	on_equip			=	Equip_PROT_MAGICFIRE_01;
+	on_unequip			=	UnEquip_PROT_MAGICFIRE_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Magie1_Fire1;
-	on_unequip				=	UnEquip_Schutzring_Magie1_Fire1;
+	visual 				=	"ITRI_RING_01.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Magic;
-	COUNT[2]		= 1;
-	TEXT[3] 		= NAME_Prot_Fire;
-	COUNT[3]		= 3;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_MagicFire_01;
+	TEXT[3]				= 	NAME_Prot_Magic;				COUNT[3]	= REV_Change_Prot_MagicFire_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Magie1_Fire1()
+FUNC VOID Equip_PROT_MAGICFIRE_01()
 {
-	self.protection [PROT_MAGIC] 		+=  1;
-	self.protection [PROT_FIRE]		+=  3;
+	self.protection [PROT_FIRE] 		+=  REV_Change_Prot_MagicFire_01;
+	self.protection [PROT_MAGIC] 		+=  REV_Change_Prot_MagicFire_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Magie1_Fire1()
+FUNC VOID UnEquip_PROT_MAGICFIRE_01()
 {
-	self.protection [PROT_MAGIC] 		-=  1;
-	self.protection [PROT_FIRE]		-=  3;
+	self.protection [PROT_FIRE] 		-=  REV_Change_Prot_MagicFire_01;
+	self.protection [PROT_MAGIC] 		-=  REV_Change_Prot_MagicFire_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
 {
-	name 					=	"Ring of Purification"; // "Ring of Invincibility";
+	name 				=	"Ring of Purification";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	800;
+	value 				=	REV_Value_Prot_MagicFire_02;
 
-	visual 					=	"ITRI_RING_02.3ds";
+	on_equip			=	Equip_PROT_MAGICFIRE_02;
+	on_unequip			=	UnEquip_PROT_MAGICFIRE_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=	Equip_Schutzring_Magie2_Fire2;
-	on_unequip				=	UnEquip_Schutzring_Magie2_Fire2;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Magic;
-	COUNT[2]		= 3;
-	TEXT[3] 		= NAME_Prot_Fire;
-	COUNT[3]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_MagicFire_02;
+	TEXT[3]				= 	NAME_Prot_Magic;				COUNT[3]	= REV_Change_Prot_MagicFire_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Magie2_Fire2()
+FUNC VOID Equip_PROT_MAGICFIRE_02()
 {
-	self.protection [PROT_MAGIC] 	+=  3;
-	self.protection [PROT_FIRE]		+=  5;
+	self.protection [PROT_FIRE] 		+=  REV_Change_Prot_MagicFire_02;
+	self.protection [PROT_MAGIC] 		+=  REV_Change_Prot_MagicFire_02;
 };
 
-FUNC VOID UnEquip_Schutzring_Magie2_Fire2()
+FUNC VOID UnEquip_PROT_MAGICFIRE_02()
 {
-	self.protection [PROT_MAGIC] 	-=  3;
-	self.protection [PROT_FIRE]		-=  5;
-};	
+	self.protection [PROT_FIRE] 		-=  REV_Change_Prot_MagicFire_02;
+	self.protection [PROT_MAGIC] 		-=  REV_Change_Prot_MagicFire_02;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
 {
-	name 					=	"Ring of Lesser Invincibility";
+	name 				=	"Ring of Lesser Invincibility";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	800;
+	value 				=	REV_Value_Prot_Total_01;
 
-	visual 					=	"ITRI_RING_03.3ds";
+	on_equip			=	Equip_PROT_TOTAL_01;
+	on_unequip			=	UnEquip_PROT_TOTAL_01;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=  	Equip_Schutzring_Total1;
-	on_unequip				= 	UnEquip_Schutzring_Total1;
+	visual 				=	"ITRI_RING_02.3DS";
 
-	description		= name;
-	TEXT[1]			= NAME_Prot_Magic;
-	COUNT[1]		= 1;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 3;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 5;
-	TEXT[4]			= NAME_Prot_Edge;
-	COUNT[4]		= 5;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_Prot_Total_01;
+	TEXT[1]				= 	NAME_Prot_Blunt;				COUNT[1]	= REV_Change_Prot_Total_01;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Total_01;
+	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_Prot_Total_01;
+	TEXT[4]				= 	NAME_Prot_Magic;				COUNT[4]	= REV_Change_Prot_Total_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Total1()
+FUNC VOID Equip_PROT_TOTAL_01()
 {
-	self.protection [PROT_EDGE] 	+=   5;
-	self.protection [PROT_BLUNT]	+=   5;
-	self.protection [PROT_POINT]	+=   5;
- 	self.protection [PROT_FIRE]     +=   3;
-	self.protection [PROT_MAGIC]    +=   1;
+	self.protection [PROT_EDGE] 		+=   REV_Change_Prot_Total_01;
+	self.protection [PROT_BLUNT]		+=   REV_Change_Prot_Total_01;
+	self.protection [PROT_POINT]		+=   REV_Change_Prot_Total_01;
+ 	self.protection [PROT_FIRE]     	+=   REV_Change_Prot_Total_01;
+	self.protection [PROT_MAGIC]    	+=   REV_Change_Prot_Total_01;
 };
 
-FUNC VOID UnEquip_Schutzring_Total1()
+FUNC VOID UnEquip_PROT_TOTAL_01()
 {
-	self.protection [PROT_EDGE] 		-=   5;
-	self.protection [PROT_BLUNT]		-=   5;
-	self.protection [PROT_POINT]		-=   5;
- 	self.protection [PROT_FIRE]      -=   3;
-	self.protection [PROT_MAGIC]     -=   1;
+	self.protection [PROT_EDGE] 		-=   REV_Change_Prot_Total_01;
+	self.protection [PROT_BLUNT]		-=   REV_Change_Prot_Total_01;
+	self.protection [PROT_POINT]		-=   REV_Change_Prot_Total_01;
+ 	self.protection [PROT_FIRE]     	-=   REV_Change_Prot_Total_01;
+	self.protection [PROT_MAGIC]    	-=   REV_Change_Prot_Total_01;
 };
 
 INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
 {
-	name 					=	"Ring of Greater Invincibility";
+	name 				=	"Ring of Greater Invincibility";
 
-	mainflag 				=	ITEM_KAT_MAGIC;
-	flags 					=	ITEM_RING;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;	
+	material 			=	MAT_METAL;
 
-	value 					=	1000;
+	value 				=	REV_Value_Prot_Total_02;
 
-	visual 					=	"ITRI_RING_03.3ds";
+	on_equip			=	Equip_PROT_TOTAL_02;
+	on_unequip			=	UnEquip_PROT_TOTAL_02;	
 
-	visual_skin 				=	0;
-	material 				=	MAT_METAL;
-	on_equip				=  	Equip_Schutzring_Total2;
-	on_unequip				= 	UnEquip_Schutzring_Total2;
+	visual 				=	"ITRI_RING_03.3DS";
 
-	description		= name;
-	TEXT[1]			= NAME_Prot_Magic;
-	COUNT[1]		= 3;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 5;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 10;
-	TEXT[4]			= NAME_Prot_Edge;
-	COUNT[4]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_Prot_Total_02;
+	TEXT[1]				= 	NAME_Prot_Blunt;				COUNT[1]	= REV_Change_Prot_Total_02;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Total_02;
+	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_Prot_Total_02;
+	TEXT[4]				= 	NAME_Prot_Magic;				COUNT[4]	= REV_Change_Prot_Total_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
-FUNC VOID Equip_Schutzring_Total2()
+FUNC VOID Equip_PROT_TOTAL_02()
 {
-	self.protection [PROT_EDGE] 	+=   10;
-	self.protection [PROT_BLUNT]	+=   10;
-	self.protection [PROT_POINT]	+=   10;
- 	self.protection [PROT_FIRE]     +=   5;
-	self.protection [PROT_MAGIC]    +=   3;
+	self.protection [PROT_EDGE] 		+=   REV_Change_Prot_Total_02;
+	self.protection [PROT_BLUNT]		+=   REV_Change_Prot_Total_02;
+	self.protection [PROT_POINT]		+=   REV_Change_Prot_Total_02;
+ 	self.protection [PROT_FIRE]     	+=   REV_Change_Prot_Total_02;
+	self.protection [PROT_MAGIC]    	+=   REV_Change_Prot_Total_02;
 };
 
-FUNC VOID UnEquip_Schutzring_Total2()
+FUNC VOID UnEquip_PROT_TOTAL_02()
 {
-	self.protection [PROT_EDGE] 	-=   10;
-	self.protection [PROT_BLUNT]	-=   10;
-	self.protection [PROT_POINT]	-=   10;
- 	self.protection [PROT_FIRE]     -=   5;
-	self.protection [PROT_MAGIC]    -=   3;
+	self.protection [PROT_EDGE] 		-=   REV_Change_Prot_Total_02;
+	self.protection [PROT_BLUNT]		-=   REV_Change_Prot_Total_02;
+	self.protection [PROT_POINT]		-=   REV_Change_Prot_Total_02;
+ 	self.protection [PROT_FIRE]     	-=   REV_Change_Prot_Total_02;
+	self.protection [PROT_MAGIC]    	-=   REV_Change_Prot_Total_02;
 };
 
 //****************************************************************************
