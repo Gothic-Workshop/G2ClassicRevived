@@ -1016,6 +1016,10 @@ func void DIA_Torlof_DEMENTOREN_Info ()
 	AI_Output (self, other, "DIA_Torlof_DEMENTOREN_01_04"); //Maybe you should go there to check on those guys, and do away with them!
 	
 	Wld_InsertNpc		(CastlemineDMT, "FP_STAND_DEMENTOR_KDF_12");
+	Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_09");
+	Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_STAND_DEMENTOR_08");
+	Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_11");
+	Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_12");
 	
 	Log_CreateTopic (TOPIC_Torlof_Dmt, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_Torlof_Dmt, LOG_RUNNING);
@@ -1042,6 +1046,10 @@ func int DIA_Torlof_DmtSuccess_Condition ()
 {
 	if (MIS_Torlof_Dmt == LOG_RUNNING) 
 	&& (Npc_IsDead(CastlemineDMT))
+	&& (Npc_IsDead(CastlemineDMT01))
+	&& (Npc_IsDead(CastlemineDMT02))
+	&& (Npc_IsDead(CastlemineDMT03))
+	&& (Npc_IsDead(CastlemineDMT04))
 	{
 		return TRUE;
 	};

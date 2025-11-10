@@ -134,6 +134,11 @@ FUNC VOID DIA_Dexter_Wo_Info()
 	else
 	{
 		AI_Output (self, other, "DIA_Dexter_Wo_09_02");//Der Typ ist hier! Und nicht alleine. Da ist ein ganzer Haufen dieser Kerle überall unterwegs! Und die suchen dich.
+		
+		Wld_InsertNpc		(CastlemineDMT01, "FP_STAND_DEMENTOR_DEXTER_001");
+		Wld_InsertNpc		(CastlemineDMT02, "FP_STAND_DEMENTOR_DEXTER_002");
+		Wld_InsertNpc		(CastlemineDMT03, "FP_STAND_DEMENTOR_DEXTER_003");
+		Wld_InsertNpc		(CastlemineDMT04, "FP_STAND_DEMENTOR_DEXTER_004");
 	};
 };
 

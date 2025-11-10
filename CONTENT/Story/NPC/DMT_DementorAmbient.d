@@ -640,6 +640,39 @@ instance CastlemineDMT (Default_AmbientDementor)	//Joly: spricht den SC mit sein
 	start_aistate = ZS_Stand_Dementor;
 };
 
+instance CastlemineDMT01 (Default_AmbientDementor)
+{
+	// ------ Aivars ------
+	aivar[AIV_EnemyOverride] = TRUE;
+
+	// ------ TA anmelden ------
+	start_aistate = ZS_Stand_Dementor;
+};
+instance CastlemineDMT02 (Default_AmbientDementor)
+{
+	// ------ Aivars ------
+	aivar[AIV_EnemyOverride] = TRUE;
+
+	// ------ TA anmelden ------
+	start_aistate = ZS_Stand_Dementor;
+};
+instance CastlemineDMT03 (Default_AmbientDementor)
+{
+	// ------ Aivars ------
+	aivar[AIV_EnemyOverride] = TRUE;
+
+	// ------ TA anmelden ------
+	start_aistate = ZS_Stand_Dementor;
+};
+instance CastlemineDMT04 (Default_AmbientDementor)
+{
+	// ------ Aivars ------
+	aivar[AIV_EnemyOverride] = TRUE;
+
+	// ------ TA anmelden ------
+	start_aistate = ZS_Stand_Dementor;
+};
+
 //**************************************************************
 //	KeyMaster	Dragonisland
 //**************************************************************
