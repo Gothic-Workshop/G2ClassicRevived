@@ -197,7 +197,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_01 (C_Item)
 	value 				=	REV_Value_2H_Staff_Novice_01;
 
 	damageTotal			= 	REV_Damage_2H_Staff_Novice_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=	REV_Range_2H_Staff_Novice_01;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
@@ -205,7 +205,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_01 (C_Item)
 	visual 				=	"REV_2H_STAFF_NOVICE_FIRE.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Magic;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -222,7 +222,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_02 (C_Item)
 	value 				=	REV_Value_2H_Staff_Novice_02;
 
 	damageTotal			= 	REV_Damage_2H_Staff_Novice_02;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=	REV_Range_2H_Staff_Novice_02;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
@@ -230,7 +230,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_NOVICE_02 (C_Item)
 	visual 				=	"REV_2H_STAFF_NOVICE_WATER.3DS";
 
 	description			= 	name;
-	TEXT[2]				= 	NAME_Damage_Blunt;				COUNT[2]	= damageTotal;
+	TEXT[2]				= 	NAME_Damage_Magic;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
@@ -252,7 +252,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 	value 				=	REV_Value_2H_Staff_Yberion;
 
 	damageTotal			= 	REV_Damage_2H_Staff_Yberion;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_Staff_Yberion;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -262,7 +262,7 @@ INSTANCE ITMW_REVIVED_2H_STAFF_YBERION (C_Item)
 	visual 				=	"ItMw_2H_Staff_03.3DS";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -312,7 +312,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Normal_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Normal_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Normal_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -322,7 +322,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -339,7 +339,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Normal_02;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Normal_02;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Normal_02;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -349,7 +349,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -366,7 +366,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Normal_03;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Normal_03;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Normal_03;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -376,7 +376,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -394,7 +394,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Ball_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Ball_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Ball_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -404,7 +404,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -421,7 +421,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Ball_02;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Ball_02;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Ball_02;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -431,7 +431,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -448,7 +448,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Ball_03;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Ball_03;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Ball_03;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -458,7 +458,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BALL_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF1";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -476,7 +476,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Good_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Good_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Good_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -486,7 +486,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF3";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -503,7 +503,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Good_02;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Good_02;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Good_02;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -513,7 +513,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF3";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -530,7 +530,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Good_03;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Good_03;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Good_03;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -540,7 +540,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GOOD_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF4";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -558,7 +558,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Blades_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Blades_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Blades_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -568,7 +568,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF2";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -585,7 +585,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Blades_02;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Blades_02;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Blades_02;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -595,7 +595,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF5";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -612,7 +612,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Blades_03;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Blades_03;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Blades_03;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -622,7 +622,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 	effect				=	"SPELLFX_MAGESTAFF2";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
@@ -644,7 +644,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GREAT_01 (C_Item)
 	value 				=	REV_Value_2H_MageStaff_Great_01;
 
 	damageTotal			= 	REV_Damage_2H_MageStaff_Great_01;
-	damagetype 			=	DAM_BLUNT;
+	damagetype 			=	DAM_MAGIC;
 	range    			=  	REV_Range_2H_MageStaff_Great_01;
 
 	cond_atr[2]   		= 	ATR_MANA_MAX;
@@ -654,7 +654,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_GREAT_01 (C_Item)
 	effect				=	"SPELLFX_FIRESWORDBLACK";
 
 	description			= name;
-	TEXT[2]				= NAME_Damage_Blunt;			COUNT[2]	= damageTotal;
+	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
 	TEXT[3] 			= NAME_Mana_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= NAME_TwoHanded;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= value;
