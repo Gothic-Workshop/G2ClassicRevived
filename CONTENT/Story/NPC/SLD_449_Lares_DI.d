@@ -22,7 +22,7 @@ instance SLD_449_Lares_DI (Npc_Default)
 	aivar[AIV_IgnoresArmor] 	= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);															
+	B_SetAttributesToChapter (self, 6);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
