@@ -86,7 +86,7 @@ func void DIA_CipherDJG_HELLOAGAIN_Info ()
 	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_01"); //I've been sitting here for some time just waiting for the right moment.
 	AI_Output			(other, self, "DIA_CipherDJG_HELLOAGAIN_15_02"); //Right moment? For what?
 	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_03"); //There's supposed to be a dragon holed up over there. A pretty vile swamp has built up there since he came.
-	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_04"); //I can well remember a time when you wouldn't get your feet wet around here.
+	//AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_04"); //I can well remember a time when you wouldn't get your feet wet around here.
 	AI_Output			(self, other, "DIA_CipherDJG_HELLOAGAIN_07_05"); //But now, I'd never go in there alone.
 
 	if ((Npc_IsDead(DJG_Rod)) == FALSE)

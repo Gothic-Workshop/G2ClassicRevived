@@ -46,14 +46,14 @@ FUNC VOID Rtn_Start_702 ()
 
 FUNC VOID Rtn_SwampWait1_702 ()
 {
-	TA_Guide_Player				(08,00,23,00,"OW_DJG_SWAMP_WAIT1_02");
-    TA_Guide_Player				(23,00,08,00,"OW_DJG_SWAMP_WAIT1_02");		
+	TA_Guide_Player				(08,00,23,00,"PSI_START");
+    TA_Guide_Player				(23,00,08,00,"PSI_START");		
 };
 
 FUNC VOID Rtn_SwampWait2_702 ()
 {
-	TA_RunToWP				(08,00,23,00,"OW_DJG_SWAMP_WAIT2_02");	//Joly: TA_RunToWP!! Sonst folgt er SC zum Drachen, ohne dass SC mit ihm gesprochen hat
-    TA_RunToWP				(23,00,08,00,"OW_DJG_SWAMP_WAIT2_02");		
+	TA_RunToWP				(08,00,23,00,"PSI_START");	//Joly: TA_RunToWP!! Sonst folgt er SC zum Drachen, ohne dass SC mit ihm gesprochen hat
+    TA_RunToWP				(23,00,08,00,"PSI_START");		
 };
 
 FUNC VOID Rtn_SwampDragon_702 ()
