@@ -2180,6 +2180,11 @@ func void DIA_Pyrokar_DTCLEARED_Info ()
 	AI_Output			(self, other, "DIA_Pyrokar_DTCLEARED_11_03"); //May Innos protect you.
 	MIS_PyrokarClearDemonTower = LOG_SUCCESS;
 	B_GivePlayerXP (XP_PyrokarClearDemonTower);
+
+	if(Lester_IsOnBoard != LOG_SUCCESS)
+	{
+		Npc_ExchangeRoutine(PC_PSIONIC, "XardasTowerClear");
+	};
 };
 
 ///////////////////////////////////////////////////////////////////////

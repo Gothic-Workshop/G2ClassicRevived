@@ -54,14 +54,20 @@ FUNC VOID Rtn_Xardas_4()
 
 FUNC VOID Rtn_XardasLibrary_4()
 {	
-	TA_Read_Bookstand	(08,00,18,00,"NW_XARDAS_TOWER_IN1_22");
-	TA_Potion_Alchemy	(18,00,22,00,"NW_XARDAS_TOWER_IN1_29");
-    TA_Sleep			(22,00,08,00,"NW_XARDAS_TOWER_IN1_31");
+	TA_Read_Bookstand	(08,00,18,00,"NW_XARDAS_TOWER_IN1_02_001");
+	TA_Potion_Alchemy	(18,00,22,00,"NW_XARDAS_TOWER_IN1_02_005");
+    TA_Sleep			(22,00,08,00,"NW_XARDAS_TOWER_IN1_02_000");
 };
 FUNC VOID Rtn_XardasWeg_4()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_XARDAS_TOWER_02");//Joly:nicht mehr verrücken
-    TA_Stand_Guarding	(23,00,08,00,"NW_XARDAS_TOWER_02");
+	TA_Stand_Guarding	(08,00,23,00,"NW_XARDAS_TOWER_VIEW_04");//Joly:nicht mehr verrücken
+    TA_Stand_Guarding	(23,00,08,00,"NW_XARDAS_TOWER_VIEW_04");
+};
+
+FUNC VOID Rtn_XardasTowerClear_4()
+{	
+	TA_Sit_Chair		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
+    TA_Sit_Chair		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
 };
 
 FUNC VOID Rtn_WaitForPlayer_4()//Übergang KAPITEL 2-3 schickt den Spieler zu Xardas 
@@ -78,8 +84,8 @@ FUNC VOID Rtn_WaitForShip_4()
 
 FUNC VOID Rtn_ShipOff_4()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_XARDAS_TOWER_02");//Joly:nicht mehr verrücken
-    TA_Stand_Guarding	(23,00,08,00,"NW_XARDAS_TOWER_02");
+	TA_Sit_Chair		(08,00,23,00,"NW_XARDAS_TOWER_IN1_02_002");
+    TA_Sit_Chair		(23,00,08,00,"NW_XARDAS_TOWER_IN1_02_002");
 };
 
 FUNC VOID Rtn_Ship_4()
