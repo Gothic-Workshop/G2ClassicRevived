@@ -41,7 +41,7 @@ instance VLK_410_Baltram (Npc_Default)
 FUNC VOID Rtn_Start_410 ()
 {	
 	TA_Stand_ArmsCrossed	(05,05,20,05,"NW_CITY_BALTRAM");
-	TA_Smalltalk			(20,05,00,05,"NW_CITY_BEER_05");
+	TA_Smalltalk			(20,05,00,05,"NW_CITY_BEER_04");
     TA_Sleep 				(00,05,05,05,"NW_CITY_HOTEL_BED_02");
 };
 

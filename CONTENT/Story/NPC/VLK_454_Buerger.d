@@ -40,13 +40,13 @@ instance VLK_454_Buerger (Npc_Default)
 FUNC VOID Rtn_Start_454()
 {	
 	TA_Stand_ArmsCrossed	(05,15,20,15,"NW_CITY_MERCHANT_PATH_14_C");
-    TA_Smoke_Waterpipe		(20,15,01,15,"NW_CITY_RAUCH_03");
+    TA_Smoke_Waterpipe		(20,15,01,15,"NW_CITY_SMOKE_02");
     TA_Sit_Chair			(01,15,05,15,"NW_CITY_TAVERN_IN_01");
 };
 
 FUNC VOID Rtn_VatrasAway_454()
 {	
 	TA_Sit_Chair			(05,15,20,15,"NW_CITY_TAVERN_IN_01");
-    TA_Smoke_Waterpipe		(20,15,01,15,"NW_CITY_RAUCH_03");
+    TA_Smoke_Waterpipe		(20,15,01,15,"NW_CITY_SMOKE_02");
     TA_Sit_Chair			(01,15,05,15,"NW_CITY_TAVERN_IN_01");
 };

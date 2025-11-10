@@ -40,6 +40,6 @@ instance PAL_258_Keroloth  (Npc_Default)
 
 FUNC VOID Rtn_Start_258 ()
 {	
-	  TA_Stand_Guarding			(08,00,22,00,"OCC_CHAPEL_ENTRANCE");
+	  TA_Stand_Guarding			(08,00,22,00,"OCC_WELL_RIGHT");
       TA_Sleep					(22,00,08,00,"OCC_BARONS_UPPER_RIGHT_ROOM_BED3");
 };

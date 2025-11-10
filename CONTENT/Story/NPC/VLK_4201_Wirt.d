@@ -38,9 +38,9 @@ instance VLK_4201_Wirt (Npc_Default)
 
 FUNC VOID Rtn_Start_4201 ()
 {
-	TA_Stand_Guarding		(04,35,21,00,"NW_CITY_BEER_02");
-	TA_Pee					(21,00,21,05,"NW_CITY_KASERN_PLACE_01");
-    TA_Stand_Drinking		(21,05,04,30,"NW_CITY_BEER_02");
-    TA_Pee					(04,30,04,35,"NW_CITY_KASERN_PLACE_01");
+	TA_Stand_Guarding		(04,35,21,00,"NW_CITY_BEER_06");
+	TA_Pee					(21,00,21,05,"NW_CITY_BEER_PEE");
+    TA_Stand_Drinking		(21,05,04,30,"NW_CITY_BEER_06");
+    TA_Pee					(04,30,04,35,"NW_CITY_BEER_PEE");
 };
 

@@ -38,7 +38,7 @@ instance SLD_804_Rod (Npc_Default)
 
 FUNC VOID Rtn_Start_804 ()
 {
-	TA_Smalltalk	(07,55,22,55,"NW_BIGFARM_PATH_02");
+	TA_Smalltalk	(07,55,22,55,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_01");
     TA_Sleep		(22,55,07,55,"NW_BIGFARM_MERCHUT_SLEEP_06");
 };
 

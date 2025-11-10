@@ -39,7 +39,7 @@ instance VLK_451_Buerger (Npc_Default)
 FUNC VOID Rtn_Start_451()
 {	
 	TA_Smalltalk		(06,10,10,02,"NW_CITY_MERCHANT_SHOP01_FRONT_03");
-    TA_Smoke_Waterpipe	(10,02,13,02,"NW_CITY_RAUCH_03");
+    TA_Smoke_Waterpipe	(10,02,13,02,"NW_CITY_SMOKE_04");
 	TA_Smalltalk		(13,02,14,05, "NW_CITY_MERCHANT_SHOP01_FRONT_03");
 	TA_Stand_Drinking 	(14,05,17,02,"NW_CITY_TAVERN_IN_02");
 	//TA_Smalltalk		(17,02,20,15, "NW_CITY_MERCHANT_SHOP01_FRONT_03");

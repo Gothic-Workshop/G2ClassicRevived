@@ -53,11 +53,11 @@ FUNC VOID Rtn_PreStart_100 ()
 };
 FUNC VOID Rtn_Start_100 ()
 {	
-    TA_Read_Bookstand 	(00,00,08,00,"NW_XARDAS_TOWER_IN1_23");
+    TA_Read_Bookstand 	(00,00,08,00,"NW_XARDAS_TOWER_IN1_22");
 	TA_Potion_Alchemy	(08,00,12,00,"NW_XARDAS_TOWER_IN1_29");
-    TA_Read_Bookstand 	(12,00,18,00,"NW_XARDAS_TOWER_IN1_28");
-	TA_Runemaking		(18,00,20,00,"NW_XARDAS_TOWER_IN1_30");
-	TA_Sit_Throne		(20,00,00,00,"NW_XARDAS_TOWER_IN1_32");
+    TA_Read_Bookstand 	(12,00,18,00,"NW_XARDAS_TOWER_IN1_22");
+	TA_Runemaking		(18,00,20,00,"NW_XARDAS_TOWER_IN1_28");
+    TA_Read_Bookstand 	(20,00,00,00,"NW_XARDAS_TOWER_IN1_22");
 };
 FUNC VOID Rtn_RitualInnosEyeRepair_100 ()
 {	

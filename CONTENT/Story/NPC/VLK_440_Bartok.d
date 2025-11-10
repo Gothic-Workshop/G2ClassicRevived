@@ -41,11 +41,11 @@ instance VLK_440_Bartok (Npc_Default)
 
 FUNC VOID Rtn_Start_440()
 {	
-	TA_Stand_Drinking		(07,00,09,15,"NW_CITY_MERCHANT_PATH_33");
-	TA_Stand_Eating			(09,15,10,45,"NW_CITY_MERCHANT_PATH_30");
-	TA_Stand_Drinking		(10,45,15,15,"NW_CITY_MERCHANT_PATH_33");
-	TA_Stand_Eating			(15,15,16,45,"NW_CITY_MERCHANT_PATH_30");
-	TA_Stand_Drinking		(16,45,20,45,"NW_CITY_MERCHANT_PATH_33");
+	TA_Stand_Drinking		(07,00,09,15,"NW_CITY_BEER_02");
+	TA_Stand_Eating			(09,15,10,45,"NW_CITY_BEER_02");
+	TA_Stand_Drinking		(10,45,15,15,"NW_CITY_BEER_02");
+	TA_Stand_Eating			(15,15,16,45,"NW_CITY_BEER_02");
+	TA_Stand_Drinking		(16,45,20,45,"NW_CITY_BEER_02");
  	TA_Sit_Bench			(20,45,21,45,"NW_CITY_MERCHANT_TAVERN01_FRONT");
  	TA_Stand_Drinking		(21,45,00,45,"NW_CITY_MERCHANT_TAVERN01_FRONT");
  	TA_Sit_Chair			(00,45,04,45,"TAVERN02_B");

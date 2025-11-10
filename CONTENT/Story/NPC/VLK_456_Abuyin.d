@@ -38,6 +38,6 @@ instance VLK_456_Abuyin (Npc_Default)
 
 FUNC VOID Rtn_Start_456()
 {	
-	TA_Stand_ArmsCrossed 		(07,20,01,20,"NW_CITY_MERCHANT_BENCH_02");
+	TA_Stand_ArmsCrossed 		(07,20,01,20,"NW_CITY_SMOKE_05");
     TA_Sleep					(01,20,07,20,"NW_CITY_HOTEL_BED_05");
 };

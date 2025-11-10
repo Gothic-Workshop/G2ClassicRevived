@@ -38,8 +38,8 @@ instance Mil_321_Rangar (Npc_Default)
 
 FUNC VOID Rtn_Start_321()
 {	
-	TA_Stand_Drinking	(08,00,20,00,"NW_CITY_BEER_06");
-    TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_06");
+	TA_Stand_Drinking	(08,00,20,00,"NW_CITY_BEER_03");
+    TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_03");
 };
 
 FUNC VOID Rtn_PrePalCampKlau_321()
@@ -50,6 +50,6 @@ FUNC VOID Rtn_PrePalCampKlau_321()
 
 FUNC VOID Rtn_PalCampKlau_321()
 {	
-	TA_Stand_Drinking	(04,00,23,00,"NW_CITY_BEER_06");
+	TA_Stand_Drinking	(04,00,23,00,"NW_CITY_BEER_03");
     TA_Pick_FP  		(23,00,04,00,"NW_CITY_PALCAMP_15");		//Joly:Klauen am Palcamp (Martins Auftrag)
 };

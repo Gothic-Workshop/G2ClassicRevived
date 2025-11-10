@@ -39,6 +39,6 @@ instance VLK_407_Hakon (Npc_Default)
 FUNC VOID Rtn_Start_407 ()
 {	
 	TA_Stand_ArmsCrossed	(05,10,19,50,"NW_CITY_HAKON");
-    TA_Smoke_Waterpipe 		(19,50,00,10,"NW_CITY_RAUCH_02");
+    TA_Smoke_Waterpipe 		(19,50,00,10,"NW_CITY_SMOKE_04");
     TA_Sleep				(00,10,05,10,"NW_CITY_HOTEL_BED_04");
 };

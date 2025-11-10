@@ -41,12 +41,12 @@ instance SLD_821_Soeldner (Npc_Default)
 
 FUNC VOID Rtn_Start_821 ()
 {
-	TA_Smalltalk		(07,30,23,30,"NW_BIGFARM_PATH_04_1");
+	TA_Smalltalk		(07,30,23,30,"NW_BIGFARM_PATH_04_1A");
 	TA_Sleep			(23,30,07,30,"NW_BIGFARM_MERCHUT_SLEEP_01");
 };
 
 func void Rtn_RodWeg_821 ()
 {
-	TA_Smalltalk	(07,55,22,55,"NW_BIGFARM_PATH_02");
+	TA_Smalltalk	(07,55,22,55,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_01");
     TA_Sleep		(22,55,07,55,"NW_BIGFARM_MERCHUT_SLEEP_01");
 };

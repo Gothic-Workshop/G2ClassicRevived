@@ -42,7 +42,7 @@ instance SLD_818_Soeldner (Npc_Default)
 
 FUNC VOID Rtn_Start_818 ()
 {
-	TA_Smalltalk		(07,50,22,50,"NW_BIGFARM_PATH_02");
+	TA_Smalltalk		(07,50,22,50,"NW_BIGFARM_BIGTREE_SMALLTALK_STABLE_01");
     TA_Sit_Chair 		(22,50,07,50,"NW_BIGFARM_KITCHEN_09");
 };
 

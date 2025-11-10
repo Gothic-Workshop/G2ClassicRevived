@@ -52,15 +52,15 @@ FUNC VOID Rtn_PreStart_468()
 
 FUNC VOID Rtn_Start_468()
 {	
-	TA_Sit_Bench		(07,45,19,45,"NW_CITY_MERCHANT_PATH_30");
-	TA_Smoke_Waterpipe  (19,45,00,45,"NW_CITY_RAUCH_05");
+	TA_Sit_Bench		(07,45,19,45,"NW_CITY_MERCHANT_PATH_29_BENCH");
+	TA_Smoke_Waterpipe  (19,45,00,45,"NW_CITY_SMOKE_03");
    	TA_Sleep			(00,45,07,45,"NW_CITY_HOTEL_BED_01");
 };
 
 FUNC VOID Rtn_Marktstand_468()
 {	
 	TA_Stand_ArmsCrossed 	(07,45,19,45,"NW_CITY_SARAH"); 
-    TA_Smoke_Waterpipe  	(19,45,00,45,"NW_CITY_RAUCH_05");
+    TA_Smoke_Waterpipe  	(19,45,00,45,"NW_CITY_SMOKE_03");
    	TA_Sleep				(00,45,07,45,"NW_CITY_HOTEL_BED_01");
 };
 

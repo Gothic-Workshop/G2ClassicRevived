@@ -37,13 +37,13 @@ instance VLK_495_Buergerin (Npc_Default)
 FUNC VOID Rtn_Start_495 ()
 {	
 	TA_Smalltalk			(06,00,08,00,"NW_CITY_MERCHANT_PATH_28_B");
-    TA_Stand_Eating			(08,00,09,00,"NW_CITY_MERCHANT_PATH_30");
+    TA_Stand_Eating			(08,00,09,00,"NW_CITY_MERCHANT_PATH_26");
     TA_Smalltalk			(09,00,11,00,"NW_CITY_MERCHANT_PATH_28_B");
-    TA_Stand_Eating			(11,00,12,00,"NW_CITY_MERCHANT_PATH_30");
+    TA_Stand_Eating			(11,00,12,00,"NW_CITY_MERCHANT_PATH_26");
     TA_Smalltalk			(12,00,14,00,"NW_CITY_MERCHANT_PATH_28_B");
-    TA_Stand_Eating			(14,00,15,00,"NW_CITY_MERCHANT_PATH_30");
+    TA_Stand_Eating			(14,00,15,00,"NW_CITY_MERCHANT_PATH_26");
     TA_Smalltalk			(15,00,17,00,"NW_CITY_MERCHANT_PATH_28_B");
-    TA_Stand_Eating			(17,00,18,00,"NW_CITY_MERCHANT_PATH_30");
+    TA_Stand_Eating			(17,00,18,00,"NW_CITY_MERCHANT_PATH_26");
 	TA_Cook_Stove 			(18,00,22,00,"TAVERN02");
 	TA_Stand_Sweeping		(22,00,23,00,"TAVERN02");
 	TA_Stand_Sweeping 		(23,00,01,00,"TAVERN02_B");

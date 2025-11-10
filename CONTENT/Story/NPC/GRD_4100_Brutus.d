@@ -45,13 +45,13 @@ instance GRD_4100_Brutus (Npc_Default)
 
 FUNC VOID Rtn_Start_4100 ()
 {	
-	TA_Smith_Sharp			(08,00,23,00,"OCC_BARONS_LEFT_ROOM_FRONT_SHARPER");
+	TA_Smith_Sharp			(08,00,23,00,"OCC_MERCS_DUNGEON_003");
     TA_Sleep				(23,00,08,00,"OCC_MERCS_UPPER_LEFT_ROOM_BED2");
 };
 //Joly: NIE AUF EINE BANK ODER THRON SETZEN
 FUNC VOID Rtn_Meatbugs_4100 ()
 {	
-	TA_Stand_ArmsCrossed 		(08,00,23,00,"OCC_BARONS_LEFT_GUARD_CHANGE"); 
-    TA_Stand_ArmsCrossed		(23,00,08,00,"OCC_BARONS_LEFT_GUARD_CHANGE");
+	TA_Stand_ArmsCrossed 		(08,00,23,00,"OCC_CENTER_BRUTUS"); 
+    TA_Stand_ArmsCrossed		(23,00,08,00,"OCC_CENTER_BRUTUS");
 };
 

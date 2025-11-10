@@ -39,8 +39,8 @@ INSTANCE NOV_602_Ulf (Npc_Default)
 
 FUNC VOID Rtn_Start_602()
 {	
-	TA_Stand_Drinking	(08,00,20,00,"NW_CITY_BEER_04");
-   	TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_04");
+	TA_Stand_Drinking	(08,00,20,00,"NW_CITY_BEER_03");
+   	TA_Stand_Drinking	(20,00,08,00,"NW_CITY_BEER_03");
 };
 FUNC VOID Rtn_Suche_602()
 {	
