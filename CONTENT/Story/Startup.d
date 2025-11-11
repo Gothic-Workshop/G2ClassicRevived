@@ -461,10 +461,26 @@ func void STARTUP_NEWCAMP ()
 
 
 	// New Camp (Lake)
-	Wld_InsertNpc		(Wisp,"NC_SPAWN_DAM_LURKER");
-	Wld_InsertNpc		(Wisp,"NC_SPAWN_DAM_LURKER");
-	Wld_InsertNpc		(Wisp,"NC_SPAWN_DAM_LURKER2");
-	Wld_InsertNpc		(Wisp,"NC_SPAWN_DAM_LURKER2");
+	Wld_InsertNpc		(DraconianGreen,"NC_SPAWN_DAM_LURKER");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_007");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_008");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_013");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_010");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_012");	
+	Wld_InsertNpc		(DraconianGold,"NC_BEACH_011");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_005");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_014");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_004");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_003");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_015");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_002");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_018");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_001");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_006");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_009");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_011");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_016");
+	Wld_InsertNpc		(Draconian,"NC_BEACH_017");
 
 	Wld_InsertNpc		(Giant_Rat,"NC_PATH_PEASANT");
 	Wld_InsertNpc		(Giant_Rat,"NC_PATH_PEASANT_OUTSIDE4");
@@ -483,29 +499,15 @@ func void STARTUP_NEWCAMP ()
 
 	// New Camp (Cave)
 	Wld_InsertNpc		(StoneGolem,"NC_PLACE02");
-	
-	Wld_InsertNpc		(Draconian,"NC_HUT04_OUT");
-	Wld_InsertNpc		(Draconian,"NC_HUT05_OUT");
-	Wld_InsertNpc		(Draconian,"NC_HUT02_OUT");
-	Wld_InsertNpc		(Draconian,"NC_P03_TO_P01_01");
-	Wld_InsertNpc		(Draconian,"NC_HUT08_OUT");
-	Wld_InsertNpc		(Draconian,"NC_PATH04");	
-	Wld_InsertNpc		(Draconian,"NC_PATH_TO_PIT_03");
-	Wld_InsertNpc		(Draconian,"NC_PATH11_MOVEMENT");
-	Wld_InsertNpc		(Draconian,"NC_PATH20");
-	Wld_InsertNpc		(Draconian,"NC_HUT28_OUT");
-	Wld_InsertNpc		(Draconian,"NC_PATH05");
-	Wld_InsertNpc		(Draconian,"NC_HUT26_OUT");
-	Wld_InsertNpc		(Draconian,"NC_HUT18_OUT");
-	Wld_InsertNpc		(Draconian,"NC_PATH15");
-	Wld_InsertNpc		(Draconian,"NC_PATH14");
-	Wld_InsertNpc		(Draconian,"NC_PATH10");
-	Wld_InsertNpc		(Draconian,"NC_P01_TO_P02_04");
-	Wld_InsertNpc		(Draconian,"NC_HUT22_OUT");
-	Wld_InsertNpc		(Draconian,"NC_PLACE08");
-	Wld_InsertNpc		(Draconian,"NC_ENTRANCE_WP");
 
-	Wld_InsertItem (ItWr_KDWLetter,"FP_ITEM_OW_00");
+	Wld_InsertNpc		(Wisp,"NC_KDW01_IN");
+	Wld_InsertNpc		(Wisp,"NC_KDW02_IN");
+	Wld_InsertNpc		(Wisp,"NC_KDW03_IN");
+	Wld_InsertNpc		(Wisp,"NC_KDW04_IN");
+	Wld_InsertNpc		(Wisp,"NC_KDW05_IN");
+	Wld_InsertNpc		(Wisp,"NC_KDW06_IN");
+
+	Wld_InsertItem		(ITMW_REVIVED_2H_MAGESTAFF_GOOD_02,"FP_ITEM_OW_00");
 };
 
 	func void INIT_SUB_NEWCAMP ()
@@ -820,9 +822,7 @@ func void STARTUP_DEMONTOWER ()
 
 func void STARTUP_FORTRESS ()
 {
-	Wld_InsertNpc		(StoneGolem,"FORTRESS_ENTRANCE_003");
-
-	Wld_InsertNpc		(Draconian,"FORTRESS_ENTRANCE_006");
+	Wld_InsertNpc		(StoneGolem,"FORTRESS_ENTRANCE_002");
 };
 
 	func void INIT_SUB_FORTRESS ()
@@ -1364,18 +1364,14 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Scavenger,"OW_SCAVENGER_TREE_SPAWN");
 
 	Wld_InsertNpc		(BDT_1000_Bandit_L,"OW_SAWHUT_MOLERAT_SPAWN01");
-	Wld_InsertNpc		(BDT_1001_Bandit_L,"OW_SAWHUT_MOLERAT_SPAWN01");
 	
 	Wld_InsertNpc		(BDT_1002_Bandit_L,"OW_SAWHUT_MOLERAT_MOVEMENT");
-	Wld_InsertNpc		(BDT_1003_Bandit_M,"OW_SAWHUT_MOLERAT_MOVEMENT");
 
 	Wld_InsertNpc		(BDT_1008_Bandit_H,"PATH_OC_NC_3");
 	Wld_InsertNpc		(BDT_1003_Bandit_M,"PATH_OC_NC_3");
-	Wld_InsertNpc		(BDT_1008_Bandit_H,"PATH_OC_NC_3");
 
 	Wld_InsertNpc		(BDT_1006_Bandit_H,"PATH_OC_NC_5_1");	
 	Wld_InsertNpc		(BDT_1001_Bandit_L,"PATH_OC_NC_4");
-	Wld_InsertNpc		(BDT_1002_Bandit_L,"PATH_OC_NC_5");
 
 
 	// Orc Arena
