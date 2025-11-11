@@ -9,98 +9,98 @@ const int	REV_Range_2H_Staff_02				=	130;
 const int	REV_Value_2H_Staff_02				=	1000;
 //******************************************************************//
 const int	REV_Damage_2H_Staff_03				=	30;
-const int	REV_Condition_2H_Staff_03			=	10;
+const int	REV_Condition_2H_Staff_03			=	20;
 const int	REV_Range_2H_Staff_03				=	130;
 const int	REV_Value_2H_Staff_03				=	2500;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Staff_Novice_01		=	60;
+const int	REV_Damage_2H_Staff_Novice_01		=	30;
 const int	REV_Condition_2H_Staff_Novice_01	=	30;
 const int	REV_Range_2H_Staff_Novice_01		=	130;
 const int	REV_Value_2H_Staff_Novice_01		=	1200;
 //******************************************************************//
-const int	REV_Damage_2H_Staff_Novice_02		=	60;
+const int	REV_Damage_2H_Staff_Novice_02		=	30;
 const int	REV_Condition_2H_Staff_Novice_02	=	30;
 const int	REV_Range_2H_Staff_Novice_02		=	130;
 const int	REV_Value_2H_Staff_Novice_02		=	1200;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Staff_Yberion			=	65;
-const int	REV_Condition_2H_Staff_Yberion		=	45;
+const int	REV_Condition_2H_Staff_Yberion		=	60;
 const int	REV_Range_2H_Staff_Yberion			=	160;
 const int	REV_Value_2H_Staff_Yberion			=	350;
 //******************************************************************//
-const int	REV_Damage_2H_Staff_Judge			=	26;
+const int	REV_Damage_2H_Staff_Judge			=	25;
 const int	REV_Condition_2H_Staff_Judge		=	20;
 const int	REV_Range_2H_Staff_Judge			=	150;
 const int	REV_Value_2H_Staff_Judge			=	150;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Normal_01		=	55;
-const int	REV_Condition_2H_MageStaff_Normal_01	=	40;
+const int	REV_Damage_2H_MageStaff_Normal_01		=	50;
+const int	REV_Condition_2H_MageStaff_Normal_01	=	50;
 const int	REV_Range_2H_MageStaff_Normal_01		=	140;
 const int	REV_Value_2H_MageStaff_Normal_01		=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Normal_02		=	65;
-const int	REV_Condition_2H_MageStaff_Normal_02	=	40;
+const int	REV_Damage_2H_MageStaff_Normal_02		=	50;
+const int	REV_Condition_2H_MageStaff_Normal_02	=	50;
 const int	REV_Range_2H_MageStaff_Normal_02		=	140;
 const int	REV_Value_2H_MageStaff_Normal_02		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Normal_03		=	65;
-const int	REV_Condition_2H_MageStaff_Normal_03	=	40;
+const int	REV_Damage_2H_MageStaff_Normal_03		=	50;
+const int	REV_Condition_2H_MageStaff_Normal_03	=	50;
 const int	REV_Range_2H_MageStaff_Normal_03		=	140;
 const int	REV_Value_2H_MageStaff_Normal_03		=	2000;
 //******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Ball_01			=	70;
-const int	REV_Condition_2H_MageStaff_Ball_01		=	60;
+const int	REV_Condition_2H_MageStaff_Ball_01		=	70;
 const int	REV_Range_2H_MageStaff_Ball_01			=	140;
 const int	REV_Value_2H_MageStaff_Ball_01			=	1500;
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Ball_02			=	70;
-const int	REV_Condition_2H_MageStaff_Ball_02		=	60;
+const int	REV_Condition_2H_MageStaff_Ball_02		=	70;
 const int	REV_Range_2H_MageStaff_Ball_02			=	140;
 const int	REV_Value_2H_MageStaff_Ball_02			=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_MageStaff_Ball_03			=	70;
-const int	REV_Condition_2H_MageStaff_Ball_03		=	60;
+const int	REV_Condition_2H_MageStaff_Ball_03		=	70;
 const int	REV_Range_2H_MageStaff_Ball_03			=	140;
 const int	REV_Value_2H_MageStaff_Ball_03			=	2000;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_01			=	85;
-const int	REV_Condition_2H_MageStaff_Good_01		=	120;
+const int	REV_Damage_2H_MageStaff_Good_01			=	100;
+const int	REV_Condition_2H_MageStaff_Good_01		=	100;
 const int	REV_Range_2H_MageStaff_Good_01			=	140;
 const int	REV_Value_2H_MageStaff_Good_01			=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_02			=	85;
-const int	REV_Condition_2H_MageStaff_Good_02		=	120;
+const int	REV_Damage_2H_MageStaff_Good_02			=	100;
+const int	REV_Condition_2H_MageStaff_Good_02		=	100;
 const int	REV_Range_2H_MageStaff_Good_02			=	140;
 const int	REV_Value_2H_MageStaff_Good_02			=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Good_03			=	85;
-const int	REV_Condition_2H_MageStaff_Good_03		=	120;
+const int	REV_Damage_2H_MageStaff_Good_03			=	100;
+const int	REV_Condition_2H_MageStaff_Good_03		=	100;
 const int	REV_Range_2H_MageStaff_Good_03			=	140;
 const int	REV_Value_2H_MageStaff_Good_03			=	2000;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_01		=	100;
+const int	REV_Damage_2H_MageStaff_Blades_01		=	150;
 const int	REV_Condition_2H_MageStaff_Blades_01	=	200;
 const int	REV_Range_2H_MageStaff_Blades_01		=	140;
 const int	REV_Value_2H_MageStaff_Blades_01		=	1500;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_02		=	100;
+const int	REV_Damage_2H_MageStaff_Blades_02		=	150;
 const int	REV_Condition_2H_MageStaff_Blades_02	=	200;
 const int	REV_Range_2H_MageStaff_Blades_02		=	140;
 const int	REV_Value_2H_MageStaff_Blades_02		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Blades_03		=	100;
+const int	REV_Damage_2H_MageStaff_Blades_03		=	150;
 const int	REV_Condition_2H_MageStaff_Blades_03	=	200;
 const int	REV_Range_2H_MageStaff_Blades_03		=	140;
 const int	REV_Value_2H_MageStaff_Blades_03		=	2000;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_MageStaff_Great_01		=	100;
+const int	REV_Damage_2H_MageStaff_Great_01		=	200;
 const int	REV_Condition_2H_MageStaff_Great_01		=	200;
 const int	REV_Range_2H_MageStaff_Great_01			=	140;
 const int	REV_Value_2H_MageStaff_Great_01			=	2000;
