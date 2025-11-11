@@ -63,6 +63,19 @@ func void B_SetVisuals_Draconian()
 	Mdl_SetVisualBody		(self,	"Draconian_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_DraconianGreen()
+{
+	Mdl_SetVisual			(self,	"Draconian.mds");
+	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Draconian_Green",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+func void B_SetVisuals_DraconianGold()
+{
+	Mdl_SetVisual			(self,	"Draconian.mds");
+	//								Body-Mesh			Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"Draconian_Gold",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //**************
 //	Drakonier    
@@ -72,6 +85,42 @@ INSTANCE Draconian			(Mst_Default_Draconian)
 {
 	// ------ visuals ------
 	B_SetVisuals_Draconian();
+	
+	//-------- inventory --------
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_03);
+	
+	//----- Daily Routine ----
+	start_aistate				= ZS_MM_AllScheduler;
+
+	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+};
+
+
+INSTANCE DraconianGreen			(Mst_Default_Draconian)
+{
+	//----- Monster ----
+	name							=	"Green Lizard Man";
+
+	// ------ visuals ------
+	B_SetVisuals_DraconianGreen();
+	
+	//-------- inventory --------
+	EquipItem (self, ITMW_REVIVED_ORC_SWORD_03);
+	
+	//----- Daily Routine ----
+	start_aistate				= ZS_MM_AllScheduler;
+
+	aivar[AIV_MM_RestStart] 	= OnlyRoutine;
+};
+
+
+INSTANCE DraconianGold			(Mst_Default_Draconian)
+{
+	//----- Monster ----
+	name							=	"Gold Lizard Man";
+	
+	// ------ visuals ------
+	B_SetVisuals_DraconianGold();
 	
 	//-------- inventory --------
 	EquipItem (self, ITMW_REVIVED_ORC_SWORD_03);
