@@ -41,7 +41,7 @@ instance BAU_965_Bauer (Npc_Default)
 FUNC VOID Rtn_Start_965 ()
 {	
 	TA_Smalltalk			(08,00,22,00,"NW_FARM3_STABLE_OUT_03");
-    TA_Sit_Campfire			(22,00,08,00,"NW_FARM3_HOUSE_REST_01");
+    TA_Sit_Campfire			(22,00,08,00,"NW_FARM3_STABLE_REST_02");
 };
 
 FUNC VOID Rtn_FleeFromPass_965 ()
@@ -49,6 +49,3 @@ FUNC VOID Rtn_FleeFromPass_965 ()
 	TA_Sit_Campfire		(08,00,22,00,"NW_BIGMILL_MALAKSVERSTECK_05");	 
     TA_Sit_Campfire 	(22,00,08,00,"NW_BIGMILL_MALAKSVERSTECK_05");
 };
-
-
-

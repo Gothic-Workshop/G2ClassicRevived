@@ -1,8 +1,15 @@
 const int	REV_Value_Joint				= 60;
-
 const int	REV_Value_Nugget			= 100;
-
 const int	REV_Value_Stuff				= 10;
+
+const int	REV_Value_Salt					=	50;
+const int	REV_Value_Sugar					=	60;
+const int	REV_Value_SyrianOil				=	50;
+const int	REV_Value_StoneOil				=	50;
+const int	REV_Value_PureAlcohol			=	80;
+const int	REV_Value_Vinegar				=	80;
+const int	REV_Value_MagicWater			=	200;
+
 
 
 //****************************************************************************
@@ -304,15 +311,6 @@ func void Use_ITMI_REVIVED_JOINT_MUSHROOM()
 //			COMPONENTS
 //****************************************************************************
 
-const int	REV_Value_Salt					=	50;
-const int	REV_Value_Sugar					=	60;
-const int	REV_Value_SyrianOil				=	50;
-const int	REV_Value_StoneOil				=	50;
-const int	REV_Value_PureAlcohol			=	80;
-const int	REV_Value_Vinegar				=	80;
-const int	REV_Value_MagicWater			=	200;
-
-/******************************************************************************************/
 INSTANCE ITMI_REVIVED_SALT (C_Item)
 {
 	name 				=	"Salt";

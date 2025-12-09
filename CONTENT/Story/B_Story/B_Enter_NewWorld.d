@@ -161,6 +161,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 		};
 
 		Wld_InsertNpc 	(DMT_DementorAmbientSpeaker,"NW_PASS_GATE_02");		//Im Pass
+		Wld_InsertNpc 	(DMT_DementorAmbientSpeaker,"NW_FARM3_VALLEY_002");		//Im Pass
 		B_KillNpc		(PAL_297_Ritter);	//Passwache
 		B_KillNpc		(PAL_298_Ritter);	//Passwache
 		
@@ -313,9 +314,9 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_3 ()
 				Vino_isAlive_Kap3 = TRUE;
 				B_StartOtherRoutine (Lobart,"OBESESSIONRITUAL"); 
 				Wld_InsertNpc		(DMT_DementorSpeakerVino1, "FP_STAND_DEMENTOR_KDF_31");
-				Wld_InsertNpc		(DMT_DementorSpeakerVino2, "FP_STAND_DEMENTOR_KDF_32");
-				Wld_InsertNpc		(DMT_DementorSpeakerVino3, "FP_STAND_DEMENTOR_KDF_33");
-				Wld_InsertNpc		(DMT_DementorSpeakerVino4, "NW_LITTLESTONEHENDGE_02");	
+				Wld_InsertNpc		(DMT_DementorSpeakerVino2, "FP_STAND_DEMENTOR_KDF_31B");
+				Wld_InsertNpc		(DMT_DementorSpeakerVino3, "FP_STAND_DEMENTOR_KDF_32");
+				Wld_InsertNpc		(DMT_DementorSpeakerVino4, "FP_STAND_DEMENTOR_KDF_33");	
 				B_KillNpc (YGiant_Bug_VinoRitual1);
 				B_KillNpc (YGiant_Bug_VinoRitual2);
 			};
@@ -652,6 +653,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 
 		if (hero.guild == GIL_KDF)
 		{
+		Wld_InsertItem 		(ITMW_REVIVED_2H_MAGESTAFF_GREAT_01, "FP_ITEM_XARDAS_09");
+
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_TROLLAREA_PATH_80");
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "FP_ROAM_TROLLAREA_19");
 		Wld_InsertNpc		(DMT_DementorAmbientSpeaker, "NW_FARM2_TO_TAVERN_08");
@@ -765,6 +768,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 	};
 	if (hero.guild == GIL_KDF)
 	{
+		Wld_InsertItem		(ITAR_REVIVED_DMT_M, "FP_ITEM_XARDAS_ROBE_01");
+
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_01");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_02");
 		Wld_InsertNpc		(DMT_DementorAmbient, "FP_STAND_DEMENTOR_KDF_03");

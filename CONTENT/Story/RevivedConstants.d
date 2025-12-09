@@ -109,6 +109,7 @@ CONST STRING MOBNAME_ORE_DEPLETED			= "Depleted Ore";
 
 CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
 CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
+CONST STRING MOBNAME_ALCHEMIST_01			= "Constantino Alchemist";
 
 
 // Graves
@@ -172,6 +173,9 @@ const string PRINT_LearnCooking					= "Learn: Cooking";
 const string PRINT_LearnTobacco					= "Learn: Blend tobacco";
 const string PRINT_LearnBooze					= "Learn: Distill booze";
 
+// Output
+const string PRINT_NoMorePicklocks				= "No more lock picks!";
+
 
 // ***************
 // whatever this is
@@ -207,6 +211,19 @@ var int EnterOG_Kapitel2;
 var int EnterOG_Kapitel3;
 var int EnterOG_Kapitel4;
 var int EnterOG_Kapitel5;
+
+
+// ***************
+// Book Constants
+// ***************
+
+var int BookAlchemy;
+var int BookRunemaking;
+var int BookHunting;
+var int BookMagic;
+var int BookHistory;
+var int BookFighting;
+var int BookPersonal;
 
 
 // ***************

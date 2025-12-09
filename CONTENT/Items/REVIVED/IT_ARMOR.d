@@ -308,13 +308,13 @@ const int	REV_Value_DMT_M						=	0;
 const int	REV_Prot_Edge_DMT_M					=	100;
 const int	REV_Prot_Blunt_DMT_M				=	100;
 const int	REV_Prot_Point_DMT_M				=	100;
-const int	REV_Prot_Fire_DMT_M					=	80;
-const int	REV_Prot_Magic_DMT_M				=	105;
+const int	REV_Prot_Fire_DMT_M					=	100;
+const int	REV_Prot_Magic_DMT_M				=	100;
 //******************************************************************//
 const int	REV_Value_DMT_H						=	0;
 const int	REV_Prot_Edge_DMT_H					=	150;
 const int	REV_Prot_Blunt_DMT_H				=	150;
-const int	REV_Prot_Point_DMT_H				=	80;
+const int	REV_Prot_Point_DMT_H				=	120;
 const int	REV_Prot_Fire_DMT_H					=	100;
 const int	REV_Prot_Magic_DMT_H				=	120;
 //******************************************************************//

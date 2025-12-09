@@ -783,7 +783,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_MANA_01 (C_Item)
 
 	value 			=	Value_Elixier1;	
 
-	visual 			=	"ItFo_Potion_Elixier.3ds";
+	visual 			=	"ItFo_Potion_Elixier_Egg.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseElixier;
 	scemeName		=	"POTIONFAST";
@@ -873,7 +873,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
 
 	value 			=	Value_ElixierEgg;	
 
-	visual 			=	"ItFo_Potion_Elixier_Egg.3ds";
+	visual 			=	"ItFo_Potion_Elixier.3ds";
 	material 		=	MAT_GLAS;
 	on_state[0]		=	UseOrcMedicine;
 	scemeName		=	"POTIONFAST";
@@ -884,7 +884,7 @@ INSTANCE ITPO_REVIVED_SPECIAL_HEALTH_02 (C_Item)
 	inv_rotz		= 1;
 
 	description			= name;
-	TEXT[0]				= "Allows contact to the Sleeper.";
+	TEXT[0]				= "Probably not made for humans.";
 	TEXT[1]				= NAME_Bonus_HpMax;			COUNT[1]	= ManaMax_ElixierEgg;
 	TEXT[5]				= NAME_Value;					COUNT[5]	= Value_ElixierEgg;
 };

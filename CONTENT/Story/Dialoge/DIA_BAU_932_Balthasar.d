@@ -270,10 +270,9 @@ func void DIA_Balthasar_BENGARUEBERREDET_Info ()
 	B_GivePlayerXP (XP_Balthasar_BengarsWeide);
 
 	//Joly: "NW_BIGMILL_FARM3_BALTHASAR"
-	
-	Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
-	Wld_InsertNpc	(Sheep,"NW_BIGMILL_FARM3_BALTHASAR"); 
-	Wld_InsertNpc	(Hammel,"NW_BIGMILL_FARM3_BALTHASAR"); 
+	Wld_InsertNpc	(Sheep,"NW_FARM3_BALTHASAR"); 
+	Wld_InsertNpc	(Sheep,"NW_FARM3_BALTHASAR"); 
+	Wld_InsertNpc	(Hammel,"NW_FARM3_BALTHASAR"); 
 
 	BalthasarSheep1 = Hlp_GetNpc (Balthasar_Sheep1); 
 

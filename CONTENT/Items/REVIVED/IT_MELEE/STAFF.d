@@ -565,7 +565,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_01 (C_Item)
 	cond_value[2]  		= 	REV_Condition_2H_MageStaff_Blades_01;
 
 	visual 				=	"ItMW_MageStaff_Blades_2H_01.3DS"; 
-	effect				=	"SPELLFX_MAGESTAFF2";
+	effect				=	"SPELLFX_ITEMSTARS_YELLOW";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
@@ -592,7 +592,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_02 (C_Item)
 	cond_value[2]  		= 	REV_Condition_2H_MageStaff_Blades_02;
 
 	visual 				=	"ItMW_MageStaff_Blades_2H_02.3DS"; 
-	effect				=	"SPELLFX_MAGESTAFF5";
+	effect				=	"SPELLFX_BOW";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;
@@ -619,7 +619,7 @@ INSTANCE ITMW_REVIVED_2H_MAGESTAFF_BLADES_03 (C_Item)
 	cond_value[2]  		= 	REV_Condition_2H_MageStaff_Blades_03;
 
 	visual 				=	"ItMW_MageStaff_Blades_2H_03.3DS"; 
-	effect				=	"SPELLFX_MAGESTAFF2";
+	effect				=	"SPELLFX_FIREBOW";
 
 	description			= name;
 	TEXT[2]				= NAME_Damage_Magic;			COUNT[2]	= damageTotal;

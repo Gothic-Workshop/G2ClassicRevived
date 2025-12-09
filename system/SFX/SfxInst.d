@@ -624,7 +624,7 @@ INSTANCE Play_Lute_A2	(C_SFX_DEF) {file= "Lute_3.wav";        vol = 127;		};
 				INSTANCE OW_WindHeavy1					(C_SFX_DEF) {file= "wind_heavy01.wav";				vol = 70;        	};
 				INSTANCE OW_WindHeavy2					(C_SFX_DEF) {file= "wind_heavy02.wav";				vol = 70;        	};
 				INSTANCE OW_WindHigh1					(C_SFX_DEF) {file= "wind_high.wav";					vol = 70;        	};
-				INSTANCE OW_WindHigh2					(C_SFX_DEF) {file= "wind_high.wav";					vol = 70;        	};
+				INSTANCE OW_WindHigh2					(C_SFX_DEF) {file= "wind_high2.wav";					vol = 70;        	};
 				INSTANCE OW_WindMedium					(C_SFX_DEF) {file= "wind_medium.wav";				vol = 70;        	};
 				INSTANCE OW_WindLight					(C_SFX_DEF) {file= "wind_light.wav";				vol = 70;        	};
 				INSTANCE OW_WindLand 					(C_SFX_DEF) {file= "wind_light.wav";				vol = 70;        	};
@@ -1829,6 +1829,12 @@ INSTANCE Play_Lute_A2	(C_SFX_DEF) {file= "Lute_3.wav";        vol = 127;		};
 				INSTANCE Run_Wood_A3	                (C_SFX_DEF) {file= "Step_Wood_04.wav";				vol = 40;	    	};
 				INSTANCE Run_Wood_A4	                (C_SFX_DEF) {file= "Step_Wood_05.wav";				vol = 40;	    	};
 
+/* Snow */
+				INSTANCE Run_Snow		                (C_SFX_DEF) {file= "Step_Snow_01.wav";				vol = 35;		    };    
+				INSTANCE Run_Snow_A1					(C_SFX_DEF) {file= "Step_Snow_02.wav";				vol = 35;			};          	
+				INSTANCE Run_Snow_A2					(C_SFX_DEF) {file= "Step_Snow_03.wav";				vol = 35;			};          	
+				INSTANCE Run_Snow_A3					(C_SFX_DEF) {file= "Step_Snow_04.wav";				vol = 35;		    };       
+
 /* Undef */	                                                                                                                
 				INSTANCE Run_Undef		                (C_SFX_DEF) {file= "Step_Stone_01.wav";				vol = 35;		    };    
 				INSTANCE Run_Undef_A1					(C_SFX_DEF) {file= "Step_Stone_02.wav";				vol = 35;			};          	
@@ -1867,7 +1873,13 @@ INSTANCE Play_Lute_A2	(C_SFX_DEF) {file= "Lute_3.wav";        vol = 127;		};
 /* Wood */	
 				INSTANCE Sneak_Wood						(C_SFX_DEF) {file= "Step_Wood_01.wav";				vol = 20;			};      	
 				INSTANCE Sneak_Wood_A1					(C_SFX_DEF) {file= "Step_Wood_02.wav";				vol = 20;			};  	
-				INSTANCE Sneak_Wood_A2					(C_SFX_DEF) {file= "Step_Wood_03.wav";				vol = 20;			};  	
+				INSTANCE Sneak_Wood_A2					(C_SFX_DEF) {file= "Step_Wood_03.wav";				vol = 20;			};  
+
+/* Snow */	                                                                                                                
+				INSTANCE Sneak_Snow		                (C_SFX_DEF) {file= "Step_Snow_01.wav";				vol = 35;		    };    
+				INSTANCE Sneak_Snow_A1					(C_SFX_DEF) {file= "Step_Snow_02.wav";				vol = 35;			};          	
+				INSTANCE Sneak_Snow_A2					(C_SFX_DEF) {file= "Step_Snow_03.wav";				vol = 35;			};          	
+				INSTANCE Sneak_Snow_A3					(C_SFX_DEF) {file= "Step_Snow_04.wav";				vol = 35;		    };    	
 
 /* Undef */	
 				INSTANCE Sneak_Undef					(C_SFX_DEF) {file= "Step_Earth_01.wav";				vol = 15;			};               	
@@ -1907,7 +1919,13 @@ INSTANCE Play_Lute_A2	(C_SFX_DEF) {file= "Lute_3.wav";        vol = 127;		};
 /* Wood */	
 				INSTANCE Turn_Wood						(C_SFX_DEF) {file= "Step_Wood_01.wav";				vol = 25;			};
 				INSTANCE Turn_Wood_A1					(C_SFX_DEF) {file= "Step_Wood_02.wav";				vol = 25;			};
-				INSTANCE Turn_Wood_A2					(C_SFX_DEF) {file= "Step_Wood_03.wav";				vol = 25;			};
+				INSTANCE Turn_Wood_A2					(C_SFX_DEF) {file= "Step_Wood_03.wav";				vol = 25;			}; 
+
+/* Snow */	                                                                                                                
+				INSTANCE Turn_Snow		                (C_SFX_DEF) {file= "Step_Snow_01.wav";				vol = 35;		    };    
+				INSTANCE Turn_Snow_A1					(C_SFX_DEF) {file= "Step_Snow_02.wav";				vol = 35;			};          	
+				INSTANCE Turn_Snow_A2					(C_SFX_DEF) {file= "Step_Snow_03.wav";				vol = 35;			};          	
+				INSTANCE Turn_Snow_A3					(C_SFX_DEF) {file= "Step_Snow_04.wav";				vol = 35;		    }; 
 
 /* Undef */	
 				INSTANCE Turn_Undef						(C_SFX_DEF) {file= "Step_Earth_01.wav";				vol = 20;			};

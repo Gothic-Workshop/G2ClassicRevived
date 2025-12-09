@@ -50,5 +50,5 @@ FUNC VOID Rtn_PreStart_961 ()
 FUNC VOID Rtn_Start_961 ()
 {	
 	TA_Stand_ArmsCrossed 		 (08,00,22,00,"NW_FARM3_GAAN");
-    TA_Stand_ArmsCrossed		 (22,00,08,00,"NW_FARM3_STABLE_REST_01"); 
+    TA_Sit_Campfire		 		 (22,00,08,00,"NW_FARM3_STABLE_REST_01"); 
 };

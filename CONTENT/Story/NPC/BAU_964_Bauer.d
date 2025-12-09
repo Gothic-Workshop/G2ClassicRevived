@@ -40,8 +40,8 @@ instance BAU_964_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_964 ()
 {	
-	TA_Saw				(08,00,21,00,"NW_FARM3_STABLE_OUT_01");
-    TA_Sit_Campfire		(21,00,08,00,"NW_FARM3_STABLE_REST_02");  
+	TA_Saw				(08,00,21,00,"NW_FARM3_FIELD_PLANKHUT_001");
+    TA_Sit_Campfire		(21,00,08,00,"NW_FARM3_FIELD_PLANKHUT_REST");  
 };
 
 FUNC VOID Rtn_FleeFromPass_964 ()
@@ -49,5 +49,3 @@ FUNC VOID Rtn_FleeFromPass_964 ()
 	TA_Sit_Campfire		(08,00,22,00,"NW_BIGMILL_MALAKSVERSTECK_05");	 
     TA_Sit_Campfire 	(22,00,08,00,"NW_BIGMILL_MALAKSVERSTECK_05");
 };
-
-

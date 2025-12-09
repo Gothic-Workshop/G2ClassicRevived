@@ -51,8 +51,8 @@ FUNC VOID Rtn_FleeDMT_932 ()
 
 FUNC VOID Rtn_BengarsWeide_932 ()
 {	
-	TA_Stand_Eating			(08,00,22,00,	"NW_BIGMILL_FARM3_BALTHASAR"); 
-    TA_Stand_Eating			(22,00,08,00,	"NW_BIGMILL_FARM3_BALTHASAR");
+	TA_Stand_Eating			(08,00,22,00,	"NW_FARM3_BALTHASAR"); 
+    TA_Stand_Eating			(22,00,08,00,	"NW_FARM3_BALTHASAR");
 };
 
 FUNC VOID Rtn_Test_932 ()

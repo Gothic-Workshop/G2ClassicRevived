@@ -39,8 +39,8 @@ instance BAU_968_Bauer (Npc_Default)
 
 FUNC VOID Rtn_Start_968 ()
 {	
-	TA_Rake_FP			(08,00,22,00,"NW_FARM3_FIELD_01");
-    TA_Sit_Campfire 			(22,00,08,00,"NW_FARM3_STABLE_REST_01");
+	TA_Rake_FP				(08,00,22,00,"NW_FARM3_FIELD_01");
+    TA_Sit_Campfire 		(22,00,08,00,"NW_FARM3_STABLE_REST_01");
 };
 
 FUNC VOID Rtn_FleeFromPass_968 ()

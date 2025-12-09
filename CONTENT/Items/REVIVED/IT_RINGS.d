@@ -585,7 +585,7 @@ FUNC VOID UnEquip_Ring_des_Lebens()
 
 INSTANCE ITRI_REVIVED_HP_02(C_Item)
 {
-	name 					=	"Ring of Greater Life";
+	name 					=	"Greater Ring of Life";
 
 	mainflag 				=	ITEM_KAT_MAGIC;
 	flags 					=	ITEM_RING;
@@ -660,6 +660,41 @@ FUNC VOID UnEquip_Ring_der_Magie()
 {
 	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 10;
 	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 10;
+};	
+
+INSTANCE ITRI_REVIVED_MP_02(C_Item)
+{
+	name 					=	"Greater Ring of Magic";
+
+	mainflag 				=	ITEM_KAT_MAGIC;
+	flags 					=	ITEM_RING;
+
+	value 					=	200;
+
+	visual 					=	"ITRI_RING_02.3ds";
+
+	visual_skin 				=	0;
+	material 				=	MAT_METAL;
+	on_equip				=	Equip_Ring_der_Magie2;
+	on_unequip				=	UnEquip_Ring_der_Magie2;
+
+	description		= name;
+	TEXT[2]			= NAME_Bonus_Mana;
+	COUNT[2]		= 10;
+	TEXT[5]			= NAME_Value;
+	COUNT[5]		= value;
+};
+
+FUNC VOID Equip_Ring_der_Magie2()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 20;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 20;
+};
+
+FUNC VOID UnEquip_Ring_der_Magie2()
+{
+	self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 20;
+	self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 20;
 };	
 
 /******************************************************************************************/

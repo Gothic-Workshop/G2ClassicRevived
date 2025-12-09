@@ -34,9 +34,18 @@ func void PLAYER_MOB_MISSING_LOCKPICK()
 	}
 	else
 	{
-		Print (PRINT_PicklockMissing);
-		AI_PlayAni	(self,"T_DONTKNOW");
-		B_Say_Overlay (self, self , "$PICKLOCKMISSING");
+		AI_PlayAni(self,"T_DONTKNOW");
+		var int rnd; rnd = Hlp_Random(100);
+		if(rnd == 0)
+		{
+			Print(PRINT_PicklockMissing);
+			B_Say_Overlay(self,self,"$PICKLOCKMISSING");
+		};
+		if(rnd == 1)
+		{
+			Print(PRINT_NoMorePicklocks);
+			B_Say_Overlay(self,self,"$NOMOREPICKS");
+		};
 	};
 };
 // Krieg ich niemals auf
@@ -82,4 +91,29 @@ func void PLAYER_MOB_WRONG_SIDE()
 func void PLAYER_TRADE_NOT_ENOUGH_GOLD()
 {
 	Print (PRINT_Trade_Not_Enough_Gold);
+	AI_PlayAni	(self,"R_SCRATCHHEAD");
+	AI_PlayAni	(other,"T_NO");
+};
+
+// --------------------------------------------------------------------------------------------------------
+// Ammo
+// --------------------------------------------------------------------------------------------------------
+func void PLAYER_RANGED_NO_AMMO()
+{
+	var C_Item rangedWeapon;
+	if(Npc_IsPlayer(self))
+	{
+		if(Npc_HasEquippedRangedWeapon(self))
+		{
+			rangedWeapon = Npc_GetEquippedRangedWeapon(self);
+			if(rangedWeapon.flags & ITEM_CROSSBOW)
+			{
+				Print("PRINT_Ranged_No_Ammo_Crossbow");
+			}
+			else if(rangedWeapon.flags & ITEM_BOW)
+			{
+				Print("PRINT_Ranged_No_Ammo_Bow");
+			};
+		};
+	};
 };

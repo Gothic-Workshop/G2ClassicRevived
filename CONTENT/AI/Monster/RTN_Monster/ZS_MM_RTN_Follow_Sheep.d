@@ -64,7 +64,7 @@ func void ZS_MM_Rtn_Follow_Sheep_Balthasar()
 
 func int ZS_MM_Rtn_Follow_Sheep_Balthasar_Loop ()
 {
-	if 	(Npc_GetDistToWP(Balthasar, "NW_BIGMILL_FARM3_BALTHASAR") > 500)
+	if 	(Npc_GetDistToWP(Balthasar, "NW_FARM3_BALTHASAR") > 500)
 	{
 		if (Npc_GetDistToNpc (self, Balthasar) > 500)
 		{
@@ -83,7 +83,7 @@ func int ZS_MM_Rtn_Follow_Sheep_Balthasar_Loop ()
 	}
 	else
 	{
-		AI_StartState (self, ZS_MM_Rtn_Roam, 1, "NW_BIGMILL_FARM3_BALTHASAR");
+		AI_StartState (self, ZS_MM_Rtn_Roam, 1, "NW_FARM3_BALTHASAR");
 	};
 	
 	return LOOP_CONTINUE;

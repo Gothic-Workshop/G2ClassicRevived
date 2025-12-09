@@ -635,65 +635,70 @@ func void STARTUP_PSICAMP ()
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_HERB_06");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_HERB_06");
 
-	Wld_InsertNpc		(SwampRat, "PATH_SWAMP_HUT");
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_02");
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_02");
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_02");
 
 	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI20");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI20");
 
-	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI13");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI13");
+	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI15");
 
-	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI17");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI17");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
 
-	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI18");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI18");
+	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY10_SPAWN01");
+	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY09_SPAWN01");
+
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY12_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY12_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY12_SPAWN01");
+
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY08_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY08_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY08_SPAWN01");
 
 	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI19");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI19");
 
-	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI21");
 	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI21");
 
-	Wld_InsertNpc		(SwampGolem,"OW_PATH_BLOODFLY13_SPAWN01");
-	Wld_InsertNpc		(SwampRat,"OW_PATH_BLOODFLY13_SPAWN01");
-
-	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY08_SPAWN01");
-	Wld_InsertNpc		(SwampRat,"OW_PATH_BLOODFLY08_SPAWN01");
-	Wld_InsertNpc		(SwampRat,"OW_PATH_BLOODFLY08_SPAWN01");
-
-	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY12_SPAWN01");
-	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY12_SPAWN01");
-	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY12_SPAWN01");
-
-/* 	Wld_InsertNpc		(Skeleton_Templar,"PATH_AROUND_PSI_FOCUS_000");
-	Wld_InsertNpc		(Skeleton_Templar,"PATH_AROUND_PSI_FOCUS_002");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PATH_AROUND_PSI_FOCUS_001");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PATH_AROUND_PSI_FOCUS_003"); */
-
-	Wld_InsertNpc		(SwampRat,"OW_PATH_BLOODFLY11_SPAWN01");
-	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
-	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
-
 	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI16");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI16");
+
+	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI18");
 
 	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI11");
-	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI11");
 
-	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI10");
 	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI10");
+
+	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI17");
 
 	Wld_InsertNpc		(SwampDrone,"PATH_TAKE_HERB_2_1");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_HERB_2_1");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_HERB_2_1");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_HERB_2_1");
 
-	Wld_InsertNpc		(SwampDrone,"PATH_TAKE_BLOODFLY_SPAWN");
-	Wld_InsertNpc		(SwampRat,"PATH_TAKE_BLOODFLY_SPAWN");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
+	Wld_InsertNpc		(Bloodfly,"OW_PATH_BLOODFLY11_SPAWN01");
+
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_MOVEMENT2");
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_MOVEMENT2");
+	Wld_InsertNpc		(SwampRat,"PATH_TAKE_HERB_MOVEMENT2");
+
+	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY13_SPAWN01");
+	Wld_InsertNpc		(SwampDrone,"OW_PATH_BLOODFLY13_SPAWN01");
+
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_BLOODFLY_SPAWN");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_BLOODFLY_SPAWN");
 	Wld_InsertNpc		(Bloodfly,"PATH_TAKE_BLOODFLY_SPAWN");
+
+
+	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI18");
+	Wld_InsertNpc		(SwampGolem,"PATH_AROUND_PSI19");
+
+	Wld_InsertNpc		(Swampshark,"PATH_AROUND_PSI21");
+
+	Wld_InsertNpc		(DMT_DementorAmbient,"PATH_AROUND_PSI_FOCUS_003");
 };
 
 	func void INIT_SUB_PSICAMP ()
@@ -2740,12 +2745,8 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(YGiant_Bug, 	"NW_FARM1_OUT_13");	
 	
 	//---Stonehendge ---
-
-	//Wld_InsertNpc		(YGiant_Bug_VinoRitual1, 	"NW_FARM1_OUT_15");	
-	//Wld_InsertNpc		(YGiant_Bug_VinoRitual2, 	"NW_FARM1_OUT_15");	
-
-	Wld_InsertNpc		(YGiant_Bug, "NW_FARM1_OUT_15");
-	Wld_InsertNpc		(YGiant_Bug, "NW_FARM1_OUT_15");
+	Wld_InsertNpc		(YGiant_Bug, "NW_FARM1_OUT_019");
+	Wld_InsertNpc		(YGiant_Bug, "NW_FARM1_OUT_019");
 
 	//---Kapitel2 Waldgraben---
 	Wld_InsertNpc		(Bloodfly,	"NW_FARM1_CITYWALL_02_B"); 
@@ -2822,7 +2823,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 
 	Wld_InsertItem (ITMI_REVIVED_STUFF_IDOL_01, "FP_ITEM_XARDAS_07");
 		
-	Wld_InsertItem 		(ITKE_REVIVED_XARDAS,		"FP_SPAWN_X_GUERTEL");
+	Wld_InsertItem (ITKE_REVIVED_XARDAS,		"FP_ITEM_XARDAS_08");
 
 	////////////////////////////////////////////////////////////////////////////
 	//----------------------- Spielstart Gothic2------------------------------//
@@ -3146,13 +3147,13 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	//Farm3
 
 	Wld_InsertNpc 	(BAU_960_Bengar, 		"BIGFARM");
+	Wld_InsertNpc 	(BAU_963_Malak, 		"BIGFARM");
 
 	Wld_InsertNpc 	(BAU_961_Gaan, 			"BIGFARM");
 
 	Wld_InsertNpc 	(Gaans_Snapper, 		"NW_FARM3_BIGWOOD_04");  
 
 	Wld_InsertNpc 	(BAU_962_Bauer, 		"BIGFARM");
-	Wld_InsertNpc 	(BAU_963_Malak, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_964_Bauer, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_965_Bauer, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_966_Bauer, 		"BIGFARM");
@@ -3165,6 +3166,9 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Hammel, 		"FP_ROAM_NW_FARM3_OUT_05_03");
 	Wld_InsertNpc 	(Sheep, 		"FP_ROAM_NW_FARM3_OUT_05_04");
 
+
+	Wld_InsertNpc 	(Giant_Bug, 		"NW_BIGMILL_FARM3_07B");  
+	Wld_InsertNpc 	(Giant_Bug, 		"NW_BIGMILL_FARM3_07B");  
 	
 	//Farm4
 	
@@ -3422,7 +3426,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(Wolf, 			"NW_CASTLEMINE_TROLL_05");
  	Wld_InsertNpc 	(Wolf, 			"NW_CASTLEMINE_TROLL_05");
 
- 	Wld_InsertNpc 	(Giant_Bug, 			"NW_BIGFARM_ALLEE_08_N");
+ 	Wld_InsertNpc 	(Giant_Bug, 			"NW_BIGFARM_ALLEE_08_N_3");
+ 	Wld_InsertNpc 	(Giant_Bug, 			"NW_BIGFARM_ALLEE_08_N_3");
 
  	Wld_InsertNpc 	(Giant_Bug, 			"NW_BIGFARM_ALLEE_08_N_2");
  	Wld_InsertNpc 	(Giant_Bug, 			"NW_BIGFARM_ALLEE_08_N_2");
@@ -3463,8 +3468,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_PATH_11_SMALLRIVER_20");
 
- 	Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_PATH_11_SMALLRIVER_24");
- 	Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_PATH_11_SMALLRIVER_24");
+ 	Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_PATH_11_SMALLRIVER_03B");
+ 	Wld_InsertNpc 	(Bloodfly, 			"NW_FARM3_PATH_11_SMALLRIVER_03B");
 
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_PATH_11_SMALLRIVERMID_03");
 
