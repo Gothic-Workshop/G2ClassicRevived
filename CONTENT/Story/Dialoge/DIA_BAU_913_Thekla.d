@@ -134,7 +134,7 @@ instance DIA_Thekla_Arbeit		(C_INFO)
 	condition	= DIA_Thekla_Arbeit_Condition;
 	information	= DIA_Thekla_Arbeit_Info;
 	permanent 	= FALSE;
-	description	= "I'm looking for work ...";
+	description	= "I'm looking for work...";
 };
 
 func int DIA_Thekla_Arbeit_Condition ()
@@ -147,7 +147,7 @@ func int DIA_Thekla_Arbeit_Condition ()
 
 func void DIA_Thekla_Arbeit_Info ()
 {
-	AI_Output (other, self, "DIA_Thekla_Arbeit_15_00"); //I'm looking for work ...
+	AI_Output (other, self, "DIA_Thekla_Arbeit_15_00"); //I'm looking for work...
 	AI_Output (self, other, "DIA_Thekla_Arbeit_17_01"); //You want to work here on the farm?
 	AI_Output (self, other, "DIA_Thekla_Arbeit_17_02"); //Only Onar can decide that. The farm is his, and so's the entire valley.
 };
@@ -163,7 +163,7 @@ instance DIA_Thekla_WannaJoin		(C_INFO)
 	condition	= DIA_Thekla_WannaJoin_Condition;
 	information	= DIA_Thekla_WannaJoin_Info;
 	permanent 	= FALSE;
-	description	= "Actually, I was planning to join the mercenaries ...";
+	description	= "Actually, I was planning to join the mercenaries...";
 };
 
 func int DIA_Thekla_WannaJoin_Condition ()
@@ -177,7 +177,7 @@ func int DIA_Thekla_WannaJoin_Condition ()
 
 func void DIA_Thekla_WannaJoin_Info ()
 {
-	AI_Output (other, self, "DIA_Thekla_WannaJoin_15_00"); //Actually, I was planning to join the mercenaries ...
+	AI_Output (other, self, "DIA_Thekla_WannaJoin_15_00"); //Actually, I was planning to join the mercenaries...
 	AI_Output (self, other, "DIA_Thekla_WannaJoin_17_01"); //So you're another of those felons from the penal colony?
 	AI_Output (self, other, "DIA_Thekla_WannaJoin_17_02"); //I might have known! Just leave me alone! There's already enough of your kind around here!
 };

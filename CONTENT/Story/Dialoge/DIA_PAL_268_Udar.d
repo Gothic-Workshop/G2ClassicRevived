@@ -65,7 +65,7 @@ INSTANCE DIA_Udar_YouAreBest (C_INFO)
 	condition	= DIA_Udar_YouAreBest_Condition;
 	information	= DIA_Udar_YouAreBest_Info;
 	permanent	= FALSE;
-	Description = "I heard that you are the BEST crossbowman ...";
+	Description = "I heard that you are the BEST crossbowman...";
 };                       
 
 FUNC INT DIA_Udar_YouAreBest_Condition()
@@ -261,7 +261,7 @@ INSTANCE DIA_Udar_Ring (C_INFO)
 	condition	= DIA_Udar_Ring_Condition;
 	information	= DIA_Udar_Ring_Info;
 	permanent	= FALSE;
-	Description = "Here, I bring you Tengron's ring ...";
+	Description = "Here, I bring you Tengron's ring...";
 };                       
 FUNC INT DIA_Udar_Ring_Condition()
 {
@@ -274,7 +274,7 @@ FUNC VOID DIA_Udar_Ring_Info()
 {	
 	AI_Output	(other,self ,"DIA_Udar_Ring_15_00");	//Here, I bring you Tengron's ring. It's supposed to protect you. Tengron sys he'll come and get it once he's back.
 	AI_Output	(self ,other,"DIA_Udar_Ring_09_01");	//What? Do you know what ring that is? He got that ring as an award for his courage in battle.
-	AI_Output	(self ,other,"DIA_Udar_Ring_09_02");	//You say he wants to get it back? If it's the will of Innos, he is going to. If it's the will of Innos ...
+	AI_Output	(self ,other,"DIA_Udar_Ring_09_02");	//You say he wants to get it back? If it's the will of Innos, he is going to. If it's the will of Innos...
 	
 	B_GiveInvItems (other,self,ItRi_Tengron,1);
 	TengronRing = TRUE;

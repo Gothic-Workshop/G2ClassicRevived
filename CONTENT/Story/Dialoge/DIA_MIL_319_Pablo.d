@@ -100,7 +100,7 @@ func void DIA_Pablo_WANTED_Info ()
 {
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_00"); //Hey you, wait - you look familiar to me.
 	AI_Output (other, self, "DIA_Pablo_WANTED_15_01"); //What do you want?
-	AI_Output (self, other, "DIA_Pablo_WANTED_12_02"); //I've seen your face before somewhere ... ah - right!
+	AI_Output (self, other, "DIA_Pablo_WANTED_12_02"); //I've seen your face before somewhere... ah - right!
 	B_UseFakeScroll ();
 	AI_Output (self, other, "DIA_Pablo_WANTED_12_03"); //Here - we found this picture on some bandits we picked up a few days ago - it looks a lot like you.
 	B_GiveInvItems (self, other, ItWr_Poster_MIS,1);
@@ -114,7 +114,7 @@ func void DIA_Pablo_WANTED_Info ()
 };
 FUNC VOID DIA_Pablo_WANTED_NOTHING()
 {
-	AI_Output (other, self, "DIA_Pablo_WANTED_NOTHING_15_00"); //No, you've got to be mistaken. Everything's fine with me ...
+	AI_Output (other, self, "DIA_Pablo_WANTED_NOTHING_15_00"); //No, you've got to be mistaken. Everything's fine with me...
 	AI_Output (self, other, "DIA_Pablo_WANTED_NOTHING_12_01"); //Whatever you say, stranger.
 	//AI_Output (self, other, "DIA_Pablo_WANTED_NOTHING_12_02"); //Aber wenn du Probleme hast - dann lass sie auﬂerhalb der Stadt. Wir haben hier schon genug Schwierigkeiten.
 	AI_Output (self ,other,"DIA_Pablo_Add_12_00"); //But if that happens to be YOUR mug after all - and if you have some problems - keep them outside of this town. Things are difficult enough here as it is.
@@ -126,7 +126,7 @@ FUNC VOID DIA_Pablo_WANTED_NOTHING()
 FUNC VOID DIA_Pablo_WANTED_IRONY()
 {
 	AI_Output (other, self, "DIA_Pablo_WANTED_IRONY_15_00"); //Gee, I'd never have thought of that myself.
-	AI_Output (self, other, "DIA_Pablo_WANTED_IRONY_12_01"); //Very funny ... what did those fellows want from you?
+	AI_Output (self, other, "DIA_Pablo_WANTED_IRONY_12_01"); //Very funny... what did those fellows want from you?
 	//AI_Output (other, self, "DIA_Pablo_WANTED_IRONY_15_02"); //Ich werde sie fragen, wenn ich sie sehe. Ihr habt doch die Kerle eingelocht, die den Wisch dabei hatten, oder?
 	AI_Output (other, self,"DIA_Pablo_Add_15_01"); //Ask them yourself. You've got them safely locked up, haven't you?
 	AI_Output (self, other, "DIA_Pablo_WANTED_IRONY_12_03"); //No - they're dead.
@@ -186,7 +186,7 @@ FUNC INT DIA_Pablo_HakonBandits_Condition()
 FUNC VOID DIA_Pablo_HakonBandits_Info()
 {
 	AI_Output (other, self,"DIA_Pablo_Add_15_20"); //What do you know about the bandits who robbed Hakon the merchant?
-	AI_Output (self ,other,"DIA_Pablo_Add_12_21"); //Oh, THAT matter. Don't remind me ...
+	AI_Output (self ,other,"DIA_Pablo_Add_12_21"); //Oh, THAT matter. Don't remind me...
 	AI_Output (self ,other,"DIA_Pablo_Add_12_22"); //As far as we know, they're responsible for a lot of the attacks on merchants.
 	
 	AI_Output (self, other, "DIA_Pablo_Banditen_12_01"); //Those rats have crawled into their holes and don't dare come out again.
@@ -197,9 +197,9 @@ FUNC VOID DIA_Pablo_HakonBandits_Info()
 	
 	if (Pablo_AndreMelden == FALSE)
 	{
-		AI_Output (self ,other,"DIA_Pablo_Add_12_23"); //But there's one more thing ...
+		AI_Output (self ,other,"DIA_Pablo_Add_12_23"); //But there's one more thing...
 		AI_Output (self, other, "DIA_Pablo_Banditen_12_04"); //A few of the stolen goods have shown up in Khorinis.
-		AI_Output (other, self, "DIA_Pablo_Banditen_15_05"); //This means that they know how they can smuggle the wares into town and sell them ...
+		AI_Output (other, self, "DIA_Pablo_Banditen_15_05"); //This means that they know how they can smuggle the wares into town and sell them...
 		AI_Output (self, other, "DIA_Pablo_Banditen_12_06"); //Yeah, we suspect they have a fence in the city. But we haven't been able to catch the guy yet.
 		AI_Output (self, other, "DIA_Pablo_Banditen_12_07"); //If you find out anything about the business, remember Lord Andre has posted a bounty for the fence.
 	
@@ -236,9 +236,9 @@ FUNC VOID DIA_Pablo_MyBandits_Info()
 		AI_Output (self ,other,"DIA_Pablo_Add_12_10"); //(demanding) What are you wanted for?
 		AI_Output (other, self,"DIA_Pablo_Add_15_11"); //I don't know - honest!
 		AI_Output (self ,other,"DIA_Pablo_Add_12_12"); //Yeah, yeah. I know. Let me tell you something. If I thought you were in cahoots with these bandits, you'd already be cooling your heels in the slammer, understood?
-		AI_Output (self ,other,"DIA_Pablo_Add_12_13"); //Still, I had better report this incident to Lord Andre ...
+		AI_Output (self ,other,"DIA_Pablo_Add_12_13"); //Still, I had better report this incident to Lord Andre...
 		Pablo_AndreMelden = TRUE;
-		AI_Output (self ,other,"DIA_Pablo_Add_12_14"); //But - to answer your question ...
+		AI_Output (self ,other,"DIA_Pablo_Add_12_14"); //But - to answer your question...
 	};
 
 	AI_Output (self ,other,"DIA_Pablo_Add_12_15"); //We picked them up near the landowner's place.

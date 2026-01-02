@@ -64,11 +64,11 @@ FUNC VOID DIA_Garond_PMSchulden_Info()
 		
 		if (Garond_Schulden < 1000)
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //But I hope you're going to pay for everything now! All in all, this comes to ...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_03"); //But I hope you're going to pay for everything now! All in all, this comes to...
 		}
 		else
 		{
-			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //I am very disappointed in you. Your penalty amounts to ...
+			AI_Output (self, other, "DIA_Garond_PMSchulden_10_04"); //I am very disappointed in you. Your penalty amounts to...
 		};
 				
 		var int diff; diff = (B_GetTotalPetzCounter(self) - Garond_LastPetzCounter);
@@ -315,7 +315,7 @@ FUNC VOID DIA_Garond_Hello_Info()
 {	
 		AI_Output (self ,other,"DIA_Garond_Hello_10_00"); //Where do you come from? You aren't one of the scrapers, and you aren't one of my people. Well?
 		AI_Output (other ,self,"DIA_Garond_Hello_15_01"); //I've come across the pass.
-		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Over the pass ...? You actually got through - by Innos!
+		AI_Output (self ,other,"DIA_Garond_Hello_10_02"); //Over the pass...? You actually got through - by Innos!
 		
 		if (hero.guild == GIL_KDF)
 		{
@@ -547,7 +547,7 @@ FUNC VOID DIA_Garond_Fajeth_Info()
 	AI_Output (other,self ,"DIA_Garond_Fajeth_15_00"); //I talked to Fajeth.
 	AI_Output (self ,other,"DIA_Garond_Fajeth_10_01"); //What has he got to tell me?
 	AI_Output (other,self ,"DIA_Garond_Fajeth_15_02"); //His people have mined two chests of ore.
-	AI_Output (self ,other,"DIA_Garond_Fajeth_10_03"); //Hmm ... two chests? I don't need two chests - I need TWO HUNDRED.
+	AI_Output (self ,other,"DIA_Garond_Fajeth_10_03"); //Hmm... two chests? I don't need two chests - I need TWO HUNDRED.
  	AI_Output (other,self ,"DIA_Garond_Fajeth_15_04"); //He wants me to tell you that he needs more men.
  	AI_Output (self ,other,"DIA_Garond_Fajeth_10_05"); //What? I'm supposed to send even more men to certain death? He can forget it.
  	
@@ -570,7 +570,7 @@ INSTANCE DIA_Garond_Silvestro (C_INFO)
 	condition	= DIA_Garond_Silvestro_Condition;
 	information	= DIA_Garond_Silvestro_Info;
 	permanent	= FALSE;
-	description = "About Silvestro's mining site ...";
+	description = "About Silvestro's mining site...";
 };                       
 
 FUNC INT DIA_Garond_Silvestro_Condition()
@@ -585,7 +585,7 @@ FUNC INT DIA_Garond_Silvestro_Condition()
 };
 FUNC VOID DIA_Garond_Silvestro_Info()
 {		
-	AI_Output (other,self ,"DIA_Garond_Silvestro_15_00"); //About Silvestro's mining site ...
+	AI_Output (other,self ,"DIA_Garond_Silvestro_15_00"); //About Silvestro's mining site...
 	AI_Output (self ,other,"DIA_Garond_Silvestro_10_01"); //Did you go see him? Did you talk to him?
 	AI_Output (other,self ,"DIA_Garond_Silvestro_15_02"); //Everyone's dead there. They were surprised by minecrawlers.
 	AI_Output (self ,other,"DIA_Garond_Silvestro_10_03"); //What about the ore? Do you know how much they have mined?
@@ -629,7 +629,7 @@ FUNC VOID DIA_Garond_Marcos_Info()
 	AI_Output (other,self ,"DIA_Garond_Marcos_15_02"); //Four chests. He has left the mining site to take the ore to safety.
 	AI_Output (other,self ,"DIA_Garond_Marcos_15_03"); //Now he is guarding the chests in a small valley behind the lines of orcs. He's asking for reinforcements, however.
 	AI_Output (self ,other,"DIA_Garond_Marcos_10_04"); //What? Only four chests - and he left his mining site? Damn, that isn't good.
-	AI_Output (self ,other,"DIA_Garond_Marcos_10_05"); //And now he wants more men ...? Well, fine, I'll send him two people.
+	AI_Output (self ,other,"DIA_Garond_Marcos_10_05"); //And now he wants more men...? Well, fine, I'll send him two people.
 	
 	
 	Marcos_Guard1.flags = 0;
@@ -1032,7 +1032,7 @@ instance DIA_Garond_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Garond_DragonPlettBericht_Condition;
 	information	 = 	DIA_Garond_DragonPlettBericht_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"About the dragons ...";
+	description	 = 	"About the dragons...";
 };
 
 var int DIA_Garond_DragonPlettBericht_NoPerm;

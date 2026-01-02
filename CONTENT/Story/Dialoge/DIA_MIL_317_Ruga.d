@@ -130,7 +130,7 @@ func void DIA_Ruga_Train_Info ()
 	|| (hero.guild == GIL_KDF)
 	{
 		AI_Output (self, other, "DIA_Ruga_Train_11_01"); //Sure thing. If you have enough experience, I can help you.
-		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Always remember, dexterity and long-range combat belong together like crossbow and bolt. The one ...
+		AI_Output (self, other, "DIA_Ruga_Train_11_02"); //Always remember, dexterity and long-range combat belong together like crossbow and bolt. The one...
 		AI_Output (other, self, "DIA_Ruga_Train_15_03"); //... isn't worth a thing without the other. I understand.
 	
 		Ruga_TeachCrossbow = TRUE;

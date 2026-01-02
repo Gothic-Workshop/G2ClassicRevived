@@ -1,4 +1,4 @@
-instance Vlk_2001_Syra (Npc_Default)
+instance VLK_2001_Syra (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Syra";

@@ -10,7 +10,7 @@ instance VLK_440_Bartok (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);
+	B_SetAttributesToChapter (self, 7);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -26,7 +26,7 @@ instance VLK_440_Bartok (Npc_Default)
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Important_Arto, BodyTex_N,ITAR_Vlk_L);	
-	Mdl_SetModelFatness	(self,0);
+	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
 	// ------ NSC-relevante Talente vergeben ------
@@ -41,11 +41,11 @@ instance VLK_440_Bartok (Npc_Default)
 
 FUNC VOID Rtn_Start_440()
 {	
-	TA_Stand_Drinking		(07,00,09,15,"NW_CITY_BEER_02");
-	TA_Stand_Eating			(09,15,10,45,"NW_CITY_BEER_02");
-	TA_Stand_Drinking		(10,45,15,15,"NW_CITY_BEER_02");
-	TA_Stand_Eating			(15,15,16,45,"NW_CITY_BEER_02");
-	TA_Stand_Drinking		(16,45,20,45,"NW_CITY_BEER_02");
+	TA_Stand_Drinking		(07,00,09,15,"NW_CITY_BEER_04");
+	TA_Stand_Eating			(09,15,10,45,"NW_CITY_BEER_04");
+	TA_Stand_Drinking		(10,45,15,15,"NW_CITY_BEER_04");
+	TA_Stand_Eating			(15,15,16,45,"NW_CITY_BEER_04");
+	TA_Stand_Drinking		(16,45,20,45,"NW_CITY_BEER_04");
  	TA_Sit_Bench			(20,45,21,45,"NW_CITY_MERCHANT_TAVERN01_FRONT");
  	TA_Stand_Drinking		(21,45,00,45,"NW_CITY_MERCHANT_TAVERN01_FRONT");
  	TA_Sit_Chair			(00,45,04,45,"TAVERN02_B");

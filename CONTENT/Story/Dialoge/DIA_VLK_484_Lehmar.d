@@ -258,7 +258,7 @@ func void DIA_Lehmar_GELDEINTREIBEN_schuldenzahlen ()
 	};
 };
 ///////////////////////////////////////////////////////////////////////
-//	Info Geldzurück
+//	Info Geldzurï¿½ck
 ///////////////////////////////////////////////////////////////////////
 instance DIA_Lehmar_GELDZURUECK		(C_INFO)
 {
@@ -350,7 +350,7 @@ func void DIA_Lehmar_NOCHMALGELD_Info ()
 {
 	AI_Output (other, self, "DIA_Lehmar_NOCHMALGELD_15_00"); //Can I borrow some more money from you?
 
-	if (Npc_KnowsInfo(other, DIA_Lehmar_GELDEINTREIBEN))//Joly: SC hat Schulden nicht ordnungsgemäß zurück gezahlt!
+	if (Npc_KnowsInfo(other, DIA_Lehmar_GELDEINTREIBEN))//Joly: SC hat Schulden nicht ordnungsgemï¿½ï¿½ zurï¿½ck gezahlt!
 	|| (Npc_KnowsInfo (other, DIA_Lehmar_BuchWeg))
 	{
 		AI_Output (self, other, "DIA_Lehmar_NOCHMALGELD_09_01"); //Do you think I'm stupid? Buzz off!
@@ -441,10 +441,10 @@ FUNC INT DIA_Lehmar_BuchWeg_Condition()
  
 FUNC VOID DIA_Lehmar_BuchWeg_Info()
 {	
-	AI_Output (self, other, "DIA_Lehmar_Add_09_00"); //(remorsefully) Some miserable pickpocket has stolen my ledger ...
+	AI_Output (self, other, "DIA_Lehmar_Add_09_00"); //(remorsefully) Some miserable pickpocket has stolen my ledger...
 	AI_Output (self, other, "DIA_Lehmar_Add_09_01"); //You didn't have anything to do with this business, did you?
 	AI_Output (other, self, "DIA_Addon_Lehmar_Add_15_02"); //(grins) Me? No.
-	AI_Output (self, other, "DIA_Lehmar_Add_09_03"); //Yes, yes, all right. Just get out of here ...
+	AI_Output (self, other, "DIA_Lehmar_Add_09_03"); //Yes, yes, all right. Just get out of here...
 	AI_StopProcessInfos (self);
 };
 

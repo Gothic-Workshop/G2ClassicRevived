@@ -26,27 +26,31 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 	// ------ Lernpunkte abziehen ------			
 	oth.lp = oth.lp - kosten;
 	
-	Log_CreateTopic (TOPIC_TalentAlchemy,LOG_NOTE);
-	B_LogEntry (TOPIC_TalentAlchemy,"To brew a potion I need an empty laboratory flask and the ingredients required to make the potion. Using these ingredients on the alchemist's bench I can prepare the desired potion."); 
+	if(Npc_GetTalentSkill(oth, NPC_TALENT_ALCHEMY) <= 0) {
+		Log_CreateTopic (TOPIC_TalentAlchemy,LOG_NOTE);
+		B_LogEntry (TOPIC_TalentAlchemy,"To brew a potion I need an empty laboratory flask and the ingredients required to make the potion. Using these ingredients on the alchemist's bench I can prepare the desired potion."); 
 	
+		Npc_SetTalentSkill 	(oth, NPC_TALENT_ALCHEMY, 1);
+	};
+
 	// ------ Trank brauen lernen ------
 	if (potion == POTION_Health_01)		{	PLAYER_TALENT_ALCHEMY[POTION_Health_01] 	= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'ESSENCE OF HEALING':2 Healing Plants and 1 Meadow Knotweed."); };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_HEALTH_01); };
 	
 	if (potion == POTION_Health_02)		{	PLAYER_TALENT_ALCHEMY[POTION_Health_02] 	= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'EXTRACT OF HEALING':2 Healing Herbs and 1 Meadow Knotweed.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_HEALTH_02);  };
 	
 	if (potion == POTION_Health_03)		{	PLAYER_TALENT_ALCHEMY[POTION_Health_03] 	= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'ELIXIR OF HEALING´:2 Healing Roots and 1 Meadow Knotweed.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_HEALTH_03);  };
 	
 	if (potion == POTION_Mana_01)		{	PLAYER_TALENT_ALCHEMY[POTION_Mana_01] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'MANA ESSENCE': 2 Fire Nettles and 1 Meadow Knotweed.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_MANA_01);  };
 	
 	if (potion == POTION_Mana_02)		{	PLAYER_TALENT_ALCHEMY[POTION_Mana_02] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'MANA EXTRACT': 2 Fireweed and 1 Meadow Knotweed.");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_MANA_02);  };
 	
 	if (potion == POTION_Mana_03)		{	PLAYER_TALENT_ALCHEMY[POTION_Mana_03] 		= TRUE;	
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'MANA ELIXIR':2 Fire Roots and 1 Meadow Knotweed");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_MANA_03);  };
 	
 	if (potion == POTION_Speed)			{	PLAYER_TALENT_ALCHEMY[POTION_Speed] 		= TRUE;	
 	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients 'SPEED POTION': 1 Snapperweed and 1 Meadow Knotweed");  };
@@ -65,74 +69,61 @@ func int B_TeachPlayerTalentAlchemy (var C_NPC slf, var C_NPC oth, var int potio
 
 
 	if (potion == POTION_Perm_HEALTH_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_HEALTH_01);  };
 
 	if (potion == POTION_Perm_HEALTH_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_HEALTH_02);  };
 
 	if (potion == POTION_Perm_HEALTH_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_HEALTH_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_HEALTH_03);  };
 
 	if (potion == POTION_Perm_MANA_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MANA_01);  };
 
 	if (potion == POTION_Perm_MANA_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MANA_02);  };
 
 	if (potion == POTION_Perm_MANA_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
-
-	if (potion == POTION_Perm_MANA_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
-
-	if (potion == POTION_Perm_MANA_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
-
-	if (potion == POTION_Perm_MANA_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MANA_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MANA_03);  };
 
 	if (potion == POTION_Perm_STR_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_STR_01);  };
 
 	if (potion == POTION_Perm_STR_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_STR_02);  };
 
 	if (potion == POTION_Perm_STR_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_STR_03);  };
 
 	if (potion == POTION_Perm_DEX_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_DEX_01);  };
 
 	if (potion == POTION_Perm_DEX_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_DEX_02);  };
 
 	if (potion == POTION_Perm_DEX_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_DEX_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_DEX_03);  };
 
 	if (potion == POTION_Perm_MASTER_01) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MASTER_01);  };
 
 	if (potion == POTION_Perm_MASTER_02) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MASTER_02);  };
 
 	if (potion == POTION_Perm_MASTER_03) { PLAYER_TALENT_ALCHEMY[POTION_Perm_MASTER_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh this doesnt exist yet");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_PERM_MASTER_03);  };
 
 	if (potion == POTION_SPEED_01) { PLAYER_TALENT_ALCHEMY[POTION_SPEED_01] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_SPEED_01);  };
 
 	if (potion == POTION_SPEED_02) { PLAYER_TALENT_ALCHEMY[POTION_SPEED_02] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_SPEED_02);  };
 
 	if (potion == POTION_SPEED_03) { PLAYER_TALENT_ALCHEMY[POTION_SPEED_03] 	= TRUE;
-	B_LogEntry(TOPIC_TalentAlchemy,"Ingredients pussy ahh");  };
+	B_LogEntry(TOPIC_TalentAlchemy,LOGENTRY_RECIPE_SPEED_03);  };
 
 
 	PrintScreen			(PRINT_LearnAlchemy, -1, -1, FONT_Screen, 2);
-	
-	// ------ bei jedem Trank: Alchemy-Talent lernen (programmvariable, wird nur zur Ausgabe in StatusScreen benutzt) ------
-	Npc_SetTalentSkill 	(oth, NPC_TALENT_ALCHEMY, 1);
-	
 	return TRUE;
 };
 	

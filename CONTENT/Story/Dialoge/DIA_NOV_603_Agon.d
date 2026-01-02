@@ -79,7 +79,7 @@ FUNC INT DIA_Agon_Wurst_Condition()
 FUNC VOID DIA_Agon_Wurst_Info()
 {	
 	AI_Output (other, self, "DIA_Agon_Wurst_15_00"); //Here, I've got a mutton sausage for you.
-	AI_Output (self, other, "DIA_Agon_Wurst_07_01"); //Sheep sausage, sheep cheese ... sheep milk ... it's getting so I can't stand the sight of it.
+	AI_Output (self, other, "DIA_Agon_Wurst_07_01"); //Sheep sausage, sheep cheese... sheep milk... it's getting so I can't stand the sight of it.
 	AI_Output (other, self, "DIA_Agon_Wurst_15_02"); //So do you want the sausage, or not?
 	AI_Output (self, other, "DIA_Agon_Wurst_07_03"); //Oh, give it here already!
 	
@@ -321,7 +321,7 @@ FUNC INT DIA_Agon_GolemLives_Condition()
 
 FUNC VOID DIA_Agon_GolemLives_Info()
 {
-	AI_Output (self ,other,"DIA_Agon_GolemLives_07_00"); //(surprised) You found the hiding place before me. That cannot be ...
+	AI_Output (self ,other,"DIA_Agon_GolemLives_07_00"); //(surprised) You found the hiding place before me. That cannot be...
 	AI_Output (self ,other,"DIA_Agon_GolemLives_07_01"); //(determined) That must not be! I shall not permit it.
 	AI_Output (self ,other,"DIA_Agon_GolemLives_07_02"); //They won't even find your corpse.
 	

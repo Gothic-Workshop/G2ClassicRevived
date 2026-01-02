@@ -25,7 +25,7 @@ instance SLD_824_Soeldner (Npc_Default)
 
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_ToughBald, BodyTex_B, ITAR_SLD_L);		
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_ToughBald, BodyTex_B, ITAR_REVIVED_SLD_L_02);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	

@@ -98,7 +98,7 @@ func void DIA_Pepe_WhyNotSLD_Info ()
 	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_00"); //Why didn't you tell the mercenaries about the wolves? I thought they worked for you.
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_01"); //Yeah, I know. I should have done that. But I didn't, damnit.
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_02"); //And now, with so many sheep gone, I'm afraid to tell anyone about it at all.
-	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_03"); //But you just told ME ...
+	AI_Output (other, self, "DIA_Pepe_WhyNotSLD_15_03"); //But you just told ME...
 	AI_Output (self, other, "DIA_Pepe_WhyNotSLD_03_04"); //(irritated) I'm already regretting that, too.
 };
 
@@ -125,16 +125,16 @@ func void DIA_Pepe_KillWolves_Info ()
 {
 	AI_Output (other, self, "DIA_Pepe_KillWolves_15_00"); //What if I kill those wolves?
 	AI_Output (self, other, "DIA_Pepe_KillWolves_03_01"); //(mocking) You, by yourself? Ha ha. I don't believe it. I'd sooner trust my bellwether to do that.
-	AI_Output (other, self, "DIA_Pepe_KillWolves_15_02"); //Forget it. It was just a suggestion. I'll go over to the boys and see what THEY say about it ...
-	AI_Output (self, other, "DIA_Pepe_KillWolves_03_03"); //(scared) Wait a minute. Okay, okay! Ehm ... you're the greatest and you can take on a hundred wolves at once. No problem!
-	AI_Output (self, other, "DIA_Pepe_KillWolves_03_04"); //Mostly they lurk between the trees near the pasture. (incidentally) I think there were only four ...
+	AI_Output (other, self, "DIA_Pepe_KillWolves_15_02"); //Forget it. It was just a suggestion. I'll go over to the boys and see what THEY say about it...
+	AI_Output (self, other, "DIA_Pepe_KillWolves_03_03"); //(scared) Wait a minute. Okay, okay! Ehm... you're the greatest and you can take on a hundred wolves at once. No problem!
+	AI_Output (self, other, "DIA_Pepe_KillWolves_03_04"); //Mostly they lurk between the trees near the pasture. (incidentally) I think there were only four...
 	
 	AI_StopProcessInfos (self);
 	
-	Wld_InsertNpc	(PEPES_YWolf1,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_01"); 
-	Wld_InsertNpc	(PEPES_YWolf2,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_02"); 
-	Wld_InsertNpc	(PEPES_YWolf3,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_03"); 
-	Wld_InsertNpc	(PEPES_YWolf4,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_04"); 
+	Wld_InsertNpc	(PEPES_WolfJuvenile1,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_01"); 
+	Wld_InsertNpc	(PEPES_WolfJuvenile2,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_02"); 
+	Wld_InsertNpc	(PEPES_WolfJuvenile3,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_03"); 
+	Wld_InsertNpc	(PEPES_WolfJuvenile4,"FP_ROAM_NW_BIGFARM_PEPES_WOLFS_04"); 
 	
 	MIS_Pepe_KillWolves = LOG_RUNNING;
 	
@@ -166,10 +166,10 @@ func void DIA_Pepe_KilledWolves_Info ()
 {
 	AI_Output (other, self, "DIA_Pepe_KilledWolves_15_00"); //I've done in the wolves.
 
-	if (Npc_IsDead(PEPES_YWolf1))
-	&& (Npc_IsDead(PEPES_YWolf2))
-	&& (Npc_IsDead(PEPES_YWolf3))
-	&& (Npc_IsDead(PEPES_YWolf4))
+	if (Npc_IsDead(PEPES_WolfJuvenile1))
+	&& (Npc_IsDead(PEPES_WolfJuvenile2))
+	&& (Npc_IsDead(PEPES_WolfJuvenile3))
+	&& (Npc_IsDead(PEPES_WolfJuvenile4))
 	{
 		AI_Output (self, other, "DIA_Pepe_KilledWolves_03_01"); //(amazed) You did it! Thank Innos!
 		AI_Output (self, other, "DIA_Pepe_KilledWolves_03_02"); //But now I still don't know how to tell Onar that all those sheep are gone.
@@ -290,7 +290,7 @@ func void DIA_Pepe_PERM_Info ()
 	if (Kapitel == 3)
 	{
 		AI_Output (self, other, "DIA_Pepe_PERM_03_03"); //I heard the strangest things. Some sinister characters are said to have shown up at Sekob's. They're laying siege to his house.
-	}
+	};
 	
 	if (kapitel >= 4)
 	{
@@ -359,7 +359,7 @@ func void DIA_Pepe_BuyLiesel_Info ()
 		else
 		{
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_03"); //Again? Okay. Take Betsy.
-			AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_04"); //Betsy? But the last sheep was called Betsy ...
+			AI_Output (other, self, "DIA_Pepe_BuyLiesel_15_04"); //Betsy? But the last sheep was called Betsy...
 			AI_Output (self, other, "DIA_Pepe_BuyLiesel_03_05"); //All the sheep are called Betsy.
 			if (Pepe_SchafGekauft == 3)
 			{

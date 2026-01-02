@@ -107,7 +107,7 @@ FUNC VOID DIA_Orlan_Wein_Okay()
 FUNC VOID DIA_Orlan_Wein_Was()
 {
 	AI_Output (other, self, "DIA_Orlan_Wein_Was_15_00"); //What kind of spell scrolls are they?
-	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //No idea - I don't know anything about that. They're from a guest who ... eh ... forgot them here, yeah.
+	AI_Output (self, other, "DIA_Orlan_Wein_Was_05_01"); //No idea - I don't know anything about that. They're from a guest who... eh... forgot them here, yeah.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info WerBistDu
@@ -420,7 +420,7 @@ func void DIA_Orlan_MieteFaellig_ja ()
 		}
 		else
 		{
-			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_05"); //Say, are you trying to trick me? You don't even have enough money to pay for that meal. I'll teach you, you ...
+			AI_Output			(self, other, "DIA_Orlan_MieteFaellig_ja_05_05"); //Say, are you trying to trick me? You don't even have enough money to pay for that meal. I'll teach you, you...
 			AI_StopProcessInfos (self);
 			B_Attack (self, other, AR_NONE, 1);
 		};

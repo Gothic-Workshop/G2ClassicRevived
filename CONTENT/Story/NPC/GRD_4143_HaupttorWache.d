@@ -6,7 +6,7 @@ instance GRD_4143_HaupttorWache (Npc_Default)
 	guild 		= GIL_VLK;
 	id 			= 4143;
 	voice 		= 13;
-	flags       = NPC_FLAG_IMMORTAL;							//NPC_FLAG_IMMORTAL oder 0
+	flags       = 0;
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
@@ -20,6 +20,7 @@ instance GRD_4143_HaupttorWache (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
+	CreateInvItems (self, ITKE_OC_MAINGATE_MIS, 1);
 	
 		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
@@ -43,4 +44,10 @@ FUNC VOID Rtn_Start_4143 ()
 	TA_Stand_Guarding			(08,00,18,00,"OCC_TOWER_PLATFORM_GUARD_LEFT");
     TA_Stand_Guarding			(18,00,23,00,"OCC_TOWER_PLATFORM_GUARD_RIGHT");
     TA_Stand_Guarding			(23,00,08,00,"OCC_TOWER_PLATFORM_GUARD_FRONT");
+};
+
+FUNC VOID Rtn_KAP5_4143 ()
+{	
+	TA_Stand_Guarding		(08,00,22,00,"OCC_RIGHT_TOWER_GANGWAY_GUARD");
+    TA_Stand_Guarding		(22,00,08,00,"OCC_RIGHT_TOWER_GANGWAY_GUARD");
 };

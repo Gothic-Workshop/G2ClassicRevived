@@ -58,7 +58,10 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_VLK_H) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_BAU_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_BAU_M) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_Leather_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_BEGGAR) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_LEATHER_L) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_LEATHER_M) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_LEATHER_H) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_ARCHER) == TRUE))			
 		{		
 				return FALSE;
@@ -93,7 +96,8 @@ func int C_PlayerHasFakeGuild (var C_NPC slf, var C_NPC oth)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_ORG_H) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_SLD_L) == TRUE)
 		||	 (Hlp_IsItem(itm, ITAR_REVIVED_SLD_M) == TRUE)
-		||	 (Hlp_IsItem(itm, ITAR_REVIVED_SLD_H) == TRUE))
+		||	 (Hlp_IsItem(itm, ITAR_REVIVED_SLD_H) == TRUE)
+		||	 (Hlp_IsItem(itm, ITAR_DJG_Crawler) == TRUE))
 		{
 			return FALSE;
 		}

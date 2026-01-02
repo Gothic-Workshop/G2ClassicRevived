@@ -63,6 +63,19 @@ func void B_SetVisuals_Molerat()
 	Mdl_SetVisualBody		(self,	"Mol_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_MoleratJuvenile()
+{
+	Mdl_SetVisual			(self,	"Molerat.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"MOLERAT_JUVENILE",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
+func void B_SetVisuals_MoleratDemon()
+{
+	Mdl_SetVisual			(self,	"Molerat.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"MOLERAT_DEMON",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
 
 //*****************
 //	Molerat	
@@ -70,6 +83,59 @@ func void B_SetVisuals_Molerat()
 INSTANCE Molerat	(Mst_Default_Molerat)
 {
 	B_SetVisuals_Molerat();
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFoMuttonRaw, 1);
+};
+
+INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
+{
+	name							=	"Juvenile Molerat";
+	level							=	3;
+	
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	10;
+	attribute	[ATR_DEXTERITY]		=	10;
+	attribute	[ATR_HITPOINTS_MAX]	=	30;
+	attribute	[ATR_HITPOINTS]		=	30;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	15;
+	protection	[PROT_EDGE]			=	15;
+	protection	[PROT_POINT]		=	15;	
+	protection	[PROT_FIRE]			=	15;
+	protection	[PROT_FLY]			=	15;	
+	protection	[PROT_MAGIC]		=	0;
+
+	B_SetVisuals_MoleratJuvenile();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
+	Npc_SetToFistMode(self);
+	CreateInvItems (self, ItFoMuttonRaw, 1);
+};
+
+INSTANCE MoleratDemon	(Mst_Default_Molerat)
+{
+	name							=	"Demon Molerat";
+	level							=	7;
+	
+	//----- Attribute ----	
+	attribute	[ATR_STRENGTH]		=	40;
+	attribute	[ATR_DEXTERITY]		=	40;
+	attribute	[ATR_HITPOINTS_MAX]	=	75;
+	attribute	[ATR_HITPOINTS]		=	75;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+	
+	//----- Protections ----
+	protection	[PROT_BLUNT]		=	50;
+	protection	[PROT_EDGE]			=	50;
+	protection	[PROT_POINT]		=	50;	
+	protection	[PROT_FIRE]			=	50;
+	protection	[PROT_FLY]			=	50;	
+	protection	[PROT_MAGIC]		=	0;
+
+	B_SetVisuals_MoleratDemon();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };

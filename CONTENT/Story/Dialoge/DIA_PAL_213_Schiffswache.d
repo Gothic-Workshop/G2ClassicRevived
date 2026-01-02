@@ -54,7 +54,7 @@ func int DIA_Pal_213_Schiffswache_FirstWarn_Condition()
 func void DIA_Pal_213_Schiffswache_FirstWarn_Info()
 {
 	AI_Output (self, other,"DIA_Pal_213_Schiffswache_FirstWarn_01_00"); //Wait a moment! Where do you think you're going?
-	AI_Output (other, self,"DIA_Pal_213_Schiffswache_FirstWarn_15_01"); //I wanted to ...
+	AI_Output (other, self,"DIA_Pal_213_Schiffswache_FirstWarn_15_01"); //I wanted to...
 
 	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 	{
@@ -209,8 +209,8 @@ FUNC VOID DIA_Pal_213_Schiffswache_IAmKDF_Info()
 {
 	AI_Output (other,self ,"DIA_Pal_213_Schiffswache_IAmKDF_15_00"); //You question the wish of a Fire Magician?
 	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF_01_01"); //(nervous) No, of course not. May Innos forgive me.
-	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF_01_02"); //(nervous) The Magicians of Fire are the guardians of the wisdom of Innos ...
-	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF_01_03"); //(nervous) ... whoever doubts them, doubts Innos and forfeits any right to mercy.
+	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF_01_02"); //(nervous) The Magicians of Fire are the guardians of the wisdom of Innos...
+	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF_01_03"); //(nervous)... whoever doubts them, doubts Innos and forfeits any right to mercy.
 };
 
 //**********************************************************
@@ -239,7 +239,7 @@ FUNC INT DIA_Pal_213_Schiffswache_IAmKDF2_Condition()
 FUNC VOID DIA_Pal_213_Schiffswache_IAmKDF2_Info()
 {
 	AI_Output (other,self ,"DIA_Pal_213_Schiffswache_IAmKDF2_15_00"); //What happens if I go aboard?
-	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF2_01_01"); //(nervous) I shall kill ... I mean, stop you.
+	AI_Output (self ,other,"DIA_Pal_213_Schiffswache_IAmKDF2_01_01"); //(nervous) I shall kill... I mean, stop you.
 };
 
 //**********************************************************

@@ -88,7 +88,7 @@ func void DIA_Attila_Hallo_Info ()
 FUNC VOID DIA_Attila_Hallo_Wer()
 {
 	AI_Output (other, self, "DIA_Attila_Hallo_Wer_15_00"); //Who are you?
-	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_01"); //I'm called Attila ... but is my name important? Our names are meaningless.
+	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_01"); //I'm called Attila... but is my name important? Our names are meaningless.
 	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_02"); //You should know that best, stranger. (laughs quietly)
 	
 	Knows_Attila_Wer = TRUE;
@@ -127,8 +127,8 @@ FUNC VOID DIA_Attila_Hallo_Theater()
 };
 FUNC VOID DIA_Attila_Hallo_Ende()
 {
-	AI_Output (other, self, "DIA_Attila_Hallo_Ende_15_00"); //I'm going to leave now ...
-	AI_Output (self, other, "DIA_Attila_Hallo_Ende_09_01"); //I'm afraid ... I can't allow that. Resign yourself to it. It is time to die.
+	AI_Output (other, self, "DIA_Attila_Hallo_Ende_15_00"); //I'm going to leave now...
+	AI_Output (self, other, "DIA_Attila_Hallo_Ende_09_01"); //I'm afraid... I can't allow that. Resign yourself to it. It is time to die.
 	AI_DrawWeapon (self);
 	
 	Info_ClearChoices 	(DIA_Attila_Hallo);
@@ -164,7 +164,7 @@ FUNC VOID DIA_Attila_Hallo_Warum()
 	AI_Output (self, other, "DIA_Attila_Hallo_Warum_09_04"); //My employers are not exactly pleased about it. To prevent you from making yet another mistake, they have sent me.
 	
 	Info_ClearChoices 	(DIA_Attila_Hallo);
-	Info_AddChoice		(DIA_Attila_Hallo,"I can give you gold ...",DIA_Attila_Hallo_Gold);
+	Info_AddChoice		(DIA_Attila_Hallo,"I can give you gold...",DIA_Attila_Hallo_Gold);
 	Info_AddChoice		(DIA_Attila_Hallo,"Let me at least draw my weapon.",DIA_Attila_Hallo_Attacke);
 	
 };
@@ -282,7 +282,7 @@ func int DIA_Attila_Wer_Condition ()
 func void DIA_Attila_Wer_Info ()
 {
 	AI_Output (other, self, "DIA_Attila_Hallo_Wer_15_00"); //Who are you?
-	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_01"); //I'm called Attila ... but is my name important? Our names are meaningless.
+	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_01"); //I'm called Attila... but is my name important? Our names are meaningless.
 	AI_Output (self, other, "DIA_Attila_Hallo_Wer_09_02"); //You should know that best, stranger. (laughs quietly)
 	
 	AI_StopProcessInfos (self);

@@ -65,6 +65,13 @@ func void B_SetVisuals_DragonSnapper()
 	Mdl_SetVisualBody		(self,	"Razor_Demon_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_DragonSnapperWeak()
+{
+	Mdl_SetVisual			(self,	"DragonSnapper.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"DRAGONSNAPPER_WEAK",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //********************
 //	DragonSnapper    
@@ -89,8 +96,13 @@ INSTANCE DragonSnapper	(Mst_Default_DragonSnapper)
 
 INSTANCE Gaans_Snapper	(Mst_Default_DragonSnapper)
 {
-	name	=	"Snorting Dragon Snapper";
+	name	=	"Snorting Snapper";
 
-	B_SetVisuals_DragonSnapper();
+	attribute	[ATR_STRENGTH]		=	100; 
+	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_HITPOINTS_MAX]	=	200;
+	attribute	[ATR_HITPOINTS]		=	200;
+	
+	B_SetVisuals_DragonSnapperWeak();
 	Npc_SetToFistMode(self);
 };

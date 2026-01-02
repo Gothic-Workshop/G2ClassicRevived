@@ -41,8 +41,7 @@ instance PAL_280_Tengron (Npc_Default)
 FUNC VOID Rtn_Start_280 ()
 {	
 	TA_Stand_Guarding		(08,00,23,00,"LOCATION_23_CAVE_1_IN");
-    //TA_Sit_Bench			(23,00,08,00,"LOCATION_23_CAVE_1_IN");
-	TA_Practice_Sword		(23,00,08,00,"LOCATION_23_CAVE_1_OUT_TRAIN");
+	TA_Pray_Innos			(23,00,08,00,"LOCATION_23_CAVE_1_OUT_PRAY");
 };
 
 FUNC VOID Rtn_RunAfterVirtualRefugee_280 ()

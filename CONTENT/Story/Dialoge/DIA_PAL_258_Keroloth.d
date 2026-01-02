@@ -376,7 +376,7 @@ func void DIA_Keroloth_KAP4_HELLO_bestohlen ()
 {
 	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_15_00"); //Did someone steal from you?
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_01"); //No. They smuggled 20 gold pieces into my pocket. Of course they stole something, you idiot!
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_02"); //I tell you, when I get my hands on the dirty swine ...
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_07_02"); //I tell you, when I get my hands on the dirty swine...
 
 	Info_AddChoice	(DIA_Keroloth_KAP4_HELLO, "So what are you missing?", DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt );
 };
@@ -386,7 +386,7 @@ func void DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt ()
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_01"); //My purse, with all my savings in it.
 	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_02"); //And now it's gone!
 	AI_Output			(other, self, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_15_03"); //It'll turn up somewhere.
-	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_04"); //When I get my hands on him ...
+	AI_Output			(self, other, "DIA_Keroloth_KAP4_HELLO_bestohlen_wasfehlt_07_04"); //When I get my hands on him...
 
 	Log_CreateTopic (TOPIC_KerolothsGeldbeutel, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_KerolothsGeldbeutel, LOG_RUNNING);

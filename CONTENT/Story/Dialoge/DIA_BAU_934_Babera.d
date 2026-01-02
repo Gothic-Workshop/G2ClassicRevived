@@ -124,7 +124,7 @@ func int DIA_Babera_BRONKO_Condition ()
 
 func void DIA_Babera_BRONKO_Info ()
 {
-	AI_Output			(other, self, "DIA_Babera_BRONKO_15_00"); //Say, the nasty fellow over there ...
+	AI_Output			(other, self, "DIA_Babera_BRONKO_15_00"); //Say, the nasty fellow over there...
 	AI_Output			(self, other, "DIA_Babera_BRONKO_16_01"); //That's Bronco. What about him?
 	AI_Output			(other, self, "DIA_Babera_BRONKO_15_02"); //Is that your farmer?
 	AI_Output			(self, other, "DIA_Babera_BRONKO_16_03"); //(laughs) Is that what he told you? Sekob is our farmer. Bronco is nothing but a layabout and ne'er-do-well. But strong as an ox.

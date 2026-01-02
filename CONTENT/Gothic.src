@@ -20,6 +20,7 @@ STORY\NPC_Globals.d
 STORY\svm.d
 STORY\Text.d
 STORY\RevivedConstants.d
+STORY\RevivedHelpers.d
 
 
 STORY\B_Story\C_NpcIsInQuarter.d

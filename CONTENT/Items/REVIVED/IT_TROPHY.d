@@ -14,6 +14,7 @@ CONST INT	REV_VALUE_WARANSKIN			=	100;
 CONST INT	REV_VALUE_FIREWARANSKIN		=	150;
 CONST INT	REV_VALUE_ALLIGATORSKIN		=	150;
 
+CONST INT	REV_VALUE_HELLHOUNDFUR		=	30;
 CONST INT	REV_VALUE_ORCDOGFUR			=	30;
 CONST INT	REV_VALUE_ICEWOLFFUR		=	20;
 CONST INT	REV_VALUE_BLACKWOLFFUR		=	20;
@@ -75,6 +76,22 @@ INSTANCE ITAT_REVIVED_SCAVENGEREGG(C_Item)
 };
 
 /******************************************************************************************/
+
+INSTANCE ITAT_REVIVED_FUR_HELLHOUND (C_Item)
+{
+	name 				=	"Skin of a Hellhound";
+
+	mainflag 			=	ITEM_KAT_NONE;
+	flags 				=	ITEM_MULTI;
+
+	value 				=	REV_VALUE_HELLHOUNDFUR;
+
+	visual 				=	"REV_ITAT_HELLHOUND_01.3DS";
+	material 			=	MAT_LEATHER;
+
+	description				=	name;
+	TEXT[4]					=	NAME_Value;					COUNT[4]	= value;
+};
 
 INSTANCE ITAT_REVIVED_FUR_ORCDOG (C_Item)
 {

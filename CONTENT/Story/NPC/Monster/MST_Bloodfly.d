@@ -64,6 +64,13 @@ func void B_SetVisuals_Bloodfly()
 	Mdl_SetVisualBody		(self,	"Blo_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_BloodflyJuvenile()
+{
+	Mdl_SetVisual			(self,	"Bloodfly.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"BLOODFLY_JUVENILE",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 //*************
 //	Bloodfly   
 //*************
@@ -78,7 +85,7 @@ INSTANCE Bloodfly	(Mst_Default_Bloodfly)
 //	YBloodfly   
 //*************
 
-INSTANCE YBloodfly	(Mst_Default_Bloodfly)
+INSTANCE BloodflyJuvenile	(Mst_Default_Bloodfly)
 {
 	name							=	"Small Bloodfly";
 	
@@ -100,7 +107,7 @@ INSTANCE YBloodfly	(Mst_Default_Bloodfly)
 	protection	[PROT_FLY]			=	0;
 	protection	[PROT_MAGIC]		=	0;
 		
-	B_SetVisuals_Bloodfly();
+	B_SetVisuals_BloodflyJuvenile();
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 };
@@ -115,6 +122,6 @@ INSTANCE Sleepfly	(Mst_Default_Bloodfly)
 	
 	aivar[AIV_MM_SleepStart] 	= OnlyRoutine;	
 	
-	B_SetVisuals_Bloodfly();
+	B_SetVisuals_BloodflyJuvenile();
 	Npc_SetToFistMode(self);
 };

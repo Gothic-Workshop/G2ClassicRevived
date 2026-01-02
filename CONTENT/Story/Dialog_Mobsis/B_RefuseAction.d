@@ -91,8 +91,8 @@ func void PLAYER_MOB_WRONG_SIDE()
 func void PLAYER_TRADE_NOT_ENOUGH_GOLD()
 {
 	Print (PRINT_Trade_Not_Enough_Gold);
-	AI_PlayAni	(self,"R_SCRATCHHEAD");
-	AI_PlayAni	(other,"T_NO");
+	AI_PlayAni	(other,"R_SCRATCHHEAD");
+	AI_PlayAni	(self,"T_NO");
 };
 
 // --------------------------------------------------------------------------------------------------------

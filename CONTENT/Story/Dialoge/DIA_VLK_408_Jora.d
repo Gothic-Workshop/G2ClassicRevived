@@ -228,7 +228,7 @@ func void DIA_Jora_HolDeinGold_DoIt()
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_00"); //I'll see what I can do.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_01"); //Be careful! If you just knock the bastard down, the city guard will get involved.
 	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_02"); //Lately, things have been getting really rough here. Since the paladins came to town, the guards have been cracking down harshly on brawlers.
-	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_03"); //So, think of something ...
+	AI_Output (self, other, "DIA_Jora_HolDeinGold_DoIt_08_03"); //So, think of something...
 	AI_Output (other, self, "DIA_Jora_HolDeinGold_DoIt_15_04"); //I shall.
 		
 	Jora_Dieb = LOG_RUNNING;
@@ -256,7 +256,7 @@ instance DIA_Jora_WegenDieb	(C_INFO)
 	condition	 = 	DIA_Jora_WegenDieb_Condition;
 	information	 = 	DIA_Jora_WegenDieb_Info;
 	permanent	 = 	TRUE;
-	description	 = 	"About the thief ...";
+	description	 = 	"About the thief...";
 };
 func int DIA_Jora_WegenDieb_Condition ()
 {
@@ -267,7 +267,7 @@ func int DIA_Jora_WegenDieb_Condition ()
 };
 func void DIA_Jora_WegenDieb_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_WegenDieb_15_00"); //About the thief ...
+	AI_Output (other, self, "DIA_Jora_WegenDieb_15_00"); //About the thief...
 	AI_Output (self, other, "DIA_Jora_WegenDieb_08_01"); //Yes, how's it going? Have you caught him - and much more importantly - do you have my gold?
 	
 	Info_ClearChoices (DIA_Jora_WegenDieb);
@@ -400,7 +400,7 @@ func void DIA_Jora_GHDgInfo_Info ()
 	{
 		AI_Output (self ,other,"DIA_Jora_Add_08_06"); //Right - listen up - you haven't heard anything of what I'm about to tell you from me, capisce?
 		AI_Output (self ,other,"DIA_Jora_Add_08_07"); //There are shady characters who frequent the dockside pub.
-		AI_Output (self ,other,"DIA_Jora_Add_08_08"); //I bet the landlord knows a thing or two ...
+		AI_Output (self ,other,"DIA_Jora_Add_08_08"); //I bet the landlord knows a thing or two...
 		AI_Output (self ,other,"DIA_Jora_Add_08_09"); //If you're planning to track down the thieves, you should go talk to HIM.
 		AI_Output (self ,other,"DIA_Jora_Add_08_10"); //You could act like you're up to something crooked, for example. Maybe he'll fall for it.
 		AI_Output (self ,other,"DIA_Jora_Add_08_11"); //But be very careful. These people are not to be trifled with.
@@ -441,7 +441,7 @@ func void DIA_Jora_Belohnung_Info ()
 	
 	if (Npc_GetDistToWP (self, "NW_CITY_MERCHANT_PATH_38") <= 500)
 	{
-		AI_Output (self, other, "DIA_Jora_Belohnung_08_03"); //Now, I must get back to my customers ...
+		AI_Output (self, other, "DIA_Jora_Belohnung_08_03"); //Now, I must get back to my customers...
 	};
 	AI_StopProcessInfos (self); 
 };
@@ -456,7 +456,7 @@ instance DIA_Jora_AlriksSchwert	(C_INFO)
 	condition	 = 	DIA_Jora_AlriksSchwert_Condition;
 	information	 = 	DIA_Jora_AlriksSchwert_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"Alrik says you've got his sword ...";
+	description	 = 	"Alrik says you've got his sword...";
 };
 func int DIA_Jora_AlriksSchwert_Condition ()
 {
@@ -467,7 +467,7 @@ func int DIA_Jora_AlriksSchwert_Condition ()
 };
 func void DIA_Jora_AlriksSchwert_Info ()
 {
-	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_00"); //Alrik says you've got his sword ...
+	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_00"); //Alrik says you've got his sword...
 	AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_01"); //Do you mean that ragged fellow who traded his weapon to me for a few torches and chunks of meat?
 	AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_02"); //That's him.
 	
@@ -477,8 +477,8 @@ func void DIA_Jora_AlriksSchwert_Info ()
 		AI_Output (other, self, "DIA_Jora_AlriksSchwert_15_04"); //How much do you want for it?
 		if (Jora_Gold == LOG_SUCCESS) 
 		{
-			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_05"); //Well - for you ...
-			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_06"); //Ah, so what! Here, take it. After all, you did help me get my gold back ...
+			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_05"); //Well - for you...
+			AI_Output (self, other, "DIA_Jora_AlriksSchwert_08_06"); //Ah, so what! Here, take it. After all, you did help me get my gold back...
 			B_GiveInvItems (self, other, ITMW_REVIVED_1H_SWORD_ALRIK, 1);
 		}
 		else
@@ -533,7 +533,7 @@ func void DIA_Jora_BUYAlriksSchwert_Info ()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_05"); //You don't have enough gold. But don't worry - I'll keep the sword for a while. Come back later, then ...
+		AI_Output (self, other, "DIA_Jora_BUYAlriksSchwert_08_05"); //You don't have enough gold. But don't worry - I'll keep the sword for a while. Come back later, then...
 	};
 };
 

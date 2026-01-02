@@ -350,7 +350,7 @@ func void DIA_Till_BRONKOZURARBEIT_mehr ()
 		}
 	 else if (Till_Angebot == 30)
 		{	
-			AI_Output			(self, other, "DIA_Till_BRONKOZURARBEIT_mehr_03_04"); //Maybe ... 50?
+			AI_Output			(self, other, "DIA_Till_BRONKOZURARBEIT_mehr_03_04"); //Maybe... 50?
 			Info_ClearChoices	(DIA_Till_BRONKOZURARBEIT);
 			Info_AddChoice	(DIA_Till_BRONKOZURARBEIT, "All right. I'll see what I can do.", DIA_Till_BRONKOZURARBEIT_mehr );
 			Info_AddChoice	(DIA_Till_BRONKOZURARBEIT, "All right. I'll see what I can do.", DIA_Till_BRONKOZURARBEIT_ok );
@@ -479,7 +479,7 @@ func void DIA_Till_PERMKAP1_Info ()
 				{
 					if (Till_HatSeinGeldBehalten == TRUE)
 						{
-							AI_Output			(other, self, "DIA_Till_PERMKAP1_15_06"); //You miserable little ...
+							AI_Output			(other, self, "DIA_Till_PERMKAP1_15_06"); //You miserable little...
 							AI_Output			(self, other, "DIA_Till_PERMKAP1_03_07"); //Just go away.
 							AI_StopProcessInfos (self);
 						}			

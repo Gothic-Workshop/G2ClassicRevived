@@ -2,14 +2,14 @@
 PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 {
 	//----- Monster ----
-	name							=	"Shadow Warrior";
+	name							=	"Shadow Knight";
 	guild							=	GIL_SKELETON;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
 	level							=	40;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	105; //+ 105 Waffe
-	attribute	[ATR_DEXTERITY]		=	100;
+	attribute	[ATR_STRENGTH]		=	120; //+ 105 Waffe
+	attribute	[ATR_DEXTERITY]		=	120;
 	attribute	[ATR_HITPOINTS_MAX]	=	400;
 	attribute	[ATR_HITPOINTS]		=	400;
 	attribute	[ATR_MANA_MAX] 		=	200;
@@ -36,7 +36,7 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;	
 	
-	EquipItem	(self,ItMw_Zweihaender2);
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_04);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;

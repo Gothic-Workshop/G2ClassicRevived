@@ -49,7 +49,7 @@ func void DIA_Ulthar_GREET_Info ()
 	AI_Output (other, self, "DIA_Ulthar_GREET_15_01"); //What exactly is the task of the High Council?
 	AI_Output (self, other, "DIA_Ulthar_GREET_05_02"); //It is our duty to proclaim the will of Innos. Thus, we name the chosen novices who will be put to the Test of Magic.
 	AI_Output (self, other, "DIA_Ulthar_GREET_05_03"); //Even though we lead a retired life, we turn our gaze upon the events of the world, for the church of Innos represents the highest earthly law.
-	AI_Output (other, self, "DIA_Ulthar_GREET_15_04"); //Ah, so you're interested in what's going on in the world ...
+	AI_Output (other, self, "DIA_Ulthar_GREET_15_04"); //Ah, so you're interested in what's going on in the world...
 	AI_Output (other, self, "DIA_Ulthar_GREET_15_05"); //So what do you think of those dragons squatting in the Valley of Mines, with their army growing every day?
 	AI_Output (self, other, "DIA_Ulthar_GREET_05_06"); //I understand that you are angry, but we must first weigh your words before we take any steps.
 	AI_Output (self, other, "DIA_Ulthar_GREET_05_07"); //If we allow ourselves to be carried away and act rashly now, we will achieve nothing. Therefore, fulfill your tasks - and we shall discuss what is to be done.

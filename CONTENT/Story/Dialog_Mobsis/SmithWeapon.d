@@ -1,6 +1,26 @@
 var int Erzwaffen;
 var int Normalwaffen;
 
+// ****************************************************
+// SMITHWEAPON_S1
+// --------------
+// Funktion wird durch Amboß-Mobsi-Benutzung aufgerufen!
+// benötigtes Item dafür: ItMiSwordrawhot
+// *****************************************************
+
+FUNC VOID SMITHWEAPON_S1 ()
+{
+	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
+		
+	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
+	{	
+		self.aivar[AIV_INVINCIBLE]=TRUE;
+		PLAYER_MOBSI_PRODUCTION	=	MOBSI_SMITHWEAPON;
+		Ai_ProcessInfos (her);
+	};
+}; 
+
+
 
 //*******************************************************
 //	SmithWeapon Dialog abbrechen
@@ -136,16 +156,21 @@ FUNC VOID PC_OreBACK_Info ()
 {
 	Erzwaffen = FALSE;
 };
-//*******************************************************
-INSTANCE PC_ItMw_1H_Common (C_INFO)
+
+//****************************************************************************
+//****************************************************************************
+//****************************************************************************
+
+INSTANCE PC_ITMW_1H_SWORD_01 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_ItMw_1H_Common_Condition;
-	information		= PC_ItMw_1H_Common_Info;
+	condition		= PC_ITMW_1H_SWORD_01_Condition;
+	information		= PC_ITMW_1H_SWORD_01_Info;
 	permanent		= TRUE;
+	description		= "Crude Sword";
 };
 
-FUNC INT PC_ItMw_1H_Common_Condition()
+FUNC INT PC_ITMW_1H_SWORD_01_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
 	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE))
@@ -155,123 +180,307 @@ FUNC INT PC_ItMw_1H_Common_Condition()
 	};
 };
 
-FUNC VOID PC_ItMw_1H_Common_Info ()
+FUNC VOID PC_ITMW_1H_SWORD_01_Info ()
 {
-	CreateInvItems 	    (hero, ItMw_1H_Common_01,  1); 
+	CreateInvItems 	    (hero, ITMW_REVIVED_1H_SWORD_01,  1); 
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
-//*******************************************************
-INSTANCE PC_WEAPON_1H_Harad_01 (C_INFO)
+
+//****************************************************************************
+//****************************************************************************
+//****************************************************************************
+
+INSTANCE PC_WEAPON_1H_REVIVED_01 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_WEAPON_1H_Harad_01_Condition;
-	information		= PC_WEAPON_1H_Harad_01_Info;
+	condition		= PC_WEAPON_1H_REVIVED_01_Condition;
+	information		= PC_WEAPON_1H_REVIVED_01_Info;
 	permanent		= TRUE;
+	description		= "Short Sword (One-Handed)";
 };
 
-FUNC INT PC_WEAPON_1H_Harad_01_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_01_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_01] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE))
 	&& (Normalwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_WEAPON_1H_Harad_01_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_01_Info ()
 {
-	CreateInvItems 	    (hero,ItMw_Schwert1 ,  1); 
+	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_01 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
 //*******************************************************
-INSTANCE PC_WEAPON_1H_Harad_02 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_02 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_WEAPON_1H_Harad_02_Condition;
-	information		= PC_WEAPON_1H_Harad_02_Info;
+	condition		= PC_WEAPON_1H_REVIVED_02_Condition;
+	information		= PC_WEAPON_1H_REVIVED_02_Info;
 	permanent		= TRUE;
+	description		= "Long Sword (One-Handed)";
 };
 
-FUNC INT PC_WEAPON_1H_Harad_02_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_02_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_02] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE))
 	&& (Normalwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_WEAPON_1H_Harad_02_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_02_Info ()
 {
-	CreateInvItems 	    (hero,ItMw_Schwert4 ,  1); 
+	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_02 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
 //*******************************************************
-INSTANCE PC_WEAPON_1H_Harad_03 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_03 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_WEAPON_1H_Harad_03_Condition;
-	information		= PC_WEAPON_1H_Harad_03_Info;
+	condition		= PC_WEAPON_1H_REVIVED_03_Condition;
+	information		= PC_WEAPON_1H_REVIVED_03_Info;
 	permanent		= TRUE;
+	description		= "Broad Sword (One-Handed)";
 };
 
-FUNC INT PC_WEAPON_1H_Harad_03_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_03_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_03] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE))
 	&& (Normalwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_WEAPON_1H_Harad_03_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_03_Info ()
 {
-	CreateInvItems 	    (hero,ItMw_Rubinklinge ,  1); 
+	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_03 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
 //*******************************************************
-INSTANCE PC_WEAPON_1H_Harad_04 (C_INFO)
+INSTANCE PC_WEAPON_1H_REVIVED_04 (C_INFO)
 {
 	npc				= PC_Hero;
-	condition		= PC_WEAPON_1H_Harad_04_Condition;
-	information		= PC_WEAPON_1H_Harad_04_Info;
+	condition		= PC_WEAPON_1H_REVIVED_04_Condition;
+	information		= PC_WEAPON_1H_REVIVED_04_Info;
 	permanent		= TRUE;
+	description		= "Sword (One-Handed)";
 };
 
-FUNC INT PC_WEAPON_1H_Harad_04_Condition()
+FUNC INT PC_WEAPON_1H_REVIVED_04_Condition()
 {	
 	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == TRUE))
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE))
 	&& (Normalwaffen == TRUE)
 	{	
 		return TRUE;
 	};
 };
 
-FUNC VOID PC_WEAPON_1H_Harad_04_Info ()
+FUNC VOID PC_WEAPON_1H_REVIVED_04_Info ()
 {
-	CreateInvItems 	    (hero,ItMw_ElBastardo ,  1); 
+	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_04 ,  1); 
 	Print (PRINT_SmithSuccess);
 	
 	B_ENDPRODUCTIONDIALOG ();
 	Normalwaffen = FALSE;
 };
 //*******************************************************
+INSTANCE PC_WEAPON_1H_REVIVED_05 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_1H_REVIVED_05_Condition;
+	information		= PC_WEAPON_1H_REVIVED_05_Info;
+	permanent		= TRUE;
+	description		= "Bastard Sword (One-Handed)";
+};
+
+FUNC INT PC_WEAPON_1H_REVIVED_05_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_1H_REVIVED_05_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_1H_SWORD_SMITH_05 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+
+
+//****************************************************************************
+//****************************************************************************
+//****************************************************************************
+
+INSTANCE PC_WEAPON_2H_REVIVED_01 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_01_Condition;
+	information		= PC_WEAPON_2H_REVIVED_01_Info;
+	permanent		= TRUE;
+	description		= "Light Sword (Two-Handed)";
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_01_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_01_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_01 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+//*******************************************************
+INSTANCE PC_WEAPON_2H_REVIVED_02 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_02_Condition;
+	information		= PC_WEAPON_2H_REVIVED_02_Info;
+	permanent		= TRUE;
+	description		= "Heavy Sword (Two-Handed)";
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_02_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_02_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_02 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+//*******************************************************
+INSTANCE PC_WEAPON_2H_REVIVED_03 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_03_Condition;
+	information		= PC_WEAPON_2H_REVIVED_03_Info;
+	permanent		= TRUE;
+	description		= "Broad Sword (Two-Handed)";
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_03_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_03_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_03 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+//*******************************************************
+INSTANCE PC_WEAPON_2H_REVIVED_04 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_04_Condition;
+	information		= PC_WEAPON_2H_REVIVED_04_Info;
+	permanent		= TRUE;
+	description		= "Sword (Two-Handed)";
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_04_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_04_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_04 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+//*******************************************************
+INSTANCE PC_WEAPON_2H_REVIVED_05 (C_INFO)
+{
+	npc				= PC_Hero;
+	condition		= PC_WEAPON_2H_REVIVED_05_Condition;
+	information		= PC_WEAPON_2H_REVIVED_05_Info;
+	permanent		= TRUE;
+	description		= "Bastard Sword (Two-Handed)";
+};
+
+FUNC INT PC_WEAPON_2H_REVIVED_05_Condition()
+{	
+	if((PLAYER_MOBSI_PRODUCTION	==	MOBSI_SMITHWEAPON) 
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == TRUE))
+	&& (Normalwaffen == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_WEAPON_2H_REVIVED_05_Info ()
+{
+	CreateInvItems 	    (hero,ITMW_REVIVED_2H_SWORD_SMITH_05 ,  1); 
+	Print (PRINT_SmithSuccess);
+	
+	B_ENDPRODUCTIONDIALOG ();
+	Normalwaffen = FALSE;
+};
+
+//****************************************************************************
+//****************************************************************************
+//****************************************************************************
 
 INSTANCE PC_ItMw_1H_Special_01 (C_INFO)
 {
@@ -570,39 +779,3 @@ FUNC VOID PC_ItMw_2H_Special_04_Info ()
 	B_ENDPRODUCTIONDIALOG ();
 	Erzwaffen = FALSE;
 };
-//*******************************************************
-
-// ****************************************************
-// SMITHWEAPON_S1
-// --------------
-// Funktion wird durch Amboß-Mobsi-Benutzung aufgerufen!
-// benötigtes Item dafür: ItMiSwordrawhot
-// *****************************************************
-
-FUNC VOID SMITHWEAPON_S1 ()
-{
-	var C_NPC her; 	her = Hlp_GetNpc(PC_Hero); 
-		
-	if  (Hlp_GetInstanceID(self)==Hlp_GetInstanceID(her))
-	{	
-		self.aivar[AIV_INVINCIBLE]=TRUE;
-		PLAYER_MOBSI_PRODUCTION	=	MOBSI_SMITHWEAPON;
-		Ai_ProcessInfos (her);
-	};
-
-	PC_ItMw_1H_Common.description			= NAME_ItMw_1H_Common_01;                                            
-	PC_ItMw_1H_Special_01.description		= ConcatStrings (NAME_ItMw_1H_Special_01, PRINT_Smith_1H_Special_01);
-	PC_ItMw_2H_Special_01.description		= ConcatStrings (NAME_ItMw_2H_Special_01, PRINT_Smith_2H_Special_01);
-	PC_ItMw_1H_Special_02.description		= ConcatStrings (NAME_ItMw_1H_Special_02, PRINT_Smith_1H_Special_02);
-	PC_ItMw_2H_Special_02.description		= ConcatStrings (NAME_ItMw_2H_Special_02, PRINT_Smith_2H_Special_02);
-	PC_ItMw_1H_Special_03.description		= ConcatStrings (NAME_ItMw_1H_Special_03, PRINT_Smith_1H_Special_03);
-	PC_ItMw_2H_Special_03.description		= ConcatStrings (NAME_ItMw_2H_Special_03, PRINT_Smith_2H_Special_03);
-	PC_ItMw_1H_Special_04.description		= ConcatStrings (NAME_ItMw_1H_Special_04, PRINT_Smith_1H_Special_04);
-	PC_ItMw_2H_Special_04.description		= ConcatStrings (NAME_ItMw_2H_Special_04, PRINT_Smith_2H_Special_04);
-	
-	PC_WEAPON_1H_Harad_01.description		= NAME_Addon_Harad_01;
-	PC_WEAPON_1H_Harad_02.description		= NAME_Addon_Harad_02;
-	PC_WEAPON_1H_Harad_03.description		= NAME_Addon_Harad_03;
-	PC_WEAPON_1H_Harad_04.description		= NAME_Addon_Harad_04;
-}; 
-

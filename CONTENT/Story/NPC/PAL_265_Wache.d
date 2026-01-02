@@ -1,11 +1,11 @@
 
-instance PAL_265_Ritter (Npc_Default)
+instance PAL_265_Wache (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_RITTER; 
+	name 		= NAME_Wache; 
 	guild 		= GIL_PAL;
 	id 			= 265;
-	voice 		= 4;
+	voice 		= 5;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_OCAMBIENT;
 	
@@ -41,6 +41,12 @@ instance PAL_265_Ritter (Npc_Default)
 FUNC VOID Rtn_Start_265 ()
 {	
 	TA_Stand_Guarding		(08,00,22,00,"OCC_LEFT_TOWER_GANGWAY_GUARD");
-    TA_Stand_Guarding		(22,00,08,00,"OCC_RIGHT_TOWER_GANGWAY_GUARD");
+    TA_Stand_Guarding		(22,00,08,00,"OCC_LEFT_TOWER_GANGWAY_GUARD");
 };
 
+FUNC VOID Rtn_KAP5_265 ()
+{	
+	TA_Stand_Guarding			(08,00,18,00,"OCC_TOWER_PLATFORM_GUARD_FRONT");
+    TA_Stand_Guarding			(18,00,23,00,"OCC_TOWER_PLATFORM_GUARD_LEFT");
+    TA_Stand_Guarding			(23,00,08,00,"OCC_TOWER_PLATFORM_GUARD_RIGHT");
+};

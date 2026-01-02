@@ -73,7 +73,7 @@ func void DIA_BDT_1013_BANDIT_WHERE_Info ()
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
 	
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I've come from the mountains.",DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN);	
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I've come from Xardas ...",DIA_BDT_1013_BANDIT_WHERE_XARDAS);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"I've come from Xardas...",DIA_BDT_1013_BANDIT_WHERE_XARDAS);
 };
 //-------------------------------------------------------------------------------------------
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN()
@@ -86,15 +86,15 @@ FUNC VOID DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN()
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_MOUNTAIN_01_04"); //There's someone here you absolutely have to talk to. Follow me!
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later ...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Who's looking for me?",DIA_BDT_1013_BANDIT_WHERE_WHO);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 FUNC VOID DIA_BDT_1013_BANDIT_WHERE_XARDAS()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_15_00"); //I've come from Xardas ...
-	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_01_01"); //Is that the old sorcerer? He's called Xardas ... Brago will be interested ...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_15_00"); //I've come from Xardas...
+	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_XARDAS_01_01"); //Is that the old sorcerer? He's called Xardas... Brago will be interested...
 	
 	AI_StopProcessInfos(self);
 	B_Attack (self, other, AR_SuddenEnemyInferno, 1);
@@ -118,7 +118,7 @@ FUNC VOID DIA_BDT_1013_BANDIT_WHERE_WHO()
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_WHO_01_03"); //So, you coming or not?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later ...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Who should I talk to?",DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
@@ -130,7 +130,7 @@ func void DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER()
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_TALKPARTNER_01_02"); //So, what about it - are we going?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later ...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"How do I know this isn't a trap?",DIA_BDT_1013_BANDIT_WHERE_NOTRAP);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
@@ -142,14 +142,14 @@ func void DIA_BDT_1013_BANDIT_WHERE_NOTRAP()
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_NOTRAP_01_02"); //You come with me NOW or you forget about it, see?
 	
 	Info_ClearChoices 	(DIA_BDT_1013_BANDIT_WHERE);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later ...",DIA_BDT_1013_BANDIT_WHERE_LATER);
-	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Someone else has already tried to trick me ...",DIA_BDT_1013_BANDIT_WHERE_DAMALS);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Maybe later...",DIA_BDT_1013_BANDIT_WHERE_LATER);
+	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Someone else has already tried to trick me...",DIA_BDT_1013_BANDIT_WHERE_DAMALS);
 	Info_AddChoice 		(DIA_BDT_1013_BANDIT_WHERE,"Fine! You go first!",DIA_BDT_1013_BANDIT_WHERE_YES);
 };
 
 func void DIA_BDT_1013_BANDIT_WHERE_DAMALS()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_00"); //Easy, my friend! Someone has already tried to trick me ...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_00"); //Easy, my friend! Someone has already tried to trick me...
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_01_01"); //Oh?
 	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_02"); //This guy suggested that we should get an amulet together, and share the profit.
 	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_DAMALS_15_03"); //Once we had reached our goal, he and his friends attacked me.
@@ -164,13 +164,13 @@ func void DIA_BDT_1013_BANDIT_WHERE_PRISONER()
 {
 	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_00"); //I was a convict in the mining colony.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_01"); //(amazed) You come from behind the Barrier? Man, then we were there together.
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_02"); //I don't know you ...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_02"); //I don't know you...
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_03"); //I was a digger in the Old Camp. I didn't have much to do with the whole thing.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_04"); //(conspiratorially) But what is more important now - you are in big trouble!
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_05"); //Someone has put a pretty price on your head. And he's handed out a few posters - with your mug on them!
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_06"); //If I were you, then I would be very - very - careful. There are people with us who would kill their own mother for gold.
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_07"); //But I think we boys from the penal colony ought to stick together!
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_08"); //Then I guess I had better thank you now ...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_15_08"); //Then I guess I had better thank you now...
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_PRISONER_01_09"); //It's nothing. Just make sure you stay alive.
 	
 	Bdt13_Friend = TRUE;
@@ -193,7 +193,7 @@ func void DIA_BDT_1013_BANDIT_WHERE_NOTIMPORTANT()
 
 func VOID DIA_BDT_1013_BANDIT_WHERE_LATER()
 {
-	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_LATER_15_00"); //Maybe later ...
+	AI_Output (other, self, "DIA_BDT_1013_BANDIT_WHERE_LATER_15_00"); //Maybe later...
 	AI_Output (self, other, "DIA_BDT_1013_BANDIT_WHERE_LATER_01_01"); //There won't be a later for you, pal!
 	
 	AI_StopProcessInfos(self);
@@ -226,13 +226,13 @@ func void DIA_1013_BANDIT_AMBUSH_Info ()
 	if (Npc_IsDead(Ambusher_1014))
 	&& (Npc_IsDead(Ambusher_1015))
 	{
-		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_00"); //It was really stupid of you to follow me ...
+		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_00"); //It was really stupid of you to follow me...
 		B_Attack 			(self, other, AR_SuddenEnemyInferno, 1);
 		AI_StopProcessInfos (self);
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_01"); //Hey people, look who I have here ...
+		AI_Output			(self, other, "DIA_1013_BANDIT_AMBUSH_01_01"); //Hey people, look who I have here...
 		AI_StopProcessInfos (self);
 	};
 };
@@ -261,7 +261,7 @@ func void DIA_1013_BANDIT_NAME_Info ()
 	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_00"); //Who's the fellow who pays the bounty?
 	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_01"); //That I don't know, there's only one of us who knows him.
 	AI_Output (other, self, "DIA_1013_BANDIT_NAME_15_02"); //And who would that be?
-	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_03"); //Hey, man - I really can't tell you that. You know how it goes ...
+	AI_Output (self, other, "DIA_1013_BANDIT_NAME_01_03"); //Hey, man - I really can't tell you that. You know how it goes...
 	
 	Log_CreateTopic (Topic_Bandits,LOG_MISSION);
 	Log_SetTopicStatus (Topic_Bandits,LOG_RUNNING);
@@ -293,7 +293,7 @@ func int DIA_1013_BANDIT_DEXTER_Condition ()
 func void DIA_1013_BANDIT_DEXTER_Info ()
 {
 	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_00"); //10 gold pieces for the name of the guy who raised the bounty.
-	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_01"); //Oh, man, I really can't do that ...
+	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_01"); //Oh, man, I really can't do that...
 	AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_02"); //Spit it out already!
 	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_03"); //(takes a deep breath) Oh man! All right. His name is Dexter. Near the big farm there's a steep rock.
 	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_04"); //There's a watch tower up there, and a few mines. He has his hideout somewhere nearby.
@@ -307,7 +307,7 @@ func void DIA_1013_BANDIT_DEXTER_Info ()
 	else
 	{
 		AI_Output (other, self, "DIA_1013_BANDIT_DEXTER_15_06"); //Er - I just realized I haven't got ten gold pieces left.
-		AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_07"); //What?! I ... Oh - forget it - it's my own fault. I shouldn't have told you the name before I saw the gold ...
+		AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_07"); //What?! I... Oh - forget it - it's my own fault. I shouldn't have told you the name before I saw the gold...
 	};
 	
 	AI_Output (self, other, "DIA_1013_BANDIT_DEXTER_01_08"); //And just don't tell them who told you.
@@ -351,7 +351,7 @@ instance DIA_1013_BANDIT_FromMaleth		(C_INFO)
 	condition	 = 	DIA_1013_BANDIT_FromMaleth_Condition;
 	information	 = 	DIA_1013_BANDIT_FromMaleth_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"One of the farmers outside of town sent me ...";
+	description	 = 	"One of the farmers outside of town sent me...";
 };
 func int DIA_1013_BANDIT_FromMaleth_Condition ()
 {	
@@ -363,7 +363,7 @@ func int DIA_1013_BANDIT_FromMaleth_Condition ()
 };
 func void DIA_1013_BANDIT_FromMaleth_Info ()
 {
-	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_00"); //One of the farmers outside of town sent me ...
+	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_00"); //One of the farmers outside of town sent me...
 	AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_01"); //What? The farmers know the hideout?
 	AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_02"); //They have noticed the missing sheep.
 	
@@ -377,7 +377,7 @@ func void DIA_1013_BANDIT_FromMaleth_Info ()
 	}
 	else //mindestens einer lebt noch
 	{
-		AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_04"); //He wants to see you all dead ...
+		AI_Output (other, self, "DIA_1013_BANDIT_FromMaleth_15_04"); //He wants to see you all dead...
 		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_05"); //Wait - you're not going do me in, are you - after I helped you?
 		AI_Output (self, other, "DIA_1013_BANDIT_FromMaleth_01_06"); //Go on in and bump off the others if you're that eager to see blood - I'm staying out of it!
 	};

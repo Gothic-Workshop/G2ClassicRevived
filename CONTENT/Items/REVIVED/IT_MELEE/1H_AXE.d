@@ -162,7 +162,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_CORD (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_1H_Axe_Cord;
 
-	//owner 				= 	SLD_709_CORD;
+	owner 				= 	SLD_805_Cord; //SLD_709_CORD;
 	visual 				=	"REV_1H_AXE_02.3DS";
 
 	description			= 	name;
@@ -190,7 +190,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_LARES (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_1H_Axe_Lares;
 
-	//owner 				= 	ORG_801_LARES;
+	owner 				= 	SLD_449_Lares; //ORG_801_LARES;
 	visual 				=	"REV_1H_AXE_03.3DS";
 
 	description			= 	name;
@@ -218,7 +218,7 @@ INSTANCE ITMW_REVIVED_1H_AXE_BIFF (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_1H_Axe_Biff;
 
-	//owner 				=   ORG_841_SILAS;
+	owner 				=   DJG_713_Biff; //ORG_841_SILAS;
 	visual 				=	"REV_1H_AXE_01.3DS";
 
 	description			= 	name;

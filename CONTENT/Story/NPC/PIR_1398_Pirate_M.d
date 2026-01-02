@@ -16,7 +16,7 @@ instance PIR_1398_Pirate_M (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ItMw_Addon_PIR2hAxe);
-	CreateInvItems (self, ItRi_Addon_MorgansRing_Mission, 1);
+	CreateInvItems (self, ITAM_REVIVED_MELEE_01, 1);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart21, BodyTex_N, ITAR_PIR_M_Addon);	  

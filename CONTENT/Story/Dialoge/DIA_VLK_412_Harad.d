@@ -66,7 +66,7 @@ func void DIA_Harad_Arbeit_Info ()
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_01"); //Hm - I could use a new apprentice.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_02"); //Brian will have finished his apprenticeship soon, and then he'll leave the city.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_03"); //Are you good for anything?
-	AI_Output (other, self, "DIA_Harad_Arbeit_15_04"); //If you mean, do I know blacksmith's work ...
+	AI_Output (other, self, "DIA_Harad_Arbeit_15_04"); //If you mean, do I know blacksmith's work...
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_05"); //No. That's not what I meant.
 	AI_Output (self, other, "DIA_Harad_Arbeit_12_06"); //Sooner or later, the orcs are going to lay siege to the city, and then the only men who will count will be those who are in a position to defend our city.
 	if (other.guild == GIL_NONE)
@@ -124,7 +124,7 @@ instance DIA_Harad_OrcRunning (C_INFO)
 	condition	= DIA_Harad_OrcRunning_Condition;
 	information	= DIA_Harad_OrcRunning_Info;
 	permanent   = FALSE;
-	description = "Let's talk again about that orc thing ...";
+	description = "Let's talk again about that orc thing...";
 };
 func int DIA_Harad_OrcRunning_Condition ()
 {
@@ -136,19 +136,19 @@ func int DIA_Harad_OrcRunning_Condition ()
 };
 func void DIA_Harad_OrcRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Harad_OrcRunning_15_00"); //Let's talk again about that orc thing ...
+	AI_Output (other, self, "DIA_Harad_OrcRunning_15_00"); //Let's talk again about that orc thing...
 	AI_Output (self, other, "DIA_Harad_OrcRunning_12_01"); //(brusque) What?
 	
 	Info_ClearChoices (DIA_Harad_OrcRunning);	
 	Info_AddChoice (DIA_Harad_OrcRunning, "Your orc is as good as dead!", DIA_Harad_OrcRunning_Done);
-	Info_AddChoice (DIA_Harad_OrcRunning, "An orc is a damn tough opponent ...", DIA_Harad_OrcRunning_TooHard);
+	Info_AddChoice (DIA_Harad_OrcRunning, "An orc is a damn tough opponent...", DIA_Harad_OrcRunning_TooHard);
 
 	//AI_Output (self, other, "DIA_Harad_OrcRunning_12_02"); //Ah, ich verstehe schon. Du hast Wichtigeres zu tun. Schon in Ordnung, die Sache hat sich erledigt.
 };
 
 func void DIA_Harad_OrcRunning_TooHard()
 {
-	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_00"); //But an orc is a damn tough opponent ...
+	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_00"); //But an orc is a damn tough opponent...
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_01"); //Hm - looking at you, you might be right. You don't have much meat on your bones. But that can change.
 	AI_Output (self, other, "DIA_Harad_OrcRunning_TooHard_12_02"); //Nevertheless, you have to prove to me that you have the courage to fight.
 	AI_Output (other, self, "DIA_Harad_OrcRunning_TooHard_15_03"); //So couldn't it be something slightly smaller?
@@ -212,7 +212,7 @@ func int DIA_Harad_OrcSuccess_Condition ()
 func void DIA_Harad_OrcSuccess_Info ()
 {
 	AI_Output (other, self, "DIA_Harad_OrcSuccess_15_00"); //I've got the orc weapon you wanted.
-	AI_Output (self, other, "DIA_Harad_OrcSuccess_12_01"); //Show me ...
+	AI_Output (self, other, "DIA_Harad_OrcSuccess_12_01"); //Show me...
 	
 		if (Npc_HasItems(other, ITMW_REVIVED_ORC_AXE_01) > 0)
 		{
@@ -328,7 +328,7 @@ func void DIA_Harad_LEHRLING_Info ()
 				
 		stimmen = stimmen + 1;
 		
-		AI_Output (self, other,"DIA_Harad_LEHRLING_12_05"); //As for the other masters ...
+		AI_Output (self, other,"DIA_Harad_LEHRLING_12_05"); //As for the other masters...
 		
 		// ------ Thorben ------
 		if (Thorben.aivar[AIV_TalkedToPlayer] == TRUE)
@@ -611,7 +611,7 @@ FUNC VOID DIA_Harad_AlsLehrling_Info()
 	
 	else
 	{
-		AI_Output (self, other,"DIA_Harad_AlsLehrling_12_09"); //There you are again ...
+		AI_Output (self, other,"DIA_Harad_AlsLehrling_12_09"); //There you are again...
 		Harad_Lehrling_Day = Wld_GetDay();
 	};
 };
@@ -669,7 +669,7 @@ func void DIA_Harad_Aufgaben_Info ()
 	AI_Output (other, self, "DIA_Harad_Aufgaben_15_02"); //Forge, forge, and forge?
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_03"); //You aren't as dumb as you look. I pay per blade. If you don't work, there's no money. It's that simple.
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_05"); //Furthermore, I'll teach you everything you need to know to make a plain sword.
-	AI_Output (self, other, "DIA_Harad_Aufgaben_12_06"); //Making magic blades is only something for experienced smiths - and you're a long way from that ...
+	AI_Output (self, other, "DIA_Harad_Aufgaben_12_06"); //Making magic blades is only something for experienced smiths - and you're a long way from that...
 	AI_Output (self, other, "DIA_Harad_Aufgaben_12_07"); //If you need a place to sleep, you can bunk down somewhere in my house. Everything clear so far?
 };
 
@@ -698,26 +698,44 @@ func void DIA_Harad_SellBlades_Info ()
 	
 	var C_ITEM equipWeap; equipWeap = Npc_GetEquippedMeleeWeapon(other);
 	
-	var int anzahl_common; anzahl_common = Npc_HasItems (other, ItMw_1H_Common_01);
-	if (Hlp_IsItem(equipWeap, ItMw_1H_Common_01) == TRUE) { anzahl_common = anzahl_common - 1; };
-	var int anzahl_schwert1; anzahl_schwert1 = Npc_HasItems (other, ItMw_Schwert1);
-	if (Hlp_IsItem(equipWeap, ItMw_Schwert1) == TRUE) { anzahl_schwert1 = anzahl_schwert1 - 1; };
-	var int anzahl_schwert4; anzahl_schwert4 = Npc_HasItems (other, ItMw_Schwert4);
-	if (Hlp_IsItem(equipWeap, ItMw_Schwert4) == TRUE) { anzahl_schwert4 = anzahl_schwert4 - 1; };
-	var int anzahl_rubinklinge; anzahl_rubinklinge = Npc_HasItems (other, ItMw_Rubinklinge);
-	if (Hlp_IsItem(equipWeap, ItMw_Rubinklinge) == TRUE) { anzahl_rubinklinge = anzahl_rubinklinge - 1; };
-	var int anzahl_elbastardo; anzahl_elbastardo = Npc_HasItems (other, ItMw_ElBastardo);
-	if (Hlp_IsItem(equipWeap, ItMw_ElBastardo) == TRUE) { anzahl_elbastardo = anzahl_elbastardo - 1; };
+	var int anzahl_common; anzahl_common = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_01);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_01) == TRUE) { anzahl_common = anzahl_common - 1; };
+	var int anzahl_1hsword1; anzahl_1hsword1 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_01);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_01) == TRUE) { anzahl_1hsword1 = anzahl_1hsword1 - 1; };
+	var int anzahl_1hsword2; anzahl_1hsword2 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_02);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_02) == TRUE) { anzahl_1hsword2 = anzahl_1hsword2 - 1; };
+	var int anzahl_1hsword3; anzahl_1hsword3 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_03);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_03) == TRUE) { anzahl_1hsword3 = anzahl_1hsword3 - 1; };
+	var int anzahl_1hsword4; anzahl_1hsword4 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_04);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_04) == TRUE) { anzahl_1hsword4 = anzahl_1hsword4 - 1; };
+	var int anzahl_1hsword5; anzahl_1hsword5 = Npc_HasItems (other, ITMW_REVIVED_1H_SWORD_SMITH_05);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_05) == TRUE) { anzahl_1hsword5 = anzahl_1hsword5 - 1; };
+	var int anzahl_2hsword1; anzahl_2hsword1 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_01);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_01) == TRUE) { anzahl_2hsword1 = anzahl_2hsword1 - 1; };
+	var int anzahl_2hsword2; anzahl_2hsword2 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_02);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_02) == TRUE) { anzahl_2hsword2 = anzahl_2hsword2 - 1; };
+	var int anzahl_2hsword3; anzahl_2hsword3 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_03);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_03) == TRUE) { anzahl_2hsword3 = anzahl_2hsword3 - 1; };
+	var int anzahl_2hsword4; anzahl_2hsword4 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_04);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_04) == TRUE) { anzahl_2hsword4 = anzahl_2hsword4 - 1; };
+	var int anzahl_2hsword5; anzahl_2hsword5 = Npc_HasItems (other, ITMW_REVIVED_2H_SWORD_SMITH_05);
+	if (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_05) == TRUE) { anzahl_2hsword5 = anzahl_2hsword5 - 1; };
 	
-	var int gesamt; gesamt = (anzahl_common + anzahl_schwert1 + anzahl_schwert4 + anzahl_rubinklinge + anzahl_elbastardo);
+	var int gesamt; gesamt = (anzahl_common + anzahl_1hsword1 + anzahl_1hsword2 + anzahl_1hsword3 + anzahl_1hsword4 + anzahl_1hsword5 + anzahl_2hsword1 + anzahl_2hsword2 + anzahl_2hsword3 + anzahl_2hsword4 + anzahl_2hsword5);
 	
     if (gesamt == 0)
 	{
-		if (Hlp_IsItem(equipWeap, ItMw_1H_Common_01) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_Schwert1) == TRUE) 
-		|| (Hlp_IsItem(equipWeap, ItMw_Schwert4) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_Rubinklinge) == TRUE)
-		|| (Hlp_IsItem(equipWeap, ItMw_ElBastardo) == TRUE)  
+		if (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_01) == TRUE)
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_01) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_02) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_03) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_04) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_1H_SWORD_SMITH_05) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_01) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_02) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_03) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_04) == TRUE) 
+		|| (Hlp_IsItem(equipWeap, ITMW_REVIVED_2H_SWORD_SMITH_05) == TRUE) 
 		{
 			AI_Output (self, other, "DIA_Harad_SellBlades_12_01"); //All you have is the one on your belt. You'd better keep it.
 		}
@@ -730,11 +748,17 @@ func void DIA_Harad_SellBlades_Info ()
 	{
 		AI_Output (self, other, "DIA_Harad_SellBlades_12_02"); //Good - give it here.
 		
-		Npc_RemoveInvItems (other, ItMw_1H_Common_01, anzahl_common);
-		Npc_RemoveInvItems (other, ItMw_Schwert1, anzahl_Schwert1);
-		Npc_RemoveInvItems (other, ItMw_Schwert4, anzahl_Schwert4);
-		Npc_RemoveInvItems (other, ItMw_Rubinklinge, anzahl_Rubinklinge);
-		Npc_RemoveInvItems (other, ItMw_ElBastardo, anzahl_ElBastardo);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_01, anzahl_common);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_01, anzahl_1hsword1);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_02, anzahl_1hsword2);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_03, anzahl_1hsword3);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_04, anzahl_1hsword4);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_1H_SWORD_SMITH_05, anzahl_1hsword5);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_01, anzahl_2hsword1);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_02, anzahl_2hsword2);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_03, anzahl_2hsword3);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_04, anzahl_2hsword4);
+		Npc_RemoveInvItems (other, ITMW_REVIVED_2H_SWORD_SMITH_05, anzahl_2hsword5);
 		
 				var string concatText;
 				concatText = ConcatStrings(IntToString(gesamt), PRINT_ItemsGegeben);		// "x Gegenstände gegeben"
@@ -742,11 +766,17 @@ func void DIA_Harad_SellBlades_Info ()
 				
 		AI_Output (self, other, "DIA_Harad_SellBlades_12_03"); //Fine, and here's your pay.
 		var int lohn;
-		lohn 	= (anzahl_common * Value_Common1)
-				+ (anzahl_schwert1 * Value_Schwert1)
-				+ (anzahl_schwert4 * Value_Schwert4)
-				+ (anzahl_rubinklinge * Value_Rubinklinge)
-				+ (anzahl_elbastardo * Value_ElBastardo);
+		lohn 	= (anzahl_common * REV_Value_1H_Sword_01)
+				+ (anzahl_1hsword1 * REV_Value_1H_Sword_Smith_01)
+				+ (anzahl_1hsword2 * REV_Value_1H_Sword_Smith_02)
+				+ (anzahl_1hsword3 * REV_Value_1H_Sword_Smith_03)
+				+ (anzahl_1hsword4 * REV_Value_1H_Sword_Smith_04)
+				+ (anzahl_1hsword5 * REV_Value_1H_Sword_Smith_05)
+				+ (anzahl_2hsword1 * REV_Value_2H_Sword_Smith_01)
+				+ (anzahl_2hsword2 * REV_Value_2H_Sword_Smith_02)
+				+ (anzahl_2hsword3 * REV_Value_2H_Sword_Smith_03)
+				+ (anzahl_2hsword4 * REV_Value_2H_Sword_Smith_04)
+				+ (anzahl_2hsword5 * REV_Value_2H_Sword_Smith_05);
 				
 		lohn 	= (lohn / 3);
 		
@@ -767,29 +797,59 @@ func void B_HaradSmithChoices()
 {
 	Info_ClearChoices (DIA_Harad_TeachSmith);
 	Info_AddChoice	(DIA_Harad_TeachSmith, DIALOG_BACK, DIA_Harad_TeachSmith_BACK);
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_03] == TRUE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_Addon_Harad_04, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Harad_04))		,DIA_Harad_TeachSmith_Harad04);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Bastard Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05_2H);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_03] == FALSE)
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_02] == TRUE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_Addon_Harad_03, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Harad_03))		,DIA_Harad_TeachSmith_Harad03);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04_2H);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_02] == FALSE)
-	&& (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_01] == TRUE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_Addon_Harad_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Harad_02))		,DIA_Harad_TeachSmith_Harad02);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Broad Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03_2H);
 	};
-	if (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_01] == FALSE)
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Heavy Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02_2H);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
 	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{
-		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString(NAME_Addon_Harad_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Harad_01))		,DIA_Harad_TeachSmith_Harad01);
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Light Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01_2H);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Bastard Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,DIA_Harad_TeachSmith_Harad05);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,DIA_Harad_TeachSmith_Harad04);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Broad Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,DIA_Harad_TeachSmith_Harad03);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Long Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,DIA_Harad_TeachSmith_Harad02);
+	};
+	if (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+	&& (PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
+	{
+		Info_AddChoice		(DIA_Harad_TeachSmith, B_BuildLearnString("Short Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,DIA_Harad_TeachSmith_Harad01);
 	};
 	if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
 	{
-		Info_AddChoice	(DIA_Harad_TeachSmith, B_BuildLearnString("Learn to forge"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,DIA_Harad_TeachSmith_Common);
+		Info_AddChoice	(DIA_Harad_TeachSmith, B_BuildLearnString("Learn to forge swords"	   , B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_Common))			,DIA_Harad_TeachSmith_Common);
 	};
 };
 // ------------------------------------------------------------
@@ -808,10 +868,11 @@ func int DIA_Harad_TeachSmith_Condition ()
 	if (Player_IsApprentice == APP_Harad)
 	{
 		if (PLAYER_TALENT_SMITH[WEAPON_Common] == FALSE)
-		|| (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_01] == FALSE)
-		|| (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_02] == FALSE)
-		|| (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_03] == FALSE)
-		|| (PLAYER_TALENT_SMITH[WEAPON_1H_Harad_04] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+		|| (PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
 		{
 			return TRUE;
 		};
@@ -839,7 +900,7 @@ func void DIA_Harad_TeachSmith_Common()
 };
 func void DIA_Harad_TeachSmith_Harad01()
 {
-	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_01)
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_01)
 	{
 		B_Harad_TeachSmith();
 	};
@@ -848,7 +909,7 @@ func void DIA_Harad_TeachSmith_Harad01()
 };
 func void DIA_Harad_TeachSmith_Harad02()
 {
-	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_02)
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_02)
 	{
 		B_Harad_TeachSmith();
 	};
@@ -857,7 +918,7 @@ func void DIA_Harad_TeachSmith_Harad02()
 };
 func void DIA_Harad_TeachSmith_Harad03()
 {
-	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_03)
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_03)
 	{
 		B_Harad_TeachSmith();
 	};
@@ -866,7 +927,61 @@ func void DIA_Harad_TeachSmith_Harad03()
 };
 func void DIA_Harad_TeachSmith_Harad04()
 {
-	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Harad_04)
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_04)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad05()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_05)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad01_2H()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_01)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad02_2H()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_02)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad03_2H()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_03)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad04_2H()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_04)
+	{
+		B_Harad_TeachSmith();
+	};
+	
+	B_HaradSmithChoices();
+};
+func void DIA_Harad_TeachSmith_Harad05_2H()
+{
+	if B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_05)
 	{
 		B_Harad_TeachSmith();
 	};
@@ -1083,11 +1198,11 @@ FUNC VOID DIA_Harad_Erzklingen_2h()
 {
 	AI_Output (other,self ,"DIA_Harad_Erzklingen_2h_15_00"); //I'll take the two-handed sword!
 	
-	if (Npc_HasItems (other,ItMi_Gold) >= Value_Blessed_2H_1)
+	if (Npc_HasItems (other,ItMi_Gold) >= REV_Value_2H_Sword_Paladin_01)
 	{
-		B_GiveInvItems (other,self,ItMi_Gold,Value_Blessed_2H_1);
-		CreateInvItems (self,ItMw_2H_Blessed_01,1);
-		B_GiveInvItems (self ,other,ItMw_2H_Blessed_01,1);
+		B_GiveInvItems (other,self,ItMi_Gold,REV_Value_2H_Sword_Paladin_01);
+		CreateInvItems (self,ITMW_REVIVED_2H_SWORD_PALADIN_01,1);
+		B_GiveInvItems (self ,other,ITMW_REVIVED_2H_SWORD_PALADIN_01,1);
 	
 		B_Harad_HaveFunWithYourSword ();
 	}
@@ -1105,11 +1220,11 @@ FUNC VOID DIA_Harad_Erzklingen_1h()
 {
 	AI_Output (other,self ,"DIA_Harad_Erzklingen_1h_15_00"); //I'll take the one-handed sword!
 	
-	if (Npc_HasItems (other,ItMi_Gold) >= Value_Blessed_1H_1)
+	if (Npc_HasItems (other,ItMi_Gold) >= REV_Value_1H_Sword_Paladin_01)
 	{
-		B_GiveInvItems (other,self,ItMi_Gold,Value_Blessed_1H_1);
-		CreateInvItems (self,ItMw_1H_Blessed_01,1);
-		B_GiveInvItems (self ,other,ItMw_1H_Blessed_01,1);
+		B_GiveInvItems (other,self,ItMi_Gold,REV_Value_1H_Sword_Paladin_01);
+		CreateInvItems (self,ITMW_REVIVED_1H_SWORD_PALADIN_01,1);
+		B_GiveInvItems (self ,other,ITMW_REVIVED_1H_SWORD_PALADIN_01,1);
 		
 		B_Harad_HaveFunWithYourSword ();
 	}

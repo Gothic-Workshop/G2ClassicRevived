@@ -1,0 +1,46 @@
+instance BDT_3005_Drake (Npc_Default)
+{
+	// ------ NSC ------
+	name 		= "Drake"; 
+	guild 		= GIL_BDT;
+	id 			= 3005;
+	voice 		= 4;
+	flags       = 0;								
+	npctype		= NPCTYPE_AMBIENT;
+	
+	//--------Aivars-----------
+	aivar[AIV_EnemyOverride] = TRUE;
+	
+	// ------ Attribute ------
+	B_SetAttributesToChapter (self, 4);																	
+		
+	// ------ Kampf-Taktik ------
+	fight_tactic		= FAI_HUMAN_STRONG;
+	
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_02);
+	EquipItem			(self, ITRW_REVIVED_CROSSBOW_LIGHT_01);
+
+	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
+	CreateInvItems	(self, ITRW_BOLT, 30);
+		
+	// ------ visuals ------																			
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_ImportantGrey, BodyTex_N, ITAR_REVIVED_GRD_M);	
+	Mdl_SetModelFatness	(self, 0);
+	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
+	
+		// ------ NSC-relevante Talente vergeben ------
+	B_GiveNpcTalents (self);
+	
+	// ------ Kampf-Talente ------																
+	B_SetFightSkills (self, 60); 
+
+	daily_routine = Rtn_Start_3005;
+};	 
+
+	FUNC VOID Rtn_Start_3005()
+	{
+		TA_Practice_Sword (00,00,12,00,"FORTRESS_COURTYARD_009");
+		TA_Practice_Sword (12,00,00,00,"FORTRESS_COURTYARD_009");
+	};

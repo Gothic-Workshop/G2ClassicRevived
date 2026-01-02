@@ -79,7 +79,7 @@ INSTANCE DIA_Isgaroth_Wolf   (C_INFO)
 	condition   = DIA_Isgaroth_Wolf_Condition;
 	information = DIA_Isgaroth_Wolf_Info;
 	permanent   = FALSE;
-	description	= "Sergio sent me ...";
+	description	= "Sergio sent me...";
 };
 FUNC INT DIA_Isgaroth_Wolf_Condition()
 {	
@@ -214,7 +214,7 @@ FUNC VOID DIA_Isgaroth_Kloster_Info()
 	
 	if (other.guild == GIL_NONE)
 	{
-		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //And if you want to be accepted as a novice in the monastery, you must bring a sheep and ...
+		AI_Output (self ,other,"DIA_Isgaroth_Kloster_01_02"); //And if you want to be accepted as a novice in the monastery, you must bring a sheep and...
 		B_Say_Gold (self, other,Summe_Kloster);
 		
 		Log_CreateTopic (Topic_Kloster,LOG_MISSION);

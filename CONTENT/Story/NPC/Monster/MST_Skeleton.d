@@ -88,7 +88,7 @@ INSTANCE Skeleton			(Mst_Default_Skeleton)
 {
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };
 
 //**************
@@ -129,8 +129,8 @@ INSTANCE Summoned_Skeleton (Mst_Default_Skeleton)
 	
 	B_SetVisuals_Lesser_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
-	//EquipItem (self, ItRw_Sld_Bow); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
+	EquipItem (self, ITRW_REVIVED_BOW_LONG_01); //FIXME Carsten: Bogen schieﬂt beim Skelett in Zeitlupe...
 };
 
 //**************
@@ -164,7 +164,7 @@ INSTANCE Lesser_Skeleton	(Mst_Default_Skeleton)
 	B_SetVisuals_Lesser_Skeleton();
 	
 	// ------ Waffe ------
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -183,7 +183,7 @@ INSTANCE Crypt_Skeleton_Room_01			(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 	CreateInvItem (self, ItKe_EVT_CRYPT_01);
 };
 
@@ -195,7 +195,7 @@ INSTANCE Crypt_Skeleton_Room_02			(Mst_Default_Skeleton)
 	
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 	CreateInvItem (self, ItKe_EVT_CRYPT_02);
 };
 
@@ -207,7 +207,7 @@ INSTANCE Crypt_Skeleton_Room_03			(Mst_Default_Skeleton)
 	
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 	CreateInvItem (self, ItKe_EVT_CRYPT_03);
 };
 //****************************
@@ -220,7 +220,7 @@ INSTANCE Skeleton_Archol1	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Archol2	(Mst_Default_Skeleton)
@@ -229,7 +229,7 @@ INSTANCE Skeleton_Archol2	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Archol3	(Mst_Default_Skeleton)
@@ -238,7 +238,7 @@ INSTANCE Skeleton_Archol3	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Archol4	(Mst_Default_Skeleton)
@@ -247,7 +247,7 @@ INSTANCE Skeleton_Archol4	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Archol5	(Mst_Default_Skeleton)
@@ -256,7 +256,7 @@ INSTANCE Skeleton_Archol5	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Archol6	(Mst_Default_Skeleton)
@@ -265,7 +265,7 @@ INSTANCE Skeleton_Archol6	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };
 //****************************
 //	Marios-Skeletons auf DI
@@ -277,7 +277,7 @@ INSTANCE Skeleton_Mario1	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Mario2	(Mst_Default_Skeleton)
@@ -286,7 +286,7 @@ INSTANCE Skeleton_Mario2	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Mario3	(Mst_Default_Skeleton)
@@ -295,7 +295,7 @@ INSTANCE Skeleton_Mario3	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_1h_MISC_Sword);
+	EquipItem (self, ITMW_REVIVED_1H_SWORD_OLD_01);
 };
 
 INSTANCE Skeleton_Mario4	(Mst_Default_Skeleton)
@@ -304,5 +304,5 @@ INSTANCE Skeleton_Mario4	(Mst_Default_Skeleton)
 
 	B_SetVisuals_Skeleton();
 
-	EquipItem (self, ItMw_2H_Sword_M_01);
+	EquipItem (self, ITMW_REVIVED_2H_SWORD_OLD_01);
 };

@@ -348,8 +348,8 @@ func int DIA_Parlan_WELCOME_Condition ()
 func void DIA_Parlan_WELCOME_Info ()
 {
 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_00"); //Welcome, new novice, I am Parlan.
-	AI_Output (other, self, "DIA_Parlan_WELCOME_15_01"); //I am ...
-	AI_Output (self, other, "DIA_Parlan_WELCOME_05_02"); //(interrupts) ... a NOVICE. It is not important who you were before. Now you are a servant of Innos. That is all that matters.
+	AI_Output (other, self, "DIA_Parlan_WELCOME_15_01"); //I am...
+	AI_Output (self, other, "DIA_Parlan_WELCOME_05_02"); //(interrupts)... a NOVICE. It is not important who you were before. Now you are a servant of Innos. That is all that matters.
 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_03"); //And with the acceptance into the Brotherhood of Fire, all of your previous transgressions will be forgiven.
 	AI_Output (self, other, "DIA_Parlan_WELCOME_05_04"); //May Innos bless this man, who places his life in his service, and wash away his sins.
 	AI_Output (other, self, "DIA_Parlan_WELCOME_15_05"); //And now?
@@ -579,7 +579,7 @@ func void DIA_Parlan_Stand_Info ()
 	}
 	else if (MIS_GoraxWein == LOG_FAILED)
 	{
-		AI_Output (self, other, "DIA_Parlan_Stand_05_08"); //The less said about the matter with the wine, the better ...
+		AI_Output (self, other, "DIA_Parlan_Stand_05_08"); //The less said about the matter with the wine, the better...
 	};	
 	
 	if (Kloster_Punkte >= 8)
@@ -656,9 +656,9 @@ func int DIA_Parlan_Aufgabe_Condition ()
 func void DIA_Parlan_Aufgabe_Info ()
 {
 	AI_Output (other, self, "DIA_Parlan_Aufgabe_15_00"); //Do you have an assignment for me?
-	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_01"); //Hmm ... Yes, there is indeed something you can do for the community.
+	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_01"); //Hmm... Yes, there is indeed something you can do for the community.
 	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_02"); //The novices' chambers could do with a good sweeping. Take care of that.
-	AI_Output (other, self, "DIA_Parlan_Aufgabe_15_03"); //But that will take forever ...
+	AI_Output (other, self, "DIA_Parlan_Aufgabe_15_03"); //But that will take forever...
 	AI_Output (self, other, "DIA_Parlan_Aufgabe_05_04"); //Then you had better start right away, hadn't you?
 	
 	MIS_ParlanFegen = LOG_RUNNING;
@@ -677,7 +677,7 @@ instance DIA_Parlan_Fegen		(C_INFO)
 	condition	 = 	DIA_Parlan_Fegen_Condition;
 	information	 = 	DIA_Parlan_Fegen_Info;
 	permanent	 =  TRUE;
-	description	 = 	"About the novices' chambers ...";
+	description	 = 	"About the novices' chambers...";
 };
 //------------------------------------
 var int DIA_Parlan_Fegen_permanent; 
@@ -692,7 +692,7 @@ func int DIA_Parlan_Fegen_Condition ()
 };
 func void DIA_Parlan_Fegen_Info ()
 {
-	AI_Output (other, self, "DIA_Parlan_Fegen_15_00"); //About the novices' chambers ...
+	AI_Output (other, self, "DIA_Parlan_Fegen_15_00"); //About the novices' chambers...
 	
 	if (NOV_Helfer >= 4)
 	{
@@ -765,7 +765,7 @@ func int DIA_Parlan_KNOWSJUDGE_Condition ()
 func void DIA_Parlan_KNOWSJUDGE_Info ()
 {
 	AI_Output (other, self, "DIA_Parlan_KNOWSJUDGE_15_00"); //I want to undergo the Test of Fire.
-	AI_Output (self, other, "DIA_Parlan_KNOWSJUDGE_05_01"); //What ...? Hm ... (insistently) Are you really serious?
+	AI_Output (self, other, "DIA_Parlan_KNOWSJUDGE_05_01"); //What...? Hm... (insistently) Are you really serious?
 	AI_Output (other, self, "DIA_Parlan_KNOWSJUDGE_15_02"); //I insist.
 	AI_Output (self, other, "DIA_Parlan_KNOWSJUDGE_05_03"); //You are an exceptional novice. All right, if you are serious, then speak to Master Pyrokar.
 	
@@ -1300,7 +1300,7 @@ INSTANCE DIA_Parlan_Kap3U4U5_PERM   (C_INFO)
 	condition   = DIA_Parlan_Kap3U4U5_PERM_Condition;
 	information = DIA_Parlan_Kap3U4U5_PERM_Info;
 	permanent   = TRUE;
-	description = "Where can I find ...";
+	description = "Where can I find...";
 };
 FUNC INT DIA_Parlan_Kap3U4U5_PERM_Condition()
 {
@@ -1312,7 +1312,7 @@ FUNC INT DIA_Parlan_Kap3U4U5_PERM_Condition()
 };
 FUNC VOID DIA_Parlan_Kap3U4U5_PERM_Info()
 {
-	AI_Output (other,self ,"DIA_Parlan_Kap3_PERM_15_00"); //Where can I find ...
+	AI_Output (other,self ,"DIA_Parlan_Kap3_PERM_15_00"); //Where can I find...
 	
 	Info_ClearChoices (DIA_Parlan_Kap3U4U5_PERM);
 	Info_AddChoice (DIA_Parlan_Kap3U4U5_PERM,DIALOG_Back,DIA_Parlan_Kap3U4U5_PERM_Back);

@@ -259,7 +259,7 @@ FUNC VOID DIA_Canthar_WhatOffer_Info()
 		Info_AddChoice		(DIA_Canthar_WhatOffer, "No! Keep your paper!",DIA_Canthar_WhatOffer_No);
 		Info_AddChoice		(DIA_Canthar_WhatOffer, "What do you want for your pass?",DIA_Canthar_WhatOffer_Price);
 		Info_AddChoice		(DIA_Canthar_WhatOffer, "How will YOU get into town?" 			,DIA_Canthar_WhatOffer_HowYouIn);
-		Info_AddChoice		(DIA_Canthar_WhatOffer, "There must be a catch to this ..."	,DIA_Canthar_WhatOffer_Strings);
+		Info_AddChoice		(DIA_Canthar_WhatOffer, "There must be a catch to this..."	,DIA_Canthar_WhatOffer_Strings);
 	}
 	else
 	{
@@ -271,7 +271,7 @@ FUNC VOID DIA_Canthar_WhatOffer_Info()
 
 func void DIA_Canthar_WhatOffer_Strings()
 {
-	AI_Output (other, self,"DIA_Canthar_WhatOffer_Strings_15_00"); //There must be a catch to this ...
+	AI_Output (other, self,"DIA_Canthar_WhatOffer_Strings_15_00"); //There must be a catch to this...
 	AI_Output (self, other,"DIA_Canthar_WhatOffer_Strings_09_01"); //(exaggerated) No. No catch. You will merely owe me a favor.
 };
 
@@ -482,7 +482,7 @@ instance DIA_Canthar_SARAHERLEDIGT		(C_INFO)
 	condition	 = 	DIA_Canthar_SARAHERLEDIGT_Condition;
 	information	 = 	DIA_Canthar_SARAHERLEDIGT_Info;
 	permanent	 =	TRUE;
-	description	 = 	"About Sarah ...";
+	description	 = 	"About Sarah...";
 };
 func int DIA_Canthar_SARAHERLEDIGT_Condition ()
 {
@@ -527,7 +527,7 @@ instance DIA_Canthar_Success		(C_INFO)
 	condition	 = 	DIA_Canthar_Success_Condition;
 	information	 = 	DIA_Canthar_Success_Info;
 	permanent	 =  FALSE;
-	description	 = "About Sarah ...";
+	description	 = "About Sarah...";
 };
 func int DIA_Canthar_Success_Condition ()
 {
@@ -653,9 +653,9 @@ func void DIA_Canthar_Pay_Info ()
 	
 	if (Npc_HasItems (other, ItmI_Gold) >= Canthar_Gold)
 	{
-		Info_AddChoice (DIA_Canthar_Pay,"All right, I'll pay up ...",DIA_Canthar_Pay_Ja);
+		Info_AddChoice (DIA_Canthar_Pay,"All right, I'll pay up...",DIA_Canthar_Pay_Ja);
 	};
-	Info_AddChoice (DIA_Canthar_Pay,"I haven't got enough money on me ...",DIA_Canthar_Pay_Nein);
+	Info_AddChoice (DIA_Canthar_Pay,"I haven't got enough money on me...",DIA_Canthar_Pay_Nein);
 	Info_AddChoice (DIA_Canthar_Pay,"How much was that again?",DIA_Canthar_Pay_Wieviel);
 };
 
@@ -672,7 +672,7 @@ FUNC VOID DIA_Canthar_Pay_Ja()
 };
 FUNC VOID DIA_Canthar_Pay_Nein()
 {
-	AI_Output (other, self, "DIA_Canthar_Pay_Nein_15_00"); //I haven't got enough money on me ...
+	AI_Output (other, self, "DIA_Canthar_Pay_Nein_15_00"); //I haven't got enough money on me...
 	AI_Output (self, other, "DIA_Canthar_Pay_Nein_09_01"); //Then get it.
 	Info_ClearChoices (DIA_Canthar_Pay);
 	AI_StopProcessInfos (self);

@@ -95,7 +95,7 @@ FUNC VOID DIA_BDT_1020_Wegelagerer_FirstWarn_Joke ()
 {
 	AI_Output (other,self ,"DIA_BDT_1020_Wegelagerer_FirstWarn_Joke_15_00"); //You're joking.
 	AI_Output (self ,other,"DIA_BDT_1020_Wegelagerer_FirstWarn_Joke_06_01"); //Do I look the part?
-	AI_Output (self ,other,"DIA_BDT_1020_Wegelagerer_FirstWarn_Joke_06_02"); //If I don't see 20 gold pieces before you come even one step closer ...
+	AI_Output (self ,other,"DIA_BDT_1020_Wegelagerer_FirstWarn_Joke_06_02"); //If I don't see 20 gold pieces before you come even one step closer...
 	AI_Output (self ,other,"DIA_BDT_1020_Wegelagerer_FirstWarn_Joke_06_03"); //Then I'll flatten you. So fork over the dough already.
 	
 	self.aivar[AIV_Guardpassage_Status]	= GP_SecondWarnGiven;

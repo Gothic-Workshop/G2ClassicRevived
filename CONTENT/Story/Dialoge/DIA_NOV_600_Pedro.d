@@ -99,7 +99,7 @@ FUNC VOID DIA_Pedro_Wurst_JA()
 FUNC VOID DIA_Pedro_Wurst_NEIN()
 {
 	AI_Output (other, self, "DIA_Pedro_Wurst_NEIN_15_00"); //No, forget it.
-	AI_Output (self, other, "DIA_Pedro_Wurst_NEIN_09_01"); //You want to get in good with Gorax, huh? It's always the same with the new novices ...
+	AI_Output (self, other, "DIA_Pedro_Wurst_NEIN_09_01"); //You want to get in good with Gorax, huh? It's always the same with the new novices...
 	
 	Info_ClearChoices (DIA_Pedro_Wurst);
 };
@@ -161,7 +161,7 @@ func void DIA_Pedro_TEMPEL_Info ()
  	else
  	{
  		AI_Output (self, other, "DIA_Pedro_TEMPEL_09_02"); //If you want to be accepted into the Brotherhood of Innos, you must learn and obey the rules of the monastery.
-		//AI_Output (self, other, "DIA_Pedro_TEMPEL_09_03"); //Auﬂerdem verlangen wir von jedem neuen Novizen die Gaben an Innos. Ein Schaf und ...
+		//AI_Output (self, other, "DIA_Pedro_TEMPEL_09_03"); //Auﬂerdem verlangen wir von jedem neuen Novizen die Gaben an Innos. Ein Schaf und...
 		//B_Say_Gold (self, other, Summe_Kloster);  
  		AI_Output (self, other, "DIA_ADDON_Pedro_TEMPEL_09_03"); //Also, we demand the gifts to Innos from each new novice.
  		AI_Output (self, other, "DIA_ADDON_Pedro_TEMPEL_09_04"); //A sheep and 1000 gold pieces.

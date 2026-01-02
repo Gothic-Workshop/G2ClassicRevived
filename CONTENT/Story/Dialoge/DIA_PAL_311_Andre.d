@@ -378,7 +378,7 @@ FUNC VOID DIA_Andre_PETZMASTER_Info()
 	
 	if (B_GetGreatestPetzCrime(self) == CRIME_ATTACK)
 	{
-		AI_Output (self, other, "DIA_Andre_PETZMASTER_08_13"); //It is one thing if you brawl with the rabble in the harbor ...
+		AI_Output (self, other, "DIA_Andre_PETZMASTER_08_13"); //It is one thing if you brawl with the rabble in the harbor...
 		AI_Output (self, other, "DIA_Andre_PETZMASTER_08_14"); //But when you attack citizens, or the king's soldiers, I must bring you to justice.
 		if (PETZCOUNTER_City_Sheepkiller > 0)
 		{
@@ -1035,7 +1035,7 @@ instance DIA_Andre_DGRunning (C_INFO)
 	condition	 = 	DIA_Andre_DGRunning_Condition;
 	information	 = 	DIA_Andre_DGRunning_Info;
 	permanent    =  TRUE;
-	description	 = 	"About the thieves' guild ...";
+	description	 = 	"About the thieves' guild...";
 };
 
 func int DIA_Andre_DGRunning_Condition ()
@@ -1048,7 +1048,7 @@ func int DIA_Andre_DGRunning_Condition ()
 
 func void DIA_Andre_DGRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Andre_DGRunning_15_00"); //About the thieves' guild ...
+	AI_Output (other, self, "DIA_Andre_DGRunning_15_00"); //About the thieves' guild...
 	
 	if (Andre_Diebesgilde_aufgeraeumt == TRUE)
 	{
@@ -1070,7 +1070,7 @@ func void DIA_Andre_DGRunning_Info ()
 	AI_Output (self, other, "DIA_Andre_DGRunning_08_03"); //Yes?
 	
 	Info_ClearChoices(DIA_Andre_DGRunning);
-	Info_AddChoice(DIA_Andre_DGRunning, "I'm working on it ...", DIA_Andre_DGRunning_BACK);
+	Info_AddChoice(DIA_Andre_DGRunning, "I'm working on it...", DIA_Andre_DGRunning_BACK);
 	
 	if (Npc_IsDead(Cassia))
 	&& (Npc_IsDead(Jesper))
@@ -1088,7 +1088,7 @@ func void DIA_Andre_DGRunning_Info ()
 
 func void DIA_Andre_DGRunning_BACK()
 {
-	AI_Output (other, self, "DIA_Andre_DGRunning_BACK_15_00"); //I'm working on it ...
+	AI_Output (other, self, "DIA_Andre_DGRunning_BACK_15_00"); //I'm working on it...
 	if (Diebesgilde_verraten == TRUE)
 	{
 		AI_Output (self, other, "DIA_Andre_DGRunning_BACK_08_01"); //All right. I shall give you a bit more time to fulfill your mission.
@@ -1105,7 +1105,7 @@ func void DIA_Andre_DGRunning_Verrat()
 	AI_Output (other, self, "DIA_Andre_DGRunning_Verrat_15_00"); //I found the hideout of the thieves' guild!
 	AI_Output (self, other, "DIA_Andre_DGRunning_Verrat_08_01"); //Where?
 	AI_Output (other, self, "DIA_Andre_DGRunning_Verrat_15_02"); //In the sewers below the city.
-	AI_Output (self, other, "DIA_Andre_DGRunning_Verrat_08_03"); //What? We have sealed off the sewers ...
+	AI_Output (self, other, "DIA_Andre_DGRunning_Verrat_08_03"); //What? We have sealed off the sewers...
 	AI_Output (other, self, "DIA_Andre_DGRunning_Verrat_15_04"); //It looks like that didn't keep them from spreading out down there.
 	AI_Output (self, other, "DIA_Andre_DGRunning_Verrat_08_05"); //Have you hunted down the criminals?
 	Diebesgilde_verraten = TRUE;
@@ -1216,7 +1216,7 @@ func void DIA_Andre_JOIN_Info ()
 	AI_Output (self, other, "DIA_Andre_JOIN_08_18"); //Are you prepared to fight together with us for Innos and the king?
 	
 	Info_ClearChoices (DIA_Andre_JOIN);
-	Info_AddChoice (DIA_Andre_JOIN,"I'm not quite sure yet ...",DIA_Andre_JOIN_No);
+	Info_AddChoice (DIA_Andre_JOIN,"I'm not quite sure yet...",DIA_Andre_JOIN_No);
 	Info_AddChoice (DIA_Andre_JOIN,"I'm ready!",DIA_Andre_JOIN_Yes);
 };
 	
@@ -1245,7 +1245,7 @@ func void DIA_Andre_JOIN_Yes()
 
 func void DIA_Andre_JOIN_No()
 {
-	AI_Output (other, self, "DIA_Andre_JOIN_No_15_00"); //I'm not quite sure yet ...
+	AI_Output (other, self, "DIA_Andre_JOIN_No_15_00"); //I'm not quite sure yet...
 	AI_Output (self, other, "DIA_Andre_JOIN_No_08_01"); //As long as you still have doubts about your decision, I cannot accept you into the militia.
 	
 	Info_ClearChoices (DIA_Andre_JOIN);
@@ -1276,7 +1276,7 @@ func void DIA_Andre_LORDHAGEN_Info ()
 {
 	AI_Output (other, self, "DIA_Andre_LORDHAGEN_15_00"); //Can I finally see Lord Hagen now?
 	AI_Output (self, other, "DIA_Andre_LORDHAGEN_08_01"); //You are now in the service of the paladins. They will let you in. But you had better have something important to say.
-	AI_Output (other, self, "DIA_Andre_LORDHAGEN_15_02"); //Don't worry, I do ...
+	AI_Output (other, self, "DIA_Andre_LORDHAGEN_15_02"); //Don't worry, I do...
 	AI_Output (self, other, "DIA_Andre_LORDHAGEN_08_03"); //Remember that you are meeting the chief paladin. Behave yourself accordingly. You represent not only yourself now, but the entire militia.
 };
 // *********************************************************
@@ -1344,7 +1344,7 @@ func void DIA_Andre_FOUND_PECK_Info ()
 	AI_Output (self, other, "DIA_Andre_FOUND_PECK_08_01"); //Yes, he is already back at his post and going about his duty. Where did you find him?
 
 	Info_ClearChoices 	(DIA_Andre_FOUND_PECK);
-	Info_AddChoice 		(DIA_Andre_FOUND_PECK,"He crossed my path ...",DIA_Andre_FOUND_PECK_SOMEWHERE);
+	Info_AddChoice 		(DIA_Andre_FOUND_PECK,"He crossed my path...",DIA_Andre_FOUND_PECK_SOMEWHERE);
 	Info_AddChoice 		(DIA_Andre_FOUND_PECK,"In the 'Red Lantern'...",DIA_Andre_FOUND_PECK_REDLIGHT);
 
 };
@@ -1434,7 +1434,7 @@ instance DIA_Andre_FOUND_STUFF		(C_INFO)
 	condition	 = 	DIA_Andre_FOUND_STUFF_Condition;
 	information	 = 	DIA_Andre_FOUND_STUFF_Info;
 	permanent	 =  TRUE;
-	description	 = 	"About the package ...";
+	description	 = 	"About the package...";
 };
 func int DIA_Andre_FOUND_STUFF_Condition ()
 {	
@@ -1446,7 +1446,7 @@ func int DIA_Andre_FOUND_STUFF_Condition ()
 func void DIA_Andre_FOUND_STUFF_Info ()
 {
 	
-	AI_Output (other, self, "DIA_Andre_FOUND_STUFF_15_00"); //About the package ...
+	AI_Output (other, self, "DIA_Andre_FOUND_STUFF_15_00"); //About the package...
 	AI_Output (self, other, "DIA_Andre_FOUND_STUFF_08_01"); //Have you found it?
 	
 	if (Npc_HasItems (other, ItMi_HerbPaket) > 0)
@@ -1543,7 +1543,7 @@ instance DIA_Andre_REDLIGHT_SUCCESS		(C_INFO)
 	condition	 = 	DIA_Andre_REDLIGHT_SUCCESS_Condition;
 	information	 = 	DIA_Andre_REDLIGHT_SUCCESS_Info;
 	permanent	 =  TRUE;
-	description	 = 	"About that weed ...";
+	description	 = 	"About that weed...";
 };
 func int DIA_Andre_REDLIGHT_SUCCESS_Condition ()
 {
@@ -1554,7 +1554,7 @@ func int DIA_Andre_REDLIGHT_SUCCESS_Condition ()
 };
 func void DIA_Andre_REDLIGHT_SUCCESS_Info ()
 {
-	AI_Output (other, self, "DIA_Andre_REDLIGHT_SUCCESS_15_00"); //About that weed ...
+	AI_Output (other, self, "DIA_Andre_REDLIGHT_SUCCESS_15_00"); //About that weed...
 	
 	if (Npc_IsDead (Borka) == TRUE)
 	|| (Undercover_Failed == TRUE)
@@ -1801,7 +1801,7 @@ FUNC VOID DIA_Andre_Cornelius_Liar_Yes()
 	}
 	else
 	{
-		AI_Output (other,self ,"DIA_Andre_Cornelius_Liar_Yes_15_05"); //Ehhm, well, I think ...
+		AI_Output (other,self ,"DIA_Andre_Cornelius_Liar_Yes_15_05"); //Ehhm, well, I think...
 		AI_Output (self ,other,"DIA_Andre_Cornelius_Liar_Yes_08_06"); //I need proof, not suppositions. Get the proof, then I can do something for you.
 		AI_Output (self ,other,"DIA_Andre_Cornelius_Liar_Yes_08_07"); //Until then, you should think carefully about what you say.
 	};

@@ -81,11 +81,11 @@ FUNC VOID DIA_Jesper_Hallo_Info()
 		
 	if  (Attila_Key == TRUE)
 	{
-		Info_AddChoice 	  (DIA_Jesper_Hallo,"Attila gave me a key ...",DIA_Jesper_Hallo_Willkommen);
+		Info_AddChoice 	  (DIA_Jesper_Hallo,"Attila gave me a key...",DIA_Jesper_Hallo_Willkommen);
 	}	
 	else 
 	{
-		Info_AddChoice 	  (DIA_Jesper_Hallo,"I've done in Attila ...",DIA_Jesper_Hallo_Umgelegt);
+		Info_AddChoice 	  (DIA_Jesper_Hallo,"I've done in Attila...",DIA_Jesper_Hallo_Umgelegt);
 	};
 	
 	DG_gefunden = TRUE;
@@ -123,7 +123,7 @@ FUNC VOID DIA_Jesper_Hallo_Umgelegt()
 	AI_Output (self, other,"DIA_Jesper_Hallo_Umgelegt_09_02");//But I'll tell you something. If you attack me, I'll kill you.
 	
 	Info_ClearChoices (DIA_Jesper_Hallo);
-	Info_AddChoice 	  (DIA_Jesper_Hallo,"What are you doing here ...",DIA_Jesper_Hallo_Was);	
+	Info_AddChoice 	  (DIA_Jesper_Hallo,"What are you doing here...",DIA_Jesper_Hallo_Was);	
 	Info_AddChoice 	  (DIA_Jesper_Hallo,"Take me to your leader.",DIA_Jesper_Hallo_Anfuehrer);
 };
 FUNC VOID DIA_Jesper_Hallo_Was()
@@ -177,7 +177,7 @@ FUNC VOID DIA_Jesper_Bezahlen_Info()
 		B_Say_Gold (self, other, Jesper_Cost);
 		
 		Info_ClearChoices (DIA_Jesper_Bezahlen);
-		Info_AddChoice (DIA_Jesper_Bezahlen,"Maybe later ...(BACK)",DIA_Jesper_Bezahlen_Spaeter);
+		Info_AddChoice (DIA_Jesper_Bezahlen,"Maybe later...(BACK)",DIA_Jesper_Bezahlen_Spaeter);
 		Info_AddChoice (DIA_Jesper_Bezahlen,"OK, I want to learn how to sneak around (pay 100 gold).",DIA_Jesper_Bezahlen_Okay);
 	};
 };

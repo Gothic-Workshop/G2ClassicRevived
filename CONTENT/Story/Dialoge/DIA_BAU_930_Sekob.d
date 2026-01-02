@@ -63,7 +63,7 @@ instance DIA_Sekob_PermVorMis (C_INFO)
 	condition	= DIA_Sekob_PermVorMis_Condition;
 	information	= DIA_Sekob_PermVorMis_Info;
 	permanent	= TRUE;
-	description	= "Listen ...";
+	description	= "Listen...";
 };
 
 func int DIA_Sekob_PermVorMis_Condition ()
@@ -77,7 +77,7 @@ func int DIA_Sekob_PermVorMis_Condition ()
 
 func void DIA_Sekob_PermVorMis_Info ()
 {
-	AI_Output (other, self, "DIA_Sekob_PermVorMis_15_00"); //Listen ...
+	AI_Output (other, self, "DIA_Sekob_PermVorMis_15_00"); //Listen...
 	AI_Output (self, other, "DIA_Sekob_PermVorMis_01_01"); //I don't have any work for you at the moment. Now go!
 };
 
@@ -245,7 +245,7 @@ instance DIA_Sekob_Again		(C_INFO)
 	condition	= DIA_Sekob_Again_Condition;
 	information	= DIA_Sekob_Again_Info;
 	permanent	= TRUE;
-	description	= "About your rent ...";
+	description	= "About your rent...";
 };
 
 func int DIA_Sekob_Again_Condition ()
@@ -260,7 +260,7 @@ func int DIA_Sekob_Again_Condition ()
 
 func void DIA_Sekob_Again_Info ()
 {
-	AI_Output (other, self, "DIA_Sekob_Again_15_00"); //About your rent ...
+	AI_Output (other, self, "DIA_Sekob_Again_15_00"); //About your rent...
 	AI_Output (self, other, "DIA_Sekob_Again_01_01"); //You'll talk to Onar, right?
 	
 	Info_ClearChoices	(DIA_Sekob_Again);
@@ -268,7 +268,7 @@ func void DIA_Sekob_Again_Info ()
 	
 	if (Onar_WegenSekob == TRUE)
 	{
-		Info_AddChoice	(DIA_Sekob_Again, "I did that ...", DIA_Sekob_Again_verarscht);
+		Info_AddChoice	(DIA_Sekob_Again, "I did that...", DIA_Sekob_Again_verarscht);
 	}
 	else
 	{
@@ -293,7 +293,7 @@ func void DIA_Sekob_Again_Ja()
 func void DIA_Sekob_Again_verarscht()
 {
 	MIS_Sekob_RedeMitOnar = LOG_SUCCESS;
-	AI_Output (other, self, "DIA_Sekob_Again_verarscht_15_00"); //I did that ...
+	AI_Output (other, self, "DIA_Sekob_Again_verarscht_15_00"); //I did that...
 	AI_Output (self, other, "DIA_Sekob_Again_verarscht_01_01"); //And? What did he say?
 	AI_Output (other, self, "DIA_Sekob_Again_verarscht_15_02"); //I'm sorry, but I'll be forced to tear off your head now.
 	AI_Output (self, other, "DIA_Sekob_Again_verarscht_01_03"); //But why? What have I done?
@@ -327,7 +327,7 @@ func int DIA_Sekob_PERMKAP1_Condition ()
 func void DIA_Sekob_PERMKAP1_Info ()
 {
 	AI_Output (other, self, "DIA_Sekob_PERMKAP1_15_00"); //The next time you'll pay on time, understand?
-	AI_Output (self, other, "DIA_Sekob_PERMKAP1_01_01"); //(to himself) What did I do to deserve this ...
+	AI_Output (self, other, "DIA_Sekob_PERMKAP1_01_01"); //(to himself) What did I do to deserve this...
 	AI_StopProcessInfos (self);
 };
 
@@ -526,7 +526,7 @@ func void DIA_Sekob_BELOHNUNG_Info ()
 	if (hero.guild == GIL_KDF)
 		{
 			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_04"); //I'm only interested in one thing. What did the black hoods want in your house?
-			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_05"); //I can't explain it myself, honorable Sir Magician. Perhaps it has ...
+			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_05"); //I can't explain it myself, honorable Sir Magician. Perhaps it has...
 			AI_Output			(other, self, "DIA_Sekob_BELOHNUNG_15_06"); //What?
 			AI_Output			(self, other, "DIA_Sekob_BELOHNUNG_01_07"); //I'm sorry. I swore several years ago never to speak of it, and I don't plan to break my oath.
 		};

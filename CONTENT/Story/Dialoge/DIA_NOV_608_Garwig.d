@@ -310,7 +310,7 @@ func void DIA_Garwig_Abgeben_Info ()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Garwig_Abgeben_06_02"); //So it's you who took it ...
+		AI_Output (self, other, "DIA_Garwig_Abgeben_06_02"); //So it's you who took it...
 	};
 	AI_Output (self, other, "DIA_Garwig_Abgeben_06_03"); //But it is not my place to judge you. Innos shall administer his justice upon you, and you shall receive his punishment!
 	

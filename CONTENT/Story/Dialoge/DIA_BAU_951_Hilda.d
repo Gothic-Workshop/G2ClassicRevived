@@ -147,7 +147,7 @@ instance DIA_Hilda_BringBeet (C_INFO)
 	condition	= DIA_Hilda_BringBeet_Condition;
 	information	= DIA_Hilda_BringBeet_Info;
 	permanent	= FALSE;
-	description	= "I've got a few turnips here for you ...";
+	description	= "I've got a few turnips here for you...";
 };
 
 func int DIA_Hilda_BringBeet_Condition ()
@@ -162,7 +162,7 @@ func int DIA_Hilda_BringBeet_Condition ()
 
 func void DIA_Hilda_BringBeet_Info ()
 {
-	AI_Output (other, self, "DIA_Hilda_BringBeet_15_00"); //I've got a few turnips here for you ...
+	AI_Output (other, self, "DIA_Hilda_BringBeet_15_00"); //I've got a few turnips here for you...
 	
 	if (Npc_HasItems (other,ItPl_Beet) >= 20)
 	{
@@ -202,7 +202,7 @@ instance DIA_Hilda_Einkaufen (C_INFO)
 	condition	= DIA_Hilda_Einkaufen_Condition;
 	information	= DIA_Hilda_Einkaufen_Info;
 	permanent	= FALSE;
-	description	= "Give me the gold, and I'll go see the merchant for you ...";
+	description	= "Give me the gold, and I'll go see the merchant for you...";
 };
 
 func int DIA_Hilda_Einkaufen_Condition ()
@@ -216,7 +216,7 @@ func int DIA_Hilda_Einkaufen_Condition ()
 
 func void DIA_Hilda_Einkaufen_Info ()
 {
-	AI_Output (other, self, "DIA_Hilda_Einkaufen_15_00"); //Give me the gold, and I'll go see the merchant for you ...
+	AI_Output (other, self, "DIA_Hilda_Einkaufen_15_00"); //Give me the gold, and I'll go see the merchant for you...
 		
 		if (hero.guild == GIL_NONE)
 		{
@@ -261,7 +261,7 @@ func void DIA_Hilda_PfanneGeholt_Info ()
 {
 	AI_Output (other, self, "DIA_Hilda_PfanneGeholt_15_00"); //Here's your frying pan.
 	B_GiveInvItems (other, self, itmi_pan, 1);
-	AI_Output (self, other, "DIA_Hilda_PfanneGeholt_17_01"); //Fine. Let's see, then, whether it's any good ...
+	AI_Output (self, other, "DIA_Hilda_PfanneGeholt_17_01"); //Fine. Let's see, then, whether it's any good...
 	
 	MIS_Hilda_PfanneKaufen = LOG_SUCCESS;
 	B_GivePlayerXP (XP_HildaHolPfanne);

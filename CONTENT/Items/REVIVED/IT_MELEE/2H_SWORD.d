@@ -45,6 +45,16 @@ const int	REV_Condition_2H_Sword_03			=	160;
 const int	REV_Range_2H_Sword_03				=	100;
 const int	REV_Value_2H_Sword_03				=	4000;
 //******************************************************************//
+const int	REV_Damage_2H_Sword_04				=	140;
+const int	REV_Condition_2H_Sword_04			=	120;
+const int	REV_Range_2H_Sword_04				=	100;
+const int	REV_Value_2H_Sword_04				=	4000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_05				=	190;
+const int	REV_Condition_2H_Sword_05			=	160;
+const int	REV_Range_2H_Sword_05				=	100;
+const int	REV_Value_2H_Sword_05				=	4000;
+//******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Heavy_01		=	160;
 const int	REV_Condition_2H_Sword_Heavy_01		=	120;
@@ -66,16 +76,21 @@ const int	REV_Condition_2H_Sword_Heavy_04		=	160;
 const int	REV_Range_2H_Sword_Heavy_04			=	120;
 const int	REV_Value_2H_Sword_Heavy_04			=	5000;
 //******************************************************************//
+const int	REV_Damage_2H_Sword_Heavy_05		=	160;
+const int	REV_Condition_2H_Sword_Heavy_05		=	140;
+const int	REV_Range_2H_Sword_Heavy_05			=	120;
+const int	REV_Value_2H_Sword_Heavy_05			=	4000;
+//******************************************************************//
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Paladin_01		=	120;
 const int	REV_Condition_2H_Sword_Paladin_01	=	150;
 const int	REV_Range_2H_Sword_Paladin_01		=	130;
-const int	REV_Value_2H_Sword_Paladin_01		=	1900;
+const int	REV_Value_2H_Sword_Paladin_01		=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Paladin_02		=	170;
 const int	REV_Condition_2H_Sword_Paladin_02	=	150;
 const int	REV_Range_2H_Sword_Paladin_02		=	130;
-const int	REV_Value_2H_Sword_Paladin_02		=	3800;
+const int	REV_Value_2H_Sword_Paladin_02		=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Innos_01		=	90;
 const int	REV_Condition_2H_Sword_Innos_01		=	110;
@@ -156,6 +171,32 @@ const int	REV_Damage_2H_Sword_Rod				=	60;
 const int	REV_Condition_2H_Sword_Rod			=	40; 
 const int	REV_Range_2H_Sword_Rod				=	130;
 const int	REV_Value_2H_Sword_Rod				=	60;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Smith_01		=	105;
+const int	REV_Condition_2H_Sword_Smith_01		=	105;
+const int	REV_Range_2H_Sword_Smith_01			=	100;
+const int	REV_Value_2H_Sword_Smith_01			=	3000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Smith_02		=	180;
+const int	REV_Condition_2H_Sword_Smith_02		=	160;
+const int	REV_Range_2H_Sword_Smith_02			=	120;
+const int	REV_Value_2H_Sword_Smith_02			=	5000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Smith_03		=	190;
+const int	REV_Condition_2H_Sword_Smith_03		=	160;
+const int	REV_Range_2H_Sword_Smith_03			=	100;
+const int	REV_Value_2H_Sword_Smith_03			=	4000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Smith_04		=	140;
+const int	REV_Condition_2H_Sword_Smith_04		=	120;
+const int	REV_Range_2H_Sword_Smith_04			=	140;
+const int	REV_Value_2H_Sword_Smith_04			=	4000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Smith_05		=	170;
+const int	REV_Condition_2H_Sword_Smith_05		=	150;
+const int	REV_Range_2H_Sword_Smith_05			=	130;
+const int	REV_Value_2H_Sword_Smith_05			=	3800;
 
 
 
@@ -386,6 +427,56 @@ INSTANCE ITMW_REVIVED_2H_SWORD_03 (C_Item)
 	TEXT[4] 			= 	NAME_TwoHanded;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
+
+INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
+{	
+	name 				=	"Masterpiece";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_04;
+
+	damageTotal			= 	REV_Damage_2H_Sword_04;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_04;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_04;
+	visual 				=	"REV_2H_SWORD_04.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_SWORD_05 (C_Item)
+{	
+	name 				=	"Andramo";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_05;
+
+	damageTotal			= 	REV_Damage_2H_Sword_05;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_05;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_05;
+	visual 				=	"REV_2H_SWORD_05.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
 //******************************************************************//
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_01 (C_Item)
 {	
@@ -487,6 +578,31 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_04 (C_Item)
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 
+INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_05 (C_Item)
+{	
+	name 				=	"Peremptor";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Heavy_05;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Heavy_05;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Heavy_05;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Heavy_05;
+	visual 				=	"REV_2H_SWORD_HEAVY_05.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
 
 
 
@@ -502,7 +618,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_THORUS (C_Item)
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_2H_Sword_Thorus;
-	//owner				= 	GRD_200_THORUS;
+	owner				= 	MIL_2000_Thorus; //GRD_200_THORUS;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Thorus;
 	damagetype 			=	DAM_EDGE;		
@@ -529,7 +645,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_2H_Sword_Angar;
-	//owner				= 	GUR_1202_CORANGAR;
+	owner				= 	DJG_705_Angar; //GUR_1202_CORANGAR;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Angar;
 	damagetype 			=	DAM_EDGE;		
@@ -556,7 +672,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ROD (C_Item)
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_2H_Sword_Rod;
-	//owner				= 	SLD_804_Rod;
+	owner				= 	SLD_804_Rod; //SLD_804_Rod;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Rod;
 	damagetype 			=	DAM_EDGE;		
@@ -695,7 +811,31 @@ INSTANCE ITMW_REVIVED_2H_DEMONSLAYER (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Demonslayer;
-	visual 				=	"REV_Crimson_Sword_2h.3DS";
+	visual 				=	"REV_2H_CRIMSONBLADE_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_2H_DEMONSLAYER_02 (C_Item) 
+{	
+	name 				=	"Heavy Demonslayer";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Demonslayer;
+
+	damageTotal			= 	REV_Damage_2H_Demonslayer;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Demonslayer;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Demonslayer;
+	visual 				=	"REV_2H_CRIMSONBLADE_02.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
@@ -754,5 +894,135 @@ INSTANCE ITMW_REVIVED_2H_URIZIEL_02 (C_Item)
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_TwoHanded;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+
+
+//****************************************************************************
+//			SMITHING
+//****************************************************************************
+INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_01 (C_Item)
+{	
+	name 				=	"Light Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Smith_01;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Smith_01;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Smith_01;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_01;
+	visual 				=	"REV_2H_SWORD_SMITH_01.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_ForgedWeapon2H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_02 (C_Item)
+{	
+	name 				=	"Heavy Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Smith_02;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Smith_02;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Smith_02;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_02;
+	visual 				=	"REV_2H_SWORD_SMITH_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_ForgedWeapon2H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_03 (C_Item)
+{	
+	name 				=	"Broad Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Smith_03;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Smith_03;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Smith_03;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_03;
+	visual 				=	"REV_2H_SWORD_SMITH_03.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_ForgedWeapon2H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_04 (C_Item)
+{	
+	name 				=	"Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Smith_04;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Smith_04;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Smith_04;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_04;
+	visual 				=	"REV_2H_SWORD_SMITH_04.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_ForgedWeapon2H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+
+INSTANCE ITMW_REVIVED_2H_SWORD_SMITH_05 (C_Item)
+{	
+	name 				=	"Bastard Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Smith_05;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Smith_05;
+	damagetype 			=	DAM_EDGE;		
+	range    			=  	REV_Range_2H_Sword_Smith_05;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Smith_05;
+	visual 				=	"REV_2H_SWORD_SMITH_05.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_ForgedWeapon2H;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };

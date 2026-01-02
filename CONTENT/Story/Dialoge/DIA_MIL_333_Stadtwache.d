@@ -121,7 +121,7 @@ func void DIA_Mil_333_Stadtwache_FirstWarn_Info()
 				AI_Output (other, self,"DIA_Mil_333_Stadtwache_FirstWarn_15_11"); //But I'm planning to join the city guard!
 				AI_Output (self, other,"DIA_Mil_333_Stadtwache_FirstWarn_06_12"); //Hah! Don't make me laugh! Go to the other gate and try to sell that story to THEM.
 				AI_Output (other, self,"DIA_Mil_333_Stadtwache_FirstWarn_15_13"); //I've already been there - they sent me to you.
-				AI_Output (self, other,"DIA_Mil_333_Stadtwache_FirstWarn_06_14"); //(dirty laugh) Oh man! They're always sending us the cream of the crop ...
+				AI_Output (self, other,"DIA_Mil_333_Stadtwache_FirstWarn_06_14"); //(dirty laugh) Oh man! They're always sending us the cream of the crop...
 			};
 		}
  	 	// ------ alle anderen Rüstungen ------
@@ -207,7 +207,7 @@ func void DIA_Mil_333_Stadtwache_Attack_Info()
 	other.aivar[AIV_LastDistToWP] = 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"DIA_Mil_333_Stadtwache_Attack_06_00"); //You asked for it ...
+	AI_Output (self, other,"DIA_Mil_333_Stadtwache_Attack_06_00"); //You asked for it...
 	
 	AI_StopProcessInfos	(self);			
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 

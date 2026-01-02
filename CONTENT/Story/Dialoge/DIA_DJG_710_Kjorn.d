@@ -154,7 +154,7 @@ FUNC VOID DIA_Kjorn_BuyInfos_GiveMoney ()
 	
 	B_GiveInvItems (other,self,ItMi_Gold,50);
 	
-	AI_Output (other,self ,"DIA_Kjorn_BuyInfos_GiveMoney_15_01"); //Now tell me ...
+	AI_Output (other,self ,"DIA_Kjorn_BuyInfos_GiveMoney_15_01"); //Now tell me...
 	
 	Info_ClearChoices (DIA_Kjorn_BuyInfos);
 	
@@ -222,7 +222,7 @@ FUNC VOID DIA_Kjorn_BuyInfos_Dragon1 ()
 	AI_Output (other,self ,"DIA_Kjorn_BuyInfos_Dragon1_15_00"); //Tell me about the dragons.
 	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon1_06_01"); //Dragons are ancient, incredibly powerful creatures. Once there were thousands of them living all over the world.
 	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon1_06_02"); //It's been over a hundred years, though, that any of them were seen.
-	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon1_06_03"); //Their blood is as hot as boiling oil. If they look into your eyes, your heart will turn to stone. So I've heard ...
+	AI_Output (self ,other,"DIA_Kjorn_BuyInfos_Dragon1_06_03"); //Their blood is as hot as boiling oil. If they look into your eyes, your heart will turn to stone. So I've heard...
 	
 	KjornToldDragon = 1;
 	Info_ClearChoices (DIA_Kjorn_BuyInfos);

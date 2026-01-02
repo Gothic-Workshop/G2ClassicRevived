@@ -49,17 +49,17 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_01(C_Item)
 					Doc_PrintLine	( nDocID,  1,"Light");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"Innos' first gift to mankind. A shining ball appears over the magician.");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_PrintLine	( nDocID,  1,  "" );
 					Doc_PrintLine	( nDocID,  1,"Ice Bolt");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"A missile of magic energy.");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1,"Fire Bolt");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"A missile of magic Fire.");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_Show		( nDocID );
 	};
 	
@@ -118,8 +118,8 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_02(C_Item)
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLines	( nDocID,  1,"This spell has the power of healing the magician.");
-					Doc_PrintLine	( nDocID,  1,"Investment spells");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					
@@ -177,19 +177,19 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_03 (C_Item)
 					Doc_PrintLine	( nDocID,  1,"Fireball");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"Innos' second gift to the children of Fire. A ball of fire, which burns its victims.");
-					Doc_PrintLine	( nDocID,  1,"Charging Spell");
-					Doc_PrintLine	( nDocID,  1, "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,"");
+					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1,"Ice Block");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"The victim is enclosed in a block of ice. A spell from the temple of the Magicians of Water.");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "REPLACEME");
+					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1,"Ball Lightning");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"A ball of magic power.");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_Show		( nDocID );
 	};
 		
@@ -244,18 +244,18 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_04 (C_Item)
 					Doc_PrintLine	( nDocID,  1,"Storm of Fire");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"Like the fireball, this spell affects one foe, but then leaps to other foes as well.");
-					Doc_PrintLine	( nDocID,  1,"Charging spell");
+					Doc_PrintLine	( nDocID,  1,"");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLine	( nDocID,  1, "REPLACEME");
+					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1,"Chain Lightning");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"The spell is leaping to more targets, the longer it is working. The power of lighning is hard to control. Thus, the caster himself may become a target.");
-					Doc_PrintLine	( nDocID,  1,  "REPLACEME");
+					Doc_PrintLine	( nDocID,  1,  "");
 					Doc_PrintLine	( nDocID,  1, "");	
 					Doc_PrintLine	( nDocID,  1,"Death to the Undead");
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"This spell banishes undead creatures of darkness.");	
-					Doc_PrintLine	( nDocID,  1, "REPLACEME");
+					Doc_PrintLine	( nDocID,  1, "");
 					
 					Doc_Show		( nDocID );
 	};
@@ -302,7 +302,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 					Doc_PrintLine	( nDocID,  0,"Rain of Fire");
 					Doc_PrintLine	( nDocID,  0,"---------------");
 					Doc_PrintLines	( nDocID,  0,"The power of divine Fire hits every creature within range of the magician.");
-					Doc_PrintLine	( nDocID,  0, "REPLACEME");					
+					Doc_PrintLine	( nDocID,  0, "");					
 					
 					
 					//2.Seite
@@ -312,7 +312,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_05(C_Item)
 					Doc_PrintLine	( nDocID,  1,"---------------");
 					Doc_PrintLines	( nDocID,  1,"A magic Wave of Ice extends over any foes and freezes them for a short period of time. During this period, the victims are paralyzed and damaged. ");
 					Doc_PrintLines	( nDocID,  1,"A spell from the temple of the Magicians of Water.");
-					Doc_PrintLine	( nDocID,  1, "REPLACEME");
+					Doc_PrintLine	( nDocID,  1, "");
 					Doc_Show		( nDocID );
 };
 
@@ -360,7 +360,7 @@ INSTANCE ITWR_REVIVED_CIRCLE_KDF_06(C_Item)
 					Doc_PrintLine	( nDocID,  0,"---------------");
 					Doc_PrintLines	( nDocID,  0,"Beliar's breath. A cloud of destructive air, which may kill any being instantly.");
 					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "REPLACEME");					
+					Doc_PrintLine	( nDocID,  0, "");					
 					
 					
 					//2.Seite
@@ -1861,7 +1861,7 @@ INSTANCE ITWR_REVIVED_CERTIFICATE (C_Item)
 	description		=	"Title Deed";
 	TEXT[0]			=	"Entitles the holder to claim the";
 	TEXT[1]			=	"territory of the mountain fort.";
-	TEXT[5]			=	"Value                                   400 pounds of gold";
+	TEXT[5]			=	"Value                                      400 pounds of gold";
 };
 
 FUNC VOID UseUrkunde()

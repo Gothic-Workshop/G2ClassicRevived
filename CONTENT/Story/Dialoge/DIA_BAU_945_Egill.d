@@ -79,7 +79,7 @@ func int DIA_Egill_FELDARBEIT_Condition ()
 func void DIA_Egill_FELDARBEIT_Info ()
 {
 	AI_Output			(other, self, "DIA_Egill_FELDARBEIT_15_00"); //How's the field work going?
-	AI_Output			(self, other, "DIA_Egill_FELDARBEIT_08_01"); //Great. If those miserable field raiders weren't constantly destroying our harvest ...
+	AI_Output			(self, other, "DIA_Egill_FELDARBEIT_08_01"); //Great. If those miserable field raiders weren't constantly destroying our harvest...
 
 };
 

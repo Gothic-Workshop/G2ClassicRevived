@@ -123,12 +123,12 @@ FUNC INT B_OreMob_Bestimmung()
 		OreMob_24_Amount = (OreMob_24_Amount +1);
 		return TRUE;
 	}
-	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_007") && (OreMob_All_Amount_MAX > OreMob_25_Amount)
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_005") && (OreMob_All_Amount_MAX > OreMob_25_Amount)
 	{
 		OreMob_25_Amount = (OreMob_25_Amount +1);
 		return TRUE;
 	}
-	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_018") && (OreMob_All_Amount_MAX > OreMob_26_Amount)
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_007") && (OreMob_All_Amount_MAX > OreMob_26_Amount)
 	{
 		OreMob_26_Amount = (OreMob_26_Amount +1);
 		return TRUE;
@@ -143,14 +143,26 @@ FUNC INT B_OreMob_Bestimmung()
 		OreMob_28_Amount = (OreMob_28_Amount +1);
 		return TRUE;
 	}
-	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_019") && (OreMob_All_Amount_MAX > OreMob_29_Amount)
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_018") && (OreMob_All_Amount_MAX > OreMob_29_Amount)
 	{
 		OreMob_29_Amount = (OreMob_29_Amount +1);
 		return TRUE;
 	}
-	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_005") && (OreMob_All_Amount_MAX > OreMob_30_Amount)
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "AM_ORE_019") && (OreMob_All_Amount_MAX > OreMob_30_Amount)
 	{
 		OreMob_30_Amount = (OreMob_30_Amount +1);
+		return TRUE;
+	}
+
+	//	NEWWORLD
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "NW_CASTLEMINE_13") && (OreMob_All_Amount_MAX > OreMob_31_Amount)
+	{
+		OreMob_31_Amount = (OreMob_31_Amount +1);
+		return TRUE;
+	}
+	else if Hlp_StrCmp (Npc_GetNearestWP (self), "NW_CASTLEMINE_12") && (OreMob_All_Amount_MAX > OreMob_32_Amount)
+	{
+		OreMob_32_Amount = (OreMob_32_Amount +1);
 		return TRUE;
 	};
 	

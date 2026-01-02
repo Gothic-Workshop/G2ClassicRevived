@@ -28,7 +28,7 @@ PROTOTYPE Mst_Default_Dragon_Fire(C_Npc)
 	protection	[PROT_MAGIC]		= 180;
 	
 	//----- Damage Types ----	
-	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

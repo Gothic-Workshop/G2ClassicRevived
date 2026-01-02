@@ -56,7 +56,7 @@ instance DIA_Maria_Umsehen		(C_INFO)
 	condition	= DIA_Maria_Umsehen_Condition;
 	information	= DIA_Maria_Umsehen_Info;
 	permanent  	= FALSE;
-	description = "I just wanted to have a look around here ...";
+	description = "I just wanted to have a look around here...";
 };
 
 func int DIA_Maria_Umsehen_Condition ()
@@ -69,7 +69,7 @@ func int DIA_Maria_Umsehen_Condition ()
 
 func void DIA_Maria_Umsehen_Info ()
 {
-	AI_Output (other, self, "DIA_Maria_Umsehen_15_00"); //I just wanted to have a look around here ...
+	AI_Output (other, self, "DIA_Maria_Umsehen_15_00"); //I just wanted to have a look around here...
 	AI_Output (self, other, "DIA_Maria_Umsehen_17_01"); //With all these men on the farm now, there's no peace to be had inside the house.
 	AI_Output (self, other, "DIA_Maria_Umsehen_17_02"); //They just keep barging in here.
 };

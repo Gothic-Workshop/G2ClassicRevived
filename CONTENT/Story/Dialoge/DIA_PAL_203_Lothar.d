@@ -119,7 +119,7 @@ func void DIA_Lothar_Hallo_Info ()
 		AI_Output (self, other, "DIA_Lothar_Hallo_01_01"); //I haven't seen you come through this gate.
 		AI_Output (other, self, "DIA_Lothar_Hallo_15_02"); //And?
 		AI_Output (self, other, "DIA_Lothar_Hallo_01_03"); //And the guards on the other gate have orders not to let any unknown persons into the city.
-		AI_Output (other, self, "DIA_Lothar_Hallo_15_04"); //Weeell ...
+		AI_Output (other, self, "DIA_Lothar_Hallo_15_04"); //Weeell...
 		AI_Output (self, other, "DIA_Lothar_Hallo_01_05"); //I shall have to have a word with those two!
 		AI_Output (self, other, "DIA_Lothar_Hallo_01_06"); //But now for us two:
 	};
@@ -194,7 +194,7 @@ func void DIA_Lothar_EyeInnos_Info ()
 		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_03"); //A magician told me about it.
 		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_04"); //I don't know what his motives were when he entrusted one of the secrets of our order to you.
 		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_05"); //But he certainly didn't mean for YOU to get your fingers on it.
-		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_06"); //But ...
+		AI_Output (other, self, "DIA_Lothar_EyeInnos_15_06"); //But...
 		AI_Output (self, other, "DIA_Lothar_EyeInnos_01_07"); //I don't want to hear any more about it!
 		if (Player_TalkedAboutDragons == TRUE)
 		{
@@ -556,7 +556,7 @@ func void B_Lothar_Blubb() //überflüsige Outputs
 	AI_Output (self ,other, "DIA_Lothar_Add_01_21"); //I believe there are five altogether.
 		
 	AI_Output (self ,other, "DIA_Lothar_Add_01_62"); //Tell me, didn't I make myself clear? No more tales about dragons!
-	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know ...?
+	AI_Output (other, self, "DIA_Lothar_Add_15_63"); //How do you know...?
 	AI_Output (self ,other, "DIA_Lothar_Add_01_64"); //That is NONE of your business!
 	AI_Output (self ,other, "DIA_Lothar_Add_01_65"); //That was the last time, understood?!
 	
@@ -621,14 +621,14 @@ func void DIA_Lothar_HelloAgain_Info ()
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_36"); //Where did you get that robe?
 		AI_Output (other, self, "DIA_Lothar_Add_15_37"); //I have passed the Test of Fire.
-		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Incredible. Then what is happening here must be the will of Innos ...
+		AI_Output (self ,other, "DIA_Lothar_Add_01_38"); //Incredible. Then what is happening here must be the will of Innos...
 	};
 
 	if (other.guild == GIL_SLD)
 	{
 		AI_Output (self ,other, "DIA_Lothar_Add_01_39"); //You haven't joined Onar's mercenaries, have you?
 		AI_Output (self ,other, "DIA_Lothar_Add_01_40"); //How did you get in here?
-		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //I bring a peace offering from Lee ...
+		AI_Output (other, self, "DIA_Lothar_Add_15_41"); //I bring a peace offering from Lee...
 		AI_Output (self ,other, "DIA_Lothar_Add_01_42"); //Bah! Lord Hagen will never agree to it.
 	};
 		
@@ -687,7 +687,7 @@ instance DIA_Lothar_OWRunning (C_INFO)
 	condition	 = 	DIA_Lothar_OWRunning_Condition;
 	information	 = 	DIA_Lothar_OWRunning_Info;
 	permanent    =  FALSE;
-	description  = 	"I went to see Lord Hagen ...";
+	description  = 	"I went to see Lord Hagen...";
 };
 func int DIA_Lothar_OWRunning_Condition ()
 {	
@@ -699,10 +699,10 @@ func int DIA_Lothar_OWRunning_Condition ()
 };
 func void DIA_Lothar_OWRunning_Info ()
 {
-	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //I went to see Lord Hagen ...
+	AI_Output (other, self, "DIA_Lothar_Add_15_53"); //I went to see Lord Hagen...
 	AI_Output (self ,other, "DIA_Lothar_Add_01_54"); //And? You didn't bother him with your dragon tales, did you?
 	AI_Output (other, self, "DIA_Lothar_Add_15_55"); //Yes, I did...
-	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Tell me this isn't true ...
+	AI_Output (self ,other, "DIA_Lothar_Add_01_56"); //Tell me this isn't true...
 	AI_Output (other, self, "DIA_Lothar_Add_15_57"); //He sent me to get him some proof...
 	AI_Output (self ,other, "DIA_Lothar_Add_01_58"); //Well then, good luck. (to himself) What a lunatic...
 	

@@ -1710,7 +1710,7 @@ INSTANCE PC_ITPO_PERM_MASTER_01 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_01_Condition;
 	information		= PC_ITPO_PERM_MASTER_01_Info;
 	permanent		= TRUE;
-	description		= "Potion of Power (1 king's sorrel, 1 Essence of Dexterity, 1 Essence of Strength)"; 
+	description		= "Potion of Power"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_01_Condition()
@@ -1735,7 +1735,7 @@ INSTANCE PC_ITPO_PERM_MASTER_02 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_02_Condition;
 	information		= PC_ITPO_PERM_MASTER_02_Info;
 	permanent		= TRUE;
-	description		= "Potion of Supremacy (1 king's sorrel, 1 Extract of Dexterity, 1 Extract of Strength)"; 
+	description		= "Potion of Supremacy"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_02_Condition()
@@ -1760,7 +1760,7 @@ INSTANCE PC_ITPO_PERM_MASTER_03 (C_INFO)
 	condition		= PC_ITPO_PERM_MASTER_03_Condition;
 	information		= PC_ITPO_PERM_MASTER_03_Info;
 	permanent		= TRUE;
-	description		= "Potion of Godhood (1 king's sorrel, 1 Elixir of Dexterity, 1 Elixir of Strength)"; 
+	description		= "Potion of Godhood"; 
 };
 
 FUNC INT PC_ITPO_PERM_MASTER_03_Condition()
@@ -1852,7 +1852,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Life (1 healing root, 1 king's sorrel, 1 Essence of Healing)"; 
+	description		= "Essence of Life"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_01_Condition()
@@ -1877,7 +1877,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Life (1 healing root, 1 king's sorrel, 1 Extract of Healing)"; 
+	description		= "Extract of Life"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_02_Condition()
@@ -1902,7 +1902,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_HEALTH_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_HEALTH_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_HEALTH_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Life (1 healing root, 1 king's sorrel, 1 Elixir of Healing)"; 
+	description		= "Elixir of Life"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_HEALTH_03_Condition()
@@ -1989,7 +1989,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of the Spirit (1 fire root, 1 king's sorrel, 1 Essence of Magic)"; 
+	description		= "Essence of the Spirit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_01_Condition()
@@ -2014,7 +2014,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of the Spirit (1 fire root, 1 king's sorrel, 1 Extract of Magic)"; 
+	description		= "Extract of the Spirit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_02_Condition()
@@ -2039,7 +2039,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_MANA_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_MANA_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_MANA_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of the Spirit (1 fire root, 1 king's sorrel, 1 Elixir of Magic)"; 
+	description		= "Elixir of the Spirit"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_MANA_03_Condition()
@@ -2126,7 +2126,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Strength (1 dragon root, 1 meadow knotweed)"; 
+	description		= "Essence of Strength"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_01_Condition()
@@ -2151,7 +2151,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Strength (2 dragon roots, 1 meadow knotweed)"; 
+	description		= "Extract of Strength"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_02_Condition()
@@ -2176,7 +2176,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_STR_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_STR_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_STR_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Strength (3 dragon roots, 1 meadow knotweed)"; 
+	description		= "Elixir of Strength"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_STR_03_Condition()
@@ -2263,7 +2263,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_01_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_01_Info;
 	permanent		= TRUE;
-	description		= "Essence of Dexterity (1 goblin berry, 1 meadow knotweed)"; 
+	description		= "Essence of Dexterity"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_01_Condition()
@@ -2288,7 +2288,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_02_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_02_Info;
 	permanent		= TRUE;
-	description		= "Extract of Dexterity (2 goblin berries, 1 meadow knotweed)"; 
+	description		= "Extract of Dexterity"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_02_Condition()
@@ -2313,7 +2313,7 @@ INSTANCE PC_ITPO_REVIVED_BOOST_DEX_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_BOOST_DEX_03_Condition;
 	information		= PC_ITPO_REVIVED_BOOST_DEX_03_Info;
 	permanent		= TRUE;
-	description		= "Elixir of Dexterity (3 goblin berries, 1 meadow knotweed)"; 
+	description		= "Elixir of Dexterity"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_BOOST_DEX_03_Condition()
@@ -2400,7 +2400,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_01 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_01_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_01_Info;
 	permanent		= TRUE;
-	description		= "Potion of Swiftness (1 snapperweed, 1 meadow knotweed)"; 
+	description		= "Potion of Swiftness"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_01_Condition()
@@ -2425,7 +2425,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_02 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_02_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_02_Info;
 	permanent		= TRUE;
-	description		= "Potion of Velocity (2 snapperweeds, 1 meadow knotweed)"; 
+	description		= "Potion of Velocity"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_02_Condition()
@@ -2450,7 +2450,7 @@ INSTANCE PC_ITPO_REVIVED_SPEED_03 (C_INFO)
 	condition		= PC_ITPO_REVIVED_SPEED_03_Condition;
 	information		= PC_ITPO_REVIVED_SPEED_03_Info;
 	permanent		= TRUE;
-	description		= "Potion of Haste (3 snapperweeds, 1 meadow knotweed)"; 
+	description		= "Potion of Haste"; 
 };
 
 FUNC INT PC_ITPO_REVIVED_SPEED_03_Condition()
@@ -2545,7 +2545,7 @@ INSTANCE PC_Booze_Lou (C_Info)
 	condition		= PC_Booze_Lou_Condition;
 	information		= PC_Booze_Lou_Info;
 	permanent		= TRUE;
-	description		= "Lou's Hammer (2 Turnip, 1 Swampweed, 1 Swampshark tooth, 1 White Rum)"; 
+	description		= "Lou's Hammer"; 
 };
 
 FUNC INT PC_Booze_Lou_Condition ()
@@ -2570,7 +2570,7 @@ INSTANCE PC_Booze_Schlaf (C_Info)
 	condition		= PC_Booze_Schlaf_Condition;
 	information		= PC_Booze_Schlaf_Info;
 	permanent		= TRUE;
-	description		= "Lou's Double Hammer (2 Turnip, 1 Swampweed, 1 Swampshark tooth, 1 Lou's Hammer)"; 
+	description		= "Lou's Double Hammer"; 
 };
 
 FUNC INT PC_Booze_Schlaf_Condition ()
@@ -2596,7 +2596,7 @@ INSTANCE PC_Booze_SchnellerHering (C_Info)
 	condition		= PC_Booze_SchnellerHering_Condition;
 	information		= PC_Booze_SchnellerHering_Info;
 	permanent		= TRUE;
-	description		= "Hasty Herring (1 Fish, 1 Snapperweed, 1 White Rum)"; 
+	description		= "Hasty Herring"; 
 };
 
 FUNC INT PC_Booze_SchnellerHering_Condition ()
@@ -2622,7 +2622,7 @@ INSTANCE PC_Booze_TurnipBooze (C_Info)
 	condition		= PC_Booze_TurnipBooze_Condition;
 	information		= PC_Booze_TurnipBooze_Info;
 	permanent		= TRUE;
-	description		= "Turnip Booze (4 Turnip, 1 Beer, 1 Minecrawler Mandibles)"; 
+	description		= "Turnip Booze"; 
 };
 
 FUNC INT PC_Booze_TurnipBooze_Condition ()
@@ -2648,7 +2648,7 @@ INSTANCE PC_Booze_VinoBooze (C_Info)
 	condition		= PC_Booze_VinoBooze_Condition;
 	information		= PC_Booze_VinoBooze_Info;
 	permanent		= TRUE;
-	description		= "Vino's Special (2 Berries, 2 Apple, 4 Pear, 1 Bloodfly's wings)"; 
+	description		= "Vino's Special"; 
 };
 
 FUNC INT PC_Booze_VinoBooze_Condition ()
@@ -2674,7 +2674,7 @@ INSTANCE PC_BOOZE_MonsterDrink (C_Info)
 	condition		= PC_BOOZE_MonsterDrink_Condition;
 	information		= PC_BOOZE_MonsterDrink_Info;
 	permanent		= TRUE;
-	description		= "Monster Drink (2 King's Sorrel, 2 Troll Tusk, 4 Teeth, 4 Claws)"; 
+	description		= "Monster Drink"; 
 };
 
 FUNC INT PC_BOOZE_MonsterDrink_Condition ()
@@ -2700,7 +2700,7 @@ INSTANCE PC_Booze_MageWine (C_Info)
 	condition		= PC_Booze_MageWine_Condition;
 	information		= PC_Booze_MageWine_Info;
 	permanent		= TRUE;
-	description		= "Monastery Wine (4 Grapes, 1 Bloodfly's stinger)"; 
+	description		= "Monastery Wine"; 
 };
 
 FUNC INT PC_Booze_MageWine_Condition ()
@@ -2726,7 +2726,7 @@ INSTANCE PC_Booze_RiceSchnaps (C_Info)
 	condition		= PC_Booze_RiceSchnaps_Condition;
 	information		= PC_Booze_RiceSchnaps_Info;
 	permanent		= TRUE;
-	description		= "Rice Schnapps (4 Riceplant, 1 Lurker claws)"; 
+	description		= "Rice Schnapps"; 
 };
 
 FUNC INT PC_Booze_RiceSchnaps_Condition ()
@@ -2752,7 +2752,7 @@ INSTANCE PC_Booze_Mead (C_Info)
 	condition		= PC_Booze_Mead_Condition;
 	information		= PC_Booze_Mead_Info;
 	permanent		= TRUE;
-	description		= "Mead (2 Honey comb, 1 Field Raider mandibles)"; 
+	description		= "Mead"; 
 };
 
 FUNC INT PC_Booze_Mead_Condition ()

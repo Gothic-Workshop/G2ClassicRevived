@@ -442,7 +442,7 @@ func void DIA_Jack_BEMYCAPTAIN_seaman ()
 	
 	Info_ClearChoices	(DIA_Jack_BEMYCAPTAIN);
 	Info_AddChoice	(DIA_Jack_BEMYCAPTAIN, "Never mind. It was just an idea.", DIA_Jack_BEMYCAPTAIN_no );
-	Info_AddChoice	(DIA_Jack_BEMYCAPTAIN, "What if I brought you someone ...?", DIA_Jack_BEMYCAPTAIN_seaman_NewOfficer );
+	Info_AddChoice	(DIA_Jack_BEMYCAPTAIN, "What if I brought you someone...?", DIA_Jack_BEMYCAPTAIN_seaman_NewOfficer );
 
 };
 func void DIA_Jack_BEMYCAPTAIN_seaman_NewOfficer ()
@@ -474,7 +474,7 @@ instance DIA_Jack_BEMYCAPTAIN2		(C_INFO)
 	condition	 = 	DIA_Jack_BEMYCAPTAIN2_Condition;
 	information	 = 	DIA_Jack_BEMYCAPTAIN2_Info;
 
-	description	 = 	"About Brian ...";
+	description	 = 	"About Brian...";
 };
 
 func int DIA_Jack_BEMYCAPTAIN2_Condition ()

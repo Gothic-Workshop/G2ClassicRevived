@@ -58,7 +58,7 @@ INSTANCE DIA_Opolos_Wurst(C_INFO)
 	condition	= DIA_Opolos_Wurst_Condition;
 	information	= DIA_Opolos_Wurst_Info;
 	permanent	= FALSE;
-	description = "I've got this mutton sausage here ...";
+	description = "I've got this mutton sausage here...";
 };                       
 
 FUNC INT DIA_Opolos_Wurst_Condition()
@@ -74,7 +74,7 @@ FUNC INT DIA_Opolos_Wurst_Condition()
 
 FUNC VOID DIA_Opolos_Wurst_Info()
 {	
-	AI_Output (other, self, "DIA_Opolos_Wurst_15_00"); //I've got this mutton sausage here ...
+	AI_Output (other, self, "DIA_Opolos_Wurst_15_00"); //I've got this mutton sausage here...
 	AI_Output (self, other, "DIA_Opolos_Wurst_12_01"); //Oh, man, fantastic! Finally another delicious mutton sausage.
 	B_GiveInvItems (other, self, ItFo_SchafsWurst, 1);
 	Wurst_Gegeben = (Wurst_Gegeben +1);
@@ -191,7 +191,7 @@ INSTANCE DIA_Opolos_rezept   (C_INFO)
 	condition   = DIA_Opolos_rezept_Condition;
 	information = DIA_Opolos_rezept_Info;
 	permanent   = TRUE;
-	description	= "About the recipe ...";
+	description	= "About the recipe...";
 };
 //-----------------------------------
 var int DIA_Opolos_rezept_permanent;
@@ -212,7 +212,7 @@ FUNC VOID DIA_Opolos_rezept_Info()
 		AI_Output (other,self ,"DIA_Opolos_rezept_15_00"); //I've got the recipe you wanted.
 		AI_Output (self ,other,"DIA_Opolos_rezept_12_01"); //Good, then let me read it.
 		B_UseFakeScroll ();
-		AI_Output (self ,other,"DIA_Opolos_rezept_12_02"); //Aha ... hm ... yes ... I see ... well, well ...
+		AI_Output (self ,other,"DIA_Opolos_rezept_12_02"); //Aha... hm... yes... I see... well, well...
 		B_UseFakeScroll ();
 		AI_Output (self ,other,"DIA_Opolos_rezept_12_03"); //Good, thanks a lot. If you want, you can train with me.
 		
@@ -388,7 +388,7 @@ INSTANCE DIA_Opolos_Biblothek   (C_INFO)
 	condition   = DIA_Opolos_Biblothek_Condition;
 	information = DIA_Opolos_Biblothek_Info;
 	permanent   = TRUE;
-	description	= "About the library ...";
+	description	= "About the library...";
 };
 FUNC INT DIA_Opolos_Biblothek_Condition()
 {
@@ -400,7 +400,7 @@ FUNC INT DIA_Opolos_Biblothek_Condition()
 };
 FUNC VOID DIA_Opolos_Biblothek_Info()
 {
-	AI_Output (other ,self,"DIA_Opolos_Biblothek_15_00"); //About the library ...
+	AI_Output (other ,self,"DIA_Opolos_Biblothek_15_00"); //About the library...
 	
 	if (Parlan_Erlaubnis == FALSE)
 	{

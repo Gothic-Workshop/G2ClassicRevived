@@ -68,12 +68,12 @@ FUNC VOID DIA_Hokurn_Hello_No ()
 
 	Info_ClearChoices (DIA_Hokurn_Hello);
 	Info_AddChoice (DIA_Hokurn_Hello,DIALOG_ENDE,DIA_Hokurn_Hello_END);
-	Info_AddChoice (DIA_Hokurn_Hello,"One more thing ...",DIA_Hokurn_Hello_ASK1);
+	Info_AddChoice (DIA_Hokurn_Hello,"One more thing...",DIA_Hokurn_Hello_ASK1);
 };
 
 FUNC VOID DIA_Hokurn_Hello_ASK1 ()
 {
-	AI_Output (other,self ,"DIA_Hokurn_Hello_ASK1_15_00"); //One more thing ...
+	AI_Output (other,self ,"DIA_Hokurn_Hello_ASK1_15_00"); //One more thing...
 	AI_Output (self ,other,"DIA_Hokurn_Hello_ASK1_01_01"); //(bellows) Didn't you understand me? PISS OFF!!!
 	
 	Info_ClearChoices (DIA_Hokurn_Hello);

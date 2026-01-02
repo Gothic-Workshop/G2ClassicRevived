@@ -148,7 +148,7 @@ FUNC INT DIA_Ramirez_Beute_Condition()
 };
 FUNC VOID DIA_Ramirez_Beute_Info()
 {
-	AI_Output (self, other, "DIA_Ramirez_Beute_14_00");//Listen, you can't be serious, can you? You're bagging our gold ... you're trying to steal from us?
+	AI_Output (self, other, "DIA_Ramirez_Beute_14_00");//Listen, you can't be serious, can you? You're bagging our gold... you're trying to steal from us?
 	AI_Output (other, self, "DIA_Ramirez_Beute_15_01");//Don't get all worked up over a couple of coins.
 	AI_Output (other, self, "DIA_Ramirez_Beute_15_02");//I mean, this bit of stuff here - is that ALL of your booty? That's all the thieves' guild of Khorinis has to offer?
 	AI_Output (self, other, "DIA_Ramirez_Beute_14_03");//Who says our booty is stored down here?
@@ -199,19 +199,19 @@ FUNC VOID DIA_Ramirez_Bezahlen_Info()
 		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_01");//I can't teach you anything. You already know everything about picking locks.
 		if (other.attribute[ATR_DEXTERITY] < T_MAX)
 		{
-			AI_Output (self, other, "DIA_Ramirez_Add_14_00"); //Now you only need to improve your dexterity ...
+			AI_Output (self, other, "DIA_Ramirez_Add_14_00"); //Now you only need to improve your dexterity...
 		};
 		DIA_Ramirez_Bezahlen_permanent = TRUE;
 		Info_ClearChoices (DIA_Ramirez_Bezahlen);
 	}
 	else 
 	{
-		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_02");//I can show you how to pick a lock. That'll cost you a mere ...
+		AI_Output (self, other, "DIA_Ramirez_Bezahlen_14_02");//I can show you how to pick a lock. That'll cost you a mere...
 		B_Say_Gold (self, other, Ramirez_Cost);
 		
 		Info_ClearChoices (DIA_Ramirez_Bezahlen);
-		Info_AddChoice (DIA_Ramirez_Bezahlen,"Maybe later ...(BACK)",DIA_Ramirez_Bezahlen_Spaeter);
-		Info_AddChoice (DIA_Ramirez_Bezahlen,"OK, I'll pay ...",DIA_Ramirez_Bezahlen_Okay);
+		Info_AddChoice (DIA_Ramirez_Bezahlen,"Maybe later...(BACK)",DIA_Ramirez_Bezahlen_Spaeter);
+		Info_AddChoice (DIA_Ramirez_Bezahlen,"OK, I'll pay...",DIA_Ramirez_Bezahlen_Okay);
 	};
 };
 FUNC VOID DIA_Ramirez_Bezahlen_Spaeter()
@@ -220,7 +220,7 @@ FUNC VOID DIA_Ramirez_Bezahlen_Spaeter()
 };
 FUNC VOID DIA_Ramirez_Bezahlen_Okay()
 {
-	AI_Output (other, self, "DIA_Ramirez_Bezahlen_Okay_15_00");//OK, I'll pay ...
+	AI_Output (other, self, "DIA_Ramirez_Bezahlen_Okay_15_00");//OK, I'll pay...
 	
 	if B_GiveInvItems (other, self, ItMi_Gold, Ramirez_Cost)
 	{
@@ -268,7 +268,7 @@ FUNC VOID DIA_Ramirez_Teach_Info()
 		AI_Output (self, other, "DIA_Ramirez_Teach_14_01");//You need a lot of feeling and intuition. And a couple of good lock picks.
 		AI_Output (self, other, "DIA_Ramirez_Teach_14_02");//Some chests, however, are fitted with special locks which can only be opened with the corresponding key.
 		Ramirez_Zweimal = TRUE;
-	}
+	};
 	if B_TeachThiefTalent (self, other, NPC_TALENT_PICKLOCK)
 	{
 		AI_Output (self, other, "DIA_Ramirez_Teach_14_03");//So, kneeling in front of the lock, turn your lock pick to the left and right.
@@ -328,7 +328,7 @@ FUNC INT DIA_Ramirez_Sextant_Condition()
 FUNC VOID DIA_Ramirez_Sextant_Info()
 {
 	AI_Output (other, self, "DIA_Ramirez_Sextant_15_00");//Have you got a job for me?
-	AI_Output (self, other, "DIA_Ramirez_Sextant_14_01");//Hmm ... there is a thing that I'd like to have. But I haven't found one so far.
+	AI_Output (self, other, "DIA_Ramirez_Sextant_14_01");//Hmm... there is a thing that I'd like to have. But I haven't found one so far.
 	AI_Output (other, self, "DIA_Ramirez_Sextant_15_02");//What can I get you?
 	AI_Output (self, other, "DIA_Ramirez_Sextant_14_03");//A sextant. Bring me a sextant - I'll pay you a good price for it.
 	

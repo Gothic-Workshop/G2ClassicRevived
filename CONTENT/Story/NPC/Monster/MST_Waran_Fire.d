@@ -65,6 +65,13 @@ func void B_Setvisuals_FireWaran()
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"War_Fire_Body",DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
+func void B_SetVisuals_BeachFireWaran()
+{
+	Mdl_SetVisual			(self,	"Waran.mds");
+	Mdl_ApplyOverlayMds 	(self,	"Firewaran.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"WAR_BEACH_FIRE_BODY",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
 
 
 //*****************
@@ -74,5 +81,11 @@ func void B_Setvisuals_FireWaran()
 INSTANCE FireWaran	(Mst_Default_FireWaran)
 {
 	B_SetVisuals_FireWaran();
+	Npc_SetToFistMode(self);
+};
+
+INSTANCE BeachFireWaran	(Mst_Default_FireWaran)
+{
+	B_SetVisuals_BeachFireWaran();
 	Npc_SetToFistMode(self);
 };

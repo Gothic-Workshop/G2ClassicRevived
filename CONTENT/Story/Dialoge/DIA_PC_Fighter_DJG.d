@@ -212,7 +212,7 @@ func void DIA_GornDJG_HELPKILLDRACONIANS_Info ()
 	AI_Output			(other, self, "DIA_GornDJG_HELPKILLDRACONIANS_15_00"); //Can you help me get into the fortress?
 	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_01"); //I don't really know. I'm afraid the orcs will attack just at the very moment I look away.
 	AI_Output			(other, self, "DIA_GornDJG_HELPKILLDRACONIANS_15_02"); //That's paranoid!
-	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_03"); //Can't be helped. I'd never forgive myself if I came too late, you see? On the other hand ...
+	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_03"); //Can't be helped. I'd never forgive myself if I came too late, you see? On the other hand...
 	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_04"); //Whatever! Why else am I here? Let's charge the plain and fight our way clear to the fortress.
 	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_05"); //A little exercise can't hurt. Besides, I want to get a closer look at those beasts up there.
 	AI_Output			(self, other, "DIA_GornDJG_HELPKILLDRACONIANS_12_06"); //Let me know when you're ready!

@@ -168,7 +168,7 @@ FUNC INT DIA_Edda_Statue_Condition()
 FUNC VOID DIA_Edda_Statue_Info()
 {	
 	AI_Output (other ,self,"DIA_Edda_Statue_15_00"); //Look, I've got a statue of Innos for you.
-	AI_Output (self ,other,"DIA_Edda_Statue_17_01"); //Oh - thank you very, very much. May Innos let his light shine on you ...
+	AI_Output (self ,other,"DIA_Edda_Statue_17_01"); //Oh - thank you very, very much. May Innos let his light shine on you...
 	AI_Output (other ,self,"DIA_Edda_Statue_15_02"); //Yeah, never mind.
 	
 	B_GiveInvItems (other, self,ItMI_InnosStatue, 1); 

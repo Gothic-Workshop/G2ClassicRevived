@@ -347,7 +347,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_LEE (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Axe_Lee;
 
-	//owner 				= 	SLD_700_LEE;
+	owner 				= 	SLD_800_Lee; //SLD_700_LEE;
 	visual 				=	"REV_2H_AXE_HEAVY_01.3DS";
 
 	description			= 	name;
@@ -375,7 +375,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_SYLVIO (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Axe_Sylvio;
 
-	//owner 				=   SLD_701_ORIK;
+	owner 				=   SLD_806_Sylvio; //SLD_701_ORIK;
 	visual 				=	"REV_2H_AXE_HEAVY_04.3DS";
 
 	description			= 	name;
@@ -403,7 +403,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_TORLOF (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Axe_Torlof;
 
-	//owner 				= 	SLD_737_TORLOF;
+	owner 				= 	SLD_801_Torlof; //SLD_737_TORLOF;
 	visual 				=	"REV_2H_AXE_HEAVY_02.3DS";
 
 	description			= 	name;
@@ -431,7 +431,7 @@ INSTANCE ITMW_REVIVED_2H_AXE_GORN (C_Item)
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Axe_Gorn;
 
-	//owner 				=    PC_FIGHTER;
+	//owner 				=   PC_FIGHTER_OW|PC_Fighter_DJG|PC_Fighter_NW_vor_DJG|PC_Fighter_NW_nach_DJG|PC_Fighter_DI; //PC_FIGHTER;
 	visual 				=	"REV_2H_AXE_HEAVY_03.3DS";
 
 	description			= 	name;

@@ -197,7 +197,7 @@ func void DIA_Addon_Farim_MartinHelps_Info ()
 	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_04"); //Martin, the provisions master of the paladins, wants to hear your story about the militia and the fish.
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_05"); //And you think he can make the militia leave me alone?
 	AI_Output	(other, self, "DIA_Addon_Farim_MartinHelps_15_06"); //At least that's what he said.
-	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_07"); //Great. Thank you. I cannot give you much. But wait ...
+	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_07"); //Great. Thank you. I cannot give you much. But wait...
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_08"); //I found this strange blue stone on one of the islands off the coast of Khorinis.
 	AI_Output	(self, other, "DIA_Addon_Farim_MartinHelps_11_09"); //I don't think it's worth a whole lot, but someone like you will certainly find a use for it.
 		

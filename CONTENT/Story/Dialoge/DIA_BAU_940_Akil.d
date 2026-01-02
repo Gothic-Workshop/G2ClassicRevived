@@ -58,9 +58,9 @@ func int DIA_Akil_Hallo_Condition ()
 func void DIA_Akil_Hallo_Info ()
 {
 	AI_Output  (other, self, "DIA_Akil_Hallo_15_00"); //Is there a problem?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(sweating) ... Eh ... no, no ... everything's fine. (nervous) It ... would be better if you left now.
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_01"); //(sweating)... Eh... no, no... everything's fine. (nervous) It... would be better if you left now.
 	AI_Output  (other, self, "DIA_Akil_Hallo_15_02"); //Are you sure?
-	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh ... yeah, yeah ... everything's fine. You ... eh ... I ... I can't talk to you now.
+	AI_Output  (self, other, "DIA_Akil_Hallo_13_03"); //eh... yeah, yeah... everything's fine. You... eh... I... I can't talk to you now.
 	
 	Log_CreateTopic (TOPIC_AkilsSLDStillthere, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_AkilsSLDStillthere, LOG_RUNNING);
@@ -94,7 +94,7 @@ func int DIA_Akil_Nichtjetzt_Condition ()
 };
 func void DIA_Akil_Nichtjetzt_Info ()
 {
-	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Eh ... not now, I can't talk to you now.
+	AI_Output (self, other, "DIA_Akil_Nichtjetzt_13_00"); //Eh... not now, I can't talk to you now.
 	AI_StopProcessInfos (self);
 };	
 ///////////////////////////////////////////////////////////////////////
@@ -132,7 +132,7 @@ func void DIA_Akil_NachKampf_Info ()
 			AI_Output (self, other, "DIA_Akil_NachKampf_13_04"); //Those were mercenaries from Onar's farm. Those bastards don't know anything but plunder and murder.
 		};
 		
-	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //I'd been fearing the worst ...
+	AI_Output (self, other, "DIA_Akil_NachKampf_13_05"); //I'd been fearing the worst...
 	AI_Output (self, other, "DIA_Akil_NachKampf_13_06"); //(deep breath)... well, thank Innos it didn't come to that. Tell me what I can do for you.
 	
 	Info_ClearChoices (DIA_Akil_NachKampf);
@@ -224,7 +224,7 @@ instance DIA_Akil_Lieferung		(C_INFO)
 	condition	 = 	DIA_Akil_Lieferung_Condition;
 	information	 = 	DIA_Akil_Lieferung_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"Baltram sent me ...";
+	description	 = 	"Baltram sent me...";
 };
 
 func int DIA_Akil_Lieferung_Condition ()
@@ -243,8 +243,8 @@ func void DIA_Akil_Lieferung_Info ()
 	B_GiveInvItems (self, other, ItMi_BaltramPaket,1);
 	Lieferung_Geholt = TRUE;
 	
-	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now ...");
-	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now ...");
+	B_LogEntry (TOPIC_Baltram, "I've got the shipment. I could take it to Baltram now...");
+	B_LogEntry (TOPIC_Nagur,   "I've got the shipment. I could take it to Nagur now...");
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -257,7 +257,7 @@ instance DIA_Akil_Gegend		(C_INFO)
 	condition	 = 	DIA_Akil_Gegend_Condition;
 	information	 = 	DIA_Akil_Gegend_Info;
 	permanent	 =  FALSE; 	 
-	description	 = 	"You know your way around this area ...";
+	description	 = 	"You know your way around this area...";
 };
 
 func int DIA_Akil_Gegend_Condition ()
@@ -269,116 +269,43 @@ func int DIA_Akil_Gegend_Condition ()
 	};
 };
 //-------------------------------
-var int Knows_Taverne;
-//-------------------------------
 func void DIA_Akil_Gegend_Info ()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area ...
+	AI_Output (other, self, "DIA_Akil_Gegend_15_00"); //You know your way around this area...
 	AI_Output (self, other, "DIA_Akil_Gegend_13_01"); //Sure, what do you want to know?
+
+	Info_AddChoice	(DIA_Akil_Gegend, DIALOG_BACK 		,DIA_Akil_Gegend_BACK);
+	Info_AddChoice	(DIA_Akil_Gegend, "What is that tavern to the east of here?", DIA_Akil_Gegend_Taverne );
+	Info_AddChoice	(DIA_Akil_Gegend, "What is there in the woods behind your farm?", DIA_Akil_Gegend_Wald );
+	Info_AddChoice	(DIA_Akil_Gegend, "Where can I find Onar's farm?", DIA_Akil_Gegend_Onar );
 };
-/*
+
 FUNC VOID DIA_Akil_Gegend_BACK()
 {
+	AI_Output			(other, self, "DIA_Biff_HALLO_doof_15_00"); //Never mind.
 	Info_ClearChoices (DIA_Akil_Gegend);
 };
 FUNC VOID DIA_Akil_Gegend_Onar()
 {
-	AI_Output (other, self, "DIA_Akil_Gegend_Onar_15_00"); //Wo finde ich den Hof von Onar?
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_01"); //Geh einfach wieder die Steinstufen runter und folge dem Weg weiter nach Osten.
-	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_02"); //Irgendwann kommt eine Taverne. Da gehst du weiter nach Osten bis du zu den großen Feldern kommst. Da lungern dann schon die Söldner rum.
-	Knows_Taverne = TRUE;
-};
-FUNC VOID DIA_Akil_Gegend_Wald()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Wald_15_00"); //Was finde ich in dem Wald hinter deinem Hof?
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_01"); //Da gibt's nur jede Menge Monster - wobei die Wölfe noch die ungefährlichsten sind.
-	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_02"); //Angeblich sollen da auch ein paar Banditen ihre Höhle haben. Na - meinen Hof haben sie bis jetzt in Ruhe gelassen.
-};
-FUNC VOID DIA_Akil_Gegend_Taverne ()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //Was ist das für eine Taverne im Osten?
-	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Frag mal Randolph. Er weiß mehr darüber als ich. Er war schon ein paar mal dort.
-};
-*/
-///////////////////////////////////////////////////////////////////////
-//	Info Onars Hof
-///////////////////////////////////////////////////////////////////////
-instance DIA_Akil_Hof		(C_INFO)
-{
-	npc			 = 	BAU_940_Akil;
-	nr			 =	20;
-	condition	 = 	DIA_Akil_Hof_Condition;
-	information	 = 	DIA_Akil_Hof_Info;
-	permanent	 =  FALSE; 	 
-	description	 = 	"Where can I find Onar's farm?";
-};
-
-func int DIA_Akil_Hof_Condition ()
-{
-	if  Npc_KnowsInfo(other, DIA_Akil_Gegend)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Akil_Hof_Info ()
-{
 	AI_Output (other, self, "DIA_Akil_Gegend_Onar_15_00"); //Where can I find Onar's farm?
 	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_01"); //Just go back down the stone steps and follow the road to the east.
 	AI_Output (self, other, "DIA_Akil_Gegend_Onar_13_02"); //At some point you come to a tavern. From there you go farther east until you come to the big fields. That's where the mercenaries hang out.
-	Knows_Taverne = TRUE;
+	AI_StopProcessInfos (self);
 };
-///////////////////////////////////////////////////////////////////////
-//	Info Taverne
-///////////////////////////////////////////////////////////////////////
-instance DIA_Akil_Taverne		(C_INFO)
-{
-	npc			 = 	BAU_940_Akil;
-	nr			 =	20;
-	condition	 = 	DIA_Akil_Taverne_Condition;
-	information	 = 	DIA_Akil_Taverne_Info;
-	permanent	 =  FALSE; 	 
-	description	 = 	"What is that tavern to the east of here?";
-};
-
-func int DIA_Akil_Taverne_Condition ()
-{
-	if (Knows_Taverne == TRUE)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Akil_Taverne_Info ()
-{
-	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //What is that tavern to the east of here?
-	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Ask Randolph. He knows more about it than I do. He's been there a few times.
-};
-///////////////////////////////////////////////////////////////////////
-//	Info Wald
-///////////////////////////////////////////////////////////////////////
-instance DIA_Akil_Wald		(C_INFO)
-{
-	npc			 = 	BAU_940_Akil;
-	nr			 =	20;
-	condition	 = 	DIA_Akil_Wald_Condition;
-	information	 = 	DIA_Akil_Wald_Info;
-	permanent	 =  FALSE; 	 
-	description	 = 	"What is there in the woods behind your farm?";
-};
-func int DIA_Akil_Wald_Condition ()
-{
-
-	if  Npc_KnowsInfo(other, DIA_Akil_Gegend)
-	{
-		return TRUE;
-	};
-
-};
-func void DIA_Akil_Wald_Info ()
+FUNC VOID DIA_Akil_Gegend_Wald()
 {
 	AI_Output (other, self, "DIA_Akil_Gegend_Wald_15_00"); //What is there in the woods behind your farm?
 	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_01"); //There's just a whole bunch of monsters back there - and the wolves are the least dangerous.
 	AI_Output (self, other, "DIA_Akil_Gegend_Wald_13_02"); //A few bandits are also said to have their caves there. Well - they've left my farm alone so far.
+	AI_StopProcessInfos (self);
 };
+FUNC VOID DIA_Akil_Gegend_Taverne ()
+{
+	AI_Output (other, self, "DIA_Akil_Gegend_Taverne_15_00"); //What is that tavern to the east of here?
+	AI_Output (self, other, "DIA_Akil_Gegend_Taverne_13_01"); //Ask Randolph. He knows more about it than I do. He's been there a few times.
+	AI_StopProcessInfos (self);
+};
+
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm
 ///////////////////////////////////////////////////////////////////////
@@ -594,7 +521,7 @@ instance DIA_Akil_AkilsSchaf		(C_INFO)
 	condition	 = 	DIA_Akil_AkilsSchaf_Condition;
 	information	 = 	DIA_Akil_AkilsSchaf_Info;
 
-	description	 = 	"(return Akils sheep)";
+	description	 = 	"I found the sheep rustlers.";
 };
 
 func int DIA_Akil_AkilsSchaf_Condition ()
@@ -609,7 +536,7 @@ func int DIA_Akil_AkilsSchaf_Condition ()
 
 func void DIA_Akil_AkilsSchaf_Info ()
 {
-	//Joly: AI_Output			(other, self, "DIA_Akil_AkilsSchaf_15_00"); //Ich habe die Schafdiebe gefunden.
+	AI_Output			(other, self, "DIA_Akil_AkilsSchaf_15_00"); //I found the sheep rustlers.
 	AI_Output			(self, other, "DIA_Akil_AkilsSchaf_13_01"); //Very good. Here's a few gold coins. I hope it's enough.
 	
 	CreateInvItems (self, ItMi_Gold, 150);									

@@ -259,7 +259,7 @@ func int DIA_Torlof_RUF_Condition ()
 func void DIA_Torlof_RUF_Info ()
 {
 	AI_Output (other, self, "DIA_Torlof_RUF_15_00"); //How's my reputation among the mercenaries?
-	AI_Output (self, other, "DIA_Torlof_RUF_01_01"); //Let's see ...
+	AI_Output (self, other, "DIA_Torlof_RUF_01_01"); //Let's see...
 	
 	Points_Sld = 0;
 	
@@ -585,7 +585,7 @@ func void B_Torlof_TheOtherMissionDay()
 		
 		if (EnterOW_Kapitel2 == TRUE)
 		{
-			AI_Output (self, other, "DIA_Torlof_Add_01_00"); //And it's all the same to him if the paladins get eaten in the Valley of Mines or not ...
+			AI_Output (self, other, "DIA_Torlof_Add_01_00"); //And it's all the same to him if the paladins get eaten in the Valley of Mines or not...
 		};
 	}
 		else
@@ -624,7 +624,7 @@ func void DIA_Torlof_SekobSuccess_Info ()
 		AI_Output (self, other, "DIA_Torlof_SekobSuccess_01_01"); //And? Did he pay willingly?
 		if (Npc_IsDead (Sekob))
 		{
-			AI_Output (other, self, "DIA_Torlof_SekobTot_15_00"); //Well, he had a deadly accident ...
+			AI_Output (other, self, "DIA_Torlof_SekobTot_15_00"); //Well, he had a deadly accident...
 		}
 		else
 		{
@@ -678,7 +678,7 @@ func void DIA_Torlof_BengarSuccess_Info ()
 {
 	AI_Output (other, self, "DIA_Torlof_BengarSuccess_15_00"); //I took care of Bengar's militia problem.
 	AI_Output (self, other, "DIA_Torlof_BengarSuccess_01_01"); //Did you make sure that they won't be standing on his doorstep again tomorrow?
-	AI_Output (other, self, "DIA_Torlof_BengarSuccess_15_02"); //They'd have a really hard time doing that ...
+	AI_Output (other, self, "DIA_Torlof_BengarSuccess_15_02"); //They'd have a really hard time doing that...
 	AI_Output (self, other, "DIA_Torlof_BengarSuccess_01_03"); //Well done!
 		
 	if (Torlof_Probe == Probe_Bengar)
@@ -737,7 +737,7 @@ func void DIA_Torlof_Welcome_Info ()
 		AI_Output (self, other, "DIA_Torlof_Add_01_01"); //Where have you been?
 		AI_Output (other, self, "DIA_Torlof_Add_15_02"); //I was in the Valley of Mines! There are dragons there! They gave the paladins a pretty hard time!
 		AI_Output (self, other, "DIA_Torlof_Add_01_03"); //So? Then there really is something to the stories!
-		AI_Output (self, other, "DIA_Torlof_Add_01_04"); //Lee will be interested ...
+		AI_Output (self, other, "DIA_Torlof_Add_01_04"); //Lee will be interested...
 		Torlof_KnowsDragons = TRUE;
 	};
 
@@ -768,7 +768,7 @@ func void DIA_Torlof_TheOtherMission_Info ()
 		B_Torlof_Dragons();
 	};
 	
-	AI_Output (self, other, "DIA_Torlof_TheOtherMission_01_00"); //Good thing you're here. I've got something for you to do ...
+	AI_Output (self, other, "DIA_Torlof_TheOtherMission_01_00"); //Good thing you're here. I've got something for you to do...
 	AI_Output (other, self, "DIA_Torlof_TheOtherMission_15_01"); //What is it?
 		
 	if (Torlof_Probe == Probe_Bengar)
@@ -1059,7 +1059,7 @@ func void DIA_Torlof_DmtSuccess_Info ()
 {
 	AI_Output (other, self, "DIA_Torlof_DmtSuccess_15_00"); //The black-hooded men in the mountains are no longer with us.
 	AI_Output (self, other, "DIA_Torlof_DmtSuccess_01_01"); //You were able to deal with them? Good man!
-	AI_Output (self, other, "DIA_Torlof_DmtSuccess_01_02"); //I didn't trust those guys one bit. They were bound to cause a lot of trouble ...
+	AI_Output (self, other, "DIA_Torlof_DmtSuccess_01_02"); //I didn't trust those guys one bit. They were bound to cause a lot of trouble...
 	
 	MIS_Torlof_Dmt = LOG_SUCCESS;
 	B_GivePlayerXP (XP_Torlof_DMT);
@@ -1214,7 +1214,7 @@ instance DIA_Torlof_BEMYCAPTAIN2		(C_INFO)
 	condition	 = 	DIA_Torlof_BEMYCAPTAIN2_Condition;
 	information	 = 	DIA_Torlof_BEMYCAPTAIN2_Info;
 
-	description	 = 	"The gate to the castle in the Valley of Mines is open ...";
+	description	 = 	"The gate to the castle in the Valley of Mines is open...";
 };
 
 func int DIA_Torlof_BEMYCAPTAIN2_Condition ()

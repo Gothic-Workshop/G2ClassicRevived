@@ -49,7 +49,7 @@ FUNC VOID DIA_Jorgen_DI_Hallo_Info()
 
 	if (ORkSturmDI == FALSE)
 	{
-		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_01"); //Sure enough - just as long as all those monsters stay away from us ...
+		AI_Output (self ,other,"DIA_Jorgen_DI_Hallo_07_01"); //Sure enough - just as long as all those monsters stay away from us...
 	}
 	else
 	{

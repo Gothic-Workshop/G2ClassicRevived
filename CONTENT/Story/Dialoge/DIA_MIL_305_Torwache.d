@@ -171,7 +171,7 @@ func void DIA_Mil_305_Torwache_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"DIA_Mil_305_Torwache_Attack_03_00"); //You asked for it ...
+	AI_Output (self, other,"DIA_Mil_305_Torwache_Attack_03_00"); //You asked for it...
 	AI_StopProcessInfos	(self);	
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 
 };
@@ -343,7 +343,7 @@ FUNC INT DIA_Mil_305_Torwache_PassAsMage_Condition()
 FUNC VOID DIA_Mil_305_Torwache_PassAsMage_Info()
 {
 	AI_Output (other, self,"DIA_Mil_305_Torwache_PassAsMage_15_00"); //You dare stand in the way of a representative of Innos?
-	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMage_03_01"); //Ehm ... no! Of course not! The entrance is open to the chosen of Innos!
+	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMage_03_01"); //Ehm... no! Of course not! The entrance is open to the chosen of Innos!
 	AI_Output (other, self,"DIA_Mil_305_Torwache_PassAsMage_15_02"); //Pray to Innos for this sacrilege!
 	AI_Output (self, other,"DIA_Mil_305_Torwache_PassAsMage_03_03"); //Yes, chosen one!
 	

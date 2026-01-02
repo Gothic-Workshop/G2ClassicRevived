@@ -10,14 +10,14 @@ instance SLD_802_Buster (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesToChapter (self, 2);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	// MASTER / STRONG / NORMAL / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
-	EquipItem			(self, ITMW_REVIVED_1H_MACE_02);
-	EquipItem			(self, ItRw_Sld_Bow);
+	EquipItem			(self, ITMW_REVIVED_1H_MACE_03);
+	EquipItem			(self, ITRW_REVIVED_BOW_LONG_01);
 	CreateInvItems 		(self, ItRw_Arrow, 10);
 	
 	// ------ Inventory ------

@@ -109,7 +109,7 @@ INSTANCE DIA_Daron_Paladine(C_INFO)
 	condition	= DIA_Daron_Paladine_Condition;
 	information	= DIA_Daron_Paladine_Info;
 	permanent	= FALSE;
-	description = "I need to talk to the paladins ...";
+	description = "I need to talk to the paladins...";
 };                       
 FUNC INT DIA_Daron_Paladine_Condition()
 {	
@@ -161,7 +161,7 @@ FUNC VOID DIA_Daron_AboutSegen_Info()
 	else
 	{
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_01"); //That's good, that's good - then you will probably want to donate gold to the holy church of Innos, won't you?
-		AI_Output (other, self,"DIA_Daron_AboutSegen_15_02"); //Actually, I wanted your blessing so I can sign on as an apprentice in the lower part of town ...
+		AI_Output (other, self,"DIA_Daron_AboutSegen_15_02"); //Actually, I wanted your blessing so I can sign on as an apprentice in the lower part of town...
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_05"); //But, my son! Without a modest donation to the church, it is impossible for me to bless you.
 		AI_Output (self, other,"DIA_Daron_AboutSegen_10_06"); //How else can I be certain of your good intentions towards the holy church of Innos?
 	};
@@ -191,7 +191,7 @@ FUNC VOID DIA_Daron_Spenden_Info()
 {	
 	AI_Output (other, self,"DIA_Daron_Spenden_15_00");//So how much does a donation usually run to here?
 	AI_Output (self, other,"DIA_Daron_Spenden_10_01");//Well, that depends on what percentage you want to give. Let me see how much you brought.
-	AI_Output (self, other,"DIA_Daron_Spenden_10_02");//(looking in money pouch) Mmmmh hmmm ...
+	AI_Output (self, other,"DIA_Daron_Spenden_10_02");//(looking in money pouch) Mmmmh hmmm...
 	
 	if (Npc_HasItems (other, ItMi_Gold) < 10)
 	{
@@ -547,7 +547,7 @@ INSTANCE DIA_Daron_Spende(C_INFO)
 	condition	= DIA_Daron_Spende_Condition;
 	information	= DIA_Daron_Spende_Info;
 	permanent	= TRUE;
-	description	= "I want to make a donation ...";
+	description	= "I want to make a donation...";
 };      
 //-------------------------------------
 var int DIA_Daron_Spende_permanent;
@@ -565,13 +565,13 @@ FUNC INT DIA_Daron_Spende_Condition()
 FUNC VOID DIA_Daron_Spende_Info()
 {	
 	
-	AI_Output (other, self,"DIA_Daron_Spende_15_00");//I want to make a donation ...
+	AI_Output (other, self,"DIA_Daron_Spende_15_00");//I want to make a donation...
 	
 	Info_ClearChoices (DIA_Daron_Spende);
 	
 	if (Daron_Spende < 1000)
 	{
-		Info_AddChoice 	(DIA_Daron_Spende,"But I didn't bring enough gold ... (BACK)",DIA_Daron_Spende_BACK);
+		Info_AddChoice 	(DIA_Daron_Spende,"But I didn't bring enough gold... (BACK)",DIA_Daron_Spende_BACK);
 		
 		Info_AddChoice 	(DIA_Daron_Spende,"(50  gold)",DIA_Daron_Spende_50);
 		Info_AddChoice 	(DIA_Daron_Spende,"(100 gold)",DIA_Daron_Spende_100);
@@ -588,7 +588,7 @@ FUNC VOID DIA_Daron_Spende_Info()
 };
 FUNC VOID DIA_Daron_Spende_BACK()
 {
-	AI_Output (other, self,"DIA_Daron_Spende_BACK_15_00"); //But I didn't bring enough gold ...
+	AI_Output (other, self,"DIA_Daron_Spende_BACK_15_00"); //But I didn't bring enough gold...
 	AI_Output (self, other,"DIA_Daron_Spende_BACK_10_01"); //That doesn't matter, my son. You can also donate as much as you want later.
 	
 	Info_ClearChoices (DIA_Daron_Spende);

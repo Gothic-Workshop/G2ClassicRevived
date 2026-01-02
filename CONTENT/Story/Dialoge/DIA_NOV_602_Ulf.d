@@ -168,9 +168,9 @@ func int DIA_Ulf_Aufnahme_Condition ()
 func void DIA_Ulf_Aufnahme_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Aufnahme_15_00"); //How can I become a novice?
-	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_01"); //If a man feels the deep desire ...
+	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_01"); //If a man feels the deep desire...
 	AI_Output (other, self, "DIA_Ulf_Aufnahme_15_02"); //Hey - just tell me what the conditions are.
-	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_03"); //You need the offerings. A sheep and ...
+	AI_Output (self, other, "DIA_Ulf_Aufnahme_03_03"); //You need the offerings. A sheep and...
 	B_Say_Gold (self, other, Summe_Kloster);
 	
 	Log_CreateTopic (Topic_Kloster,LOG_MISSION);
@@ -287,7 +287,7 @@ func void DIA_Ulf_Rausgefunden_Info ()
 {
 	AI_Output (other, self, "DIA_Ulf_Rausgefunden_15_00"); //Have you found out anything yet?
 	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_01"); //Well, I just followed Agon - but in the meantime I lost him.
-	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_02"); //And now ... what do they say? Follow the signs of Innos. But I don't understand that bit with the path ...
+	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_02"); //And now... what do they say? Follow the signs of Innos. But I don't understand that bit with the path...
 	AI_Output (self, other, "DIA_Ulf_Rausgefunden_03_03"); //So what, I'll keep searching.
 	
 	AI_StopProcessInfos (self);
@@ -375,7 +375,7 @@ func int DIA_Ulf_Abrechnung_Condition ()
 func void DIA_Ulf_Abrechnung_Info ()
 {
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_00"); //So we meet again. I've been thinking, you know. I believe that the desire to be a magician is strong in me.
-	AI_Output (other, self, "DIA_Ulf_Abrechnung_15_01"); //Oh man - don't do that ...
+	AI_Output (other, self, "DIA_Ulf_Abrechnung_15_01"); //Oh man - don't do that...
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_02"); //I have no choice. A novice's life is not for me.
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_03"); //I just have to be a magician. Then everything will go well with me. And now I shall take what I'm entitled to.
 	AI_Output (self, other, "DIA_Ulf_Abrechnung_03_04"); //Do you have any last words?

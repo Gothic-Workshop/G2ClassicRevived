@@ -40,8 +40,8 @@ instance PAL_299_Sergio (Npc_Default)
 
 FUNC VOID Rtn_Start_299 ()
 {
-	TA_Pray_Innos  		(08,00,23,00,"NW_MONASTERY_CHAPELL_02");
-	TA_Pray_Innos		(23,00,08,00,"NW_MONASTERY_CHAPELL_02");	
+	TA_Pray_Innos  		(08,00,20,00,"NW_MONASTERY_CHAPELL_02");
+	TA_Guard_Passage	(20,00,08,00,"NW_MONASTERY_OUTSIDE_WHEEL");	
 };
 FUNC VOID Rtn_WaitForPlayer_299 ()
 {
@@ -50,8 +50,8 @@ FUNC VOID Rtn_WaitForPlayer_299 ()
 };
 FUNC VOID Rtn_Train_299 ()
 {
-	TA_Pray_Innos  	  (07,00,23,00,"NW_MONASTERY_CHAPELL_02");
-    TA_Pray_Innos 	  (23,00,05,00,"NW_MONASTERY_CHAPELL_02");	
+	TA_Pray_Innos  	  (07,00,20,00,"NW_MONASTERY_CHAPELL_02");
+	TA_Guard_Passage  (20,00,05,00,"NW_MONASTERY_OUTSIDE_WHEEL");	
 	TA_Practice_Sword (05,00,07,00,"NW_MONASTERY_TRAIN_01");	
 };
 FUNC VOID Rtn_Wait_299 ()

@@ -399,6 +399,11 @@ func void DIA_Addon_Martin_Fernando_Info ()
 			MIs_Martin_FindTheBanditTrader = LOG_SUCCESS;
 			B_LogEntry (TOPIC_Addon_BanditTrader,"Martin will see to it that Fernando serves his punishment. I should tell Vatras about it."); 
 
+			Ext_RemoveVobTree("NW_EROLBANDITS_TAVERN");
+			Ext_RemoveVobTree("NW_FERNANDOBANDITS_FARM3");
+			Ext_RemoveVobTree("NW_FERNANDOBANDITS_LUCIA");
+			Ext_RemoveVobTree("NW_FERNANDOBANDITS_TAVERN");
+
 			B_GivePlayerXP (XP_Addon_FernandoMartin);
 		}
 		else

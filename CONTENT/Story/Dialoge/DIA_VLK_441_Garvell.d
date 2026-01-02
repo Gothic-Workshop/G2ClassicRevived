@@ -288,7 +288,7 @@ instance DIA_Garvell_City		(C_INFO)
 	condition	 = 	DIA_Garvell_City_Condition;
 	information	 = 	DIA_Garvell_City_Info;
 	permanent    =  FALSE;
-	description	 = 	"As to that orc outside of town ...";
+	description	 = 	"As to that orc outside of town...";
 };
 func int DIA_Garvell_City_Condition ()
 {	
@@ -300,8 +300,8 @@ func int DIA_Garvell_City_Condition ()
 };
 func void DIA_Garvell_City_Info ()
 {
-	AI_Output (other, self, "DIA_Garvell_City_15_00"); //As to that orc outside of town ...
-	AI_Output (self, other, "DIA_Garvell_City_04_01"); //Yeees ... ?
+	AI_Output (other, self, "DIA_Garvell_City_15_00"); //As to that orc outside of town...
+	AI_Output (self, other, "DIA_Garvell_City_04_01"); //Yeees...?
 	AI_Output (other, self, "DIA_Garvell_City_15_02"); //Don't worry about him. The city guard is going to take care of him.
 	
 
@@ -343,7 +343,7 @@ func void DIA_Garvell_Perm_Info ()
 	if (MIS_Garvell_Infos != LOG_SUCCESS)
 	{
 		AI_Output (self, other, "DIA_Garvell_Perm_04_01"); //The orcs are breathing down our necks and you're asking about the harbor?
-		AI_Output (other, self, "DIA_Garvell_Perm_15_02"); //I only wanted to ...
+		AI_Output (other, self, "DIA_Garvell_Perm_15_02"); //I only wanted to...
 		AI_Output (self, other, "DIA_Garvell_Perm_04_03"); //The biggest problem we have is that there aren't enough ships in the harbor to get us out of here.
 		AI_Output (self, other, "DIA_Garvell_Perm_04_04"); //To be honest, there's only one ship here, and that belongs to the paladins. They certainly won't let us get out of here with it.
 	}

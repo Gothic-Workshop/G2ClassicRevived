@@ -152,7 +152,7 @@ func void DIA_Wulfgar_CanYouTrain_Info ()
 	{
 		AI_Output (self, other, "DIA_Wulfgar_CanYouTrain_04_03"); //But that's only true for combat training. All other kinds of training are reserved for the militia.
 		AI_Output (self, other, "DIA_Wulfgar_CanYouTrain_04_04"); //Can you at least halfway handle a weapon?
-		AI_Output (other, self, "DIA_Wulfgar_CanYouTrain_15_05"); //I think so ...
+		AI_Output (other, self, "DIA_Wulfgar_CanYouTrain_15_05"); //I think so...
 		AI_Output (self, other, "DIA_Wulfgar_CanYouTrain_04_06"); //(sighs) All right - you can start when you're ready.
 		Log_CreateTopic (Topic_CityTeacher, LOG_NOTE);
 		B_LogEntry (Topic_CityTeacher, "Wulfgar, the city guardsman, can teach me one-handed and two-handed fighting.");
@@ -216,7 +216,7 @@ func void DIA_Wulfgar_HowToBegin_Info ()
 	AI_Output (other, self, "DIA_Wulfgar_HowToBegin_15_00"); //Where should I start? With one-handed or two-handed weapons?
 	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_01"); //That's entirely up to you.
 	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_02"); //If you specialize in only one type of weapon, you automatically learn the other at the same time.
-	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_03"); //If, for instance, you are good at fighting with one-handed swords, but still a beginner with two-handed weapons ...
+	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_03"); //If, for instance, you are good at fighting with one-handed swords, but still a beginner with two-handed weapons...
 	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_04"); //... your two-handed skills will go up as well whenever you train with a one-hander.
 	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_05"); //In that case, the training is more exhausting than if you train with both types of weapons.
 	AI_Output (self, other, "DIA_Wulfgar_HowToBegin_04_06"); //Just start and you'll soon see what I'm talking about.

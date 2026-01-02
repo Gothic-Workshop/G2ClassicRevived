@@ -209,7 +209,7 @@ FUNC VOID DIA_Dyrian_Scroll_What ()
 {
 	AI_Output (other,self ,"DIA_Dyrian_Scroll_What_15_00"); //What can I do with it?
 	AI_Output (self,other ,"DIA_Dyrian_Scroll_What_13_01"); //With this spell you can put people into a magic sleep for a short time. But only if their will is weaker than yours.
-	AI_Output (self,other ,"DIA_Dyrian_Scroll_What_13_02"); //That could be very useful if someone is standing in your way ...
+	AI_Output (self,other ,"DIA_Dyrian_Scroll_What_13_02"); //That could be very useful if someone is standing in your way...
 	AI_Output (other,self ,"DIA_Dyrian_Scroll_What_15_03"); //And how do I know whether the other person has a weaker will?
 	AI_Output (self,other ,"DIA_Dyrian_Scroll_What_13_04"); //You needn't bother trying it with the magicians. But you could put most of the novices to sleep.
 };
@@ -297,7 +297,7 @@ FUNC VOID DIA_Dyrian_HelloAgain_Info()
 {
 	AI_Output (self ,other,"DIA_Dyrian_HelloAgain_13_00"); //(joyful) Thanks, you saved me!
 	AI_Output (self ,other,"DIA_Dyrian_HelloAgain_13_01"); //(frightened) Oh - forgive me Master - I didn't mean to impose.
-	AI_Output (self ,other,"DIA_Dyrian_HelloAgain_13_02"); //(respectfully) I thank you for being allowed to stay in the monastery. My life will be different from now on ...
+	AI_Output (self ,other,"DIA_Dyrian_HelloAgain_13_02"); //(respectfully) I thank you for being allowed to stay in the monastery. My life will be different from now on...
 	
 	B_GivePlayerXP (XP_Ambient); 	
 	AI_StopProcessInfos (self); 
@@ -419,7 +419,7 @@ FUNC VOID DIA_Dyrian_Kneipe_ShutUp ()
 {
 	AI_Output (other,self ,"DIA_Dyrian_Kneipe_ShutUp_15_00"); //Watch what you're saying there.
 	AI_Output (self ,other,"DIA_Dyrian_Kneipe_ShutUp_13_01"); //Yeah, go ahead and threaten me. It won't do you any good.
-	AI_Output (self ,other,"DIA_Dyrian_Kneipe_ShutUp_13_02"); //I'll tell the whole world what a hypocritical bastard you are! As soon as I've finished this bottle ...
+	AI_Output (self ,other,"DIA_Dyrian_Kneipe_ShutUp_13_02"); //I'll tell the whole world what a hypocritical bastard you are! As soon as I've finished this bottle...
 	AI_Output (self ,other,"DIA_Dyrian_Kneipe_ShutUp_13_03"); //Now get out of my sight, you disgust me!
 
 	AI_StopProcessInfos (self);

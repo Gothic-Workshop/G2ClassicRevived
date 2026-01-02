@@ -146,7 +146,7 @@ instance DIA_Kati_Baltram		(C_INFO)
 	condition	 = 	DIA_Kati_Baltram_Condition;
 	information	 = 	DIA_Kati_Baltram_Info;
 	permanent	 = 	FALSE;
-	description	 = "Baltram sent me ...";
+	description	 = "Baltram sent me...";
 };
 func int DIA_Kati_Baltram_Condition ()
 {

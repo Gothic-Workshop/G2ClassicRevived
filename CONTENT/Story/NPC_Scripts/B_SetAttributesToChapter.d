@@ -107,7 +107,7 @@ func void B_SetAttributesToChapter (var C_NPC slf, var int kap)
 	};
 	
 	// ------ Kapitel 6 NSCs -------
-	if (kap >= 6)
+	if (kap == 6)
 	{
 		slf.level = 60;
 		
@@ -120,6 +120,22 @@ func void B_SetAttributesToChapter (var C_NPC slf, var int kap)
 		slf.attribute[ATR_MANA] 			= 1000;
 		slf.attribute[ATR_HITPOINTS_MAX]	= 760;
 		slf.attribute[ATR_HITPOINTS] 		= 760;
+	};
+	
+	// ------ Unexistent Chapter 7, make OP characters -------
+	if (kap >= 7)
+	{
+		slf.level = 70;
+		
+		slf.attribute[ATR_STRENGTH] 		= 300;
+		slf.aivar[REAL_STRENGTH]			= 300;
+		slf.attribute[ATR_DEXTERITY] 		= 300;
+		slf.aivar[REAL_DEXTERITY]			= 300;
+		slf.attribute[ATR_MANA_MAX] 		= 2000;
+		slf.aivar[REAL_MANA_MAX]			= 2000;
+		slf.attribute[ATR_MANA] 			= 2000;
+		slf.attribute[ATR_HITPOINTS_MAX]	= 2000;
+		slf.attribute[ATR_HITPOINTS] 		= 2000;
 	};
 	
 	// ------ XP für NSCs ------

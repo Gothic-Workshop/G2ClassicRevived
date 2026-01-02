@@ -45,7 +45,7 @@ FUNC VOID DIA_Cipher_Hello_Info()
 {	
 	AI_Output (other, self, "DIA_Cipher_Hello_15_00"); //How are things?
 	AI_Output (self, other, "DIA_Cipher_Hello_07_01"); //Hey, don't I know you from somewhere?
-	AI_Output (other, self, "DIA_Cipher_Hello_15_02"); //It's possible ...
+	AI_Output (other, self, "DIA_Cipher_Hello_15_02"); //It's possible...
 	AI_Output (self, other, "DIA_Cipher_Hello_07_03"); //I used to deal in swampweed back in the colony, remember?
 };
 
@@ -86,7 +86,7 @@ FUNC VOID DIA_Cipher_TradeWhat_Info()
 	
 	if (!Npc_IsDead (Bodo))
 	{
-		AI_Output (self, other, "DIA_Cipher_TradeWhat_07_05"); //I'm pretty sure it was that Bodo. He bunks in the same room as me, and he always grins at me like such an idiot ...
+		AI_Output (self, other, "DIA_Cipher_TradeWhat_07_05"); //I'm pretty sure it was that Bodo. He bunks in the same room as me, and he always grins at me like such an idiot...
 		B_LogEntry (Topic_CipherPaket, "He suspects Bodo of stealing it.");
 	};
 	
@@ -124,7 +124,7 @@ FUNC VOID DIA_Cipher_DoWithThief_Info()
 	AI_Output (other, self, "DIA_Cipher_DoWithThief_15_04"); //How come?
 	AI_Output (self, other, "DIA_Cipher_DoWithThief_07_05"); //Quite simple. We can't rough up the farmers, otherwise Lee makes us pay a heavy fine. That's the way Onar wants it.
 	AI_Output (self, other, "DIA_Cipher_DoWithThief_07_06"); //And the more witnesses there are, the more of a fuss there is. That makes things more expensive.
-	AI_Output (self, other, "DIA_Cipher_DoWithThief_07_07"); //So I'll pull the thing off nice and inconspicuously ...
+	AI_Output (self, other, "DIA_Cipher_DoWithThief_07_07"); //So I'll pull the thing off nice and inconspicuously...
 };
 
 // ************************************************************
@@ -211,7 +211,7 @@ instance DIA_Cipher_Joints (C_INFO)
 	condition	= DIA_Cipher_Joints_Condition;
 	information	= DIA_Cipher_Joints_Info;
 	permanent	= TRUE;
-	description = "About the swampweed ...";
+	description = "About the swampweed...";
 };                       
 
 FUNC INT DIA_Cipher_Joints_Condition()
@@ -224,14 +224,14 @@ FUNC INT DIA_Cipher_Joints_Condition()
  
 FUNC VOID DIA_Cipher_Joints_Info()
 {	
-	AI_Output (other, self, "DIA_Cipher_Joints_15_00"); //About the swampweed ...
+	AI_Output (other, self, "DIA_Cipher_Joints_15_00"); //About the swampweed...
 	
 	if (MIS_Cipher_Paket == LOG_SUCCESS)
 	{
 		AI_Output (self, other, "DIA_Cipher_Joints_07_01"); //You brought back my packet! Now everything will be all right.
 		if (other.guild == GIL_NONE)
 		{
-			AI_Output (self, other, "DIA_Cipher_Joints_07_02"); //I'm certainly going to vote for you ...
+			AI_Output (self, other, "DIA_Cipher_Joints_07_02"); //I'm certainly going to vote for you...
 			
 			B_LogEntry (TOPIC_SLDRespekt,"Cipher will vote for me when I join the mercenaries.");
 		};
@@ -241,23 +241,23 @@ FUNC VOID DIA_Cipher_Joints_Info()
 	else //normal Running
 	{
 		Info_ClearChoices (DIA_Cipher_Joints);
-		Info_AddChoice (DIA_Cipher_Joints, "I'll see what I can do ...", DIA_Cipher_Joints_Running);
+		Info_AddChoice (DIA_Cipher_Joints, "I'll see what I can do...", DIA_Cipher_Joints_Running);
 		if (Npc_HasItems (other, ITMI_REVIVED_JOINT_REGULAR) > 0)
 		{
-			Info_AddChoice (DIA_Cipher_Joints, "Here's a few stalks for you ...", DIA_Cipher_Joints_Success);
+			Info_AddChoice (DIA_Cipher_Joints, "Here's a few stalks for you...", DIA_Cipher_Joints_Success);
 		};
 	};
 };
 
 func void DIA_Cipher_Joints_Running()
 {
-	AI_Output (other, self, "DIA_Cipher_Joints_Running_15_00"); //I'll see what I can do ...
+	AI_Output (other, self, "DIA_Cipher_Joints_Running_15_00"); //I'll see what I can do...
 	Info_ClearChoices (DIA_Cipher_Joints);
 };
 
 func void DIA_Cipher_Joints_Success()
 {
-	AI_Output (other, self, "DIA_Cipher_Joints_Success_15_00"); //Here's a few stalks for you ...
+	AI_Output (other, self, "DIA_Cipher_Joints_Success_15_00"); //Here's a few stalks for you...
 	
 	if (B_GiveInvItems (other, self, ITMI_REVIVED_JOINT_REGULAR, 10))
 	{
@@ -435,7 +435,7 @@ FUNC VOID DIA_Cipher_DarDieb_Info()
 	AI_Output (self, other, "DIA_Cipher_DarDieb_07_03"); //That bastard - where is he?
 	AI_Output (other, self, "DIA_Cipher_DarDieb_15_04"); //Finding him won't help you, he doesn't have the package any more. He sold it in Khorinis.
 	AI_Output (self, other, "DIA_Cipher_DarDieb_07_05"); //WHERE IS HE!?!
-	AI_Output (other, self, "DIA_Cipher_DarDieb_15_06"); //Behind the kitchen building, on the corner ...
+	AI_Output (other, self, "DIA_Cipher_DarDieb_15_06"); //Behind the kitchen building, on the corner...
 	AI_Output (self, other, "DIA_Cipher_DarDieb_07_07"); //I'LL FLATTEN HIM!
 	
 	AI_StopProcessInfos(self);
@@ -456,7 +456,7 @@ instance DIA_Cipher_DarLOST (C_INFO)
 	condition	= DIA_Cipher_DarLOST_Condition;
 	information	= DIA_Cipher_DarLOST_Info;
 	permanent	= FALSE;
-	description = "You really gave Dar what for ... are you feeling better now?";
+	description = "You really gave Dar what for... are you feeling better now?";
 };                       
 
 FUNC INT DIA_Cipher_DarLOST_Condition()
@@ -469,9 +469,9 @@ FUNC INT DIA_Cipher_DarLOST_Condition()
  
 FUNC VOID DIA_Cipher_DarLOST_Info()
 {	
-	AI_Output (other, self, "DIA_Cipher_DarLOST_15_00"); //You really gave Dar what for ... are you feeling better now?
+	AI_Output (other, self, "DIA_Cipher_DarLOST_15_00"); //You really gave Dar what for... are you feeling better now?
 	AI_Output (self, other, "DIA_Cipher_DarLOST_07_01"); //(sighs) Yeah, that felt good.
-	AI_Output (other, self, "DIA_Cipher_DarLOST_15_02"); //Not to HIM, I suppose ...
+	AI_Output (other, self, "DIA_Cipher_DarLOST_15_02"); //Not to HIM, I suppose...
 	AI_Output (self, other, "DIA_Cipher_DarLOST_07_03"); //The little beggar has no business going through my chest!
 	
 	B_GivePlayerXP ((XP_Ambient)*2);
@@ -506,7 +506,7 @@ FUNC VOID DIA_Cipher_KrautPaket_Info()
 	AI_Output (other, self, "DIA_Cipher_KrautPaket_15_00"); //Would this package of swampweed happen to be yours?
 	B_GiveInvItems (other, self, ItMi_HerbPaket, 1);
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_01"); //Well, I'll be! Where did you get that?
-	AI_Output (other, self, "DIA_Cipher_KrautPaket_15_02"); //It's a long story ...
+	AI_Output (other, self, "DIA_Cipher_KrautPaket_15_02"); //It's a long story...
 	
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_03"); //Doesn't matter, really, you're a decent guy.
 	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_04"); //Here, take this as a reward. Have fun with it!
@@ -514,7 +514,7 @@ FUNC VOID DIA_Cipher_KrautPaket_Info()
 	B_GiveInvItems (self, other, ItMi_SumpfTabak, 5);
 	B_GivePlayerXP (XP_Cipher_KrautPaket);
 	
-	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_05"); //First let me roll a few ...
+	AI_Output (self, other, "DIA_Cipher_KrautPaket_07_05"); //First let me roll a few...
 	CreateInvItems (self, ITMI_REVIVED_JOINT_REGULAR, 40);
 	Npc_RemoveInvItems (self, ItMi_HerbPaket, 1);
 	

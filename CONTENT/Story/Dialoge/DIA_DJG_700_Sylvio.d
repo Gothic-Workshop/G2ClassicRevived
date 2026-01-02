@@ -187,7 +187,7 @@ var int DJG_Sylvio_PromisedMoney;
 func void DIA_Sylvio_WASISTPASSIERT_warum ()
 {
 	AI_Output			(other, self, "DIA_Sylvio_WASISTPASSIERT_warum_15_00"); //What's in it for me?
-	AI_Output			(self, other, "DIA_Sylvio_WASISTPASSIERT_warum_09_01"); //Dunno. Let's say ... 1000 gold pieces. How's that sound?
+	AI_Output			(self, other, "DIA_Sylvio_WASISTPASSIERT_warum_09_01"); //Dunno. Let's say... 1000 gold pieces. How's that sound?
 
 	DJG_Sylvio_PromisedMoney = TRUE;
 };

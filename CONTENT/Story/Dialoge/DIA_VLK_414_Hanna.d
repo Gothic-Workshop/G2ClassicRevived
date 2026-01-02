@@ -73,7 +73,7 @@ FUNC VOID DIA_Hanna_Room_Info()
 	AI_Output (self ,other,"DIA_Hanna_Room_17_01"); //You're in the right place, then.
 	if (Npc_KnowsInfo (other, DIA_Lothar_Schlafen))
 	{
-		AI_Output (other, self, "DIA_Hanna_Add_15_03"); //One of the paladins told me that I could spend the night here for free ...
+		AI_Output (other, self, "DIA_Hanna_Add_15_03"); //One of the paladins told me that I could spend the night here for free...
 	}
 	else
 	{
@@ -161,7 +161,7 @@ INSTANCE DIA_Hanna_City(C_INFO)
 	condition	= DIA_Hanna_City_Condition;
 	information	= DIA_Hanna_City_Info;
 	permanent	= TRUE;
-	description	= "I have a few questions about the city ...";
+	description	= "I have a few questions about the city...";
 };                       
 
 FUNC INT DIA_Hanna_City_Condition()
@@ -171,7 +171,7 @@ FUNC INT DIA_Hanna_City_Condition()
  
 FUNC VOID DIA_Hanna_City_Info()
 {	
-	AI_Output (other,self ,"DIA_Hanna_City_15_00"); //I have a few questions about the city ...
+	AI_Output (other,self ,"DIA_Hanna_City_15_00"); //I have a few questions about the city...
 	
 	Info_ClearChoices (DIA_Hanna_City);
 	Info_AddChoice (DIA_Hanna_City,DIALOG_BACK,DIA_Hanna_City_Back);
@@ -341,7 +341,7 @@ FUNC VOID DIA_Hanna_AnyNews_Yes_Reward_OK ()
 FUNC VOID DIA_Hanna_AnyNews_Yes_Reward_BeNice ()
 {
 	AI_Output (other,self ,"DIA_Hanna_AnyNews_Yes_Reward_BeNice_15_00"); //You could be a little nice to me.
-	AI_Output (self ,other,"DIA_Hanna_AnyNews_Yes_Reward_BeNice_17_01"); //But that's outrageous. I ... get out of here! You boorish lout!
+	AI_Output (self ,other,"DIA_Hanna_AnyNews_Yes_Reward_BeNice_17_01"); //But that's outrageous. I... get out of here! You boorish lout!
 	
 	MIS_HannaRetrieveLetter = LOG_FAILED;
 	
@@ -471,11 +471,11 @@ FUNC VOID DIA_Hanna_AusKeller_Info()
 	|| (Jesper.aivar[AIV_KilledByPlayer] == TRUE)
 	|| (Ramirez.aivar[AIV_KilledByPlayer] == TRUE)
 	{
-		AI_Output (self, other, "DIA_Hanna_Add_17_27"); //Where ... do you come from?
-		AI_Output (other, self, "DIA_Hanna_Add_15_28"); //I found something interesting in your cellar ...
+		AI_Output (self, other, "DIA_Hanna_Add_17_27"); //Where... do you come from?
+		AI_Output (other, self, "DIA_Hanna_Add_15_28"); //I found something interesting in your cellar...
 		AI_Output (self, other, "DIA_Hanna_Add_17_29"); //What were you doing in my cellar?!
 		AI_Output (other, self, "DIA_Hanna_Add_15_30"); //You know damn well!
-		AI_Output (self, other, "DIA_Hanna_Add_17_31"); //(coldly) I don't know what you're talking about ...
+		AI_Output (self, other, "DIA_Hanna_Add_17_31"); //(coldly) I don't know what you're talking about...
 	}
 	else 
 	{
@@ -486,7 +486,7 @@ FUNC VOID DIA_Hanna_AusKeller_Info()
 		AI_Output (self, other, "DIA_Hanna_Add_17_23"); //Just don't even think of stealing anything here, got it?
 		AI_Output (self, other, "DIA_Hanna_Add_17_24"); //We can't afford drawing attention to the hotel.
 		AI_Output (other, self, "DIA_Hanna_Add_15_25"); //Did you know about the thieves' hideout?
-		AI_Output (self, other, "DIA_Hanna_Add_17_26"); //(smirks) I don't know what you're talking about ...
+		AI_Output (self, other, "DIA_Hanna_Add_17_26"); //(smirks) I don't know what you're talking about...
 	};	
 	
 	AI_StopProcessInfos (self);
@@ -517,7 +517,7 @@ FUNC VOID DIA_Hanna_Schuldenbuch_Info()
 	AI_Output (other, self, "DIA_Hanna_Add_15_41"); //Look what book I have here!
 	AI_Output (self, other, "DIA_Hanna_Add_17_42"); //Lehmar's ledger. How did you get hold of that?
 	AI_Output (other, self, "DIA_Hanna_Add_15_43"); //Well...
-	AI_Output (self, other, "DIA_Hanna_Add_17_44"); //If Lehmar doesn't have it any more, that's a good thing. But I'd rather have it myself ...
+	AI_Output (self, other, "DIA_Hanna_Add_17_44"); //If Lehmar doesn't have it any more, that's a good thing. But I'd rather have it myself...
 };
 
 // ************************************************************
@@ -561,14 +561,14 @@ func void Hanna_Blubb()
 	AI_Output (other, self, "DIA_Hanna_Add_15_37"); //Everything all right in the hideout?
 	AI_Output (self, other, "DIA_Hanna_Add_17_39"); //I haven't seen any of them in quite a while.
 	AI_Output (self, other, "DIA_Hanna_Add_17_40"); //I should go down there when I get the chance and check up on things.
-	AI_Output (self, other, "DIA_Hanna_Add_17_38"); //Yes. But you'd better not talk about it ...
+	AI_Output (self, other, "DIA_Hanna_Add_17_38"); //Yes. But you'd better not talk about it...
 	//-------------------
 	//-------------------
-	AI_Output (self, other, "DIA_Hanna_Add_17_32"); //The militia was here ... Somebody betrayed the hideout!
+	AI_Output (self, other, "DIA_Hanna_Add_17_32"); //The militia was here... Somebody betrayed the hideout!
 	AI_Output (self, other, "DIA_Hanna_Add_17_33"); //They couldn't pin anything on me, but Cassia and her people are dead!
 	AI_Output (self, other, "DIA_Hanna_Add_17_34"); //I'm sure it was YOU...
 	AI_Output (self, other, "DIA_Hanna_Add_17_35"); //I bought this here especially for you.
-	AI_Output (self, other, "DIA_Hanna_Add_17_36"); //It cost me a lot of money. But you're worth it, you swine ...
+	AI_Output (self, other, "DIA_Hanna_Add_17_36"); //It cost me a lot of money. But you're worth it, you swine...
 };	
 
 	

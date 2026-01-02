@@ -48,7 +48,7 @@ FUNC VOID DIA_Richter_Hello_Info()
 {	
 	AI_Output (other,self ,"DIA_Richter_Hello_15_00"); //What are you doing here?
 	AI_Output (self ,other,"DIA_Richter_Hello_10_01"); //What are you accosting me for? Who are you anyway?
-	AI_Output (other,self ,"DIA_Richter_Hello_15_02"); //I, er ...
+	AI_Output (other,self ,"DIA_Richter_Hello_15_02"); //I, er...
 	AI_Output (self ,other,"DIA_Richter_Hello_10_03"); //Say, don't I know you from somewhere?
 	
 	Info_ClearChoices (DIA_Richter_Hello);

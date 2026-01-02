@@ -149,7 +149,7 @@ instance DIA_Halvor_MESSAGE		(C_INFO)
 	condition	 = 	DIA_Halvor_MESSAGE_Condition;
 	information	 = 	DIA_Halvor_MESSAGE_Info;
 	permanent    =  FALSE;
-	description	 = 	"I think this piece of paper belongs to you ...";
+	description	 = 	"I think this piece of paper belongs to you...";
 	trade		 =  FALSE;
 };
 
@@ -162,10 +162,10 @@ func int DIA_Halvor_MESSAGE_Condition ()
 };
 func void DIA_Halvor_MESSAGE_Info ()
 {
-	AI_Output (other, self, "DIA_Halvor_MESSAGE_15_00"); //I think this piece of paper belongs to you ...
+	AI_Output (other, self, "DIA_Halvor_MESSAGE_15_00"); //I think this piece of paper belongs to you...
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_01"); //What...? Let me see.
 	B_UseFakeScroll 	();
-	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_02"); //(sweating) Er... OK, let's stay calm about this - er ... listen. I have resold the goods I got from the bandits.
+	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_02"); //(sweating) Er... OK, let's stay calm about this - er... listen. I have resold the goods I got from the bandits.
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_06_03"); //(hastily) But there's no reason to take this straight to the militia, right? I'm sure we can come to an understanding, can't we?
 	
 	Info_ClearChoices (DIA_Halvor_MESSAGE);
@@ -177,7 +177,7 @@ FUNC VOID DIA_Halvor_MESSAGE_OFFER()
 {
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_OFFER_15_00"); //Make me an offer, then.
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_OFFER_06_01"); //All right. I'll tell you something. I can sell you more than just fish.
-	AI_Output (self, other, "DIA_Halvor_MESSAGE_OFFER_06_03"); //If you hand me this ridiculous piece of paper and, er ... forget about the matter, you and I can become the best of trading partners.
+	AI_Output (self, other, "DIA_Halvor_MESSAGE_OFFER_06_03"); //If you hand me this ridiculous piece of paper and, er... forget about the matter, you and I can become the best of trading partners.
 	
 	Info_ClearChoices (DIA_Halvor_MESSAGE);
 	Info_AddChoice    (DIA_Halvor_MESSAGE,"All right, agreed.",DIA_Halvor_MESSAGE_Okay);
@@ -187,7 +187,7 @@ FUNC VOID DIA_Halvor_MESSAGE_OFFER()
 FUNC VOID DIA_Halvor_MESSAGE_PRISON()
 {
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_PRISON_15_00"); //Looks like it's the slammer for you.
-	AI_Output (self, other, "DIA_Halvor_MESSAGE_PRISON_06_01"); //No, wait, you can't do that! After all, I'm nothing but ... you know ... small fry.
+	AI_Output (self, other, "DIA_Halvor_MESSAGE_PRISON_06_01"); //No, wait, you can't do that! After all, I'm nothing but... you know... small fry.
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_PRISON_15_02"); //You should have thought of that sooner. Now I'm going to report you to Lord Andre.
 	AI_Output (self, other, "DIA_Halvor_MESSAGE_PRISON_06_03"); //You'll regret this.
 	
@@ -198,9 +198,9 @@ FUNC VOID DIA_Halvor_MESSAGE_PRISON()
 FUNC VOID DIA_Halvor_MESSAGE_DEAL()
 {
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_DEAL_15_00"); //Oh really? What kind of goods would those be?
-	AI_Output (self, other, "DIA_Halvor_MESSAGE_DEAL_06_01"); //Well, I could offer you ... quite special fish, you see. Not just plain ones for eating.
+	AI_Output (self, other, "DIA_Halvor_MESSAGE_DEAL_06_01"); //Well, I could offer you... quite special fish, you see. Not just plain ones for eating.
 	AI_Output (other, self, "DIA_Halvor_MESSAGE_DEAL_15_02"); //You mean like the one that contained your hidden message?
-	AI_Output (self, other, "DIA_Halvor_MESSAGE_DEAL_06_03"); //You've got it. I have several of those ... fish.
+	AI_Output (self, other, "DIA_Halvor_MESSAGE_DEAL_06_03"); //You've got it. I have several of those... fish.
 	
 };
 FUNC VOID DIA_Halvor_MESSAGE_Okay()
@@ -289,7 +289,7 @@ FUNC VOID DIA_Halvor_Hehlerei_Info()
 			
 			if (Halvor_Score <=  1000)  //weil sonst kein B_Say_Gold mehr...
 			{
-				AI_Output (self, other, "DIA_Halvor_Zeichen_06_05");//For all your stuff, I'll give you ...
+				AI_Output (self, other, "DIA_Halvor_Zeichen_06_05");//For all your stuff, I'll give you...
 				B_Say_Gold (self, other, Halvor_Score);
 			
 				Info_ClearChoices (DIA_Halvor_Hehlerei);

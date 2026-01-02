@@ -48,11 +48,11 @@ func void DIA_Serpentes_NOTALK_Info ()
 	
 	Info_ClearChoices (DIA_Serpentes_NOTALK);
 	Info_AddChoice 	  (DIA_Serpentes_NOTALK,"I was just going (END)",DIA_Serpentes_NOTALK_EXIT);
-	Info_AddChoice 	  (DIA_Serpentes_NOTALK,"I've got one more question ...",DIA_Serpentes_NOTALK_QUESTION);
+	Info_AddChoice 	  (DIA_Serpentes_NOTALK,"I've got one more question...",DIA_Serpentes_NOTALK_QUESTION);
 };
 FUNC VOID DIA_Serpentes_NOTALK_QUESTION()
 {
-	AI_Output (other, self, "DIA_Serpentes_NOTALK_QUESTION_15_00"); //I've got one more question ...
+	AI_Output (other, self, "DIA_Serpentes_NOTALK_QUESTION_15_00"); //I've got one more question...
 	AI_Output (self, other, "DIA_Serpentes_NOTALK_QUESTION_10_01"); //(furiously) You do not seem to want to understand. I decide when I see fit to talk to you. Who do you think you are?
 	AI_Output (self, other, "DIA_Serpentes_NOTALK_QUESTION_10_02"); //And now get back to work!
 	
@@ -180,7 +180,7 @@ func int DIA_Serpentes_NOIDEA_Condition ()
 };
 func void DIA_Serpentes_NOIDEA_Info ()
 {
-	AI_Output (other, self, "DIA_Serpentes_NOIDEA_15_00"); //Living rock ... ? What kind of a creature would that be?
+	AI_Output (other, self, "DIA_Serpentes_NOIDEA_15_00"); //Living rock...? What kind of a creature would that be?
 	AI_Output (self, other, "DIA_Serpentes_NOIDEA_10_01"); //I have told you everything. (mockingly) Or do you find this test too difficult?
 	AI_Output (self, other, "DIA_Serpentes_NOIDEA_10_02"); //Now you will learn what it means to take the Test of Fire - I will answer no more of your questions.
 	AI_StopProcessInfos (self);
@@ -541,7 +541,7 @@ instance DIA_Serpentes_MinenAnteileBringen		(C_INFO)
 	information	 = 	DIA_Serpentes_MinenAnteileBringen_Info;
 	permanent	 = 	TRUE;
 
-	description	 = 	"About the forged mine shares ...";
+	description	 = 	"About the forged mine shares...";
 };
 
 func int DIA_Serpentes_MinenAnteileBringen_Condition ()

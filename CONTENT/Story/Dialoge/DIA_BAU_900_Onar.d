@@ -213,7 +213,7 @@ INSTANCE DIA_Onar_WegenSekob (C_INFO)
 	condition   = DIA_Onar_WegenSekob_Condition;
 	information = DIA_Onar_WegenSekob_Info;
 	permanent   = FALSE;
-	description = "I've come about Sekob's rent ...";
+	description = "I've come about Sekob's rent...";
 };
 FUNC INT DIA_Onar_WegenSekob_Condition()
 {
@@ -224,7 +224,7 @@ FUNC INT DIA_Onar_WegenSekob_Condition()
 };
 FUNC VOID DIA_Onar_WegenSekob_Info()
 {
-	AI_Output (other, self, "DIA_Onar_WegenSekob_15_00"); //I've come about Sekob's rent ...
+	AI_Output (other, self, "DIA_Onar_WegenSekob_15_00"); //I've come about Sekob's rent...
 
 	if (other.guild == GIL_SLD) || (other.guild == GIL_DJG)
 	{
@@ -238,7 +238,7 @@ FUNC VOID DIA_Onar_WegenSekob_Info()
 		Onar_WegenSldWerden = TRUE;
 	};
 	AI_Output (other, self, "DIA_Onar_WegenSekob_15_04"); //But Sekob has no money. I even beat him up.
-	AI_Output (other, self, "DIA_Onar_WegenSekob_15_05"); //He said it was because of the poor harvest ...
+	AI_Output (other, self, "DIA_Onar_WegenSekob_15_05"); //He said it was because of the poor harvest...
 	AI_Output (self, other, "DIA_Onar_WegenSekob_14_06"); //(yelling) You nitwit! Did you think he just carries that money around? He's hidden it somewhere!
 	AI_Output (self, other, "DIA_Onar_WegenSekob_14_07"); //Do you know how much rain we have here? Bad harvest my ass.
 	AI_Output (self, other, "DIA_Onar_WegenSekob_14_08"); //Go and beat that money out of him somehow.
@@ -314,7 +314,7 @@ FUNC INT DIA_Onar_HowMuch_Condition()
 FUNC VOID DIA_Onar_HowMuch_Info()
 {
 	AI_Output (other, self, "DIA_Onar_HowMuch_15_00"); //So how about my pay?
-	AI_Output (self, other, "DIA_Onar_HowMuch_14_01"); //Well, let's see ...
+	AI_Output (self, other, "DIA_Onar_HowMuch_14_01"); //Well, let's see...
 	
 	SOLD = 50;
 	
@@ -343,7 +343,7 @@ FUNC VOID DIA_Onar_HowMuch_Info()
 		SOLD = SOLD - 10;
 	};
 	
-	AI_Output (self, other, "DIA_Onar_HowMuch_14_06"); //Let me think ...
+	AI_Output (self, other, "DIA_Onar_HowMuch_14_06"); //Let me think...
 	B_Say_Gold (self, other, SOLD);
 	
 	
@@ -354,7 +354,7 @@ FUNC VOID DIA_Onar_HowMuch_Info()
 	
 	Info_ClearChoices (DIA_Onar_HowMuch);
 	Info_AddChoice (DIA_Onar_HowMuch, "Sounds all right!", DIA_Onar_HowMuch_Ok);
-	Info_AddChoice (DIA_Onar_HowMuch, "That's not a whole lot ...", DIA_Onar_HowMuch_More);
+	Info_AddChoice (DIA_Onar_HowMuch, "That's not a whole lot...", DIA_Onar_HowMuch_More);
 	Info_AddChoice (DIA_Onar_HowMuch, "Per day?", DIA_Onar_HowMuch_PerDay);
 };
 
@@ -368,7 +368,7 @@ func void DIA_Onar_HowMuch_PerDay()
 
 func void DIA_Onar_HowMuch_More()
 {
-	AI_Output (other, self, "DIA_Onar_HowMuch_More_15_00"); //That's not a whole lot ...
+	AI_Output (other, self, "DIA_Onar_HowMuch_More_15_00"); //That's not a whole lot...
 	AI_Output (self, other, "DIA_Onar_HowMuch_More_14_01"); //Of course, you're welcome to work for me for free instead.
 	AI_Output (self, other, "DIA_Onar_HowMuch_More_14_02"); //Anyway, this is all you'll get!
 	
@@ -532,7 +532,7 @@ func void DIA_Onar_WannaSheep_Info ()
 {
 	AI_Output (other, self, "DIA_Onar_WannaSheep_15_00"); //I want to buy a sheep!
 	AI_Output (self, other, "DIA_Onar_WannaSheep_14_01"); //What are you doing here then? See a sheep anywhere?
-	AI_Output (other, self, "DIA_Onar_WannaSheep_15_02"); //I ...
+	AI_Output (other, self, "DIA_Onar_WannaSheep_15_02"); //I...
 	AI_Output (self, other, "DIA_Onar_WannaSheep_14_03"); //If you want to buy a sheep, go out the pasture. It's to the right of my house.
 	AI_Output (self, other, "DIA_Onar_WannaSheep_14_04"); //Have Pepe sell you one.
 	

@@ -115,7 +115,7 @@ INSTANCE DIA_Alwin_FellanRunning (C_INFO)
 	condition	= DIA_Alwin_FellanRunning_Condition;
 	information	= DIA_Alwin_FellanRunning_Info;
 	permanent	= FALSE;
-	description = "I could take care of Fellan ...";
+	description = "I could take care of Fellan...";
 };                       
 FUNC INT DIA_Alwin_FellanRunning_Condition()
 {	
@@ -127,7 +127,7 @@ FUNC INT DIA_Alwin_FellanRunning_Condition()
 };
 FUNC VOID DIA_Alwin_FellanRunning_Info()
 {	
-	AI_Output (other, self,"DIA_Alwin_FellanRunning_15_00"); //I could take care of Fellan ...
+	AI_Output (other, self,"DIA_Alwin_FellanRunning_15_00"); //I could take care of Fellan...
 	AI_Output (self ,other,"DIA_Alwin_FellanRunning_12_01"); //You want to help me? What's in it for you?
 	AI_Output (other, self,"DIA_Alwin_FellanRunning_15_02"); //You tell me.
 	AI_Output (self ,other,"DIA_Alwin_FellanRunning_12_03"); //Oh, that's how it is! All right - if you can get him to stop hammering, I'll pay you 25 gold pieces.
@@ -141,18 +141,18 @@ FUNC VOID DIA_Alwin_FellanRunning_Info()
 		
 	
 	Info_ClearChoices (DIA_Alwin_FellanRunning);
-	Info_AddChoice (DIA_Alwin_FellanRunning, "I'll see what I can do ...", DIA_Alwin_FellanRunning_Ok);
+	Info_AddChoice (DIA_Alwin_FellanRunning, "I'll see what I can do...", DIA_Alwin_FellanRunning_Ok);
 	if (hero.guild != GIL_MIL)
 	&& (hero.guild != GIL_PAL)
 	&& (hero.guild != GIL_KDF)
 	{
-		Info_AddChoice (DIA_Alwin_FellanRunning, "If I beat him up, I'll just get into trouble with the militia ...", DIA_Alwin_FellanRunning_Problems);
+		Info_AddChoice (DIA_Alwin_FellanRunning, "If I beat him up, I'll just get into trouble with the militia...", DIA_Alwin_FellanRunning_Problems);
 	};
 };
 
 func void DIA_Alwin_FellanRunning_Ok()
 {
-	AI_Output (other, self,"DIA_Alwin_FellanRunning_Ok_15_00"); //I'll see what I can do ...
+	AI_Output (other, self,"DIA_Alwin_FellanRunning_Ok_15_00"); //I'll see what I can do...
 	AI_Output (self ,other,"DIA_Alwin_FellanRunning_Ok_12_01"); //You can think about it. Remember, I'll pay you 25 gold coins.
 	
 	Info_ClearChoices (DIA_Alwin_FellanRunning);
@@ -160,8 +160,8 @@ func void DIA_Alwin_FellanRunning_Ok()
 
 func void DIA_Alwin_FellanRunning_Problems()
 {
-	AI_Output (other, self,"DIA_Alwin_FellanRunning_Problems_15_00"); //If I beat him up, I'll just get into trouble with the militia ...
-	AI_Output (self ,other,"DIA_Alwin_Add_12_00"); //Down here at the harbor, no one pays much attention to brawls ...
+	AI_Output (other, self,"DIA_Alwin_FellanRunning_Problems_15_00"); //If I beat him up, I'll just get into trouble with the militia...
+	AI_Output (self ,other,"DIA_Alwin_Add_12_00"); //Down here at the harbor, no one pays much attention to brawls...
 	AI_Output (self ,other,"DIA_Alwin_Add_12_01"); //But if you steal around here, or mess with the sheep, you'll be in trouble.
 
 	//AI_Output (self ,other,"DIA_Alwin_FellanRunning_Problems_12_01"); //Der irre Fellan wird nicht zur Miliz rennen und dich anzeigen. Du könntest höchstens ein Problem bekommen, wenn seine Nachbarn was davon mitbekommen.

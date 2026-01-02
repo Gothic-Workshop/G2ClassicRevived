@@ -46,7 +46,4 @@ FUNC VOID Rtn_Start_481()
     TA_Cook_Cauldron	(15,55,20,05,"NW_CITY_PATH_HABOUR_13_C");
     TA_Smalltalk		(20,05,23,55,"NW_CITY_HABOUR_SMALLTALK_02");
     TA_Sleep			(23,55,05,05,"NW_CITY_HABOUR_HUT_06_BED_02");
-    
-    
-    
 };

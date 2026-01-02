@@ -179,7 +179,7 @@ FUNC INT DIA_Wambo_Deal_Condition()
 };
 FUNC VOID DIA_Wambo_Deal_Info()
 {	
-	AI_Output (other,self ,"DIA_Wambo_Deal_15_00"); //I've got your money ...
+	AI_Output (other,self ,"DIA_Wambo_Deal_15_00"); //I've got your money...
 	
 	if B_GiveInvItems (other, self, ItMi_Gold, 250)
 	{

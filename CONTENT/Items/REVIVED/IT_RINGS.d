@@ -924,6 +924,53 @@ FUNC VOID UnEquip_Machtring()
 	Npc_ChangeAttribute(self,ATR_DEXTERITY, -4);
 };
 
+/******************************************************************************************/
+
+INSTANCE ITAM_REVIVED_MELEE_01 (C_Item)
+{	
+	name 				=	"Morgan's ring";
+
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_RING;
+	
+	value 				=	500;
+	
+	visual 				=	"ItRi_Prot_Total_02.3DS";
+	material 			=	MAT_METAL;
+	
+	on_equip			=  	Equip_RevMorgansRing;
+	on_unequip			= 	UnEquip_RevMorgansRing;
+
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
+
+	description		= name;
+	
+	
+	TEXT[1]			= "The ring is decorated with many fine runes.";
+	TEXT[2]			= NAME_RaiseWeaponSkill;
+	COUNT[2]		= 10;
+	TEXT[5]			= NAME_Value;
+	COUNT[5]		= value;
+		
+	INV_ZBIAS				= INVCAM_ENTF_RING_STANDARD;
+	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
+	INV_ROTX				= INVCAM_X_RING_STANDARD;
+
+};
+
+FUNC VOID Equip_RevMorgansRing()
+{
+	B_AddFightSkill (self, NPC_TALENT_1H, 10);
+	B_AddFightSkill (self, NPC_TALENT_2H, 10);
+};
+
+FUNC VOID UnEquip_RevMorgansRing()
+{
+	B_AddFightSkill (self, NPC_TALENT_1H, -10);
+	B_AddFightSkill (self, NPC_TALENT_2H, -10);
+};
+
 //****************************************************************************
 //			SPECIAL
 //****************************************************************************

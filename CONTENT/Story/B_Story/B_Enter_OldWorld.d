@@ -285,8 +285,8 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 				
 		Wld_InsertNpc		(OrcWarrior_Roam,"SPAWN_OW_BLACKWOLF_02_01");
 		
-		Wld_InsertNpc		(Warg,"SPAWN_OW_BLACKWOLF_02_01");
-		Wld_InsertNpc		(Warg,"SPAWN_OW_BLACKWOLF_02_01");
+		Wld_InsertNpc		(Hellhound,"SPAWN_OW_BLACKWOLF_02_01");
+		Wld_InsertNpc		(Hellhound,"SPAWN_OW_BLACKWOLF_02_01");
 		
 		Wld_InsertNpc		(OrcWarrior_Roam,"FP_ROAM_ORC_09");
 		Wld_InsertNpc		(OrcShaman_Sit,"FP_ROAM_ORC_08");
@@ -639,17 +639,16 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_5 ()
 	 	{
 		// ------ Gilden-Attitüden ändern ------
 		
-		// ------ Respawn ------
-			
-		// ------ Immortal-Flags löschen ------
-		GRD_4143_HaupttorWache.flags = 0;									
-		CreateInvItems (GRD_4143_HaupttorWache, ITKE_OC_MAINGATE_MIS, 1);
+		// ------ Respawn ------						
 
 		if (Npc_IsDead(Brutus)==FALSE)
 		{
 			CreateInvItems (GRD_4100_Brutus, ITWR_DementorObsessionBook_MIS, 1 );	
 		};
 		// ------ TAs ändern ------
+		B_StartOtherRoutine(PAL_259_Wache, "KAP5");
+		B_StartOtherRoutine(PAL_265_Wache, "KAP5");
+		B_StartOtherRoutine(GRD_4143_HaupttorWache, "KAP5");
 
 		
 		if 	(TschuessBilgot == TRUE) // Bilgots (NewMine) Flucht aus der OW 

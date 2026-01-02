@@ -245,7 +245,7 @@ instance DIA_Igaraz_METOO		(C_INFO)
 	condition	 = 	DIA_Igaraz_METOO_Condition;
 	information	 = 	DIA_Igaraz_METOO_Info;
 	permanent	 =  FALSE;
-	description	 = 	"I'm in it, too ...";
+	description	 = 	"I'm in it, too...";
 };
 var int DIA_Igaraz_METOO_NOPERM ;
 
@@ -262,13 +262,13 @@ func void DIA_Igaraz_METOO_Info ()
 {
 	AI_Output (other, self, "DIA_Igaraz_METOO_15_00"); //I'm in it, too - I demanded the Test of Fire.
 	AI_Output (self, other, "DIA_Igaraz_METOO_13_01"); //You did WHAT? So either you are a favorite of Innos, or completely crazy.
-	AI_Output (other, self, "DIA_Igaraz_METOO_15_02"); //I've already done a lot of crazy things, so I'm positive I can pull this off, too ...
+	AI_Output (other, self, "DIA_Igaraz_METOO_15_02"); //I've already done a lot of crazy things, so I'm positive I can pull this off, too...
 	AI_Output (self, other, "DIA_Igaraz_METOO_13_03"); //Innos holds his hand over me - therefore I shall pass this test.
 	
 
 	Info_ClearChoices	 (DIA_Igaraz_METOO);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,DIALOG_BACK,DIA_Igaraz_METOO_BACK);
-	Info_AddChoice 		 (DIA_Igaraz_METOO,"Maybe we could work together ...",DIA_Igaraz_METOO_HELP);
+	Info_AddChoice 		 (DIA_Igaraz_METOO,"Maybe we could work together...",DIA_Igaraz_METOO_HELP);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,"So, found anything out yet?",DIA_Igaraz_METOO_TELL);
 	Info_AddChoice 		 (DIA_Igaraz_METOO,"Have you seen Agon or Ulf?",DIA_Igaraz_METOO_AGON);
 };
@@ -284,7 +284,7 @@ FUNC VOID DIA_Igaraz_METOO_TELL ()
 };
 FUNC VOID DIA_Igaraz_METOO_HELP ()
 {
-	AI_Output (other, self, "DIA_Igaraz_METOO_HELP_15_00"); //Maybe we could work together ...
+	AI_Output (other, self, "DIA_Igaraz_METOO_HELP_15_00"); //Maybe we could work together...
 	AI_Output (self, other, "DIA_Igaraz_METOO_HELP_13_01"); //Forget it. I'll accomplish this mission alone. You would just be a hindrance to me.
 };
 FUNC VOID DIA_Igaraz_METOO_AGON ()
@@ -320,14 +320,14 @@ func void DIA_Igaraz_ADD_Info ()
 	AI_Output (other, self, "DIA_Igaraz_Add_15_00"); //Do you know anything about a 'living rock'?
 	AI_Output (self, other, "DIA_Igaraz_Add_13_01"); //(cackling) No! Did Serpentes give you this test?
 	AI_Output (other, self, "DIA_Igaraz_Add_15_02"); //Yes, why?
-	AI_Output (self, other, "DIA_Igaraz_Add_13_03"); //I think I can imagine what he means ...
-	AI_Output (self, other, "DIA_Igaraz_Add_13_04"); //You wouldn't be the first person to fail this test ...
+	AI_Output (self, other, "DIA_Igaraz_Add_13_03"); //I think I can imagine what he means...
+	AI_Output (self, other, "DIA_Igaraz_Add_13_04"); //You wouldn't be the first person to fail this test...
 	AI_Output (other, self, "DIA_Igaraz_Add_15_05"); //Where exactly can I find this living rock?
 	AI_Output (self, other, "DIA_Igaraz_Add_13_06"); //Just keep following this path. After quite a while, you'll come to a river.
 	AI_Output (self, other, "DIA_Igaraz_Add_13_07"); //Just continue to follow the path up the mountain. It's got to be up there someplace.
 	AI_Output (self, other, "DIA_Igaraz_Add_13_08"); //When you come to a bridge, you've gone too far.
-	AI_Output (self, other, "DIA_Igaraz_Add_13_09"); //(laughs) IF you get that far in the first place ...
-	AI_Output (self, other, "DIA_Igaraz_Add_13_10"); //That's all I'm going to tell you ... (sarcastic) It's supposed to be your TEST after all!
+	AI_Output (self, other, "DIA_Igaraz_Add_13_09"); //(laughs) IF you get that far in the first place...
+	AI_Output (self, other, "DIA_Igaraz_Add_13_10"); //That's all I'm going to tell you... (sarcastic) It's supposed to be your TEST after all!
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Perm Prüfung 
@@ -386,8 +386,8 @@ func int DIA_Igaraz_Stein_Condition ()
 };
 func void DIA_Igaraz_Stein_Info ()
 {
-	AI_Output (self, other, "DIA_Igaraz_Seufz_13_00"); //Hey, wait. We need to talk ...
-	AI_Output (other, self, "DIA_Igaraz_Seufz_15_01"); //Actually, I don't think so ...
+	AI_Output (self, other, "DIA_Igaraz_Seufz_13_00"); //Hey, wait. We need to talk...
+	AI_Output (other, self, "DIA_Igaraz_Seufz_15_01"); //Actually, I don't think so...
 	AI_Output (self, other, "DIA_Igaraz_Seufz_13_02"); //I've waited years for this test. Innos is with me and I MUST pass this test.
 	
 	if Npc_KnowsInfo (other, DIA_Ulf_Abrechnung)
@@ -767,7 +767,7 @@ FUNC INT DIA_Igaraz_Perm_Condition()
 FUNC VOID DIA_Igaraz_Perm_Info()
 {
 	AI_Output (other ,self,"DIA_Igaranz_Perm_15_00"); //Have you got anything interesting for me?
-	AI_Output (self ,other,"DIA_Igaranz_Perm_13_01"); //Ehm ... no.
+	AI_Output (self ,other,"DIA_Igaranz_Perm_13_01"); //Ehm... no.
 	
 	AI_StopProcessInfos(self); 
 		

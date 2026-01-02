@@ -31,8 +31,8 @@ FUNC VOID B_SCGetTreasure_S1()
 				RakeTreasureSuccess (ItSe_GoldPocket100);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_GREGTREASURE_01"	)< RAKE_BUDDEL_DIST_MIN) 		&&  (RAKEPLACE[3]==FALSE)){
-				Wld_InsertItem 		(ITAT_REVIVED_FUR_ORCDOG, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
-				RakeTreasureSuccess (ITAT_REVIVED_FUR_ORCDOG);}
+				Wld_InsertItem 		(ITMI_REVIVED_WARHORN, 			"NW_FARM3_GREGTREASURE_01"	); 									 RAKEPLACE[3]=TRUE;
+				RakeTreasureSuccess (ITMI_REVIVED_WARHORN);}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,						"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	)< RAKE_BUDDEL_DIST_MIN) && (RAKEPLACE[4]==FALSE)){	
 				Wld_InsertItem 		(ItPl_Perm_Herb, 			"NW_FARM3_MOUNTAINLAKE_MONSTER_01"	); 							 RAKEPLACE[4]=TRUE;

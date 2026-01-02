@@ -29,7 +29,7 @@ PROTOTYPE Mst_Default_Dragon_Swamp(C_Npc)
 	protection	[PROT_MAGIC]		= 150;
 	
 	//----- Damage Types ----
-	damagetype 						=	DAM_MAGIC|DAM_FIRE|DAM_FLY;
+	damagetype 						=	DAM_MAGIC|DAM_FIRE/* |DAM_FLY */;
 //	damage		[DAM_INDEX_BLUNT]	=	0;
 //	damage		[DAM_INDEX_EDGE]	=	0;
 //	damage		[DAM_INDEX_POINT]	=	0;

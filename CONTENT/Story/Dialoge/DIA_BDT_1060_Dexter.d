@@ -58,7 +58,7 @@ FUNC VOID DIA_Dexter_Hallo_Info()
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_00");//I never thought you'd come here voluntarily.
 		AI_Output (other, self, "DIA_Addon_Dexter_Hallo_15_01");//What do you mean by that?
 		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_02");//I mean that I've been looking for you. Haven't you seen any of my wanted posters?
-		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_03");//They all bear YOUR mug. Oh yes ... you're very much wanted. Didn't you know that?
+		AI_Output (self, other, "DIA_Addon_Dexter_Hallo_09_03");//They all bear YOUR mug. Oh yes... you're very much wanted. Didn't you know that?
 		//ADDON<
 	};
 
@@ -93,14 +93,14 @@ func void DIA_Addon_Dexter_Boss_Info ()
 	AI_Output	(other, self, "DIA_Addon_Dexter_Boss_15_00"); //Your boss? Who's that supposed to be?
 	AI_Output	(self, other, "DIA_Addon_Dexter_Boss_09_01"); //(laughs) Wouldn't you just love to know that? Yes, I can imagine.
 	//AI_Output	(self, other, "DIA_Addon_Dexter_Boss_09_02"); //(serious) I don't see any reason why I should tell you.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_04");//Aber es stimmt. Ich habe meinen Jungs die Steckbriefe gegeben. Ich hatte keine andere Wahl.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_05");//Als ich versuchte, aus dem Minental zu entfliehen, entdeckten mich die Soldaten und trieben mich in eine Falle.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//Ich dachte schon, das wäre mein Ende, aber dann tauchte plötzlich aus der Dunkelheit diese ... Gestalt auf.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_07");//Er trug eine schwarze Robe mit Kapuze und eine Maske überm Gesicht. Und er sprach mit einer Stimme, die alles andere als menschlich war.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_08");//Aber er bot mir seine Hilfe an. Er brachte mich aus dem Tal und bot mir eintausend Goldstücke für deinen Kopf.
-		AI_Output (self, other, "DIA_Dexter_Hallo_09_09");//Hey, was sollte ich machen? Wenn ich abgelehnt hätte, dann hätte er mich getötet!
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_04");//But it's true. I gave my boys the wanted posters. I didn't have any other choice.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_05");//When I tried to escape from the Valley of Mines, the soldiers discovered me and drove me into a trap.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_06");//I thought I was done for, but then suddenly this.. figure appeared out of the darkness.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_07");//He wore a black robe with a hood and a mask over his face. And he spoke with a voice that was altogether not human.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_08");//But he offered me his help. He brought me out of the valley and offered me a thousand gold pieces for your head.
+		AI_Output (self, other, "DIA_Dexter_Hallo_09_09");//Hey, what was I supposed to do? If I turned him down, he'd have killed me.
 
-		B_LogEntry (Topic_Bandits,"Dexter hat die Steckbriefe verteilt. Typen mit schwarzen Kapuzen haben ihn damit beauftragt.");
+		B_LogEntry (Topic_Bandits,"Dexter distributed the wanted posters. Guys in black hoods had ordered him to do it.");
 };
 
 
@@ -114,7 +114,7 @@ INSTANCE DIA_Dexter_Wo   (C_INFO)
 	condition   = DIA_Dexter_Wo_Condition;
 	information = DIA_Dexter_Wo_Info;
 	permanent   = FALSE;
-	description = "Wo finde ich diesen Mann?";
+	description = "Where can I find this man?";
 };
 FUNC INT DIA_Dexter_Wo_Condition()
 {	
@@ -125,15 +125,15 @@ FUNC INT DIA_Dexter_Wo_Condition()
 };
 FUNC VOID DIA_Dexter_Wo_Info()
 {
-	AI_Output (other, self, "DIA_Dexter_Wo_15_00");//Wo finde ich diesen Mann?
+	AI_Output (other, self, "DIA_Dexter_Wo_15_00");//Where can I find this man?
 	
 	if (Kapitel < 3)
 	{
-		AI_Output (self, other, "DIA_Dexter_Wo_09_01");//Ich glaube, der sitzt irgendwo im Minental.
+		AI_Output (self, other, "DIA_Dexter_Wo_09_01");//I think he's somewhere in the Valley of Mines.
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Dexter_Wo_09_02");//Der Typ ist hier! Und nicht alleine. Da ist ein ganzer Haufen dieser Kerle überall unterwegs! Und die suchen dich.
+		AI_Output (self, other, "DIA_Dexter_Wo_09_02");//The guy is here! And he's not alone. There's a whole mob of those boys on the go, everywhere! And they're looking for you.
 		
 		Wld_InsertNpc		(CastlemineDMT01, "FP_STAND_DEMENTOR_DEXTER_001");
 		Wld_InsertNpc		(CastlemineDMT02, "FP_STAND_DEMENTOR_DEXTER_002");
@@ -221,7 +221,7 @@ FUNC VOID DIA_Dexter_Kill_Info()
 {
 	if (Knows_Dexter == TRUE)
 	{
-		AI_Output (self, other, "DIA_Addon_Dexter_Add_09_02"); //(attacking) You asked for this ...
+		AI_Output (self, other, "DIA_Addon_Dexter_Add_09_02"); //(attacking) You asked for this...
 	}
 	else
 	{
@@ -262,7 +262,7 @@ FUNC INT DIA_Dexter_Kopf_Condition()
 FUNC VOID DIA_Dexter_Kopf_Info()
 {
 	AI_Output (other, self, "DIA_Addon_Dexter_Add_15_00"); //You want my head? Come and get it, then!
-	AI_Output (self, other, "DIA_Addon_Dexter_Add_09_01"); //(attacking) If that's what you want ...
+	AI_Output (self, other, "DIA_Addon_Dexter_Add_09_01"); //(attacking) If that's what you want...
 
 	DIA_Dexter_Kill_ENDE();
 };

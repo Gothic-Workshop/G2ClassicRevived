@@ -470,7 +470,7 @@ func void DIA_Addon_Cavalorn_LETSKILLBANDITS_Info ()
 func void B_Addon_Cavalorn_VatrasBrief ()
 {
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_VatrasBrief_08_00"); //Then I can finally fulfill my mission. I've lost too much time already.
-		AI_Output	(other, self, "DIA_Addon_Cavalorn_VatrasBrief_15_01"); //What sort of mission... ?
+		AI_Output	(other, self, "DIA_Addon_Cavalorn_VatrasBrief_15_01"); //What sort of mission...?
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_VatrasBrief_08_02"); //(to himself) Ah. Yeah. First I have to get into the city and then later...
 		AI_Output	(self, other, "DIA_Addon_Cavalorn_VatrasBrief_08_03"); //(sighs) I don't know how I'm going to get all that done in time.
 	

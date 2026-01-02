@@ -618,7 +618,7 @@ FUNC VOID DIA_Karras_KAP3_Perm_Info()
 		AI_Output (self ,other,"DIA_Karras_KAP3_Perm_10_04"); //Be careful if you meet them.
 		AI_Output (other,self ,"DIA_Karras_KAP3_Perm_15_05"); //What a novel concept.
 		AI_Output (self ,other,"DIA_Karras_KAP3_Perm_10_06"); //I'm sorry, but I don't have enough material to make a more precise statement.
-		AI_Output (self ,other,"DIA_Karras_KAP3_Perm_10_07"); //But if you could manage to bring me something of theirs to examine ...
+		AI_Output (self ,other,"DIA_Karras_KAP3_Perm_10_07"); //But if you could manage to bring me something of theirs to examine...
 		
 		MIS_KarrasResearchDMT = LOG_RUNNING;
 		B_LogEntry (TOPIC_DEMENTOREN,"Karras needs something that has been in direct contact with the Seekers in order to continue his investigations."); 

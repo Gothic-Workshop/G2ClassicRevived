@@ -442,7 +442,7 @@ instance DIA_Gorax_TRADE		(C_INFO)
 	information	 = 	DIA_Gorax_TRADE_Info;
 	permanent	 = 	TRUE;
 	trade		 =  TRUE;
-	description	 = 	"I need a few things ...";
+	description	 = 	"I need a few things...";
 };
 func int DIA_Gorax_TRADE_Condition ()
 {
@@ -454,7 +454,7 @@ func int DIA_Gorax_TRADE_Condition ()
 func void DIA_Gorax_TRADE_Info ()
 {
 	B_GiveTradeInv (self);
-	AI_Output			(other, self, "DIA_Gorax_TRADE_15_00"); //I need a few things ...
+	AI_Output			(other, self, "DIA_Gorax_TRADE_15_00"); //I need a few things...
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info SLEEP für KDF
@@ -569,7 +569,7 @@ func void DIA_Gorax_KILLPEDRO_Info ()
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_00"); //Wait, mercenary. I need to talk to you.
 	AI_Output			(other, self, "DIA_Gorax_KILLPEDRO_15_01"); //What do you want?
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_02"); //The monastery is facing a very delicate situation.
-	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_03"); //At the moment, everyone seems to mistrust everybody else. And then, this thing with Pedro, that's extremely ... (gulps)
+	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_03"); //At the moment, everyone seems to mistrust everybody else. And then, this thing with Pedro, that's extremely... (gulps)
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_04"); //I have an assignment for you from the highest authorities. You are not a member of the Brotherhood of the Fire, and therefore the only one here who can settle this matter for us.
 	AI_Output			(self, other, "DIA_Gorax_KILLPEDRO_14_05"); //But I must warn you. If I give you this assignment, you'll be bound to fulfill it, too. Once you know what it's about, you'll have no choice. Do you understand?
 	

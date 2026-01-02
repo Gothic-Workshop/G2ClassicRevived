@@ -111,5 +111,6 @@ INSTANCE Troll_DI	(Mst_Default_Troll)
 	aivar[AIV_MaxDistToWp]			= 300;
 	aivar[AIV_OriginalFightTactic] 	= FAI_TROLL;
 	B_SetVisuals_Troll();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 };

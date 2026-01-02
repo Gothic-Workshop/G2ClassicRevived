@@ -40,5 +40,12 @@ instance PAL_259_Wache (Npc_Default)
 FUNC VOID Rtn_Start_259 ()
 {	
 	TA_Stand_Guarding		(08,00,22,00,"OCC_RIGHT_TOWER_GANGWAY_GUARD");
-    TA_Stand_Guarding		(22,00,08,00,"OCC_LEFT_TOWER_GANGWAY_GUARD");
+    TA_Stand_Guarding		(22,00,08,00,"OCC_RIGHT_TOWER_GANGWAY_GUARD");
+};
+
+FUNC VOID Rtn_KAP5_259 ()
+{	
+	TA_Stand_Guarding			(08,00,18,00,"OCC_TOWER_PLATFORM_GUARD_LEFT");
+    TA_Stand_Guarding			(18,00,23,00,"OCC_TOWER_PLATFORM_GUARD_RIGHT");
+    TA_Stand_Guarding			(23,00,08,00,"OCC_TOWER_PLATFORM_GUARD_FRONT");
 };

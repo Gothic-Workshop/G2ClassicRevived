@@ -120,7 +120,7 @@ INSTANCE DIA_Bodo_Cipher   (C_INFO)
 	condition   = DIA_Bodo_Cipher_Condition;
 	information = DIA_Bodo_Cipher_Info;
 	permanent   = FALSE;
-	description = "Cipher told me somebody stole a package of swampweed from him ...";
+	description = "Cipher told me somebody stole a package of swampweed from him...";
 };
 FUNC INT DIA_Bodo_Cipher_Condition()
 {
@@ -132,7 +132,7 @@ FUNC INT DIA_Bodo_Cipher_Condition()
 };
 FUNC VOID DIA_Bodo_Cipher_Info()
 {
-	AI_Output (other, self, "DIA_Bodo_Cipher_15_00"); //Cipher told me somebody stole a package of swampweed from him ...
+	AI_Output (other, self, "DIA_Bodo_Cipher_15_00"); //Cipher told me somebody stole a package of swampweed from him...
 	AI_Output (self, other, "DIA_Bodo_Cipher_12_01"); //And?
 	AI_Output (other, self, "DIA_Bodo_Cipher_15_02"); //He thinks you're the one who took it.
 	AI_Output (self, other, "DIA_Bodo_Cipher_12_03"); //Oh, THAT's why the guy is always gawping at me so stupidly.

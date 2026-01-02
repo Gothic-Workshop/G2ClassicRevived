@@ -62,7 +62,7 @@ FUNC VOID DIA_Raoul_NoSentenza_Info()
 	}
 	else 
 	{
-		AI_Output (self ,other,"DIA_Raoul_NoSentenza_01_05"); //Where is he, anyway? Well, doesn't matter, you got lucky ...
+		AI_Output (self ,other,"DIA_Raoul_NoSentenza_01_05"); //Where is he, anyway? Well, doesn't matter, you got lucky...
 	};
 	
 	AI_StopProcessInfos (self);
@@ -227,7 +227,7 @@ FUNC INT DIA_Raoul_Stimme_Condition()
 FUNC VOID DIA_Raoul_Stimme_Info()
 {	
 	AI_Output (other, self, "DIA_Raoul_Stimme_15_00"); //I'd like to become a mercenary here. Do you mind?
-	AI_Output (self, other, "DIA_Raoul_Stimme_01_01"); //Aah, do whatever you want ...
+	AI_Output (self, other, "DIA_Raoul_Stimme_01_01"); //Aah, do whatever you want...
 	
 	Log_CreateTopic (TOPIC_SLDRespekt,LOG_MISSION);
 	Log_SetTopicStatus (TOPIC_SLDRespekt,LOG_RUNNING);
@@ -244,7 +244,7 @@ instance DIA_Raoul_Duell (C_INFO)
 	condition	= DIA_Raoul_Duell_Condition;
 	information	= DIA_Raoul_Duell_Info;
 	permanent	= TRUE;
-	description = "Methinks I'm going to punch you in the face ..."; 
+	description = "Methinks I'm going to punch you in the face..."; 
 };                       
 
 FUNC INT DIA_Raoul_Duell_Condition()
@@ -259,9 +259,9 @@ FUNC INT DIA_Raoul_Duell_Condition()
  
 FUNC VOID DIA_Raoul_Duell_Info()
 {	
-	AI_Output (other, self, "DIA_Raoul_Duell_15_00"); //Methinks I'm going to punch you in the face ...
+	AI_Output (other, self, "DIA_Raoul_Duell_15_00"); //Methinks I'm going to punch you in the face...
 	AI_Output (self, other, "DIA_Raoul_Duell_01_01"); //What?
-	AI_Output (other, self, "DIA_Raoul_Duell_15_02"); //That's exactly what you need right now ...
+	AI_Output (other, self, "DIA_Raoul_Duell_15_02"); //That's exactly what you need right now...
 	AI_Output (self, other, "DIA_Raoul_Duell_01_03"); //I've been too nice to you so far, haven't I?
 	
 	AI_StopProcessInfos (self);

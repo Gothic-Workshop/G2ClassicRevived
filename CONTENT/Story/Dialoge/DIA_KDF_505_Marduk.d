@@ -148,7 +148,7 @@ func int DIA_Marduk_Pal_Condition ()
 func void DIA_Marduk_Pal_Info ()
 {
 	AI_Output (other, self, "DIA_Marduk_Pal_15_00"); //But there are only magicians and novices living in the monastery.
-	AI_Output (self, other, "DIA_Marduk_Pal_05_01"); //That is correct. In contrast to our community which honors the Word of Innos ...
+	AI_Output (self, other, "DIA_Marduk_Pal_05_01"); //That is correct. In contrast to our community which honors the Word of Innos...
 	AI_Output (self, other, "DIA_Marduk_Pal_05_02"); //... the paladins honor the great deeds of our Lord, above all else.
 	AI_Output (self, other, "DIA_Marduk_Pal_05_03"); //We are the representatives of Innos, but the paladins are his warriors, who go into battle in his name and increase his glory.
 };

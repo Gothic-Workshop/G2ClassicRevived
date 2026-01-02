@@ -290,7 +290,7 @@ func void DIA_Bennet_TeachCOMMON_Info ()
 	{
 		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_01"); //It's quite simple: get yourself a piece of raw steel and hold it into the fire until it glows.
 		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_02"); //Then put it on the anvil and hammer the blade into shape.
-		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_03"); //Most important, watch out that the blade doesn't get too cold. You only have a few minutes at a time to work on your weapon ...
+		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_03"); //Most important, watch out that the blade doesn't get too cold. You only have a few minutes at a time to work on your weapon...
 		AI_Output (self, other, "DIA_Bennet_TeachCOMMON_06_04"); //The rest you can find out for yourself - it's merely a matter of practice.
 	};
 };
@@ -342,7 +342,7 @@ func void DIA_Bennet_WannaSmithORE_Info ()
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_07"); //If I had magic ore, I might even do just that.
 		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_08");//Aw, come on - I'm with the mercenaries, and I can forge - what else do you want?
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_09"); //Can you tell me, then, how I am supposed to forge a magic ore weapon without any magic ore?
-		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_10");//Weeell ...
+		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_10");//Weeell...
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_11"); //That's what I thought. I need at least 5 lumps of that ore - or you can forget it,
 		if (MIS_Bennet_BringOre == FALSE)
 		{
@@ -352,7 +352,7 @@ func void DIA_Bennet_WannaSmithORE_Info ()
 	else //alles OK
 	{
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_12"); //Great, you brought me the ore, and you also know how to forge a decent sword.
-		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_13");//Well, fire away, then ...
+		AI_Output (other, self, "DIA_Bennet_WannaSmithORE_15_13");//Well, fire away, then...
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_14"); //The most important thing is: It doesn't matter at all whether your weapon is made of magic ore throughout, or if you have only coated a simple steel blade with a layer of ore. The surface is all that matters.
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_15"); //And since the blasted stuff is so expensive, you just grab a steel billet and a few lumps of ore.
 		AI_Output (self, other, "DIA_Bennet_WannaSmithORE_06_16"); //Naturally, it won't do to just coat a finished sword with magic ore. You'll have to forge the weapon yourself from scratch.

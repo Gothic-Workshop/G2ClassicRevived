@@ -43,7 +43,7 @@ FUNC VOID Rtn_Start_496 ()
     TA_Smalltalk			(11,00,13,00,"NW_CITY_MERCHANT_PATH_28_D");
 	TA_Stand_Drinking		(13,00,14,00,"NW_CITY_MERCHANT_PATH_28_D");
     TA_Smalltalk			(14,00,16,00,"NW_CITY_MERCHANT_PATH_28_D");
-    //TA_Stand_Drinking		(16,00,18,00,"NW_CITY_MERCHANT_PATH_28_D");
+    TA_Stand_Drinking		(16,00,18,00,"NW_CITY_BEER_04");
 	
 	TA_Cook_Stove			(16,00,17,00,"NW_CITY_UPTOWN_HUT_04_COOK");
 	TA_Smalltalk			(17,00,21,45,"NW_CITY_UPTOWN_PATH_15");	

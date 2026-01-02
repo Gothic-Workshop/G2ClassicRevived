@@ -97,7 +97,7 @@ func void DIA_Biff_HALLO_doof ()
 func void DIA_Biff_HALLO_spott ()
 {
 	AI_Output			(other, self, "DIA_Biff_HALLO_spott_15_00"); //I can't tell anything from that idiotic face you're making. That's why I have to ask.
-	AI_Output			(self, other, "DIA_Biff_HALLO_spott_07_01"); //You're mouth is too big for my taste. It's time somebody shut it for you.
+	AI_Output			(self, other, "DIA_Biff_HALLO_spott_07_01"); //Your mouth is too big for my taste. It's time somebody shut it for you.
 
 	AI_StopProcessInfos (self);
 	B_Attack (self, other, AR_NONE, 1);

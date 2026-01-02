@@ -57,6 +57,14 @@ func void B_SetVisuals_Meatbug()
 
 };
 
+func void B_SetVisuals_MeatbugIndoor()
+{
+	Mdl_SetVisual			(self,	"Meatbug.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"MEATBUG_INDOOR",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+
+};
+
 
 //***************
 //	Meatbug    	
@@ -67,6 +75,10 @@ INSTANCE Meatbug	(Mst_Default_Meatbug)
 	B_SetVisuals_Meatbug();
 };
 
+INSTANCE MeatbugIndoor	(Mst_Default_Meatbug)
+{
+	B_SetVisuals_MeatbugIndoor();
+};
 
 
 
@@ -80,7 +92,7 @@ INSTANCE Meatbug	(Mst_Default_Meatbug)
 //***************
 INSTANCE Meatbug_Brutus1	(Mst_Default_Meatbug)
 {
-	B_SetVisuals_Meatbug();
+	B_SetVisuals_MeatbugIndoor();
 };
 //***************
 //	Meatbug_Brutus2   	
@@ -88,7 +100,7 @@ INSTANCE Meatbug_Brutus1	(Mst_Default_Meatbug)
 
 INSTANCE Meatbug_Brutus2	(Mst_Default_Meatbug)
 {
-	B_SetVisuals_Meatbug();
+	B_SetVisuals_MeatbugIndoor();
 };
 //***************
 //	Meatbug_Brutus3    	
@@ -96,7 +108,7 @@ INSTANCE Meatbug_Brutus2	(Mst_Default_Meatbug)
 
 INSTANCE Meatbug_Brutus3	(Mst_Default_Meatbug)
 {
-	B_SetVisuals_Meatbug();
+	B_SetVisuals_MeatbugIndoor();
 };
 //***************
 //	Meatbug_Brutus4    	
@@ -104,5 +116,5 @@ INSTANCE Meatbug_Brutus3	(Mst_Default_Meatbug)
 
 INSTANCE Meatbug_Brutus4	(Mst_Default_Meatbug)
 {
-	B_SetVisuals_Meatbug();
+	B_SetVisuals_MeatbugIndoor();
 };

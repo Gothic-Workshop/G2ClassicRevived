@@ -229,7 +229,7 @@ func void DIA_Mil_310_Stadtwache_Attack_Info()
 	other.aivar[AIV_LastDistToWP] 			= 0;
 	self.aivar[AIV_Guardpassage_Status]	= GP_NONE;						//wird auch in ZS_Attack resettet
 	
-	AI_Output (self, other,"DIA_Mil_310_Stadtwache_Attack_07_00"); //You asked for it ...
+	AI_Output (self, other,"DIA_Mil_310_Stadtwache_Attack_07_00"); //You asked for it...
 	
 	AI_StopProcessInfos	(self);
 	B_Attack (self, other, AR_GuardStopsIntruder, 0); 

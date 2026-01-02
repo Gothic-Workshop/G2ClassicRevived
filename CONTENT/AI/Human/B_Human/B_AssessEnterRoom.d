@@ -128,6 +128,11 @@ func int B_AssessEnterRoom ()
 		{
 			Npc_ClearAIQueue	(self);
 			B_ClearPerceptions	(self);
+			
+			if (Npc_GetGuildAttitude(self, hero) == ATT_FRIENDLY) {
+				return TRUE;
+			};
+
 			if (C_BodyStateContains (self, BS_SIT))
 			{
 				AI_StartState		(self,	ZS_ObservePlayer, 0, "");

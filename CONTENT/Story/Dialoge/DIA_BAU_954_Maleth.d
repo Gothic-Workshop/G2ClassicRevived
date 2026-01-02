@@ -23,7 +23,7 @@ FUNC VOID DIA_Maleth_EXIT_Info()
 	
 	if (Maleth_ersterWolf == FALSE)
 	{
-		Wld_InsertNpc		(YWolf,	"NW_FARM1_PATH_CITY_SHEEP_06");
+		Wld_InsertNpc		(WolfJuvenile,	"NW_FARM1_PATH_CITY_SHEEP_06");
 		Maleth_ersterWolf = TRUE;
 	};
 };
@@ -117,7 +117,7 @@ instance DIA_Maleth_BanditsDEAD	(C_INFO) //E2
 	condition	= DIA_Maleth_BanditsDEAD_Condition;
 	information	= DIA_Maleth_BanditsDEAD_Info;
 	permanent   = FALSE;
-	description	= "Those bandits won't trouble you any more ...";
+	description	= "Those bandits won't trouble you any more...";
 };
 
 func int DIA_Maleth_BanditsDEAD_Condition ()
@@ -133,9 +133,9 @@ func int DIA_Maleth_BanditsDEAD_Condition ()
 
 func void DIA_Maleth_BanditsDEAD_Info ()
 {
-	AI_Output (other, self, "DIA_Maleth_BanditsDEAD_15_00"); //Those bandits won't trouble you any more ...
+	AI_Output (other, self, "DIA_Maleth_BanditsDEAD_15_00"); //Those bandits won't trouble you any more...
 	AI_Output (self, other, "DIA_Maleth_BanditsDEAD_08_01"); //Why? Are they dead?
-	AI_Output (other, self, "DIA_Maleth_BanditsDEAD_15_02"); //They picked a fight with the wrong guy ...
+	AI_Output (other, self, "DIA_Maleth_BanditsDEAD_15_02"); //They picked a fight with the wrong guy...
 	AI_Output (self, other, "DIA_Maleth_BanditsDEAD_08_03"); //Thank Innos! Here - it isn't much, but I want you to have it!
 	B_GiveInvItems (self, other, ItFo_Wine, 3);
 	
@@ -154,7 +154,7 @@ instance DIA_Maleth_BanditsALIVE (C_INFO) //E2
 	condition	= DIA_Maleth_BanditsALIVE_Condition;
 	information	= DIA_Maleth_BanditsALIVE_Info;
 	permanent   = FALSE;
-	description	= "I know the hideout of the bandits ...";
+	description	= "I know the hideout of the bandits...";
 };
 
 func int DIA_Maleth_BanditsALIVE_Condition ()
@@ -173,7 +173,7 @@ func int DIA_Maleth_BanditsALIVE_Condition ()
 
 func void DIA_Maleth_BanditsALIVE_Info ()
 {
-	AI_Output (other, self, "DIA_Maleth_BanditsALIVE_15_00"); //I know the hideout of the bandits ...
+	AI_Output (other, self, "DIA_Maleth_BanditsALIVE_15_00"); //I know the hideout of the bandits...
 	AI_Output (self, other, "DIA_Maleth_BanditsALIVE_08_01"); //Do you want to attack them? Count me out! It's much too dangerous!
 	AI_Output (self, other, "DIA_Maleth_BanditsALIVE_08_02"); //Besides, I have to watch over my sheep!
 	AI_Output (self, other, "DIA_Maleth_BanditsALIVE_08_03"); //But if you think you can get the riff-raff off our backs, the whole farm would be very grateful to you.
@@ -220,7 +220,7 @@ func void DIA_Maleth_ToTheCity_Info ()
 	}
 	else
 	{
-		AI_Output (self, other, "DIA_Maleth_ToTheCity_08_03"); //They might let you in - if you tell them what they want to hear ...
+		AI_Output (self, other, "DIA_Maleth_ToTheCity_08_03"); //They might let you in - if you tell them what they want to hear...
 	};
 	
 	AI_Output (other, self, "DIA_Maleth_ToTheCity_15_04"); //And that would be?
@@ -472,9 +472,9 @@ func int DIA_Maleth_GEHSTOCK_Condition ()
 func void DIA_Maleth_GEHSTOCK_Info ()
 {
 	AI_Output			(other, self, "DIA_Maleth_GEHSTOCK_15_00"); //I think this walking stick belongs to you.
-	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_01"); //That's terrific. I ...
+	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_01"); //That's terrific. I...
 	AI_Output			(other, self, "DIA_Maleth_GEHSTOCK_15_02"); //Just a moment. First you pay for it.
-	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_03"); //But ... I don't have much.
+	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_03"); //But... I don't have much.
 	AI_Output			(other, self, "DIA_Maleth_GEHSTOCK_15_04"); //Then think of something else.
 	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_05"); //Okay. How about this? Yesterday I saw some bandits run past with a few bags of gold.
 	AI_Output			(self, other, "DIA_Maleth_GEHSTOCK_08_06"); //If I tell you where they keep their booty, can I have my walking stick back?

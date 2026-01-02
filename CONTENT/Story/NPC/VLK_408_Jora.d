@@ -39,6 +39,6 @@ instance VLK_408_Jora (Npc_Default)
 FUNC VOID Rtn_Start_408 ()
 {
 	TA_Stand_ArmsCrossed	(05,15,20,04,"NW_CITY_MERCHANT_PATH_38");
-    TA_Smalltalk		 	(20,04,00,06,"NW_CITY_BEER_04");
+    TA_Smalltalk		 	(20,04,00,06,"NW_CITY_BEER_08");
     TA_Sleep		 		(00,06,05,15,"NW_CITY_HOTEL_BED_03");
 };

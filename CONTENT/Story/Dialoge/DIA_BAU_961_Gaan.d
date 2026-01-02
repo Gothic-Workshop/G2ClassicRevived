@@ -547,7 +547,7 @@ instance DIA_Gaan_SellSkin (C_INFO)
 	condition	= DIA_Gaan_SellSkin_Condition;
 	information	= DIA_Gaan_SellSkin_Info;
 	permanent	= TRUE;
-	description	= "I've got a few skins for you ...";
+	description	= "I've got a few skins for you...";
 };
 func int DIA_Gaan_SellSkin_Condition ()
 {
@@ -559,7 +559,7 @@ func int DIA_Gaan_SellSkin_Condition ()
 };
 func void DIA_Gaan_SellSkin_Info ()
 {
-	AI_Output (other, self, "DIA_Bosper_SellFur_15_00"); //I've got a few skins for you ...
+	AI_Output (other, self, "DIA_Bosper_SellFur_15_00"); //I've got a few skins for you...
 	
 	if (Npc_HasItems(other, itat_LurkerSkin) > 0)
 	|| (Npc_HasItems(other, ITAT_REVIVED_SKIN_SNAPPER) > 0)

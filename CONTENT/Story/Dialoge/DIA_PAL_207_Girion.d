@@ -280,11 +280,11 @@ func void DIA_Girion_CATCHPLAYERSTOLENSHIP_ship ()
 	
 	if ((hero.guild == GIL_PAL) || (hero.guild == GIL_KDF))
 	{
-		AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_01"); //You cannot do that. The ore transport ...
+		AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_01"); //You cannot do that. The ore transport...
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_02"); //How dare you, you stinking son of a ...
+		AI_Output			(self, other, "DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_08_02"); //How dare you, you stinking son of a...
 	};
 	
 	AI_Output			(other, self, "DIA_Girion_CATCHPLAYERSTOLENSHIP_ship_15_03"); //The ore in the Valley of Mines is not enough to satisfy the king. I was there. There's nothing more to be had there. Hagen's mission is a farce.

@@ -31,6 +31,8 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SWAMPSHARK)		{	CreateInvItems (slf, ItAt_SharkTeeth, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_PANTHER)		{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLACKWOLF)		{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)			{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ItAt_Teeth		, 2);	};
 		
 		
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_TROLL)			{	CreateInvItems (slf, ItAt_TrollTooth, 2);	};
@@ -48,6 +50,7 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_SHADOWBEAST)	{	CreateInvItems (slf, ItAt_Claw		, 4);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLOODHOUND)		{	CreateInvItems (slf, ItAt_Claw		, 4);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_PANTHER)		{	CreateInvItems (slf, ItAt_Claw		, 4);	};
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ItAt_Claw		, 2);	};
 		
 		
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_LURKER)			{	CreateInvItems (slf, ItAt_LurkerClaw, 1);	};		
@@ -68,7 +71,8 @@ func void B_GiveDeathInv (var C_NPC slf)
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_PANTHER)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_PANTHER, 1);	};
 		if (slf.aivar[AIV_MM_REAL_ID] == ID_BLACKWOLF)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_BLACKWOLF, 1);	};
 		// ---------------------------------------------------------------------------------------------------
-		//if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)			{	CreateInvItems (slf, ITAT_REVIVED_FUR_ORCDOG	, 1);	};	
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_ORCDOG)			{	CreateInvItems (slf, ITAT_REVIVED_FUR_ORCDOG	, 1);	};	
+		if (slf.aivar[AIV_MM_REAL_ID] == ID_HELLHOUND)		{	CreateInvItems (slf, ITAT_REVIVED_FUR_HELLHOUND	, 1);	};	
 	};
 	
 	// ------ Fell und Häute verteilen ------

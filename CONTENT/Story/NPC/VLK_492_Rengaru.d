@@ -41,7 +41,7 @@ instance VLK_492_Rengaru (Npc_Default)
 FUNC VOID Rtn_Start_492()
 {	
 	TA_Stand_ArmsCrossed	(05,15,20,15,"NW_CITY_MERCHANT_PATH_36_C_RENGARU");
-    TA_Stand_Drinking 		(20,15,05,15,"NW_CITY_BEER_01"); 
+    TA_Stand_Drinking 		(20,15,05,15,"NW_CITY_BEER_09"); 
 };
 
 FUNC VOID Rtn_RunAway_492()

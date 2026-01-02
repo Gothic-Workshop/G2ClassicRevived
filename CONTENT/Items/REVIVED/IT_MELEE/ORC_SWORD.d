@@ -110,7 +110,7 @@ INSTANCE ITMW_REVIVED_ORC_SWORD_03 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_Orc_Sword_03;
-	visual 				=	"REV_IRON_HEAVYCLAYMORE.3DS";
+	visual 				=	"REV_2H_LIZARD_SWORD.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;

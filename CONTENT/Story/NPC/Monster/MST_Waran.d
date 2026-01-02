@@ -63,6 +63,20 @@ func void B_SetVisuals_Waran()
 	Mdl_SetVisualBody		(self,	"War_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
+func void B_SetVisuals_GreenWaran()
+{
+	Mdl_SetVisual			(self,	"Waran.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"WAR_GREEN_BODY",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
+func void B_SetVisuals_BeachWaran()
+{
+	Mdl_SetVisual			(self,	"Waran.mds");
+	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
+	Mdl_SetVisualBody		(self,	"WAR_BEACH_BODY",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+};
+
 
 //**************
 //	Waran    	
@@ -74,21 +88,14 @@ INSTANCE Waran	(Mst_Default_Waran)
 	Npc_SetToFistMode(self);
 };
 
-//Addon
-
-
-INSTANCE BeachWaran1	(Mst_Default_Waran)
+INSTANCE GreenWaran	(Mst_Default_Waran)
 {
-	B_SetVisuals_Waran();
+	B_SetVisuals_GreenWaran();
 	Npc_SetToFistMode(self);
 };
 
-
-INSTANCE BeachWaran2	(Mst_Default_Waran)
+INSTANCE BeachWaran	(Mst_Default_Waran)
 {
-	B_SetVisuals_Waran();
+	B_SetVisuals_BeachWaran();
 	Npc_SetToFistMode(self);
 };
-
-
-

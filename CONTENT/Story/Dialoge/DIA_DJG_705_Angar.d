@@ -487,7 +487,7 @@ func void DIA_Angar_WASISTLOS_Info ()
 	AI_Output			(other, self, "DIA_Angar_WASISTLOS_15_00"); //What's the matter?
 	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_01"); //I cannot go farther with you.
 	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_02"); //Something tells me that I will never get out of here alive.
-	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_03"); //I can't explain it, but ...
+	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_03"); //I can't explain it, but...
 	
 	if (SC_KnowsMadPsi == TRUE)
 	{
@@ -495,7 +495,7 @@ func void DIA_Angar_WASISTLOS_Info ()
 	}
 	else
 	{
-		AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_05"); //Every time I face one of these ... hellspawn, I have the feeling that I am fighting my own people.
+		AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_05"); //Every time I face one of these... hellspawn, I have the feeling that I am fighting my own people.
 	};
 
 	AI_StopProcessInfos (self);

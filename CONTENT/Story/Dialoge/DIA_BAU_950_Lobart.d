@@ -146,7 +146,7 @@ func void DIA_Lobart_Hallo_Info ()
 		AI_Output (self, other, "DIA_Lobart_Hallo_05_01"); //(appraising) Whose side are you on? The rebelling farmers or the King?
 	
 		Info_ClearChoices	(DIA_Lobart_Hallo);
-		Info_AddChoice		(DIA_Lobart_Hallo, "I don't understand ...", DIA_Lobart_Hallo_What );
+		Info_AddChoice		(DIA_Lobart_Hallo, "I don't understand...", DIA_Lobart_Hallo_What );
 		Info_AddChoice		(DIA_Lobart_Hallo, "I'm for the King!", 		DIA_Lobart_Hallo_ForTheKing );
 		Info_AddChoice		(DIA_Lobart_Hallo, "I'm for the peasants!",		DIA_Lobart_Hallo_ForThePeasants );
 	}
@@ -181,7 +181,7 @@ func void DIA_Lobart_Hallo_ForTheKing()
 
 func void DIA_Lobart_Hallo_What()
 {
-	AI_Output (other, self, "DIA_Lobart_Hallo_What_15_00"); //I don't understand ...
+	AI_Output (other, self, "DIA_Lobart_Hallo_What_15_00"); //I don't understand...
 	AI_Output (self, other, "DIA_Lobart_Hallo_What_05_01"); //What?! Don't mess with me, boy! I want to know where you stand! So, who are you for?!
 };
 
@@ -219,7 +219,7 @@ func void DIA_Lobart_KLEIDUNG_Info ()
 		
 	if (! Npc_KnowsInfo(other, 	DIA_Lobart_WorkNOW))
 	{
-		AI_Output (self, other, "DIA_Lobart_KLEIDUNG_05_03"); //You could work off a part of the price ... if you're someone who is LOOKING for work.
+		AI_Output (self, other, "DIA_Lobart_KLEIDUNG_05_03"); //You could work off a part of the price... if you're someone who is LOOKING for work.
 		B_LogEntry (TOPIC_Kleidung,"I can pay part of the price by working on his farm. The more work I do, the cheaper the clothes get.");
 
 	};
@@ -254,7 +254,7 @@ func void DIA_Lobart_BuyClothes_Info ()
 	Wert_LobartsRuestung = 80; //initialisieren
 	
 	AI_Output (other, self, "DIA_Lobart_BuyClothes_15_00"); //How much for the work clothes?
-	AI_Output (self, other, "DIA_Lobart_BuyClothes_05_01"); //Well, we'll see ...
+	AI_Output (self, other, "DIA_Lobart_BuyClothes_05_01"); //Well, we'll see...
 	
 	if (Lobart_AgainstKing == TRUE)
 	{
@@ -336,7 +336,7 @@ func void DIA_Lobart_BuyClothes_BUY()
 func void DIA_Lobart_BuyClothes_NotYet()
 {
 	AI_Output (other, self, "DIA_Lobart_BuyClothes_NotYet_15_00"); //That's still too expensive.
-	AI_Output (self, other, "DIA_Lobart_BuyClothes_NotYet_05_01"); //Suit yourself ...
+	AI_Output (self, other, "DIA_Lobart_BuyClothes_NotYet_05_01"); //Suit yourself...
 	
 	Info_ClearChoices	(DIA_Lobart_BuyClothes);
 };
@@ -388,7 +388,7 @@ instance DIA_Lobart_OnarStory (C_INFO)
 	condition	= DIA_Lobart_OnarStory_Condition;
 	information	= DIA_Lobart_OnarStory_Info;
 	permanent 	= FALSE;
-	description	= "Tell me more about this Onar ...";
+	description	= "Tell me more about this Onar...";
 };
 
 func int DIA_Lobart_OnarStory_Condition ()
@@ -402,7 +402,7 @@ func int DIA_Lobart_OnarStory_Condition ()
 
 func void DIA_Lobart_OnarStory_Info ()
 {
-	AI_Output (other, self, "DIA_Lobart_OnarStory_15_00"); //Tell me more about this Onar ...
+	AI_Output (other, self, "DIA_Lobart_OnarStory_15_00"); //Tell me more about this Onar...
 
 		if ((hero.guild == GIL_SLD) || (hero.guild == GIL_DJG))
 		{
@@ -444,7 +444,7 @@ func void DIA_Lobart_SldInfo_Info ()
 {
 	AI_Output (other, self, "DIA_Lobart_SldInfo_15_00"); //Who are those mercenaries that Onar hired?
 	AI_Output (self, other, "DIA_Lobart_SldInfo_05_01"); //I don't know much about the fellows. Supposedly, a lot of them are former prisoners from the mining colony.
-	AI_Output (self, other, "DIA_Lobart_SldInfo_05_02"); //(scornful) Everybody knows what you can expect from them ...
+	AI_Output (self, other, "DIA_Lobart_SldInfo_05_02"); //(scornful) Everybody knows what you can expect from them...
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -539,12 +539,12 @@ func void DIA_Lobart_WorkNOW_Info ()
 	
 	Info_ClearChoices	(DIA_Lobart_WorkNOW);
 	Info_AddChoice		(DIA_Lobart_WorkNOW, "I'm supposed to pull turnips? You've got to be kidding!", DIA_Lobart_WorkNOW_WannaFoolMe );
-	Info_AddChoice		(DIA_Lobart_WorkNOW, "All right ...", DIA_Lobart_WorkNOW_Ok );
+	Info_AddChoice		(DIA_Lobart_WorkNOW, "All right...", DIA_Lobart_WorkNOW_Ok );
 };
 
 func void DIA_Lobart_WorkNOW_Ok()
 {
-	AI_Output (other, self, "DIA_Lobart_WorkNOW_Ok_15_00"); //All right ...
+	AI_Output (other, self, "DIA_Lobart_WorkNOW_Ok_15_00"); //All right...
 
 	if (hero.guild == GIL_NONE)
 	{

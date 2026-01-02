@@ -96,7 +96,7 @@ FUNC INT DIA_Matteo_SellWhat_Condition()
 FUNC VOID DIA_Matteo_SellWhat_Info()
 {	
 	AI_Output (other, self, "DIA_Matteo_SellWhat_15_00"); //What are you selling?
-	AI_Output (self, other, "DIA_Matteo_SellWhat_09_01"); //I can offer you everything you need to survive in the wild. Weapons, torches, provisions ... even armor.
+	AI_Output (self, other, "DIA_Matteo_SellWhat_09_01"); //I can offer you everything you need to survive in the wild. Weapons, torches, provisions... even armor.
 	AI_Output (self, other, "DIA_Matteo_SellWhat_09_02"); //I still have a special piece in stock.
 	AI_Output (self, other, "DIA_Matteo_SellWhat_09_03"); //Double hardened armor of snapper leather - still unused. Interested?
 	
@@ -281,7 +281,7 @@ FUNC VOID DIA_Matteo_HelpMeToOV_Info()
 {	
 	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_00"); //Can you help me get into the upper quarter?
 	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_01"); //(stunned) What? What are you going to do THERE?
-	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_02"); //I've got an important message ...
+	AI_Output (other, self, "DIA_Matteo_HelpMeToOV_15_02"); //I've got an important message...
 	AI_Output (self, other, "DIA_Matteo_HelpMeToOV_09_03"); //Well, well...Have you tried getting past the guards?
 
 	if (Torwache_305.aivar[AIV_TalkedToPlayer] == TRUE)
@@ -390,7 +390,7 @@ FUNC VOID DIA_Matteo_PriceOfHelp_Info()
 	AI_Output (self, other, "DIA_Matteo_PriceOfHelp_09_01"); //100 gold pieces.
 	
 	Info_ClearChoices 	(DIA_Matteo_PriceOfHelp);
-	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "That's a whole damn lot ...", DIA_Matteo_PriceOfHelp_Wow);
+	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "That's a whole damn lot...", DIA_Matteo_PriceOfHelp_Wow);
 	Info_AddChoice 		(DIA_Matteo_PriceOfHelp, "You shark!", DIA_Matteo_PriceOfHelp_Cutthroat);
 };
 
@@ -419,7 +419,7 @@ func void DIA_Matteo_PriceOfHelp_Cutthroat()
 
 func void DIA_Matteo_PriceOfHelp_Wow()
 {
-	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Wow_15_00"); //That's a whole damn lot ...
+	AI_Output (other, self, "DIA_Matteo_PriceOfHelp_Wow_15_00"); //That's a whole damn lot...
 	B_Matteo_RegDichAb();
 	Info_ClearChoices 	(DIA_Matteo_PriceOfHelp);
 };
@@ -704,7 +704,7 @@ FUNC INT DIA_Matteo_OtherWay_Condition()
 FUNC VOID DIA_Matteo_OtherWay_Info()
 {	
 	AI_Output (other, self, "DIA_Matteo_OtherWay_15_00"); //Is there another way to get into the upper quarter?
-	AI_Output (self, other, "DIA_Matteo_OtherWay_09_01"); //Perhaps ... if I think of anything, I'll let you know.
+	AI_Output (self, other, "DIA_Matteo_OtherWay_09_01"); //Perhaps... if I think of anything, I'll let you know.
 };	
 
 // ************************************************************

@@ -48,6 +48,44 @@ const string PRINT_Eat_HPMushroom2			= "The hearty flavor revitalizes you.";
 const string PRINT_Eat_HPMushroom3			= "Your body feels more resilient!";
 
 
+// Log Entries
+const string LOGENTRY_RECIPE_HEALTH_01			= "Ingredients for 'Essence of Healing':\n2 Healing Plant\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_HEALTH_02			= "Ingredients for 'Extract of Healing':\n2 Healing Herb\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_HEALTH_03			= "Ingredients for 'Elixir of Healing':\n2 Healing Root\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_MANA_01			= "Ingredients for 'Essence of Magic Energy':\n2 Fire Nettle\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_MANA_02			= "Ingredients for 'Extract of Magic Energy':\n2 Fireweed\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_MANA_03			= "Ingredients for 'Elixir of Magic Energy':\n2 Fire Root\n1 Meadow Knotweed";
+
+const string LOGENTRY_RECIPE_PERM_HEALTH_01		= "Ingredients for 'Essence of Life':\n2 Essence of Healing\n1 King's Sorrel\n1 Healing Root";
+const string LOGENTRY_RECIPE_PERM_HEALTH_02		= "Ingredients for 'Extract of Life':\n2 Extract of Healing\n1 King's Sorrel\n1 Healing Root";
+const string LOGENTRY_RECIPE_PERM_HEALTH_03		= "Ingredients for 'Elixir of Life':\n2 Elixir of Healing\n1 King's Sorrel\n1 Healing Root";
+const string LOGENTRY_RECIPE_PERM_MANA_01		= "Ingredients for 'Essence of Spirit':\n2 Essence of Magic Energy\n1 King's Sorrel\n1 Fire Root";
+const string LOGENTRY_RECIPE_PERM_MANA_02		= "Ingredients for 'Extract of Spirit':\n2 Extract of Magic Energy\n1 King's Sorrel\n1 Fire Root";
+const string LOGENTRY_RECIPE_PERM_MANA_03		= "Ingredients for 'Elixir of Spirit':\n2 Elixir of Magic Energy\n1 King's Sorrel\n1 Fire Root";
+const string LOGENTRY_RECIPE_PERM_STR_01		= "Ingredients for 'Essence of Strength':\n1 Dragonroot\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_STR_02		= "Ingredients for 'Extract of Strength':\n2 Dragonroot\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_STR_03		= "Ingredients for 'Elixir of Strength':\n3 Dragonroot\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_DEX_01		= "Ingredients for 'Essence of Dexterity':\n1 Goblin Berries\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_DEX_02		= "Ingredients for 'Extract of Dexterity':\n2 Goblin Berries\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_DEX_03		= "Ingredients for 'Elixir of Dexterity':\n3 Goblin Berries\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_PERM_MASTER_01		= "Ingredients for 'Potion of Power':\n1 Essence of Strength\n1 Essence of Dexterity\n1 King's Sorrel";
+const string LOGENTRY_RECIPE_PERM_MASTER_02		= "Ingredients for 'Potion of Supremacy':\n1 Extract of Strength\n1 Extract of Dexterity\n1 King's Sorrel";
+const string LOGENTRY_RECIPE_PERM_MASTER_03		= "Ingredients for 'Potion of Godhood':\n1 Elixir of Strength\n1 Elixir of Dexterity\n1 King's Sorrel";
+const string LOGENTRY_RECIPE_SPEED_01			= "Ingredients for 'Potion of Swiftness':\n1 Snapperweed\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_SPEED_02			= "Ingredients for 'Potion of Velocity':\n2 Snapperweed\n1 Meadow Knotweed";
+const string LOGENTRY_RECIPE_SPEED_03			= "Ingredients for 'Potion of Haste':\n3 Snapperweed\n1 Meadow Knotweed";
+
+const string LOGENTRY_RECIPE_LOUHAMMER			= "Ingredients for 'Lou's Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 White Rum";
+const string LOGENTRY_RECIPE_LOUHAMMERDOUBLE	= "Ingredients for 'Lou's Double Hammer':\n2 Turnip\n1 Swampweed\n1 Swampshark tooth\n1 Lou's Hammer";
+const string LOGENTRY_RECIPE_FASTHERRING		= "Ingredients for 'Hasty Herring':\n1 Fish\n1 Snapperweed\n1 White Rum";
+const string LOGENTRY_RECIPE_TURNIPBOOZE		= "Ingredients for 'Turnip Booze':\n4 Turnip\n1 Beer\n1 Minecrawler Mandibles";
+const string LOGENTRY_RECIPE_VINOBOOZE			= "Ingredients for 'Vino's Special':\n2 Berries\n2 Apple\n4 Pear\n1 Bloodfly's wings";
+const string LOGENTRY_RECIPE_MONSTERDRINK		= "Ingredients for 'Monster Drink':\n2 King's Sorrel\n2 Troll Tusk\n4 Teeth\n4 Claws";
+const string LOGENTRY_RECIPE_MAGEWINE			= "Ingredients for 'Monastery Wine':\n4 Grapes\n1 Bloodfly's stinger";
+const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4 Riceplant\n1 Lurker claws";
+const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
+
+
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";
 const string NAME_HolyWeapon1H			=	"One-Handed Weapon (Holy)";
@@ -56,6 +94,8 @@ const string NAME_BlessedWeapon1H		=	"One-Handed Weapon (Blessed)";
 const string NAME_BlessedWeapon2H		=	"Two-Handed Weapon (Blessed)";
 const string NAME_TaintedWeapon1H		=	"One-Handed Weapon (Tainted)";
 const string NAME_TaintedWeapon2H		=	"Two-Handed Weapon (Tainted)";
+const string NAME_ForgedWeapon1H		=	"One-Handed Weapon (Forged)";
+const string NAME_ForgedWeapon2H		=	"Two-Handed Weapon (Forged)";
 
 const string NAME_HP_needed				=	"Hitpoints required";
 
@@ -73,6 +113,8 @@ const string NAME_Damage_Fire			=	"Fire Damage";
 
 const string NAME_RaiseStrDex			=	"Strength and Dexterity +";
 const string NAME_RaiseHPMP				=	"Hitpoints and Mana +";
+const string NAME_RaiseWeaponSkill		=	"Melee Weapon Talent Bonus";
+
 const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
 
 const string PRINT_GotFood				=	"Package was filled with food";
@@ -99,13 +141,16 @@ CONST STRING MOBNAME_CHESTOLD				= "Old Chest";
 CONST STRING MOBNAME_LEVER					= "Lever";
 CONST STRING MOBNAME_PILLAR					= "Pillar";
 
+CONST STRING MOBNAME_LATI					= "Alchemist's Lab";
+CONST STRING MOBNAME_ORB					= "Magic Orb";
+
 CONST STRING MOBNAME_ADANOS_SHRINE			= "Statue of Adanos";
 
+CONST STRING MOBNAME_WEEDSMASHER			= "Weed smasher";
 CONST STRING MOBNAME_STOMPER				= "Stomper";
 
 CONST STRING MOBNAME_VINEYARD				= "Grapevine";
 CONST STRING MOBNAME_ORE_DEPLETED			= "Depleted Ore";
-
 
 CONST STRING MOBNAME_GR_CHAPEL				= "To Chapel";
 CONST STRING MOBNAME_CHESTMAKER_01			= "Thorben's Workshop";
@@ -230,6 +275,7 @@ var int BookPersonal;
 // AI Constants
 // ***************
 
+// New
 const int Face_N_GordonRamsay		= 	163;
 const int Face_N_ArkhanQualshy		= 	164;
 const int Face_N_BartiredQualshy	= 	165;
@@ -237,14 +283,19 @@ const int Face_N_SinisterCruz		= 	166;
 const int Face_N_UdarEverett		= 	167;
 const int Face_N_DelaCroix			= 	168;
 
+// Named characters
+
+
 
 const int ID_MINECRAWLERQUEEN		=	65;
 const int FAI_MINECRAWLERQUEEN		=	47;
 
 const int ID_PANTHER				=	66;
 const int ID_BLACKWOLF				=	67;
+const int ID_ORCDOG					=	68;
+const int ID_HELLHOUND				=	69;
 
-const int ID_FANATIC				=	68;
+const int ID_FANATIC				=	70;
 
 
 // ***************
@@ -303,6 +354,8 @@ var int OreMob_27_Amount;
 var int OreMob_28_Amount;
 var int OreMob_29_Amount;
 var int OreMob_30_Amount;
+var int OreMob_31_Amount;
+var int OreMob_32_Amount;
 
 
 var int FirstJoint_01;
@@ -351,6 +404,8 @@ var int Bounty5;
 // ***************
 // Ambient XP
 // ***************
+
+const int	XP_NostalgiaBonus			= 25;
 
 const int 	XP_Addon_AllOWTeleporststones			= 400;
 
@@ -488,13 +543,15 @@ const int WEAPON_1H_REVIVED_01			= 13;
 const int WEAPON_1H_REVIVED_02			= 14;
 const int WEAPON_1H_REVIVED_03			= 15;
 const int WEAPON_1H_REVIVED_04			= 16;
-const int WEAPON_2H_REVIVED_01			= 17;
-const int WEAPON_2H_REVIVED_02			= 18;
-const int WEAPON_2H_REVIVED_03			= 19;
-const int WEAPON_2H_REVIVED_04			= 20;
+const int WEAPON_1H_REVIVED_05			= 17;
+const int WEAPON_2H_REVIVED_01			= 18;
+const int WEAPON_2H_REVIVED_02			= 19;
+const int WEAPON_2H_REVIVED_03			= 20;
+const int WEAPON_2H_REVIVED_04			= 21;
+const int WEAPON_2H_REVIVED_05			= 22;
 
 
-const int MAX_WEAPONS_MELEE 			= 21;
+const int MAX_WEAPONS_MELEE 			= 23;
 var int PLAYER_TALENT_SMITH[MAX_WEAPONS_MELEE];
 
 

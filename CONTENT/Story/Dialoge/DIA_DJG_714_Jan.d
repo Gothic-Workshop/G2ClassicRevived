@@ -352,29 +352,65 @@ FUNC VOID Jan_Training_Talente_Info()
 	};
 	if ( PLAYER_TALENT_SMITH[WEAPON_Common] == TRUE)
 	{	
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_01] == FALSE)
+		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_05] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString(NAME_ItMw_1H_Special_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_01))		,Jan_Training_Smith_1hSpecial1);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastard Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_05))		,Jan_Training_Smith_2h_5);
 		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_01] == FALSE)
+		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_04] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString(NAME_ItMw_2H_Special_01, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_01))		,Jan_Training_Smith_2hSpecial1);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_04))		,Jan_Training_Smith_2h_4);
 		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_1H_Special_02] == FALSE)
+		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_03] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString(NAME_ItMw_1H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_Special_02))		,Jan_Training_Smith_1hSpecial2);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Broad Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_03))		,Jan_Training_Smith_2h_3);
 		};
-		if ( PLAYER_TALENT_SMITH[WEAPON_2H_Special_02] == FALSE)
+		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_02] == FALSE)
 		&& ((hero.guild == GIL_SLD)
 		|| (hero.guild == GIL_DJG))
 		{
-			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString(NAME_ItMw_2H_Special_02, B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_Special_02))		,Jan_Training_Smith_2hSpecial2);
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Heavy Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_02))		,Jan_Training_Smith_2h_2);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_2H_REVIVED_01] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Light Sword (Two-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_2H_REVIVED_01))		,Jan_Training_Smith_2h_1);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_05] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Bastard Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_05))		,Jan_Training_Smith_1h_5);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_04] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_04))		,Jan_Training_Smith_1h_4);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_03] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Broad Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_03))		,Jan_Training_Smith_1h_3);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_02] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Long Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_02))		,Jan_Training_Smith_1h_2);
+		};
+		if ( PLAYER_TALENT_SMITH[WEAPON_1H_REVIVED_01] == FALSE)
+		&& ((hero.guild == GIL_SLD)
+		|| (hero.guild == GIL_DJG))
+		{
+			Info_AddChoice		(Jan_Training_Talente, B_BuildLearnString("Short Sword (One-Handed)", B_GetLearnCostTalent(other, NPC_TALENT_SMITH, WEAPON_1H_REVIVED_01))		,Jan_Training_Smith_1h_1);
 		};
 	};
 };
@@ -389,24 +425,47 @@ FUNC VOID Jan_Training_Smith_Common ()
 	B_TeachPlayerTalentSmith (self, other, WEAPON_Common);
 };
 
-FUNC VOID Jan_Training_Smith_1hSpecial1 ()
+//*******************************************
+FUNC VOID Jan_Training_Smith_1h_1 ()
 {
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_01);	
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_01);	
 };
-
-FUNC VOID Jan_Training_Smith_2hSpecial1 ()
+FUNC VOID Jan_Training_Smith_1h_2 ()
 {
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_01);	
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_02);	
 };
-
-FUNC VOID Jan_Training_Smith_1hSpecial2 ()
+FUNC VOID Jan_Training_Smith_1h_3 ()
 {
-	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_Special_02);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_03);	
 };
-
-FUNC VOID Jan_Training_Smith_2hSpecial2 ()
+FUNC VOID Jan_Training_Smith_1h_4 ()
 {
-	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_Special_02);
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_04);	
+};
+FUNC VOID Jan_Training_Smith_1h_5 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_1H_REVIVED_05);	
+};
+//*******************************************
+FUNC VOID Jan_Training_Smith_2h_1 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_01);	
+};
+FUNC VOID Jan_Training_Smith_2h_2 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_02);	
+};
+FUNC VOID Jan_Training_Smith_2h_3 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_03);	
+};
+FUNC VOID Jan_Training_Smith_2h_4 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_04);	
+};
+FUNC VOID Jan_Training_Smith_2h_5 ()
+{
+	B_TeachPlayerTalentSmith (self, other, WEAPON_2H_REVIVED_05);	
 };
 
 //*******************************************
@@ -597,7 +656,7 @@ instance DIA_Jan_DJG_ARMOR_M		(C_INFO)
 	condition	 = 	DIA_Jan_DJG_ARMOR_M_Condition;
 	information	 = 	DIA_Jan_DJG_ARMOR_M_Info;
 	permanent	 = 	TRUE;
-	description	 =	"Medium dragon hunter armor: Protection: weapons 80, arrows 80 (12000 gold)"; //Wenn �ndern, dann bitte auch in der Info-Instanz. s.u.
+	description	 =	"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)"; //Wenn �ndern, dann bitte auch in der Info-Instanz. s.u.
 };
 
 func int DIA_Jan_DJG_ARMOR_M_Condition ()
@@ -610,17 +669,23 @@ func int DIA_Jan_DJG_ARMOR_M_Condition ()
 	};	
 };
 
-func void DIA_Jan_DJG_ARMOR_M_Info ()
-{	
-	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
-	
+var int HelmetOrNot;
+
+FUNC VOID DIA_JAN_DHT_SellArmor()
+{
 	if (Npc_HasItems (other,itmi_Gold) >= 12000)
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_01"); //You can see that it's worth every gold piece.
 		
 		B_GiveInvItems (other,self,ItMi_Gold,12000);
-		CreateInvItems (self,ITAR_DJG_M,1);
-		B_GiveInvItems (self,other,ITAR_DJG_M,1);
+		if(HelmetOrNot == TRUE)
+		{
+			CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER,1);
+			B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER,1);
+		} else {
+			CreateInvItems (self,ITAR_REVIVED_DEMONHUNTER_02,1);
+			B_GiveInvItems (self,other,ITAR_REVIVED_DEMONHUNTER_02,1);
+		};
 		
 		Jan_DIA_Jan_DJG_ARMOR_M_permanent = TRUE;
 	}
@@ -628,7 +693,29 @@ func void DIA_Jan_DJG_ARMOR_M_Info ()
 	{
 		AI_Output 	(self ,other,"DIA_Jan_DJG_ARMOR_M_10_02"); //You don't have enough gold.
 	};	
-	
+};
+
+func void DIA_JAN_DHT_Armor_Helmet()
+{
+	HelmetOrNot = TRUE;
+
+	DIA_JAN_DHT_SellArmor();
+	Info_ClearChoices (DIA_JAN_SellArmor);
+};
+func void DIA_JAN_DHT_Armor_NoHelmet()
+{
+	HelmetOrNot = FALSE;
+
+	DIA_JAN_DHT_SellArmor();
+	Info_ClearChoices (DIA_JAN_SellArmor);
+};
+
+func void DIA_Jan_DJG_ARMOR_M_Info ()
+{	
+	AI_Output	(other,self ,"DIA_Jan_DJG_ARMOR_M_15_00"); //I want to buy the armor.
+
+	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_Helmet);
+	Info_AddChoice (DIA_JAN_SellArmor,"Demonhunter Armor w/o helmet (Protection: weapons 150, arrows 150) (12000 gold)",DIA_JAN_DHT_Armor_NoHelmet);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -641,7 +728,7 @@ instance DIA_Jan_DragonPlettBericht		(C_INFO)
 	condition	 = 	DIA_Jan_DragonPlettBericht_Condition;
 	information	 = 	DIA_Jan_DragonPlettBericht_Info;
 
-	description	 = 	"About the dragons ...";
+	description	 = 	"About the dragons...";
 };
 
 var int DIA_Jan_DragonPlettBericht_NoPerm;

@@ -48,7 +48,7 @@ FUNC INT DIA_Neoras_Hallo_Condition()
 };
 FUNC VOID DIA_Neoras_Hallo_Info()
 {
-	AI_Output (self ,other,"DIA_Neoras_Hallo_01_00"); //What ... what's wrong? Why are you bothering me? Can't you see that I'm in the middle of an extremely complicated experiment?
+	AI_Output (self ,other,"DIA_Neoras_Hallo_01_00"); //What... what's wrong? Why are you bothering me? Can't you see that I'm in the middle of an extremely complicated experiment?
 	AI_Output (other,self ,"DIA_Neoras_Hallo_15_01"); //I didn't mean to disturb you.
 	AI_Output (self ,other,"DIA_Neoras_Hallo_01_02"); //You already have. -sigh- Well, what do you want?
 };
@@ -104,7 +104,7 @@ INSTANCE DIA_Neoras_Rezept   (C_INFO)
 	condition   = DIA_Neoras_Rezept_Condition;
 	information = DIA_Neoras_Rezept_Info;
 	permanent   = TRUE;
-	description	= "About your recipe ...";
+	description	= "About your recipe...";
 };
 FUNC INT DIA_Neoras_Rezept_Condition()
 {	
@@ -115,7 +115,7 @@ FUNC INT DIA_Neoras_Rezept_Condition()
 };
 FUNC VOID DIA_Neoras_Rezept_Info()
 {
-	AI_Output (other,self ,"DIA_Neoras_Rezept_15_00"); //About your recipe ...
+	AI_Output (other,self ,"DIA_Neoras_Rezept_15_00"); //About your recipe...
 	
 	if B_GiveInvItems (other, self, ItWr_ManaRezept,1)
 	{
@@ -498,7 +498,7 @@ INSTANCE DIA_Neoras_BrewForMe   (C_INFO)
 	condition   = DIA_Neoras_BrewForMe_Condition;
 	information = DIA_Neoras_BrewForMe_Info;
 	permanent   = TRUE;
-	description = "Brew me ...";
+	description = "Brew me...";
 };
 FUNC INT DIA_Neoras_BrewForMe_Condition()
 {

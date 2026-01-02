@@ -26,6 +26,13 @@ FUNC VOID DIA_Xardas_FirstEXIT_Info()
 	AI_Output (other, self,"DIA_Xardas_FirstEXIT_15_00"); //I'll be on my way as fast as I can!
 	AI_Output (self, other,"DIA_Xardas_FirstEXIT_14_01"); //Good! And one more thing: don't tell anyone that you have talked to me. Above all, don't tell any magician.
 	AI_Output (self, other,"DIA_Xardas_FirstEXIT_14_02"); //Since I have gone into exile, the Circle of Fire has taken me for dead - and that's a good thing, too.
+
+	AI_Output	(other, self,"DIA_Xardas_KdfSecret_15_00");	//Why is the Circle of Fire not supposed to know about you?
+	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_01");	//I used to be a high member of the Circle. Even then I suspected that demon magic might be the key to the magic barrier.
+	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_02"); //But I could never have convinced the other members of the Circle to follow this path.
+	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_03"); //So I left the Circle in order to study the Black Arts.
+	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_04"); //That is a crime for which the Fire Magicians, (snidely) the 'Ordained of Innos', the ever 'Good' and 'Virtuous' will accept no excuse.
+	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_05"); //They are certain that I am still alive, but they have no idea where to find me - and that's a good thing, too.
 	
 	AI_StopProcessInfos	(self);
 	
@@ -87,14 +94,14 @@ FUNC VOID DIA_Xardas_Hello_Info()
 	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_04"); //But enough of that. You're here now.
 	AI_Output (self ,other, "DIA_Addon_Xardas_Hello_14_05"); //There's a NEW threat that we have to deal with.
 
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper ...
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //... has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
-	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //Du redest von den Orks?
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //Ich rede von weitaus schlimmeren Kreaturen.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_03"); //At least we have enough time now. I did it. The Sleeper...
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_04"); //...has been banned. You vanquished him, so much is true - but it is not within our power to stop the war that ensues now.
+	AI_Output (other,self ,"DIA_Xardas_Hello_15_05"); //You're talking about the orcs?
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_06"); //I'm talking about far worse creatures.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_07"); //With his final, furious scream, the Sleeper has set into movement the armies of darkness.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_08"); //It was an order to all evil creatures. A word of power that they were all bound to obey.
  	AI_Output (self ,other,"DIA_Xardas_Hello_14_09"); //His last order was: COME! And they came. All of them. Even the dragons.
- 	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed) ... Dragons!
+ 	AI_Output (other,self ,"DIA_Xardas_Hello_15_10"); //(amazed)... Dragons!
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_11"); //They are creatures of ancient power. I can sense their presence - even here.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
@@ -165,6 +172,12 @@ func void DIA_Xardas_TODO_Info ()
 	AI_Output (self, other, "DIA_Xardas_TODO_14_03"); //They possess a powerful artifact which could help us defeat the dragons.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_04"); //They call it the 'Eye of Innos'. You need to get hold of this artifact.
 	AI_Output (self, other, "DIA_Xardas_TODO_14_05"); //Tell the paladins about the threat. You MUST convince their leader to support us!
+
+	AI_Output (other, self, "DIA_Xardas_ARTEFAKT_15_00"); //What exactly is the 'Eye of Innos'?
+	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_01"); //It is an amulet. Legend has it that Innos himself has poured part of his power into this amulet.
+	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_02"); //It will restore some of your lost strength and help us to defeat the dragons.
+	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_03"); //It also has some other hidden powers. I shall tell you more about that once the amulet is yours.
+
 	Log_CreateTopic (TOPIC_INNOSEYE, LOG_MISSION);
 	Log_SetTopicStatus(TOPIC_INNOSEYE, LOG_RUNNING);
 	B_LogEntry (TOPIC_INNOSEYE,"There's a group of paladins camping out in the city of Khorinis. They have a powerful artifact with them: The Eye of Innos. Its power should help us fend off the dragon threat. I'm going to have to persuade the paladins to rally to our cause."); 
@@ -199,37 +212,6 @@ func void DIA_Xardas_WEAPON_Info ()
 	AI_Output (self, other, "DIA_Xardas_WEAPON_14_02"); //Look around in my tower. Anything that looks useful to you, you can have.
 };
 
-
-///////////////////////////////////////////////////////////////////////
-//	Info ARTEFAKT
-///////////////////////////////////////////////////////////////////////
-instance DIA_Xardas_ARTEFAKT (C_INFO)	//E2 nach TODO
-{
-	npc			 = 	NONE_100_Xardas;
-	nr			 = 	2;
-	condition	 = 	DIA_Xardas_ARTEFAKT_Condition;
-	information	 = 	DIA_Xardas_ARTEFAKT_Info;
-	Permanent 	 =  FALSE;
-	description	 = 	"What exactly is the 'Eye of Innos'?";
-};
-
-func int DIA_Xardas_ARTEFAKT_Condition ()
-{	
-	if (Npc_KnowsInfo (other,DIA_Xardas_TODO))
-	&& (Kapitel < 3)	
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Xardas_ARTEFAKT_Info ()
-{
-	AI_Output (other, self, "DIA_Xardas_ARTEFAKT_15_00"); //What exactly is the 'Eye of Innos'?
-	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_01"); //It is an amulet. Legend has it that Innos himself has poured part of his power into this amulet.
-	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_02"); //It will restore some of your lost strength and help us to defeat the dragons.
-	AI_Output (self, other, "DIA_Xardas_ARTEFAKT_14_03"); //It also has some other hidden powers. I shall tell you more about that once the amulet is yours.
-};
-
 ///////////////////////////////////////////////////////////////////////
 //	Info PALADIN
 ///////////////////////////////////////////////////////////////////////
@@ -245,6 +227,7 @@ instance DIA_Xardas_PALADIN	(C_INFO) //E2 nach TODO
 func int DIA_Xardas_PALADIN_Condition ()
 {	
 	if (Npc_KnowsInfo (other, DIA_Xardas_TODO))
+	&& (Lothar.aivar[AIV_TalkedToPlayer] == FALSE)
 	&& (Kapitel < 3)	
 	{
 		return TRUE;
@@ -315,7 +298,7 @@ func void DIA_Xardas_WhereEx_Info ()
 	AI_Output (self, other, "DIA_Xardas_Add_14_01"); //As I already said, near the city of Khorinis.
 	AI_Output (self, other, "DIA_Xardas_Add_14_02"); //I have rebuilt my tower here.
 	AI_Output (other, self, "DIA_Xardas_Add_15_03"); //But it's only been a few days since we last saw each other in the Valley of Mines...
-	AI_Output (self, other, "DIA_Xardas_Add_14_04"); //The servants which I summoned to build my tower have done a thorough job ...
+	AI_Output (self, other, "DIA_Xardas_Add_14_04"); //The servants which I summoned to build my tower have done a thorough job...
 	AI_Output (other, self, "DIA_Xardas_Add_15_05"); //You can say that again.
 };
 
@@ -399,7 +382,7 @@ instance DIA_Xardas_FirstPal		(C_INFO)
 	condition	 = 	DIA_Xardas_FirstPal_Condition;
 	information	 = 	DIA_Xardas_FirstPal_Info;
 	permanent	 = 	FALSE;
-	description	 = 	"I've been to town ...";
+	description	 = 	"I've been to town...";
 };
 func int DIA_Xardas_FirstPal_Condition ()
 {	
@@ -412,9 +395,9 @@ func int DIA_Xardas_FirstPal_Condition ()
 };
 func void DIA_Xardas_FirstPal_Info ()
 {
-	AI_Output (other, self, "DIA_Xardas_FirstPal_15_00"); //I've been to town ...
+	AI_Output (other, self, "DIA_Xardas_FirstPal_15_00"); //I've been to town...
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_01"); //And? Were you able to talk to the leader of the paladins?
-	AI_Output (other, self, "DIA_Xardas_FirstPal_15_02"); //They won't let me see him ...
+	AI_Output (other, self, "DIA_Xardas_FirstPal_15_02"); //They won't let me see him...
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_03"); //Nonsense! There must be a way for you to see him.
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_04"); //If all else fails, enter the monastery and become a magician.
 	AI_Output (self, other, "DIA_Xardas_FirstPal_14_05"); //That might be considered morally questionable, but it would get you what you need.
@@ -448,35 +431,6 @@ func void DIA_Xardas_Weiter_Info ()
 	AI_Output (self, other, "DIA_Xardas_Weiter_14_01"); //We shall proceed as planned. There is no other way.
 	AI_Output (self, other, "DIA_Xardas_Weiter_14_02"); //You go get yourself the Eye of Innos, and I shall keep looking for answers.
 };
-
-INSTANCE DIA_Xardas_KdfSecret (C_INFO)
-{
-	npc			= NONE_100_Xardas;
-	nr			= 9;
-	condition	= DIA_Xardas_KdfSecret_Condition;
-	information	= DIA_Xardas_KdfSecret_Info;
-	permanent	= FALSE;
-	description = "Why is the Circle of Fire not supposed to know about you?";
-};                       
-
-FUNC INT DIA_Xardas_KdfSecret_Condition()
-{
-	if (Npc_KnowsInfo (other, DIA_Xardas_FirstEXIT))
-	{
-		return TRUE;
-	};
-};
- 
-FUNC VOID DIA_Xardas_KdfSecret_Info()
-{	
-	AI_Output	(other, self,"DIA_Xardas_KdfSecret_15_00");	//Why is the Circle of Fire not supposed to know about you?
-	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_01");	//I used to be a high member of the Circle. Even then I suspected that demon magic might be the key to the magic barrier.
-	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_02"); //But I could never have convinced the other members of the Circle to follow this path.
-	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_03"); //So I left the Circle in order to study the Black Arts.
-	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_04"); //That is a crime for which the Fire Magicians, (snidely) the 'Ordained of Innos', the ever 'Good' and 'Virtuous' will accept no excuse.
-	AI_Output	(self, other,"DIA_Xardas_KdfSecret_14_05"); //They are certain that I am still alive, but they have no idea where to find me - and that's a good thing, too.
-};
-
 
 
 //#####################################################################
@@ -862,8 +816,7 @@ func void DIA_Xardas_PYROWILLNICHT_Info ()
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_04"); //Back when I left the Order of the Fire Magicians, I took a few things with me from the monastery.
 	if(Npc_GetDistToWP(self,"NW_XARDAS_START") <= 1000)
 	{
-		AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_05"); //Jetzt, da ich meinen Turm so nahe der Stadt errichtet habe, muss ich ständig damit rechnen, dass jemand hierher kommt, um danach zu suchen.
-		//"hier" passt nicht, weil Xardas am Steinkreis stehen könnte - Satz ist eh überflüssig
+		AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_05"); //Now that I've built my tower so close to town, I have to be prepared. Someone could come here and look for them at any time.
 	};
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_06"); //I didn't want a troop of paladins or Fire Magicians to turn my tower upside down at some point, and find all those things.
 	AI_Output			(self, other, "DIA_Xardas_PYROWILLNICHT_14_07"); //So I hid them in safe places where the magicians would certainly never look for them.

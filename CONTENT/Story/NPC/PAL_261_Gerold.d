@@ -43,13 +43,14 @@ FUNC VOID Rtn_Start_261 ()
 	TA_Stand_Guarding		(08,00,12,00,"OCC_CELLAR_HALLWAY_FRONT");
     TA_Stand_Guarding		(12,00,16,00,"OCC_CELLAR_HALLWAY_BACK");
     TA_Stand_Guarding		(16,00,20,00,"OCC_CELLAR_HALLWAY_FRONT");
-    TA_Stand_Guarding		(20,00,08,00,"OCC_CELLAR_HALL");
+    TA_Stand_Guarding		(20,00,00,00,"OCC_CELLAR_HALL");
+    TA_Stand_Guarding		(00,00,08,00,"OCC_CELLAR_HALL_002");
 };
 
 FUNC VOID Rtn_Food_261 ()
 {	
-	TA_Stand_Guarding		(08,00,23,10,"OCC_CELLAR_HALL");
-    TA_Stand_Guarding		(23,10,08,00,"OCC_CHAPEL_HALL");
+	TA_Stand_Guarding		(08,00,23,10,"OCC_CELLAR_HALL_002");
+    TA_Stand_Guarding		(23,10,08,00,"OCC_CHAPEL_HALL_001");
 };
 
 

@@ -106,6 +106,7 @@ INSTANCE Follow_Sheep	(Mst_Default_Sheep)
 	aivar[AIV_ToughGuy] = TRUE; //Liesel knn getötet werden, ohne daß jemand sich anpißt!
 		
 	B_SetVisuals_Sheep();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;
 	
@@ -123,6 +124,7 @@ INSTANCE Follow_Sheep_AKIL	(Mst_Default_Sheep)
 	aivar[AIV_ToughGuy] = TRUE;
 	
 	B_SetVisuals_Sheep();
+	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	
 	aivar[AIV_MM_RoamStart]		= OnlyRoutine;

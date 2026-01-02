@@ -20,7 +20,7 @@ INSTANCE ITKE_REVIVED_STONEFORTRESS (C_Item)
 
 INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 {
-	name 				=	NAME_Key;
+	name 				=	"Xardas' Key";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	ITEM_MISSION;
@@ -39,7 +39,7 @@ INSTANCE ITKE_REVIVED_XARDAS(C_Item)
 
 INSTANCE ITKE_REVIVED_GOMEZ (C_Item)
 {
-	name 				=	"Old Key";
+	name 				=	"Gomez's Key";
 
 	mainflag 			=	ITEM_KAT_NONE;
 	flags 				=	0;	

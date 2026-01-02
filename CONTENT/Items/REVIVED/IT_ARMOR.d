@@ -409,7 +409,7 @@ INSTANCE ITAR_REVIVED_LEATHER_L (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_L;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_L;
 
-	visual 					=	"REV_LEATHER.3ds";
+	visual 					=	"Itar_Leather_L.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_L.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -442,7 +442,7 @@ INSTANCE ITAR_REVIVED_LEATHER_M (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_M;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_M;
 
-	visual 					=	"REV_LEATHER.3ds";
+	visual 					=	"Itar_Leather_L.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_M.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -474,7 +474,7 @@ INSTANCE ITAR_REVIVED_LEATHER_H (C_Item)
 	protection [PROT_FIRE] 	= 	REV_Prot_Fire_LEATHER_H;
 	protection [PROT_MAGIC] = 	REV_Prot_Magic_LEATHER_H;
 
-	visual 					=	"REV_LEATHER.3ds";
+	visual 					=	"Itar_Leather_L.3ds";
 	visual_change 			=	"REV_ARMOR_LEATHER_H.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
@@ -1379,6 +1379,39 @@ INSTANCE ITAR_REVIVED_SLD_L (C_Item)
 
 	visual 					=	"REV_SLDL.3ds";
 	visual_change 			=	"REV_ARMOR_SLD_L.asc";
+	visual_skin 			=	0;
+	wear 					=	WEAR_TORSO;
+	
+	on_equip				=	Equip_SLD_ARMOR;
+	on_unequip				=	UnEquip_SLD_ARMOR;
+
+	description				=	name;
+	TEXT[0]					=	NAME_Prot_Edge;			COUNT[0]				= 	protection	[PROT_EDGE];
+	TEXT[1]					=	NAME_Prot_Blunt;		COUNT[1]				= 	protection	[PROT_BLUNT];
+	TEXT[2]					=	NAME_Prot_Point;		COUNT[2]				= 	protection	[PROT_POINT];
+	TEXT[3] 				=	NAME_Prot_Fire;			COUNT[3]				= 	protection	[PROT_FIRE];
+	TEXT[4]					=	NAME_Prot_Magic;		COUNT[4]				= 	protection	[PROT_MAGIC];
+	TEXT[5]					=	NAME_Value;				COUNT[5]				= 	value;
+};
+
+INSTANCE ITAR_REVIVED_SLD_L_02 (C_Item)
+{
+	name 					=	"Light Mercenary's Armor";
+
+	mainflag 				=	ITEM_KAT_ARMOR;
+	flags 					=	0;
+	material 				=	MAT_METAL;
+
+	value 					=	REV_Value_SLD_L;
+
+	protection [PROT_EDGE]	=	REV_Prot_Edge_SLD_L;
+	protection [PROT_BLUNT] = 	REV_Prot_Blunt_SLD_L;
+	protection [PROT_POINT] = 	REV_Prot_Point_SLD_L;
+	protection [PROT_FIRE] 	= 	REV_Prot_Fire_SLD_L;
+	protection [PROT_MAGIC] = 	REV_Prot_Magic_SLD_L;
+
+	visual 					=	"REV_SLDL.3ds";
+	visual_change 			=	"REV_ARMOR_SLD_L_02.asc";
 	visual_skin 			=	0;
 	wear 					=	WEAR_TORSO;
 	

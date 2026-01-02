@@ -64,16 +64,8 @@ func void B_SetVisuals_StonePuma()
 {
 	Mdl_SetVisual			(self,"StonePuma.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"StonePuma_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"PUMA_STONE",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
-
-func void B_SetVisuals_Panther()
-{
-	Mdl_SetVisual			(self,	"StonePuma.mds");
-	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"DaemonPuma_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
-};
-
 
 //*******************
 //	Instances    	
@@ -82,18 +74,5 @@ func void B_SetVisuals_Panther()
 INSTANCE StonePuma	(Mst_Default_StonePuma)
 {
 	B_SetVisuals_StonePuma();
-	Npc_SetToFistMode(self);
-};
-
-
-INSTANCE Panther	(Mst_Default_StonePuma)
-{
-	name							=	"Panther";
-	aivar[AIV_MM_REAL_ID]			= 	ID_PANTHER;
-
-	protection	[PROT_BLUNT]		=	100;
-	protection	[PROT_EDGE]			=	100;
-	
-	B_SetVisuals_Panther();
 	Npc_SetToFistMode(self);
 };

@@ -45,7 +45,7 @@ func int DIA_Randolph_SchwereLuft_Condition ()
 func void DIA_Randolph_SchwereLuft_Info ()
 {
 	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_00"); //Everything all right?
-	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm ... as soon as anyone says anything wrong around here, the dance starts ... so watch your step, or there'll be a slaughter.
+	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_01"); //Hmm... as soon as anyone says anything wrong around here, the dance starts... so watch your step, or there'll be a slaughter.
 	AI_Output (other, self, "DIA_Randolph_SchwereLuft_15_02"); //Will you join the fight?
 	AI_Output (self, other, "DIA_Randolph_SchwereLuft_06_03"); //I'm not going to just stand here when the ruckus starts. But I'm not going to push it either.
 	Akils_SLDStillthere = TRUE;
@@ -105,7 +105,7 @@ instance DIA_Randolph_Baltram		(C_INFO)
 	condition	 = 	DIA_Randolph_Baltram_Condition;
 	information	 = 	DIA_Randolph_Baltram_Info;
 	permanent  	 =  FALSE;
-	description	 = 	"Baltram sent me ...";
+	description	 = 	"Baltram sent me...";
 };
 
 func int DIA_Randolph_Baltram_Condition ()

@@ -59,18 +59,18 @@ PROTOTYPE Mst_Default_Warg(C_Npc)
 //*************
 
 
-func void B_SetVisuals_WARG()
+func void B_SetVisuals_Warg()
 {
 	Mdl_SetVisual			(self, "Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
 	Mdl_SetVisualBody		(self,	"Warg_Body2",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-func void B_SetVisuals_BLACKWOLF()
+func void B_SetVisuals_OrcDog()
 {
 	Mdl_SetVisual			(self, "Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Warg_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Dog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
 //************
@@ -80,36 +80,37 @@ func void B_SetVisuals_BLACKWOLF()
 INSTANCE Warg	(Mst_Default_Warg)
 {
 	B_SetVisuals_Warg();
+	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
-//**********************************************
-//	Schwarzer Wolf  (MIS)
-//*********************************************
 
-INSTANCE BlackWolf	(Mst_Default_Warg)
+//**********************************************
+//	Orc Dog (G1)
+//*********************************************
+INSTANCE OrcDog	(Mst_Default_Warg)
 {
-	name							=	"Black Wolf";
-	level							=	 6;		
+	name							=	"Orc Dog";
+	level							=	 20;		
 	//für Inventory
-	aivar[AIV_MM_REAL_ID]			= 	ID_BLACKWOLF;
+	aivar[AIV_MM_REAL_ID]			= 	ID_ORCDOG;
 	//----- Attribute ----
-	attribute	[ATR_STRENGTH]		=	15;
-	attribute	[ATR_DEXTERITY]		=	20;
-	attribute	[ATR_HITPOINTS_MAX]	=	120;
-	attribute	[ATR_HITPOINTS]		=	120;
+	attribute	[ATR_STRENGTH]		=	80;
+	attribute	[ATR_DEXTERITY]		=	80;
+	attribute	[ATR_HITPOINTS_MAX]	=	160;
+	attribute	[ATR_HITPOINTS]		=	160;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	12;
-	protection	[PROT_EDGE]			=	12;
-	protection	[PROT_POINT]		=	12;
-	protection	[PROT_FIRE]			=	12;
-	protection	[PROT_FLY]			=	12;
-	protection	[PROT_MAGIC]		=	12;
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	20;
 	
-	B_SetVisuals_BLACKWOLF();
+	B_SetVisuals_OrcDog();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };

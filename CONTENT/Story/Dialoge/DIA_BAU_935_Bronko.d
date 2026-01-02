@@ -117,7 +117,7 @@ func void DIA_Bronko_HALLO_vergisses ()
 func void DIA_Bronko_HALLO_attack ()
 {
 	AI_Output			(other, self, "DIA_Bronko_HALLO_attack_15_00"); //Come on and try it, then.
-	AI_Output			(self, other, "DIA_Bronko_HALLO_attack_06_01"); //Well, in that case ...
+	AI_Output			(self, other, "DIA_Bronko_HALLO_attack_06_01"); //Well, in that case...
 
 	AI_StopProcessInfos (self);	 	
 	B_Attack (self, other, AR_NONE, 1);	

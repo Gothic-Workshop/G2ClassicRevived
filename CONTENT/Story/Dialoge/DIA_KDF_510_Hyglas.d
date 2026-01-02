@@ -129,7 +129,7 @@ func void DIA_Hyglas_CONTEST_Info ()
 	AI_Output (other, self, "DIA_Hyglas_CONTEST_15_00"); //I have demanded the Test of Fire. Ulthar gave me the task to create a fire arrow rune.
 	AI_Output (self, other, "DIA_Hyglas_CONTEST_14_01"); //And now you want me to teach you the formula?
 	AI_Output (other, self, "DIA_Hyglas_CONTEST_15_02"); //I don't know how else I could do it.
-	AI_Output (self, other, "DIA_Hyglas_CONTEST_14_03"); //Hmm ...
+	AI_Output (self, other, "DIA_Hyglas_CONTEST_14_03"); //Hmm...
 	AI_Output (self, other, "DIA_Hyglas_CONTEST_14_04"); //All right, I shall teach you the formula. But first you need to find all the necessary ingredients.
 	
 	B_LogEntry (TOPIC_Rune,"Hyglas is willing to teach me the formula for the Fire Arrow rune once I've got all the ingredients.");
@@ -434,7 +434,7 @@ FUNC VOID DIA_Hyglas_BringBook_Info()
 	AI_Output (other,self ,"DIA_Hyglas_BringBook_15_02"); //I've met them.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_03"); //This brings us to the core of the matter. At the moment, we are observing a very rare constellation of stars.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_04"); //To be more exact, the sign of the Ox currently stands in direct correlation with the sign of the Warrior. I suppose that you know what that means.
-	AI_Output (other,self ,"DIA_Hyglas_BringBook_15_05"); //Hmm. Well, to be honest ...
+	AI_Output (other,self ,"DIA_Hyglas_BringBook_15_05"); //Hmm. Well, to be honest...
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_06"); //Yes, right, I see. Well, I cannot explain the entire background to you now, but it definitely signifies great changes. And I do not like changes.
 	AI_Output (self ,other,"DIA_Hyglas_BringBook_14_07"); //Therefore, I want you to get me a book from town. It is called 'The divine power of the stars'. You may have to rummage around for it a bit, but I'm sure that you can find it.
 	

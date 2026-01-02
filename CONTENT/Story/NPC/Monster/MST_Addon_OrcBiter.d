@@ -58,7 +58,6 @@ func void Set_OrcBiter_Visuals()
 	Mdl_SetVisualBody		(self,	"Sc2_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-
 /*************************************************************************
 **	OrcBiter    														**
 *************************************************************************/

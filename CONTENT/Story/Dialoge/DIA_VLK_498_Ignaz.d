@@ -187,7 +187,7 @@ INSTANCE DIA_Ignaz_Running   (C_INFO)
 	condition   = DIA_Ignaz_Running_Condition;
 	information = DIA_Ignaz_Running_Info;
 	permanent   = FALSE;
-	description = "About the experiment ...";
+	description = "About the experiment...";
 };
 
 FUNC INT DIA_Ignaz_Running_Condition()
@@ -200,7 +200,7 @@ FUNC INT DIA_Ignaz_Running_Condition()
 };
 FUNC VOID DIA_Ignaz_Running_Info()
 {
-	AI_Output (other, self, "DIA_Ignaz_Running_15_00");//About the experiment ...
+	AI_Output (other, self, "DIA_Ignaz_Running_15_00");//About the experiment...
 	AI_Output (self, other, "DIA_Ignaz_Running_14_01");//Have you been successful, then? Or have you just wasted the spell scroll? Huh?
 	AI_Output (self, other, "DIA_Ignaz_Running_14_02");//If you need more spell scrolls, you can buy them from me.
 	
@@ -346,7 +346,7 @@ FUNC VOID DIA_Ignaz_Teach_Info()
 		{
 			AI_Output (self, other,"DIA_Ignaz_Teach_14_01"); //To prepare a potion at the alchemist's bench, you need a laboratory flask.
 			AI_Output (self, other,"DIA_Ignaz_Teach_14_02"); //And you're going to need different plants or other ingredients for each potion.
-			AI_Output (self, other,"DIA_Ignaz_Teach_14_03"); //Eins noch. Falls du vorhast, das Wissen um Elixiere der Geschicklichkeit zu lernen, solltest du wissen, dass die benötigten Pflanzen dafür sehr selten sind.
+			AI_Output (self, other,"DIA_Ignaz_Teach_14_03"); //One more thing. If you want to learn about elixirs of Dexterity, you need to keep in mind that the plants needed are very rare.
 			Alchemy_Explain = TRUE;
 		}
 		else

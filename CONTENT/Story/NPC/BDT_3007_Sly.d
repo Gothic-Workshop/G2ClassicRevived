@@ -1,0 +1,47 @@
+instance BDT_3007_Sly (Npc_Default)
+{
+	// ------ NSC ------
+	name 		= "Sly"; 
+	guild 		= GIL_BDT;
+	id 			= 3007;
+	voice 		= 4;
+	flags       = 0;								
+	npctype		= NPCTYPE_AMBIENT;
+	
+	//--------Aivars-----------
+	aivar[AIV_EnemyOverride] = TRUE;
+	
+	// ------ Attribute ------
+	B_SetAttributesToChapter (self, 2);																	
+		
+	// ------ Kampf-Taktik ------
+	fight_tactic		= FAI_HUMAN_NORMAL;
+	
+	// ------ Equippte Waffen ------
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_SHORT_02);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_04);
+
+	// ------ Inventory ------
+	B_CreateAmbientInv 	(self);
+	CreateInvItems		(self, ITRW_ARROW, 30);
+	CreateInvItems		(self, ITAM_REVIVED_PROT_MELEE_02, 1);
+		
+	// ------ visuals ------																			
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Sly, BodyTex_N, ITAR_REVIVED_STT_M);	
+	Mdl_SetModelFatness	(self, 0);
+	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
+	
+		// ------ NSC-relevante Talente vergeben ------
+	B_GiveNpcTalents (self);
+	
+	// ------ Kampf-Talente ------																
+	B_SetFightSkills (self, 30); 
+
+	daily_routine = Rtn_Start_3007;
+};	 
+
+	FUNC VOID Rtn_Start_3007()
+	{
+		TA_Stand_ArmsCrossed (00,00,12,00,"FORTRESS_FLOOR_GROUND_005_ARMORY_003");
+		TA_Stand_ArmsCrossed (12,00,00,00,"FORTRESS_FLOOR_GROUND_005_ARMORY_003");
+	};

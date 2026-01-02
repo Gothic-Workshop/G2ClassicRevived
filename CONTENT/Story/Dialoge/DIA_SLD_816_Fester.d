@@ -44,7 +44,7 @@ FUNC INT DIA_Fester_Hello_Condition()
 FUNC VOID DIA_Fester_Hello_Info()
 {	
 	AI_Output (other, self, "DIA_Fester_Hello_15_00"); //What are you doing here?
-	AI_Output (self, other, "DIA_Fester_Hello_08_01"); //I am preparing for battle ...
+	AI_Output (self, other, "DIA_Fester_Hello_08_01"); //I am preparing for battle...
 };
 
 // ************************************************************
@@ -76,7 +76,7 @@ FUNC VOID DIA_Fester_Auftrag_Info()
 	AI_Output (self, other, "DIA_Fester_Auftrag_08_02"); //A few of them even managed to get themselves eaten.
 	AI_Output (self, other, "DIA_Fester_Auftrag_08_03"); //Fat Onar didn't exactly find that amusing. None of us got our pay for a week.
 	AI_Output (self, other, "DIA_Fester_Auftrag_08_04"); //And it was more or less my fault. Now Lee wants me to wipe out the creatures' nest by myself.
-	AI_Output (self, other, "DIA_Fester_Auftrag_08_05"); //And the other boys have already made bets on whether I'll survive ...
+	AI_Output (self, other, "DIA_Fester_Auftrag_08_05"); //And the other boys have already made bets on whether I'll survive...
 };
 
 // ************************************************************
@@ -155,7 +155,7 @@ instance DIA_Fester_Together (C_INFO)
 	condition	= DIA_Fester_Together_Condition;
 	information	= DIA_Fester_Together_Info;
 	permanent	= FALSE;
-	description = "We could attack that nest together ...";
+	description = "We could attack that nest together...";
 };                       
 
 FUNC INT DIA_Fester_Together_Condition()
@@ -169,7 +169,7 @@ FUNC INT DIA_Fester_Together_Condition()
  
 FUNC VOID DIA_Fester_Together_Info()
 {	
-	AI_Output (other, self, "DIA_Fester_Together_15_00"); //We could attack that nest together ...
+	AI_Output (other, self, "DIA_Fester_Together_15_00"); //We could attack that nest together...
 	AI_Output (self, other, "DIA_Fester_Together_08_01"); //You want to help me? Why?
 	
 	Info_ClearChoices (DIA_Fester_Together);
@@ -237,10 +237,10 @@ FUNC VOID DIA_Fester_TogetherNOW_Info()
 	else
 	{
 		AI_Output (self, other, "DIA_Fester_TogetherNOW_08_02"); //Right now? Or do you need to equip yourself first?
-		AI_Output (self, other, "DIA_Fester_TogetherNOW_08_03"); //You could go back to the farm first ...
+		AI_Output (self, other, "DIA_Fester_TogetherNOW_08_03"); //You could go back to the farm first...
 		
 		Info_ClearChoices (DIA_Fester_TogetherNOW);
-		Info_AddChoice (DIA_Fester_TogetherNOW, "All right, let's wait a little longer ...", DIA_Fester_TogetherNOW_Later);
+		Info_AddChoice (DIA_Fester_TogetherNOW, "All right, let's wait a little longer...", DIA_Fester_TogetherNOW_Later);
 		Info_AddChoice (DIA_Fester_TogetherNOW, "There's no time like the present.", DIA_Fester_TogetherNOW_NOW);
 	};
 };
@@ -267,8 +267,8 @@ func void DIA_Fester_TogetherNOW_Now()
 func void DIA_Fester_TogetherNOW_Later()
 {
 		
-	AI_Output (other, self, "DIA_Fester_TogetherNOW_Later_15_00"); //All right, let's wait a little longer ...
-	AI_Output (self, other, "DIA_Fester_TogetherNOW_Later_08_01"); //You know where to find me ...
+	AI_Output (other, self, "DIA_Fester_TogetherNOW_Later_15_00"); //All right, let's wait a little longer...
+	AI_Output (self, other, "DIA_Fester_TogetherNOW_Later_08_01"); //You know where to find me...
 	Info_ClearChoices (DIA_Fester_TogetherNOW);
 };
 		

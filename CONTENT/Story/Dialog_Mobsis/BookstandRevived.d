@@ -162,13 +162,12 @@ FUNC VOID Use_BookstandRevived_MAGIC1_S1()		//Alchemiebücher
 
 					Doc_PrintLine	( nDocID,  0,"");										
 					Doc_PrintLines	( nDocID,  0,"All magic originates from the magic powers of the user. The user is called a magician.");
-					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  0,"");
 					Doc_PrintLines	( nDocID,  0,"Every activation of a magic spell costs the magician a portion of his powers. These powers are referred to as mana.");
-					Doc_PrintLine	( nDocID,  0, "");
 					
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1,"");
-					Doc_PrintLines	( nDocID,  0,"When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use. ");
+					Doc_PrintLines	( nDocID,  1,"When the gods gave mankind the gift of magic, they taught them to make magic runes as well. The servants of the gods have taken over the glorious task of creating these artifacts of divine power and using them. The magician's Circle determines which kind of magic he is able to understand and to use. ");
 					Doc_PrintLine	( nDocID,  1,"");
 					
 					Doc_Show		( nDocID );
@@ -198,15 +197,14 @@ FUNC VOID Use_BookstandRevived_MAGIC2_S1()		//Alchemiebücher
 					Doc_SetPage 	( nDocID,  1, "Book_Mage_R.tga",	0	);
 					
 					Doc_SetFont 	( nDocID, -1, "font_15_book.tga"	   				); 	
-					Doc_SetMargins	( nDocID,  0,  275, 20, 30, 20, 1   	);  	
+					Doc_SetMargins	( nDocID,  0,  270, 20, 30, 20, 1   	);  	
 
-					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0,"Elementary Arcanum");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
-					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0,"The Place of Magic in the Order of the Worldly");
+					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0,"Much research has taken place on magic and its relation to the elements. It is just to claim that magic represents the perfect element. It has the power to transform all the elements and to shape them, which means it is superior to them.");
@@ -252,9 +250,9 @@ FUNC VOID Use_BookstandRevived_MAGIC3_S1()		//Alchemiebücher
 					Doc_PrintLine	( nDocID,  0,"True Power");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_SetFont 	( nDocID, -1, FONT_Book	   				); 	
-					Doc_PrintLine	( nDocID,  0, "");
-					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0,"The Sacred Duty of the Skillful");
+					Doc_PrintLine	( nDocID,  0, "");
+					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLine	( nDocID,  0, "");
 					Doc_PrintLines	( nDocID,  0,"It is power that distinguishes a magus from his fellow men. Equipped with the ability to influence the divine power, he is a being independent of the laws of nature which apply to mortal man.");
@@ -396,7 +394,7 @@ FUNC VOID Use_BookstandRevived_MAGIC6_S1()		//Alchemiebücher
 					Doc_SetMargins	( nDocID, -1, 30, 20, 275, 20, 1   		);
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
-					Doc_PrintLines	( nDocID,  0,"The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
+					Doc_PrintLines	( nDocID,  1,"The special feature of these magic formulas is that, although they are bound in runes, they can be cast by anybody with magic powers. The magic of these formulas can be activated at once. There are no restrictions to the teleportation spell.");
 					Doc_PrintLine	( nDocID,  1, "");
 					Doc_PrintLine	( nDocID,  1, "");
 

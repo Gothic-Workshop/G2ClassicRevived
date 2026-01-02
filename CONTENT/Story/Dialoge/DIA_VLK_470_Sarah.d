@@ -253,7 +253,7 @@ instance DIA_Sarah_Success		(C_INFO)
 	condition	 = 	DIA_Sarah_Success_Condition;
 	information	 = 	DIA_Sarah_Success_Info;
 	permanent 	 =  FALSE;
-	description	 = 	"Canthar was trying to trick you ...";
+	description	 = 	"Canthar was trying to trick you...";
 };
 
 func int DIA_Sarah_Success_Condition ()

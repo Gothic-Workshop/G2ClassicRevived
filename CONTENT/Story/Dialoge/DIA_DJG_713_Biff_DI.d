@@ -147,7 +147,7 @@ func void DIA_Biff_DI_UNDEADDRGDEAD_Info ()
 {
 	AI_Output			(self, other, "DIA_Biff_DI_UNDEADDRGDEAD_07_00"); //Was that it, then?
 	AI_Output			(other, self, "DIA_Biff_DI_UNDEADDRGDEAD_15_01"); //That was it for now.
-	AI_Output			(self, other, "DIA_Biff_DI_UNDEADDRGDEAD_07_02"); //Now, can I ...
+	AI_Output			(self, other, "DIA_Biff_DI_UNDEADDRGDEAD_07_02"); //Now, can I...
 	AI_Output			(other, self, "DIA_Biff_DI_UNDEADDRGDEAD_15_03"); //You can raid the entire island for all I care.
 	AI_Output			(self, other, "DIA_Biff_DI_UNDEADDRGDEAD_07_04"); //Great.
 	
