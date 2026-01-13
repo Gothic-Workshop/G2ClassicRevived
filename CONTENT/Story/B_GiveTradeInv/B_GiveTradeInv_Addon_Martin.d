@@ -25,7 +25,7 @@ FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
 		CreateInvItems (slf,ITMW_REVIVED_2H_AXE_LIGHT_03 , 1); 
 		CreateInvItems (slf,ITMW_REVIVED_2H_SWORD_02 , 1); 
 		
-		CreateInvItems (slf,ItRi_Mana_01, 1); 
+		CreateInvItems (slf,ITRI_REVIVED_MP_01, 1); 
 		
 		Martin_ItemsGiven_Chapter_1 = TRUE;
 	};

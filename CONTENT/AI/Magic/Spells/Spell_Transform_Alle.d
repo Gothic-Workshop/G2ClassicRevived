@@ -32,7 +32,15 @@ func int Spell_Logic_TrfSheep (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfSheep;
 		
-		Npc_SetActiveSpellInfo(self, Sheep);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Sheep);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, Hammel);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -49,7 +57,19 @@ func int Spell_Logic_TrfScavenger (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfScavenger;
 		
-		Npc_SetActiveSpellInfo(self, Scavenger);
+		var int random;	random = Hlp_Random (3);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Scavenger);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, ScavengerJuvenile);
+		}
+		else if (random == 2)
+		{
+			Npc_SetActiveSpellInfo(self, Scavenger_Demon);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -66,7 +86,23 @@ func int Spell_Logic_TrfGiantRat (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfGiantRat;
 		
-		Npc_SetActiveSpellInfo(self, Giant_Rat);
+		var int random;	random = Hlp_Random (4);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Giant_Rat);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, YGiant_Rat);
+		}
+		else if (random == 2)
+		{
+			Npc_SetActiveSpellInfo(self, Giant_DesertRat);
+		}
+		else if (random == 3)
+		{
+			Npc_SetActiveSpellInfo(self, Swamprat);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -84,7 +120,15 @@ func int Spell_Logic_TrfGiantBug (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfGiantBug;
 		
-		Npc_SetActiveSpellInfo(self, Giant_Bug);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Giant_Bug);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, YGiant_Bug);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -101,7 +145,19 @@ func int Spell_Logic_TrfWolf (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfWolf;
 		
-		Npc_SetActiveSpellInfo(self, Wolf);
+		var int random;	random = Hlp_Random (3);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Wolf);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, BlackWolf);
+		}
+		else if (random == 2)
+		{
+			Npc_SetActiveSpellInfo(self, IceWolf);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -118,7 +174,15 @@ func int Spell_Logic_TrfWaran (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfWaran;
 		
-		Npc_SetActiveSpellInfo(self, Waran);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Waran);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, BeachWaran);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -135,7 +199,15 @@ func int Spell_Logic_TrfSnapper (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfSnapper;
 		
-		Npc_SetActiveSpellInfo(self, Snapper);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, Snapper);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, IceSnapper);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -169,7 +241,15 @@ func int Spell_Logic_TrfFireWaran (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfFireWaran;
 		
-		Npc_SetActiveSpellInfo(self, FireWaran);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, FireWaran);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, BeachFireWaran);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -220,7 +300,15 @@ func int Spell_Logic_TrfDragonSnapper (var int manaInvested)
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfDragonSnapper;
 		
-		Npc_SetActiveSpellInfo(self, DragonSnapper);
+		var int random;	random = Hlp_Random (2);
+		if (random == 0)
+		{
+			Npc_SetActiveSpellInfo(self, DragonSnapper);
+		}
+		else if (random == 1)
+		{
+			Npc_SetActiveSpellInfo(self, Gaans_Snapper);
+		};
 		return SPL_SENDCAST;
 	}
 	else
@@ -228,24 +316,3 @@ func int Spell_Logic_TrfDragonSnapper (var int manaInvested)
 		return SPL_SENDSTOP;
 	};
 };
-
-
-
-
-// ------ Meatbug ------
-func int Spell_Logic_TrfMeatbug (var int manaInvested)
-{
-	if ((Npc_GetActiveSpellIsScroll(self) && (self.attribute[ATR_MANA] >= SPL_Cost_Scroll)))
-	|| (self.attribute[ATR_MANA] >= SPL_Cost_TrfSheep)
-	{
-		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - SPL_Cost_TrfSheep;
-		
-		Npc_SetActiveSpellInfo(self, Meatbug);
-		return SPL_SENDCAST;
-	}
-	else
-	{
-		return SPL_SENDSTOP;
-	};
-};
-

@@ -13,7 +13,7 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 
 		CreateInvItems   (slf, ItSc_SumGobSkel,  	1);
 		
-		CreateInvItems   (slf, ItRi_Prot_Total_01, 1);
+		CreateInvItems   (slf, ITRI_REVIVED_PROT_TOTAL_01, 1);
 		
 		Karras_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -33,7 +33,6 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems   (slf, ITSc_TrfWolf,  		1);
 		
 		CreateInvItems   (slf, ItSc_SumGobSkel,  	1);
-		CreateInvItems   (slf, ItSc_SumWolf,  		1);
 		
 		Karras_ItemsGiven_Chapter_2 = TRUE;
 	};
@@ -54,7 +53,6 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems   (slf, ITSc_TrfSnapper,  	3);
 		
 		CreateInvItems   (slf, ItSc_SumGobSkel,  	1);
-		CreateInvItems   (slf, ItSc_SumWolf,  		1);
 		CreateInvItems   (slf, ItSc_SumSkel,  		1);
 
 	 
@@ -82,7 +80,6 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems   (slf, ITSc_TrfFireWaran,  	2);
 				
 		CreateInvItems   (slf, ItSc_SumGobSkel,  	1);
-		CreateInvItems   (slf, ItSc_SumWolf,  		1);
 		CreateInvItems   (slf, ItSc_SumSkel,  		1);
 		CreateInvItems   (slf, ItSc_SumGol,  		1);
 
@@ -110,7 +107,6 @@ FUNC VOID B_GiveTradeInv_Karras (var C_NPC slf)
 		CreateInvItems   (slf, ITSc_TrfDragonSnapper,  	2);
 
 		CreateInvItems   (slf, ItSc_SumGobSkel,  		1);
-		CreateInvItems   (slf, ItSc_SumWolf,  			1);
 		CreateInvItems   (slf, ItSc_SumSkel,  			1);
 		CreateInvItems   (slf, ItSc_SumGol,  			1);
 		CreateInvItems   (slf, ItSc_SumDemon,  			1);

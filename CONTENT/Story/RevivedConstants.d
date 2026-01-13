@@ -120,15 +120,6 @@ const string NAME_Addon_BeArArcher		=	"Together with Archer's Suit +";
 const string PRINT_GotFood				=	"Package was filled with food";
 
 
-// Spells
-// You have to change it in Text.d too...
-const string NAME_SPL_TeleportNC		= "Teleport to New Camp";
-const string NAME_SPL_TeleportPsi		= "Teleport to Brotherhood";
-const string NAME_SPL_TeleportOrc		= "Orc Teleport";
-
-const string NAME_SPL_TrfMeatbug		= "Transform into Meatbug";
-
-
 // MobInter
 const string _STR_MESSAGE_OCLEVER_STUCKS	= "The lever doesn't move at all."			;
 const string _STR_MESSAGE_ORCLEVER_MOVES	= "The statuette moves the lever."			;
@@ -173,6 +164,16 @@ CONST STRING MOBNAME_GRAVE_REVIVED_12		= "";
 CONST STRING MOBNAME_GRAVE_REVIVED_13		= "";
 CONST STRING MOBNAME_GRAVE_REVIVED_14		= "";
 CONST STRING MOBNAME_GRAVE_REVIVED_15		= "";
+
+// Graves (OW)
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_01		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_02		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_03		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_04		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_05		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_06		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_07		= "";
+CONST STRING MOBNAME_GRAVE_PALADIN_REVIVED_08		= "";
 
 
 // Shrines
@@ -480,12 +481,87 @@ const int	Value_Joint3			=	20;
 // Magic
 // ***************
 
-// Remember to comment SPL_Reserved_ in CONSTANTS.d
-const int	SPL_TrfMeatbug				= 64;
+// Remember to change the names in Text.d
+
 
 const int 	SPL_TeleportNC				= 90;
+const string NAME_SPL_TeleportNC		= "Teleport to New Camp";
+
 const int 	SPL_TeleportPsi				= 91;
+const string NAME_SPL_TeleportPsi		= "Teleport to Brotherhood";
+
 const int 	SPL_TeleportOrc				= 92;
+const string NAME_SPL_TeleportOrc		= "Orc Teleport";
+
+
+const int	SPL_Telekinesis				= 100;
+const string NAME_SPL_Telekinesis		= "Telekinesis";
+
+const int	SPL_Control					= 101;
+const string NAME_SPL_Control			= "Control";
+
+
+const int	SPL_TrfMeatbug				= 102;
+const string NAME_SPL_TrfMeatbug		= "Transform into Meatbug";
+
+const int	SPL_TrfMolerat				= 103;
+const string NAME_SPL_TrfMolerat		= "Transform into Molerat";
+
+const int	SPL_TrfBloodfly				= 104;
+const string NAME_SPL_TrfBloodfly		= "Transform into Bloodfly";
+
+const int	SPL_TrfSwampDrone			= 105;
+const string NAME_SPL_TrfSwampDrone		= "Transform into Swampgas drone";
+
+const int	SPL_TrfMinecrawler			= 106;
+const string NAME_SPL_TrfMinecrawler	= "Transform into Minecrawler";
+
+const int	SPL_TrfMantis				= 107;
+const string NAME_SPL_TrfMantis			= "Transform into Mantis";
+
+const int	SPL_TrfBoar					= 108;
+const string NAME_SPL_TrfBoar			= "Transform into Boar";
+
+const int	SPL_TrfOrcDog				= 109;
+const string NAME_SPL_TrfOrcDog			= "Transform into Orc Dog";
+
+const int	SPL_TrfRazor				= 110;
+const string NAME_SPL_TrfRazor			= "Transform into Razor";
+
+const int	SPL_TrfChomper				= 111;
+const string NAME_SPL_TrfChomper		= "Transform into Chomper";
+
+const int	SPL_TrfBloodhound			= 112;
+const string NAME_SPL_TrfBloodhound		= "Transform into Bloodhound";
+
+const int	SPL_TrfHellhound			= 113;
+const string NAME_SPL_TrfHellhound		= "Transform into Hellhound";
+
+const int	SPL_TrfPanther				= 114;
+const string NAME_SPL_TrfPanther		= "Transform into Panther";
+
+const int	SPL_TrfAlligator			= 115;
+const string NAME_SPL_TrfAlligator		= "Transform into Alligator";
+
+const int	SPL_TrfSwampshark			= 116;
+const string NAME_SPL_TrfSwampshark		= "Transform into Swampshark";
+
+const int	SPL_TrfHarpy				= 117;
+const string NAME_SPL_TrfHarpy			= "Transform into Harpy";
+
+const int	SPL_TrfTroll				= 118;
+const string NAME_SPL_TrfTroll			= "Transform into Troll";
+
+const int	SPL_TrfGoblin				= 119;
+const string NAME_SPL_TrfGoblin			= "Transform into Goblin";
+
+
+const int	SPL_SummonStonepuma			= 120;
+const string NAME_SPL_SummonStonepuma 	= "Summon Stonepuma";
+
+const int	SPL_SummonWisp				= 121;
+const string NAME_SPL_SummonWisp		= "Summon Wisp";
+
 
 
 // ***************

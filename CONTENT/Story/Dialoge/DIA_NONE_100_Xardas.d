@@ -361,7 +361,7 @@ func void DIA_Xardas_ABOUTLESTER_Info ()
 	AI_Output (self, other, "DIA_Xardas_ABOUTLESTER_14_06"); //If those men exist, then their presence will pose a possible threat.
 	AI_Output (self, other, "DIA_Xardas_ABOUTLESTER_14_07"); //And I don't like that. Here, take my ring. It will protect you against magic.
 	
-	B_GiveInvItems (self, other, ItRi_Prot_Mage_01,1);
+	B_GiveInvItems (self, other, ITRI_REVIVED_PROT_MAGIC_01,1);
 	B_GivePlayerXP		(XP_Ambient);
 
 };

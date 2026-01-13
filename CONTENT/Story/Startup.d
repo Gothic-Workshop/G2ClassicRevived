@@ -990,15 +990,15 @@ func void STARTUP_SURFACE ()
 
 
 	// Abandoned Mine Plateau
-	Wld_InsertNpc		(Scavenger,"SPAWN_SCAVENGER_TOTU_LEFT_PLAT");
-	Wld_InsertNpc		(Scavenger,"SPAWN_SCAVENGER2_TOTU_LEFT_PLAT2");
+	Wld_InsertNpc		(ScavengerJuvenile,"SPAWN_SCAVENGER_TOTU_LEFT_PLAT");
+	Wld_InsertNpc		(ScavengerJuvenile,"SPAWN_SCAVENGER2_TOTU_LEFT_PLAT2");
 
 	Wld_InsertNpc		(Snapper,"SPAWN_MOLELRAT_TOTU_LEFT_PLAT4");
 	Wld_InsertNpc		(Snapper,"SPAWN_MOLELRAT_TOTU_LEFT_PLAT4");
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_GOBBO_01_01");
 
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_MOLERAT02_SPAWN01");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_MOLERAT02_SPAWN01");	
+	Wld_InsertNpc		(Molerat,"SPAWN_MOLERAT02_SPAWN01");	
+	Wld_InsertNpc		(Molerat,"SPAWN_MOLERAT02_SPAWN01");	
 
 
 	// Oretrail
@@ -1202,9 +1202,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPERS_WOOD_OM"); 
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SNAPPERS_WOOD_OM");
 
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATS_WOOD_OM");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATS_WOOD_OM");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATS_WOOD_OM");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATS_WOOD_OM");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATS_WOOD_OM");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATS_WOOD_OM");	
 
 	Wld_InsertNpc		(Gobbo_Black,"SPAWN_OW_BLOODFLY_WOOD05_01");	
 	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_BLOODFLY_WOOD05_01");	
@@ -1214,8 +1214,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_SCAVENGER_OLDWOOD_C3");	
 	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_SCAVENGER_OLDWOOD_C3");	
 
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_SCAVENGER_OCWOODEND2");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_SCAVENGER_OCWOODEND2");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SCAVENGER_OCWOODEND2");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SCAVENGER_OCWOODEND2");	
 
 	Wld_InsertNpc		(Scavenger,"OW_PATH_SCAVENGER12_SPAWN01");	
 	Wld_InsertNpc		(Scavenger,"OW_PATH_SCAVENGER12_SPAWN01");	
@@ -1292,10 +1292,10 @@ func void STARTUP_SURFACE ()
 
 
 	// New Camp Area
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERAT_A_6_NC4");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERAT_A_6_NC4");		
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERAT_A_6_NC4_02");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERAT_A_6_NC4_04");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERAT_A_6_NC4");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERAT_A_6_NC4");		
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERAT_A_6_NC4_02");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERAT_A_6_NC4_04");	
 
 	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLYS_152");	
 	Wld_InsertNpc		(Bloodfly,"SPAWN_OW_BLOODFLYS_152");
@@ -1520,9 +1520,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Gobbo_Green,"SPAWN_OW_MOLERAT_06_CAVE_GUARD3");
 
 	Wld_InsertNpc		(GRD_4152_Olav, 		"LOCATION_15_IN_2");
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_SMALLCAVE01_MOLERAT");	
 
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_SCAVENGER_OC_PSI_RUIN1");
@@ -1572,10 +1572,10 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(PAL_2006_Leiche, 			"LOCATION_02_01");
 	Wld_InsertNpc		(PAL_2007_Leiche, 			"LOCATION_02_02");
 
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_BLACKWOLF_02_01");
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_BLACKWOLF_02_01");
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_BLACKWOLF_02_01");
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_BLACKWOLF_02_01");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
+	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
 
 
 	Wld_InsertNpc   	(OrcWarrior_Roam,"SPAWN_OW_MOLERAT_ORC_04");	
@@ -1867,13 +1867,13 @@ func void STARTUP_SURFACE ()
 
 	Wld_InsertNpc		(VLK_4148_Gestath,"PATH_TO_PLATEAU03_001");
 
-	Wld_InsertNpc		(Shadowbeast,"PATH_TO_PLATEAU04_RIGHT");
+	Wld_InsertNpc		(Bloodhound,"PATH_TO_PLATEAU04_RIGHT");
 
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND01");
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND02_CAVE");
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND04");
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND05");
-	Wld_InsertNpc		(Shadowbeast,"PLATEAU_ROUND07_001");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND01");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND02_CAVE");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND04");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND05");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND07_001");
 
 
 
@@ -1881,11 +1881,11 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_5");	
 	Wld_InsertNpc   	(OrcElite_Roam,"CASTLE_5");	
 
-	Wld_InsertNpc		(Bloodhound,"OW_PATH_012");
-	Wld_InsertNpc		(Bloodhound,"OW_PATH_012");
+	Wld_InsertNpc		(Hellhound,"OW_PATH_012");
+	Wld_InsertNpc		(Hellhound,"OW_PATH_012");
 
-	Wld_InsertNpc		(Bloodhound,"PATH_CASTLE_TO_WATERFALL");
-	Wld_InsertNpc		(Bloodhound,"PATH_CASTLE_TO_WATERFALL");
+	Wld_InsertNpc		(Hellhound,"PATH_CASTLE_TO_WATERFALL");
+	Wld_InsertNpc		(Hellhound,"PATH_CASTLE_TO_WATERFALL");
 
 	Wld_InsertNpc		(Shadowbeast,"OW_PATH_012A_002");
 
@@ -1964,24 +1964,15 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Shadowbeast, "OW_PATH_227");
 	
 	Wld_InsertNpc       (Shadowbeast,"SPAWN_OW_SHADOWBEAST2_PSIWOOD_02");
-	
-	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD");
-	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD");
-
-	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD3");
-	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVENGER_NEARSHAD2_PSIWOOD3");
-
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_WOLF_NEARSHAD2_PSIWOOD_OUT");
-	Wld_InsertNpc		(BlackWolf,"SPAWN_OW_WOLF_NEARSHAD2_PSIWOOD_OUT");
 
 	Wld_InsertNpc		(Warg,"SPAWN_OW_WOLFK__PSIWOOD_OUT3");
 	Wld_InsertNpc		(Warg,"SPAWN_OW_WOLFK__PSIWOOD_OUT3");
 
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATN_PSIWOOD_1");
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATN_PSIWOOD_1");
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATN_PSIWOOD_1");
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATN_PSIWOOD_1");
 
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATL__PSIWOOD_01");
-	Wld_InsertNpc		(MoleratDemon,"SPAWN_OW_MOLERATL__PSIWOOD_01");
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATL__PSIWOOD_01");
+	Wld_InsertNpc		(Molerat,"SPAWN_OW_MOLERATL__PSIWOOD_01");
 
 	Wld_InsertNpc		(Wolf,"SPAWN_OW_WOLFL__PSIWOOD_OUT4");
 	Wld_InsertNpc		(Wolf,"SPAWN_OW_WOLFL__PSIWOOD_OUT4");
@@ -2037,8 +2028,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Hellhound,"SPAWN_OW_WOLF_04_PSI5");
 	Wld_InsertNpc		(Hellhound,"SPAWN_OW_WOLF_04_PSI5");
 
-	Wld_InsertNpc		(MoleratDemon,"FP_ROAM_OW_MOLERAT_04_PSI");
-	Wld_InsertNpc		(MoleratDemon,"FP_ROAM_OW_MOLERAT_04_PSI");
+	Wld_InsertNpc		(Molerat,"FP_ROAM_OW_MOLERAT_04_PSI");
+	Wld_InsertNpc		(Molerat,"FP_ROAM_OW_MOLERAT_04_PSI");
 
 	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVNEGER_04_PSI3");
 	Wld_InsertNpc		(Scavenger,"SPAWN_OW_SCAVNEGER_04_PSI3");
@@ -2148,6 +2139,14 @@ func void STARTUP_SURFACE ()
 		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_12", 1);
 		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_12", 1);
 		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_12", 0);
+
+		// Orc Graveyard
+		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_ORCLAMP_01", 1);
+		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_ORCLAMP_01", 1);
+		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_ORCLAMP_01", 0);
+		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_ORCLAMP_02", 1);
+		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_ORCLAMP_02", 1);
+		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_ORCLAMP_02", 0);
 	
 	// ------ TRIGGERS ------
 		// Castle
@@ -2164,6 +2163,10 @@ func void STARTUP_SURFACE ()
 
 		// Exchange Place
 		Wld_SendTrigger("EVT_OW_STARTLOCKOUT_MOVER");
+	
+	// ------ VOBTREES ------
+		Ext_InsertVobTree("VOBTREE/OW_ABANDONEDMINE_MOLERATS.ZEN");
+		Ext_InsertVobTree("VOBTREE/OW_BANDITS_ERPRESSER.ZEN");
 
 		B_ENTER_OLDWORLD();
 	};
@@ -2429,7 +2432,7 @@ func void STARTUP_NewWorld_Part_City_01()
 		
 	Wld_InsertItem			(ItMi_Moleratlubric_MIS,"FP_ITEM_SHIP_07");	//zur Sicherheit für Vinos Brennerei!
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_01"); 
-	Wld_InsertItem			(ItRi_Prot_Point_02,"FP_ITEM_SHIP_02");
+	Wld_InsertItem			(ITRI_REVIVED_PROT_ARROW_02,"FP_ITEM_SHIP_02");
 	Wld_InsertItem			(ITPO_REVIVED_BOOST_DEX_01,"FP_ITEM_SHIP_03");
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_04");
 	Wld_InsertItem			(ITPO_REVIVED_SPEED_03,"FP_ITEM_SHIP_05");
@@ -2439,7 +2442,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertItem			(ItSe_GoldPocket25,"FP_ITEM_SHIP_10");
 	Wld_InsertItem			(ItSe_GoldPocket50,"FP_ITEM_SHIP_11");
 	Wld_InsertItem			(ItSc_Zap,"FP_ITEM_SHIP_12");
-	Wld_InsertItem			(ItSc_SumWolf,"FP_ITEM_SHIP_12");
+	Wld_InsertItem			(ITSC_REVIVED_TRANSFORM_BLOODHOUND,"FP_ITEM_SHIP_12");
 	Wld_InsertItem			(ItSc_Sleep,"FP_ITEM_SHIP_12");
 	Wld_InsertItem			(ItMi_nugget,"FP_ITEM_SHIP_13");
 	Wld_InsertItem			(ITPO_REVIVED_MANA_02,"FP_ITEM_SHIP_14");
@@ -2985,12 +2988,12 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 	Wld_InsertNpc 	(Sheep, 			"FP_ROAM_MONASTERY_02");
 	Wld_InsertNpc 	(Sheep, 			"FP_ROAM_MONASTERY_03");
 			
-	Wld_InsertNpc 	(Scavenger, 			"NW_PATH_TO_MONASTER_AREA_11");
-	Wld_InsertNpc 	(Scavenger, 			"NW_PATH_TO_MONASTER_AREA_11");
+	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_PATH_TO_MONASTER_AREA_11");
+	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_PATH_TO_MONASTER_AREA_11");
 
-	Wld_InsertNpc 	(Scavenger, 			"NW_PATH_TO_MONASTER_MONSTER22");
+	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_PATH_TO_MONASTER_MONSTER22");
 
-	Wld_InsertNpc 	(Scavenger, 			"NW_PATH_TO_MONASTER_AREA_01");
+	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_PATH_TO_MONASTER_AREA_01");
 
 	Wld_InsertNpc 	(Giant_Rat, 			"NW_PATH_TO_MONASTER_AREA_02");
 
@@ -3228,7 +3231,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	// Monster
 	//***************************************************************************************
 
-	Wld_InsertNpc 	(Scavenger,	"NW_TAVERNE_TROLLAREA_MONSTER_01_01"); 
+	Wld_InsertNpc 	(Scavenger_Demon,	"NW_TAVERNE_TROLLAREA_MONSTER_01_01"); 
 
 
  	Wld_InsertNpc 	(Zombie02,	"NW_FARM2_TAVERNCAVE1_09"); 
@@ -3475,8 +3478,8 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
  	Wld_InsertNpc 	(Scavenger, 			"NW_BIGMILL_05");
  	Wld_InsertNpc 	(Scavenger, 			"NW_BIGMILL_05");
 
- 	Wld_InsertNpc 	(Scavenger, 			"NW_BIGMILL_FARM3_03");
- 	Wld_InsertNpc 	(Scavenger, 			"NW_BIGMILL_FARM3_03");
+ 	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_BIGMILL_FARM3_03");
+ 	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_BIGMILL_FARM3_03");
 
 
  	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_BIGWOOD_02");
@@ -3492,7 +3495,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 
  	Wld_InsertNpc 	(Lurker, 			"NW_FARM3_PATH_11_SMALLRIVER_04");
 
-	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_PATH_11_SMALLRIVER_08");
+	Wld_InsertNpc 	(ScavengerJuvenile, 			"NW_FARM3_PATH_11_SMALLRIVER_08");
 
 	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_PATH_11_SMALLRIVER_10");
 	Wld_InsertNpc 	(Scavenger, 			"NW_FARM3_PATH_11_SMALLRIVER_10");
@@ -3883,8 +3886,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 
 	Wld_InsertNpc 	(Scavenger, "NW_LIGHTHOUSE_TO_BEACH_005");
 	Wld_InsertNpc 	(Scavenger, "NW_LIGHTHOUSE_TO_BEACH_005");
-	Wld_InsertNpc 	(ScavengerFeather, "NW_LIGHTHOUSE_TO_BEACH_005");
-	Wld_InsertNpc 	(ScavengerFeather, "NW_LIGHTHOUSE_TO_BEACH_005");
+	Wld_InsertNpc 	(ScavengerJuvenile, "NW_LIGHTHOUSE_TO_BEACH_005");
+	Wld_InsertNpc 	(ScavengerJuvenile, "NW_LIGHTHOUSE_TO_BEACH_005");
 
 	Wld_InsertNpc 	(BeachWaran, "NW_LIGHTHOUSE_TO_BEACH_011");
 	Wld_InsertNpc 	(BeachWaran, "NW_LIGHTHOUSE_TO_BEACH_012");

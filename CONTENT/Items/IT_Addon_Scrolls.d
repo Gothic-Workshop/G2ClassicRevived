@@ -8,7 +8,7 @@ const int Value_Sc_Waterfist = 100;
 
 INSTANCE ItSc_Geyser (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Geyser;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -41,7 +41,7 @@ INSTANCE ItSc_Geyser (C_Item)
 
 INSTANCE ItSc_Icelance (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Icelance;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -74,7 +74,7 @@ INSTANCE ItSc_Icelance (C_Item)
 
 INSTANCE ItSc_Waterfist (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Waterfist;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -107,7 +107,7 @@ INSTANCE ItSc_Waterfist (C_Item)
 
 INSTANCE ItSc_Thunderstorm (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Thunderstorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -140,7 +140,7 @@ INSTANCE ItSc_Thunderstorm (C_Item)
 
 INSTANCE ItSc_Whirlwind (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Whirlwind;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;

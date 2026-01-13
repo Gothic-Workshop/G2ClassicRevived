@@ -20,7 +20,7 @@ FUNC VOID B_GiveTradeInv_Salandril (var C_NPC slf)
 		CreateInvItems (slf,ItSc_FireRain	,1);
 		CreateInvItems (slf,ItSc_ThunderStorm ,1);
 		
-		CreateInvItems (slf,ItAm_Prot_Fire_01 ,1);
+		CreateInvItems (slf,ITAM_REVIVED_PROT_FIRE_01 ,1);
 				
 		Salandril_ItemsGiven_Chapter_1 = TRUE;
 	};

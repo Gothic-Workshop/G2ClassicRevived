@@ -65,7 +65,7 @@ const int 	Value_Sc_TrfDragonSnapper	= 200;
 /*******************************************************************************************/
 INSTANCE ItSc_PalLight (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalLight;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -100,7 +100,7 @@ INSTANCE ItSc_PalLight (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalLightHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalLightHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -135,7 +135,7 @@ INSTANCE ItSc_PalLightHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalHolyBolt (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalHolyBolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -171,7 +171,7 @@ INSTANCE ItSc_PalHolyBolt (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalMediumHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalMediumHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -206,7 +206,7 @@ INSTANCE ItSc_PalMediumHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalRepelEvil (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalRepelEvil;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -240,7 +240,7 @@ INSTANCE ItSc_PalRepelEvil (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalFullHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalFullHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -274,7 +274,7 @@ INSTANCE ItSc_PalFullHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_PalDestroyEvil (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_PalDestroyEvil;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -311,7 +311,7 @@ INSTANCE ItSc_PalDestroyEvil (C_Item)
 /*******************************************************************************************/
 instance ItSc_Light (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_LIGHT;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -344,7 +344,7 @@ instance ItSc_Light (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Firebolt (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Firebolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -377,7 +377,7 @@ INSTANCE ItSc_Firebolt (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Icebolt (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Icebolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -410,7 +410,7 @@ INSTANCE ItSc_Icebolt (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_LightHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_LightHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -444,7 +444,7 @@ INSTANCE ItSc_LightHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_SumGobSkel (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_SummonGoblinSkeleton;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -474,7 +474,7 @@ INSTANCE ItSc_SumGobSkel (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_InstantFireball (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_InstantFireball;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -507,7 +507,7 @@ INSTANCE ItSc_InstantFireball (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Zap (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Zap;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -539,7 +539,7 @@ INSTANCE ItSc_Zap (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_SumWolf (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_SummonWolf;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -569,7 +569,7 @@ INSTANCE ItSc_SumWolf (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Windfist (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_WINDFIST;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -608,7 +608,7 @@ INSTANCE ItSc_Windfist (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Sleep (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Sleep;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -642,7 +642,7 @@ INSTANCE ItSc_Sleep (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Charm(C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Charm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI|ITEM_MISSION;
@@ -673,7 +673,7 @@ INSTANCE ItSc_Charm(C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_MediumHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_MediumHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -706,7 +706,7 @@ INSTANCE ItSc_MediumHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_LightningFlash (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_LightningFlash;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -739,7 +739,7 @@ INSTANCE ItSc_LightningFlash (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_ChargeFireball (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_ChargeFireball;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -778,7 +778,7 @@ INSTANCE ItSc_ChargeFireball (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_SumSkel (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_SummonSkeleton;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -808,7 +808,7 @@ INSTANCE ItSc_SumSkel (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Fear (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Fear;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -841,7 +841,7 @@ INSTANCE ItSc_Fear (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_IceCube (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_IceCube;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -880,7 +880,7 @@ INSTANCE ItSc_IceCube (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_ThunderBall (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_ChargeZap;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -920,7 +920,7 @@ INSTANCE ItSc_ThunderBall (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_SumGol (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_SummonGolem;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -950,7 +950,7 @@ INSTANCE ItSc_SumGol (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_HarmUndead (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_DestroyUndead;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -983,7 +983,7 @@ INSTANCE ItSc_HarmUndead (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Pyrokinesis (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Pyrokinesis;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1022,7 +1022,7 @@ INSTANCE ItSc_Pyrokinesis (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Firestorm (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Firestorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1055,7 +1055,7 @@ INSTANCE ItSc_Firestorm (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_IceWave (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_IceWave;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1094,7 +1094,7 @@ INSTANCE ItSc_IceWave (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_SumDemon (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_SummonDemon;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1125,7 +1125,7 @@ INSTANCE ItSc_SumDemon (C_Item)
 
 INSTANCE ItSc_FullHeal (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_FullHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1158,7 +1158,7 @@ INSTANCE ItSc_FullHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_Firerain (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Firerain;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1191,7 +1191,7 @@ INSTANCE ItSc_Firerain (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiernovizen
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_BreathOfDeath;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1223,7 +1223,7 @@ INSTANCE ItSc_BreathOfDeath (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarz
 /*******************************************************************************************/
 INSTANCE ItSc_MassDeath (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_MassDeath;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1255,7 +1255,7 @@ INSTANCE ItSc_MassDeath (C_Item)
 /*******************************************************************************************/
 INSTANCE ItSc_ArmyOfDarkness (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_ArmyOfDarkness;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1286,7 +1286,7 @@ INSTANCE ItSc_ArmyOfDarkness (C_Item)
 
 INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiernovizen
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_Shrink;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1314,9 +1314,9 @@ INSTANCE ItSc_Shrink (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiern
 	COUNT	[5]			=	value;
 };
 /*******************************************************************************************/
-INSTANCE ItSc_TrfSheep (C_Item)
+/* INSTANCE ItSc_TrfSheep (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfSheep;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1343,10 +1343,10 @@ INSTANCE ItSc_TrfSheep (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfScavenger (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfScavenger;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1373,10 +1373,10 @@ INSTANCE ItSc_TrfScavenger (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfGiantRat (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfGiantRat;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1403,10 +1403,10 @@ INSTANCE ItSc_TrfGiantRat (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfGiantBug (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfGiantBug;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1434,10 +1434,10 @@ INSTANCE ItSc_TrfGiantBug (C_Item)
 	COUNT	[5]			=	value;
 
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfWolf (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfWolf;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1464,10 +1464,10 @@ INSTANCE ItSc_TrfWolf (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfWaran (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfWaran;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1494,10 +1494,10 @@ INSTANCE ItSc_TrfWaran (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfSnapper (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfSnapper;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1524,10 +1524,10 @@ INSTANCE ItSc_TrfSnapper (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfWarg (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfWarg;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1554,10 +1554,10 @@ INSTANCE ItSc_TrfWarg (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfFireWaran (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfFireWaran;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1584,10 +1584,10 @@ INSTANCE ItSc_TrfFireWaran (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfLurker (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfLurker;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1614,10 +1614,10 @@ INSTANCE ItSc_TrfLurker (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfShadowbeast (C_Item)
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfShadowbeast;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1644,10 +1644,10 @@ INSTANCE ItSc_TrfShadowbeast (C_Item)
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
 };
-/*******************************************************************************************/
+
 INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schwarzmagiernovizen
 {
-	name 				=	NAME_Spruchrolle;
+	name 				=	NAME_SPL_TrfDragonSnapper;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MULTI;
@@ -1673,7 +1673,7 @@ INSTANCE ItSc_TrfDragonSnapper (C_Item)//Joly:Auf Dracheninsel in Truhe der Schw
 	
 	TEXT	[5]			=	NAME_Value;					
 	COUNT	[5]			=	value;
-};
+}; */
 /*******************************************************************************************/
 
 

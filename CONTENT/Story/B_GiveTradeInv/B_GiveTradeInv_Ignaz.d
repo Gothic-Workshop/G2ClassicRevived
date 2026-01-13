@@ -65,7 +65,6 @@ FUNC VOID B_GiveTradeInv_Ignaz (var C_NPC slf)
 		CreateInvItems (slf,ItSc_TrfSnapper 	,3);
 		CreateInvItems (slf,ItSc_TrfWarg 		,1);
 		CreateInvItems (slf,ItSc_TrfShadowbeast ,1);
-		CreateInvItems (slf,ItSc_TrfDragonSnapper ,1);	
 		CreateInvItems (slf,ItSc_TrfFireWaran 	,1);
 				
 		Ignaz_ItemsGiven_Chapter_3 = TRUE;

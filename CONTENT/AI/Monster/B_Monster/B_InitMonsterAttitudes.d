@@ -1627,7 +1627,7 @@ func void B_InitMonsterAttitudes ()
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_SKELETON_MAGE			);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_ZOMBIE					);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_SNAPPER					);	// Snapper / Dragon Snapper
-	B_SetMonsterAttitude	(GIL_ORC,	ATT_HOSTILE,	GIL_SHADOWBEAST				);
+	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_SHADOWBEAST				);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_SHADOWBEAST_SKELETON	);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_HARPY					);
 	B_SetMonsterAttitude	(GIL_ORC,	ATT_NEUTRAL,	GIL_STONEGOLEM				);

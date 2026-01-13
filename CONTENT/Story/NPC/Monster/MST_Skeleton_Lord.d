@@ -36,7 +36,7 @@ PROTOTYPE Mst_Skeleton_Lord	(C_NPC)
 	//----- Kampf-Taktik ----
 	fight_tactic	=	FAI_HUMAN_STRONG;	
 	
-	EquipItem	(self, ITMW_REVIVED_2H_SWORD_04);
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_OLD_01);
 
 	//----- Senses & Ranges ----
 	senses			= 	SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
@@ -88,6 +88,8 @@ INSTANCE Crypt_Skeleton_Lord	(Mst_Skeleton_Lord)
 
 	B_SetVisuals_Skeleton_Lord ();
 	
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_04);
+	
 	CreateInvItems	(self,ItMi_Gold,500);
 	CreateInvItems 	(self,ITPO_REVIVED_HEALTH_03,2);
 	CreateInvItems 	(self,ITPO_REVIVED_MANA_03,2);
@@ -120,6 +122,8 @@ INSTANCE Skeleton_Lord_Archol	(Mst_Skeleton_Lord)
 	protection	[PROT_MAGIC]		=	10;	
 
 	B_SetVisuals_Skeleton_Lord ();
+	
+	EquipItem	(self, ITMW_REVIVED_2H_SWORD_04);
 	
 	CreateInvItems	(self,ItMi_Gold,650);
 	CreateInvItems	(self,ItKe_EVT_UNDEAD_01,1);

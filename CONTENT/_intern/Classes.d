@@ -218,6 +218,20 @@ CLASS C_Spell
 	VAR INT		targetCollectElev;
 };
 
+CLASS C_SPELL_DATA 
+{
+    var int spellId;
+    var int spellType;
+    var int spellEnergyType;
+    var int spellIsInvestSpell;
+};
+
+const int SPELL_TYPE_DEFAULT = 0;
+const int SPELL_TYPE_PROJECTILE = 1;
+const int SPELL_TYPE_TRANSFORM = 2;
+const int SPELL_TYPE_SPREAD = 3;
+const int SPELL_TYPE_TELEKINESIS = 4;
+const int SPELL_TYPE_CONTROL = 5;
 
 // ************************************************************
 // Globale Klasseninstanzen

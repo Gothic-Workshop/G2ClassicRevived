@@ -600,7 +600,7 @@ const int SPL_MasterOfDisaster		= 60;
 const int SPL_Deathbolt				= 61;
 const int SPL_Deathball				= 62;
 const int SPL_ConcussionBolt		= 63;
-//const int SPL_Reserved_64			= 64;	// SPL_E
+const int SPL_Reserved_64			= 64;	// SPL_E
 const int SPL_Reserved_65		    = 65;	// SPL_F
 const int SPL_Reserved_66	        = 66;	// SPL_G
 const int SPL_Reserved_67	        = 67;	// SPL_H
@@ -631,10 +631,9 @@ const int SPL_Skull					= 87;
 const int SPL_SummonZombie			= 88;
 const int SPL_SummonMud				= 89;
 
-/* 
 const int SPL_Reserved_90			= 90;
 const int SPL_Reserved_91			= 91;
-const int SPL_Reserved_92			= 92; */
+const int SPL_Reserved_92			= 92;
 const int SPL_Reserved_93			= 93;
 const int SPL_Reserved_94			= 94;
 const int SPL_Reserved_95			= 95;
@@ -643,7 +642,41 @@ const int SPL_Reserved_97			= 97;
 const int SPL_Reserved_98			= 98;
 const int SPL_Reserved_99			= 99;
 
-const int MAX_SPELL					= 100;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
+const int SPL_REV_Reserved_100		= 100;
+const int SPL_REV_Reserved_101		= 101;
+const int SPL_REV_Reserved_102		= 102;
+const int SPL_REV_Reserved_103		= 103;
+const int SPL_REV_Reserved_104		= 104;
+const int SPL_REV_Reserved_105		= 105;
+const int SPL_REV_Reserved_106		= 106;
+const int SPL_REV_Reserved_107		= 107;
+const int SPL_REV_Reserved_108		= 108;
+const int SPL_REV_Reserved_109		= 109;
+const int SPL_REV_Reserved_110		= 110;
+const int SPL_REV_Reserved_111		= 111;
+const int SPL_REV_Reserved_112		= 112;
+const int SPL_REV_Reserved_113		= 113;
+const int SPL_REV_Reserved_114		= 114;
+const int SPL_REV_Reserved_115		= 115;
+const int SPL_REV_Reserved_116		= 116;
+const int SPL_REV_Reserved_117		= 117;
+const int SPL_REV_Reserved_118		= 118;
+const int SPL_REV_Reserved_119		= 119;
+const int SPL_REV_Reserved_120		= 120;
+const int SPL_REV_Reserved_121		= 121;
+const int SPL_REV_Reserved_122		= 122;
+const int SPL_REV_Reserved_123		= 123;
+const int SPL_REV_Reserved_124		= 124;
+const int SPL_REV_Reserved_125		= 125;
+const int SPL_REV_Reserved_126		= 126;
+const int SPL_REV_Reserved_127		= 127;
+const int SPL_REV_Reserved_128		= 128;
+const int SPL_REV_Reserved_129		= 129;
+const int SPL_REV_Reserved_130		= 130;
+const int SPL_REV_Reserved_131		= 131;
+const int SPL_REV_Reserved_132		= 132;
+
+const int MAX_SPELL					= 133;   // 59 (Gothic), 68 (Gothic2), 100 (G2Addon)
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -787,7 +820,42 @@ const string spellFxInstanceNames[MAX_SPELL] =
 	"Light",				// 96	SPL_Reserved_96
 	"Light",				// 97	SPL_Reserved_97
 	"Light",				// 98	SPL_Reserved_98
-	"Light"					// 99	SPL_Reserved_99
+	"Light",				// 99	SPL_Reserved_99
+
+	// REVIVED
+	"Telekinesis",			// 100	SPL_REV_Reserved_100
+	"Control",				// 101	SPL_REV_Reserved_101
+	"Transform",			// 102	SPL_REV_Reserved_102
+	"Transform",			// 103	SPL_REV_Reserved_103
+	"Transform",			// 104	SPL_REV_Reserved_104
+	"Transform",			// 105	SPL_REV_Reserved_105
+	"Transform",			// 106	SPL_REV_Reserved_106
+	"Transform",			// 107	SPL_REV_Reserved_107
+	"Transform",			// 108	SPL_REV_Reserved_108
+	"Transform",			// 109	SPL_REV_Reserved_109
+	"Transform",			// 110	SPL_REV_Reserved_110
+	"Transform",			// 111	SPL_REV_Reserved_111
+	"Transform",			// 112	SPL_REV_Reserved_112
+	"Transform",			// 113	SPL_REV_Reserved_113
+	"Transform",			// 114	SPL_REV_Reserved_114
+	"Transform",			// 115	SPL_REV_Reserved_115
+	"Transform",			// 116	SPL_REV_Reserved_116
+	"Transform",			// 117	SPL_REV_Reserved_117
+	"Transform",			// 118	SPL_REV_Reserved_118
+	"Transform",			// 119	SPL_REV_Reserved_119
+	"SummonGuardian",		// 120	SPL_REV_Reserved_120
+	"SummonGuardian",		// 121	SPL_REV_Reserved_121
+	"XXX",					// 122	SPL_REV_Reserved_122
+	"XXX",					// 123	SPL_REV_Reserved_123
+	"XXX",					// 124	SPL_REV_Reserved_124
+	"XXX",					// 125	SPL_REV_Reserved_125
+	"XXX",					// 126	SPL_REV_Reserved_126
+	"XXX",					// 127	SPL_REV_Reserved_127
+	"XXX",					// 128	SPL_REV_Reserved_128
+	"XXX",					// 129	SPL_REV_Reserved_129
+	"XXX",					// 130	SPL_REV_Reserved_130
+	"XXX",					// 131	SPL_REV_Reserved_131
+	"XXX"					// 132	SPL_REV_Reserved_132
 };
 
 
@@ -891,7 +959,7 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"FBT",  				// 61	SPL_Deathbolt
 	"FBT",  				// 62	SPL_Deathball
 	"FBT",  				// 63	SPL_Concussionbolt
-	"TRF", //"XXX",  				// 64	SPL_TrfMeatbug
+	"XXX",  				// 64	SPL_Reserved_64
 	"XXX",  				// 65	SPL_Reserved_65
 	"XXX",  				// 66	SPL_Reserved_66
 	"XXX",					// 67	SPL_Reserved_67
@@ -932,7 +1000,42 @@ const string spellFxAniLetters[MAX_SPELL] =
 	"XXX",  				// 96	SPL_Reserved_96
 	"XXX",					// 97	SPL_Reserved_97
 	"XXX",					// 98	SPL_Reserved_98
-	"XXX"					// 99	SPL_Reserved_99
+	"XXX",					// 99	SPL_Reserved_99
+
+	// REVIVED
+	"TEL",					// 100	SPL_REV_Reserved_100
+	"CON",					// 101	SPL_REV_Reserved_101
+	"TRF",					// 102	SPL_REV_Reserved_102
+	"TRF",					// 102	SPL_REV_Reserved_103
+	"TRF",					// 104	SPL_REV_Reserved_104
+	"TRF",					// 105	SPL_REV_Reserved_105
+	"TRF",					// 106	SPL_REV_Reserved_106
+	"TRF",					// 107	SPL_REV_Reserved_107
+	"TRF",					// 108	SPL_REV_Reserved_108
+	"TRF",					// 109	SPL_REV_Reserved_109
+	"TRF",					// 110	SPL_REV_Reserved_110
+	"TRF",					// 111	SPL_REV_Reserved_111
+	"TRF",					// 112	SPL_REV_Reserved_112
+	"TRF",					// 113	SPL_REV_Reserved_113
+	"TRF",					// 114	SPL_REV_Reserved_114
+	"TRF",					// 115	SPL_REV_Reserved_115
+	"TRF",					// 116	SPL_REV_Reserved_116
+	"TRF",					// 117	SPL_REV_Reserved_117
+	"TRF",					// 118	SPL_REV_Reserved_118
+	"TRF",					// 119	SPL_REV_Reserved_119
+	"SUM",					// 120	SPL_REV_Reserved_120
+	"SUM",					// 121	SPL_REV_Reserved_121
+	"XXX",					// 122	SPL_REV_Reserved_122
+	"XXX",					// 123	SPL_REV_Reserved_123
+	"XXX",					// 124	SPL_REV_Reserved_124
+	"XXX",					// 125	SPL_REV_Reserved_125
+	"XXX",					// 126	SPL_REV_Reserved_126
+	"XXX",					// 127	SPL_REV_Reserved_127
+	"XXX",					// 128	SPL_REV_Reserved_128
+	"XXX",					// 129	SPL_REV_Reserved_129
+	"XXX",					// 130	SPL_REV_Reserved_130
+	"XXX",					// 131	SPL_REV_Reserved_131
+	"XXX"					// 132	SPL_REV_Reserved_132
 };
 
 

@@ -33,7 +33,7 @@ FUNC VOID B_GiveTradeInv_Canthar (var C_NPC slf)
 		CreateInvItems (slf, ITMW_REVIVED_1H_DAGGER_02, 1); 
 		CreateInvItems (slf, ITMW_REVIVED_1H_SWORD_07, 1); 
 		
-		CreateInvItems (slf, ItAm_Prot_Mage_01, 1); 
+		CreateInvItems (slf, ITAM_REVIVED_PROT_MAGIC_01, 1); 
 
 		// ------ Revived ------
 		CreateInvItems (slf, ITBE_REVIVED_ARCHER, 1); 

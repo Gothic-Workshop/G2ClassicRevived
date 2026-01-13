@@ -864,7 +864,7 @@ FUNC VOID DIA_Cassia_Belohnung_Trank()
 FUNC VOID DIA_Cassia_Belohnung_Ring()
 {
 	AI_Output (other, self, "DIA_Cassia_Belohnung_15_04");//Give me the ring.
-	B_GiveInvItems (self, other, ItRi_Hp_01,1);
+	B_GiveInvItems (self, other, ITRI_REVIVED_HP_01,1);
 	
 	Info_ClearChoices (DIA_Cassia_Belohnung);
 };

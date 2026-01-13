@@ -327,7 +327,7 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"TXT_SPL_DEATHBOLT",		// 61	SPL_Deathbolt
 	"TXT_SPL_DEATHBALL",		// 62	SPL_Deathball
 	"TXT_SPL_CONCUSSIONBOLT",	// 63	SPL_ConcussionBolt
-	"Transform into Meatbug",	// 64	SPL_TrfMeatbug
+	"TXT_SPL_RESERVED_64",		// 64	SPL_Reserved_64
 	"TXT_SPL_RESERVED_65",		// 65	SPL_Reserved_65
 	"TXT_SPL_RESERVED_66",		// 66	SPL_Reserved_66
 	"TXT_SPL_RESERVED_67",		// 67	SPL_Reserved_67
@@ -359,16 +359,51 @@ const string TXT_SPELLS[MAX_SPELL] =
 	"Summon Mud",			// 89	SPL_SummonMud
 
 	// ...
-	"Teleport to New Camp",		// 90	SPL_TeleportNC
-	"Teleport to Brotherhood",	// 91	SPL_TeleportPSI
-	"Orc Teleport",		// 92	SPL_Reserved_92
+	"Teleport to New Camp", 	//"TXT_SPL_RESERVED_90",		// 90	SPL_Reserved_90
+	"Teleport to Brotherhood", 	//"TXT_SPL_RESERVED_91",		// 91	SPL_Reserved_91
+	"Orc Teleport", 			//"TXT_SPL_RESERVED_92",		// 92	SPL_Reserved_92
 	"TXT_SPL_RESERVED_93",		// 93	SPL_Reserved_93
 	"TXT_SPL_RESERVED_94",		// 94	SPL_Reserved_94
 	"TXT_SPL_RESERVED_95",		// 95	SPL_Reserved_95
 	"TXT_SPL_RESERVED_96",		// 96	SPL_Reserved_96
 	"TXT_SPL_RESERVED_97",		// 97	SPL_Reserved_97
 	"TXT_SPL_RESERVED_98",		// 98	SPL_Reserved_98
-	"TXT_SPL_RESERVED_99"		// 99	SPL_Reserved_99
+	"TXT_SPL_RESERVED_99",		// 99	SPL_Reserved_99
+
+	// REVIVED
+	"Telekinesis",				// 99	SPL_REV_Reserved_100
+	"Control",					// 99	SPL_REV_Reserved_101
+	"Transform into Meatbug",	// 99	SPL_REV_Reserved_102
+	"Transform into Molerat",		// 99	SPL_REV_Reserved_103
+	"Transform into Bloodfly",		// 99	SPL_REV_Reserved_104
+	"Transform into Swampgas drone",		// 99	SPL_REV_Reserved_105
+	"Transform into Minecrawler",		// 99	SPL_REV_Reserved_106
+	"Transform into Mantis",		// 99	SPL_REV_Reserved_107
+	"Transform into Boar",		// 99	SPL_REV_Reserved_108
+	"Transform into Orc Dog",		// 99	SPL_REV_Reserved_109
+	"Transform into Razor",		// 99	SPL_REV_Reserved_110
+	"Transform into Chomper",		// 99	SPL_REV_Reserved_111
+	"Transform into Bloodhound",		// 99	SPL_REV_Reserved_112
+	"Transform into Hellhound",		// 99	SPL_REV_Reserved_113
+	"Transform into Panther",		// 99	SPL_REV_Reserved_114
+	"Transform into Alligator",		// 99	SPL_REV_Reserved_115
+	"Transform into Swampshark",		// 99	SPL_REV_Reserved_116
+	"Transform into Harpy",		// 99	SPL_REV_Reserved_117
+	"Transform into Troll",		// 99	SPL_REV_Reserved_118
+	"Transform into Goblin",		// 99	SPL_REV_Reserved_119
+	"TXT_REV_RESERVED_120",		// 99	SPL_REV_Reserved_120
+	"TXT_REV_RESERVED_121",		// 99	SPL_REV_Reserved_121
+	"TXT_REV_RESERVED_122",		// 99	SPL_REV_Reserved_122
+	"TXT_REV_RESERVED_123",		// 99	SPL_REV_Reserved_123
+	"TXT_REV_RESERVED_124",		// 99	SPL_REV_Reserved_124
+	"TXT_REV_RESERVED_125",		// 99	SPL_REV_Reserved_125
+	"TXT_REV_RESERVED_126",		// 99	SPL_REV_Reserved_126
+	"TXT_REV_RESERVED_127",		// 99	SPL_REV_Reserved_127
+	"TXT_REV_RESERVED_128",		// 99	SPL_REV_Reserved_128
+	"TXT_REV_RESERVED_129",		// 99	SPL_REV_Reserved_129
+	"TXT_REV_RESERVED_130",		// 99	SPL_REV_Reserved_130
+	"TXT_REV_RESERVED_131",		// 99	SPL_REV_Reserved_131
+	"TXT_REV_RESERVED_132"		// 99	SPL_REV_Reserved_132
 };
 
 ////////////////////////////////////////////////////////////////////////////////

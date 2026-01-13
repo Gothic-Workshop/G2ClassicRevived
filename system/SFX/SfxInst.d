@@ -2439,8 +2439,8 @@ INSTANCE CONTROL_RETURN     	(C_SFX_DEF) {file= "Magic_6.wav" ;					};
 				INSTANCE FIRE_LARGE						(C_SFX_DEF) {file= "fire_large01.wav";				vol = 100;			};
 				INSTANCE FIRE_MEDIUM					(C_SFX_DEF) {file= "fire_medium01.wav";				vol = 100;			};
 				INSTANCE FIRE_SMALL						(C_SFX_DEF) {file= "fire_small01.wav";				vol = 100;			};
-		// 		INSTANCE WATERFALL    					(C_SFX_DEF) {file= "WATERFALL.wav";						       loop=1;	};
-		// 		INSTANCE FOUNTAIN     					(C_SFX_DEF) {file= "FOUNTAIN.wav"; 							   loop=1;	};
+		 		INSTANCE WATERFALL    					(C_SFX_DEF) {file= "WATERFALL.wav";						       loop=1;	};
+		 		INSTANCE FOUNTAIN     					(C_SFX_DEF) {file= "FOUNTAIN.wav"; 							   loop=1;	};
 		                                    		                                            			
 		                                    		                                            			
 ////////////////////                        		                                            			

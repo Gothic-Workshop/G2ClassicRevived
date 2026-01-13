@@ -12,6 +12,8 @@ INSTANCE ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 	value 			=	600;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -51,6 +53,8 @@ INSTANCE ITAM_REVIVED_PROT_MELEE_01(C_Item)
 	value 			=	600;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -92,6 +96,8 @@ INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 	value 			=	50;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -134,6 +140,8 @@ INSTANCE ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 	value 			=	1000;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -179,6 +187,8 @@ INSTANCE ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 	value 			=	600;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -218,6 +228,8 @@ INSTANCE ITAM_REVIVED_PROT_FIRE_01(C_Item)
 	value 			=	600;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 	=	0;
 	material 		=	MAT_METAL;
@@ -298,6 +310,8 @@ INSTANCE ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 	value 			=    1000;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -343,6 +357,8 @@ INSTANCE ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 	value 			=	1600;
 
 	visual 			=	"ITAM_AMULET_01.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -399,6 +415,8 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 	value 			=	720;
 
 	visual 			=	"ITAM_AMULET_02.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -449,6 +467,8 @@ INSTANCE ITAM_REVIVED_MP_01(C_Item)
 	value 			=	400;
 
 	visual 			=	"ITAM_AMULET_02.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -490,6 +510,8 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 	value 			=	1000;
 
 	visual 			=	"ITAM_AMULET_04.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -548,6 +570,8 @@ INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 	value 			=	320;
 
 	visual 			=	"ITAM_AMULET_03.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -587,6 +611,8 @@ INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 	value 			=	480;
 
 	visual 			=	"ITAM_AMULET_03.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -626,6 +652,8 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 	value 			=	320;
 
 	visual 			=	"ITAM_AMULET_03.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -664,6 +692,8 @@ INSTANCE ITAM_REVIVED_STR_02(C_Item)
 	value 			=	480;
 
 	visual 			=	"ITAM_AMULET_03.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
@@ -704,6 +734,8 @@ INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 	value 			=	600;
 
 	visual 			=	"ITAM_AMULET_04.3ds";
+	wear			= 	WEAR_EFFECT;
+	effect			=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;

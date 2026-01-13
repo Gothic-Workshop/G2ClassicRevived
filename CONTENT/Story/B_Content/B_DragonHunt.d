@@ -11,6 +11,9 @@ func void B_DragonHunt()
 
 		if(DragonHunt_OriginalPass == TRUE)
 		{
+			Ext_RemoveVobTree("OW_ABANDONEDMINE_MOLERATS");
+			Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_MINE.ZEN");
+
 			AI_Teleport(PC_Fighter_DJG, "OW_PATH_DJG_000");
 			B_StartOtherRoutine(PC_Fighter_DJG,"PreStart");
 
@@ -31,6 +34,8 @@ func void B_DragonHunt()
 		}
 		else if(DragonHunt_SecondPass == TRUE)
 		{
+			Ext_InsertVobTree("VOBTREE/OW_DRAGONHUNTERS_PASS.ZEN");
+
 			AI_Teleport(PC_Fighter_DJG, "OW_PATH_ORETRAIL_2_008");
 			B_StartOtherRoutine(PC_Fighter_DJG,"StartPass");
 

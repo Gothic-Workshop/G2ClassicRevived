@@ -640,8 +640,8 @@ func void DIA_Dar_BRINGORCELITERING_was_am ()
 	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_01"); //Sure thing. Have fun with it. Now gimme that ring.
 
 	B_GiveInvItems 		(other, self, ItRi_OrcEliteRing, 1);					
-	CreateInvItems 		(self, ItAm_Dex_01, 1);									
-	B_GiveInvItems 		(self, other, ItAm_Dex_01, 1);					
+	CreateInvItems 		(self, ITAM_REVIVED_DEX_01, 1);									
+	B_GiveInvItems 		(self, other, ITAM_REVIVED_DEX_01, 1);					
 	B_GivePlayerXP 		(XP_Dar_BringOrcEliteRing);
 
 	AI_Output			(self, other, "DIA_Dar_BRINGORCELITERING_was_am_03_02"); //It was a pleasure.

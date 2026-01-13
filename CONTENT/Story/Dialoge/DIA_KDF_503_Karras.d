@@ -155,7 +155,7 @@ func void DIA_Karras_Success_Info ()
 	MIS_KarrasVergessen = LOG_SUCCESS;
 	B_GivePlayerXP (XP_KarrasCharm);
 	B_GiveInvItems (other, self, ItSc_Charm,3);
-	B_GiveInvItems (self, other, ItSc_SumWolf,1);
+	B_GiveInvItems (self, other, ItSc_SumGol,1);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Trade

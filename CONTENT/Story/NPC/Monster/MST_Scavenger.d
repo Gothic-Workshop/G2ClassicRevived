@@ -67,7 +67,7 @@ func void B_SetVisuals_Scavenger()
 	Mdl_SetVisualBody		(self,	"Sca_Body",		DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 	
-func void B_SetVisuals_ScavengerFeather()
+func void B_SetVisuals_ScavengerJuvenile()
 {
 	Mdl_SetVisual			(self,	"Scavenger.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
@@ -86,11 +86,21 @@ INSTANCE Scavenger	(Mst_Default_Scavenger)
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };
 
-INSTANCE ScavengerFeather	(Mst_Default_Scavenger)
+INSTANCE ScavengerJuvenile	(Mst_Default_Scavenger)
 {
-	name	=	"Juvenile Scavenger";
+	name							=	"Juvenile Scavenger";
+	level							=	5;
 
-	B_SetVisuals_ScavengerFeather();
+	//----- Attribute ----
+	attribute	[ATR_STRENGTH]		=	20;
+	attribute	[ATR_DEXTERITY]		=	20;
+	attribute	[ATR_HITPOINTS_MAX]	=	60;
+	attribute	[ATR_HITPOINTS]		=	60;
+	attribute	[ATR_MANA_MAX] 		=	0;
+	attribute	[ATR_MANA] 			=	0;
+
+	B_SetVisuals_ScavengerJuvenile();
+	
 	Mdl_SetModelScale(self, 0.9, 0.9, 0.9);
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);

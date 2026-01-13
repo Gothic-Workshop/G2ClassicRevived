@@ -106,12 +106,32 @@ func INT Spell_ProcessMana (VAR INT manaInvested)
 	if (activeSpell == SPL_SummonZombie			)	{	return	Spell_Logic_SummonZombie	(manaInvested);	};
 	if (activeSpell == SPL_SummonMud			)	{	return	Spell_Logic_SummonMud		(manaInvested);	};
 
-	// new magic
-	if (activeSpell == SPL_TeleportOrc		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };
+	// REVIVED
 	if (activeSpell == SPL_TeleportNC		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };
 	if (activeSpell == SPL_TeleportPsi		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };
+	if (activeSpell == SPL_TeleportOrc		)		{	return  Spell_Logic_TeleportAlle		(manaInvested); };
 	
-	if (activeSpell == SPL_TrfMeatbug	    )		{	return	Spell_Logic_TrfMeatbug	 		(manaInvested);	};
+	if (activeSpell == SPL_Telekinesis	    )		{	return	Spell_Logic_Telekinesis	 		(manaInvested);	};
+	if (activeSpell == SPL_Control	    	)		{	return	Spell_Logic_Control		 		(manaInvested);	};
+
+	if (activeSpell == SPL_TrfMeatbug	    )		{	return	Spell_Logic_TransformMeatbug	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfMolerat	    )		{	return	Spell_Logic_TransformMolerat	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfBloodfly	    )		{	return	Spell_Logic_TransformBloodfly	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfSwampDrone   	)		{	return	Spell_Logic_TransformSwampDrone	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfMinecrawler	)		{	return	Spell_Logic_TransformMinecrawler	 	(manaInvested);	};
+	if (activeSpell == SPL_TrfMantis	    )		{	return	Spell_Logic_TransformMantis	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfBoar	    	)		{	return	Spell_Logic_TransformBoar	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfOrcDog	    )		{	return	Spell_Logic_TransformOrcDog	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfRazor	    	)		{	return	Spell_Logic_TransformRazor	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfChomper	    )		{	return	Spell_Logic_TransformChomper	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfBloodhound	)		{	return	Spell_Logic_TransformBloodhound	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfHellhound	    )		{	return	Spell_Logic_TransformHellhound	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfPanther	    )		{	return	Spell_Logic_TransformPanther	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfAlligator	    )		{	return	Spell_Logic_TransformAlligator	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfSwampshark	)		{	return	Spell_Logic_TransformSwampshark	 		(manaInvested);	};
+	if (activeSpell == SPL_TrfHarpy	    	)		{	return	Spell_Logic_TransformHarpy	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfTroll	    	)		{	return	Spell_Logic_TransformTroll	 			(manaInvested);	};
+	if (activeSpell == SPL_TrfGoblin	    )		{	return	Spell_Logic_TransformGoblin		 		(manaInvested);	};
 	
 //Leer
 

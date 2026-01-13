@@ -25,7 +25,7 @@ FUNC VOID B_GiveTradeInv_Hakon (var C_NPC slf)
 		// ------ Ringe / Amulette ------
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
 		CreateInvItems (slf, ItBE_Addon_MIL_01		, 1); 
-		CreateInvItems (slf, ItAm_Prot_Edge_01		, 1); 
+		CreateInvItems (slf, ITAM_REVIVED_PROT_MELEE_01		, 1); 
 		
 		Hakon_ItemsGiven_Chapter_1 = TRUE;
 	};

@@ -28,7 +28,7 @@ FUNC VOID B_GiveTradeInv_Jora (var C_NPC slf)
 		CreateInvItems (slf,ItRw_Bow_M_04 , 1); 
 		CreateInvItems (slf,ItRw_Crossbow_L_02 , 1); 
 		
-		CreateInvItems (slf,ItAm_Prot_Point_01 , 1);
+		CreateInvItems (slf,ITAM_REVIVED_PROT_ARROW_01 , 1);
 
 		// ------ Revived ------
 		CreateInvItems (slf, ITBE_REVIVED_ARCHER, 1); 

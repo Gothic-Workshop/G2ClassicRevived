@@ -23,7 +23,7 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_LightHeal,5);
 		CreateInvItems   (slf, ItSc_SumGobSkel, 2);
 		
-		CreateInvItems   (slf, ItRi_Hp_Mana_01, 1);
+		CreateInvItems   (slf, ITRI_REVIVED_HP_MP_01, 1);
 
 		Isgaroth_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -42,7 +42,6 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ITPO_REVIVED_HEALTH_02,  2);
 		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	7);
 		CreateInvItems   (slf, ItSc_InstantFireball, 5);
-		CreateInvItems   (slf, ItSc_SumWolf, 5);
 		CreateInvItems   (slf, ItSc_Windfist,4);
 		CreateInvItems   (slf, ItSc_Sleep, 2);
 		CreateInvItems   (slf, ItSc_Icebolt, 5);
@@ -112,7 +111,7 @@ FUNC VOID B_GiveTradeInv_Isgaroth (var C_NPC slf)
 		CreateInvItems   (slf, ItSc_LightningFlash, 4);
 		CreateInvItems   (slf, ItSc_ChargeFireball, 2);
 	
-		CreateInvItems   (slf, ItAm_Mana_01, 1);
+		CreateInvItems   (slf, ITAM_REVIVED_MP_01, 1);
 
 		Isgaroth_ItemsGiven_Chapter_4 = TRUE;
 	};

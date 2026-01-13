@@ -32,7 +32,7 @@ const int Value_Ru_Water					= 200;
 /*******************************************************************************************/
 INSTANCE ItRu_Thunderstorm (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Thunderstorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -66,7 +66,7 @@ INSTANCE ItRu_Thunderstorm (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Whirlwind (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Whirlwind;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -100,7 +100,7 @@ INSTANCE ItRu_Whirlwind (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Geyser (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Geyser;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -133,7 +133,7 @@ INSTANCE ItRu_Geyser (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Waterfist	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Waterfist;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -167,7 +167,7 @@ INSTANCE ItRu_Waterfist	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Icelance	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Icelance;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -206,7 +206,7 @@ INSTANCE ItRu_Icelance	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_BeliarsRage	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_BeliarsRage;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -240,7 +240,7 @@ INSTANCE ItRu_BeliarsRage	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SuckEnergy	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SuckEnergy;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -277,7 +277,7 @@ INSTANCE ItRu_SuckEnergy	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_GreenTentacle (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_GreenTentacle;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -311,7 +311,7 @@ INSTANCE ItRu_GreenTentacle (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Swarm	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Swarm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -348,7 +348,7 @@ INSTANCE ItRu_Swarm	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Skull	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Skull;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -385,7 +385,7 @@ INSTANCE ItRu_Skull	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SummonZombie	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonZombie;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -416,7 +416,7 @@ INSTANCE ItRu_SummonZombie	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SummonGuardian	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonGuardian;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;

@@ -54,8 +54,8 @@ FUNC VOID B_SCGetTreasure_S1()
 				Wld_InsertItem 		(ITPO_REVIVED_BOOST_MASTER_01,		"OW_TREASURE_ORCTERRAIN_WATCHTOWER"	); 							 			 RAKEPLACE[7]=TRUE; 						 			 
 				RakeTreasureSuccess (ITPO_REVIVED_BOOST_MASTER_01);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_FOGTOWER_FOREST"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[8]==FALSE)){					 			
-				Wld_InsertItem 		(ITAM_REVIVED_DEMON, 				"OW_TREASURE_FOGTOWER_FOREST"	); 							 			 RAKEPLACE[8]=TRUE; 							 			
+				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_PALLISADE_CAVE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[8]==FALSE)){					 			
+				Wld_InsertItem 		(ITAM_REVIVED_DEMON, 				"OW_TREASURE_PALLISADE_CAVE"	); 							 			 RAKEPLACE[8]=TRUE; 							 			
 				RakeTreasureSuccess (ITAM_REVIVED_DEMON);}
 				////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 				else if ((Npc_GetDistToWP(hero,							"OW_TREASURE_PLATEAU_ABANDONEDMINE"	)< RAKE_BUDDEL_DIST_MIN) 			&&  (RAKEPLACE[9]==FALSE)){					 			

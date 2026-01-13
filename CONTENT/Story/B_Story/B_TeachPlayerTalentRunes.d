@@ -79,8 +79,6 @@ func int B_TeachPlayerTalentRunes (var C_NPC slf, var C_NPC oth, var int spell)
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Fireball ´: 1 Pitch");	};	
 	if (spell == SPL_Zap)					{	PLAYER_TALENT_RUNES[SPL_Zap] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Zap, 1);						
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Small Lightning`:1 Rock Crystal.");	};		
-	if (spell == SPL_SummonWolf)			{	PLAYER_TALENT_RUNES[SPL_SummonWolf]				= TRUE;	CreateInvItems (ScrollTrader, ItSc_SumWolf, 1);					
-	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Summon Wolf´: 1 Fur of a Wolf.");	};		
 	if (spell == SPL_WINDFIST)				{	PLAYER_TALENT_RUNES[SPL_WINDFIST] 				= TRUE;	CreateInvItems (ScrollTrader, ItSc_WINDFIST, 1);				
 	B_LogEntry (TOPIC_TalentRunes,"Ingredients for the rune ´Wind Fist´:1 Coal.");	};		
 	if (spell == SPL_Sleep)					{	PLAYER_TALENT_RUNES[SPL_Sleep] 					= TRUE;	CreateInvItems (ScrollTrader, ItSc_Sleep, 1);					

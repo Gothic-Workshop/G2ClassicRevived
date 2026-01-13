@@ -70,7 +70,7 @@ const int	Value_Ru_Teleport_3				=	500;
 /*******************************************************************************************/
 INSTANCE ItRu_PalLight (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalLight;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -104,7 +104,7 @@ INSTANCE ItRu_PalLight (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalLightHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalLightHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -138,7 +138,7 @@ INSTANCE ItRu_PalLightHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalMediumHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalMediumHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -172,7 +172,7 @@ INSTANCE ItRu_PalMediumHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalFullHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalFullHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -206,7 +206,7 @@ INSTANCE ItRu_PalFullHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalHolyBolt (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalHolyBolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -241,7 +241,7 @@ INSTANCE ItRu_PalHolyBolt (C_Item)
 
 INSTANCE ItRu_PalRepelEvil (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalRepelEvil;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -275,7 +275,7 @@ INSTANCE ItRu_PalRepelEvil (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalDestroyEvil (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalDestroyEvil;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -309,7 +309,7 @@ INSTANCE ItRu_PalDestroyEvil (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_PalTeleportSecret (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_PalTeleportSecret;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -340,7 +340,7 @@ INSTANCE ItRu_PalTeleportSecret (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportSeaport (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportSeaport;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -367,7 +367,7 @@ INSTANCE ItRu_TeleportSeaport (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportMonastery (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportMonastery;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -395,7 +395,7 @@ INSTANCE ItRu_TeleportMonastery (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportFarm (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportFarm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -422,7 +422,7 @@ INSTANCE ItRu_TeleportFarm (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportXardas (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportXardas;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -449,7 +449,7 @@ INSTANCE ItRu_TeleportXardas (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportPassNW (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportPassNW;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -476,7 +476,7 @@ INSTANCE ItRu_TeleportPassNW (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportPassOW (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportPassOW;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -502,7 +502,7 @@ INSTANCE ItRu_TeleportPassOW (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_TeleportOC (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportOC;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -530,7 +530,7 @@ INSTANCE ItRu_TeleportOC (C_Item)
 
 INSTANCE ItRu_TeleportOWDemonTower (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportOWDemonTower;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -556,7 +556,7 @@ INSTANCE ItRu_TeleportOWDemonTower (C_Item)
 
 INSTANCE ItRu_TeleportTaverne (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_TeleportTaverne;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -582,7 +582,7 @@ INSTANCE ItRu_TeleportTaverne (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Teleport_3 (C_Item) 
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Teleport_3;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -609,7 +609,7 @@ INSTANCE ItRu_Teleport_3 (C_Item)
 // Kreis 1
 INSTANCE ItRu_Light (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_LIGHT;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -642,7 +642,7 @@ INSTANCE ItRu_Light (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_FireBolt (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Firebolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -675,7 +675,7 @@ INSTANCE ItRu_FireBolt (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Zap (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Zap;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -708,7 +708,7 @@ INSTANCE ItRu_Zap (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_LightHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_LightHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -741,7 +741,7 @@ INSTANCE ItRu_LightHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SumGobSkel (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonGoblinSkeleton;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -776,7 +776,7 @@ INSTANCE ItRu_SumGobSkel (C_Item)
 // Kreis 2	
 INSTANCE ItRu_InstantFireball (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_InstantFireball;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -810,7 +810,7 @@ INSTANCE ItRu_InstantFireball (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Icebolt (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Icebolt;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -845,7 +845,7 @@ INSTANCE ItRu_Icebolt (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SumWolf (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonWolf;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -876,7 +876,7 @@ INSTANCE ItRu_SumWolf (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Windfist (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_WINDFIST;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -916,7 +916,7 @@ INSTANCE ItRu_Windfist (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Sleep (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Sleep;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -949,7 +949,7 @@ INSTANCE ItRu_Sleep (C_Item)
 // Kreis 3
 INSTANCE ItRu_MediumHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_MediumHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -982,7 +982,7 @@ INSTANCE ItRu_MediumHeal (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_LightningFlash (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_LightningFlash;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1015,7 +1015,7 @@ INSTANCE ItRu_LightningFlash (C_Item)
 /*******************************************************************************************/	
 INSTANCE ItRu_ChargeFireball (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_ChargeFireball;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1056,7 +1056,7 @@ INSTANCE ItRu_ChargeFireball (C_Item)
 /*******************************************************************************************/	
 INSTANCE ItRu_SumSkel (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonSkeleton;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1086,7 +1086,7 @@ INSTANCE ItRu_SumSkel (C_Item)
 /*******************************************************************************************/	
 INSTANCE ItRu_Fear (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Fear;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1119,7 +1119,7 @@ INSTANCE ItRu_Fear (C_Item)
 /*******************************************************************************************/	
 INSTANCE ItRu_IceCube (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_IceCube;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1159,7 +1159,7 @@ INSTANCE ItRu_IceCube (C_Item)
 // Kreis 4
 INSTANCE ItRu_ThunderBall (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_ChargeZap;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1200,7 +1200,7 @@ INSTANCE ItRu_ThunderBall (C_Item)
 /*******************************************************************************************/	
 INSTANCE ItRu_SumGol (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonGolem;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1231,7 +1231,7 @@ INSTANCE ItRu_SumGol (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_HarmUndead (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_DestroyUndead;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1264,7 +1264,7 @@ INSTANCE ItRu_HarmUndead (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Pyrokinesis (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Pyrokinesis;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1305,7 +1305,7 @@ INSTANCE ItRu_Pyrokinesis (C_Item)
 // Kreis 5
 INSTANCE ItRu_Firestorm (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Firestorm;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1338,7 +1338,7 @@ INSTANCE ItRu_Firestorm (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_IceWave (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_IceWave;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1377,7 +1377,7 @@ INSTANCE ItRu_IceWave (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_SumDemon (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_SummonDemon;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1407,7 +1407,7 @@ INSTANCE ItRu_SumDemon (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_FullHeal (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_FullHeal;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1441,7 +1441,7 @@ INSTANCE ItRu_FullHeal (C_Item)
 // Kreis 6
 INSTANCE ItRu_Firerain (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Firerain;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1474,7 +1474,7 @@ INSTANCE ItRu_Firerain (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_BreathOfDeath (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_BreathOfDeath;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1508,7 +1508,7 @@ INSTANCE ItRu_BreathOfDeath (C_Item)
 
 INSTANCE ItRu_MassDeath (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_MassDeath;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	ITEM_MISSION;
@@ -1542,7 +1542,7 @@ INSTANCE ItRu_MassDeath (C_Item)
 
 INSTANCE ItRu_MasterOfDisaster	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_MasterOfDisaster;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1575,7 +1575,7 @@ INSTANCE ItRu_MasterOfDisaster	(C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_ArmyOfDarkness (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_ArmyOfDarkness;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1604,7 +1604,7 @@ INSTANCE ItRu_ArmyOfDarkness (C_Item)
 /*******************************************************************************************/
 INSTANCE ItRu_Shrink (C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	NAME_SPL_Shrink;
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1639,7 +1639,7 @@ INSTANCE ItRu_Shrink (C_Item)
 
 INSTANCE ItRu_Deathbolt	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	"Deathbolt";
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1672,7 +1672,7 @@ INSTANCE ItRu_Deathbolt	(C_Item)
 
 INSTANCE ItRu_Deathball	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	"Deathball";
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1705,7 +1705,7 @@ INSTANCE ItRu_Deathball	(C_Item)
 
 INSTANCE ItRu_Concussionbolt	(C_Item)
 {
-	name 				=	NAME_Rune;
+	name 				=	"Concussion bolt";
 
 	mainflag 			=	ITEM_KAT_RUNE;
 	flags 				=	0;
@@ -1721,7 +1721,7 @@ INSTANCE ItRu_Concussionbolt	(C_Item)
 	wear				= 	WEAR_EFFECT;
 	effect				=	"SPELLFX_WEAKGLIMMER";
 
-	description			=	"Concussionbolt";
+	description			=	"Concussion bolt";
 	
 	TEXT	[0]			=	NAME_Mag_Circle;
 	COUNT	[0]			=	mag_circle;

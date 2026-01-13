@@ -26,7 +26,7 @@ FUNC VOID B_GiveTradeInv_Baltram (var C_NPC slf)
 		CreateInvItems (slf,ItFo_Bread , 3);
 		CreateInvItems (slf,ItFo_Cheese, 2); 
 		
-		CreateInvItems (slf,ItAm_Hp_01, 1); 
+		CreateInvItems (slf,ITAM_REVIVED_HP_01, 1); 
 
 		CreateInvItems (slf,ItFo_Addon_Rum, 2); 
 		CreateInvItems (slf,ItFo_Addon_Grog, 2); 

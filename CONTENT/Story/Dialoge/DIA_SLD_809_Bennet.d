@@ -890,8 +890,8 @@ func void DIA_Bennet_Present_Info ()
 		AI_Output	(other,self ,"DIA_Bennet_Present_15_14"); //And?
 		AI_Output 	(self ,other,"DIA_Bennet_Present_06_15"); //Here, take this amulet. I think you'll need it more than I do.
 	
-		CreateInvItems (self,ItAm_Hp_01,1); 
-		B_GiveInvItems (self,other,ItAm_Hp_01,1);
+		CreateInvItems (self,ITAM_REVIVED_HP_01,1); 
+		B_GiveInvItems (self,other,ITAM_REVIVED_HP_01,1);
 	};
 };
 

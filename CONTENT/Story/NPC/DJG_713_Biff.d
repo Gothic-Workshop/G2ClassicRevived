@@ -55,14 +55,14 @@ FUNC VOID Rtn_PreStart_713 ()
 
 FUNC VOID Rtn_StartPass_713()
 {
-	TA_Smalltalk						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
-    TA_Smalltalk						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
+	TA_Sit_Campfire						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_005");
+    TA_Sit_Campfire						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_005");
 };
 
 FUNC VOID Rtn_Start_713 ()
 {
-	TA_Stand_ArmsCrossed		(08,00,23,00,"OW_PATH_DJG_003");
-    TA_Stand_ArmsCrossed		(23,00,08,00,"OW_PATH_DJG_003");		
+	TA_Sit_Bench		(08,00,23,00,"OW_DJG_VORPOSTEN_01");
+    TA_Sit_Bench		(23,00,08,00,"OW_DJG_VORPOSTEN_01");		
 };
 
 FUNC VOID Rtn_Follow_713 ()

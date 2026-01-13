@@ -364,8 +364,8 @@ func void DIA_Ulthar_SchreineGeheilt_Info ()
 	AI_Output			(other, self, "DIA_Ulthar_SchreineGeheilt_15_00"); //I have purified all the shrines.
 	AI_Output			(self, other, "DIA_Ulthar_SchreineGeheilt_05_01"); //Excellently done, my son. I am proud of you. May Innos watch over you.
 	AI_Output			(self, other, "DIA_Ulthar_SchreineGeheilt_05_02"); //Take this Amulet of Strength, that it may be of use to you in battle against the enemy.
-	CreateInvItems (self, ItAm_Dex_Strg_01, 1);									
-	B_GiveInvItems (self, other, ItAm_Dex_Strg_01, 1);
+	CreateInvItems (self, ITAM_REVIVED_STR_DEX_01, 1);									
+	B_GiveInvItems (self, other, ITAM_REVIVED_STR_DEX_01, 1);
 	B_GivePlayerXP (XP_Ulthar_SchreineGereinigt);
 	AI_StopProcessInfos (self);
 };

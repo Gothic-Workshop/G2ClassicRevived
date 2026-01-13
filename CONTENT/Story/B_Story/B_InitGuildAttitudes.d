@@ -169,7 +169,7 @@ func void B_InitGuildAttitudes ()
 		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_DJG		);
 		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_SLD		);
 		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_BAU		);
-		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_BDT		);
+		Wld_SetGuildAttitude	(GIL_BDT,	ATT_FRIENDLY,	GIL_BDT		);
 		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_STRF	);
 		//GIL_DMT nicht
 		Wld_SetGuildAttitude	(GIL_BDT,	ATT_HOSTILE,	GIL_OUT		);

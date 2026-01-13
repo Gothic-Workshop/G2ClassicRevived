@@ -23,7 +23,7 @@ FUNC VOID B_GiveTradeInv_Zuris (var C_NPC slf)
 	
 		// ------ AmRiBe ------
 		CreateInvItems (slf,ItBe_Addon_Prot_MAGIC, 1); 
-		CreateInvItems (slf,ItAm_Hp_Mana_01 ,1);	
+		CreateInvItems (slf,ITAM_REVIVED_HP_MP_01 ,1);	
 			
 		Zuris_ItemsGiven_Chapter_1 = TRUE;
 	};
@@ -74,7 +74,6 @@ FUNC VOID B_GiveTradeInv_Zuris (var C_NPC slf)
 
 		CreateInvItems (slf,ItSc_SumGobSkel	,1);
 		CreateInvItems (slf,ItSc_SumSkel	,1);
-		CreateInvItems (slf,ItSc_SumWolf	,1);
 		CreateInvItems (slf,ItSc_SumGol		,1);
 		CreateInvItems (slf,ItSc_SumDemon	,1); 
 	

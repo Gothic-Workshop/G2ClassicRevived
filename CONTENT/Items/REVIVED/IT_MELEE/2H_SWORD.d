@@ -444,7 +444,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_04;
-	visual 				=	"REV_2H_SWORD_04.3DS";
+	visual 				=	"REV_2H_SWORD_02.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
@@ -455,7 +455,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_05 (C_Item)
 {	
-	name 				=	"Andramo";
+	name 				=	"Peremptor";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -469,7 +469,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_05 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_05;
-	visual 				=	"REV_2H_SWORD_05.3DS";
+	visual 				=	"REV_2H_SWORD_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
@@ -580,7 +580,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_04 (C_Item)
 
 INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_05 (C_Item)
 {	
-	name 				=	"Peremptor";
+	name 				=	"Andramo";
 
 	mainflag 			=	ITEM_KAT_NF;
 	flags 				=	ITEM_2HD_SWD;	
@@ -594,7 +594,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_HEAVY_05 (C_Item)
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
 	cond_value[2]  		= 	REV_Condition_2H_Sword_Heavy_05;
-	visual 				=	"REV_2H_SWORD_HEAVY_05.3DS";
+	visual 				=	"REV_2H_SWORD_HEAVY_01.3DS";
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;

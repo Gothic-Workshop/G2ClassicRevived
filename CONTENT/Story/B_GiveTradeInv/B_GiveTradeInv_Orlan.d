@@ -33,7 +33,7 @@ FUNC VOID B_GiveTradeInv_Orlan (var C_NPC slf)
 		
 		// ------ Ringe / Amulette ------
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
-		CreateInvItems (slf, ItRi_Prot_Mage_02,  1);
+		CreateInvItems (slf, ITRI_REVIVED_PROT_MAGIC_02,  1);
 
 		// ------ Revived ------
 		CreateInvItems (slf, ITBE_REVIVED_ARCHER, 1); 

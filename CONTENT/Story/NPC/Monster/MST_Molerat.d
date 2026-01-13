@@ -116,7 +116,7 @@ INSTANCE MoleratJuvenile	(Mst_Default_Molerat)
 
 INSTANCE MoleratDemon	(Mst_Default_Molerat)
 {
-	name							=	"Demon Molerat";
+	name							=	"Forest Molerat";
 	level							=	7;
 	
 	//----- Attribute ----	

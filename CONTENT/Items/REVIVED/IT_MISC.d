@@ -637,6 +637,6 @@ INSTANCE ITMI_REVIVED_STUFF_IDOL_02 (C_Item)
 	description			= 	name;
 	TEXT[0]				=	"This figure is a misshapen";
 	TEXT[1]				=	"being with a mask.";
-	TEXT[2]				=	"The mask is surrounded by two big stings.";
+	TEXT[2]				=	"The mask is decorated with two big stings.";
 	TEXT[5]				= 	NAME_Value;					COUNT[5]	= value;
 };

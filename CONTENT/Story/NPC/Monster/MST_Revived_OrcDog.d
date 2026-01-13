@@ -2,29 +2,29 @@
 //	Warg Prototype
 //*************************
 
-PROTOTYPE Mst_Default_Warg(C_Npc)			
+PROTOTYPE Mst_Default_OrcDog(C_Npc)			
 {
 	//----- Monster ----
-	name							=	"Warg";
+	name							=	"Orc Dog";
 	guild							=	GIL_WOLF;
-	aivar[AIV_MM_REAL_ID]			= 	ID_WARG;
-	level							=	30;		
+	aivar[AIV_MM_REAL_ID]			= 	ID_ORCDOG;
+	level							=	20;		
 	
 	//----- Attributes ----
-	attribute	[ATR_STRENGTH]		=	150;
-	attribute	[ATR_DEXTERITY]		=	150;
-	attribute	[ATR_HITPOINTS_MAX]	=	300;	
-	attribute	[ATR_HITPOINTS]		=	300;
+	attribute	[ATR_STRENGTH]		=	80;
+	attribute	[ATR_DEXTERITY]		=	80;
+	attribute	[ATR_HITPOINTS_MAX]	=	160;
+	attribute	[ATR_HITPOINTS]		=	160;
 	attribute	[ATR_MANA_MAX] 		=	0;
 	attribute	[ATR_MANA] 			=	0;
 	
 	//----- Protections ----
-	protection	[PROT_BLUNT]		=	125;
-	protection	[PROT_EDGE]			=	125;
-	protection	[PROT_POINT]		=	75;
-	protection	[PROT_FIRE]			=	125;
-	protection	[PROT_FLY]			=	125;
-	protection	[PROT_MAGIC]		=	0;
+	protection	[PROT_BLUNT]		=	60;
+	protection	[PROT_EDGE]			=	60;
+	protection	[PROT_POINT]		=	30;
+	protection	[PROT_FIRE]			=	30;
+	protection	[PROT_FLY]			=	60;
+	protection	[PROT_MAGIC]		=	20;
 
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
@@ -59,21 +59,19 @@ PROTOTYPE Mst_Default_Warg(C_Npc)
 //*************
 
 
-func void B_SetVisuals_Warg()
+func void B_SetVisuals_OrcDog()
 {
 	Mdl_SetVisual			(self, "Wolf.mds");
 	//								Body-Mesh		Body-Tex	Skin-Color	Head-MMS	Head-Tex	Teeth-Tex	ARMOR
-	Mdl_SetVisualBody		(self,	"Warg_Body2",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
+	Mdl_SetVisualBody		(self,	"Dog_Body",	DEFAULT,	DEFAULT,	"",			DEFAULT,  	DEFAULT,	-1);
 };
 
-//************
-//	Warg
-//************
-
-INSTANCE Warg	(Mst_Default_Warg)
+//**********************************************
+//	Orc Dog (G1)
+//*********************************************
+INSTANCE OrcDog	(Mst_Default_OrcDog)
 {
-	B_SetVisuals_Warg();
-	Mdl_SetModelScale(self, 1.1, 1.1, 1.1);
+	B_SetVisuals_OrcDog();
 	Npc_SetToFistMode(self);
 	CreateInvItems (self, ItFoMuttonRaw, 1);
 };

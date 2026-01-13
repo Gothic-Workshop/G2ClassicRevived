@@ -602,8 +602,8 @@ func void DIA_Serpentes_MinenAnteileBringen_Info ()
 			AI_Output		(other, self, "DIA_Serpentes_MinenAnteileBringen_15_04"); //Those were all, I think.
 			AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_05"); //Well done. You have earned a reward.
 			AI_Output		(self, other, "DIA_Serpentes_MinenAnteileBringen_10_06"); //Take this protective amulet. It will help you along the paths you have yet to tread.
-			CreateInvItems (self, ItAm_Prot_Mage_01, 1); 
-			B_GiveInvItems (self, other, ItAm_Prot_Mage_01, 1);
+			CreateInvItems (self, ITAM_REVIVED_PROT_MAGIC_01, 1); 
+			B_GiveInvItems (self, other, ITAM_REVIVED_PROT_MAGIC_01, 1);
 		}
 		else	//Joly: zur Sicherheit!
 		{

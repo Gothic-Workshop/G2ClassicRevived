@@ -46,12 +46,12 @@ FUNC VOID Rtn_PreStart_708()
 
 FUNC VOID Rtn_StartPass_708()
 {
-	TA_Stand_Guarding						(08,00,23,00,"OW_PATH_ORETRAIL_2_008");
-    TA_Stand_Guarding						(23,00,08,00,"OW_PATH_ORETRAIL_2_008");
+	TA_Stand_Guarding						(08,00,23,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
+    TA_Stand_Guarding						(23,00,08,00,"OW_PATH_ORETRAIL_2_DJGCAMP_01");
 };
 
 FUNC VOID Rtn_Start_708()
 {
-	TA_Stand_Guarding						(08,00,23,00,"PATH_AROUND_HILL03");
-    TA_Stand_Guarding						(23,00,08,00,"PATH_AROUND_HILL03");	
+	TA_Roast_Scavenger						(08,00,23,00,"OW_DJG_VORPOSTEN_03");
+    TA_Roast_Scavenger						(23,00,08,00,"OW_DJG_VORPOSTEN_03");	
 };

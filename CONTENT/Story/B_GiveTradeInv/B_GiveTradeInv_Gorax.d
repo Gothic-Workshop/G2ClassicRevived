@@ -36,7 +36,7 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems 	 (slf, ItMW_Addon_Stab02, 1);
 		CreateInvItems 	 (slf, ItMW_Addon_Stab04, 1);
 		
-		CreateInvItems 	 (slf, ItRi_Mana_01, 1);
+		CreateInvItems 	 (slf, ITRI_REVIVED_MP_01, 1);
 
 		CreateInvItems (slf, ITSC_REVIVED_TELEPORT_MONASTERY, 3);
 				
@@ -58,12 +58,10 @@ FUNC VOID B_GiveTradeInv_Gorax (var C_NPC slf)
 		CreateInvItems   (slf, ITPO_REVIVED_MANA_01,	14);//Joly:hab ich schon verdoppelt nach version 1.26e
 
 		CreateInvItems   (slf, ItSc_InstantFireball, 5);
-	
-		CreateInvItems   (slf, ItSc_SumWolf, 5);
 		CreateInvItems   (slf, ItSc_Windfist,4);
 		CreateInvItems   (slf, ItSc_Sleep, 2);
 
-		CreateInvItems   (slf, ItAm_Prot_Edge_01, 1);
+		CreateInvItems   (slf, ITAM_REVIVED_PROT_WEAPON_01, 1);
 		
 		//Joly: RUNENROHLING!!  NICHT ZU VIELE !!!
 		//***********************************

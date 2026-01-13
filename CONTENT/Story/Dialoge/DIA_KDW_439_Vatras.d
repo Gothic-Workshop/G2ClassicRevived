@@ -1011,7 +1011,7 @@ FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Plant()
 };
 FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Ring()
 {
-	B_GiveInvItems (self, hero,ItRi_Dex_01 ,1);
+	B_GiveInvItems (self, hero,ITRI_REVIVED_DEX_01 ,1);
 	Info_ClearChoices 	(DIA_Vatras_MESSAGE_SUCCESS);
 };
 FUNC VOID DIA_Vatras_MESSAGE_SUCCESS_Ore()

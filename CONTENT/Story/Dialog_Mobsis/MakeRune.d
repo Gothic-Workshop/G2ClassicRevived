@@ -625,25 +625,6 @@ FUNC VOID PC_ItRu_Icebolt_Info ()
 	B_ENDPRODUCTIONDIALOG ();		
 };
 //*******************************************************
-FUNC VOID PC_ItRu_SumWolf_Info ()
-{
-	if (Npc_HasItems (hero, ItSc_SumWolf) >= 1)
-	&& (Npc_HasItems (hero, ItAt_WolfFur) >= 1)	
-	{
-		Npc_RemoveInvItems  (hero,ItSc_SumWolf, 1);
-		Npc_RemoveInvItems  (hero,ItAt_WolfFur,  1);
-		
-		CreateInvItems	   (hero,ItRu_SumWolf,1); 
-		Print (PRINT_RuneSuccess);
-	}
-	else 
-	{
-		Print (PRINT_ProdItemsMissing);
-		CreateInvItems (self, ItMi_RuneBlank,1);
-	};
-	B_ENDPRODUCTIONDIALOG ();	
-};
-//*******************************************************
 FUNC VOID PC_ItRu_Windfist_Info ()
 {
 	if (Npc_HasItems (hero, ItSc_Windfist) >= 1)

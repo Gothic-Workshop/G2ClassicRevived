@@ -70,6 +70,8 @@ INSTANCE ITRI_REVIVED_PROT_ARROW_01(C_Item)
 	on_unequip			=	UnEquip_PROT_ARROW_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Arrow_01;
@@ -100,6 +102,8 @@ INSTANCE ITRI_REVIVED_PROT_ARROW_02(C_Item)
 	on_unequip			=	UnEquip_PROT_ARROW_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_Prot_Arrow_02;
@@ -132,6 +136,8 @@ INSTANCE ITRI_REVIVED_PROT_MELEE_01(C_Item)
 	on_unequip			=	UnEquip_PROT_MELEE_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_Prot_Melee_01;
@@ -165,6 +171,8 @@ INSTANCE ITRI_REVIVED_PROT_MELEE_02(C_Item)
 	on_unequip			=	UnEquip_PROT_MELEE_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_Prot_Melee_02;
@@ -200,6 +208,8 @@ INSTANCE ITRI_REVIVED_PROT_WEAPON_01(C_ITEM)
 	on_unequip			=	UnEquip_PROT_WEAPON_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_Prot_Weapon_01;
@@ -236,6 +246,8 @@ INSTANCE ITRI_REVIVED_PROT_WEAPON_02(C_ITEM)
 	on_unequip			=	UnEquip_PROT_WEAPON_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[1]				= 	NAME_Prot_Edge;					COUNT[1]	= REV_Change_Prot_Weapon_02;
@@ -274,6 +286,8 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_01(C_ITEM)
 	on_unequip			=	UnEquip_PROT_MAGIC_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_Prot_Magic_01;
@@ -304,6 +318,8 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_02(C_ITEM)
 	on_unequip			=	UnEquip_PROT_MAGIC_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_Prot_Magic_02;
@@ -336,6 +352,8 @@ INSTANCE ITRI_REVIVED_PROT_FIRE_01(C_Item)
 	on_unequip			=	UnEquip_PROT_FIRE_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_Fire_01;
@@ -366,6 +384,8 @@ INSTANCE ITRI_REVIVED_PROT_FIRE_02(C_Item)
 	on_unequip			=	UnEquip_PROT_FIRE_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_Fire_02;
@@ -398,6 +418,8 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_01(C_ITEM)
 	on_unequip			=	UnEquip_PROT_MAGICFIRE_01;	
 
 	visual 				=	"ITRI_RING_01.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_MagicFire_01;
@@ -431,6 +453,8 @@ INSTANCE ITRI_REVIVED_PROT_MAGIC_FIRE_02(C_ITEM)
 	on_unequip			=	UnEquip_PROT_MAGICFIRE_02;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_Prot_MagicFire_02;
@@ -466,6 +490,8 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_01(C_ITEM)
 	on_unequip			=	UnEquip_PROT_TOTAL_01;	
 
 	visual 				=	"ITRI_RING_02.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_Prot_Total_01;
@@ -508,6 +534,8 @@ INSTANCE ITRI_REVIVED_PROT_TOTAL_02(C_ITEM)
 	on_unequip			=	UnEquip_PROT_TOTAL_02;	
 
 	visual 				=	"ITRI_RING_03.3DS";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	description			= 	name;
 	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_Prot_Total_02;
@@ -550,6 +578,8 @@ INSTANCE ITRI_REVIVED_HP_01(C_Item)
 	value 					=	180;
 
 	visual 					=	"ITRI_RING_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -593,6 +623,8 @@ INSTANCE ITRI_REVIVED_HP_02(C_Item)
 	value 					=	360;
 
 	visual 					=	"ITRI_RING_02.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -637,6 +669,8 @@ INSTANCE ITRI_REVIVED_MP_01(C_Item)
 	value 					=	200;
 
 	visual 					=	"ITRI_RING_02.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -672,6 +706,8 @@ INSTANCE ITRI_REVIVED_MP_02(C_Item)
 	value 					=	200;
 
 	visual 					=	"ITRI_RING_02.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -709,6 +745,8 @@ INSTANCE ITRI_REVIVED_HP_MP_01(C_Item)
 	value 					=	500;
 
 	visual 					=	"ITRI_RING_03.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -760,6 +798,8 @@ INSTANCE ITRI_REVIVED_DEX_01(C_Item)
 	value 					=	160;
 
 	visual 					=	"ITRI_RING_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -793,6 +833,8 @@ INSTANCE ITRI_REVIVED_DEX_02(C_Item)
 	value 					=	240;
 
 	visual 					=	"ITRI_RING_02.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -828,6 +870,8 @@ INSTANCE ITRI_REVIVED_STR_01(C_Item)
 	value 					=	160;
 
 	visual 					=	"ITRI_RING_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -861,6 +905,8 @@ INSTANCE ITRI_REVIVED_STR_02(C_Item)
 	value 					=	240;
 
 	visual 					=	"ITRI_RING_02.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;
@@ -897,6 +943,8 @@ INSTANCE ITRI_REVIVED_STR_DEX_01(C_Item)
 	value 					=	300;
 
 	visual 					=	"ITRI_RING_03.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 
 	visual_skin 				=	0;
 	material 				=	MAT_METAL;

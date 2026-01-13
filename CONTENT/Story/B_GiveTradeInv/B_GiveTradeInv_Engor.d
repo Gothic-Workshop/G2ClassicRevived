@@ -20,8 +20,8 @@ FUNC VOID B_GiveTradeInv_Engor (var C_NPC slf)
 		// - Map -
 		CreateInvItems (slf, ItWr_Map_Oldworld, 1); 
 		
-		CreateInvItems (slf, ItRi_Prot_Total_01, 1);
-		CreateInvItems (slf, ItAm_Prot_Fire_01, 1);		
+		CreateInvItems (slf, ITRI_REVIVED_PROT_TOTAL_01, 1);
+		CreateInvItems (slf, ITAM_REVIVED_PROT_FIRE_01, 1);		
 		
 		// ------ Scrolls ------
 		CreateInvItems (slf, ItSc_Firebolt, 3); 

@@ -31,7 +31,7 @@ FUNC VOID B_GiveTradeInv_Sarah (var C_NPC slf)
 		CreateInvItems (slf,ItMw_Zweihaender4, 1);
 		CreateInvItems (slf,ItMw_Krummschwert, 1);
 		
-		CreateInvItems (slf,ItRi_Hp_01, 1);
+		CreateInvItems (slf,ITRI_REVIVED_HP_01, 1);
 		
 		Sarah_ItemsGiven_Chapter_1 = TRUE;
 	};

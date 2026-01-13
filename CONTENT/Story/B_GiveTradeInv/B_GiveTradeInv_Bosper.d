@@ -22,7 +22,7 @@ FUNC VOID B_GiveTradeInv_Bosper (var C_NPC slf)
 			
 		// ------ Ringe / Amulette -------
 		CreateInvItems (slf, ItBE_Addon_Leather_01, 1); 
-		CreateInvItems (slf, ItRi_Dex_02, 1); 
+		CreateInvItems (slf, ITRI_REVIVED_DEX_02, 1); 
 		
 		
 		Bosper_ItemsGiven_Chapter_1 = TRUE;

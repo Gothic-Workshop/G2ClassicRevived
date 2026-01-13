@@ -59,7 +59,7 @@ FUNC VOID B_GiveTradeInv_Lutero (var C_NPC slf)
 		CreateInvItems (slf,ItAt_CrawlerMandibles, 1);
 		CreateInvItems (slf,ItBe_Addon_DEX_10, 1);
 		
-		CreateInvItems (slf,ItRi_Dex_Strg_01, 1);
+		CreateInvItems (slf,ITRI_REVIVED_STR_DEX_01, 1);
 		Lutero_ItemsGiven_Chapter_3 = TRUE;
 	};
 

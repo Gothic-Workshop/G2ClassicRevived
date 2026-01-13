@@ -5715,3 +5715,153 @@ instance spellFX_InvisibleProjectile		(CFx_Base_Proto)
 	{
 	     	emtrjeasevel 			= 0.000001;
 };
+
+
+
+
+
+///                                                       XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+///                                                       XX  T E L E K I N E S I S  XX
+///                                                       XXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+INSTANCE spellFX_telekinesis(CFx_Base_Proto)
+{
+        visname_S             = "MFX_Telekinesis_INIT";
+        emtrjmode_s         = "TARGET";
+        emTrjOriginNode     = "ZS_RIGHTHAND";
+        emtrjnumkeys         = 2;
+        emtrjnumkeysvar     = 1;
+        emtrjangleelevvar     = 2.;
+        emtrjangleheadvar     = 0.;
+        emtrjeasefunc_s     = "LINEAR";
+        emtrjloopmode_s     = "HALT";
+        emtrjdynupdatedelay = 0.;
+        emFXInvestOrigin_S     = "spellFX_Telekinesis_ORIGIN";
+        //emFXInvestTarget_S     = "spellFX_Telekinesis_TARGET";
+        //lightPresetname     = "POISON";
+        emTrjTargetRange    = 0;
+        emTrjTargetElev     = 0;
+};
+
+INSTANCE spellFX_telekinesis_KEY_INIT (C_ParticleFXEmitKey)
+{
+        visname_s            = "MFX_Telekinesis_INIT";
+        emtrjeasevel          = 0.01;
+};
+
+INSTANCE spellFX_telekinesis_KEY_INVEST_1    (C_ParticleFXEmitKey)
+{
+        visname_s            = "MFX_Telekinesis_TARGET";
+        emtrjeasevel          = 2000;
+        sfxid                = "MFX_TELEKINESIS_STARTINVEST";
+        sfxisambient        = 1;
+};
+
+
+INSTANCE spellFX_telekinesis_KEY_CAST    (C_ParticleFXEmitKey)
+{
+        visname_s            = "MFX_Telekinesis_TargetEnd";
+        
+};
+
+INSTANCE spellFX_telekinesis_KEY_STOP (C_ParticleFXEmitKey)
+{
+        visname_s            = "MFX_Telekinesis_TargetEnd";
+        
+};
+
+INSTANCE spellFX_telekinesis_Origin        (CFx_Base_Proto)
+{
+        visname_S             = "MFX_Telekinesis_BRIDGE";
+        emtrjmode_s         = "TARGET LINE";
+        emtrjeasevel          = 0.001;
+        emTrjOriginNode     = "BIP01 R Hand";
+        emtrjdynupdatedelay = 0.;
+        lightPresetname     = "AURA";
+        sfxid                = "MFX_TELEKINESIS_INVEST";
+        sfxisambient        = 1;
+};
+
+
+///                                                       XXXXXXXXXXXXXXXXXXXXX
+///                                                       XX  C O N T R O L  XX
+///                                                       XXXXXXXXXXXXXXXXXXXXX
+
+INSTANCE spellFX_Control(CFx_Base_Proto)
+{
+        visName_S            =  "MFX_CONTROL_INIT";
+        vissize_s            = "1 1";
+        
+        emtrjmode_s         = "FIXED";
+        emtrjoriginnode     = "ZS_RIGHTHAND";
+        emtrjtargetnode     = "BIP01 HEAD";
+        emtrjloopmode_s     = "none";
+        emtrjeasefunc_s     = "LINEAR";
+        emtrjdynupdatedelay = 0.;
+        //lightPresetname     = "POISON";
+        //emselfrotvel_s     = "0 0 50";
+        emTrjTargetRange     = 0;
+        emTrjTargetElev      = 0;
+        
+        emFXInvestTarget_S     = "spellFX_Control_TARGET";    
+        emFXInvestOrigin_S    = "spellFX_Control_BRIDGE";
+        };
+
+        INSTANCE spellFX_Control_KEY_INVEST_1    (C_ParticleFXEmitKey)
+        {
+                visname_s    = "simpleglow.tga";
+                sfxid        = "MFX_CONTROL_STARTINVEST";
+                sfxisambient= 1;
+                
+        };
+        
+        INSTANCE spellFX_Control_KEY_CAST        (C_ParticleFXEmitKey)
+        {
+                pfx_ppsIsLoopingChg     = 1;
+                emCreateFXID            = "CONTROL_CASTBLEND";
+                sfxid                    = "MFX_CONTROL_CAST";
+                sfxisambient            = 1;
+};
+
+INSTANCE spellFX_Control_TARGET(CFx_Base_Proto)
+{
+        visname_S             = "MFX_CONTROL_TARGET";
+        emtrjmode_s         = "FIXED";
+        emTrjOriginNode     = "BIP01 HEAD";
+        emTrjTargetRange    = 0;
+        emTrjTargetElev     = 0;
+        sendAssessMagic        = 1;
+};
+
+INSTANCE spellFX_Control_BRIDGE    (CFx_Base_Proto)
+{
+        visname_S             = "MFX_CONTROL_BRIDGE";
+        
+        emtrjmode_s         = "TARGET LINE";
+        emTrjOriginNode     = "BIP01 HEAD";
+        emtrjtargetnode     = "BIP01 HEAD";
+        emTrjTargetRange    = 0;
+        emTrjTargetElev     = 0;
+        emFXCreate_S        = "spellFX_Control_ORIGIN";
+        
+        sfxid                = "MFX_CONTROL_INVEST";
+        sfxisambient        = 1;
+        
+        };
+        
+        INSTANCE spellFX_Control_BRIDGE_KEY_INIT    (C_ParticleFXEmitKey)
+        {
+                emtrjeasevel    = 0.01;
+};
+
+
+
+/* INSTANCE spellFX_Control_ORIGIN	(CFx_Base_Proto)
+{
+		visname_S 			= "MFX_CONTROL_ORIGIN";
+		emtrjmode_s 		= "FIXED";
+		emTrjOriginNode 	= "BIP01 HEAD";
+		emtrjtargetnode 	= "BIP01 HEAD";
+		emTrjTargetRange	= 0;
+		emTrjTargetElev 	= 0;
+}; */
