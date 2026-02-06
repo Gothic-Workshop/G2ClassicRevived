@@ -16,11 +16,11 @@ instance SLD_810_Dar (Npc_Default)
 	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
+	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
-	EquipItem			(self, ItRw_Sld_Bow);	
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_03);	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

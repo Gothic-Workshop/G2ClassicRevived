@@ -62,14 +62,14 @@ FUNC VOID Rtn_Zwischenstop_705 ()
 
 FUNC VOID Rtn_Angriff_705 ()
 {
-	TA_Stand_ArmsCrossed					(08,00,23,00,"LOCATION_19_03_ROOM6");
-    TA_Stand_ArmsCrossed					(23,00,08,00,"LOCATION_19_03_ROOM6");		
+	TA_Stand_ArmsCrossed					(08,00,23,00,"FORTRESS_MINE_021");
+    TA_Stand_ArmsCrossed					(23,00,08,00,"FORTRESS_MINE_021");		
 };
 
 FUNC VOID Rtn_RunToEntrance_705 ()
 {
-	TA_RunToWP 					(08,00,23,00,"LOCATION_19_01");
-    TA_RunToWP					(23,00,08,00,"LOCATION_19_01");		
+	TA_RunToWP 					(08,00,23,00,"FORTRESS_MINE_003");
+    TA_RunToWP					(23,00,08,00,"FORTRESS_MINE_003");		
 };
 
 FUNC VOID Rtn_LeavingOW_705 ()

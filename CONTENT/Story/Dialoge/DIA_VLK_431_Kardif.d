@@ -367,54 +367,6 @@ func void DIA_Kardif_Arbeit_Info ()
 ///////////////////////////////////////////////////////////////////////
 //	Kardif's Infos werden verkauft! 
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Kardif_MissingPeople		(C_INFO)
-{
-	npc			 = 	VLK_431_Kardif;
-	nr			 =  5;
-	condition	 = 	DIA_Addon_Kardif_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Kardif_MissingPeople_Info;
-	permanent    =  TRUE;
-	description	 = 	"What do you know about the missing citizens?";
-};
-//-------------------------------------------
-var int DIA_Addon_Kardif_MissingPeople_permanent;
-//-------------------------------------------
-func int DIA_Addon_Kardif_MissingPeople_Condition ()
-{	
-	if (DIA_Addon_Kardif_MissingPeople_permanent == FALSE)
-	&& (Kardif_OneQuestion == TRUE)
-	&& (SC_HearedAboutMissingPeople == TRUE)
-	{
-		return TRUE;
-	};
-};
-func void DIA_Addon_Kardif_MissingPeople_Info ()
-{
-	if B_GiveInvItems (other,self,ItMi_Gold, Kardif_Deal)
-	{
-		AI_Output (other, self, "DIA_Addon_Kardif_MissingPeople_15_00"); //What do you know about the missing citizens?
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_01"); //All I know is that some people have vanished during the last few days.
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_02"); //It's especially bad down here at the harbor, they say. Maybe you should ask around here a bit.
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_03"); //There were some cases in the lower part of the city, too.
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_04"); //If you want to know more, you should talk to Coragon.
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_05"); //He has his pub in the lower part of town, and he's likely to hear a thing or two.
-		AI_Output (self, other, "DIA_Addon_Kardif_MissingPeople_14_06"); //Halvor, the fish merchant down by the quay, might know something, too. Many people frequent him.
-		
-	 	Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
-		Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-		B_LogEntry (TOPIC_Addon_WhoStolePeople,"Kardif says I should ask Coragon, the tavern landlord from the lower part of town, and Halvor the fishmonger at the harbor about the missing citizens."); 
-
-		DIA_Addon_Kardif_MissingPeople_permanent = TRUE;
-	}
-	else 
-	{
-		B_SayKardifZuwenigGold();
-	};
-};
-
-///////////////////////////////////////////////////////////////////////
-//	Kardif's Infos werden verkauft! 
-///////////////////////////////////////////////////////////////////////
 instance DIA_Kardif_Lernen		(C_INFO)
 {
 	npc			 = 	VLK_431_Kardif;

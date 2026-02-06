@@ -17,7 +17,7 @@ instance BDT_1006_Bandit_H (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_LIGHT_01);
-	EquipItem			(self, ItRw_SLD_Bow);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_04);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

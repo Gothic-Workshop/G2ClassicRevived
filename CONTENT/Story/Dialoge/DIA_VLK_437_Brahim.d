@@ -96,36 +96,6 @@ func void DIA_Brahim_GREET_Info ()
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Brahim_MissingPeople		(C_INFO)
-{
-	npc		 = 	VLK_437_Brahim;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Brahim_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Brahim_MissingPeople_Info;
-
-	description	 = 	"Is it true that some townspeople have simply vanished?";
-};
-
-func int DIA_Addon_Brahim_MissingPeople_Condition ()
-{
-	if (SC_HearedAboutMissingPeople == TRUE)
-	&& (ENTERED_ADDONWORLD == FALSE)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Brahim_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Brahim_MissingPeople_15_00"); //Is it true that some townspeople have simply vanished?
-	AI_Output	(self, other, "DIA_Addon_Brahim_MissingPeople_07_01"); //So I've heard. But I'm not sure whether it's really true.
-	AI_Output	(self, other, "DIA_Addon_Brahim_MissingPeople_07_02"); //Just look around you. Does this rathole look like the place where you want to spend your golden years?
-	AI_Output	(self, other, "DIA_Addon_Brahim_MissingPeople_07_03"); //Small wonder that people are getting themselves out of here.
-};
-
-///////////////////////////////////////////////////////////////////////
 //	Info Perm
 ///////////////////////////////////////////////////////////////////////
 /*

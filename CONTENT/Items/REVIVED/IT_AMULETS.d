@@ -1,405 +1,416 @@
+const int	REV_Value_ITAM_Prot_Arrow_01			=	30;
+const int	REV_Change_ITAM_Prot_Arrow_01			=	8;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Melee_01			=	30;
+const int	REV_Change_ITAM_Prot_Melee_01			=	8;
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Melee_02			=	50;
+const int	REV_Change_ITAM_Prot_Melee_02			=	12;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Weapon_01			=	50;
+const int	REV_Change_ITAM_Prot_Weapon_01			=	10;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Magic_01			=	30;
+const int	REV_Change_ITAM_Prot_Magic_01			=	10;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Fire_01				=	30;
+const int	REV_Change_ITAM_Prot_Fire_01			=	10;
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Fire_02				=	50;
+const int	REV_Change_ITAM_Prot_Fire_02			=	20;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_MagicFire_01		=	50;
+const int	REV_Change_ITAM_Prot_MagicFire_01		=	12;
+//******************************************************************//
+//******************************************************************//
+const int	REV_Value_ITAM_Prot_Total_01			=	100;
+const int	REV_Change_ITAM_Prot_Total_01			=	15;
+//******************************************************************//
+//******************************************************************//
+//******************************************************************//
+
+
 //****************************************************************************
 //			PROTECTION
 //****************************************************************************
 
 INSTANCE ITAM_REVIVED_PROT_ARROW_01(C_ITEM)
 {
-	name 			=	"Amulet of Oak Skin";
+	name 				=	"Amulet of Oak Skin";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	600;
+	value 				=	REV_Value_ITAM_Prot_Arrow_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_ARROW_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_ARROW_01;	
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Geschosse;
-	on_unequip		=	UnEquip_Schutzamulett_Geschosse;
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	visual_skin 		=	0;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Point;
-	COUNT[2]		= 15;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITAM_Prot_Arrow_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Geschosse()
-	{
-		self.protection [PROT_POINT] += 15;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_ARROW_01()
+{
+	self.protection [PROT_POINT] 		+=  REV_Change_ITAM_Prot_Arrow_01;
+};
 
-
-	FUNC VOID UnEquip_Schutzamulett_Geschosse()
-	{
-		self.protection [PROT_POINT] -= 15;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_ARROW_01()
+{
+	self.protection [PROT_POINT] 		-=  REV_Change_ITAM_Prot_Arrow_01;
+};
 
 
 INSTANCE ITAM_REVIVED_PROT_MELEE_01(C_Item)
 {
-	name 			=	"Armor Amulet";
+	name 				=	"Armor Amulet";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	600;
+	value 				=	REV_Value_ITAM_Prot_Melee_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_MELEE_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_MELEE_01;	
 
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 	visual_skin 		=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Waffen;
-	on_unequip		=	UnEquip_Schutzamulett_Waffen;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 15;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITAM_Prot_Melee_01;
+	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITAM_Prot_Melee_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Waffen()
-	{
-		self.protection [PROT_EDGE] += 15;
-		self.protection [PROT_BLUNT] += 15;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_MELEE_01()
+{
+	self.protection [PROT_EDGE] += REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_BLUNT] += REV_Change_ITAM_Prot_Melee_01;
+};
 
-
-	FUNC VOID UnEquip_Schutzamulett_Waffen()
-	{
-		self.protection [PROT_EDGE] -= 15;
-		self.protection [PROT_BLUNT] -= 15;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_MELEE_01()
+{
+	self.protection [PROT_EDGE] -= REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_BLUNT] -= REV_Change_ITAM_Prot_Melee_01;
+};
 
 
 INSTANCE ITAM_REVIVED_PROT_MELEE_02(C_Item)
 {
-	name 			=	"Protective Amulet";
+	name 				=	"Protective Amulet";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	50;
+	value 				=	REV_Value_ITAM_Prot_Melee_02;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_MELEE_02;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_MELEE_02;	
 
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 	visual_skin 		=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Nek;
-	on_unequip		=	UnEquip_Schutzamulett_Nek;
 
-	description		= name;
-	TEXT[1]			= "It says NEK on the back.";
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 15;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[1]				=	"It says NEK on the back.";
+	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITAM_Prot_Melee_02;
+	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITAM_Prot_Melee_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Nek()
-	{
-		self.protection [PROT_EDGE] += 5;
-		self.protection [PROT_BLUNT] += 5;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_MELEE_02()
+{
+	self.protection [PROT_EDGE] += REV_Change_ITAM_Prot_Melee_02;
+	self.protection [PROT_BLUNT] += REV_Change_ITAM_Prot_Melee_02;
+};
 
-
-	FUNC VOID UnEquip_Schutzamulett_Nek()
-	{
-		self.protection [PROT_EDGE] -= 5;
-		self.protection [PROT_BLUNT] -= 5;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_MELEE_02()
+{
+	self.protection [PROT_EDGE] -= REV_Change_ITAM_Prot_Melee_02;
+	self.protection [PROT_BLUNT] -= REV_Change_ITAM_Prot_Melee_02;
+};
 
 
 INSTANCE ITAM_REVIVED_PROT_WEAPON_01(C_ITEM)
 {
-	name 			=	"Amulet of Stone Skin";
+	name 				=	"Amulet of Stone Skin";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	1000;
+	value 				=	REV_Value_ITAM_Prot_Weapon_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_WEAPON_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_WEAPON_01;	
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Waffen_Geschosse;
-	on_unequip		=	UnEquip_Schutzamulett_Waffen_Geschosse;
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	visual_skin 		=	0;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Edge;
-	COUNT[2]		= 15;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 15;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Edge;					COUNT[2]	= REV_Change_ITAM_Prot_Weapon_01;
+	TEXT[3]				= 	NAME_Prot_Blunt;				COUNT[3]	= REV_Change_ITAM_Prot_Weapon_01;
+	TEXT[4]				= 	NAME_Prot_Point;				COUNT[4]	= REV_Change_ITAM_Prot_Weapon_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Waffen_Geschosse()
-	{
-		self.protection [PROT_EDGE]   += 15;
-		self.protection [PROT_BLUNT]  += 15;
-		self.protection [PROT_POINT]  += 15;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_WEAPON_01()
+{
+	self.protection [PROT_EDGE] += REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_BLUNT] += REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_POINT] += REV_Change_ITAM_Prot_Melee_01;
+};
 
-	FUNC VOID UnEquip_Schutzamulett_Waffen_Geschosse()
-	{
-		self.protection [PROT_EDGE]   -= 15;
-		self.protection [PROT_BLUNT]  -= 15;
-		self.protection [PROT_POINT]  -= 15;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_WEAPON_01()
+{
+	self.protection [PROT_EDGE] -= REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_BLUNT] -= REV_Change_ITAM_Prot_Melee_01;
+	self.protection [PROT_POINT] -= REV_Change_ITAM_Prot_Melee_01;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITAM_REVIVED_PROT_MAGIC_01(C_ITEM)
 {
-	name 			=	"Amulet of Spiritual Power";
+	name 				=	"Amulet of Spiritual Power";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	600;
+	value 				=	REV_Value_ITAM_Prot_Magic_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_MAGIC_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_MAGIC_01;	
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Magie;
-	on_unequip		=	UnEquip_Schutzamulett_Magie;
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	visual_skin 		=	0;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Magic;
-	COUNT[2]		= 8;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_ITAM_Prot_Magic_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Magie()
-	{
-		self.protection [PROT_MAGIC] += 8;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_MAGIC_01()
+{
+	self.protection [PROT_MAGIC] 		+=  REV_Change_ITAM_Prot_Magic_01;
+};
 
-	FUNC VOID UnEquip_Schutzamulett_Magie()
-	{
-		self.protection [PROT_MAGIC] -= 8;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_MAGIC_01()
+{
+	self.protection [PROT_MAGIC] 		-=  REV_Change_ITAM_Prot_Magic_01;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITAM_REVIVED_PROT_FIRE_01(C_Item)
 {
-	name 			=	"Amulet of Flames";
+	name 				=	"Amulet of Flames";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	600;
+	value 				=	REV_Value_ITAM_Prot_Fire_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_FIRE_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_FIRE_01;	
 
-	visual_skin 	=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Feuer;
-	on_unequip		=	UnEquip_Schutzamulett_Feuer;
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	visual_skin 		=	0;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 10;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITAM_Prot_Fire_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Feuer()
-	{
-	 	self.protection [PROT_FIRE] += 10;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_FIRE_01()
+{
+	self.protection [PROT_FIRE] 		+=  REV_Change_ITAM_Prot_Fire_01;
+};
 
-
-	FUNC VOID UnEquip_Schutzamulett_Feuer()
-	{
-		self.protection [PROT_FIRE] -= 10;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_FIRE_01()
+{
+	self.protection [PROT_FIRE] 		-=  REV_Change_ITAM_Prot_Fire_01;
+};
 
 
 INSTANCE ITAM_REVIVED_PROT_FIRE_02(C_Item)
 {
-	name 			= "Orc Talisman";
+	name 				=	"Orc Talisman";
 
-	mainflag 		= ITEM_KAT_MAGIC;
-	flags 			= ITEM_AMULET|ITEM_MISSION;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			= 1000;
+	value 				=	REV_Value_ITAM_Prot_Fire_02;
 
-	visual 			= "ItMi_Amulet_UluMulu_01.3ds";
+	on_equip			=	Equip_REV_ITAM_PROT_FIRE_02;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_FIRE_02;	
 
-	visual_skin 	= 0;
-	material 		= MAT_METAL;
+	visual 				=	"ItMi_Amulet_UluMulu_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
+	visual_skin 		=	0;
 
-	on_equip		= Equip_OrcTalisman;
-	on_unequip		= UnEquip_OrcTalisman;
-
-	description		= name;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 20;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Fire;					COUNT[2]	= REV_Change_ITAM_Prot_Fire_02;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-FUNC VOID Equip_OrcTalisman()
+FUNC VOID Equip_REV_ITAM_PROT_FIRE_02()
 {
- 	self.protection [PROT_FIRE] += 20;
+	self.protection [PROT_FIRE] 		+=  REV_Change_ITAM_Prot_Fire_02;
 };
 
-
-FUNC VOID UnEquip_OrcTalisman()
+FUNC VOID UnEquip_REV_ITAM_PROT_FIRE_02()
 {
-	self.protection [PROT_FIRE] -= 20;
+	self.protection [PROT_FIRE] 		-=  REV_Change_ITAM_Prot_Fire_02;
 };
 
 /******************************************************************************************/
 
 INSTANCE ITAM_REVIVED_PROT_MAGIC_FIRE(C_ITEM)
 {
-	name 			=	"Amulet of Purification";
+	name 				=	"Amulet of Purification";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=    1000;
+	value 				=	REV_Value_ITAM_Prot_MagicFire_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_MAGIC_FIRE_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_MAGIC_FIRE_01;	
 
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 	visual_skin 		=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Magie_Feuer;
-	on_unequip		=	UnEquip_Schutzamulett_Magie_Feuer;
 
-	description		= name;
-	TEXT[2]			= NAME_Prot_Fire;
-	COUNT[2]		= 10;
-	TEXT[3] 		= NAME_Prot_Magic;
-	COUNT[3]		= 8;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[2]				= 	NAME_Prot_Magic;				COUNT[2]	= REV_Change_ITAM_Prot_MagicFire_01;
+	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_ITAM_Prot_MagicFire_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Magie_Feuer()
-	{
-		self.protection [PROT_MAGIC] += 8;
-		self.protection [PROT_FIRE]  += 10;
-	};
+FUNC VOID Equip_REV_ITAM_PROT_MAGIC_FIRE_01()
+{
+	self.protection [PROT_MAGIC] 		+=  REV_Change_ITAM_Prot_MagicFire_01;
+	self.protection [PROT_FIRE] 		+=  REV_Change_ITAM_Prot_MagicFire_01;
+};
 
-
-	FUNC VOID UnEquip_Schutzamulett_Magie_Feuer()
-	{
-	self.protection [PROT_MAGIC] -= 8;
-	self.protection [PROT_FIRE]  -= 10;
-
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_MAGIC_FIRE_01()
+{
+	self.protection [PROT_MAGIC] 		-=  REV_Change_ITAM_Prot_MagicFire_01;
+	self.protection [PROT_FIRE] 		-=  REV_Change_ITAM_Prot_MagicFire_01;
+};
 
 /******************************************************************************************/
 
 INSTANCE ITAM_REVIVED_PROT_TOTAL_01(C_ITEM)
 {
-	name 			=	"Amulet of Ore Skin";
+	name 				=	"Amulet of Ore Skin";
 
-	mainflag 		=	ITEM_KAT_MAGIC;
-	flags 			=	ITEM_AMULET;
+	mainflag 			=	ITEM_KAT_MAGIC;
+	flags 				=	ITEM_AMULET;
+	material 			=	MAT_METAL;
 
-	value 			=	1600;
+	value 				=	REV_Value_ITAM_Prot_Total_01;
 
-	visual 			=	"ITAM_AMULET_01.3ds";
-	wear			= 	WEAR_EFFECT;
-	effect			=	"SPELLFX_ITEMGLIMMER"; 
+	on_equip			=	Equip_REV_ITAM_PROT_TOTAL_01;
+	on_unequip			=	UnEquip_REV_ITAM_PROT_TOTAL_01;	
 
+	visual 				=	"ITAM_AMULET_01.3ds";
+	wear				= 	WEAR_EFFECT;
+	effect				=	"SPELLFX_ITEMGLIMMER"; 
 	visual_skin 		=	0;
-	material 		=	MAT_METAL;
-	on_equip		=	Equip_Schutzamulett_Total;
-	on_unequip		=	UnEquip_Schutzamulett_Total;
 
-	description		= name;
-	TEXT[1]			= NAME_Prot_Fire;
-	COUNT[1]		= 10;
-	TEXT[2]			= NAME_Prot_Magic;
-	COUNT[2]		= 8;
-	TEXT[3] 		= NAME_Prot_Point;
-	COUNT[3]		= 15;
-	TEXT[4]			= NAME_Prot_Edge;
-	COUNT[4]		= 15;
-	TEXT[5]			= NAME_Value;
-	COUNT[5]		= value;
+	description			= 	name;
+	TEXT[0]				= 	NAME_Prot_Edge;					COUNT[0]	= REV_Change_ITAM_Prot_Total_01;
+	TEXT[1]				= 	NAME_Prot_Blunt;				COUNT[1]	= REV_Change_ITAM_Prot_Total_01;
+	TEXT[2]				= 	NAME_Prot_Point;				COUNT[2]	= REV_Change_ITAM_Prot_Total_01;
+	TEXT[3]				= 	NAME_Prot_Fire;					COUNT[3]	= REV_Change_ITAM_Prot_Total_01;
+	TEXT[4]				= 	NAME_Prot_Magic;				COUNT[4]	= REV_Change_ITAM_Prot_Total_01;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 	
-	INV_ZBIAS				= INVCAM_ENTF_AMULETTE_STANDARD;
-	INV_ROTZ				= INVCAM_Z_RING_STANDARD;
-	INV_ROTX				= INVCAM_X_RING_STANDARD;
+	INV_ZBIAS			= INVCAM_ENTF_AMULETTE_STANDARD;
+	INV_ROTZ			= INVCAM_Z_RING_STANDARD;
+	INV_ROTX			= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Schutzamulett_Total()
-	{
-		self.protection [PROT_EDGE]   += 15;
-		self.protection [PROT_BLUNT]  += 15;
-		self.protection [PROT_POINT]  += 15;
-		self.protection [PROT_FIRE]   += 10;
-		self.protection [PROT_MAGIC]  +=  8;
+FUNC VOID Equip_REV_ITAM_PROT_TOTAL_01()
+{
+	self.protection [PROT_EDGE] 		+=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_BLUNT]		+=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_POINT]		+=   REV_Change_ITAM_Prot_Total_01;
+ 	self.protection [PROT_FIRE]     	+=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_MAGIC]    	+=   REV_Change_ITAM_Prot_Total_01;
+};
 
-	};
-
-	FUNC VOID UnEquip_Schutzamulett_Total()
-	{
-		self.protection [PROT_EDGE]   -= 15;
-		self.protection [PROT_BLUNT]  -= 15;
-		self.protection [PROT_POINT]  -= 15;
-		self.protection [PROT_FIRE]   -= 10;
-		self.protection [PROT_MAGIC]  -=  8;
-	};
+FUNC VOID UnEquip_REV_ITAM_PROT_TOTAL_01()
+{
+	self.protection [PROT_EDGE] 		-=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_BLUNT]		-=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_POINT]		-=   REV_Change_ITAM_Prot_Total_01;
+ 	self.protection [PROT_FIRE]     	-=   REV_Change_ITAM_Prot_Total_01;
+	self.protection [PROT_MAGIC]    	-=   REV_Change_ITAM_Prot_Total_01;
+};
 
 //****************************************************************************
 //			BOOST
@@ -420,8 +431,8 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Lebensamulett;
-	on_unequip		=	UnEquip_Lebensamulett;
+	on_equip		=	Equip_REV_Lebensamulett;
+	on_unequip		=	UnEquip_REV_Lebensamulett;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_HP;
@@ -434,7 +445,7 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Lebensamulett()
+	FUNC VOID Equip_REV_Lebensamulett()
 	{
 		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 30;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 30;
@@ -442,7 +453,7 @@ INSTANCE ITAM_REVIVED_HP_01(C_Item)
 	};
 
 
-	FUNC VOID UnEquip_Lebensamulett()
+	FUNC VOID UnEquip_REV_Lebensamulett()
 	{
 		self.attribute [ATR_HITPOINTS_MAX] = self.attribute [ATR_HITPOINTS_MAX] -30;
 		if (self.attribute[ATR_HITPOINTS] > 31)
@@ -472,8 +483,8 @@ INSTANCE ITAM_REVIVED_MP_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Amulett_der_Magie;
-	on_unequip		=	UnEquip_Amulett_der_Magie;
+	on_equip		=	Equip_REV_Amulett_der_Magie;
+	on_unequip		=	UnEquip_REV_Amulett_der_Magie;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Mana;
@@ -486,13 +497,13 @@ INSTANCE ITAM_REVIVED_MP_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Amulett_der_Magie()
+	FUNC VOID Equip_REV_Amulett_der_Magie()
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] + 10;
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] + 10;
 	};
 
-	FUNC VOID UnEquip_Amulett_der_Magie ()
+	FUNC VOID UnEquip_REV_Amulett_der_Magie ()
 	{
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 10;
 		self.attribute[ATR_MANA_MAX] = self.attribute[ATR_MANA_MAX] - 10;
@@ -515,8 +526,8 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Amulett_der_Erleuchtung;
-	on_unequip		=	UnEquip_Amulett_der_Erleuchtung;
+	on_equip		=	Equip_REV_Amulett_der_Erleuchtung;
+	on_unequip		=	UnEquip_REV_Amulett_der_Erleuchtung;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_HP;
@@ -531,7 +542,7 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Amulett_der_Erleuchtung()
+	FUNC VOID Equip_REV_Amulett_der_Erleuchtung()
 	{
 		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS] + 25;
 		self.attribute[ATR_HITPOINTS_MAX] = self.attribute[ATR_HITPOINTS_MAX] + 25;
@@ -541,7 +552,7 @@ INSTANCE ITAM_REVIVED_HP_MP_01(C_Item)
 	};
 
 
-	FUNC VOID UnEquip_Amulett_der_Erleuchtung ()
+	FUNC VOID UnEquip_REV_Amulett_der_Erleuchtung ()
 	{
 		
 		self.attribute[ATR_MANA] = self.attribute[ATR_MANA] - 25;
@@ -575,8 +586,8 @@ INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Gewandtheitsamulett;
-	on_unequip		=	UnEquip_Gewandtheitsamulett;
+	on_equip		=	Equip_REV_Gewandtheitsamulett;
+	on_unequip		=	UnEquip_REV_Gewandtheitsamulett;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Dex;
@@ -589,13 +600,13 @@ INSTANCE ITAM_REVIVED_DEX_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Gewandtheitsamulett()
+	FUNC VOID Equip_REV_Gewandtheitsamulett()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,10);
 	};
 
 
-	FUNC VOID UnEquip_Gewandtheitsamulett()
+	FUNC VOID UnEquip_REV_Gewandtheitsamulett()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,-10);
 	};
@@ -616,8 +627,8 @@ INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Gewandtheitsamulett2;
-	on_unequip		=	UnEquip_Gewandtheitsamulett2;
+	on_equip		=	Equip_REV_Gewandtheitsamulett2;
+	on_unequip		=	UnEquip_REV_Gewandtheitsamulett2;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Dex;
@@ -630,12 +641,12 @@ INSTANCE ITAM_REVIVED_DEX_02(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Gewandtheitsamulett2()
+	FUNC VOID Equip_REV_Gewandtheitsamulett2()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,20);
 	};
 
-	FUNC VOID UnEquip_Gewandtheitsamulett2()
+	FUNC VOID UnEquip_REV_Gewandtheitsamulett2()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,-20);
 	};
@@ -657,8 +668,8 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Staerkeamulett;
-	on_unequip		=	UnEquip_Staerkeamulett;
+	on_equip		=	Equip_REV_Staerkeamulett;
+	on_unequip		=	UnEquip_REV_Staerkeamulett;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Str;
@@ -671,12 +682,12 @@ INSTANCE ITAM_REVIVED_STR_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Staerkeamulett()
+	FUNC VOID Equip_REV_Staerkeamulett()
 	{
 		Npc_ChangeAttribute(self,ATR_STRENGTH,10);
 	};
 
-	FUNC VOID UnEquip_Staerkeamulett()
+	FUNC VOID UnEquip_REV_Staerkeamulett()
 	{
 		Npc_ChangeAttribute(self,ATR_STRENGTH,-10);
 	};
@@ -697,8 +708,8 @@ INSTANCE ITAM_REVIVED_STR_02(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Staerkeamulett2;
-	on_unequip		=	UnEquip_Staerkeamulett2;
+	on_equip		=	Equip_REV_Staerkeamulett2;
+	on_unequip		=	UnEquip_REV_Staerkeamulett2;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Str;
@@ -711,13 +722,13 @@ INSTANCE ITAM_REVIVED_STR_02(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Staerkeamulett2()
+	FUNC VOID Equip_REV_Staerkeamulett2()
 	{
 		Npc_ChangeAttribute(self,ATR_STRENGTH,20);
 	};
 
 
-	FUNC VOID UnEquip_Staerkeamulett2()
+	FUNC VOID UnEquip_REV_Staerkeamulett2()
 	{
 		Npc_ChangeAttribute(self,ATR_STRENGTH,-20);
 	};
@@ -739,8 +750,8 @@ INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Amulett_der_Macht;
-	on_unequip		=	UnEquip_Amulett_der_Macht;
+	on_equip		=	Equip_REV_Amulett_der_Macht;
+	on_unequip		=	UnEquip_REV_Amulett_der_Macht;
 
 	description		= name;
 	TEXT[2]			= NAME_Bonus_Dex;
@@ -755,14 +766,14 @@ INSTANCE ITAM_REVIVED_STR_DEX_01(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Amulett_der_Macht()
+	FUNC VOID Equip_REV_Amulett_der_Macht()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,7 );
 		Npc_ChangeAttribute(self,ATR_STRENGTH,7 );
 	};
 
 
-	FUNC VOID UnEquip_Amulett_der_Macht ()
+	FUNC VOID UnEquip_REV_Amulett_der_Macht ()
 	{
 		Npc_ChangeAttribute(self,ATR_DEXTERITY,-7 );
 		Npc_ChangeAttribute(self,ATR_STRENGTH,-7 );
@@ -840,8 +851,8 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 
 	visual_skin 		=	0;
 	material 		=	MAT_METAL;
-	on_equip		=	Equip_Beschworungsamulett;
-	on_unequip		=	UnEquip_Beschworungsamulett;
+	on_equip		=	Equip_REV_Beschworungsamulett;
+	on_unequip		=	UnEquip_REV_Beschworungsamulett;
 	description		= name;
 	TEXT[1]			= "Black haunts the Soul";
 	TEXT[2]			= "Black shrouds the Night";
@@ -853,7 +864,7 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 	INV_ROTX				= INVCAM_X_RING_STANDARD;
 };
 
-	FUNC VOID Equip_Beschworungsamulett()
+	FUNC VOID Equip_REV_Beschworungsamulett()
 	{
 		if (Npc_IsPlayer(self)) 
 		{		
@@ -879,7 +890,7 @@ INSTANCE ITAM_REVIVED_DEMON(C_Item)
 	};
 
 
-	FUNC VOID UnEquip_Beschworungsamulett ()
+	FUNC VOID UnEquip_REV_Beschworungsamulett ()
 	{
 		if (Npc_IsPlayer(self)) 
 		{		

@@ -16,7 +16,7 @@ INSTANCE BAU_984_Niclas (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01);
-	EquipItem 	(self,itRw_SLD_BOW); 
+	EquipItem 	(self,ITRW_REVIVED_BOW_LONG_02); 
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

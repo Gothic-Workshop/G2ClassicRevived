@@ -17,7 +17,7 @@ instance BDT_10314_Addon_RangerBandit_M (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_01);
-	EquipItem			(self, ItRw_SLD_Bow);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_03);
 	CreateInvItems (self, ItMi_BromorsGeld_Addon, 1);									
 	
 	// ------ Inventory ------

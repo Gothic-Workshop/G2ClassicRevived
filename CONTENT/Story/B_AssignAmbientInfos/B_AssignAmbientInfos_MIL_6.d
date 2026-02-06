@@ -51,35 +51,6 @@ FUNC VOID DIA_MIL_6_JOIN_Info()
 };
 
 // *************************************************************************
-// 						MissingPeople
-// *************************************************************************
-instance DIA_Addon_MIL_6_MissingPeople		(C_INFO)
-{
-	nr		 = 	2;
-	condition	 = 	DIA_Addon_MIL_6_MissingPeople_Condition;
-	information	 = 	DIA_Addon_MIL_6_MissingPeople_Info;
-	permanent	= TRUE;
-	description	 = 	"I heard some citizens have disappeared.";
-};
-
-func int DIA_Addon_MIL_6_MissingPeople_Condition ()
-{
-	if (Kapitel == 1)
-	&& (SC_HearedAboutMissingPeople == TRUE)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_MIL_6_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_MIL_6_MissingPeople_15_00"); //I heard some citizens have disappeared.
-	AI_Output	(self, other, "DIA_Addon_MIL_6_MissingPeople_06_01"); //I've actually heard quite a few rumors of missing people lately.
-	AI_Output	(self, other, "DIA_Addon_MIL_6_MissingPeople_06_02"); //I can't for the life of me explain it.
-	AI_Output	(self, other, "DIA_Addon_MIL_6_MissingPeople_06_03"); //But we can't do more than keep our eyes open and do our sentry duty.
-};
-
-// *************************************************************************
 // 									PEOPLE
 // *************************************************************************
 INSTANCE DIA_MIL_6_PEOPLE(C_INFO)

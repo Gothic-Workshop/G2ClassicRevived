@@ -5,8 +5,8 @@ instance VLK_4007_Buerger (Npc_Default)
 	name 		= NAME_Buerger; 
 	guild 		= GIL_VLK;
 	id 			= 4007;
-	voice 		= 4;
-	flags       = 0;																
+	voice 		= 6;
+	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
@@ -16,7 +16,7 @@ instance VLK_4007_Buerger (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem (self,ITMW_REVIVED_1H_CLUB_01);
+	EquipItem (self,ItMw_Orkschlaechter);
 	
 	
 	// ------ Inventory ------
@@ -24,7 +24,7 @@ instance VLK_4007_Buerger (Npc_Default)
 
 		
 	// ------ visuals ------																			
-	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_H);	
+	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_ArkhanQualshy, BodyTex_N, ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 	

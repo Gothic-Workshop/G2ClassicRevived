@@ -440,8 +440,6 @@ FUNC VOID DIA_Cipher_DarDieb_Info()
 	
 	AI_StopProcessInfos(self);
 	other.aivar[AIV_INVINCIBLE] = FALSE;
-
-	//Npc_ExchangeRoutine(self, "BeatDar");
 	B_Attack (self, Dar, AR_NONE, 0);
 };
 

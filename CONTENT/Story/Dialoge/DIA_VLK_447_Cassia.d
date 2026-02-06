@@ -196,38 +196,6 @@ FUNC VOID DIA_Cassia_mehr_Info()
 };
 
 //////////////////////////////////////////////////////////////////////
-//	Vermisste Leute
-///////////////////////////////////////////////////////////////////////
-INSTANCE DIA_Cassia_MissingPeople   (C_INFO)
-{
-	npc         = VLK_447_Cassia;
-	nr          = 2;
-	condition   = DIA_Cassia_MissingPeople_Condition;
-	information = DIA_Cassia_MissingPeople_Info;
-	permanent   = FALSE;
-	description = "What do you know about the missing people?";
-};
-
-FUNC INT DIA_Cassia_MissingPeople_Condition()
-{
-	if (SC_HearedAboutMissingPeople == TRUE)
-	&& (MissingPeopleReturnedHome == FALSE)
-	{
-		return TRUE;
-	};
-};
-
-FUNC VOID DIA_Cassia_MissingPeople_Info()
-{
-	AI_Output (other, self, "DIA_Addon_Cassia_Add_15_00"); //What do you know about the missing people?
-	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_01"); //Why would that interest you?
-	AI_Output (other, self, "DIA_Addon_Cassia_Add_15_02"); //I want to find out what happened to them.
-	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_03"); //When you emerge from the sewers, swim down along the coast to the right for a while.
-	AI_Output (self, other, "DIA_Addon_Cassia_Add_16_04"); //You're bound to find your answers there...
-};
-
-
-//////////////////////////////////////////////////////////////////////
 //	Info Was habe ich davon? 
 ///////////////////////////////////////////////////////////////////////
 INSTANCE DIA_Cassia_Vorteil   (C_INFO)

@@ -103,46 +103,6 @@ func void DIA_Hakon_Trade_Info ()
 	};
 };
 
-///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Hakon_MissingPeople		(C_INFO)
-{
-	npc		 = 	VLK_407_Hakon;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Hakon_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Hakon_MissingPeople_Info;
-
-	description	 = 	"What do you know about the disappearances of the citizens of Khorinis?";
-};
-
-func int DIA_Addon_Hakon_MissingPeople_Condition ()
-{
-	if (SC_HearedAboutMissingPeople == TRUE)
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Hakon_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Hakon_MissingPeople_15_00"); //What do you know about the disappearances of the citizens of Khorinis?
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_01"); //I have seen many pass through the eastern city gate.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_02"); //Some of those who came I had never seen before in my life, and many of those who went out never came back.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_03"); //But what happened the other day was really quite strange.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_04"); //There was this fellow who came here - I think his name is Joe. He bragged that he would soon come into some serious money.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_05"); //He claimed that he knew how to get into one of the city towers where the militia keep their arms.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_06"); //I haven't seen him since, even though I used to bump into him around the same time every day.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_07"); //I reported this to the militia. I thought that maybe he'd been caught and throughn into the dungeon.
-	AI_Output	(self, other, "DIA_Addon_Hakon_MissingPeople_12_08"); //But Lord Andre had no idea what I was talking about. He didn't even know the fellow.
-
-	Log_CreateTopic (TOPIC_Addon_Joe, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_Joe, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_Joe,"Halon, a trader from Khorinis, says that a man named Joe has simply vanished without a trace. He claims that Joe knows how to get into one of the city towers where the militia keep their arms."); 
-
-	B_GivePlayerXP (XP_Ambient);
-};
-
 // ********************************************************
 // 						OutOfTown
 // ********************************************************

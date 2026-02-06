@@ -576,12 +576,14 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		Wld_InsertNpc	(Draconian,"FP_ROAM_OW_ROCK_DRACONIAN_07");
 		Wld_InsertItem 	(ItSc_Firestorm,"FP_OW_ITEM_13");
 
-		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_PEMTAGRAM_ENTRANCE");
-		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_PENTAGRAMM");
-		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM3");
-		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM2");
-		Wld_InsertNpc	(Skeleton_Templar,"LOCATION_19_03_ROOM4");
-		Wld_InsertNpc	(SkeletonMage_Angar,"LOCATION_19_03_ROOM6");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_000");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_002");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_003");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_004");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_005");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_006");
+		Wld_InsertNpc	(Skeleton_Templar,"FP_STAND_SHADOWLORD_007");
+		Wld_InsertNpc	(SkeletonMage_Angar,"FORTRESS_TEMPLE_016");
 	
 		//Orkbarriere
 		

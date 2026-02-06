@@ -459,20 +459,9 @@ func void STARTUP_OLDCAMP ()
 func void STARTUP_NEWCAMP ()
 {
 	// New Camp (Rice Fields)
-	Wld_InsertNpc		(Bloodfly,"NC_PATH84");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH78_A");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH69");
-	Wld_InsertNpc		(Bloodfly,"NC_DAM_BOTTOM");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH68");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH82");	
-	Wld_InsertNpc		(Bloodfly,"NC_PATH83_MOVEMENT");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH83");
-	Wld_InsertNpc		(Bloodfly,"NC_PATH098");
-
 	Wld_InsertNpc		(Giant_Rat,"NC_PATH86");
 	Wld_InsertNpc		(Giant_Rat,"NC_PATH52");
 	Wld_InsertNpc		(Giant_Rat,"NC_RICEBUNKER_10");
-	Wld_InsertNpc		(Giant_Rat,"NC_RICEBUNKER_06");
 	Wld_InsertNpc		(Giant_Rat,"NC_RICEBUNKER_04");
 
 
@@ -547,12 +536,6 @@ func void STARTUP_PSICAMP ()
 
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_LABOR_GUARD_2");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_LABOR_GUARD_1");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_TRAINING_2");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_MEETING_BRIDGE_MOVEMENT");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_MEETING_BRIDGE");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_TRAINING_TEACHER");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_PATH_6_6_MOVEMENT");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_TEMPLE_PATH_GUARD");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_HERB_SHOP_01");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_PATH_TEMPLE_7");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_PATH_TEMPLE_6");
@@ -569,16 +552,11 @@ func void STARTUP_PSICAMP ()
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_26_HUT_EX");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_SWAMP_0");
 	Wld_InsertNpc		(Skeleton_Templar,"PSI_PATH_102");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_PATH_4_13");
-
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_TEMPLE_RIGHT_GUARD");
-	Wld_InsertNpc		(Skeleton_Templar,"PSI_TEMPLE_LEFT_GUARD");
 
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_SPEECH");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_GUARD_TREE_EX");	
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_2_0");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_2_1");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_2_HUT_EX");	
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_1_HUT_EX");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_1_2");	
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PLACE");
@@ -594,8 +572,6 @@ func void STARTUP_PSICAMP ()
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_2_14");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_2_13");
 
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PLATFORM_TEACHER");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_SPSI_PLATFORM_WAITTART");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_27_HUT_EX");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_MEETINGPOINT_2");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_25_HUT_EX");
@@ -613,7 +589,6 @@ func void STARTUP_PSICAMP ()
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_31_HUT_EX");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_WASH2");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_9_1");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_TEACH_CADAR");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_11_3");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_11_5");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_VIEWPOINT");
@@ -624,25 +599,7 @@ func void STARTUP_PSICAMP ()
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_TATTOO");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_11_HUT_EX");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_4_4");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_21_HUT_EX");
 	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_22_HUT_EX_GUARD");
-	Wld_InsertNpc		(DMT_DementorAmbient,"PSI_PATH_4_15");
-
-/* 	Wld_InsertNpc		(Draconian,"PSI_PATH_TEMPLE_9");
-	Wld_InsertNpc		(Draconian,"PSI_TEMPLE_STAIRS_4");
-	Wld_InsertNpc		(Draconian,"PSI_PATH_TEMPLE_9_MOVEMENT");
-	Wld_InsertNpc		(Draconian,"PSI_PATH_TEMPLE_8");
-	Wld_InsertNpc		(Draconian,"PSI_TEMPLE_STAIRS_3");
-	Wld_InsertNpc		(Draconian,"PSI_PATH_TEMPLE_5");
-	Wld_InsertNpc		(Draconian,"PSI_PATH_TEMPLE_4");
-	Wld_InsertNpc		(Draconian,"PSI_GUARD_TEMPLE_5");
-	Wld_InsertNpc		(Draconian,"PSI_TEMPLE_STAIRS_2");
-	Wld_InsertNpc		(Draconian,"PSI_TEMPLE_STAIRS_1");
-
-	Wld_InsertNpc		(Draconian,"PSI_SMITH_TALK");
-	Wld_InsertNpc		(Draconian,"PSI_SMITH_03");
-	Wld_InsertNpc		(Draconian,"PSI_SMITH_1_2");
-	Wld_InsertNpc		(Draconian,"PSI_SMITH_01"); */
 
 
 	// Swamp
@@ -855,12 +812,12 @@ func void STARTUP_FORTRESS ()
 	Wld_InsertNpc		(BDT_3007_Sly,"FORTRESS_ENTRANCE_002");
 
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_000");
+	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_001");
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_002");
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_003");
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_004");
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_005");
 	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_006");
-	Wld_InsertNpc		(Shadow_Warrior,"FP_STAND_SHADOWLORD_007");
 };
 
 	func void INIT_SUB_FORTRESS ()
@@ -1264,15 +1221,20 @@ func void STARTUP_SURFACE ()
 
 
 	// Old Mine
-	Wld_InsertNpc		(STRF_4111_Grimes,"OW_MINE2_GRIMES");
-	Wld_InsertNpc		(STRF_1117_Straefling,"OW_MINE2_STRF");	
+	Wld_InsertNpc		(STRF_4111_Grimes,"OW_PATH_264");
+	Wld_InsertNpc		(STRF_1117_Straefling,"OW_PATH_264");	
 	Wld_InsertNpc		(PAL_218_Ritter,"OW_PATH_264");	
-	Wld_InsertNpc		(PAL_219_Ritter,"OW_PATH_148_A");	
+	Wld_InsertNpc		(PAL_219_Ritter,"OW_PATH_264");	
 	
 	Wld_InsertNpc		(GRD_4151_Leiche,"OW_PATH_151");	
 	Wld_InsertNpc		(STRF_1150_Leiche,"OW_GOBBO_PLACE_SPAWN");	
 	Wld_InsertNpc		(STRF_1151_Leiche,"OW_PATH_48");	
 	Wld_InsertNpc		(STRF_1153_Leiche,"HELPPOINT8");	
+
+	B_KillNpc			(GRD_4151_Leiche);
+	B_KillNpc			(STRF_1150_Leiche);
+	B_KillNpc			(STRF_1151_Leiche);
+	B_KillNpc			(STRF_1153_Leiche);
 
 	Wld_InsertNpc		(Snapper,"SPAWN_SNAPPER_OM_ENTRANCE_000");
 	Wld_InsertNpc		(Snapper,"SPAWN_SNAPPER_OM_ENTRANCE_000"); 
@@ -1571,6 +1533,8 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(PC_Thief_OW, 				"LOCATION_02_05");
 	Wld_InsertNpc		(PAL_2006_Leiche, 			"LOCATION_02_01");
 	Wld_InsertNpc		(PAL_2007_Leiche, 			"LOCATION_02_02");
+	B_KillNpc			(PAL_2006_Leiche);
+	B_KillNpc			(PAL_2007_Leiche);
 
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
 	Wld_InsertNpc		(Snapper,"SPAWN_OW_BLACKWOLF_02_01");
@@ -1712,16 +1676,24 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(DragonSnapper,"SPAWN_OW_SCAVENGER_01_DEMONT5");
 	
 	Wld_InsertNpc		(GRD_4150_Leiche,"OW_SILVESTROMINE");	
-
 	Wld_InsertNpc		(PAL_2002_Silvestro,"OW_SILVESTROMINE");	
 	Wld_InsertNpc		(PAL_2003_Leiche,"OW_SILVESTROMINE");	
-	Wld_InsertNpc		(PAL_2005_Leiche,"OW_SILVESTROMINE");	
-	
+	Wld_InsertNpc		(PAL_2005_Leiche,"OW_SILVESTROMINE");
 	Wld_InsertNpc		(STRF_1152_Leiche,"OW_SILVESTROMINE");	
 	Wld_InsertNpc		(STRF_1154_Leiche,"OW_SILVESTROMINE");	
 	Wld_InsertNpc		(STRF_1155_Leiche,"OW_SILVESTROMINE");	
 	Wld_InsertNpc		(STRF_1156_Leiche,"OW_SILVESTROMINE");	
 	Wld_InsertNpc		(STRF_1157_Leiche,"OW_SILVESTROMINE");	
+
+	B_KillNpc			(GRD_4150_Leiche);
+	B_KillNpc			(PAL_2002_Silvestro);
+	B_KillNpc			(PAL_2003_Leiche);	
+	B_KillNpc			(PAL_2005_Leiche);
+	B_KillNpc			(STRF_1152_Leiche);
+	B_KillNpc			(STRF_1154_Leiche);
+	B_KillNpc			(STRF_1155_Leiche);
+	B_KillNpc			(STRF_1156_Leiche);
+	B_KillNpc			(STRF_1157_Leiche);
 	
 	Wld_InsertNpc		(MinecrawlerQueen,"OW_SILVESTROMINE_042");
 	Wld_InsertNpc		(MinecrawlerWarrior,"OW_SILVESTROMINE_041");
@@ -1873,7 +1845,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND02_CAVE");
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND04");
 	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND05");
-	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND07_001");
+	Wld_InsertNpc		(Bloodhound,"PLATEAU_ROUND05");
 
 
 
@@ -2047,11 +2019,9 @@ func void STARTUP_SURFACE ()
 	// Orc Tents
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_000");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_000");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_000");
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_001");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_001");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_001");
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_002");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_002");
@@ -2059,19 +2029,15 @@ func void STARTUP_SURFACE ()
 
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_003");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_003");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_003");
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_004");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_004");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_004");
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_005");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_005");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_005");
 	
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_IN_006");
 	Wld_InsertNpc       (OrcElite_Roam,"OW_ORCTENT_OUT_006");
-	Wld_InsertNpc       (OrcShaman_Sit,"FP_CAMPFIRE_ORCTENT_006");
 };
 
 	func void INIT_SUB_SURFACE ()
@@ -3384,7 +3350,6 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 
 
 	Wld_InsertNpc 	(Gobbo_Green, 			"FP_ROAM_BIGFARM_LAKE_CAVE_01");
-	Wld_InsertNpc 	(Gobbo_DaronsStatuenKlauer, 	"FP_ROAM_BIGFARM_LAKE_CAVE_02");
 	Wld_InsertNpc 	(Gobbo_Green, 			"FP_ROAM_BIGFARM_LAKE_CAVE_03");
 	Wld_InsertNpc 	(Gobbo_Green, 			"FP_ROAM_BIGFARM_LAKE_CAVE_04");
 	Wld_InsertNpc 	(Gobbo_Green, 			"FP_ROAM_BIGFARM_LAKE_CAVE_05");

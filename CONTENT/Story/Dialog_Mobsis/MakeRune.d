@@ -137,10 +137,6 @@ FUNC VOID PC_Circle_02_Info()
 	{
 		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_Icebolt,PC_ItRu_Icebolt_Info);
 	};
-	if (PLAYER_TALENT_RUNES[SPL_SummonWolf] == TRUE)
-	{
-		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_SummonWolf,PC_ItRu_SumWolf_Info);
-	};
 	if (PLAYER_TALENT_RUNES[SPL_WINDFIST] == TRUE)
 	{
 		Info_AddChoice 	  (PC_Circle_02,NAME_SPL_WINDFIST,PC_ItRu_Windfist_Info);

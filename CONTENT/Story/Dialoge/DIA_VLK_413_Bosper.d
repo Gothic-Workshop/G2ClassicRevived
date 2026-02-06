@@ -663,7 +663,7 @@ instance DIA_Bosper_BogenSuccess (C_INFO)
 };
 func int DIA_Bosper_BogenSuccess_Condition ()
 {	
-	if (Npc_HasItems (other, ItRw_Bow_L_03_MIS) >= 1)
+	if (Npc_HasItems (other, ITRW_REVIVED_BOW_BOSPER) >= 1)
 	{
 		return TRUE;
 	};
@@ -672,7 +672,7 @@ func void DIA_Bosper_BogenSuccess_Info ()
 {
 	AI_Output (other, self, "DIA_Bosper_BogenSuccess_15_00"); //I think this bow belongs to you...
 	
-	B_GiveInvItems (other, self, ItRw_Bow_L_03_MIS,1);
+	B_GiveInvItems (other, self, ITRW_REVIVED_BOW_BOSPER,1);
 	
 	AI_Output (self, other, "DIA_Bosper_BogenSuccess_11_01"); //My bow! Where did you find it?
 	AI_Output (other, self, "DIA_Bosper_BogenSuccess_15_02"); //In a dark hole full of rats.
@@ -682,7 +682,7 @@ func void DIA_Bosper_BogenSuccess_Info ()
 	 
 	MIS_Bosper_Bogen = LOG_SUCCESS;
 	B_GivePlayerXP(XP_Bosper_Bogen);
-	Npc_RemoveInvItems (self, ItRw_Bow_L_03_MIS,1); 
+	Npc_RemoveInvItems (self, ITRW_REVIVED_BOW_BOSPER,1); 
 	
 };
 

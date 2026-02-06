@@ -419,7 +419,12 @@ func void DIA_1013_BANDIT_FromCavalorn_Info ()
 
 	Bdt_1013_Away = TRUE;
 	B_GivePlayerXP (XP_BanditWeg);
-	
+
+	AI_UnequipArmor (self);
+	CreateInvItems (self,ITAR_REVIVED_LEATHER_M,1);
+	AI_EquipArmor 	(self,ITAR_REVIVED_LEATHER_M);
+	Npc_SetTrueGuild (self, GIL_OUT);
+
 	Npc_ExchangeRoutine	(self,"AWAY2");
 	
 	AI_StopProcessInfos (self);

@@ -217,6 +217,7 @@ func void DIA_Addon_Pedro_Statuette_Info ()
 	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 	MiltenORPedro_LostInnosStatue_Daron = TRUE;
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
+	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 };
 ///////////////////////////////////////////////////////////////////////
 //	Regeln

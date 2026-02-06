@@ -41,7 +41,7 @@ INSTANCE jingleLearnTalent(C_MUSICJINGLE_DEF) {	name	    = "E-Positive 1";	trans
 
 PROTOTYPE C_MUSICTHEME_STANDARD		(C_MUSICTHEME)
 {
-	file				= "nw_dayfgt.sgt";
+	file				= "NewWorld_Day.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -8;
@@ -53,7 +53,7 @@ PROTOTYPE C_MUSICTHEME_STANDARD		(C_MUSICTHEME)
 
 PROTOTYPE C_MUSICTHEME_THREAT		(C_MUSICTHEME)
 {
-	file				= "nw_daythr.sgt";
+	file				= "NewWorld_Threat.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -8;
@@ -64,7 +64,7 @@ PROTOTYPE C_MUSICTHEME_THREAT		(C_MUSICTHEME)
 
 PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 {
-	file				= "nw_dayfgt.sgt";
+	file				= "NewWorld_Fight.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_MEASURE;	
 	ReverbMix			= -12;
@@ -82,7 +82,7 @@ PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 
 INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 {
-	file				= "";
+	file				= "E3_Trailer_Music.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
@@ -91,7 +91,7 @@ INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 
 INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 {
-	file				= "gamestart.sgt";
+	file				= "E3_Trailer_Music.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
@@ -103,611 +103,134 @@ INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 // ################################################################################################
 // ################################################################################################
 // ###############                                                          #######################
-// ###############           A D D O N W O R L D                            #######################
+// ###############                NEWWORLD            MUSIC                 #######################
 // ###############                                                          #######################
 // ################################################################################################
 // ################################################################################################
 // ################################################################################################
-
-
-// ################################################################################################
-// ####### ADW - AddonWorld (default) #############################################################
-// ################################################################################################
-
-		INSTANCE ADW_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "adw_day_std.sgt";		};
-		INSTANCE ADW_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### AWC - AddonWorld Entrance Temple #######################################################
-// ################################################################################################
-
-		INSTANCE AWC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "awc_day_std.sgt";		};
-		INSTANCE AWC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-
-// ################################################################################################
-// ####### ADT - AdanosTempel #####################################################################
-// ################################################################################################
-
-		INSTANCE ADT_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "adt_day_std.sgt";		};
-		
-
-
-// ################################################################################################
-// ####### BDT - BanditenLager ####################################################################
-// ################################################################################################
-
-		INSTANCE BDT_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bdt_day_std.sgt";		};
-		INSTANCE BDT_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### BIB - Canyon Bibliothek ################################################################
-// ################################################################################################
-
-		INSTANCE BIB_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-		INSTANCE BIB_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-		
-		
-
-// ################################################################################################
-// ####### CAN - Canyon ###########################################################################
-// ################################################################################################
-
-		INSTANCE CAN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "can_day_std.sgt";		};
-		INSTANCE CAN_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-
-// ################################################################################################
-// ####### CRY - Crystal Cave #####################################################################
-// ################################################################################################
-
-		INSTANCE CRY_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "awc_day_std.sgt";		};
-		INSTANCE CRY_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### GOL - GoldMine #########################################################################
-// ################################################################################################
-
-		INSTANCE GOL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-		INSTANCE GOL_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### GHO - Ghost Crypta #####################################################################
-// ################################################################################################
-
-		INSTANCE GHO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-		INSTANCE GHO_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### MI1 - Canyon Mine 1 ####################################################################
-// ################################################################################################
-
-		INSTANCE MI1_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-
-
-// ################################################################################################
-// ####### MI2 - Canyon Mine 2 ####################################################################
-// ################################################################################################
-
-		INSTANCE MI2_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-
-
-
-
-// ################################################################################################
-// ####### NWP - NewWorld Portal ##################################################################
-// ################################################################################################
-
-// WICHTIG: ALTES ORCHESTER BENUTZEN
-
-		//INSTANCE NWP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "pir_day_std.sgt";		};
-
-
-// ################################################################################################
-// ####### PO1 - AddonWorld Eingangsdungeon #######################################################
-// ################################################################################################
-
-		INSTANCE PO1_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bib_day_std.sgt";		};
-		INSTANCE PO1_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-
-// ################################################################################################
-// ####### PIR - Canyon ###########################################################################
-// ################################################################################################
-
-		INSTANCE PIR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "pir_day_std.sgt";		};
-		INSTANCE PIR_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-// ################################################################################################
-// ####### RAV - Raven ############################################################################
-// ################################################################################################
-
-		INSTANCE RAV_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "bdt_day_std.sgt";		};
-		INSTANCE RAV_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-// ################################################################################################
-// ####### SHO - Showdown #########################################################################
-// ################################################################################################
-
-		INSTANCE SHO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "sho_day_std.sgt";		};
-		INSTANCE SHO_Day_Fgt	(C_MUSICTHEME_STANDARD)		{	file			= "sho_day_fgt.sgt";		};
-
-
-// ################################################################################################
-// ####### SWP - Sumpf ############################################################################
-// ################################################################################################
-
-		INSTANCE SWP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "swp_day_std.sgt";		};
-		INSTANCE SWP_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "adw_day_fgt.sgt";		};
-
-
-// ################################################################################################
-// ####### STO - StonePlates ######################################################################
-// ################################################################################################
-
-		INSTANCE STO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "sto_day_std.sgt";		};
-
-
-
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-// ###############                                                          #######################
-// ###############           L O C A T I O N S                              #######################
-// ###############                                                          #######################
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  DEFAULT   [DEF_]         XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE DEF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
-INSTANCE DEF_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
-INSTANCE DEF_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
-												
-//INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "nw_daystd_A0.sgt";		};
-INSTANCE DEF_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "nw_daythr.sgt";		};
-INSTANCE DEF_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "nw_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  DEFAULT_OLDWORLD [OWD_]  XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-//INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
-//INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
-//INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
-												
-//INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Ngt_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Ngt_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  DEFAULT_DRAGONISLAND [INS_] XXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE INS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "di_daystd.sgt";		};
-//INSTANCE INS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "di_daystd.sgt";		};
-//INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "di_daystd.sgt";		};
-												
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  BANDITENHÖHLE[BAN_]      XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE BAN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ban_daystd.sgt";		};
-INSTANCE BAN_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ban_dayfgt.sgt";		};
-
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  FRIEDHOF  [FRI_]         XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE FRI_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "fri_daystd.sgt";		};
-
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  DRAGONLOCATION  [DLC_]   XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE DLC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
-INSTANCE DLC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "dlc_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  KASERNE   [KAS_]         XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-//INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "kas_daystd.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  KHORINIS   [KHO_]        XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE KHO_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "kh_daystd.sgt";		};
-INSTANCE KHO_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "kh_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  LEUCHTTURM   [LEU_]      XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE LEU_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "leu_daystd.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  LOBARDS HOF  [LOB_]      XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE LOB_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "lob_daystd.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  MAYATEMPEL [MAY_]        XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE MAY_Day_Std	(C_MUSICTHEME_STANDARD)		{	file		= "may_daystd.sgt";		};
-INSTANCE May_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "may_dayfgt.sgt";		};
-
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  KLOSTER OUT    [MOO_]    XXXXXXXXXXXX
-// XXXXXXXX  KLOSTER_IN     [MOI_]    XXXXXXXXXXXX
-// XXXXXXXX  KLOSTER_DUNGEON[MOD_]    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE MOO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "mo_daystd.sgt";		};
-INSTANCE MOI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "mi_daystd.sgt";		};
-
-//INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ban_daystd.sgt";		};
-INSTANCE MOD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ban_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  OW_PATH  [OWP_]          XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE OWP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owp_daystd.sgt";		};
-INSTANCE OWP_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owp_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  PIER [PIE_]              XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE PIE_Day_Std	(C_MUSICTHEME_STANDARD)		{		file		= "pie_daystd.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  WOOD           [WOO_]    XXXXXXXXXXXX
-// XXXXXXXX  LESTERTAL      [TAL_]    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE TAL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "woo_daystd.sgt";		};
-INSTANCE TAL_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "woo_daythr.sgt";		};
-INSTANCE TAL_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "woo_dayfgt.sgt";		};
-
-INSTANCE WOO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "woo_daystd.sgt";		};
-INSTANCE WOO_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "woo_daythr.sgt";		};
-INSTANCE WOO_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "woo_dayfgt.sgt";		};
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  XARDAS  [XAR_]           XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE XAR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "xt_daystd.sgt";		};
-INSTANCE XAR_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "xt_daystd.sgt";		};
-
-
-												
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-//--------------------------------- OLD WORLD -----------------------------------------------------
-
-// ################################################################################################
-// ###############                                                          #######################
-// ###############           C A M P S                                      #######################
-// ###############                                                          #######################
-// ################################################################################################
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  O L D C A M P  [OC_]     XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE OC_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "oc_day_std.sgt";						
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE OC_Day_Thr		(C_MUSICTHEME_DEF)	{	file			= "oc_day_std.sgt";						
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE OC_Day_Fgt		(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-// ----------------------------------------------------
-
-INSTANCE OC_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-INSTANCE OC_Ngt_Thr		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_thr.sgt";					};
-
-INSTANCE OC_Ngt_Fgt		(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-
-
-// --- ARENA ----
-
-INSTANCE ARE_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";						};
-
-INSTANCE ARE_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "foc_day_std.sgt";						};
-
-INSTANCE ARE_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-// --- INEXTREMO ----
-
-
-INSTANCE IE_Day_Std		(C_MUSICTHEME_DEF)	{	file			= "oc_day_std.sgt";   						};
-INSTANCE IE_Ngt_Std		(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";   						};
-
-INSTANCE IE_Day_Thr		(C_MUSICTHEME_DEF)	{	file			= "oc_day_std.sgt";   						};
-
-INSTANCE IE_Day_Fgt		(C_MUSICTHEME_DEF)	{	file			= "oc_day_fgt.sgt";   						};
-												
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  N E W C A M P  [NCO_/NCI_]   XXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-// Plateau davor
-
-INSTANCE NCO_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_day_std.sgt";	
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE NCO_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "cam_day_thr.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE NCO_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "cam_day_fgt.sgt";
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-                                                                
-INSTANCE NCO_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-INSTANCE NCO_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-INSTANCE NCO_Ngt_Fgt	(C_MUSICTHEME_DEF)	{	file			= "cam_ngt_std.sgt";					};
-
-// Höhle
-
-INSTANCE NCI_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "nci_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE NCI_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "nci_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE NCI_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "nci_day_fgt.sgt";					
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-                                                                
-INSTANCE NCI_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "nci_day_std.sgt";					};
-INSTANCE NCI_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "nci_day_std.sgt";					};
-INSTANCE NCI_Ngt_Fgt	(C_MUSICTHEME_DEF)	{	file			= "nci_day_fgt.sgt";					
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX  P S I C A M P  [PSI_]    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-INSTANCE PSI_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "psi_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE PSI_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "psi_day_thr.sgt";	
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE PSI_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "psi_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE PSI_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "psi_ngt_std.sgt";					};
-INSTANCE PSI_Ngt_Thr	(C_MUSICTHEME_DEF)	{	file			= "psi_ngt_std.sgt";					};
-INSTANCE PSI_Ngt_Fgt	(C_MUSICTHEME_DEF)	{	file			= "psi_day_fgt.sgt";					};
-
-
-// ################################################################################################
-// ###############                                                          #######################
-// ###############           D U N G E O N S                                #######################
-// ###############                                                          #######################
-// ################################################################################################
-
-// TEMPEL
-
-INSTANCE TPL_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE TPL_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE TPL_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_fgt.sgt";					};
-INSTANCE TPL_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-
-INSTANCE KAT_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE KAT_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE KAT_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_fgt.sgt";					};
-INSTANCE KAT_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-
-INSTANCE SPL_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE SPL_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE SPL_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_fgt.sgt";					};
-INSTANCE SPL_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-		
-// FREE MINE
-
-INSTANCE FRM_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "olm_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE FRM_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "olm_day_thr.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE FRM_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "olm_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE FRM_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "olm_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-// OLD MINE?
-
-INSTANCE OLM_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "olm_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-INSTANCE OLM_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "olm_day_std.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-																								
-INSTANCE OLM_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "olm_day_thr.sgt";
-												transType		= TRANSITION_TYPE_BREAK;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-												
-INSTANCE OLM_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "olm_day_fgt.sgt";						
-												transType		= TRANSITION_TYPE_FILL;
-												transSubType	= TRANSITION_SUB_TYPE_MEASURE;			};
-
-// ORCGRAVEYARD		
-
-INSTANCE OGY_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE OGY_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-INSTANCE OGY_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_fgt.sgt";					};
-
-INSTANCE OGY_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "ogy_day_std.sgt";					};
-
-												
-
-// ################################################################################################
-// ###############                                                          #######################
-// ###############                       S P E C I A L                      #######################
-// ###############                                                          #######################
-// ################################################################################################
-
-// "BEHIND THE SKULL"
-
-INSTANCE TH_Day_Std	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
-INSTANCE TH_Day_Thr	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
-INSTANCE TH_Day_Fgt	(C_MUSICTHEME_DEF)	{	file			= "TH_day_fgt.sgt";					};
-
-INSTANCE TH_Ngt_Std	(C_MUSICTHEME_DEF)	{	file			= "TH_day_std.sgt";					};
-
-
-
-
-
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-// ###############                                                          #######################
-// ###############           zBassMusic Usage Here and shit                 #######################
-// ###############                                                          #######################
-// ################################################################################################
-// ################################################################################################
-// ################################################################################################
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX     N E W    W O R L D    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 // Default
-INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Tymoris_02Cut.wav";		};
+INSTANCE DEF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "NewWorld_Day.mp3";		};
+INSTANCE DEF_Thr_Std	(C_MUSICTHEME_THREAT)		{	file			= "NewWorld_Threat.mp3";		};
+INSTANCE DEF_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "NewWorld_Fight.mp3";		};
+INSTANCE DEF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "NewWorld_Night.mp3";		};
 
 
 
-// Khorinis
-INSTANCE KHO_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KhorinisNgt.wav";	};
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+// XXXXX     Khorinis     XXXXX //
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+INSTANCE KHO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Day.mp3";	};
+INSTANCE KHO_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "Khorinis_Fight.mp3";	};
+INSTANCE KHO_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_PoorDistrict_Night.mp3";	};
 
 // Upper City
-//INSTANCE OBS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KhorinisNgt.wav";	};
+INSTANCE OBS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Paladins.mp3";	};
 
 // Garrison
-INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Kaserne.mp3";		};
-INSTANCE KAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "KASERNE-G1.mp3";		};
+INSTANCE KAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Garrison.mp3";		};
+INSTANCE KAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Garrison.mp3";		};
+
+// Harbour
+INSTANCE PIE_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Khorinis_Harbour.mp3";	};
 
 
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+// XXXXX     Monastery    XXXXX //
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+INSTANCE MOO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Monastery_Road.mp3";		};
+INSTANCE MOI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Monastery_Inside.mp3";		};
+INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Monastery_Dungeon.mp3";		};
 
-// Monastery Dungeon
-INSTANCE MOD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Cathedral.mp3";		};
+
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+// XXXXX       Onar       XXXXX //
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+INSTANCE HOF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BigFarm.mp3";		};
+INSTANCE HOF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BigFarm.mp3";		};
 
 
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+// XXXXX     OutsideW     XXXXX //
+// XXXXX XXXXXXXXXXXXXXXX XXXXX //
+
+// Xardas Tower
+INSTANCE XAR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "XardasTower.mp3";		};
+
+// Woods
+INSTANCE WOO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Woods.mp3";		};
+INSTANCE WOO_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "Woods_Threat.mp3";		};
+INSTANCE WOO_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Woods_Fight.mp3";		};
+
+// Caves
+INSTANCE BAN_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Caves.mp3";		};
+INSTANCE BAN_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "Caves_Fight.mp3";		};
+
+// Pyramids
+INSTANCE MAY_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Pyramids.mp3";		};
+INSTANCE MAY_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "Pyramids_Fight.mp3";		};
+INSTANCE POR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Portal.mp3";		};
+INSTANCE POR_Fgt_Std	(C_MUSICTHEME_FIGHT)		{	file			= "Portal_Fight.mp3";		};
+
+// Farms
+INSTANCE LOB_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Farm_Day.mp3";		};
+INSTANCE LOB_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Farm_Night.mp3";		};
+
+// Lighthouse
+INSTANCE LEU_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Lighthouse.mp3";		};
 
 // Dexter's Camp
 
 
+// Troll Lair
 
 
-// Onar's Manor
-//INSTANCE HOF_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BaronsCut.wav";		};
-//INSTANCE HOF_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BaronsCut.wav";		};
+// Graveyard
+INSTANCE FRI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Graveyard.mp3";		};
 
-
-
-// Black Troll
-INSTANCE TRO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "gothic3_demo_thedig_virtual.mp3";		};
-
-
+// Passage
+INSTANCE OWP_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ValleyPass.mp3";		};
+INSTANCE OWP_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "ValleyPass_Threat.mp3";		};
+INSTANCE OWP_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ValleyPass_Fight.mp3";		};
 
 // Second Passage
-INSTANCE PAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "can_day_std.sgt";		};
-//INSTANCE PAS_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OC_Ngt_Std.mp3";		};
+INSTANCE PAS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "ValleyPass.mp3";		};
+INSTANCE PAS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "ValleyPass_Threat.mp3";		};
+INSTANCE PAS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "ValleyPass_Fight.mp3";		};
 
 
 
-
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX     O L D    W O R L D    XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
+// ###############                                                          #######################
+// ###############                OLDWORLD            MUSIC                 #######################
+// ###############                                                          #######################
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
 
 // Default
-INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OW_Day_Std.mp3";		};
-INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "owd_daystd.sgt";		};
-INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "owd_daystd.sgt";		};
+INSTANCE OWD_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Day.mp3";		};
+INSTANCE OWD_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "OldWorld_Threat.mp3";		};
+INSTANCE OWD_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "OldWorld_Fight.mp3";		};
+INSTANCE OWD_Ngt_Std	(C_MUSICTHEME_STANDARD)		{	file			= "OldWorld_Night.mp3";		};
 
 
 
 // Demon Tower
-INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "Xardas_Tower_G1_Orchestra_Cover.mp3";		};
+INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "DemonTower.mp3";		};
 
 
 
 // Stone Fortress
-INSTANCE FOR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BehindTheSkull.mp3";		};
+INSTANCE FOR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Fortress.mp3";		};
+
+INSTANCE BMI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Mine_Fortress.mp3";		};
+
+
+// Silvestro Mine
+INSTANCE SIL_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Mine_Silvestro.mp3";		};
 
 
 // XXXXX XXXXXXXXXXXXXXXX XXXXX //
@@ -715,24 +238,53 @@ INSTANCE FOR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "BehindTheSkull.mp3";		
 // XXXXX XXXXXXXXXXXXXXXX XXXXX //
 
 // Troll Canyon
-INSTANCE TRC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
-INSTANCE TRC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+INSTANCE TRC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
+INSTANCE TRC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
 
 // FreeMine Camp
-INSTANCE FMC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
-INSTANCE FMC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+INSTANCE FMC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
+INSTANCE FMC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
 
 // Sea Monastery
-INSTANCE SEA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "dlc_daystd.sgt";		};
-INSTANCE SEA_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_std.sgt";		};
+INSTANCE SEA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
+INSTANCE SEA_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
+
+// Swamp Temple
+INSTANCE PSI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
+INSTANCE PSI_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
 
 
 
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
+// ###############                                                          #######################
+// ###############                 DUNGEON            MUSIC                 #######################
+// ###############                                                          #######################
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
 
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXX      I R D O R A T H      XXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// Abandoned Mine
+INSTANCE ABM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "AbandonedMine.mp3";	};
+INSTANCE ABM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "AbandonedMine.mp3";	};
+
+// Free Mine
+INSTANCE FRM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "AbandonedMine.mp3";	};
+INSTANCE FRM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "AbandonedMine.mp3";	};
+
+
+
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
+// ###############                                                          #######################
+// ###############               DRAGON ISLAND        MUSIC                 #######################
+// ###############                                                          #######################
+// ################################################################################################
+// ################################################################################################
+// ################################################################################################
 
 // Default
-INSTANCE INS_Day_Thr	(C_MUSICTHEME_THREAT)		{	file			= "concept03.mp3";		};
-INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "sho_day_fgt.sgt";		};
+INSTANCE INS_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Temple.mp3";				};
+INSTANCE INS_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "Temple_Fight.mp3";		};

@@ -40,8 +40,8 @@ instance Pal_212_Schiffswache (Npc_Default)
 
 FUNC VOID Rtn_Start_212 ()
 {
-	TA_Guard_Passage	(08,00,23,00,"NW_CITY_SHIP_GUARD_02");
-    TA_Guard_Passage	(23,00,08,00,"NW_CITY_SHIP_GUARD_02");	
+	TA_Stand_Guarding	(08,00,23,00,"NW_CITY_SHIP_GUARD_02");
+    TA_Stand_Guarding	(23,00,08,00,"NW_CITY_SHIP_GUARD_02");	
 };
 
 FUNC VOID Rtn_ShipFree_212 ()

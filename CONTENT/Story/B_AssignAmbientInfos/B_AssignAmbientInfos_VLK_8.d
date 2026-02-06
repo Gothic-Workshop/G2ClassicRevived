@@ -120,15 +120,6 @@ FUNC VOID DIA_VLK_8_STANDARD_Info()
 	if (Kapitel == 1)
 	{
 		AI_Output (self,other,"DIA_Addon_VLK_8_STANDARD_08_00"); //Everyone has been worried lately.
-		AI_Output (self,other,"DIA_Addon_VLK_8_STANDARD_08_01"); //It's not enough that the paladins have made themselves at home here, now people are constantly disappearing in the strangest fashion.
-		AI_Output (self,other,"DIA_Addon_VLK_8_STANDARD_08_02"); //It's about time the militia finally did something about it.
-			if (SC_HearedAboutMissingPeople == FALSE)
-			{
-				Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
-				Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-				B_LogEntry (TOPIC_Addon_WhoStolePeople, LogText_Addon_SCKnowsMisspeapl); 
-			};
-		SC_HearedAboutMissingPeople = TRUE;
 	};
 	
 	if (Kapitel == 2)

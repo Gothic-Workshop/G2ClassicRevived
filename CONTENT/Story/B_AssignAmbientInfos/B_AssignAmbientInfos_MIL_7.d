@@ -135,24 +135,7 @@ FUNC VOID DIA_MIL_7_STANDARD_Info()
 		
 	if (Kapitel == 1)
 	{
-		var int randy;
-		randy = Hlp_Random (2);
-		if (randy == 0)
-		{
-			AI_Output (self,other,"DIA_Addon_MIL_7_STANDARD_07_00"); //Citizens are disappearing from here one by one. Up to now, we haven't been able to find out what's happening to them. Could the orcs be behind it?
-			
-			if (SC_HearedAboutMissingPeople == FALSE)
-			{
-				Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
-				Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-				B_LogEntry (TOPIC_Addon_WhoStolePeople, LogText_Addon_SCKnowsMisspeapl); 
-			};
-			SC_HearedAboutMissingPeople = TRUE;
-		}
-		else
-		{		
-			AI_Output (self,other,"DIA_MIL_7_STANDARD_07_01"); //They say the farmers have rebelled. We can't use crap like that now, when we're in the middle of a war with the orcs!
-		};
+		AI_Output (self,other,"DIA_MIL_7_STANDARD_07_01"); //They say the farmers have rebelled. We can't use crap like that now, when we're in the middle of a war with the orcs!
 	};
 
 	if (Kapitel <= 3)

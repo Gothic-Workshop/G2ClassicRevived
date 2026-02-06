@@ -389,6 +389,8 @@ func void DIA_Addon_Daron_GuildHelp_Info ()
 	
 	MIS_Addon_Vatras_Go2Daron = LOG_SUCCESS;
 	MIS_Addon_Daron_GetStatue = LOG_RUNNING;
+
+	Wld_InsertNpc 	(Gobbo_DaronsStatuenKlauer, 	"FP_ROAM_BIGFARM_LAKE_CAVE_02");
 	
 	Info_ClearChoices	(DIA_Addon_Daron_GuildHelp);
 	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "You said that the goblins have it now?", DIA_Addon_Daron_GuildHelp_gobbos );
@@ -430,10 +432,6 @@ func void DIA_Addon_Daron_GuildHelp_auftrag ()
 	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_auftrag_15_00"); //I've heard enough. I'll find the thing for you.
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_auftrag_10_01"); //May Innos guide you and protect you from the dangers that await you outside the city gates.
 	Info_ClearChoices	(DIA_Addon_Daron_GuildHelp);
-	
-	Log_CreateTopic (TOPIC_Addon_RangerHelpKDF, LOG_MISSION);
-	Log_SetTopicStatus(TOPIC_Addon_RangerHelpKDF, LOG_RUNNING);
-	B_LogEntry (TOPIC_Addon_RangerHelpKDF,"Daron was robbed by some impertinent goblins. Since then he's been missing a valuable statuette that he was supposed to take to the monastery. The goblins are said to be hiding in a hole near the 'Dead Harpy' tavern."); 
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -452,7 +450,6 @@ instance DIA_Addon_Daron_FoundStatue		(C_INFO)
 func int DIA_Addon_Daron_FoundStatue_Condition ()
 {
 	if (Npc_HasItems (other,ItMi_LostInnosStatue_Daron))
-	&& (DIA_Gorax_GOLD_perm == FALSE) 
 	&& (MIS_Addon_Daron_GetStatue == LOG_RUNNING)
 		{
 			return TRUE;
@@ -489,8 +486,7 @@ instance DIA_Addon_Daron_ReturnedStatue		(C_INFO)
 
 func int DIA_Addon_Daron_ReturnedStatue_Condition ()
 {
-	if (DIA_Gorax_GOLD_perm == TRUE) 
-	&& (MIS_Addon_Daron_GetStatue == LOG_SUCCESS)
+	if (MIS_Addon_Daron_GetStatue == LOG_SUCCESS)
 		{
 			return TRUE;
 		};
@@ -504,7 +500,6 @@ func void DIA_Addon_Daron_ReturnedStatue_Info ()
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
-	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 };
 
 // ************************************************************

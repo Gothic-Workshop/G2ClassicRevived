@@ -19,7 +19,7 @@ instance PIR_1400_Pirate_L (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ItMw_ShortSword2);
-	EquipItem (self, ItRw_sld_bow); 
+	EquipItem (self, ITRW_REVIVED_BOW_SMALL_04); 
 
 	CreateInvItems (self, ITMS_REVIVED_BALTRAMPACKAGE_PIRATES, 1);
 		

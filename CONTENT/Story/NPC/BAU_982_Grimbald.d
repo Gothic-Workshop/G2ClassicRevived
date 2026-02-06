@@ -16,7 +16,7 @@ INSTANCE BAU_982_Grimbald (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_1H_SWORD_01); 
-	EquipItem	(self, ItRw_Sld_Bow);
+	EquipItem	(self, ITRW_REVIVED_BOW_LONG_02);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

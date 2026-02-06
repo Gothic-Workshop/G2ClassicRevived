@@ -18,7 +18,7 @@ instance SLD_820_Soeldner (Npc_Default) //Türwache Onars Haus
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
-	EquipItem			(self, ItRw_Sld_Bow);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_03);
 
 
 	// ------ Inventory ------

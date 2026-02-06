@@ -41,8 +41,8 @@ INSTANCE NOV_600_Pedro (Npc_Default)
 
 FUNC VOID Rtn_Start_600 ()
 {	
-	TA_Stand_Guarding	(08,00,23,00,"NW_MONASTERY_MILTEN");
-    TA_Stand_Guarding 	(23,00,08,00,"NW_MONASTERY_MILTEN");
+	TA_Guard_Passage	(08,00,23,00,"NW_MONASTERY_MILTEN");
+    TA_Guard_Passage 	(23,00,08,00,"NW_MONASTERY_MILTEN");
 };
 
 

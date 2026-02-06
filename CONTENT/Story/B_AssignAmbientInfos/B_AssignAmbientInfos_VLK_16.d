@@ -115,15 +115,8 @@ FUNC VOID DIA_VLK_16_STANDARD_Info()
 		
 	if (Kapitel == 1)
 	{
-		AI_Output (self,other,"DIA_Addon_VLK_16_STANDARD_16_00"); //I hope the militia will finally find out why the population of Khorinis keeps shrinking.
-		AI_Output (self,other,"DIA_Addon_VLK_16_STANDARD_16_01"); //You have to fear for your life when you hear that so many have already gone missing.
-			if (SC_HearedAboutMissingPeople == FALSE)
-			{
-				Log_CreateTopic (TOPIC_Addon_WhoStolePeople, LOG_MISSION);
-				Log_SetTopicStatus(TOPIC_Addon_WhoStolePeople, LOG_RUNNING);
-				B_LogEntry (TOPIC_Addon_WhoStolePeople, LogText_Addon_SCKnowsMisspeapl); 
-			};
-		SC_HearedAboutMissingPeople = TRUE;
+		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_01"); //Yes, there's this horrible war on top of it all. Everybody suffers and wonders how they are going to manage.
+		AI_Output (self ,other,"DIA_Gritta_Perm3U4U5_War_16_02"); //Sometimes I ask myself what we have done to deserve such a punishment from Innos.
 	};
 	
 	if (Kapitel <= 3)

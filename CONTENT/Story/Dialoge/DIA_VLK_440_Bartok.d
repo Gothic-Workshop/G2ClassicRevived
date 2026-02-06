@@ -128,55 +128,6 @@ FUNC VOID DIA_Bartok_Jaeger_Info()
 	AI_Output (self ,other,"DIA_Addon_Bartok_Jager_04_01"); //My friend Trokar is an excellent hunter.
 };	
 
-///////////////////////////////////////////////////////////////////////
-//	Info MissingPeople
-///////////////////////////////////////////////////////////////////////
-instance DIA_Addon_Bartok_MissingPeople		(C_INFO)
-{
-	npc		 = 	VLK_440_Bartok;
-	nr		 = 	5;
-	condition	 = 	DIA_Addon_Bartok_MissingPeople_Condition;
-	information	 = 	DIA_Addon_Bartok_MissingPeople_Info;
-
-	description	 = 	"So where is your friend Trokar now?";
-};
-
-func int DIA_Addon_Bartok_MissingPeople_Condition ()
-{
-	if (Npc_KnowsInfo (other, DIA_Bartok_Jaeger))
-		{
-			return TRUE;
-		};
-};
-
-func void DIA_Addon_Bartok_MissingPeople_Info ()
-{
-	AI_Output	(other, self, "DIA_Addon_Bartok_MissingPeople_15_00"); //So where is your friend Trokar now?
-	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_01"); //Well. It's a curious story.
-	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_02"); //Only a few days ago, we were both standing at the bar in Coragon's tavern, discussing the hunt.
-	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_03"); //Don't ask me what happened next. I had had a few by then.
-	AI_Output	(self, other, "DIA_Addon_Bartok_MissingPeople_04_04"); //I vaguely remember Trokar saying that he was going out to get a few swampweed reefers. He never came back.
-
-	Info_ClearChoices	(DIA_Addon_Bartok_MissingPeople);
-	Info_AddChoice		(DIA_Addon_Bartok_MissingPeople,DIALOG_BACK,DIA_Bartok_PICKPOCKET_BACK);
-	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "Didn't you go looking for him?", DIA_Addon_Bartok_MissingPeople_such );
-	Info_AddChoice	(DIA_Addon_Bartok_MissingPeople, "So where can I get some swampweed reefers?", DIA_Addon_Bartok_MissingPeople_wo );
-};
-func void DIA_Addon_Bartok_MissingPeople_wo ()
-{
-	AI_Output			(other, self, "DIA_Addon_Bartok_MissingPeople_wo_15_00"); //Where does one get swampweed reefers?
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_wo_04_01"); //Somewhere down at the harbor, as far as I know.
-};
-func void DIA_Addon_Bartok_MissingPeople_such ()
-{
-	AI_Output			(other, self, "DIA_Addon_Bartok_MissingPeople_such_15_00"); //Didn't you go looking for him?
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_such_04_01"); //No. But I reported it to the militia.
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_such_04_02"); //But they haven't been able to find him yet.
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_such_04_03"); //I hope he didn't get attacked by a wolf, or worse.
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_such_04_04"); //I'm afraid that I'll stumble over his body some day when I'm out hunting.
-	AI_Output			(self, other, "DIA_Addon_Bartok_MissingPeople_such_04_05"); //I don't think I could bear that.
-};
-
 // *****************************************************
 //						Bosper
 // *****************************************************

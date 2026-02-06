@@ -362,7 +362,7 @@ func void DIA_AngarDJG_WASMACHSTDU_Info ()
 	AI_Output			(other, self, "DIA_AngarDJG_WASMACHSTDU_15_00"); //Is something wrong?
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_01"); //Do you hear that? Never in my life have I heard such a dreadful noise!
 	AI_Output			(other, self, "DIA_AngarDJG_WASMACHSTDU_15_02"); //What do you mean? I don't hear a thing!
-	//AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_03"); //The whole area here stinks of death and destruction. The putrid creatures guard the rocky entrance to the crypt in front of us.
+	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_03"); //The whole area here stinks of death and destruction. The putrid creatures guard the rocky entrance to the crypt in front of us.
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_04"); //Something ghastly is concealing itself in there and sending its henchmen to the surface of this world.
 	AI_Output			(self, other, "DIA_AngarDJG_WASMACHSTDU_04_05"); //I am almost certain that my amulet was lost somewhere here.
 
@@ -438,10 +438,10 @@ instance DIA_AngarDJG_UndeadMageDead		(C_INFO)
 func int DIA_AngarDJG_UndeadMageDead_Condition ()
 {
 	if 	(
-		(Npc_GetDistToWP(self,"LOCATION_19_03_ROOM6")<1000) 
+		(Npc_GetDistToWP(self,"FORTRESS_MINE_022")<1000) 
 		&& (DJG_AngarAngriff == TRUE)
 		&& (DJG_AngarGotAmulett == FALSE)
-		&& (Npc_IsDead(SkeletonMage_Angar))
+		&& (!Npc_IsDead(SkeletonMage_Angar))
 		)
 			{
 				return TRUE;
@@ -466,14 +466,14 @@ instance DIA_Angar_WASISTLOS		(C_INFO)
 	nr		 = 	14;
 	condition	 = 	DIA_Angar_WASISTLOS_Condition;
 	information	 = 	DIA_Angar_WASISTLOS_Info;
-
+	important	 = 	TRUE;
 	description	 = 	"What's the matter?";
 };
 
 func int DIA_Angar_WASISTLOS_Condition ()
 {
 	if 	(
-		(Npc_GetDistToWP(self,"LOCATION_19_01")<1000) 				
+		(Npc_GetDistToWP(self,"FORTRESS_MINE_022")<1000) 				
 		&& (DJG_AngarGotAmulett == FALSE)
 		&& (Npc_IsDead(SkeletonMage_Angar))
 		)	
@@ -484,8 +484,8 @@ func int DIA_Angar_WASISTLOS_Condition ()
 
 func void DIA_Angar_WASISTLOS_Info ()
 {
-	AI_Output			(other, self, "DIA_Angar_WASISTLOS_15_00"); //What's the matter?
 	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_01"); //I cannot go farther with you.
+	AI_Output			(other, self, "DIA_Angar_WASISTLOS_15_00"); //What's the matter?
 	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_02"); //Something tells me that I will never get out of here alive.
 	AI_Output			(self, other, "DIA_Angar_WASISTLOS_04_03"); //I can't explain it, but...
 	

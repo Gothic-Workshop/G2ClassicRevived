@@ -16,7 +16,7 @@ instance BDT_1016_Bandit_M (Npc_Default)
 	
 	// ------ Equippte Waffen ------		
 	EquipItem			(self, ITMW_REVIVED_1H_AXE_01);
-	EquipItem			(self, ItRw_SLD_Bow);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

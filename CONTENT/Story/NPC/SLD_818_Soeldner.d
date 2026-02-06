@@ -18,7 +18,7 @@ instance SLD_818_Soeldner (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_2H_AXE_OLD_01);
-	EquipItem			(self, ItRw_Sld_Bow);
+	EquipItem			(self, ITRW_REVIVED_BOW_SMALL_04);
 
 
 	// ------ Inventory ------

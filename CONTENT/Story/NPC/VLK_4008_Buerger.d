@@ -5,8 +5,8 @@ instance VLK_4008_Buerger (Npc_Default)
 	name 		= NAME_Buerger; 
 	guild 		= GIL_VLK;
 	id 			= 4008;
-	voice 		= 6;
-	flags       = 0;																
+	voice 		= 1;
+	flags       = NPC_FLAG_IMMORTAL;																
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
@@ -16,7 +16,7 @@ instance VLK_4008_Buerger (Npc_Default)
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																
-	EquipItem (self,ITMW_REVIVED_1H_CLUB_01);
+	EquipItem (self,ItMw_ElBastardo);
 	
 	
 	// ------ Inventory ------
