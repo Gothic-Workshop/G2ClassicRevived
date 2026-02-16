@@ -1154,18 +1154,20 @@ FUNC VOID PC_Charge_InnosEye_Info ()
 {
 	if 	(
 			(
-				(Npc_HasItems (hero, ItAt_IcedragonHeart) >= 1)
-				|| 		(Npc_HasItems (hero, ItAt_RockdragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_FiredragonHeart)	>= 1)
-				|| 		(Npc_HasItems (hero, ItAt_SwampdragonHeart)	>= 1)	
+				(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_ICE) 				>= 1)
+				|| 		(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_ROCK)		>= 1)
+				|| 		(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_FIRE)		>= 1)
+				|| 		(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_SWAMP)	>= 1)
+				|| 		(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_UNDEAD)	>= 1)	
 			)
 			&& 		(Npc_HasItems (hero, ItMi_InnosEye_Discharged_MIS)    >= 1)	
 		) 
 	{
-		if 		(Npc_HasItems (hero, ItAt_SwampdragonHeart	)	>= 1){Npc_RemoveInvItems (hero,ItAt_SwampdragonHeart  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_RockdragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_RockdragonHeart	  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_FiredragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_FiredragonHeart	  ,1);}
-		else if	(Npc_HasItems (hero, ItAt_IcedragonHeart	) 	>= 1){Npc_RemoveInvItems (hero,ItAt_IcedragonHeart	  ,1);};
+		if 		(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_SWAMP		)	>= 1){Npc_RemoveInvItems (hero,ITAT_REVIVED_DRAGONHEART_SWAMP,	1);}
+		else if	(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_ROCK		) 	>= 1){Npc_RemoveInvItems (hero,ITAT_REVIVED_DRAGONHEART_ROCK,	1);}
+		else if	(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_FIRE		) 	>= 1){Npc_RemoveInvItems (hero,ITAT_REVIVED_DRAGONHEART_FIRE,	1);}
+		else if	(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_ICE		) 	>= 1){Npc_RemoveInvItems (hero,ITAT_REVIVED_DRAGONHEART_ICE,	1);}
+		else if	(Npc_HasItems (hero, ITAT_REVIVED_DRAGONHEART_UNDEAD	) 	>= 1){Npc_RemoveInvItems (hero,ITAT_REVIVED_DRAGONHEART_UNDEAD,	1);};
 	
 		Npc_RemoveInvItems (hero,ItMi_InnosEye_Discharged_MIS	  ,1);
 		

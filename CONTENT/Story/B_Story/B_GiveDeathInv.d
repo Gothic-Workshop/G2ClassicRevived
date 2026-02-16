@@ -183,11 +183,11 @@ func void B_GiveDeathInv (var C_NPC slf)
  	// ------ Verteilung von ANFANG AN ------
 	if (slf.aivar[AIV_MM_REAL_ID] == ID_MEATBUG)			{	CreateInvItems (slf, ITFO_REVIVED_MEATBUG, 1);		}
 
-	else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_UNDEAD	, 1);	}
-	else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_FIRE		, 1);	}
-	else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ICE		, 1);	}
-	else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ROCK		, 1);	}
-	else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_SWAMP		, 1);	}
+	//else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_UNDEAD)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_UNDEAD	, 1);	}
+	//else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_FIRE)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_FIRE		, 1);	}
+	//else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ICE)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ICE		, 1);	}
+	//else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_ROCK)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_ROCK		, 1);	}
+	//else if (slf.aivar[AIV_MM_REAL_ID] == ID_DRAGON_SWAMP)	{	CreateInvItems (slf, ITAT_REVIVED_DRAGONHEART_SWAMP		, 1);	}
 
 	else if (slf.aivar[AIV_MM_REAL_ID] == ID_GOBBO_SKELETON){	CreateInvItems (slf, ItAt_GoblinBone	, 1);	}
 	else if (slf.aivar[AIV_MM_REAL_ID] == ID_SKELETON)		{	CreateInvItems (slf, ItAt_SkeletonBone	, 1);	}
