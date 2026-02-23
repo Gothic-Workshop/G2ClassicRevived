@@ -1,9 +1,3 @@
-//#############################################
-//##
-//##	Neue Welt
-//##
-//############################################
-
 instance SLD_809_Bennet (Npc_Default)
 {
 	// ------ NSC ------
@@ -15,7 +9,7 @@ instance SLD_809_Bennet (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 80);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
@@ -23,11 +17,9 @@ instance SLD_809_Bennet (Npc_Default)
 	// ------ Equippte Waffen ------																	//Munition wird automatisch generiert, darf aber angegeben werden
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_01);
 
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_CoolPock, BodyTex_N, ITAR_Smith);		
 	Mdl_SetModelFatness	(self, 2);

@@ -1,7 +1,3 @@
-//******************************************
-//   Gorn in der Oldworld
-//******************************************
-
 INSTANCE PC_Fighter_OW (Npc_Default)	
 {
 	// ------ NSC ------
@@ -13,28 +9,20 @@ INSTANCE PC_Fighter_OW (Npc_Default)
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 100);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------																	
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter",Face_B_Gorn, BodyTex_B, ITAR_REVIVED_SLD_M);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 70); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_3;

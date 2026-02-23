@@ -3,7 +3,7 @@ instance Mil_336_Rick (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Rick";	
-	guild 		= GIL_NONE;  
+	guild 		= GIL_MIL;  
 	id 			= 336;
 	voice 		= 10;
 	flags       = 0;																
@@ -13,7 +13,7 @@ instance Mil_336_Rick (Npc_Default)
 	aivar[AIV_DropDeadAndKill] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
+	B_SetAttributesForLevel(self, 20);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -29,12 +29,6 @@ instance Mil_336_Rick (Npc_Default)
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_336;
 };

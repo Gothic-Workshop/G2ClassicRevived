@@ -13,33 +13,22 @@ instance VLK_415_Meldor (Npc_Default)
 	aivar [AIV_ToughGuy] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 15);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_NORMAL;	// MASTER / STRONG / COWARD
 	
 	// ------ Equippte Waffen ------
 	EquipItem			(self, ITMW_REVIVED_1H_CLUB_02);
-	
-	//EquipItem			(self, fehlt);
-	
+
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-	
-
-		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_NormalBald, BodyTex_P, ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self, 0.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 35); //Grenzen für Talent-Level liegen bei 30 und 60
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_415;
 };

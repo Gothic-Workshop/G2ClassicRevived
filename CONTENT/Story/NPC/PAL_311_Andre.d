@@ -17,7 +17,7 @@ instance PAL_311_Andre (Npc_Default)
 	aivar[AIV_IGNORE_Sheepkiller] 	= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																	
+	B_SetAttributesForLevel(self, 80);																	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -33,12 +33,6 @@ instance PAL_311_Andre (Npc_Default)
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 80); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_311;
 };

@@ -1,29 +1,24 @@
-//#############################################
-//##
-//##	Neue Welt
-//##
-//############################################
-
 instance KDW_439_Vatras (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Vatras"; 
-	guild 		= GIL_VLK;
+	guild 		= GIL_KDW;
 	id 			= 439;
 	voice 		= 5;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly: NPC_FLAG_IMMORTAL		
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ aivars ------
-	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	aivar[AIV_IgnoresFakeGuild] = TRUE;
 	aivar[AIV_IgnoresArmor] 	= TRUE;
+	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);															
-	
+	B_SetAttributesForLevel(self, 200);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);																
+		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_GOOD_02);
@@ -39,13 +34,7 @@ instance KDW_439_Vatras (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Psionic", Face_B_Saturas, BodyTex_B, ITAR_REVIVED_KDW_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_439;
 };

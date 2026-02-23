@@ -12,8 +12,7 @@ instance BDT_1065_Bandit_L (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
-		
+	B_SetAttributesForLevel(self, 15);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;
@@ -23,23 +22,16 @@ instance BDT_1065_Bandit_L (Npc_Default)
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_ToughBart01, BodyTex_N, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA ------
 	daily_routine = Rtn_Start_1065;
 };	 
-	// ------ TA ------
+
 	FUNC VOID RTn_Start_1065()
 	{
 		TA_Smalltalk (00,00,12,00,"NW_CASTLEMINE_TOWER_C");

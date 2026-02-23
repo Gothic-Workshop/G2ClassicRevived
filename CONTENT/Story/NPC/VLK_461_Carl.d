@@ -13,7 +13,7 @@ instance VLK_461_Carl (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
@@ -27,13 +27,7 @@ instance VLK_461_Carl (Npc_Default)
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_L_NormalBart01, BodyTex_L,ITAR_SMITH);	
 	Mdl_SetModelFatness	(self,0);
-	//Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 40); 
+	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_461;

@@ -478,9 +478,9 @@ func void DIA_Serpentes_MinenAnteile_was_ja ()
 		 CreateInvItems (BAU_911_Elena, 	ItWr_MinenAnteil_Mis, 2); 
 		 SalandrilMinenAnteil_MAINCounter = SalandrilMinenAnteil_MAINCounter + 2;
 	 };
-	 if ((Npc_IsDead(BAU_970_Orlan))== FALSE)
+	 if ((Npc_IsDead(OUT_970_ORLAN))== FALSE)
 	 {
-		 CreateInvItems (BAU_970_Orlan, 	ItWr_MinenAnteil_Mis, 1); 
+		 CreateInvItems (OUT_970_ORLAN, 	ItWr_MinenAnteil_Mis, 1); 
 		 SalandrilMinenAnteil_MAINCounter = SalandrilMinenAnteil_MAINCounter + 1;
 	 };
 	 if ((Npc_IsDead(VLK_407_Hakon))== FALSE)

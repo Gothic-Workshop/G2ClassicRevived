@@ -9,7 +9,7 @@ instance VLK_2001_Syra (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);	
+	B_SetAttributesForLevel(self, 15);
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;
@@ -26,12 +26,6 @@ instance VLK_2001_Syra (Npc_Default)
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe", FaceBabe_N_PinkHair, BodyTex_N, NO_ARMOR);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds");
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 50); //Grenzen für Talent-Level liegen bei 30 und 60
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_2001;

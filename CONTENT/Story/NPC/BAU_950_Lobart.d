@@ -4,14 +4,14 @@ instance BAU_950_Lobart (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Lobart";
-	guild 		= GIL_OUT;
+	guild 		= GIL_BAU;
 	id 			= 950;
 	voice 		= 5;
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 6);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
@@ -27,12 +27,6 @@ instance BAU_950_Lobart (Npc_Default)
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 20); //Grenzen für Talent-Level liegen bei 30 und 60
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_950;
 };

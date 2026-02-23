@@ -12,7 +12,7 @@ instance BDT_3003_Cutter (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);																	
+	B_SetAttributesForLevel(self, 60);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;
@@ -30,12 +30,6 @@ instance BDT_3003_Cutter (Npc_Default)
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																
-	B_SetFightSkills (self, 60); 
-
 	daily_routine = Rtn_Start_3003;
 };	 
 

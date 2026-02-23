@@ -2,7 +2,7 @@
 instance VLK_442_Arbeiter (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Worker"; 
+	name 		= NAME_Arbeiter; 
 	guild 		= GIL_VLK;
 	id 			= 442;
 	voice 		= 6;
@@ -13,7 +13,7 @@ instance VLK_442_Arbeiter (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);															
+	B_SetAttributesForLevel(self, 15);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -28,12 +28,6 @@ instance VLK_442_Arbeiter (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart_Senyan, BodyTex_N,ITAR_Bau_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_442;

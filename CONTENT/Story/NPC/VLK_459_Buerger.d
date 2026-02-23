@@ -10,7 +10,7 @@ instance VLK_459_Buerger (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -25,12 +25,6 @@ instance VLK_459_Buerger (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Weak_Cutter, BodyTex_P,ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_459;

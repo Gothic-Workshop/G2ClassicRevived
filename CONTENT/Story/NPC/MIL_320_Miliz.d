@@ -10,7 +10,7 @@ instance Mil_320_Miliz (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	
+	B_SetAttributesForLevel(self, 60);																		
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -18,22 +18,14 @@ instance Mil_320_Miliz (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_06);
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Drax, BodyTex_N, ITAR_REVIVED_GRD_L);	
 	Mdl_SetModelFatness	(self,-1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_320;
 };

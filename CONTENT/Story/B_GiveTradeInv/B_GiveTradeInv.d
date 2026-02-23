@@ -28,11 +28,11 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Hakon;		Trd_Hakon		= Hlp_GetNpc (VLK_407_Hakon);
 	var C_NPC Trd_Coragon;		Trd_Coragon		= Hlp_GetNpc (VLK_420_Coragon);
 	var C_NPC Trd_Gorax;		Trd_Gorax		= Hlp_GetNpc (KDF_508_Gorax);
-	var C_NPC Trd_Orlan;		Trd_Orlan		= Hlp_GetNpc (BAU_970_Orlan);
+	var C_NPC Trd_Orlan;		Trd_Orlan		= Hlp_GetNpc (OUT_970_ORLAN);
 	var C_NPC Trd_Bennet;		Trd_Bennet		= Hlp_GetNpc (SLD_809_Bennet);
 	var C_NPC Trd_Bennet_DI;	Trd_Bennet_DI	= Hlp_GetNpc (SLD_809_Bennet_DI);
 	var C_NPC Trd_Elena;		Trd_Elena		= Hlp_GetNpc (BAU_911_Elena);
-	var C_NPC Trd_Sagitta;		Trd_Sagitta		= Hlp_GetNpc (BAU_980_Sagitta);
+	var C_NPC Trd_Sagitta;		Trd_Sagitta		= Hlp_GetNpc (OUT_890_SAGITTA);
 	var C_NPC Trd_Kjorn;		Trd_Kjorn		= Hlp_GetNpc (DJG_710_Kjorn);
 	var C_NPC Trd_Rethon;		Trd_Rethon		= Hlp_GetNpc (DJG_709_Rethon);
 	var C_NPC Trd_Rosi;			Trd_Rosi		= Hlp_GetNpc (BAU_936_Rosi);
@@ -51,7 +51,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 	var C_NPC Trd_Lutero;		Trd_Lutero		= Hlp_GetNpc (VLK_404_Lutero);
 	
 	//MOD
-	var C_NPC Trd_Martin;		Trd_Martin	 	= Hlp_GetNpc (Mil_350_Addon_Martin); 
+	var C_NPC Trd_Martin;		Trd_Martin	 	= Hlp_GetNpc (GRD_350_Martin); 
 	var C_NPC Trd_Gordon;		Trd_Gordon	 	= Hlp_GetNpc (NONE_1000_Gordon); 
 	var C_NPC Trd_Rupert;		Trd_Rupert	 	= Hlp_GetNpc (VLK_458_Rupert); 
 	var C_NPC Trd_Xardas;		Trd_Xardas	 	= Hlp_GetNpc (NONE_100_Xardas); 

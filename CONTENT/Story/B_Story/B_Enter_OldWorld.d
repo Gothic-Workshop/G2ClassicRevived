@@ -138,7 +138,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_3 ()
 		Wld_InsertNpc	(BDT_1005_Bandit_M,"OW_SAWHUT_SLEEP_01");
 		Wld_InsertNpc	(BDT_1006_Bandit_H,"OW_SAWHUT_SLEEP_01");
 		Wld_InsertNpc	(BDT_1005_Bandit_M,"PATH_OC_NC_4");
-		Wld_InsertNpc	(BDT_1000_Bandit_L,"OW_SAWHUT_MEATBUG_SPAWN");
+		Wld_InsertNpc	(BDT_1000_LOAFER,"OW_SAWHUT_MEATBUG_SPAWN");
 		Wld_InsertNpc	(BDT_1003_Bandit_M,"OW_SAWHUT_GREENGOBBO_SPAWN"); */
 		
 		//Snapper vor Mine3 
@@ -253,7 +253,7 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 			Wld_InsertNpc		(PC_Fighter_DJG, 		"OC1");
 			};
 
-		Wld_InsertNpc		(DJG_705_Angar, 		"OC1"); 
+		Wld_InsertNpc		(NONE_705_ANGAR, 		"OC1"); 
 		Wld_InsertNpc		(DJG_708_Kurgan, 		"OC1"); 
 		Wld_InsertNpc		(DJG_709_Rethon, 		"OC1"); 
 		Wld_InsertNpc		(DJG_710_Kjorn,			"OC1"); 
@@ -620,13 +620,13 @@ FUNC VOID B_ENTER_OLDWORLD_Kapitel_4 ()
 		//--------
 			if (Talbin_FollowsThroughPass == LOG_OBSOLETE)
 				{
-					B_KillNpc 		(VLK_4130_Talbin);
+					B_KillNpc 		(OUT_4130_TALBIN);
 					Wld_InsertNpc	(Dragonsnapper, "START");
 					Talbin_FollowsThroughPass = LOG_FAILED;
 				}
 			else if (Talbin_FollowsThroughPass == LOG_SUCCESS)
 				{
-					B_RemoveNpc 	(VLK_4130_Talbin);
+					B_RemoveNpc 	(OUT_4130_TALBIN);
 					//Talbin_FollowsThroughPass = LOG_FAILED;	//Joly: absoluter Schluﬂ
 				};
 };

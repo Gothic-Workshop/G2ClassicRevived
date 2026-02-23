@@ -2,7 +2,7 @@ INSTANCE KDF_511_Daron (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Daron";
-	guild 		= GIL_VLK;
+	guild 		= GIL_KDF;
 	id 			= 511;
 	voice 		= 10;
 	flags       = 0;																	
@@ -12,10 +12,11 @@ INSTANCE KDF_511_Daron (Npc_Default)
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);																
+	B_SetAttributesForLevel(self, 200);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);																
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03);
@@ -28,12 +29,6 @@ INSTANCE KDF_511_Daron (Npc_Default)
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 80); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_511;
 };

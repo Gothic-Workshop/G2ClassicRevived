@@ -10,14 +10,13 @@ instance Mil_316_Wambo (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 60);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
-	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -27,12 +26,6 @@ instance Mil_316_Wambo (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart16, BodyTex_N, ITAR_REVIVED_GRD_H);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_316;

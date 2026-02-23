@@ -205,12 +205,12 @@ FUNC VOID DIA_Richter_KillMorgahard_Info()
 	AI_Output (self ,other,"DIA_Richter_KillMorgahard_10_05"); //The name of their leader is Morgahard. I want you to kill him.
 	AI_Output (self ,other,"DIA_Richter_KillMorgahard_10_06"); //Go hurry before they are gone for good.
 	
-	Wld_InsertNpc	(BDT_1030_Morgahard,"REICH"); 
-	Wld_InsertNpc	(BDT_1031_Fluechtling,"REICH"); 
-	Wld_InsertNpc	(BDT_1032_Fluechtling,"REICH"); 
-	Wld_InsertNpc	(BDT_1033_Fluechtling,"REICH"); 
-	Wld_InsertNpc	(BDT_1034_Fluechtling,"REICH"); 
-	Wld_InsertNpc	(BDT_1035_Fluechtling,"REICH"); 
+	Wld_InsertNpc	(OUT_1030_MORGAHARD,"REICH"); 
+	Wld_InsertNpc	(OUT_1031_FLUECHTLING,"REICH"); 
+	Wld_InsertNpc	(OUT_1032_FLUECHTLING,"REICH"); 
+	Wld_InsertNpc	(OUT_1033_FLUECHTLING,"REICH"); 
+	Wld_InsertNpc	(OUT_1034_FLUECHTLING,"REICH"); 
+	Wld_InsertNpc	(OUT_1035_FLUECHTLING,"REICH"); 
 
 	B_InitNpcGlobals ();
 

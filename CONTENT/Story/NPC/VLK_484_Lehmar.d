@@ -13,7 +13,7 @@ instance VLK_484_Lehmar (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);															
+	B_SetAttributesForLevel(self, 20);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -30,12 +30,6 @@ instance VLK_484_Lehmar (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Whistler, BodyTex_N,ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 50); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_484;

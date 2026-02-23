@@ -1,7 +1,7 @@
 instance BDT_1064_Bandit_L (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Guard"; 
+	name 		= NAME_Wache; 
 	guild 		= GIL_BDT;
 	id 			= 1064;
 	voice 		= 4;
@@ -13,7 +13,7 @@ instance BDT_1064_Bandit_L (Npc_Default)
 	aivar[AIV_NewsOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesForLevel(self, 25);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;
@@ -28,12 +28,6 @@ instance BDT_1064_Bandit_L (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Orik, BodyTex_B, ITAR_REVIVED_BDT_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 60); 
 
 	// ------ TA ------
 	daily_routine = Rtn_Start_1064;

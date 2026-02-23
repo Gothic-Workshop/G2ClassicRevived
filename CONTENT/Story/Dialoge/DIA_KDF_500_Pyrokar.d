@@ -1092,12 +1092,12 @@ func void DIA_Pyrokar_GIVEINNOSEYE_wer ()
 			B_KillNpc (Lothar);
 
 
-		Wld_InsertNpc 		(VLK_4250_Jorgen,"NW_MONASTERY_BRIDGE_01");
+		Wld_InsertNpc 		(OUT_4250_JORGEN,"NW_MONASTERY_BRIDGE_01");
 
-		Wld_InsertNpc		(BDT_1050_Landstreicher, "NW_TROLLAREA_NOVCHASE_01");
+		Wld_InsertNpc		(BDT_1050_Wegelagerer, "NW_TROLLAREA_NOVCHASE_01");
 		Wld_InsertNpc		(BDT_1051_Wegelagerer, "NW_TROLLAREA_RITUALFOREST_09"); 
 		Wld_InsertNpc		(BDT_1052_Wegelagerer, "NW_TROLLAREA_RITUALFOREST_09");
-		B_KillNpc 			(BDT_1020_Bandit_L);	//Joly: macht Platz für DMT_1200_Dementor
+		B_KillNpc 			(BDT_1020_Wegelagerer);	//Joly: macht Platz für DMT_1200_Dementor
 
 		Wld_InsertNpc		(DMT_1200_Dementor, "NW_TROLLAREA_RITUALPATH_01");
 		//Wld_InsertNpc		(DMT_1201_Dementor, "NW_TROLLAREA_RITUALPATH_01");

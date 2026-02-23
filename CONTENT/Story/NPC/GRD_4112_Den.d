@@ -10,13 +10,7 @@ instance GRD_4112_Den (Npc_Default)
 	npctype		= NPCTYPE_OCAMBIENT;
 	
 	// ------ Attribute ------
-	// ------ Attribute ------
-	slf.attribute[ATR_STRENGTH] 		= 10;
-	slf.attribute[ATR_DEXTERITY] 		= 10;
-	slf.attribute[ATR_MANA_MAX] 		= 0;
-	slf.attribute[ATR_MANA] 			= 0;
-	slf.attribute[ATR_HITPOINTS_MAX]	= 1;
-	slf.attribute[ATR_HITPOINTS] 		= 1;															
+	B_SetAttributesForLevel(self, 40);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -30,18 +24,12 @@ instance GRD_4112_Den (Npc_Default)
 	CreateInvItems (self, ItMi_GoldRing,   1);
 	CreateInvItems (self, ItMi_SilverCandleHolder, 1);
 	CreateInvItems (self, ItMi_GoldNecklace,   1);	
-	// ------ visuals ------																			
 	
+	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_NormalBart_Grim, BodyTex_N, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30);
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4112;
 };

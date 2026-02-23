@@ -10,7 +10,7 @@ instance VLK_414_Hanna (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
+	B_SetAttributesForLevel(self, 15);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -21,17 +21,10 @@ instance VLK_414_Hanna (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------						FaceBabe_N_HairAndCloth																
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe1", FaceBabe_N_WhiteCloth, BodyTex_N, ITAR_VlkBabe_L);	
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 35); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_414;
 };

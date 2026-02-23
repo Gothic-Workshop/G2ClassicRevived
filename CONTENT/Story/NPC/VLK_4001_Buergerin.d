@@ -10,27 +10,21 @@ instance VLK_4001_Buergerin (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
+	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_BabeHair", FaceBabe_N_HairAndCloth, BodyTex_N, ITAR_VlkBabe_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4001;

@@ -9,7 +9,8 @@ INSTANCE NOV_603_Agon (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);	
+	B_SetAttributesForLevel(self, 15);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -20,18 +21,11 @@ INSTANCE NOV_603_Agon (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal01, BodyTex_N, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_603;
 };

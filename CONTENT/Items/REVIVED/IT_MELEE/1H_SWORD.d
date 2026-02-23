@@ -1479,7 +1479,7 @@ INSTANCE ITMW_REVIVED_1H_SWORD_CASSIA (C_Item)
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_1H_Sword_Cassia;
-	owner				= 	VLK_447_Cassia;
+	owner				= 	BDT_447_CASSIA;
 
 	damageTotal			= 	REV_Damage_1H_Sword_Cassia;
 	damagetype 			=	DAM_EDGE;		

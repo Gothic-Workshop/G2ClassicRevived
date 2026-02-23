@@ -10,7 +10,7 @@ instance VLK_456_Abuyin (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
@@ -25,12 +25,6 @@ instance VLK_456_Abuyin (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Sharky, BodyTex_B,ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self,0);
 	//Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds");
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 50); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_456;

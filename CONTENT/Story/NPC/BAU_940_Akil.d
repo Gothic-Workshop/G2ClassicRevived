@@ -4,17 +4,14 @@ instance BAU_940_Akil (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Akil";
-	guild 		= GIL_OUT;
+	guild 		= GIL_BAU;
 	id 			= 940;
 	voice 		= 13;
 	flags       = NPC_FLAG_IMMORTAL;		//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
-	
-	attribute[ATR_HITPOINTS] 	 = 300; 
-	attribute[ATR_HITPOINTS_MAX] = 300;
+	B_SetAttributesForLevel(self, 7);	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -30,12 +27,6 @@ instance BAU_940_Akil (Npc_Default)
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 40); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_940;
 };

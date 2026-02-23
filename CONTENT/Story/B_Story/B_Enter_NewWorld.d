@@ -402,7 +402,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		{B_StartOtherRoutine	(Salandril,"Start"); };
 
 		B_StartOtherRoutine	(Jorgen,"Kloster"); 
-		B_KillNpc	(BDT_1050_Landstreicher); //Joly: brauchen wir nicht mehr!
+		B_KillNpc	(BDT_1050_Wegelagerer); //Joly: brauchen wir nicht mehr!
 	
 		// ------ Respawn ------
 	
@@ -691,7 +691,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_4 ()
 		
 		if (Talbin_FollowsThroughPass == LOG_RUNNING)
 			{
-				Wld_InsertNpc	(VLK_4132_Talbin_NW, "LEVELCHANGE");
+				Wld_InsertNpc	(OUT_4130_TALBIN_NW, "LEVELCHANGE");
 				Talbin_FollowsThroughPass = LOG_SUCCESS;	//Joly: VORSICHT!! keine Abfrage machen auf LOG_SUCCESS!!!!!!!!
 			};
 };
@@ -729,7 +729,7 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 		};
 	IF (DJG_Angar_is_alive == TRUE)
 		{
-			Wld_InsertNpc		(DJG_705_Angar_NW, 	"Bigfarm");
+			Wld_InsertNpc		(NONE_705_ANGAR_NW, 	"Bigfarm");
 		};
 
 	// ------ Respawn ------
@@ -914,7 +914,7 @@ FUNC VOID B_ENTER_NEWWORLD ()
 	if (BilgotSecondPass == TRUE)
 	&& (BilgotInKhorinis == FALSE)
 	{
-		Wld_InsertNpc(GRD_4121_Bilgot_NW, "NW_CASTLEMINE_TROLL_04_D");
+		Wld_InsertNpc(GRD_4120_Bilgot_NW, "NW_CASTLEMINE_TROLL_04_D");
 
 		BilgotInKhorinis = TRUE;
 	};	

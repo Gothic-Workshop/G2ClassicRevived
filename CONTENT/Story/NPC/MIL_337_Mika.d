@@ -3,14 +3,14 @@ instance Mil_337_Mika (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Mika";	
-	guild 		= GIL_OUT;	//Joly: Wenn GIL_OUT Probleme macht, bitte mir Bescheid geben!!!  Björn
+	guild 		= GIL_MIL;	
 	id 			= 337;
 	voice 		= 12;
 	flags       = 0;																
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
+	B_SetAttributesForLevel(self, 50);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -22,18 +22,11 @@ instance Mil_337_Mika (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fatbald", Face_L_ToughBart_Quentin, BodyTex_L, ITAR_REVIVED_GRD_S);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_337;
 };

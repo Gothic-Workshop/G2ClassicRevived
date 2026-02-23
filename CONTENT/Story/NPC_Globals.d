@@ -329,11 +329,11 @@ func void  B_InitNpcGlobals ()
  	
  	//gefangene Addonworld
  	
- 	Cavalorn 		= Hlp_GetNpc (BAU_4300_Addon_Cavalorn);
+ 	Cavalorn 		= Hlp_GetNpc (OUT_4300_CAVALORN);
 
-	Martin			= Hlp_GetNpc (Mil_350_Addon_Martin);	
-	Gaan			= Hlp_GetNpc (BAU_961_Gaan);				
-	Farim			= Hlp_GetNpc (VLK_4301_Addon_Farim);				  	
+	Martin			= Hlp_GetNpc (GRD_350_Martin);	
+	Gaan			= Hlp_GetNpc (OUT_961_GAAN);				
+	Farim			= Hlp_GetNpc (VLK_4301_Farim);				  	
   
   	Dexter			= Hlp_GetNpc (BDT_1060_Dexter);	
  	
@@ -365,8 +365,8 @@ func void  B_InitNpcGlobals ()
 	
 	
 // ------ Banditen vom Gamestart
-	Ambusher_1013	= Hlp_GetNpc (Bdt_1013_Bandit_L);
-	Ambusher_1014	= Hlp_GetNpc (Bdt_1014_Bandit_L);
+	Ambusher_1013	= Hlp_GetNpc (BDT_1013_BANDIT);
+	Ambusher_1014	= Hlp_GetNpc (BDT_1014_BRAGO);
 	Ambusher_1015	= Hlp_GetNpc (Bdt_1015_Bandit_L);
  
  //----NewWorld----
@@ -394,18 +394,18 @@ func void  B_InitNpcGlobals ()
 	Torwache_305	= Hlp_GetNpc(Mil_305_Torwache);
  	Lagerwache 		= Hlp_GetNpc(BDT_328_Miliz);
  	Halvor 			= Hlp_GetNpc (VLK_469_Halvor);
- 	Attila 			= Hlp_GetNpc (VLK_494_Attila);
+ 	Attila 			= Hlp_GetNpc (BDT_494_ATTILA);
  	Brahim 			= Hlp_GetNpc (VLK_437_Brahim);
 	Nadja			= Hlp_GetNpc (VLK_435_Nadja);
 	Vanja			= Hlp_GetNpc (VLK_491_Vanja);
 	Moe				= Hlp_GetNpc (VLK_432_Moe);
 	Valentino		= Hlp_GetNpc (VLK_421_Valentino);
-	Sagitta			= Hlp_GetNpc (BAU_980_Sagitta);
+	Sagitta			= Hlp_GetNpc (OUT_890_SAGITTA);
 	BDTWache		= Hlp_GetNpc (BDT_1061_Wache);
 	
 	Karras			= Hlp_GetNpc (KDF_503_Karras);
 	Gorax 			= Hlp_GetNpc (KDF_508_Gorax);
-	Rengaru			= Hlp_GetNpc (VLK_492_Rengaru);
+	Rengaru			= Hlp_GetNpc (BDT_492_RENGARU);
 	Sarah			= Hlp_GetNpc (VLK_470_Sarah);
 	Canthar			= Hlp_GetNpc (VLK_468_Canthar);
 	Andre			= Hlp_GetNpc (PAL_311_Andre);
@@ -441,15 +441,15 @@ func void  B_InitNpcGlobals ()
 	Jack			= Hlp_GetNpc (VLK_444_Jack);
 	
 	Jack_DI		    = Hlp_GetNpc (VLK_444_Jack_DI);
-	Jorgen_DI		= Hlp_GetNpc (VLK_4250_Jorgen_DI);
+	Jorgen_DI		= Hlp_GetNpc (OUT_4250_JORGEN_DI);
 	Torlof			= Hlp_GetNpc (SLD_801_Torlof);
 	Torlof_DI		= Hlp_GetNpc (SLD_801_Torlof_DI);
 	
 	Peck			= Hlp_GetNpc (MIL_324_Peck);
-	Cassia			= Hlp_GetNpc (VLK_447_Cassia);
-	Jesper			= Hlp_GetNpc (VLK_446_Jesper);
-	Ramirez			= Hlp_GetNpc (VLK_445_Ramirez);
-	Nagur			= Hlp_GetNpc (VLK_493_Nagur);
+	Cassia			= Hlp_GetNpc (BDT_447_CASSIA);
+	Jesper			= Hlp_GetNpc (BDT_446_JESPER);
+	Ramirez			= Hlp_GetNpc (BDT_445_RAMIREZ);
+	Nagur			= Hlp_GetNpc (BDT_493_NAGUR);
 	Rangar 			= Hlp_GetNpc (MIL_321_Rangar);
 	
 	Sylvio			= Hlp_GetNpc (SLD_806_Sylvio);
@@ -472,7 +472,7 @@ func void  B_InitNpcGlobals ()
 	Alvares			= Hlp_GetNpc (SLD_840_Alvares); 
 	Kati			= Hlp_GetNpc (BAU_941_Kati); 
 	Akil			= Hlp_GetNpc (BAU_940_Akil); 
-	Orlan			= Hlp_GetNpc (BAU_970_Orlan); 
+	Orlan			= Hlp_GetNpc (OUT_970_ORLAN); 
 	Rukhar			= Hlp_GetNpc (BAU_973_Rukhar); 
 	Randolph		= Hlp_GetNpc (BAU_942_Randolph); 
  	Pedro			= Hlp_GetNpc (NOV_600_Pedro); 
@@ -498,7 +498,7 @@ func void  B_InitNpcGlobals ()
 	
 
 	Bote			= Hlp_GetNpc (VLK_4006_Bote);	
-	Jorgen			= Hlp_GetNpc (VLK_4250_Jorgen);
+	Jorgen			= Hlp_GetNpc (OUT_4250_JORGEN);
 	LeuchtturmBandit_1021	= Hlp_GetNpc (BDT_1021_LeuchtturmBandit);
 	LeuchtturmBandit_1022	= Hlp_GetNpc (BDT_1022_LeuchtturmBandit);
 	LeuchtturmBandit_1023	= Hlp_GetNpc (BDT_1023_LeuchtturmBandit);
@@ -506,7 +506,7 @@ func void  B_InitNpcGlobals ()
 	Harad					= Hlp_GetNpc (VLK_412_Harad);
 	Gerbrandt				= Hlp_GetNpc (VLK_403_Gerbrandt);
 	GerbrandtsFrau			= Hlp_GetNpc (VLK_497_Buergerin);
-	Morgahard				= Hlp_GetNpc (BDT_1030_Morgahard);
+	Morgahard				= Hlp_GetNpc (OUT_1030_MORGAHARD);
 	Tengron					= Hlp_GetNpc (PAL_280_Tengron);
 	Engor					= Hlp_GetNpc (GRD_4108_Engor);
 
@@ -539,7 +539,7 @@ func void  B_InitNpcGlobals ()
 	Marcos_Guard1		= Hlp_GetNpc(PAL_253_Wache);
 	Marcos_Guard2		= Hlp_GetNpc(PAL_257_Ritter);
 	
-	Jergan				= Hlp_GetNpc(VLK_4110_Jergan);
+	Jergan				= Hlp_GetNpc(OUT_4110_JERGAN);
 	Parlaf 				= Hlp_GetNpc (GRD_4107_Parlaf);
 	
 	Garond				= Hlp_GetNpc(PAL_250_Garond);
@@ -549,9 +549,9 @@ func void  B_InitNpcGlobals ()
 	DJG_Bullco 			= Hlp_GetNpc(DJG_701_Bullco);
 	DJG_Rod 			= Hlp_GetNpc(DJG_702_Rod);	 
 	DJG_Cipher 			= Hlp_GetNpc(DJG_703_Cipher);
-	DJG_Angar 			= Hlp_GetNpc(DJG_705_Angar);
-	Angar_NW 			= Hlp_GetNpc(DJG_705_Angar_NW);
-	Angar_DI 			= Hlp_GetNpc(DJG_705_Angar_DI);
+	DJG_Angar 			= Hlp_GetNpc(NONE_705_ANGAR);
+	Angar_NW 			= Hlp_GetNpc(NONE_705_ANGAR_NW);
+	Angar_DI 			= Hlp_GetNpc(NONE_705_ANGAR_DI);
 
 	Kurgan				= Hlp_GetNpc(DJG_708_Kurgan);	 
 	Kjorn			 	= Hlp_GetNpc(DJG_710_Kjorn);	  

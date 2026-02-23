@@ -12,7 +12,7 @@ instance BDT_3005_Drake (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesForLevel(self, 30);																		
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;
@@ -29,12 +29,6 @@ instance BDT_3005_Drake (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_ImportantGrey, BodyTex_N, ITAR_REVIVED_GRD_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																
-	B_SetFightSkills (self, 60); 
 
 	daily_routine = Rtn_Start_3005;
 };	 

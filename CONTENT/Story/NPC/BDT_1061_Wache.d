@@ -12,7 +12,7 @@ instance BDT_1061_Wache (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 25);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;
@@ -22,18 +22,11 @@ instance BDT_1061_Wache (Npc_Default)
 
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart17, BodyTex_N, ITAR_REVIVED_BDT_M);	
 	Mdl_SetModelFatness	(self, -1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	daily_routine = Rtn_Start_1061;
 };	 

@@ -8,7 +8,8 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);	
+	B_SetAttributesForLevel(self, 100);	
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);	
 														
 		
 	// ------ Kampf-Taktik ------
@@ -22,14 +23,7 @@ PROTOTYPE Default_AmbientDementor (C_NPC)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_Dementor);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-		
-	// ------ NSC-relevante Talente vergeben ------
-	Npc_SetTalentSkill	(self, NPC_TALENT_MAGE, 			6);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 80);
-	
+
 	aivar[AIV_MM_FollowTime] = NPC_TIME_FOLLOW;
 	aivar[AIV_FightDistCancel] = FIGHT_DIST_CANCEL;
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;

@@ -245,7 +245,7 @@ FUNC VOID STARTUP_DRAGONISLAND ()
 	
 	if ( JorgenIsCaptain == TRUE)	//Jorgen
 	{
-		Wld_InsertNpc 	(VLK_4250_Jorgen_DI, 	"SHIP_DECK_01");
+		Wld_InsertNpc 	(OUT_4250_JORGEN_DI, 	"SHIP_DECK_01");
 	};
 
 	if ( TorlofIsCaptain == TRUE)	//Torlof
@@ -336,7 +336,7 @@ FUNC VOID STARTUP_DRAGONISLAND ()
 
 	if ( Angar_IsOnBoard == LOG_SUCCESS)	//Angar
 	{
-		Wld_InsertNpc 	(DJG_705_Angar_DI, 		"SHIP_DECK_01");
+		Wld_InsertNpc 	(NONE_705_ANGAR_DI, 		"SHIP_DECK_01");
 	};	
 
 	if ( Girion_IsOnBoard == LOG_SUCCESS)	//Girion

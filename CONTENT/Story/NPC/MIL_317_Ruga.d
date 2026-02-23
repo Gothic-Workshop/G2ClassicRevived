@@ -10,7 +10,7 @@ instance Mil_317_Ruga (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self,2);																	
+	B_SetAttributesForLevel(self, 60);																
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -18,7 +18,6 @@ instance Mil_317_Ruga (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
 	EquipItem 			(self, ItRw_Mil_Crossbow);
-	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -28,12 +27,6 @@ instance Mil_317_Ruga (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief", Face_N_NormalBart03, BodyTex_N, ITAR_REVIVED_GRD_M);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_317;

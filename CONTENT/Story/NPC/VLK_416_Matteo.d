@@ -10,7 +10,7 @@ instance VLK_416_Matteo (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 15);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -18,23 +18,14 @@ instance VLK_416_Matteo (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_1H_SWORD_07);
 	
-	
 	// ------ Inventory ------
 	// Händler
 	
-
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Gomez , BodyTex_N, ITAR_VLK_M);
 	Mdl_SetModelFatness	(self, 1.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 35); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_416;
 };

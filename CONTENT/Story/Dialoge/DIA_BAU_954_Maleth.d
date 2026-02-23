@@ -159,8 +159,8 @@ instance DIA_Maleth_BanditsALIVE (C_INFO) //E2
 
 func int DIA_Maleth_BanditsALIVE_Condition ()
 {
-	var C_NPC b13; b13 = Hlp_GetNpc(Bdt_1013_Bandit_L);
-	var C_NPC b14; b14 = Hlp_GetNpc(Bdt_1014_Bandit_L);
+	var C_NPC b13; b13 = Hlp_GetNpc(BDT_1013_BANDIT);
+	var C_NPC b14; b14 = Hlp_GetNpc(BDT_1014_BRAGO);
 	var C_NPC b15; b15 = Hlp_GetNpc(Bdt_1015_Bandit_L);
 	
 	if ( (!Npc_IsDead (b13)) || (!Npc_IsDead (b14)) || (!Npc_IsDead (b15)) )

@@ -12,7 +12,7 @@ instance BDT_3002_Arto (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																	
+	B_SetAttributesForLevel(self, 70);																	
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;
@@ -27,12 +27,6 @@ instance BDT_3002_Arto (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Important_Arto, BodyTex_N, ITAR_REVIVED_EBR_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-	
-		// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																
-	B_SetFightSkills (self, 90); 
 
 	daily_routine = Rtn_Start_3002;
 };	 

@@ -9,14 +9,8 @@ instance PAL_2007_Leiche (Npc_Default)
 	flags       = 0;																	//NPC_FLAG_IMMORTAL oder 0
 	npctype		= NPCTYPE_OCAMBIENT;
 	
-	
 	// ------ Attribute ------
-	slf.attribute[ATR_STRENGTH] 		= 10;
-	slf.attribute[ATR_DEXTERITY] 		= 10;
-	slf.attribute[ATR_MANA_MAX] 		= 0;
-	slf.attribute[ATR_MANA] 			= 0;
-	slf.attribute[ATR_HITPOINTS_MAX]	= 1;
-	slf.attribute[ATR_HITPOINTS] 		= 1;																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 80);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	// MASTER / STRONG / COWARD
@@ -33,12 +27,6 @@ instance PAL_2007_Leiche (Npc_Default)
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
 	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 70); //Grenzen für Talent-Level liegen bei 30 und 60
-
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_2007;
 };

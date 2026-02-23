@@ -14,30 +14,25 @@ INSTANCE KDF_502_Ulthar (Npc_Default)
 	aivar[AIV_IGNORE_Murder]		= TRUE;
 	aivar[AIV_IGNORE_Theft] 		= TRUE;
 	aivar[AIV_IGNORE_Sheepkiller] 	= TRUE;
+	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 200);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);																
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_BLADES_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald",Face_L_NormalBart01 , BodyTex_L, ITAR_REVIVED_KDF_H);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_502;

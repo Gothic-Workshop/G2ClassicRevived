@@ -10,7 +10,7 @@ instance PAL_267_Sengrath (Npc_Default)
 	npctype		= NPCTYPE_OCMAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);																	
+	B_SetAttributesForLevel(self, 80);																	
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_NAILED;	
 	
@@ -21,17 +21,10 @@ instance PAL_267_Sengrath (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal03, BodyTex_N, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds");
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 65); 
 	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_267;

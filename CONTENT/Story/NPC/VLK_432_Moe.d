@@ -3,7 +3,7 @@ instance VLK_432_Moe (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Moe"; 
-	guild 		= GIL_NONE;
+	guild 		= GIL_VLK;
 	id 			= 432;
 	voice 		= 1;
 	flags       = 0;																
@@ -13,7 +13,7 @@ instance VLK_432_Moe (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic	= FAI_HUMAN_NORMAL;	
@@ -21,21 +21,13 @@ instance VLK_432_Moe (Npc_Default)
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_CLUB_01); 
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Scar, BodyTex_N,ITAR_REVIVED_BEGGAR);	
 	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_432;

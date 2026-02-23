@@ -3,14 +3,14 @@ instance SLD_840_Alvares (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Alvares"; 
-	guild 		= GIL_BDT;
+	guild 		= GIL_SLD;
 	id 			= 840;
 	voice 		= 11;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 20);																	
 	
 	//--------Aivars-----------------------
 	aivar[AIV_EnemyOverride] = TRUE;  
@@ -21,21 +21,13 @@ instance SLD_840_Alvares (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_2H_AXE_LIGHT_03);
 
-
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_B_Tough_Silas, BodyTex_B, ITAR_REVIVED_SLD_L_02);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 25); 
 	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_840;

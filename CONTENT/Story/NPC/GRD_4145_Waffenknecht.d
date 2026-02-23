@@ -10,7 +10,7 @@ instance GRD_4145_Waffenknecht (Npc_Default)
 	npctype		= NPCTYPE_OCAMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																
+	B_SetAttributesForLevel(self, 40);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic	= FAI_NAILED;	
@@ -20,19 +20,11 @@ instance GRD_4145_Waffenknecht (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	
-		
+
 	// ------ visuals ------																			
-	
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_NormalBart09, BodyTex_N, ITAR_REVIVED_PAL_L);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4145;

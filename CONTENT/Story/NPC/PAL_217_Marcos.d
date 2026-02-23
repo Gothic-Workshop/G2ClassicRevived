@@ -3,14 +3,14 @@ instance PAL_217_Marcos  (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Marcos";
-	guild 		= GIL_OUT;
+	guild 		= GIL_PAL;
 	id 			= 217;
 	voice 		= 4;
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_OCMAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);													
+	B_SetAttributesForLevel(self, 80);													
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_STRONG;	
@@ -20,19 +20,12 @@ instance PAL_217_Marcos  (Npc_Default)
 	EquipItem			(self, ItRw_Mil_Crossbow);
 	
 	// ------ Inventory ------
-	
 	CreateInvItems (self, ITPO_REVIVED_HEALTH_03,5);
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_Tough_Rodriguez, BodyTex_P, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 75); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_217;

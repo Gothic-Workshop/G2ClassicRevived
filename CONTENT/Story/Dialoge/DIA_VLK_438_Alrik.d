@@ -167,85 +167,50 @@ FUNC VOID DIA_Alrik_Regeln_Info()
 
 
 // ************************************************************
-// 		  			Important für NEUE 3 Kämpfe ab Kap 3
+// 		  			
 // ************************************************************
 
-		func void B_Alrik_Again()
-		{
-			AI_Output (self, other, "DIA_Alrik_Add_09_03"); //How's it going? Do you want to go up against me again? I think I've gotten better in the meantime...
-		};
-
-INSTANCE DIA_Alrik_NewFights3(C_INFO)
+INSTANCE DIA_Alrik_NewFights(C_INFO)
 {
 	npc			= VLK_438_Alrik;
 	nr			= 1;
-	condition	= DIA_Alrik_NewFights3_Condition;
-	information	= DIA_Alrik_NewFights3_Info;
+	condition	= DIA_Alrik_NewFights_Condition;
+	information	= DIA_Alrik_NewFights_Info;
 	permanent	= FALSE;
 	important 	= TRUE;
 };                       
 
-FUNC INT DIA_Alrik_NewFights3_Condition()
+FUNC INT DIA_Alrik_NewFights_Condition()
 {
-	if (Kapitel >= 3)
-	&& (Kapitel <= 4)
-	&& (Alrik_ArenaKampfVerloren <= 6)
-	{
-		return TRUE;
-	};
-};
-
-FUNC VOID DIA_Alrik_NewFights3_Info()
-{
-	B_AddFightSkill (self, NPC_TALENT_1H, 20);
-	B_SetAttributesToChapter (self, 4);
-	B_Alrik_Again();
-};
-
-// ************************************************************
-// 		  			Important für NEUE 3 Kämpfe ab Kap 5
-// ************************************************************
-
-INSTANCE DIA_Alrik_NewFights5(C_INFO)
-{
-	npc			= VLK_438_Alrik;
-	nr			= 1;
-	condition	= DIA_Alrik_NewFights5_Condition;
-	information	= DIA_Alrik_NewFights5_Info;
-	permanent	= FALSE;
-	important 	= TRUE;
-};                       
-
-FUNC INT DIA_Alrik_NewFights5_Condition()
-{
-	if (Kapitel >= 5)
+	if (Alrik_ArenaDayCount <= (Wld_GetDay()-3))
 	&& (Alrik_ArenaKampfVerloren <= 9)
 	{
 		return TRUE;
 	};
 };
 
-FUNC VOID DIA_Alrik_NewFights5_Info()
+FUNC VOID DIA_Alrik_NewFights_Info()
 {
-	B_AddFightSkill (self, NPC_TALENT_1H, 20);
-	B_SetAttributesToChapter (self, 6);
-	B_Alrik_Again();
+	Alrik_LevelUpCount = Alrik_LevelUpCount + 1;
+	B_SetAttributesForLevel(self, 20 + Alrik_LevelUpCount); //Alrik wird mit jedem neuen Kampf stärker, damit er nicht zu schnell langweilig wird. Maximal auf Level 30.
+	
+	AI_Output (self, other, "DIA_Alrik_Add_09_03"); //How's it going? Do you want to go up against me again? I think I've gotten better in the meantime...
 };
 
 // ************************************************************
 // 			  			WannaFight
 // ************************************************************
 		
-		func void B_Alrik_Enough()
-		{
-			AI_Output (self ,other,"DIA_Alrik_WannaFight_09_05"); //I think you've won often enough.
-			AI_Output (self ,other,"DIA_Alrik_WannaFight_09_06"); //Don't get me wrong, but my skull's still buzzing from the last time...
-		};
+func void B_Alrik_Enough()
+{
+	AI_Output (self ,other,"DIA_Alrik_WannaFight_09_05"); //I think you've won often enough.
+	AI_Output (self ,other,"DIA_Alrik_WannaFight_09_06"); //Don't get me wrong, but my skull's still buzzing from the last time...
+};
 		
-		func void B_Alrik_ComeBackLater()
-		{
-			AI_Output (self, other, "DIA_Alrik_Add_09_02"); //Come back again later. In the meantime, I'll train...
-		};
+func void B_Alrik_ComeBackLater()
+{
+	AI_Output (self, other, "DIA_Alrik_Add_09_02"); //Come back again later. In the meantime, I'll train...
+};
 		
 
 INSTANCE DIA_Alrik_WannaFight(C_INFO)
@@ -296,24 +261,21 @@ FUNC VOID DIA_Alrik_WannaFight_Info()
 	}
 	
 	// ----- EXIT: ÜBER DREI MAL Alrik_ArenaKampfVerloren ------
-	else if (Kapitel <= 2)
-	&& (Alrik_ArenaKampfVerloren > 3)
+	else if ((Alrik_ArenaKampfVerloren <= 14) && (Alrik_ArenaDayCount < (Wld_GetDay()-3)))
 	{
 		AI_Output (self, other, "DIA_Alrik_Add_09_00"); //I think that should be enough for now...
 		AI_Output (self, other, "DIA_Alrik_Add_09_01"); //Let me have a short break.
 		B_Alrik_ComeBackLater();
 	}
 	
-	else if (Kapitel >= 3)
-	&& (Kapitel <= 4)
-	&& (Alrik_ArenaKampfVerloren > 6)
+	else if ((Alrik_ArenaKampfVerloren > 14 && Alrik_ArenaKampfVerloren <= 29)
+			&& (Alrik_ArenaDayCount < (Wld_GetDay()-3)))
 	{
 		B_Alrik_Enough();
 		B_Alrik_ComeBackLater();
 	}
 	
-	else if (Kapitel >= 5)
-	&& (Alrik_ArenaKampfVerloren > 9)
+	else if (Alrik_ArenaKampfVerloren > 29)
 	{
 		B_Alrik_Enough();
 		AI_Output (self, other, "DIA_Alrik_Add_09_04"); //Besides, I've scraped enough gold together by now.
@@ -466,6 +428,7 @@ FUNC VOID DIA_Alrik_AfterFight_Info()
 			};
 			
 			Alrik_ArenaKampfVerloren = Alrik_ArenaKampfVerloren + 1;
+			Alrik_ArenaDayCount = Wld_GetDay(); 
 		}
 		else if (self.aivar[AIV_LastFightAgainstPlayer] == FIGHT_WON)
 		{

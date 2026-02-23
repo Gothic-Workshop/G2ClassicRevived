@@ -10,7 +10,7 @@ instance VLK_440_Bartok (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 7);
+	B_SetAttributesForLevel(self, 25);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -28,13 +28,7 @@ instance VLK_440_Bartok (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Important_Arto, BodyTex_N,ITAR_Vlk_L);	
 	Mdl_SetModelFatness	(self,0.5);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 50); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_440;
 };

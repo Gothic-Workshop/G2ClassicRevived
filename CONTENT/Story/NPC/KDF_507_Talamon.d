@@ -8,11 +8,15 @@ INSTANCE KDF_507_Talamon (Npc_Default)
 	flags       = NPC_FLAG_IMMORTAL;																	
 	npctype		= NPCTYPE_MAIN;
 	
+	// ------ aivars ------
+	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
+	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 200);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);																
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_COWARD;	
+	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_BLADES_03);
@@ -20,17 +24,10 @@ INSTANCE KDF_507_Talamon (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_B_Saturas, BodyTex_B, ITAR_REVIVED_KDF_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_507;

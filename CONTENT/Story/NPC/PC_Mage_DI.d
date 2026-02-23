@@ -1,11 +1,3 @@
-
-
-//#############################################
-//##
-//##	Dracheninsel
-//##
-//#############################################
-
 INSTANCE PC_Mage_DI (Npc_Default)
 {
 	// ------ NSC ------
@@ -22,7 +14,8 @@ INSTANCE PC_Mage_DI (Npc_Default)
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 100);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 4);													
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -33,17 +26,10 @@ INSTANCE PC_Mage_DI (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Milten, BodyTex_N, ITAR_REVIVED_KDF_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_22;

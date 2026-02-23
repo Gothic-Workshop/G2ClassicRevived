@@ -2,7 +2,7 @@
 instance VLK_4201_Wirt (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= "Landlord";
+	name 		= "Host";
 	guild 		= GIL_VLK;
 	id 			= 4201;
 	voice 		= 14;
@@ -10,7 +10,7 @@ instance VLK_4201_Wirt (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesForLevel(self, 15);																	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -25,12 +25,6 @@ instance VLK_4201_Wirt (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_OldBald_Jeremiah, BodyTex_N, ITAR_BARKEEPER);	
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 70); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4201;

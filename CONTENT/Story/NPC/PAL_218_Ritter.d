@@ -3,14 +3,14 @@ instance Pal_218_Ritter (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= NAME_Ritter;
-	guild 		= GIL_OUT;
+	guild 		= GIL_PAL;
 	id 			= 218;
 	voice 		= 4;
 	flags       = 0;																	
 	npctype		= NPCTYPE_OCAMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesForLevel(self, 80);																	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
@@ -26,12 +26,6 @@ instance Pal_218_Ritter (Npc_Default)
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 65); 
-		
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_218;
 };

@@ -1,9 +1,3 @@
-//#############################################
-//##
-//##	Neue Welt
-//##
-//############################################
-
 instance SLD_811_Wolf (Npc_Default)
 {
 	// ------ NSC ------
@@ -15,7 +9,7 @@ instance SLD_811_Wolf (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 80);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	// MASTER / STRONG / COWARD
@@ -24,22 +18,14 @@ instance SLD_811_Wolf (Npc_Default)
 	EquipItem			(self, ITMW_REVIVED_1H_MACE_WAR_01);
 	EquipItem			(self, ITRW_REVIVED_BOW_WOLF);
 
-
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			//Muss NACH Attributen kommen, weil in B_SetNpcVisual die Breite abh. v. STR skaliert wird
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Wolf, BodyTex_N, ITAR_REVIVED_ORG_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 50); //Grenzen für Talent-Level liegen bei 30 und 60
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_811;
 };

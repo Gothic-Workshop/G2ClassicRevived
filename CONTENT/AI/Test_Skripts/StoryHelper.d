@@ -125,7 +125,7 @@ FUNC VOID StoryHelper_Cavalorn()
 	//Suche die Steinkreise auf
 	MIS_Addon_Nefarius_BringMissingOrnaments = LOG_RUNNING;
 	//...und Cavalorn zum Steinkreis schicken
-	B_StartotherRoutine	(BAU_4300_Addon_Cavalorn,"OrnamentSteinring");
+	B_StartotherRoutine	(OUT_4300_CAVALORN,"OrnamentSteinring");
 	//Spieler die Karte geben
 	CreateInvItems (hero, ItWr_Map_NewWorld_Ornaments_Addon, 1);	
 	

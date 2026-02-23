@@ -17,7 +17,7 @@ instance PAL_250_Garond (Npc_Default)
 	aivar[AIV_IGNORE_Sheepkiller] 	= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);																	
+	B_SetAttributesForLevel(self, 80);																
 
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
@@ -28,18 +28,11 @@ instance PAL_250_Garond (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_N_Raven, BodyTex_N, ITAR_REVIVED_PAL_H);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
 	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 70); 
-		
 	// ------ TA anmelden ------
 	daily_routine 	= Rtn_PreStart_250;
 };

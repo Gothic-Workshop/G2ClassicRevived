@@ -339,11 +339,11 @@ func void UseJOLY_Storyhelpletter ()
 	MIS_Addon_Lares_ComeToRangerMeeting = LOG_RUNNING;
 	SC_IsRanger = TRUE;
 	SCIsWearingRangerRing = TRUE;
-	Wld_InsertNpc (Bau_4300_Addon_Cavalorn,"TAVERNE");
-	Wld_InsertNpc (Mil_350_Addon_Martin,"TAVERNE");
+	Wld_InsertNpc (OUT_4300_CAVALORN,"TAVERNE");
+	Wld_InsertNpc (GRD_350_Martin,"TAVERNE");
 	Wld_InsertNpc (SLD_449_Lares,"TAVERNE");
 	Wld_InsertNpc (SLD_805_Cord,"TAVERNE");
-	Wld_InsertNpc (BAU_961_Gaan,"TAVERNE");
+	Wld_InsertNpc (OUT_961_GAAN,"TAVERNE");
 	B_Greg_ComesToDexter ();
 	Print("gefunden");
 	Wld_PlayEffect("spellFX_LIGHTSTAR_WHITE",  item, item, 0, 0, 0, FALSE );

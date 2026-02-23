@@ -10,7 +10,7 @@ instance VLK_413_Bosper (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																
+	B_SetAttributesForLevel(self, 15);															
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -21,20 +21,13 @@ instance VLK_413_Bosper (Npc_Default)
 	
 	// ------ Inventory ------
 	// Händler
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald.", Face_L_Tough_Santino, BodyTex_L,ITAR_LEATHER_L );	
 	
 	Mdl_SetModelFatness	(self, 0.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 35); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_413;
 };

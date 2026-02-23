@@ -3,14 +3,14 @@ instance BAU_942_Randolph (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Randolph";
-	guild 		= GIL_OUT;
+	guild 		= GIL_BAU;
 	id 			= 942;
 	voice 		= 6;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly:nur solange Alnveres da ist!																
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 4);														
+	B_SetAttributesForLevel(self, 8);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
@@ -20,18 +20,11 @@ instance BAU_942_Randolph (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Kharim, BodyTex_B, ITAR_Bau_L);		
 	Mdl_SetModelFatness	(self, 2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 20); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_preStart_942;

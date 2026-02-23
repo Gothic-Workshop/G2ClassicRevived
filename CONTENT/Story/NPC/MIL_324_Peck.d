@@ -10,14 +10,13 @@ instance Mil_324_Peck (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 60);																		
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem (self, ITMW_REVIVED_1H_SWORD_06);
-	
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
@@ -27,12 +26,6 @@ instance Mil_324_Peck (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_B_Normal_Orik, BodyTex_B, ITAR_REVIVED_GRD_L);	
 	Mdl_SetModelFatness	(self,2);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 40); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_324;

@@ -13,8 +13,10 @@ instance DMT_1299_OberDementor_DI (Npc_Default)
 	aivar[AIV_EnemyOverride] = TRUE;
 	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
 	bodyStateInterruptableOverride = TRUE; 
+	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 200);	
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);															
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -31,12 +33,6 @@ instance DMT_1299_OberDementor_DI (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_DMT_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 90); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_1299;

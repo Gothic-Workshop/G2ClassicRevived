@@ -8,15 +8,9 @@ INSTANCE NOV_608_Garwig (Npc_Default)
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	
-	//LEVEL für Sleep- Scroll nötig M.F.
-	level		= 1;
 	// ------ Attribute ------
-	attribute[ATR_STRENGTH] 		= 60;
-	attribute[ATR_DEXTERITY] 		= 60;
-	attribute[ATR_MANA_MAX] 		= 60;
-	attribute[ATR_MANA] 			= 60;
-	attribute[ATR_HITPOINTS_MAX]	= 500;
-	attribute[ATR_HITPOINTS] 		= 500;			
+	B_SetAttributesForLevel(self, 20);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);			
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -24,21 +18,13 @@ INSTANCE NOV_608_Garwig (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 																	
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_L_Tough02, BodyTex_L, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_608;

@@ -226,6 +226,7 @@ STORY\Dialog_Mobsis\*.d
 STORY\Npc_Scripts\B_CreateAmbientInv.d
 STORY\Npc_Scripts\B_GiveNpcTalents.d
 STORY\Npc_Scripts\B_SetAttributesToChapter.d
+STORY\Npc_Scripts\B_SetAttributesForLevel.d
 STORY\Npc_Scripts\B_SetNpcVisual.d
 STORY\Npc_Scripts\Npc_Default.d
 

@@ -10,10 +10,7 @@ instance VLK_4006_Bote (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);															
-	
-	attribute[ATR_HITPOINTS_MAX] = 500;
-	attribute[ATR_HITPOINTS] 	 = 500;
+	B_SetAttributesForLevel(self, 20);
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -21,21 +18,13 @@ instance VLK_4006_Bote (Npc_Default)
 	// ------ Equippte Waffen ------																
 	EquipItem	(self, ITMW_REVIVED_1H_AXE_01); 
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-	
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Fighter", Face_N_Normal_Stone, BodyTex_N,ITAR_VLK_L);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_4006;

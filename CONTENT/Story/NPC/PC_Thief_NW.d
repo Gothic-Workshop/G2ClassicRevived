@@ -1,9 +1,3 @@
-
-//#############################################
-//##
-//##	Neue Welt
-//##
-//############################################
 INSTANCE PC_Thief_NW (Npc_Default)
 {
 	// ------ NSC ------
@@ -15,7 +9,7 @@ INSTANCE PC_Thief_NW (Npc_Default)
 	npctype		= NPCTYPE_FRIEND;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 100);																	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
@@ -31,12 +25,6 @@ INSTANCE PC_Thief_NW (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Thief",Face_L_Diego, BodyTex_L, ITAR_VLK_H);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 80);
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_21;

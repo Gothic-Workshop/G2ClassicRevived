@@ -10,7 +10,7 @@ instance Pal_205_Torwache (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 5);																	
+	B_SetAttributesForLevel(self, 80);																	
 	
 	// ------ Aivars ------
 	aivar[AIV_NewsOverride] 	= TRUE;
@@ -21,19 +21,12 @@ instance Pal_205_Torwache (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_PALADIN_02);
 	
-	
 	// ------ Inventory ------
 	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak05, BodyTex_N, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
-
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 75); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_205;

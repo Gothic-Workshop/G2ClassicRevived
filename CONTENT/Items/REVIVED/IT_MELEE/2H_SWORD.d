@@ -645,7 +645,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_ANGAR (C_Item)
 	material 			=	MAT_METAL;
 
 	value 				=	REV_Value_2H_Sword_Angar;
-	owner				= 	DJG_705_Angar; //GUR_1202_CORANGAR;
+	owner				= 	NONE_705_ANGAR; //GUR_1202_CORANGAR;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Angar;
 	damagetype 			=	DAM_EDGE;		

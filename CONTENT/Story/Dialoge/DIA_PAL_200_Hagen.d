@@ -514,7 +514,7 @@ func void DIA_Lord_Hagen_Pass_Info ()
 		B_StartOtherRoutine (Fernando,"WAIT"); 
 	};
 	
-	Wld_InsertNpc (BDT_1020_Bandit_L, "NW_TROLLAREA_PATH_47");	//Joly: //ADDON stört dann nicht mehr
+	Wld_InsertNpc (BDT_1020_Wegelagerer, "NW_TROLLAREA_PATH_47");	//Joly: //ADDON stört dann nicht mehr
 };
 
 ///////////////////////////////////////////////////////////////////////

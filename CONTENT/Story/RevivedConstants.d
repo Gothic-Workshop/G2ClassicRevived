@@ -86,6 +86,11 @@ const string LOGENTRY_RECIPE_RICESCHNAPS		= "Ingredients for 'Rice Schnapps':\n4
 const string LOGENTRY_RECIPE_MEAD				= "Ingredients for 'Mead':\n2 Honey comb\n1 Field Raider mandibles";
 
 
+// NPC Names
+const string NAME_LOAFER				=	"Loafer";
+const string NAME_HIGHWAYMAN			=	"Highwayman";
+
+
 // Items
 const string NAME_OrcWeapon				=	"Orc Weapon";
 const string NAME_HolyWeapon1H			=	"One-Handed Weapon (Holy)";
@@ -388,6 +393,9 @@ var int DIA_Peck_BUYARMOR_perm;
 var int DIA_Revived_Gordon_Trade_OneTime;
 
 var int CipherBuysWeed;
+
+var int Alrik_LevelUpCount;
+var int Alrik_ArenaDayCount;
 
 var int BaltramSellRecipe;
 var int BaltramPirateTrade;

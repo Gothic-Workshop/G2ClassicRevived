@@ -3,7 +3,7 @@
 // ************************************************************
 INSTANCE DIA_BDT_1020_Wegelagerer_EXIT(C_INFO)
 {
-	npc			= BDT_1020_Bandit_L;
+	npc			= BDT_1020_Wegelagerer;
 	nr			= 999;
 	condition	= DIA_Wegelagerer_EXIT_Condition;
 	information	= DIA_Wegelagerer_EXIT_Info;
@@ -26,7 +26,7 @@ FUNC VOID DIA_Wegelagerer_EXIT_Info()
 // ------------------------------------------------------------
 instance DIA_BDT_1020_Wegelagerer_FirstWarn (C_INFO)
 {
-	npc			= BDT_1020_Bandit_L;
+	npc			= BDT_1020_Wegelagerer;
 	nr			= 1;
 	condition	= DIA_BDT_1020_Wegelagerer_FirstWarn_Condition;
 	information	= DIA_BDT_1020_Wegelagerer_FirstWarn_Info;
@@ -191,7 +191,7 @@ FUNC VOID DIA_BDT_1020_Wegelagerer_FirstWarn_GiveWeapon ()
 
 INSTANCE DIA_BDT_1020_Wegelagerer_SecondWarn (C_INFO)
 {
-	npc			= BDT_1020_Bandit_L;
+	npc			= BDT_1020_Wegelagerer;
 	nr			= 2;
 	condition	= DIA_BDT_1020_Wegelagerer_SecondWarn_Condition;
 	information	= DIA_BDT_1020_Wegelagerer_SecondWarn_Info;
@@ -250,7 +250,7 @@ FUNC VOID DIA_BDT_1020_Wegelagerer_SecondWarn_NoMoney ()
 
 INSTANCE DIA_BDT_1020_Wegelagerer_Attack (C_INFO)
 {
-	npc			= BDT_1020_Bandit_L;
+	npc			= BDT_1020_Wegelagerer;
 	nr			= 3;
 	condition	= DIA_BDT_1020_Wegelagerer_Attack_Condition;
 	information	= DIA_BDT_1020_Wegelagerer_Attack_Info;

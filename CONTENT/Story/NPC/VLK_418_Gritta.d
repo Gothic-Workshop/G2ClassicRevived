@@ -10,19 +10,13 @@ instance VLK_418_Gritta (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	attribute[ATR_STRENGTH] 		= 10;
-	attribute[ATR_DEXTERITY] 		= 10;
-	attribute[ATR_MANA_MAX] 		= 0;
-	attribute[ATR_MANA] 			= 0;
-	attribute[ATR_HITPOINTS_MAX]	= 5;
-	attribute[ATR_HITPOINTS] 		= 5;																
+	B_SetAttributesForLevel(self, 15);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
-	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);
-																		
+	EquipItem (self, ITMW_REVIVED_1H_DAGGER_01);															
 		
 	// ------ Inventory ------
 	CreateInvItems (self,ItMi_Gold, 100);		//für die Matteo Mission
@@ -32,12 +26,6 @@ instance VLK_418_Gritta (Npc_Default)
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_YoungBlonde, BodyTex_N, ITAR_VlkBabe_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_418;

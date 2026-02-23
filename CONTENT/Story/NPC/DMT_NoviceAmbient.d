@@ -8,8 +8,8 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);	
-														
+	B_SetAttributesForLevel(self, 80);	
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);					
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
@@ -22,13 +22,6 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_MadPsi, BodyTex_N, ITAR_REVIVED_DMT_L);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-		
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 80);
 	
 	aivar[AIV_MM_FollowTime] = NPC_TIME_FOLLOW;
 	aivar[AIV_FightDistCancel] = FIGHT_DIST_CANCEL;

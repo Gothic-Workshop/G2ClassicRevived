@@ -8,11 +8,15 @@ INSTANCE KDF_509_Isgaroth (Npc_Default)
 	flags       = 0;																	
 	npctype		= NPCTYPE_MAIN;
 	
+	// ------ aivars ------
+	aivar[AIV_MagicUser] = MAGIC_ALWAYS;
+	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 200);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);																
 		
 	// ------ Kampf-Taktik ------
-	fight_tactic		= FAI_HUMAN_STRONG;	
+	fight_tactic		= FAI_HUMAN_MASTER;	
 	
 	// ------ Equippte Waffen ------
 	EquipItem	(self, ITMW_REVIVED_2H_MAGESTAFF_NORMAL_03);
@@ -20,17 +24,10 @@ INSTANCE KDF_509_Isgaroth (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_N_Tough_Okyl, BodyTex_N, ITAR_REVIVED_KDF_L);			
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 90); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_509;

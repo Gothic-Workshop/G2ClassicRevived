@@ -4,15 +4,10 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 	name							=	NAME_Templar;
 	guild							=	GIL_DMT;
 	aivar[AIV_MM_REAL_ID]			= 	ID_SKELETON;
-	level							=	40;
 
 	//----- Attribute ----	
-	attribute	[ATR_STRENGTH]		=	105; //+ 105 Waffe
-	attribute	[ATR_DEXTERITY]		=	100;
-	attribute	[ATR_HITPOINTS_MAX]	=	400;
-	attribute	[ATR_HITPOINTS]		=	400;
-	attribute	[ATR_MANA_MAX] 		=	200;
-	attribute	[ATR_MANA] 			=	200;
+	B_SetAttributesForLevel(self, 150);	
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);	
 
 	//----- Protection ----
 	protection	[PROT_BLUNT]		=	100; //hat RS!
@@ -24,10 +19,6 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 		
 	//----- Damage Types ----
 	damagetype 						=	DAM_EDGE;
-
-	//----- Kampf-Taktik ----
-	fight_tactic	=	FAI_HUMAN_STRONG;	
-	B_SetFightSkills (self, 90); 
 	
 	EquipItem	(self, ITMW_REVIVED_2H_SWORD_LIGHT_04);
 

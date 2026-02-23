@@ -9,7 +9,8 @@ INSTANCE NOV_615_Novize (Npc_Default)
 	npctype		= NPCTYPE_AMBIENT;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);	
+	B_SetAttributesForLevel(self, 15);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -17,22 +18,14 @@ INSTANCE NOV_615_Novize (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	EquipItem	(self, ITMW_REVIVED_2H_STAFF_NOVICE_01); 																	
 	
-	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_P_NormalBart_Riordian, BodyTex_P, ITAR_NOV_L);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Mage.mds"); 
 	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_615;
 };

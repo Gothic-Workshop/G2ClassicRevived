@@ -3,14 +3,14 @@ instance SLD_841_Engardo (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Engardo"; 
-	guild 		= GIL_BDT;
+	guild 		= GIL_SLD;
 	id 			= 841;
 	voice 		= 13;
 	flags       = 0;						
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 20);																
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -20,21 +20,15 @@ instance SLD_841_Engardo (Npc_Default)
 	
 	// ------ Equippte Waffen ------																	
 	EquipItem			(self, ITMW_REVIVED_2H_SWORD_LIGHT_01);
+	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 
-		
 	// ------ visuals ------																		
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Pony", Face_N_Normal_Erpresser, BodyTex_N, ITAR_REVIVED_ORG_H);		
 	Mdl_SetModelFatness	(self, 1);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 25); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_841;
 };

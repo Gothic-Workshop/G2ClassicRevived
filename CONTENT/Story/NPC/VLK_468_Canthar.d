@@ -3,7 +3,7 @@ instance VLK_468_Canthar (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Canthar"; 
-	guild 		= GIL_NONE;
+	guild 		= GIL_VLK;
 	id 			= 468;
 	voice 		= 9;
 	flags       = 0;																
@@ -17,7 +17,7 @@ instance VLK_468_Canthar (Npc_Default)
 	aivar[AIV_IGNORE_Sheepkiller] 	= TRUE;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 3);															
+	B_SetAttributesForLevel(self, 20);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -33,12 +33,6 @@ instance VLK_468_Canthar (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_Orry, BodyTex_N, ITAR_Vlk_M);	
 	Mdl_SetModelFatness	(self,1.8);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 50);
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_468;

@@ -15,10 +15,24 @@ func void B_AssignDementorTalk_Ritual ()
 		AI_Output			(self ,other, "DIA_RitualDementor_19_01"); //We have destroyed the Eye of Innos, so that it can never regain its power.
 		AI_Output			(self ,other, "DIA_RitualDementor_19_02"); //We shall now demonstrate the futility of your attempt to challenge the Master.
 
+		DMT_1201_Dementor.flags = 0;
+		DMT_1202_Dementor.flags = 0;
+		DMT_1203_Dementor.flags = 0;
+		DMT_1204_Dementor.flags = 0;
+		DMT_1205_Dementor.flags = 0;
+		DMT_1206_Dementor.flags = 0;
+		DMT_1207_Dementor.flags = 0;
+		DMT_1208_Dementor.flags = 0;
+		DMT_1209_Dementor.flags = 0;
+		DMT_1210_Dementor.flags = 0;
+		DMT_1211_Dementor.flags = 0;
+
 		MIS_SCKnowsInnosEyeIsBroken  = TRUE;
 		B_LogEntry (TOPIC_INNOSEYE, "Those sinister guys are getting on my nerves. They destroyed the Eye of Innos. I've no idea how I'm supposed to fix it.");
  		B_LogEntry (TOPIC_TraitorPedro, "I found the Eye of Innos. But there hasn't been a trace of Pedro anywhere so far. Those black magicians are in cahoots with him.");
 		B_GivePlayerXP (XP_SCKnowsInnosEyeIsBroken);
+
+		CreateInvItems (Cornelius, ItWr_CorneliusTagebuch_Mis,1);
 	}
 	else
 	{

@@ -9,7 +9,7 @@ instance VLK_404_Lutero (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);																	
+	B_SetAttributesForLevel(self, 15);																
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	
@@ -19,19 +19,12 @@ instance VLK_404_Lutero (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_FatBald", Face_P_Normal02, BodyTex_P, ITAR_REVIVED_EBR_L);	
 	Mdl_SetModelFatness	(self, 3);
 	Mdl_ApplyOverlayMds	(self, "Humans_Arrogance.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_404;
 };

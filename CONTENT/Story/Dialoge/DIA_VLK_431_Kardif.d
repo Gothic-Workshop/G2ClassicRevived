@@ -656,7 +656,7 @@ func void DIA_Kardif_SENDATTILA_Info ()
 		AI_Output (self, other, "DIA_Kardif_Hallo_14_04"); //Every piece of information I give you will cost 10 gold pieces.
 		Kardif_Deal = 10;
 	};
-	Wld_InsertNpc (VLK_494_Attila, "NW_CITY_ENTRANCE_01");
+	Wld_InsertNpc (BDT_494_ATTILA, "NW_CITY_ENTRANCE_01");
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info DefeatedAttila

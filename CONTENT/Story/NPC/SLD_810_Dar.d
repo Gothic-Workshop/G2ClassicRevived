@@ -13,7 +13,7 @@ instance SLD_810_Dar (Npc_Default)
 	aivar[AIV_ToughGuyNewsOverride] = TRUE; //wegen Stimme!
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
+	B_SetAttributesForLevel(self, 20);																//setzt Attribute und LEVEL entsprechend dem angegebenen Kapitel (1-6)
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	// MASTER / STRONG / COWARD
@@ -30,13 +30,7 @@ instance SLD_810_Dar (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal_Spassvogel, BodyTex_N, ITAR_REVIVED_SLD_L_02);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); // Tired / Militia / Mage / Arrogance / Relaxed
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		//Der enthaltene B_AddFightSkill setzt Talent-Ani abhängig von TrefferChance% - alle Kampftalente werden gleichhoch gesetzt
-	B_SetFightSkills (self, 40); //Grenzen für Talent-Level liegen bei 30 und 60
-	
+
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_810;
 };

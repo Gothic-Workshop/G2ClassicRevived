@@ -4,14 +4,14 @@ instance BAU_941_Kati (Npc_Default)
 {
 	// ------ NSC ------
 	name 		= "Kati";
-	guild 		= GIL_OUT;
+	guild 		= GIL_BAU;
 	id 			= 941;
 	voice 		= 16;
 	flags       = NPC_FLAG_IMMORTAL;	//Joly:nur solange Alnveres da ist!																	
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
+	B_SetAttributesForLevel(self, 4);																		
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -21,18 +21,11 @@ instance BAU_941_Kati (Npc_Default)
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
-
 		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, FEMALE, "Hum_Head_Babe8", FaceBabe_N_Lilo, BodyTexBabe_N, ITAR_BauBabe_L);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Babe.mds"); 
-
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 15); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_PreStart_941;

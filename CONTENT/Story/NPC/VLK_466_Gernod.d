@@ -2,7 +2,7 @@
 instance VLK_466_Gernod (Npc_Default)
 {
 	// ------ NSC ------
-	name 		= NAME_BUERGER;
+	name 		= NAME_BUERGER; //"Gernod";
 	guild 		= GIL_VLK;
 	id 			= 466;
 	voice 		= 1;
@@ -13,7 +13,7 @@ instance VLK_466_Gernod (Npc_Default)
 	aivar[AIV_ToughGuy] = TRUE; 
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 2);															
+	B_SetAttributesForLevel(self, 15);														
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
@@ -28,12 +28,6 @@ instance VLK_466_Gernod (Npc_Default)
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Weak_Ulbert, BodyTex_N,ITAR_REVIVED_BEGGAR);	
 	Mdl_SetModelFatness	(self,0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Tired.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																	
-	B_SetFightSkills (self, 40); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_466;

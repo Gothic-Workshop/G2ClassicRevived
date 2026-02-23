@@ -9,12 +9,7 @@ instance PAL_2004_Bruder  (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	slf.attribute[ATR_STRENGTH] 		= 10;
-	slf.attribute[ATR_DEXTERITY] 		= 10;
-	slf.attribute[ATR_MANA_MAX] 		= 0;
-	slf.attribute[ATR_MANA] 			= 0;
-	slf.attribute[ATR_HITPOINTS_MAX]	= 1;
-	slf.attribute[ATR_HITPOINTS] 		= 1;								
+	B_SetAttributesForLevel(self, 80);								
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic = FAI_HUMAN_STRONG;	
@@ -22,19 +17,15 @@ instance PAL_2004_Bruder  (Npc_Default)
 	// ------ Equippte Waffen ------																	
 	B_CreateAmbientInv 	(self);
 	EquipItem	(self, ItMw_1h_Pal_Sword); 
+
 	// ------ Inventory ------
 	CreateInvItems (self,ItRu_PalLight,1);
+
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald", Face_N_Normal02, BodyTex_N, ITAR_REVIVED_PAL_M);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Militia.mds"); 
 	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 70); 
-
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_2004;
 };

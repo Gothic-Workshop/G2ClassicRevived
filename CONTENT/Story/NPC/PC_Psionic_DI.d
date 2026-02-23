@@ -1,10 +1,3 @@
-
-//#############################################
-//##
-//##	Dracheninsel
-//##
-//############################################
-
 INSTANCE PC_Psionic_DI (Npc_Default)
 {
 	// ------ NSC ------
@@ -21,7 +14,8 @@ INSTANCE PC_Psionic_DI (Npc_Default)
 	aivar[AIV_ToughGuyNewsOverride] = TRUE;
 
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 6);																
+	B_SetAttributesForLevel(self, 100);		
+	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 3);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_MASTER;	
@@ -32,17 +26,10 @@ INSTANCE PC_Psionic_DI (Npc_Default)
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
 	
-		
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald",Face_P_Lester, BodyTex_P, ITAR_REVIVED_PSI_NOV);		
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
-	
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 30); 
 
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_24;

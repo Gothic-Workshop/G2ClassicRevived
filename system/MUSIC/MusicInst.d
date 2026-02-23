@@ -82,7 +82,7 @@ PROTOTYPE C_MUSICTHEME_FIGHT		(C_MUSICTHEME)
 
 INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 {
-	file				= "E3_Trailer_Music.mp3";
+	file				= "Menu_Theme.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;
@@ -91,7 +91,7 @@ INSTANCE SYS_Menu			(C_MUSICTHEME_DEF)
 
 INSTANCE SYS_Loading		(C_MUSICTHEME_DEF)
 {
-	file				= "E3_Trailer_Music.mp3";
+	file				= "Menu_Theme.mp3";
 	transType			= TRANSITION_TYPE_ENDANDINTRO;
 	transSubType		= TRANSITION_SUB_TYPE_BEAT;	
 	ReverbMix			= -12;

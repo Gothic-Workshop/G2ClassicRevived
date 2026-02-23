@@ -10,7 +10,7 @@ instance VLK_421_Valentino (Npc_Default)
 	npctype		= NPCTYPE_MAIN;
 	
 	// ------ Attribute ------
-	B_SetAttributesToChapter (self, 1);																	
+	B_SetAttributesForLevel(self, 15);																
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	
@@ -21,17 +21,12 @@ instance VLK_421_Valentino (Npc_Default)
 	// ------ Inventory ------
 	CreateInvItems (self, ItMi_Gold, 200);
 	CreateInvItems 	(self,ItKe_Valentino,1);
+	
 	// ------ visuals ------																			
 	B_SetNpcVisual 		(self, MALE, "Hum_Head_Bald.", Face_N_Normal03, BodyTex_N, ITAR_VLK_H);	
 	Mdl_SetModelFatness	(self, 0);
 	Mdl_ApplyOverlayMds	(self, "Humans_Relaxed.mds"); 
 
-	// ------ NSC-relevante Talente vergeben ------
-	B_GiveNpcTalents (self);
-	
-	// ------ Kampf-Talente ------																		
-	B_SetFightSkills (self, 70); 
-	
 	// ------ TA anmelden ------
 	daily_routine 		= Rtn_Start_421;
 };

@@ -406,45 +406,19 @@ func void STARTUP_OLDCAMP ()
 
 	// ------ OBJECTROUTINE ------
 		// Old Camp
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_01", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_01", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_01", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_02", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_02", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_02", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_03", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_03", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_03", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_04", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_04", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_04", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH2_05", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH2_05", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH2_05", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH2_08", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH2_08", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH2_08", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_05", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_05", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_05", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_06", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_06", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_06", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_07", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_07", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_07", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH2_06", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH2_06", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH2_06", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH2_07", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH2_07", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH2_07", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_PRAY_01", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_PRAY_01", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_PRAY_01", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREPLACE_HIGH_PRAY_02", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREPLACE_HIGH_PRAY_02", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREPLACE_HIGH_PRAY_02", 0);
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_01");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_02");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_03");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_04");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH2_05");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH2_08");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_05");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_06");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_07");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH2_06");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH2_07");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_PRAY_01");
+		REV_SetObjectRoutine_Fire ("OC_FIREPLACE_HIGH_PRAY_02");
 	};
 
 	func void INIT_OLDCAMP ()
@@ -835,57 +809,23 @@ func void STARTUP_FORTRESS ()
 		//Wld_SendTrigger("EVT_OW_MOUNTAINRUIN_01");
 
 	// ------ OBJECTROUTINE ------
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_01", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_01", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_01", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_02", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_02", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_02", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_03", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_03", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_03", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_04", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_04", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_04", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_05", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_05", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_05", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_06", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_06", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_06", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_07", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_07", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_07", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_08", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_08", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_08", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_09", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_09", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_09", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_10", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_10", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_10", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_11", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_11", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_11", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH2_12", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH2_12", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH2_12", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_01", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_01", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_01", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_02", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_02", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_02", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_03", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_03", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_03", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_04", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_04", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_04", 0);
-		Wld_SetObjectRoutine (00,00, "OC_FIREFORTRESS_HIGH_05", 1);
-		Wld_SetObjectRoutine (20,00, "OC_FIREFORTRESS_HIGH_05", 1);
-		Wld_SetObjectRoutine (05,00, "OC_FIREFORTRESS_HIGH_05", 0);
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_01");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_02");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_03");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_04");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_05");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_06");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_07");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_08");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_09");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_10");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_11");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH2_12");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH_01");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH_02");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH_03");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH_04");
+		REV_SetObjectRoutine_Fire ("OC_FIREFORTRESS_HIGH_05");
 	};
 
 	func void INIT_FORTRESS ()
@@ -966,12 +906,12 @@ func void STARTUP_SURFACE ()
 	
 	Wld_InsertNpc		(DragonSnapper, "FP_ROAM_OW_MAETBUG_ROOT_01"); 
 
-	Wld_InsertNpc		(VLK_4110_Jergan,"OW_SPAWN_SCOUT");		
+	Wld_InsertNpc		(OUT_4110_JERGAN,"OW_SPAWN_SCOUT");		
 	Wld_InsertNpc		(PAL_2004_Bruder,"OW_SPAWN_BRUDER");	
 
 
 	// Oretrail (Drax und Ratford)
-	Wld_InsertNpc		(BDT_1000_Bandit_L 	,"FP_SMALLTALK_A_START_PATH_1_5_1");
+	Wld_InsertNpc		(BDT_1000_LOAFER 	,"FP_SMALLTALK_A_START_PATH_1_5_1");
 	Wld_InsertNpc		(BDT_1003_Bandit_M 	,"FP_SMALLTALK_A_START_PATH_1_5_2");
 
 	Wld_InsertNpc		(Snapper,"FP_ROAM_OW_GOBBO_07_02");  
@@ -1312,7 +1252,7 @@ func void STARTUP_SURFACE ()
 
 
 	// Bandits (Aidan camp)
-	Wld_InsertNpc		(BDT_1000_Bandit_L, "OW_PATH_056");
+	Wld_InsertNpc		(BDT_1000_LOAFER, "OW_PATH_056");
 	Wld_InsertNpc		(BDT_1003_Bandit_M, "OW_PATH_056");
 
 	Wld_InsertNpc		(Gobbo_Black,"OW_GOBBO_PLACE_SPAWN");	
@@ -1336,7 +1276,7 @@ func void STARTUP_SURFACE ()
 
 
 	// (between these two locations idk)
-	Wld_InsertNpc		(VLK_4130_Talbin,"SPAWN_TALL_PATH_BANDITOS2_03");	
+	Wld_InsertNpc		(OUT_4130_TALBIN,"SPAWN_TALL_PATH_BANDITOS2_03");	
 	Wld_InsertNpc		(VLK_4131_Engrom,"SPAWN_TALL_PATH_BANDITOS2_03");
 	
 	Wld_InsertNpc		(Lurker,"SPAWN_OW_BLOODFLY_12");
@@ -1363,9 +1303,9 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Scavenger,"OW_SCAVENGER_TREE_SPAWN");
 	Wld_InsertNpc		(Scavenger,"OW_SCAVENGER_TREE_SPAWN");
 
-	Wld_InsertNpc		(BDT_1000_Bandit_L,"OW_SAWHUT_MOLERAT_SPAWN01");
+	Wld_InsertNpc		(BDT_1000_LOAFER,"OW_SAWHUT_MOLERAT_SPAWN01");
 	
-	Wld_InsertNpc		(BDT_1002_Bandit_L,"OW_SAWHUT_MOLERAT_MOVEMENT");
+	Wld_InsertNpc		(BDT_1002_LOAFER,"OW_SAWHUT_MOLERAT_MOVEMENT");
 
 	Wld_InsertNpc		(BDT_1008_Bandit_H,"PATH_OC_NC_3");
 	Wld_InsertNpc		(BDT_1003_Bandit_M,"PATH_OC_NC_3");
@@ -1837,7 +1777,7 @@ func void STARTUP_SURFACE ()
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE2_02_05");
 	Wld_InsertNpc		(Waran,"SPAWN_OW_WARAN_EBENE2_02_05");
 
-	Wld_InsertNpc		(VLK_4148_Gestath,"PATH_TO_PLATEAU03_001");
+	Wld_InsertNpc		(OUT_4148_GESTATH,"PATH_TO_PLATEAU03_001");
 
 	Wld_InsertNpc		(Bloodhound,"PATH_TO_PLATEAU04_RIGHT");
 
@@ -2054,65 +1994,31 @@ func void STARTUP_SURFACE ()
 	
 	// ------ OBJECTROUTINE ------
 		// Fajeth's mine
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_02", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_02", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_02", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_03", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_03", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_03", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_25", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_25", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_25", 0);
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_02");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_03");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_25");
 		
 		// Old Mine
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_23", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_23", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_23", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_24", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_24", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_24", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_29", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_29", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_29", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_30", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_30", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_30", 0);
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_23");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_24");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_29");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_30");
 		
 		// Road to Psi Camp
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_01", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_01", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_01", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_02", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_02", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_02", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_03", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_03", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_03", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_04", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_04", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_04", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_05", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_05", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_05", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_PCHIGH2_06", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_PCHIGH2_06", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_PCHIGH2_06", 0);
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_01");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_02");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_03");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_04");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_05");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_PCHIGH2_06");
 
 		// Demon Tower
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_11", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_11", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_11", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_HIGH2_12", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_HIGH2_12", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_HIGH2_12", 0);
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_11");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_HIGH2_12");
 
 		// Orc Graveyard
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_ORCLAMP_01", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_ORCLAMP_01", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_ORCLAMP_01", 0);
-		Wld_SetObjectRoutine (00,00, "OW_FIREPLACE_ORCLAMP_02", 1);
-		Wld_SetObjectRoutine (20,00, "OW_FIREPLACE_ORCLAMP_02", 1);
-		Wld_SetObjectRoutine (05,00, "OW_FIREPLACE_ORCLAMP_02", 0);
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_01");
+		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_02");
 	
 	// ------ TRIGGERS ------
 		// Castle
@@ -2241,7 +2147,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (VLK_457_Brian		, "NW_CITY_ENTRANCE_01");	//Schmiedgehilfe, abends Smalltalk vor Kneipe, pennt in NW_City_Bed_Brian
 	
 	//--------------------Turm bei Gritta -----------------------
-	Wld_InsertNpc (VLK_448_Joe			, "NW_CITY_ENTRANCE_01");	//Dieb wurde dummerweise eingesperrt
+	Wld_InsertNpc (BDT_448_JOE			, "NW_CITY_ENTRANCE_01");	//Dieb wurde dummerweise eingesperrt
 	//-----------------------------
 	Wld_InsertNpc (Mil_319_Pablo		, "NW_CITY_ENTRANCE_01");	//Steckbrief-Miliz, Rotationswache Hauptstrasse/Kneipenstrasse/Vatras-Platz
 	
@@ -2281,7 +2187,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (VLK_409_Zuris		, "NW_CITY_ENTRANCE_01");	//Trankhändler, nachts in Zuris Haus
 	Wld_InsertNpc (VLK_410_Baltram		, "NW_CITY_ENTRANCE_01");	//Lebensmittelhändler, nachts in Hotel
 	Wld_InsertNpc (VLK_470_Sarah		, "NW_CITY_ENTRANCE_01");	//Waffenhändlerin (Canthars Opfer), nachts in Hotel
-	Wld_InsertNpc (VLK_492_Rengaru		, "NW_CITY_ENTRANCE_01");	//Dieb, der wegrennt, wenn man ihn zur Rede stellt, nachts an Bierstand
+	Wld_InsertNpc (BDT_492_RENGARU		, "NW_CITY_ENTRANCE_01");	//Dieb, der wegrennt, wenn man ihn zur Rede stellt, nachts an Bierstand
 	Wld_InsertNpc (KDF_511_Daron		, "NW_CITY_ENTRANCE_01");	//Magier auf Marktplats, nachts in Zuris Haus
 	//---------------------------------
 	Wld_InsertNpc (VLK_486_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Zuris Frau, nachts in Zuris Haus
@@ -2325,7 +2231,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	//---Platz D----------- (Arme Handwerker)
 	Wld_InsertNpc (VLK_461_Carl			, "NW_CITY_ENTRANCE_01"); 	//Schmied, pennt in hafen07
 	Wld_InsertNpc (VLK_429_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Carls Frau, pennt in hafen07
-	Wld_InsertNpc (VLK_453_Buerger		, "NW_CITY_ENTRANCE_01");	//Sägt, pennt in hafen06
+	Wld_InsertNpc (VLK_453_Arbeiter		, "NW_CITY_ENTRANCE_01");	//Sägt, pennt in hafen06
 	Wld_InsertNpc (VLK_430_Buergerin	, "NW_CITY_ENTRANCE_01"); 	//Frau vom Säger, pennt in hafen 06
 	
 	//---Forscher----------
@@ -2359,7 +2265,7 @@ func void STARTUP_NewWorld_Part_City_01()
 	//---Hafenkneipe---------
 	Wld_InsertNpc (VLK_432_Moe	 		, "NW_CITY_ENTRANCE_01");	//Rausschmeisser 24h
 	Wld_InsertNpc (VLK_431_Kardif	 	, "NW_CITY_ENTRANCE_01");	//24h Wirt
-	Wld_InsertNpc (VLK_493_Nagur		, "NW_CITY_ENTRANCE_01");	//24h an Tisch in Hafenkneipe
+	Wld_InsertNpc (BDT_493_NAGUR		, "NW_CITY_ENTRANCE_01");	//24h an Tisch in Hafenkneipe
 	
 	//---Puff-----------------
 	Wld_InsertNpc (VLK_433_Bromor	 	, "NW_CITY_ENTRANCE_01");	//Puff-Besitzer hinter Theke, pennt in ???
@@ -2427,8 +2333,8 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (Pal_239_Ritter, "NW_CITY_ENTRANCE_01"); 	
 	Wld_InsertNpc (Pal_240_Ritter, "NW_CITY_ENTRANCE_01"); 	
 	Wld_InsertNpc (Pal_241_Ritter, "NW_CITY_ENTRANCE_01"); 	
-	Wld_InsertNpc (Mil_350_Addon_Martin, "NW_CITY_ENTRANCE_01"); 	
-	Wld_InsertNpc (VLK_4301_Addon_Farim, "NW_CITY_ENTRANCE_01"); 	
+	Wld_InsertNpc (GRD_350_Martin, "NW_CITY_ENTRANCE_01"); 	
+	Wld_InsertNpc (VLK_4301_Farim, "NW_CITY_ENTRANCE_01"); 	
 	
 	//---------------------------------
 	//---Kaserne-----------------------
@@ -2452,9 +2358,9 @@ func void STARTUP_NewWorld_Part_City_01()
 	Wld_InsertNpc (Mil_318_Miliz		, "NW_CITY_ENTRANCE_01");	// KasernenWache
 
 	//---------Kanalisation ------------------
-	Wld_InsertNpc (VLK_445_Ramirez		, "NW_CITY_ENTRANCE_01");	// 
-	Wld_InsertNpc (VLK_446_Jesper		, "NW_CITY_ENTRANCE_01");	// 
-	Wld_InsertNpc (VLK_447_Cassia		, "NW_CITY_ENTRANCE_01");	// 
+	Wld_InsertNpc (BDT_445_RAMIREZ		, "NW_CITY_ENTRANCE_01");	// 
+	Wld_InsertNpc (BDT_446_JESPER		, "NW_CITY_ENTRANCE_01");	// 
+	Wld_InsertNpc (BDT_447_CASSIA		, "NW_CITY_ENTRANCE_01");	// 
 	
 	Wld_InsertNpc (Giant_Rat			, "NW_CITY_KANAL_ROOM_01_01");	// 
 	Wld_InsertNpc (Giant_Rat			, "NW_CITY_KANAL_ROOM_01_02");	// 
@@ -2781,9 +2687,9 @@ func void STARTUP_NewWorld_Part_Farm_01()
 	Wld_InsertNpc		(Gobbo_Black, 	"NW_FARM1_CITYWALL_FOREST_16");
 	
 	//---FARM1CAVE---
-	Wld_InsertNpc		(BDT_1000_Bandit_L, 	"NW_FARM1_BANDITS_CAVE_06");
+	Wld_InsertNpc		(BDT_1000_LOAFER, 	"NW_FARM1_BANDITS_CAVE_06");
 	Wld_InsertNpc		(BDT_1001_Bandit_L, 	"NW_FARM1_BANDITS_CAVE_07");
-	Wld_InsertNpc		(BDT_1002_Bandit_L, 	"NW_FARM1_BANDITS_CAVE_08");
+	Wld_InsertNpc		(BDT_1002_LOAFER, 	"NW_FARM1_BANDITS_CAVE_08");
 	
 	Wld_InsertNpc		(BDT_1001_Bandit_L, 	"NW_FARM1_BANDITS_CAVE_03");
 };
@@ -2837,8 +2743,8 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc		(NONE_100_Xardas, 	"NW_XARDAS_START");
 	Wld_InsertNpc		(PC_Psionic, 		"NW_XARDAS_TOWER_PATH_01");
 
-	Wld_InsertNpc		(BDT_1013_Bandit_L, "NW_XARDAS_STAIRS_01");
-	Wld_InsertNpc		(BDT_1014_Bandit_L, "NW_XARDAS_BANDITS_LEFT");
+	Wld_InsertNpc		(BDT_1013_BANDIT, "NW_XARDAS_STAIRS_01");
+	Wld_InsertNpc		(BDT_1014_BRAGO, "NW_XARDAS_BANDITS_LEFT");
 	Wld_InsertNpc		(BDT_1015_Bandit_L, "NW_XARDAS_BANDITS_RIGHT");
 	//---Monster auf dem Weg zu Farm1---
 	Wld_InsertNpc		(Sheep, 			"NW_XARDAS_TOWER_04");
@@ -2901,7 +2807,7 @@ func void STARTUP_NewWorld_Part_Xardas_01()
 	Wld_InsertNpc		(YGiant_Rat, 		"NW_XARDAS_TOWER_SECRET_CAVE_03");
 	
 	//ADDON	
-	Wld_InsertNpc		(Bau_4300_Addon_Cavalorn, 		"NW_XARDAS_START");
+	Wld_InsertNpc		(OUT_4300_CAVALORN, 		"NW_XARDAS_START");
 };
 
 	func void INIT_SUB_NewWorld_Part_Xardas_01()
@@ -2994,18 +2900,10 @@ FUNC VOID STARTUP_NewWorld_Part_Monastery_01 ()
 		Wld_AssignRoomToGuild ("kloster09",GIL_KDF); //Schlafraum Magier
 
 
-		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_01", 1);
-		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_01", 1);
-		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_01", 0);
-		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_02", 1);
-		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_02", 1);
-		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_02", 0);
-		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_03", 1);
-		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_03", 1);
-		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_03", 0);
-		Wld_SetObjectRoutine (00,00, "NW_MONASTERY_FIRE_04", 1);
-		Wld_SetObjectRoutine (20,00, "NW_MONASTERY_FIRE_04", 1);
-		Wld_SetObjectRoutine (05,00, "NW_MONASTERY_FIRE_04", 0);
+		REV_SetObjectRoutine_Fire ("NW_MONASTERY_FIRE_01");
+		REV_SetObjectRoutine_Fire ("NW_MONASTERY_FIRE_02");
+		REV_SetObjectRoutine_Fire ("NW_MONASTERY_FIRE_03");
+		REV_SetObjectRoutine_Fire ("NW_MONASTERY_FIRE_04");
 	};
 
 FUNC VOID INIT_NewWorld_Part_Monastery_01 ()
@@ -3074,7 +2972,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_911_Elena, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_912_Pepe, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_913_Thekla, 	"BIGFARM");
-	Wld_InsertNpc 	(BAU_914_Baeuerin, 	"BIGFARM");
+	Wld_InsertNpc 	(BAU_914_MAID, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_915_Baeuerin, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_916_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_917_Bauer, 	"BIGFARM");
@@ -3082,7 +2980,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_919_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_920_Bauer, 	"BIGFARM");
 	Wld_InsertNpc 	(BAU_921_Bauer, 	"BIGFARM");
-	Wld_InsertNpc 	(BAU_980_Sagitta, 	"BIGFARM");
+	Wld_InsertNpc 	(OUT_890_SAGITTA, 	"BIGFARM");
 	
 	
 	Wld_InsertNpc 	(SLD_800_Lee, 		"BIGFARM");
@@ -3153,7 +3051,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_960_Bengar, 		"BIGFARM");
 	Wld_InsertNpc 	(BAU_963_Malak, 		"BIGFARM");
 
-	Wld_InsertNpc 	(BAU_961_Gaan, 			"BIGFARM");
+	Wld_InsertNpc 	(OUT_961_GAAN, 			"BIGFARM");
 
 	Wld_InsertNpc 	(Gaans_Snapper, 		"NW_FARM3_VALLEY_000");  
 
@@ -3192,7 +3090,7 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	Wld_InsertNpc 	(BAU_938_Bauer, 	"BIGFARM");
 
 	//Holzfäller\Jäger
-	Wld_InsertNpc 	(BAU_981_Grom, 	"BIGFARM");
+	Wld_InsertNpc 	(OUT_981_GROM, 	"BIGFARM");
 
 	// Monster
 	//***************************************************************************************
@@ -3230,9 +3128,9 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 
 //Jägerlager
 
-	Wld_InsertNpc 	(BAU_983_Dragomir,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5"); 
+	Wld_InsertNpc 	(OUT_983_DRAGOMIR,	"NW_CITY_TO_LIGHTHOUSE_13_MONSTER5"); 
 	//Wld_InsertItem	(ItRw_DragomirsArmbrust_MIS , "FP_NW_ITEM_TROLL_06"); 
-	Wld_InsertNpc 	(BAU_984_Niclas,	"NW_TAVERNE_TROLLAREA_MONSTER_02_01"); 
+	Wld_InsertNpc 	(OUT_984_NICLAS,	"NW_TAVERNE_TROLLAREA_MONSTER_02_01"); 
 	
 
 
@@ -3564,56 +3462,24 @@ FUNC VOID STARTUP_NewWorld_Part_GreatPeasant_01 ()
 	
 
 	// Second Pass	
-		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_01", 1);
-		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_01", 1);
-		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_01", 0);
-		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_02", 1);
-		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_02", 1);
-		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_02", 0);
-		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_03", 1);
-		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_03", 1);
-		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_03", 0);
-		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_04", 1);
-		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_04", 1);
-		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_04", 0);
-		Wld_SetObjectRoutine (00,00, "NW_SECONDPASS_FIRE_05", 1);
-		Wld_SetObjectRoutine (20,00, "NW_SECONDPASS_FIRE_05", 1);
-		Wld_SetObjectRoutine (05,00, "NW_SECONDPASS_FIRE_05", 0);
+		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_01");
+		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_02");
+		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_03");
+		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_04");
+		REV_SetObjectRoutine_Fire ("NW_SECONDPASS_FIRE_05");
 	
 	// Landowner
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_01", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_01", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_01", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_02", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_02", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_02", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_03", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_03", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_03", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_04", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_04", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_04", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_05", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_05", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_05", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_06", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_06", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_06", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_07", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_07", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_07", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_08", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_08", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_08", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_09", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_09", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_09", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_10", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_10", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_10", 0);
-		Wld_SetObjectRoutine (00,00, "NW_BIGFARM_FIRE_11", 1);
-		Wld_SetObjectRoutine (20,00, "NW_BIGFARM_FIRE_11", 1);
-		Wld_SetObjectRoutine (05,00, "NW_BIGFARM_FIRE_11", 0);
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_01");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_02");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_03");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_04");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_05");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_06");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_07");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_08");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_09");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_10");
+		REV_SetObjectRoutine_Fire ("NW_BIGFARM_FIRE_11");
 	};
 
 FUNC VOID INIT_NewWorld_Part_GreatPeasant_01 ()
@@ -3732,7 +3598,7 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 
 	// Taverne
 	
-	Wld_InsertNpc 	(BAU_970_Orlan, 		"TAVERNE");
+	Wld_InsertNpc 	(OUT_970_ORLAN, 		"TAVERNE");
 	Wld_InsertNpc 	(BAU_971_Bauer, 		"TAVERNE");
 	Wld_InsertNpc 	(BAU_972_Bauer, 		"TAVERNE");
 	Wld_InsertNpc 	(BAU_973_Rukhar, 		"TAVERNE");
@@ -3872,8 +3738,8 @@ FUNC VOID STARTUP_NewWorld_Part_Forest_01 ()
 	Wld_InsertNpc 	(Meatbug, "NW_CITY_SMFOREST_06");
 	Wld_InsertNpc 	(Meatbug, "NW_CITY_SMFOREST_06");
 	
-	Wld_InsertNpc 	(BDT_1000_Bandit_L, "NW_CITY_SMFOREST_07");
-	Wld_InsertNpc 	(BDT_1002_Bandit_L, "NW_CITY_SMFOREST_BANDIT_02");
+	Wld_InsertNpc 	(BDT_1000_LOAFER, "NW_CITY_SMFOREST_07");
+	Wld_InsertNpc 	(BDT_1002_LOAFER, "NW_CITY_SMFOREST_BANDIT_02");
 	
 	Wld_InsertNpc 	(Meatbug, "NW_CITY_SMFOREST_08");
 	Wld_InsertNpc 	(Meatbug, "NW_CITY_SMFOREST_08");
@@ -4131,7 +3997,7 @@ FUNC VOID STARTUP_NewWorld_Part_TrollArea_01 ()
 	//----- Schwarzer Troll -----
 	Wld_InsertNpc 	(Troll_Black, 			"NW_TROLLAREA_PATH_84");
 	Wld_InsertItem	(ItPl_Sagitta_Herb_MIS, "FP_NW_ITEM_TROLL_05");
-	Wld_InsertNpc 	(BAU_982_Grimbald, 		"TROLL");
+	Wld_InsertNpc 	(OUT_982_GRIMBALD, 		"TROLL");
 
 	//----- Der Weg -----
 	Wld_InsertNpc 	(Gobbo_Green, 			"NW_TROLLAREA_PATH_56");
@@ -4368,7 +4234,6 @@ FUNC VOID STARTUP_NewWorld()
 	STARTUP_NewWorld_Part_Pass_To_OW_01();
 	// ------ INTRO - muss ganz am Ende der Startup stehen ------
 	Kapitel = 1; //Joly: Kann hier stehen bleiben!
-	PlayVideo("DRAGONATTACK.BIK");
 	PlayVideo("INTRO.BIK");
 	//PlayVideo ("Addon_Title.BIK");
 	
@@ -4391,9 +4256,9 @@ FUNC VOID INIT_NewWorld()
 		|| (!Npc_IsDead(Jesper))
 		|| (!Npc_IsDead(Ramirez))
 		{
-			B_KillNpc(VLK_447_Cassia);
-			B_KillNpc(VLK_446_Jesper);
-			B_KillNpc(VLK_445_Ramirez);
+			B_KillNpc(BDT_447_CASSIA);
+			B_KillNpc(BDT_446_JESPER);
+			B_KillNpc(BDT_445_RAMIREZ);
 			Andre_Diebesgilde_aufgeraeumt = TRUE;
 		};
 	};
