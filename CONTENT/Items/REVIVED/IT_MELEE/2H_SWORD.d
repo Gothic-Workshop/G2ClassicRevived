@@ -82,15 +82,20 @@ const int	REV_Range_2H_Sword_Heavy_05			=	120;
 const int	REV_Value_2H_Sword_Heavy_05			=	4000;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Paladin_01		=	120;
+const int	REV_Damage_2H_Sword_Paladin_01		=	160;
 const int	REV_Condition_2H_Sword_Paladin_01	=	150;
 const int	REV_Range_2H_Sword_Paladin_01		=	130;
 const int	REV_Value_2H_Sword_Paladin_01		=	2000;
 //******************************************************************//
-const int	REV_Damage_2H_Sword_Paladin_02		=	170;
+const int	REV_Damage_2H_Sword_Paladin_02		=	180;
 const int	REV_Condition_2H_Sword_Paladin_02	=	150;
 const int	REV_Range_2H_Sword_Paladin_02		=	130;
 const int	REV_Value_2H_Sword_Paladin_02		=	2000;
+//******************************************************************//
+const int	REV_Damage_2H_Sword_Paladin_03		=	210;
+const int	REV_Condition_2H_Sword_Paladin_03	=	150;
+const int	REV_Range_2H_Sword_Paladin_03		=	130;
+const int	REV_Value_2H_Sword_Paladin_03		=	2000;
 //******************************************************************//
 const int	REV_Damage_2H_Sword_Innos_01		=	90;
 const int	REV_Condition_2H_Sword_Innos_01		=	110;
@@ -729,7 +734,7 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_02 (C_Item)
 	value 				=	REV_Value_2H_Sword_Paladin_02;
 
 	damageTotal			= 	REV_Damage_2H_Sword_Paladin_02;
-	damagetype 			=	DAM_EDGE;		
+	damagetype 			=	DAM_EDGE|DAM_MAGIC;		
 	range    			=  	REV_Range_2H_Sword_Paladin_02;		
 
 	cond_atr[2]   		= 	ATR_STRENGTH;
@@ -740,6 +745,30 @@ INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_02 (C_Item)
 	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
 	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
 	TEXT[4] 			= 	NAME_BlessedWeapon2H;
+	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
+};
+INSTANCE ITMW_REVIVED_2H_SWORD_PALADIN_03 (C_Item) 
+{	
+	name 				=	"Heavy Paladin's Sword";
+
+	mainflag 			=	ITEM_KAT_NF;
+	flags 				=	ITEM_2HD_SWD;	
+	material 			=	MAT_METAL;
+
+	value 				=	REV_Value_2H_Sword_Paladin_03;
+
+	damageTotal			= 	REV_Damage_2H_Sword_Paladin_03;
+	damagetype 			=	DAM_EDGE|DAM_FIRE|DAM_MAGIC;		
+	range    			=  	REV_Range_2H_Sword_Paladin_03;		
+
+	cond_atr[2]   		= 	ATR_STRENGTH;
+	cond_value[2]  		= 	REV_Condition_2H_Sword_Paladin_03;
+	visual 				=	"REV_2H_SWORD_LONG_04_PAL_02.3DS";
+
+	description			= 	name;
+	TEXT[2]				= 	NAME_Damage_Edge;				COUNT[2]	= damageTotal;
+	TEXT[3] 			= 	NAME_Str_needed;				COUNT[3]	= cond_value[2];
+	TEXT[4] 			= 	NAME_HolyWeapon2H;
 	TEXT[5]				= 	NAME_Value;						COUNT[5]	= value;
 };
 //******************************************************************//

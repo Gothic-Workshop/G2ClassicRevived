@@ -354,8 +354,8 @@ FUNC INT PC_PrayInnos_BlessSword_Condition ()
 	if (PLAYER_MOBSI_PRODUCTION	==	MOBSI_PRAYSHRINE)
 	&& (hero.guild == GIL_PAL)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500)   
-	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_01) >= 1)
-	||  (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1))
+	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)
+	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1))
 	{	
 		return TRUE;
 	};
@@ -377,22 +377,20 @@ FUNC VOID PC_PrayInnos_BlessSword_Info()
 			concatDonation = ConcatStrings(IntToString(Gold_BlessSword), PRINT_GoldGegeben);				
 			AI_PrintScreen	(concatDonation, -1, YPOS_GoldGiven, FONT_ScreenSmall, 2);
 			
-			if (Npc_HasItems (hero,ItMw_2H_Blessed_01) >= 1)		//2H-Waffe
+			if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)		//1H-Waffe
 			{	
-				Npc_RemoveInvItems  (hero,ItMw_2H_Blessed_01, 1);
-				CreateInvItems 		(hero,ItMw_2H_Blessed_02, 1);
-				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-				Snd_Play ("MFX_Heal_Cast" );
-				B_GivePlayerXP (XP_SwordBlessed);
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
 			}
-			else	//1H-Waffe
+			else	//2H-Waffe
 			{
-				Npc_RemoveInvItems  (hero,ItMw_1H_Blessed_01, 1);
-				CreateInvItems 		(hero,ItMw_1H_Blessed_02, 1);
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
+			};
+
 				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
 				Snd_Play ("MFX_Heal_Cast" );
 				B_GivePlayerXP (XP_SwordBlessed);
-			};
 		}
 		else
 		{
@@ -420,8 +418,10 @@ FUNC INT PC_PrayInnos_BlessSword_Final_Condition ()
 	&& (hero.guild == GIL_PAL)
 	&& (Npc_GetDistToWP (hero,"NW_MONASTERY_CHAPELL_02") <= 500) 
 	&& (PAL_KnowsAbout_FINAL_BLESSING == TRUE)  
-	&& ((Npc_HasItems (hero,ItMw_1H_Blessed_02) >= 1)
-	||  (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1))
+	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)
+	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1))
+	&& ((Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)
+	||  (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1))
 	{	
 		return TRUE;
 	};
@@ -443,22 +443,30 @@ FUNC VOID PC_PrayInnos_BlessSword_FINAL_Info()
 			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_01_Mis, 1);
 			Npc_RemoveInvItems  (hero,ItPo_PotionOfDeath_02_Mis, 1);
 			
-			if (Npc_HasItems (hero,ItMw_2H_Blessed_02) >= 1)		//2H-Waffe
+			if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01) >= 1)			//1H Regular
 			{	
-				Npc_RemoveInvItems  (hero,ItMw_2H_Blessed_02, 1);
-				CreateInvItems 		(hero,ItMw_2H_Blessed_03, 1);
-				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
-				Snd_Play ("MFX_Heal_Cast" );
-				B_GivePlayerXP (XP_SwordBlessed2);
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_01, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
 			}
-			else	//1H-Waffe
+			else if (Npc_HasItems (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02) >= 1)		//1H Blessed
+			{	
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_1H_SWORD_PALADIN_02, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_1H_SWORD_PALADIN_03, 1);
+			}
+			else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01) >= 1)		//2H Regular
 			{
-				Npc_RemoveInvItems  (hero,ItMw_1H_Blessed_02, 1);
-				CreateInvItems 		(hero,ItMw_1H_Blessed_03, 1);
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_01, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
+			}
+			else if (Npc_HasItems (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02) >= 1)		//2H Blessed
+			{	
+				Npc_RemoveInvItems  (hero,ITMW_REVIVED_2H_SWORD_PALADIN_02, 1);
+				CreateInvItems 		(hero,ITMW_REVIVED_2H_SWORD_PALADIN_03, 1);
+			};
+
 				Wld_PlayEffect("spellFX_PalHeal_ORIGIN",  hero, hero, 0, 0, 0, FALSE );
 				Snd_Play ("MFX_Heal_Cast" );
 				B_GivePlayerXP (XP_SwordBlessed2);
-			};
 		}
 		else
 		{
