@@ -279,14 +279,14 @@ FUNC VOID DIA_Sagitta_Teach_Info()
 	if (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_01] == TRUE)
 	&& (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_02] == FALSE)
 	{
-		Info_AddChoice (DIA_Sagitta_Teach,B_BuildLearnString ("Extract of Strength", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_STR_01)),DIA_Sagitta_Teach_Perm_STR_02);
+		Info_AddChoice (DIA_Sagitta_Teach,B_BuildLearnString ("Extract of Strength", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_STR_02)),DIA_Sagitta_Teach_Perm_STR_02);
 		talente = (talente + 1);
 	};
 	
 	if (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_02] == TRUE)
 	&& (PLAYER_TALENT_ALCHEMY[POTION_Perm_STR_03] == FALSE)
 	{
-		Info_AddChoice (DIA_Sagitta_Teach,B_BuildLearnString ("Elixir of Strength", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_STR_01)),DIA_Sagitta_Teach_Perm_STR_03);
+		Info_AddChoice (DIA_Sagitta_Teach,B_BuildLearnString ("Elixir of Strength", B_GetLearnCostTalent (other, NPC_TALENT_ALCHEMY, POTION_Perm_STR_03)),DIA_Sagitta_Teach_Perm_STR_03);
 		talente = (talente + 1);
 	};
 
