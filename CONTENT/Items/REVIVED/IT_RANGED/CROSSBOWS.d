@@ -402,7 +402,7 @@ INSTANCE ITRW_REVIVED_CROSSBOW_DRAGOMIR (C_Item)
 	cond_value[2]  		= 	REV_Condition_Crossbow_Dragomir;
 
 	munition			=	ITRW_BOLT;	
-	//owner 				= PC_THIEF;
+	//owner 				= OUT_983_DRAGOMIR;
 	visual 				=	"ItRw_Crossbow_L_02.mms";
 
 	description			= 	name;

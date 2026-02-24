@@ -141,6 +141,7 @@ FUNC VOID DIA_Dragomir_Armbrust_Info()
 	CreateInvItems (self, ItMi_Gold, 150);									
 	B_GiveInvItems (self, other, ItMi_Gold, 150);					
 	MIS_DragomirsArmbrust = LOG_SUCCESS;
+	Log_SetTopicStatus(TOPIC_DragomirsArmbrust, LOG_SUCCESS);
 	B_GivePlayerXP (XP_DragomirsArmbrust);
 };
 
