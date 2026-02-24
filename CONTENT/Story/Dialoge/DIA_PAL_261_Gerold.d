@@ -465,7 +465,7 @@ instance DIA_Gerold_FOOD		(C_INFO)
 
 func int DIA_Gerold_FOOD_Condition ()
 {
-	if (Npc_GetDistToWP(self,"OC_MAGE_IN")<500) 
+	if (Npc_GetDistToWP(self,"OCC_CHAPEL_HALL_001")<500) 
 		&& (Kapitel >= 4)
 		{
 				return TRUE;
