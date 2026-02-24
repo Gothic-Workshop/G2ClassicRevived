@@ -18,7 +18,7 @@ func int C_DiegoTooFar(var int tolerance) //tolerance wichtig in Dialog, sonst m
 	{
 		return LOC_ANGAR;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_PATH_07_21_GUARD_MIDDLE") < (3000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_PATH_07_21") < (3000 + tolerance))
 	{
 		return LOC_ICE;
 	}
@@ -26,16 +26,17 @@ func int C_DiegoTooFar(var int tolerance) //tolerance wichtig in Dialog, sonst m
 	{
 		return LOC_SWAMP;
 	}
-	else if (Npc_GetDistToWP (hero, "CASTLE_4") < (1500 + tolerance))
+	else if (Npc_GetDistToWP (hero, "SPAWN_OW_WARAN_01_BADITS6") < (1500 + tolerance))
 	{
 		return LOC_FIRE;
 	}
-	else if (Npc_GetDistToWP (hero, "OW_PATH_210") < (6500 + tolerance))
+	/* else if (Npc_GetDistToWP (hero, "OW_PATH_209") < (6500 + tolerance))
 	||		(Npc_GetDistToWP (hero, "MT_09") < (5500 + tolerance))
 	{
 		return LOC_LAKE;
-	}
-	else if (Npc_GetDistToWP (hero, "LOCATION_03_OUT") < (500 + tolerance))
+	} */
+	else if (Npc_GetDistToWP (hero, "OW_PATH_06_07_TO_DMT_001") < (500 + tolerance))
+	||		(Npc_GetDistToWP (hero, "OW_PATH_128") < (5500 + tolerance))
 	|| 		(Wld_GetPlayerPortalGuild() == GIL_DMT)
 	|| 		( (Npc_GetDistToWP (hero, "DT_E3_03") < 1000) && (Npc_GetHeightToNpc(self, hero) > 1000) ) //freies Stück oben
 	{
@@ -50,7 +51,7 @@ func int C_DiegoTooFar(var int tolerance) //tolerance wichtig in Dialog, sonst m
 	{
 		return LOC_SILVESTROMINE;
 	}
-	else if (Npc_GetDistToWP (hero, "SPAWN_SNAPPER_OM_ENTRANCE_003") < (3000 + tolerance))
+	else if (Npc_GetDistToWP (hero, "OW_OM_ENTRANCE01") < (3000 + tolerance))
 	{
 		return LOC_GRIMESMINE;
 	}

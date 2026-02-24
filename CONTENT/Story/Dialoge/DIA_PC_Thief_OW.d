@@ -551,13 +551,13 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 	else if (C_DiegoTooFar(1000) == LOC_SWAMP)
 	{
 		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_06"); //This swamp is a dead end.
-		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_07"); //I wouldn't be surprised if there's even a dragon lurking for us inside.
+		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_07"); //I wouldn't be surprised if there's even a dragon lurking for us inside.
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_08"); //Let's not go in there.
 	}
 	else if (C_DiegoTooFar(1000) == LOC_FIRE)
 	{
-		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_09"); //If we keep walking up the mountain, we're sure to meet a dragon.
-		//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_10"); //And I would love to get to Khorinis ALIVE.
+		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_09"); //If we keep walking up the mountain, we're sure to meet a dragon.
+		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_10"); //And I would love to get to Khorinis ALIVE.
 		AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_11"); //Let's take a different path.
 	}
 	else if (C_DiegoTooFar(1000) == LOC_LAKE)
@@ -618,13 +618,17 @@ FUNC VOID DIA_Addon_ThiefOW_TooFar_Info()
 	{
 		if (Diego_GrimesVariation == 0)
 		{
-			AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_21"); //This is one of the new mines of the paladins. 
-			AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_22"); //I've never been there - and I'm not going to go there either.
+			//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_21"); //This is one of the new mines of the paladins. 
+			//AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_22"); //I've never been there - and I'm not going to go there either.
+			AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_23"); //Let's give that mine a wide berth.
 			Diego_GrimesVariation = 1;
 		}
 		else //1
 		{
-			AI_Output (self, other, "DIA_Addon_Diego_TooFar_11_23"); //Let's give that mine a wide berth.
+			B_Addon_Diego_WillWaitOutside();
+			AI_StopProcessInfos (self);
+			self.aivar[AIV_PARTYMEMBER] = FALSE;
+			Npc_ExchangeRoutine	(self,"GRIMES");
 		};
 	}
 	else if (C_DiegoTooFar(1000) == LOC_BURG)
@@ -676,7 +680,7 @@ func void B_Diego_WirSindDa()
 	{
 		Npc_ExchangeRoutine	(self,"PASS");
 	}
-	else if (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 1000)
+	else if (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 1200)
 	{
 		Npc_ExchangeRoutine	(self,"SECONDPASS");
 	};
@@ -696,7 +700,7 @@ INSTANCE DIA_Addon_ThiefOW_Angekommen (C_INFO)
 FUNC INT DIA_Addon_ThiefOW_Angekommen_Condition()
 {
 	if (Npc_GetDistToWP (self, "OW_PATH_1_17") < 800)
-	|| (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 800)
+	|| (Npc_GetDistToWP (self, "OW_PATH_ORETRAIL_2_008") < 1000)
 	{
 		return TRUE;
 	};
@@ -736,9 +740,7 @@ func VOID DIA_Addon_ThiefOW_Nostalgie_Info()
 	//AI_Output (self, other, "DIA_Addon_Diego_Nostalgie_11_05"); //Whatever...
 	AI_Output (self, other, "DIA_Buster_Hello_IfYouSaySo_15_00"); //Whatever you say.
 	B_GivePlayerXP (500);
-	hero.exp = hero.exp + 500;
 	PrintScreen (ConcatStrings(NAME_Addon_NostalgieBonus, IntToString(500)), -1, 60, FONT_Screen, 2);
-	
 	
 	B_Diego_WirSindDa();
 };
