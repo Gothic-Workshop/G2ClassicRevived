@@ -319,6 +319,8 @@ func void DIA_MiltenNW_Statuette_Info ()
 	MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 	MiltenORPedro_LostInnosStatue_Daron = TRUE;
 	B_GivePlayerXP (XP_Addon_ReportLostInnosStatue2Daron);
+	B_LogEntry (TOPIC_Revived_DaronStatuette, "I gave the statuette back to Milten. I should return to Daron to report the good news."); 
+	Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 };
 
 //***************************************************************

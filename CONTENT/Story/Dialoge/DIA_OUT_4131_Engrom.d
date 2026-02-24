@@ -114,7 +114,7 @@ func int DIA_Engrom_Jagd_Condition ()
 
 func void DIA_Engrom_Jagd_Info ()
 {
-	B_WasMachtJagd ();
+	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //How's the hunting?
 	//Joly:AI_Output			(other, self, "DIA_Engrom_Jagd_15_00"); //Schon mal dran gedacht, hier abzuhauen?
 	AI_Output			(self, other, "DIA_Engrom_Jagd_12_01"); //Hunting is my only consolation. But I'd like to see a target once in a while other than these disgusting lurkers.
 };

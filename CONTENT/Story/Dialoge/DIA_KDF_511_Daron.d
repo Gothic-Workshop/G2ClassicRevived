@@ -387,6 +387,8 @@ func void DIA_Addon_Daron_GuildHelp_Info ()
 	AI_Output	(self, other, "DIA_Addon_Daron_GuildHelp_10_06"); //Then, when I was on my way to the monastery, a band of goblins got hold of it.
 	AI_Output	(self, other, "DIA_Addon_Daron_GuildHelp_10_07"); //(angrily) Now don't you look at me that way. We magicians are only human, too, you know.
 	
+	B_LogEntry (TOPIC_Revived_DaronStatuette,"Daron lost the statuette to a band of goblins. Now where have I heard that before?"); 
+	
 	MIS_Addon_Vatras_Go2Daron = LOG_SUCCESS;
 	MIS_Addon_Daron_GetStatue = LOG_RUNNING;
 
@@ -395,13 +397,6 @@ func void DIA_Addon_Daron_GuildHelp_Info ()
 	Info_ClearChoices	(DIA_Addon_Daron_GuildHelp);
 	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "You said that the goblins have it now?", DIA_Addon_Daron_GuildHelp_gobbos );
 	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "Where was it that you lost that statuette?", DIA_Addon_Daron_GuildHelp_wo );
-	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "Didn't you try to get that statuette back?", DIA_Addon_Daron_GuildHelp_wiederholen );
-};
-
-func void DIA_Addon_Daron_GuildHelp_wiederholen ()
-{
-	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_wiederholen_15_00"); //Didn't you try to get that statuette back?
-	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_wiederholen_10_01"); //Of course I did! I searched for it high and low. But to no avail.
 };
 
 func void DIA_Addon_Daron_GuildHelp_gobbos ()
@@ -409,6 +404,9 @@ func void DIA_Addon_Daron_GuildHelp_gobbos ()
 	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_gobbos_15_00"); //You said that the goblins have it now?
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_gobbos_10_01"); //They stole it and made off into the underbrush with it.
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_gobbos_10_02"); //I never saw them again. They're probably holing up in some pit in the ground.
+
+	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_wiederholen_15_00"); //Didn't you try to get that statuette back?
+	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_wiederholen_10_01"); //Of course I did! I searched for it high and low. But to no avail.
 };
 
 func void DIA_Addon_Daron_GuildHelp_wo ()
@@ -416,22 +414,14 @@ func void DIA_Addon_Daron_GuildHelp_wo ()
 	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_wo_15_00"); //Where was it that you lost that statuette?
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_wo_10_01"); //I was on my way to the monastery. Near Orlan's tavern.
 
-	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "I've heard enough. I'll find the thing for you.", DIA_Addon_Daron_GuildHelp_auftrag );
-	Info_AddChoice	(DIA_Addon_Daron_GuildHelp, "Orlan's tavern? Where would that be?", DIA_Addon_Daron_GuildHelp_woTaverne );
-};
+	B_LogEntry (TOPIC_Revived_DaronStatuette, "The statuette was stolen from him somewhere near Orlan's tavern. I should look for it in caves in the area."); 
 
-func void DIA_Addon_Daron_GuildHelp_woTaverne ()
-{
 	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_woTaverne_15_00"); //Orlan's tavern? Where would that be?
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_woTaverne_10_01"); //If you leave the city by this gate here and simply follow the path, you'll come to a house that stands by itself.
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_woTaverne_10_02"); //That's Orlan's tavern. The 'Dead Harpy'.
-};
 
-func void DIA_Addon_Daron_GuildHelp_auftrag ()
-{
 	AI_Output			(other, self, "DIA_Addon_Daron_GuildHelp_auftrag_15_00"); //I've heard enough. I'll find the thing for you.
 	AI_Output			(self, other, "DIA_Addon_Daron_GuildHelp_auftrag_10_01"); //May Innos guide you and protect you from the dangers that await you outside the city gates.
-	Info_ClearChoices	(DIA_Addon_Daron_GuildHelp);
 };
 
 ///////////////////////////////////////////////////////////////////////
@@ -469,6 +459,8 @@ func void DIA_Addon_Daron_FoundStatue_Info ()
 		AI_Output	(self, other, "DIA_Addon_Daron_FoundStatue_10_06"); //But I'm sure you won't mind doing that if it means you can be of service to ME, right?
 	};
 	AI_Output	(self, other, "DIA_Addon_Daron_FoundStatue_10_07"); //Go with Innos, my son!
+
+	B_LogEntry (TOPIC_Revived_DaronStatuette, "I found the statuette but Daron wants me to go back there again to return it to the monastery.. Maybe it's for the best, otherwise he'll just lose it again."); 
 };
 
 ///////////////////////////////////////////////////////////////////////

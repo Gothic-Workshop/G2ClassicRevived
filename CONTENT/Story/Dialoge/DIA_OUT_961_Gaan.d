@@ -363,14 +363,9 @@ func int DIA_Gaan_JAGD_Condition ()
 	return TRUE;
 };
 
-func void B_WasMachtJagd ()
-{
-	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //How's the hunting?
-};
-
 func void DIA_Gaan_JAGD_Info ()
 {
-	B_WasMachtJagd ();
+	AI_Output			(other, self, "DIA_Gaan_JAGD_15_00"); //How's the hunting?
 
 	if ((Npc_IsDead(Gaans_Snapper))== FALSE)
 		{

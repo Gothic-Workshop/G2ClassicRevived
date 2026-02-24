@@ -186,6 +186,8 @@ func void DIA_Addon_Gorax_DaronsStatue_Info ()
 		
 		MIS_Addon_Daron_GetStatue = LOG_SUCCESS;
 		B_GivePlayerXP (XP_Addon_ReturnedLostInnosStatue_Daron);
+		B_LogEntry (TOPIC_Revived_DaronStatuette, "I gave the statuette back to Gorax. I should return to Daron to report the good news."); 
+		Log_SetTopicStatus(TOPIC_Revived_DaronStatuette, LOG_SUCCESS);
 		DIA_Gorax_GOLD_perm = TRUE; //WICHTIG
 	}
 	else
