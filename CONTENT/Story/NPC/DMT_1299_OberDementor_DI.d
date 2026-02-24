@@ -16,7 +16,7 @@ instance DMT_1299_OberDementor_DI (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 200);	
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);															
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);															
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

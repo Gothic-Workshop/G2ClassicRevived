@@ -14,7 +14,7 @@ INSTANCE NOV_600_Pedro_DI (Npc_Default)
 
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 20);		
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);	
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 1);	
 	
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

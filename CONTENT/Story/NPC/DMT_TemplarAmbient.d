@@ -7,7 +7,7 @@ PROTOTYPE Default_AmbientTemplar (C_NPC)
 
 	//----- Attribute ----	
 	B_SetAttributesForLevel(self, 150);	
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);	
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);	
 
 	//----- Protection ----
 	protection	[PROT_BLUNT]		=	100; //hat RS!

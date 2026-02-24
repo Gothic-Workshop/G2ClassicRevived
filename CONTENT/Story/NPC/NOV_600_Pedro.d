@@ -10,7 +10,7 @@ INSTANCE NOV_600_Pedro (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 20);		
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 1);
 	
 	// ------ Aivars ------
 	aivar[AIV_NewsOverride] 	= TRUE; //damit du noch ins Kloster kommst, wenn du ihn geschlagen hast

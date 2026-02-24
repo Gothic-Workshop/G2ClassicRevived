@@ -10,7 +10,7 @@ INSTANCE PC_Mage_OW (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 100);		
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 4);															
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 4);															
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_STRONG;	

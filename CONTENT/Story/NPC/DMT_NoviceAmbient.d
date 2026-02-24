@@ -9,7 +9,7 @@ PROTOTYPE Default_AmbientNovice (C_NPC)
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 80);	
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 6);					
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 6);					
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_NORMAL;	

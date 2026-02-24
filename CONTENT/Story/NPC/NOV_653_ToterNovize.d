@@ -10,7 +10,7 @@ INSTANCE NOV_653_ToterNovize (Npc_Default)
 	
 	// ------ Attribute ------
 	B_SetAttributesForLevel(self, 15);		
-	Npc_SetTalentSkill (slf, NPC_TALENT_MAGE, 1);
+	Npc_SetTalentSkill (self, NPC_TALENT_MAGE, 1);
 		
 	// ------ Kampf-Taktik ------
 	fight_tactic		= FAI_HUMAN_COWARD;	
