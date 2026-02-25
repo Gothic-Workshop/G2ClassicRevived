@@ -223,6 +223,11 @@ INSTANCE DT_Day_Std		(C_MUSICTHEME_STANDARD)		{	file			= "DemonTower.mp3";		};
 
 
 
+// New Camp
+INSTANCE NCI_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "NewCamp.mp3";		};
+
+
+
 // Stone Fortress
 INSTANCE FOR_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "Fortress.mp3";		};
 
@@ -242,8 +247,11 @@ INSTANCE TRC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		
 INSTANCE TRC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
 
 // FreeMine Camp
-INSTANCE FMC_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
-INSTANCE FMC_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
+INSTANCE NCO_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "FreeMine.mp3";		};
+
+// FreeMine
+INSTANCE FM_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
+INSTANCE FM_Day_Fgt	(C_MUSICTHEME_FIGHT)		{	file			= "DragonLocation_Fight.mp3";	};
 
 // Sea Monastery
 INSTANCE SEA_Day_Std	(C_MUSICTHEME_STANDARD)		{	file			= "DragonLocation.mp3";		};
