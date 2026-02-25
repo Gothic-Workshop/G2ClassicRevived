@@ -37,37 +37,37 @@ const int	REV_Value_1H_Club_02				=	50;
 const int	REV_Damage_1H_Nailmace_01			=	15;
 const int	REV_Condition_1H_Nailmace_01		=	10;
 const int	REV_Range_1H_Nailmace_01			=	70;
-const int	REV_Value_1H_Nailmace_01			=	250;
+const int	REV_Value_1H_Nailmace_01			=	50;
 //******************************************************************//
 const int	REV_Damage_1H_WalkingStick_01		=	8;
 const int	REV_Condition_1H_WalkingStick_01	=	5;
 const int	REV_Range_1H_WalkingStick_01		=	70;
-const int	REV_Value_1H_WalkingStick_01		=	250;
+const int	REV_Value_1H_WalkingStick_01		=	25;
 //******************************************************************//
 const int	REV_Damage_1H_Branch_01				=	5;
 const int	REV_Condition_1H_Branch_01			=	5;
 const int	REV_Range_1H_Branch_01				=	70;
-const int	REV_Value_1H_Branch_01				=	250;
+const int	REV_Value_1H_Branch_01				=	10;
 //******************************************************************//
 const int	REV_Damage_1H_Knife_01				=	20;
 const int	REV_Condition_1H_Knife_01			=	10;
 const int	REV_Range_1H_Knife_01				=	50;
-const int	REV_Value_1H_Knife_01				=	250;
+const int	REV_Value_1H_Knife_01				=	25;
 //******************************************************************//
 const int	REV_Damage_1H_Dagger_01				=	5;
 const int	REV_Condition_1H_Dagger_01			=	5;
 const int	REV_Range_1H_Dagger_01				=	50;
-const int	REV_Value_1H_Dagger_01				=	250;
+const int	REV_Value_1H_Dagger_01				=	25;
 //******************************************************************//
 const int	REV_Damage_1H_Dagger_02				=	7;
 const int	REV_Condition_1H_Dagger_02			=	5;
 const int	REV_Range_1H_Dagger_02				=	50;
-const int	REV_Value_1H_Dagger_02				=	250;
+const int	REV_Value_1H_Dagger_02				=	50;
 //******************************************************************//
 const int	REV_Damage_1H_Sword_07				=	30;
 const int	REV_Condition_1H_Sword_07			=	20;
 const int	REV_Range_1H_Sword_07				=	70;
-const int	REV_Value_1H_Sword_07				=	250;
+const int	REV_Value_1H_Sword_07				=	150;
 
 
 //****************************************************************************
