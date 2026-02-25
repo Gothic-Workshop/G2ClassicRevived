@@ -28,7 +28,7 @@ const int	REV_Value_ITAM_Prot_MagicFire_01		=	50;
 const int	REV_Change_ITAM_Prot_MagicFire_01		=	12;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ITAM_Prot_Total_01			=	100;
+const int	REV_Value_ITAM_Prot_Total_01			=	200;
 const int	REV_Change_ITAM_Prot_Total_01			=	15;
 //******************************************************************//
 //******************************************************************//

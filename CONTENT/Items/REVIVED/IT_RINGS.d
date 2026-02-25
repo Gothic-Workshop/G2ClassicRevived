@@ -40,10 +40,10 @@ const int	REV_Value_ITRI_Prot_MagicFire_02		=	75;
 const int	REV_Change_ITRI_Prot_MagicFire_02		=	15;
 //******************************************************************//
 //******************************************************************//
-const int	REV_Value_ITRI_Prot_Total_01			=	100;
+const int	REV_Value_ITRI_Prot_Total_01			=	200;
 const int	REV_Change_ITRI_Prot_Total_01			=	10;
 //******************************************************************//
-const int	REV_Value_ITRI_Prot_Total_02			=	200;
+const int	REV_Value_ITRI_Prot_Total_02			=	250;
 const int	REV_Change_ITRI_Prot_Total_02			=	15;
 //******************************************************************//
 //******************************************************************//
