@@ -105,37 +105,9 @@ FUNC VOID DIA_Xardas_Hello_Info()
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_11"); //They are creatures of ancient power. I can sense their presence - even here.
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_12"); //And they have gathered an entire army of lowly servant creatures around them.
 	AI_Output (other,self ,"DIA_Xardas_Hello_15_13"); //Where's this army now?
-	AI_Output (self ,other,"DIA_Xardas_Hello_14_14"); //The army's camp is not far from here, in the Valley of Mines near Khorinis, and they are getting ready to attack.
-		
+	AI_Output (self ,other,"DIA_Xardas_Hello_14_14"); //The army's camp is not far from here, in the Valley of Mines near Khorinis, and they are getting ready to attack.	
 	AI_Output (self ,other,"DIA_Xardas_Hello_14_15"); //(pensively) We do not have much time left.
-};
-	
-///////////////////////////////////////////////////////////////////////
-//	Info AWAY
-///////////////////////////////////////////////////////////////////////
 
-instance DIA_Xardas_AWAY (C_INFO) 		//E1
-{
-	npc			 = 	NONE_100_Xardas;
-	nr			 = 	2;
-	condition	 = 	DIA_Xardas_AWAY_Condition;
-	information	 = 	DIA_Xardas_AWAY_Info;
-	Permanent 	 =  FALSE;
-	description	 = 	"Well then let's hurry to get out of here!";
-};
-
-func int DIA_Xardas_AWAY_Condition ()
-{	
-	if (!Npc_KnowsInfo (other, DIA_Xardas_TODO))
-	&& (!Npc_KnowsInfo (other, DIA_Xardas_FirstEXIT))
-	&& (Kapitel < 3)	
-	{
-		return TRUE;
-	};
-};
-
-func void DIA_Xardas_AWAY_Info ()
-{
 	AI_Output (other, self, "DIA_Xardas_AWAY_15_00"); //Then let's hurry to get out of here!
 	AI_Output (self, other, "DIA_Xardas_AWAY_14_01"); //If we flee now, then it's only to face the dragons later.
 	AI_Output (self, other, "DIA_Xardas_AWAY_14_02"); //With the help of the soldiers and the magicians who live around here, we can stop them before their army is completely formed.
@@ -242,6 +214,7 @@ func void DIA_Xardas_PALADIN_Info ()
 	AI_Output (other, self, "DIA_Xardas_PALADIN_15_04"); //Let's assume you are right, and I'm destined to bear the Eye of Innos. How would the paladins know that is true?
 	AI_Output (self, other, "DIA_Xardas_PALADIN_14_05"); //The Eye itself chooses the one who may wear it. Once you get hold of it and put it on, the paladins cannot doubt your words any longer.
 };
+
 ///////////////////////////////////////////////////////////////////////
 //	Info Khorinis
 ///////////////////////////////////////////////////////////////////////

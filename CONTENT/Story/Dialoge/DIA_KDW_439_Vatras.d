@@ -237,7 +237,7 @@ func void DIA_Vatras_INFLUENCE_Info ()
 	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_01"); //Why should I give you my blessing, stranger?
 	AI_Output (other, self, "DIA_Vatras_INFLUENCE_15_02"); //I want to start an apprenticeship with one of the masters in the lower part of town.
 	//AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_04"); //But I know nothing about you at all...
-	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_03"); //Ich will dich wohl segnen, Fremder, aber ich kenne dich nicht. Erzähle mir was über dich.
+	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_03"); //I may give you my blessing, stranger, but I know nothing about you. Tell me about yourself.
 	AI_Output (other, self, "DIA_Vatras_INFLUENCE_15_04"); //What do you want to know?
 	AI_Output (self, other, "DIA_Vatras_INFLUENCE_05_05"); //Well, you could tell me where you come from and why you have come to the city.
 	AI_Output (other, self, "DIA_Vatras_INFLUENCE_15_06"); //I carry an important message for the leader of the paladins.
@@ -322,8 +322,8 @@ FUNC VOID DIA_Vatras_INFLUENCE_SECOND_LIE()
 func VOID B_Vatras_INFLUENCE_REPEAT()
 {
 	//RAUS wegen ADDON
-	AI_Output (other, self, "DIA_Vatras_INFLUENCE_REPEAT_15_00"); //Und, gibst du mir jetzt deinen Segen?	
-  AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_01"); //Gut, fassen wir mal zusammen:
+	AI_Output (other, self, "DIA_Vatras_INFLUENCE_REPEAT_15_00"); //And will you give me your blessing now?
+	AI_Output (self, other, "DIA_Vatras_INFLUENCE_REPEAT_05_01"); //Good, let us summarize..
 	
 	if (Vatras_Third == TRUE)
 	{

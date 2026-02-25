@@ -108,8 +108,7 @@ FUNC VOID DIA_Ignaz_Traenke_Info()
 	AI_Output (other, self, "DIA_Ignaz_Traenke_15_00");//What's in it for me if I help you?
 	AI_Output (self, other, "DIA_Ignaz_Traenke_14_01");//I could teach you how to brew potions.
 	//AI_Output (self, other, "DIA_Ignaz_Traenke_14_02");//I know the recipes for healing and mana essences and for speed potions.
-	AI_Output (self, other, "DIA_Ignaz_Traenke_14_03");//Auﬂerdem kann ich dir beibringen, wie du ein Elixier der Geschicklichkeit herstellst.
-	
+	AI_Output (self, other, "DIA_Ignaz_Traenke_14_03");//I can also teach you how to prepare an Elixir of Dexterity.
 };
 ///////////////////////////////////////////////////////////////////////
 //	Info Experiment

@@ -309,7 +309,7 @@ func void DIA_MiltenNW_Statuette_Info ()
 		AI_Output (self ,other,"DIA_MiltenNW_KAP3_Entry_03_02"); //I can't let you into the monastery. I'll get in trouble with the High Council.
 	};
 	AI_Output (other, self, "DIA_Addon_Pedro_Statuette_Abgeben_15_00"); //Can I just hand the statuette over to you?
-	AI_Output (self, other, "DIA_MiltenNW_KAP3_NovizenChase_03_04"); //Ich werde sehen, was ich tun kann.
+	AI_Output (self, other, "DIA_MiltenNW_KAP3_NovizenChase_03_04"); //I'll see what I can do.
 
 		if B_GiveInvItems (other, self, ItMi_LostInnosStatue_Daron,1)
 		{

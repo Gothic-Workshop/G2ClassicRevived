@@ -466,25 +466,25 @@ FUNC VOID DIA_Neoras_Ingrediences_Back ()
 
 FUNC VOID DIA_Neoras_Ingrediences_Speed ()
 {
-	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Speed_15_00"); //Welche Zutaten brauche ich für einen Trank der Geschwindigkeit?
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Speed_01_01"); //Für einen Trank, der dich schneller macht, brauche ich fünfmal so genanntes Snapperkraut und einen Kronstöckel.
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Speed_01_02"); //Und vergiss das Gold nicht.
+	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Speed_15_00"); //What ingredients do I need for a Potion of Great Speed?
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Speed_01_01"); //For a potion to make you faster, I need five so-called snapper weeds and one king's sorrel.
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Speed_01_02"); //And don't forget the gold.
 };
 
 FUNC VOID DIA_Neoras_Ingrediences_Mana ()
 {
-	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Mana_15_00"); //Welche Zutaten brauche ich für ein Mana-Extrakt?
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_01"); //Ein Manatrank ist nicht wirklich kompliziert.
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_02"); //Du musst mir fünfmal Feuerkraut und einen Feldknöterich bringen.
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_03"); //Und vergiss das Gold nicht.
+	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Mana_15_00"); //What ingredients do I need for a Mana Extract?
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_01"); //A mana potion is not terribly complicated.
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_02"); //You must bring me five fire weeds and one meadow knotweed.
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Mana_01_03"); //And don't forget the gold.
 };
 
 FUNC VOID DIA_Neoras_Ingrediences_Health ()
 {
-	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Health_15_00"); //Welche Zutaten brauche ich für ein Extrakt der Heilung?
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_01"); //So ein Trank ist nicht besonders kompliziert.
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_02"); //Du musst mir nur fünf Heilkräuter und einen Feldknöterich bringen.
-	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_03"); //Und vergiss das Gold nicht.
+	AI_Output (other,self ,"DIA_Neoras_Ingrediences_Health_15_00"); //What ingredients do I need for an Elixir of Healing?
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_01"); //A potion like that is not especially complicated.
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_02"); //You only need to bring me five healing herbs and one meadow knotweed.
+	AI_Output (self ,other,"DIA_Neoras_Ingrediences_Health_01_03"); //And don't forget the gold.
 };
 
 ///////////////////////////////////////////////////////////////////////
