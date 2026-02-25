@@ -134,23 +134,23 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 		else if (skill == POTION_Perm_Health) 	{	kosten = (10);	}
 		else if (skill == POTION_MegaDrink	) 	{	kosten = (20);	}
 
-		else if (skill == POTION_Perm_HEALTH_01	) 	{	kosten = (5);	}
+		else if (skill == POTION_Perm_HEALTH_01	) 	{	kosten = (10);	}
 		else if (skill == POTION_Perm_HEALTH_02	) 	{	kosten = (10);	}
-		else if (skill == POTION_Perm_HEALTH_03	) 	{	kosten = (15);	}
-		else if (skill == POTION_Perm_MANA_01	) 	{	kosten = (5);	}
+		else if (skill == POTION_Perm_HEALTH_03	) 	{	kosten = (10);	}
+		else if (skill == POTION_Perm_MANA_01	) 	{	kosten = (10);	}
 		else if (skill == POTION_Perm_MANA_02	) 	{	kosten = (10);	}
-		else if (skill == POTION_Perm_MANA_03	) 	{	kosten = (15);	}
-		else if (skill == POTION_Perm_STR_01	) 	{	kosten = (5);	}
-		else if (skill == POTION_Perm_STR_02	) 	{	kosten = (10);	}
+		else if (skill == POTION_Perm_MANA_03	) 	{	kosten = (10);	}
+		else if (skill == POTION_Perm_STR_01	) 	{	kosten = (15);	}
+		else if (skill == POTION_Perm_STR_02	) 	{	kosten = (15);	}
 		else if (skill == POTION_Perm_STR_03	) 	{	kosten = (15);	}
-		else if (skill == POTION_Perm_DEX_01	) 	{	kosten = (5);	}
-		else if (skill == POTION_Perm_DEX_02	) 	{	kosten = (10);	}
+		else if (skill == POTION_Perm_DEX_01	) 	{	kosten = (15);	}
+		else if (skill == POTION_Perm_DEX_02	) 	{	kosten = (15);	}
 		else if (skill == POTION_Perm_DEX_03	) 	{	kosten = (15);	}
 		else if (skill == POTION_SPEED_01		) 	{	kosten = (5);	}
-		else if (skill == POTION_SPEED_02		) 	{	kosten = (10);	}
-		else if (skill == POTION_SPEED_03		) 	{	kosten = (15);	}
-		else if (skill == POTION_Perm_MASTER_01	) 	{	kosten = (10);	}
-		else if (skill == POTION_Perm_MASTER_02	) 	{	kosten = (15);	}
+		else if (skill == POTION_SPEED_02		) 	{	kosten = (5);	}
+		else if (skill == POTION_SPEED_03		) 	{	kosten = (5);	}
+		else if (skill == POTION_Perm_MASTER_01	) 	{	kosten = (20);	}
+		else if (skill == POTION_Perm_MASTER_02	) 	{	kosten = (20);	}
 		else if (skill == POTION_Perm_MASTER_03	) 	{	kosten = (20);	};
 	};                                                              
 	
