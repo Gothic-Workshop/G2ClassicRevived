@@ -71,55 +71,29 @@ func void DIA_SylvioDJG_HelloAgain_Info ()
 		AI_Output			(self, other, "DIA_SylvioDJG_HelloAgain_09_03"); //Hey, you, paladin! Go back to your ore mine. There's nothing here.
 	};
 	
+	AI_Output			(other, self, "DIA_Sylvio_VERSAGER_15_00"); //And what if I won't go?
+	AI_Output			(self, other, "DIA_Sylvio_VERSAGER_09_01"); //Don't play the big man here, squirt, otherwise you'll wind up just like those poor swine lying dead back there in the snow.
+
 	AI_Output			(other, self, "DIA_SylvioDJG_HelloAgain_15_04"); //Understood. Nobody likes to part with his booty.
 	AI_Output			(self, other, "DIA_SylvioDJG_HelloAgain_09_05"); //You said it. Disappear.
 };
 
 ///////////////////////////////////////////////////////////////////////
-//	Info Versager
-///////////////////////////////////////////////////////////////////////
-instance DIA_Sylvio_VERSAGER		(C_INFO)
-{
-	npc		 = 	DJG_700_Sylvio;
-	nr		 = 	6;
-	condition	 = 	DIA_Sylvio_VERSAGER_Condition;
-	information	 = 	DIA_Sylvio_VERSAGER_Info;
-
-	description	 = 	"And what if I won't go?";
-};
-
-func int DIA_Sylvio_VERSAGER_Condition ()
-{
-	if 	(Npc_KnowsInfo(other, DIA_SylvioDJG_HelloAgain))
-		&& (IceDragon.aivar[AIV_TalkedToPlayer] == FALSE)
-		{
-				return TRUE;
-		};
-};
-
-func void DIA_Sylvio_VERSAGER_Info ()
-{
-	AI_Output			(other, self, "DIA_Sylvio_VERSAGER_15_00"); //And what if I won't go?
-	AI_Output			(self, other, "DIA_Sylvio_VERSAGER_09_01"); //Don't play the big man here, squirt, otherwise you'll wind up just like those poor swine lying dead back there in the snow.
-};
-
-
-///////////////////////////////////////////////////////////////////////
 //	Info DeineLeute
 ///////////////////////////////////////////////////////////////////////
-instance DIA_Sylvio_DEINELEUTE		(C_INFO)
+instance DIA_Sylvio_WASISTPASSIERT		(C_INFO)
 {
 	npc		 = 	DJG_700_Sylvio;
 	nr		 = 	7;
-	condition	 = 	DIA_Sylvio_DEINELEUTE_Condition;
-	information	 = 	DIA_Sylvio_DEINELEUTE_Info;
+	condition	 = 	DIA_Sylvio_WASISTPASSIERT_Condition;
+	information	 = 	DIA_Sylvio_WASISTPASSIERT_Info;
 
 	description	 = 	"Those were your people?";
 };
 
-func int DIA_Sylvio_DEINELEUTE_Condition ()
+func int DIA_Sylvio_WASISTPASSIERT_Condition ()
 {
-	if (Npc_KnowsInfo(other, DIA_Sylvio_VERSAGER))
+	if (Npc_KnowsInfo(other, DIA_SylvioDJG_HelloAgain))
 		&& (IceDragon.aivar[AIV_TalkedToPlayer] == FALSE)
 		&& (MIS_DJG_Sylvio_KillIceGolem == 0)
 		{
@@ -127,37 +101,11 @@ func int DIA_Sylvio_DEINELEUTE_Condition ()
 		};
 };
 
-func void DIA_Sylvio_DEINELEUTE_Info ()
+func void DIA_Sylvio_WASISTPASSIERT_Info ()
 {
 	AI_Output			(other, self, "DIA_Sylvio_DEINELEUTE_15_00"); //Those were your people?
 	AI_Output			(self, other, "DIA_Sylvio_DEINELEUTE_09_01"); //Not any more. No big loss. Those idiots weren't worth much anyway.
-};
 
-
-///////////////////////////////////////////////////////////////////////
-//	Info WasIstPassiert
-///////////////////////////////////////////////////////////////////////
-instance DIA_Sylvio_WASISTPASSIERT		(C_INFO)
-{
-	npc		 = 	DJG_700_Sylvio;
-	nr		 = 	8;
-	condition	 = 	DIA_Sylvio_WASISTPASSIERT_Condition;
-	information	 = 	DIA_Sylvio_WASISTPASSIERT_Info;
-
-	description	 = 	"What happened to them?";
-};
-
-func int DIA_Sylvio_WASISTPASSIERT_Condition ()
-{
-	if (Npc_KnowsInfo(other, DIA_Sylvio_VERSAGER))
-		&& (IceDragon.aivar[AIV_TalkedToPlayer] == FALSE)
-		{
-				return TRUE;
-		};
-};
-
-func void DIA_Sylvio_WASISTPASSIERT_Info ()
-{
 	AI_Output			(other, self, "DIA_Sylvio_WASISTPASSIERT_15_00"); //What happened to them?
 	AI_Output			(self, other, "DIA_Sylvio_WASISTPASSIERT_09_01"); //They weren't able to get past the big ice giants back there and got stamped out by them.
 	AI_Output			(self, other, "DIA_Sylvio_WASISTPASSIERT_09_02"); //If you're such a tough guy, why don't you give it a try?
@@ -173,7 +121,9 @@ func void DIA_Sylvio_WASISTPASSIERT_Info ()
 	B_LogEntry (TOPIC_SylvioKillIceGolem,"Sylvio's scared of the two ice golems at the entrance to the ice region in the Valley of Mines."); 
 
 	MIS_DJG_Sylvio_KillIceGolem = LOG_RUNNING;
+
 };
+
 func void DIA_Sylvio_WASISTPASSIERT_selbst ()
 {
 	AI_Output			(other, self, "DIA_Sylvio_WASISTPASSIERT_selbst_15_00"); //Why don't you get rid of them yourself?
