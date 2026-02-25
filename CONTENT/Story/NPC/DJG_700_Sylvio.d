@@ -42,8 +42,8 @@ FUNC VOID Rtn_Start_700 ()
 
 FUNC VOID Rtn_IceWait1_700 ()
 {
-	TA_Stand_Guarding					(00,00,	23,00,"OW_ICEREGION_ENTRANCE");    
-	TA_Stand_Guarding					(23,00,	24,00,"OW_ICEREGION_ENTRANCE");     
+	TA_Smoke_Joint						(00,00,	23,00,"OW_PATH_075_GUARD2");    
+	TA_Smoke_Joint						(23,00,	24,00,"OW_PATH_075_GUARD2");     
 };
 
 FUNC VOID Rtn_IceWait2_700 ()

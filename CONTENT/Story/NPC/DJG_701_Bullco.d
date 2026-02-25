@@ -40,8 +40,8 @@ FUNC VOID Rtn_Start_701 ()
 
 FUNC VOID Rtn_IceWait1_701 ()
 {
-	TA_Stand_ArmsCrossed					(00,00,	23,00,"OW_ICEREGION_ENTRANCE");    
-	TA_Stand_ArmsCrossed					(23,00,	24,00,"OW_ICEREGION_ENTRANCE");     
+	TA_Stand_ArmsCrossed					(00,00,	23,00,"OW_PATH_075_GUARD4");    
+	TA_Stand_ArmsCrossed					(23,00,	24,00,"OW_PATH_075_GUARD4");     
 };
 
 FUNC VOID Rtn_IceWait2_701 ()
@@ -61,6 +61,7 @@ FUNC VOID Rtn_DJGVorposten_701 ()
 	TA_Sit_Campfire		(00,00,	23,00,"OW_DJG_VORPOSTEN_02");    
 	TA_Sit_Campfire		(23,00,	24,00,"OW_DJG_VORPOSTEN_02");     
 };
+
 FUNC VOID Rtn_Follow_701 ()
 {
 	TA_Follow_Player 		(00,00,	23,00,"OW_PATH_07_21_GUARD_MIDDLE");    
