@@ -168,6 +168,35 @@ func void AlchemyMixMultiple_Logic(var int amount)
 		{
 			AlchemyCraft_NoIngredients();
 		};	
+	}
+
+	else if(PotionInstance == POTION_Speed_01)
+	{
+		if (Npc_HasItems (hero, ITPO_REVIVED_SPEED_01) 	  		>= amount * 2) 
+		{
+			Npc_RemoveInvItems (hero,ITPO_REVIVED_SPEED_01, 		amount * 2);
+			
+			CreateInvItems	   (hero,ITPO_REVIVED_SPEED_02,amount);  
+			Print (PRINT_PotionMixSuccess);
+		}
+			else 
+		{
+			AlchemyCraft_NoIngredients();
+		};	
+	}
+	else if(PotionInstance == POTION_Speed_02)
+	{
+		if (Npc_HasItems (hero, ITPO_REVIVED_SPEED_02) 	  		>= amount * 2) 
+		{
+			Npc_RemoveInvItems (hero,ITPO_REVIVED_SPEED_02, 		amount * 2);
+			
+			CreateInvItems	   (hero,ITPO_REVIVED_SPEED_03,amount);  
+			Print (PRINT_PotionMixSuccess);
+		}
+			else 
+		{
+			AlchemyCraft_NoIngredients();
+		};	
 	};
 	//B_ENDPRODUCTIONDIALOG ();	
 };
@@ -3258,4 +3287,54 @@ FUNC INT PC_Mixing_Mana_03_Condition ()
 FUNC VOID PC_Mixing_Mana_03_Info()
 {
 	AlchemyCraftMultiple_Input(PC_Mixing_Mana_03, POTION_MANA_03);	
+};
+//*******************************************************
+
+INSTANCE PC_Mixing_Speed_02 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 3;
+	condition		= PC_Mixing_Speed_02_Condition;
+	information		= PC_Mixing_Speed_02_Info;
+	permanent		= TRUE;
+	description		= "Mix Potion of Swiftness (x2) into Potion of Velocity (x1)"; 
+};
+
+FUNC INT PC_Mixing_Speed_02_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_SPEED_02] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Speed_02_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Speed_02, POTION_SPEED_02);	
+};
+INSTANCE PC_Mixing_Speed_03 (C_Info)
+{
+	npc				= PC_Hero;
+	nr				= 4;
+	condition		= PC_Mixing_Speed_03_Condition;
+	information		= PC_Mixing_Speed_03_Info;
+	permanent		= TRUE;
+	description		= "Mix Potion of Velocity (x2) into Potion of Haste (x1)"; 
+};
+
+FUNC INT PC_Mixing_Speed_03_Condition ()
+{
+	if (PLAYER_MOBSI_PRODUCTION	== MOBSI_POTIONALCHEMY)
+	&& (MixingStart == TRUE)
+	&& (PLAYER_TALENT_ALCHEMY[POTION_SPEED_03] == TRUE)
+	{	
+		return TRUE;
+	};
+};
+
+FUNC VOID PC_Mixing_Speed_03_Info()
+{
+	AlchemyCraftMultiple_Input(PC_Mixing_Speed_03, POTION_SPEED_03);	
 };
