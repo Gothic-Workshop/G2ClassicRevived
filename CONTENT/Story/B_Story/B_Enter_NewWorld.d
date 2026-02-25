@@ -733,8 +733,8 @@ FUNC VOID B_ENTER_NEWWORLD_Kapitel_5 ()
 		};
 
 	// ------ Respawn ------
-	Wld_InsertNpc		(Xardas_DT_Demon1, 		"FP_ROAM_NW_XARDASTOWER_DEMON_02"); 
-	Wld_InsertNpc		(Xardas_DT_Demon2, 		"NW_XARDAS_TOWER_IN1_24");
+	Wld_InsertNpc		(Xardas_DT_Demon1, 		"FP_ROAM_NW_XARDASTOWER_DEMON_01"); 
+	Wld_InsertNpc		(Xardas_DT_Demon2, 		"FP_ROAM_NW_XARDASTOWER_DEMON_02");
 	Wld_InsertNpc		(Xardas_DT_Demon3, 		"FP_ROAM_NW_XARDASTOWER_DEMON_03"); 
 	Wld_InsertNpc		(Xardas_DT_Demon4, 		"FP_ROAM_NW_XARDASTOWER_DEMON_04"); 
 	Wld_InsertNpc		(Xardas_DT_Demon5, 		"FP_ROAM_NW_XARDASTOWER_DEMON_05"); 
