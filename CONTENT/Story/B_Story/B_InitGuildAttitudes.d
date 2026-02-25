@@ -224,7 +224,7 @@ func void B_InitGuildAttitudes ()
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_NEUTRAL,	GIL_STRF	);
 		//GIL_DMT nicht
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_NEUTRAL,	GIL_OUT		);
-		Wld_SetGuildAttitude	(GIL_PIR,	ATT_HOSTILE,	GIL_PIR		);
+		Wld_SetGuildAttitude	(GIL_PIR,	ATT_FRIENDLY,	GIL_PIR		);
 		Wld_SetGuildAttitude	(GIL_PIR,	ATT_NEUTRAL,	GIL_KDW		);
 
 	// WATER MAGE
