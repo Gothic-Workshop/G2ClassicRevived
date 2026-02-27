@@ -579,6 +579,60 @@ FUNC VOID DIA_Buster_Teach_1H_5 ()
 	Info_AddChoice		(DIA_Buster_Teach, B_BuildLearnString(PRINT_Learn1h5	, B_GetLearnCostTalent(other, NPC_TALENT_1H, 5))			,DIA_Buster_Teach_1H_5);
 };
 
+
+///////////////////////////////////////////////////////////////////////
+//	Acrobatics
+///////////////////////////////////////////////////////////////////////
+INSTANCE DIA_Buster_Acrobatics (C_INFO)
+{
+	npc			= Sld_802_Buster;
+	nr			= 8;
+	condition	= DIA_Buster_Acrobatics_Condition;
+	information	= DIA_Buster_Acrobatics_Info;
+	permanent	= TRUE;
+	description = "Can you teach me something?";
+};                       
+
+FUNC INT DIA_Buster_Acrobatics_Condition()
+{	
+	if((Npc_GetTalentSkill (other, NPC_TALENT_ACROBAT) == 0)
+	&& (Npc_KnowsInfo(other, DIA_Buster_LeeLeader)))
+	{
+		return TRUE;
+	};
+};
+
+FUNC VOID DIA_Buster_Acrobatics_Back ()
+{
+	Info_ClearChoices (DIA_Buster_Acrobatics);
+};
+
+FUNC VOID DIA_Buster_Acrobatics_Info()
+{	
+	AI_Output (other, self,"DIA_Dragomir_Learn_15_00"); //Can you teach me something?
+	AI_Output (self, other,"DIA_Buster_Acrobatics_13_01"); //I can show you how to control your body. It's the art of ACROBATICS.
+	
+	if (BusterLOGAcrobat == FALSE)
+	{
+		Log_CreateTopic (Topic_SoldierTeacher, LOG_NOTE);
+		B_LogEntry (Topic_SoldierTeacher,"Buster can teach me acrobatics.");
+		BusterLOGAcrobat = TRUE;
+	};
+	Info_ClearChoices 	(DIA_Buster_Acrobatics);
+	Info_AddChoice 		(DIA_Buster_Acrobatics,	DIALOG_BACK, DIA_Buster_Acrobatics_Back);
+	Info_AddChoice		(DIA_Buster_Acrobatics, B_BuildLearnString(PRINT_LearnAcrobat, B_GetLearnCostTalent(other, NPC_TALENT_ACROBAT, 1)), DIA_Buster_Acrobatics_Teach);
+};
+
+FUNC VOID DIA_Buster_Acrobatics_Teach ()
+{
+	if B_TeachThiefTalent (self, other, NPC_TALENT_ACROBAT)
+	{
+		AI_Output (self, other,"DIA_Buster_Acrobatics_13_02"); //As soon as you've gained control of your body, you'll be able to jump much further.
+		AI_Output (self, other,"DIA_Buster_Acrobatics_13_03"); //You'll learn how to roll off and what's the best way to land when falling. But don't forget, you're not immortal!
+		AI_Output (self, other,"DIA_Buster_Acrobatics_13_04"); //Acrobatics can also be very useful during a battle. You'll be able to change the distance between you and your foe very quickly. Good luck!
+	};
+};
+
 //#####################################################################
 //##
 //##

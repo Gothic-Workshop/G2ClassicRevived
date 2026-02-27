@@ -75,9 +75,13 @@ func int B_GetLearnCostTalent (var C_NPC oth, var int talent, var int skill)
 	
 	// ------ Kosten für Diebestalente ------
 	if (talent == NPC_TALENT_SNEAK)
-	|| (talent == NPC_TALENT_ACROBAT)
 	{
 		kosten = (5);
+	};
+
+	if (talent == NPC_TALENT_ACROBAT)
+	{
+		kosten = (10);
 	};
 	
 	if (talent == NPC_TALENT_PICKLOCK)

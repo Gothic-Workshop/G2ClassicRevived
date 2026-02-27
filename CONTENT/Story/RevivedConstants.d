@@ -394,6 +394,8 @@ var int DIA_Revived_Gordon_Trade_OneTime;
 
 var int CipherBuysWeed;
 
+var int BusterLOGAcrobat;
+
 var int Alrik_LevelUpCount;
 var int Alrik_ArenaDayCount;
 
