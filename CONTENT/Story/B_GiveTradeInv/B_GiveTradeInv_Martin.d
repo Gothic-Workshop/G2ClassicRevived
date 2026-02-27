@@ -5,7 +5,7 @@ var int Martin_ItemsGiven_Chapter_3;
 var int Martin_ItemsGiven_Chapter_4;
 var int Martin_ItemsGiven_Chapter_5;
 
-FUNC VOID B_GiveTradeInv_Addon_Martin (var C_NPC slf)
+FUNC VOID B_GiveTradeInv_Martin (var C_NPC slf)
 {
 	if ((Kapitel >= 1)
 	&& (Martin_ItemsGiven_Chapter_1 == FALSE))

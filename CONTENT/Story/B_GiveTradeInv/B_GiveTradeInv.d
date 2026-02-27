@@ -105,7 +105,7 @@ func void B_GiveTradeInv (var C_NPC slf)
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Lutero)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Lutero	(slf);};
 		
 		//MOD
-		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Martin)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Addon_Martin		(slf);};
+		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Martin)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Martin		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Gordon)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Revived_Gordon		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Rupert)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Rupert		(slf);};
 		if  Hlp_GetInstanceID (slf) == Hlp_GetInstanceID (Trd_Xardas)		{B_ClearJunkTradeInv (slf); B_GiveTradeInv_Xardas		(slf);};
