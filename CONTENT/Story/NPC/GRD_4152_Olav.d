@@ -16,7 +16,7 @@ instance GRD_4152_Olav (Npc_Default)
 	fight_tactic		= FAI_HUMAN_COWARD;	
 	
 	// ------ Equippte Waffen ------		
-	EquipItem	(self, ITMW_REVIVED_1H_SWORD_BROAD_04); 														
+	EquipItem	(self, ITMW_REVIVED_1H_SWORD_03); 														
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);

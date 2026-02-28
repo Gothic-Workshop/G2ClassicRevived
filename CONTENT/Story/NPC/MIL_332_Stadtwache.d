@@ -16,7 +16,7 @@ instance Mil_332_Stadtwache (Npc_Default)
 	fight_tactic		= FAI_HUMAN_STRONG;	
 	
 	// ------ Equippte Waffen ------																	
-	EquipItem			(self, ITMW_REVIVED_1H_SWORD_BROAD_04);
+	EquipItem			(self, ITMW_REVIVED_1H_SWORD_03);
 	
 	// ------ Inventory ------
 	B_CreateAmbientInv 	(self);
