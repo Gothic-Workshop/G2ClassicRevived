@@ -2021,6 +2021,9 @@ func void STARTUP_SURFACE ()
 		REV_SetObjectRoutine_Fire ("OW_FIREPLACE_ORCLAMP_02");
 	
 	// ------ TRIGGERS ------
+		// Fish Movers
+		Wld_SendTrigger("EVT_OW_FISHMOVER_LIST");
+
 		// Castle
 		Wld_SendTrigger("EVT_CASTLE_TRIGGER_LIST_1");
 
